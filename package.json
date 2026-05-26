@@ -1,0 +1,7 @@
+{
+  "name": "makebiz-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MakeBiz landing + Telegram lead function (Vercel)"
+}
