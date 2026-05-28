@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IntDoc: AI для закупок и сравнения прайсов | MakeBiz</title>
+<meta name="description" content="IntDoc обрабатывает прайсы, КП и спецификации, сравнивает поставщиков по цене, сроку и наличию и выбирает лучшее предложение. Меньше ручной работы, быстрее закупки, прямая экономия и ноль ошибок менеджера.">
+<style>
+:root{
+  --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--text-accent:#013CA4;--muted:#6B7A99;--muted-soft:#7B8AA6;
+  --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;--extra-blue:#9CB5DB;--neutral:#E6E6E6;
+  --green:#1AB248;--gold:#E8A100;--red:#C51929;--border:#E7E7E7;
+  --r-lg:32px;--r-md:20px;--r-sm:14px;
+  --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
+  --gut:clamp(20px,5vw,64px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Oxygen','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--gut)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.1}
+.text-grad{background:linear-gradient(120deg,var(--text),var(--blue-active) 60%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:8px 16px;border-radius:100px;margin-bottom:22px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue-active)}
+.eyebrow.on-dark{color:#cfe0ff;background:rgba(255,255,255,.1)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:15px 28px;border-radius:14px;border:none;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--blue-active);color:#fff;box-shadow:0 12px 30px rgba(7,78,232,.3);position:relative;overflow:hidden}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(7,78,232,.42)}
+.btn-primary::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-120%}80%,100%{left:140%}}
+.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.btn-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--extra-blue)}
+.btn-light{background:#fff;color:var(--blue)}
+.btn-light:hover{transform:translateY(-2px)}
+.section{padding:clamp(56px,8vw,110px) 0}
+.section.alt{background:var(--surface)}
+.sec-head{margin-bottom:48px}
+.sec-head.center{text-align:center;max-width:800px;margin-left:auto;margin-right:auto}
+.sec-head h2{font-size:clamp(1.9rem,4vw,3rem)}
+.sec-head p{color:var(--muted);font-size:1.1rem;margin-top:14px}
+.lead{color:var(--muted);font-size:1.12rem}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(245,247,249,.85);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)}
+.nav{display:flex;align-items:center;gap:18px;height:74px}
+.brand{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.brand b{color:var(--blue-active)}
+.brand .tag{display:inline-flex;gap:3px;margin-left:6px}
+.brand .tag span{font-size:9px;font-weight:700;color:#fff;padding:2px 5px;border-radius:4px;letter-spacing:.02em}
+.nav-back{margin-left:auto;font-weight:700;font-size:14.5px;color:var(--blue);display:inline-flex;align-items:center;gap:8px}
+.nav-back svg{width:16px;height:16px}
+.nav-cta{display:inline-flex;align-items:center;gap:14px}
+.nav-phone{font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:7px}
+.nav-phone svg{width:16px;height:16px;color:var(--blue)}
+@media(max-width:720px){.nav-phone{display:none}}
+
+/* hero */
+.hero{position:relative;padding:clamp(48px,7vw,90px) 0 clamp(56px,8vw,96px);overflow:hidden}
+.aura{position:absolute;border-radius:50%;filter:blur(80px);z-index:0;opacity:.5;pointer-events:none}
+.aura.a1{width:540px;height:540px;background:radial-gradient(circle,rgba(7,78,232,.28),transparent 70%);top:-160px;right:-120px}
+.aura.a2{width:440px;height:440px;background:radial-gradient(circle,rgba(26,178,72,.18),transparent 70%);bottom:-160px;left:-120px}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,56px);align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.hero h1{font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.05;margin:0 0 20px}
+.hero .sub{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--muted);max-width:560px;margin-bottom:28px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.trust-row{display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.trust-row .ti{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;color:var(--text)}
+.trust-row .ti svg{width:17px;height:17px;color:var(--green);flex-shrink:0}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2.8.2,1),transform .7s cubic-bezier(.2.8.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* generic grids */
+.grid{display:grid}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr}}
+@media(max-width:620px){.g4.g2{grid-template-columns:1fr}}
+
+/* ===== hero comparison scene ===== */
+.cmp-scene{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden}
+.cmp-top{display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid var(--border);background:#fbfcfe}
+.cmp-top .dots{display:flex;gap:6px}
+.cmp-top .dots i{width:11px;height:11px;border-radius:50%;display:block}
+.cmp-top .dots i:nth-child(1){background:#ff5f57}.cmp-top .dots i:nth-child(2){background:#febc2e}.cmp-top .dots i:nth-child(3){background:#28c840}
+.cmp-top span{font-size:12.5px;color:var(--muted-soft);font-weight:700;margin-left:6px}
+.cmp-body{padding:20px}
+.cmp-inputs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.doc-chip{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;padding:7px 12px;border-radius:9px;border:1px solid var(--border);background:#fff;color:var(--muted);animation:docin .6s ease backwards}
+.doc-chip svg{width:14px;height:14px}
+.doc-chip.xls{color:#1a7a45}.doc-chip.pdf{color:#c0392b}.doc-chip.scan{color:#7a5cc0}.doc-chip.mail{color:#1f6fb2}
+@keyframes docin{from{opacity:0;transform:translateY(-8px) scale(.9)}to{opacity:1;transform:none}}
+.cmp-arrow{display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted-soft);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin:4px 0 14px}
+.cmp-arrow svg{width:16px;height:16px;color:var(--blue-active);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.cmp-table{border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.cmp-row{display:grid;grid-template-columns:1.5fr .8fr .7fr auto;gap:8px;align-items:center;padding:13px 14px;font-size:13px;border-bottom:1px solid var(--border)}
+.cmp-row:last-child{border-bottom:none}
+.cmp-row.head{background:#f4f7fc;font-weight:700;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.cmp-row .sup{font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px}
+.cmp-row .sup .av{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;flex-shrink:0}
+.cmp-row .price{font-weight:700}
+.cmp-row .term{color:var(--muted)}
+.cmp-badge{font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:100px;white-space:nowrap}
+.cmp-badge.best{background:#e7f7ed;color:var(--green)}
+.cmp-badge.fast{background:#fff3da;color:var(--gold)}
+.cmp-badge.chk{background:#fde9eb;color:var(--red)}
+.cmp-row.win{background:linear-gradient(90deg,rgba(26,178,72,.08),transparent)}
+.cmp-foot{display:flex;align-items:center;justify-content:space-between;margin-top:14px;padding:13px 15px;border-radius:12px;background:linear-gradient(135deg,#03235F,#013CA4);color:#fff}
+.cmp-foot .cf-l{font-size:12px;color:#cfe0ff}
+.cmp-foot .cf-v{font-size:1.25rem;font-weight:700}
+.cmp-foot .cf-save{font-size:12px;font-weight:700;background:rgba(255,255,255,.16);padding:6px 12px;border-radius:100px}
+
+/* float badge over scene */
+.scene-badge{position:absolute;z-index:3;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:11px 15px;display:flex;align-items:center;gap:11px;animation:floaty 4s ease-in-out infinite}
+.scene-badge .sb-ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--green),#13923a)}
+.scene-badge .sb-ic svg{width:20px;height:20px}
+.scene-badge .sb-v{font-size:1.05rem;font-weight:700;line-height:1}
+.scene-badge .sb-l{font-size:11px;color:var(--muted);margin-top:2px}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* problem cards */
+.pcard{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:26px;box-shadow:var(--shadow-sm);transition:transform .35s,box-shadow .35s;overflow:hidden}
+.pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.pcard .pc-ic{width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;background:#fde9eb;color:var(--red)}
+.pcard .pc-ic svg{width:24px;height:24px}
+.pcard h4{font-size:1.12rem;margin-bottom:9px}
+.pcard p{font-size:14px;color:var(--muted)}
+
+/* steps / how it works */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+@media(max-width:920px){.flow{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.flow{grid-template-columns:1fr}}
+.fstep{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:26px 22px;box-shadow:var(--shadow-sm);transition:transform .35s,box-shadow .35s;overflow:hidden}
+.fstep:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.fstep .fs-n{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.05rem;background:linear-gradient(135deg,var(--blue),var(--blue-active));box-shadow:0 12px 24px rgba(7,78,232,.28);margin-bottom:16px}
+.fstep h4{font-size:1.08rem;margin-bottom:8px}
+.fstep p{font-size:13.5px;color:var(--muted)}
+.fstep .fs-ghost{position:absolute;right:14px;bottom:-18px;font-size:5rem;font-weight:700;color:rgba(7,78,232,.05);line-height:1}
+.fstep .fs-tag{display:inline-block;margin-top:14px;font-size:11px;font-weight:700;color:var(--green);background:#e7f7ed;padding:5px 11px;border-radius:100px}
+
+/* capability cards */
+.cap{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 26px;box-shadow:var(--shadow-sm);transition:transform .35s,box-shadow .35s;overflow:hidden}
+.cap::after{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(7,78,232,.09),transparent 70%);transition:transform .5s}
+.cap:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.cap:hover::after{transform:scale(1.6)}
+.cap .cap-ic{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active));box-shadow:0 14px 28px rgba(7,78,232,.28);margin-bottom:18px;position:relative;z-index:1}
+.cap .cap-ic svg{width:26px;height:26px}
+.cap h4{font-size:1.15rem;margin-bottom:10px;position:relative;z-index:1}
+.cap p{font-size:14px;color:var(--muted);position:relative;z-index:1}
+
+/* benefit (effect) cards */
+.eff{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 24px;box-shadow:var(--shadow-sm);text-align:center;transition:transform .35s,box-shadow .35s;overflow:hidden}
+.eff:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.eff .eff-v{font-size:2.6rem;font-weight:700;letter-spacing:-.03em;line-height:1;background:linear-gradient(120deg,var(--blue),var(--blue-active));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eff .eff-v.green{background:linear-gradient(120deg,var(--green),#13923a);-webkit-background-clip:text;background-clip:text}
+.eff .eff-t{font-weight:700;font-size:1rem;margin:12px 0 6px}
+.eff .eff-d{font-size:13px;color:var(--muted)}
+
+/* photo audience cards */
+.aud-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:980px){.aud-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.aud-grid{grid-template-columns:1fr}}
+.aud{position:relative;border-radius:var(--r-md);overflow:hidden;min-height:300px;box-shadow:var(--shadow-lg);transition:transform .35s,box-shadow .35s;background:linear-gradient(150deg,#03235F,#013CA4 60%,#074EE8)}
+.aud:hover{transform:translateY(-8px);box-shadow:0 40px 90px rgba(3,35,95,.26)}
+.aud img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2.8.2,1)}
+.aud:hover img{transform:scale(1.08)}
+.aud .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,26,68,.2) 0%,rgba(3,26,68,.6) 55%,rgba(3,26,68,.95) 100%);z-index:1}
+.aud .ct{position:absolute;inset:0;z-index:2;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff}
+.aud .ic-badge{position:absolute;top:22px;left:22px;width:48px;height:48px;border-radius:13px;background:rgba(255,255,255,.18);backdrop-filter:blur(10px);display:grid;place-items:center;color:#fff;z-index:2}
+.aud .ic-badge svg{width:24px;height:24px}
+.aud h3{font-size:1.3rem;margin-bottom:6px}
+.aud p{font-size:13.5px;color:#d4e0f7}
+
+/* split photo band */
+.band{position:relative;border-radius:var(--r-lg);overflow:hidden;min-height:440px;display:flex;align-items:center;box-shadow:var(--shadow-lg);background:linear-gradient(120deg,#03235F,#013CA4)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band .ov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(3,26,68,.95) 0%,rgba(3,35,95,.82) 45%,rgba(1,60,164,.5) 100%);z-index:1}
+.band .ct{position:relative;z-index:2;padding:clamp(32px,5vw,64px);color:#fff;max-width:620px}
+.band h2{font-size:clamp(1.8rem,3.6vw,2.7rem);margin-bottom:18px}
+.band p{color:#cfe0ff;font-size:1.1rem;margin-bottom:26px}
+.band .bstats{display:flex;gap:34px;flex-wrap:wrap}
+.band .bst .v{font-size:2.2rem;font-weight:700;background:linear-gradient(120deg,#fff,#9cc0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.band .bst .l{font-size:12.5px;color:#bcd0f5}
+.band .glass{position:absolute;right:clamp(24px,4vw,56px);top:50%;transform:translateY(-50%);z-index:2;width:min(36%,320px);display:flex;flex-direction:column;gap:13px}
+@media(max-width:900px){.band .glass{display:none}}
+.band .gchip{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.22);border-radius:15px;padding:15px 17px;color:#fff;display:flex;align-items:center;gap:13px;box-shadow:0 14px 40px rgba(3,26,68,.35)}
+.band .gchip .gi{flex-shrink:0;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.16)}
+.band .gchip .gi svg{width:20px;height:20px;color:#fff}
+.band .gchip.ok .gi{background:rgba(26,178,72,.85)}
+.band .gchip .gt{font-size:13px;font-weight:700;line-height:1.2}
+.band .gchip .gs{font-size:11px;color:#cfe0ff;margin-top:2px}
+
+/* dashboard scene cards */
+.scene{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);padding:24px;overflow:hidden}
+.scene .sc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.scene .sc-head .t{font-weight:700;font-size:14px}
+.scene .sc-head .b{font-size:12px;font-weight:700;color:var(--green);background:#e7f7ed;padding:4px 10px;border-radius:100px}
+.scene svg .ln{stroke-dasharray:1000;stroke-dashoffset:1000;animation:draw 2.2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.scene svg .dot{opacity:0;animation:fadeUp .4s ease forwards}
+@keyframes fadeUp{to{opacity:1}}
+.bars{display:flex;flex-direction:column;gap:13px}
+.bar-row{display:grid;grid-template-columns:1fr 2fr auto;gap:12px;align-items:center;font-size:13px}
+.bar-track{height:11px;border-radius:100px;background:#eef2f8;overflow:hidden}
+.bar-fill{height:100%;border-radius:100px;width:0;animation:grow 1.4s cubic-bezier(.2.8.2,1) forwards}
+@keyframes grow{to{width:var(--w)}}
+.bar-val{font-weight:700;font-size:13px}
+.ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:6px auto;background:conic-gradient(var(--green) 0 calc(var(--p)*1%),#eef2f8 0);position:relative}
+.ring .inner{width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center}
+.ring .v{font-size:1.7rem;font-weight:700;color:var(--text)}
+.ring .l{font-size:11px;color:var(--muted)}
+
+/* browser shot */
+.shot{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 30px 80px rgba(3,35,95,.2),0 4px 12px rgba(3,35,95,.08);border:1px solid var(--border);background:#fff}
+.shot .cap{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--border);background:#fbfcfe}
+.shot .cap .dots{display:flex;gap:6px}.shot .cap .dots i{width:11px;height:11px;border-radius:50%;display:block}
+.shot .cap .dots i:nth-child(1){background:#ff5f57}.shot .cap .dots i:nth-child(2){background:#febc2e}.shot .cap .dots i:nth-child(3){background:#28c840}
+.shot .cap span{font-size:12.5px;color:var(--muted-soft);font-weight:700;margin-left:6px}
+
+/* comparison: IntDoc vs ручной */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:820px){.vs-grid{grid-template-columns:1fr}}
+.vs-card{border-radius:var(--r-lg);padding:32px 30px}
+.vs-card.dark{background:linear-gradient(155deg,#03235F,#013CA4);color:#fff;box-shadow:var(--shadow-lg)}
+.vs-card.light{background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.vs-card h3{font-size:1.4rem;margin-bottom:20px}
+.vs-card ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.vs-card li{display:flex;gap:11px;align-items:flex-start;font-size:14.5px}
+.vs-card li svg{width:19px;height:19px;flex-shrink:0;margin-top:1px}
+.vs-card.dark li svg{color:#7fe0a0}
+.vs-card.light li{color:var(--muted)}
+.vs-card.light li svg{color:var(--red)}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+@media(max-width:980px){.plans{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+.plan{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;overflow:hidden}
+.plan::after{content:"";position:absolute;top:-50px;right:-50px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(7,78,232,.1),transparent 70%);transition:transform .5s;pointer-events:none}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.plan:hover::after{transform:scale(1.5)}
+.plan.featured{border:1.5px solid var(--blue-active);box-shadow:0 30px 70px rgba(7,78,232,.22)}
+.plan.featured::after{background:radial-gradient(circle,rgba(26,178,72,.14),transparent 70%)}
+.plan.featured::before{content:"Популярный";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue-active);color:#fff;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:7px 18px;border-radius:100px;box-shadow:0 10px 24px rgba(7,78,232,.35)}
+.plan .pl-name{font-size:1.3rem;font-weight:700;margin-bottom:6px}
+.plan .pl-price{font-size:2.2rem;font-weight:700;letter-spacing:-.03em;line-height:1;background:linear-gradient(120deg,var(--blue),var(--blue-active));-webkit-background-clip:text;background-clip:text;color:transparent}
+.plan .pl-price small{font-size:1rem;font-weight:700}
+.plan .pl-unit{font-size:14px;color:var(--text);font-weight:700;margin:14px 0 4px}
+.plan .pl-sub{font-size:13px;color:var(--muted-soft);margin-bottom:18px}
+.plan .pl-desc{font-size:13.5px;color:var(--muted);margin-bottom:22px;flex:1}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.plan li{font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
+.plan li svg{width:16px;height:16px;color:var(--green);flex-shrink:0;margin-top:2px}
+.plan .btn{width:100%;justify-content:center}
+
+/* form */
+.form-grid{display:grid;grid-template-columns:1fr .85fr;gap:28px;align-items:stretch}
+@media(max-width:860px){.form-grid{grid-template-columns:1fr}}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(26px,3vw,40px)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.form-row{grid-template-columns:1fr}}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
+.field input.field select{width:100%;font-family:inherit;font-size:14.5px;padding:13px 15px;border:1px solid var(--border);border-radius:12px;background:#f8fafc;color:var(--text);transition:border-color .2s,background .2s}
+.field input:focus.field select:focus{outline:none;border-color:var(--blue-active);background:#fff}
+.form-note{font-size:12.5px;color:var(--muted-soft);text-align:center;margin-top:14px}
+
+/* footer */
+footer.site{background:var(--text);color:#fff;padding:48px 0 30px;text-align:center}
+footer.site .fl{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:18px 0;font-size:14.5px}
+footer.site .fl a{color:#c6d3ee}
+footer.site .cp{color:#7e93c4;font-size:13px;margin-top:14px}
+
+/* product nav */
+.prod-nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
+.prod-nav a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--muted);padding:9px 16px;border-radius:100px;border:1px solid var(--border);background:#fff;transition:all .25s}
+.prod-nav a:hover{border-color:var(--extra-blue);color:var(--text)}
+.prod-nav a.active{background:var(--blue-active);color:#fff;border-color:var(--blue-active);box-shadow:0 10px 24px rgba(7,78,232,.3)}
+.prod-nav a .pn-ic{display:inline-flex}.prod-nav a .pn-ic svg{width:16px;height:16px}
+
+/* === ЕДИНАЯ ШАПКА (override) === */
+header.site{
+  position:sticky;top:0;z-index:100;
+  background:rgba(245,247,249,.82);
+  backdrop-filter:saturate(160%) blur(16px);
+  -webkit-backdrop-filter:saturate(160%) blur(16px);
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s,box-shadow .3s
+}
+header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94);box-shadow:0 4px 20px rgba(72,89,102,.06)}
+.nav{display:flex;align-items:center;gap:16px;height:74px}
+.brand{display:flex;align-items:center;flex-shrink:0}
+.brand svg{height:30px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0;margin-left:4px}
+.nav-links a,.nav-links .nav-item{
+  font-weight:700;font-size:14.5px;color:var(--text);padding:9px 13px;border-radius:10px;
+  transition:background .2s,color .2s;display:inline-flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap
+}
+.nav-links a:hover,.nav-links .nav-item:hover{background:var(--soft-blue);color:var(--blue)}
+.nav-links a.active{color:var(--blue)}
+.nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px;flex-shrink:0}
+.nav-phone{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;color:var(--text);
+  padding:7px 10px;border-radius:10px;transition:color .2s}
+.nav-phone:hover{color:var(--blue)}
+.nav-phone svg{width:16px;height:16px;color:var(--blue-active)}
+.btn-sm{padding:11px 18px;font-size:13.5px}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--text)}
+.menu-toggle svg{width:26px;height:26px}
+@media(max-width:1000px){.nav-phone{display:none}}
+@media(max-width:1100px){.nav-cta .btn-primary{display:none}}
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;
+    background:var(--surface);padding:14px var(--gut);gap:2px;box-shadow:var(--shadow);border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .nav-links a,.nav-links .nav-item{padding:13px 14px;font-size:16px}
+  .menu-toggle{display:block;margin-left:auto}
+  .nav-cta{margin-left:0}
+  .nav-cta .btn-primary{display:inline-flex}
+}
+
+/* === ЕДИНЫЙ СТИЛЬ ФОРМ (как на главной) === */
+.form-card{background:var(--surface)!important;border:1px solid var(--border)!important;border-radius:var(--r-md)!important;padding:clamp(26px,3vw,38px)!important;box-shadow:var(--shadow)!important;position:relative;overflow:hidden;max-width:none!important;margin:0!important}
+.form-card h3{font-size:1.5rem;margin-bottom:8px;color:var(--text)}
+.form-card .fdesc{font-size:14.5px;margin-bottom:24px;color:var(--muted)}
+.field{margin-bottom:15px}
+.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text)}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:14.5px;padding:13px 15px;border-radius:12px;
+  border:1px solid var(--border);background:var(--bg);color:var(--text);transition:border .2s,box-shadow .2s;outline:none;box-sizing:border-box}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-active);box-shadow:0 0 0 4px rgba(7,78,232,.12)}
+.field textarea{resize:vertical;min-height:84px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:480px){.field-row{grid-template-columns:1fr}}
+.form-card .btn{width:100%!important;justify-content:center;margin-top:8px;box-sizing:border-box}
+.form-note{text-align:center;font-size:12.5px;color:var(--muted-soft);margin-top:14px}
+
+/* ===== PROCUREMENT COST (bento) ===== */
+.proc-cost{position:relative;overflow:hidden}
+.proc-cost::before{content:"";position:absolute;top:-180px;left:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(7,78,232,.12),transparent 70%);pointer-events:none}
+.proc-cost::after{content:"";position:absolute;bottom:-180px;right:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(197,25,41,.10),transparent 70%);pointer-events:none}
+.bento{display:grid;grid-template-columns:1.2fr .8fr 1fr;grid-template-rows:auto auto;gap:18px;position:relative}
+@media(max-width:980px){.bento{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.bento{grid-template-columns:1fr}}
+.bx{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:26px;box-shadow:var(--shadow-sm);overflow:hidden;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;animation:bxIn .8s cubic-bezier(.2,.8,.2,1) backwards}
+.bx:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--extra-blue)}
+.bx-1{grid-column:1;grid-row:1;min-height:340px;color:#fff;justify-content:flex-end;animation-delay:.0s}
+.bx-2{grid-column:2;grid-row:1;animation-delay:.08s}
+.bx-3{grid-column:3;grid-row:1 / span 2;min-height:480px;color:#fff;justify-content:flex-end;animation-delay:.16s}
+.bx-4{grid-column:1;grid-row:2;animation-delay:.24s}
+.bx-5{grid-column:2;grid-row:2;animation-delay:.32s}
+@media(max-width:980px){.bx-1,.bx-2,.bx-3,.bx-4,.bx-5{grid-column:auto;grid-row:auto;min-height:300px}.bx-3{grid-column:1 / span 2}}
+@media(max-width:620px){.bx-3{grid-column:auto}}
+@keyframes bxIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.bx-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1);z-index:0}
+.bx:hover .bx-img{transform:scale(1.06)}
+.bx-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,26,68,.2) 0%,rgba(3,26,68,.55) 55%,rgba(3,26,68,.92) 100%);z-index:1}
+.bx-shade.dark{background:linear-gradient(180deg,rgba(3,26,68,.45) 0%,rgba(3,26,68,.75) 50%,rgba(3,26,68,.96) 100%)}
+.bx-1 > *:not(.bx-img):not(.bx-shade),.bx-3 > *:not(.bx-img):not(.bx-shade){position:relative;z-index:2}
+.bx-tag{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:7px 13px;border-radius:100px;align-self:flex-start;margin-bottom:14px;width:fit-content}
+.bx-tag svg{width:13px;height:13px}
+.bx-tag.warn{color:var(--gold);background:#fff3da}
+.bx-tag.bad{color:var(--red);background:#fde9eb}
+.bx-tag.money{color:var(--green);background:#e7f7ed}
+.bx-tag.on-dark{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(8px)}
+.bx-metric{margin-bottom:auto;padding-bottom:18px}
+.bx-num{display:block;font-size:clamp(2.4rem,5vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1;background:linear-gradient(120deg,#fff,#9cc0ff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:6px}
+.bx-cap{font-size:13px;color:#cfe0ff;max-width:200px;display:block}
+.bx-bottom h4{font-size:1.2rem;margin-bottom:7px;color:#fff}
+.bx-bottom p{font-size:13.5px;color:#d4e0f7;line-height:1.55}
+.bx-bottom.on-dark p{color:#d4e0f7}
+.bx-icon{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--gold),#c08800);box-shadow:0 12px 24px rgba(232,161,0,.28);margin-bottom:16px}
+.bx-icon svg{width:24px;height:24px}
+.bx h4{font-size:1.1rem;margin-bottom:8px;color:var(--text);line-height:1.25}
+.bx p{font-size:13.5px;color:var(--muted);line-height:1.55}
+.bx-list{display:flex;flex-direction:column;gap:7px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+.bx-list span{font-size:13px;color:var(--text);font-weight:600;display:flex;align-items:center;gap:9px}
+.bx-list .dx{width:14px;height:14px;border-radius:4px;background:#fde9eb;position:relative;flex-shrink:0}
+.bx-list .dx::before,.bx-list .dx::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:1.8px;background:var(--red);transform-origin:center}
+.bx-list .dx::before{transform:translate(-50%,-50%) rotate(45deg)}
+.bx-list .dx::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.bx-mini-chart{margin:-6px -6px 14px;background:linear-gradient(180deg,#fff5f6,transparent);border-radius:14px;padding:10px}
+.bx-mini-chart svg{width:100%;height:90px;display:block}
+.bx-line{stroke-dasharray:600;stroke-dashoffset:600;animation:bxDraw 1.8s ease-out forwards;animation-delay:.3s}
+.bx-dot{opacity:0;animation:bxDot .4s ease forwards 1.8s}
+@keyframes bxDraw{to{stroke-dashoffset:0}}
+@keyframes bxDot{to{opacity:1;transform:scale(1.2)}}
+.bx-stat-row{display:flex;align-items:baseline;gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border)}
+.bx-stat-big{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,var(--red),#7a0f1a);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.bx-stat-lbl{font-size:12.5px;color:var(--muted)}
+.bx-grid-mini{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.bx-cell{background:var(--bg);border:1px dashed var(--border);border-radius:11px;padding:11px 13px;display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);transition:all .25s}
+.bx:hover .bx-cell{border-color:var(--extra-blue);background:#fff}
+.bx-q{width:24px;height:24px;border-radius:50%;background:var(--soft-blue);color:var(--blue);font-weight:700;font-size:13px;display:grid;place-items:center;flex-shrink:0}
+.proc-cta{margin-top:32px;background:linear-gradient(135deg,#03235F,#013CA4 55%,#074EE8);border-radius:var(--r-md);padding:clamp(22px,3vw,32px) clamp(24px,3.5vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px;color:#fff;box-shadow:var(--shadow-lg);flex-wrap:wrap;position:relative;overflow:hidden}
+.proc-cta::before{content:"";position:absolute;top:-50%;right:-10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(26,178,72,.25),transparent 70%);pointer-events:none}
+.proc-cta .pc-row{display:flex;align-items:center;gap:18px;position:relative;z-index:1}
+.proc-cta .pc-ic-big{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--green),#13923a);display:grid;place-items:center;color:#fff;flex-shrink:0;box-shadow:0 14px 28px rgba(26,178,72,.4)}
+.proc-cta .pc-ic-big svg{width:28px;height:28px;stroke-width:2.6}
+.proc-cta .pc-h{font-size:1.2rem;font-weight:700;margin-bottom:3px}
+.proc-cta .pc-s{font-size:14px;color:#cfe0ff}
+.proc-cta .btn{position:relative;z-index:1;flex-shrink:0}
+@media(max-width:720px){.proc-cta{flex-direction:column;align-items:stretch;text-align:left}.proc-cta .btn{width:100%;justify-content:center}}
+
+/* === ЕДИНЫЙ ПОДВАЛ (как на главной) === */
+footer.site{background:var(--text)!important;color:#fff!important;padding:clamp(48px,6vw,72px) 0 30px!important;text-align:left!important}
+.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px}
+@media(max-width:900px){.foot-top{grid-template-columns:1fr 1fr;gap:30px}}
+@media(max-width:560px){.foot-top{grid-template-columns:1fr;gap:30px}}
+.foot-brand svg{height:32px;margin-bottom:20px;width:auto}
+.foot-brand p{color:#aebfdf;font-size:14.5px;max-width:420px;margin-bottom:24px;line-height:1.55}
+.foot-actions{display:flex;flex-wrap:wrap;gap:12px}
+.foot-actions .btn-sm{padding:11px 18px;font-size:13.5px}
+.foot-actions .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25)}
+.foot-actions .btn-ghost:hover{background:rgba(255,255,255,.08)}
+.foot-col h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#7e93c4;margin-bottom:18px;font-weight:700}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;padding:0;margin:0}
+.foot-col a{color:#c6d3ee;font-size:14.5px;transition:color .2s,padding .2s}
+.foot-col a:hover{color:#fff;padding-left:4px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;color:#7e93c4;font-size:13px;flex-wrap:wrap;gap:14px}
+.foot-bottom .ft-links{display:flex;gap:22px;flex-wrap:wrap}
+.foot-bottom a{color:#c6d3ee}
+.foot-bottom a:hover{color:#fff}
+
+</style>
+</head>
+<body>
+
+<header class="site" id="hdr"><div class="wrap"><nav class="nav">
+  <a class="brand" href="/" aria-label="MakeBiz"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#03235F"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#03235F"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#03235F"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#03235F"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#03235F"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#03235F"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#03235F"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg></a>
+  <div class="nav-links" id="navlinks">
+    <a href="/">Главная</a>
+    <a href="/company">О компании</a>
+    <a href="/openclaw" >OpenClaw</a>
+    <a href="/vector" >Vector</a>
+    <a href="/intdoc" class="active">IntDoc</a><a href="/bitrix" >Bitrix</a>
+    
+    <a href="/partners">Партнёрам</a>
+    <a href="/contacts">Контакты</a>
+  </div>
+  <div class="nav-cta">
+    <a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
+    <a href="/contacts" class="btn btn-primary btn-sm">Обсудить проект</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</nav></div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="aura a1"></div><div class="aura a2"></div>
+  <div class="wrap"><div class="hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span>IntDoc · AI для закупок и поставщиков</span>
+      <h1>Сравниваем сотни прайсов за минуты. Покупаете <span class="text-grad">выгоднее и без ошибок</span></h1>
+      <p class="sub">IntDoc забирает у менеджера ручную рутину: обрабатывает прайсы, КП и спецификации в любом формате, сводит поставщиков в одну таблицу и сам выбирает лучшее предложение по цене, сроку и наличию.</p>
+      <div class="hero-actions">
+        <a href="#form" class="btn btn-primary">Получить анализ на ваших документах <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#how" class="btn btn-secondary">Как это работает</a>
+      </div>
+      <div class="trust-row">
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>−90% ручной работы</span>
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Без ошибок менеджера</span>
+        <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Прямая экономия на закупке</span>
+      </div>
+    </div>
+    <div class="reveal" style="position:relative">
+      <div class="cmp-scene">
+        <div class="cmp-top"><div class="dots"><i></i><i></i><i></i></div><span>IntDoc · сравнение поставщиков по позиции</span></div>
+        <div class="cmp-body">
+          <div class="cmp-inputs">
+            <span class="doc-chip xls" style="animation-delay:.0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8l6 8M15 8l-6 8"/></svg>Прайс.xlsx</span>
+            <span class="doc-chip pdf" style="animation-delay:.12s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>КП.pdf</span>
+            <span class="doc-chip scan" style="animation-delay:.24s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-7 7"/></svg>Скан</span>
+            <span class="doc-chip mail" style="animation-delay:.36s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Письмо</span>
+          </div>
+          <div class="cmp-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg> IntDoc сводит в одну таблицу</div>
+          <div class="cmp-table">
+            <div class="cmp-row head"><span>Поставщик</span><span>Цена</span><span>Срок</span><span></span></div>
+            <div class="cmp-row win"><span class="sup"><span class="av" style="background:#1AB248">A</span>Поставщик A</span><span class="price">€ 1 240</span><span class="term">3 дня</span><span class="cmp-badge best">Лучшая цена</span></div>
+            <div class="cmp-row"><span class="sup"><span class="av" style="background:#074EE8">B</span>Поставщик B</span><span class="price">€ 1 310</span><span class="term">1 день</span><span class="cmp-badge fast">Быстрее</span></div>
+            <div class="cmp-row"><span class="sup"><span class="av" style="background:#9CB5DB">C</span>Поставщик C</span><span class="price">€ 1 295</span><span class="term">5 дней</span><span class="cmp-badge chk">Проверить</span></div>
+          </div>
+          <div class="cmp-foot"><div><div class="cf-l">Решение по позиции</div><div class="cf-v">Поставщик A · € 1 240</div></div><span class="cf-save">экономия € 70</span></div>
+        </div>
+      </div>
+      <div class="scene-badge" style="right:-14px;bottom:32px"><span class="sb-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span><div><div class="sb-v">0 ошибок</div><div class="sb-l">сверки и расчётов</div></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section alt proc-cost">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Сколько стоит ручное сравнение</span><h2>Закупка тормозит не из-за поставщиков, <span class="text-grad">а из-за ручной работы с их документами</span></h2><p>Прайсы приходят в разных форматах, один товар назван по-разному, цены в разных валютах. Менеджер тратит часы на сведение таблиц, и всё равно ошибается.</p></div>
+    <div class="bento reveal">
+      <div class="bx bx-1">
+        <img class="bx-img" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+        <div class="bx-shade"></div>
+        <span class="bx-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Время</span>
+        <div class="bx-metric"><span class="bx-num">−14ч</span><span class="bx-cap">в неделю на сведение прайсов</span></div>
+        <div class="bx-bottom">
+          <h4>Часы в Excel вручную</h4>
+          <p>Менеджер копирует позиции из десятков прайсов в одну таблицу. Медленно, утомительно, без права на ошибку.</p>
+        </div>
+      </div>
+
+      <div class="bx bx-2">
+        <span class="bx-tag warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>Ошибки</span>
+        <div class="bx-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16M14 14h4M14 17h3"/></svg></div>
+        <h4>Ошибки и пересортица</h4>
+        <p>Разные единицы, валюты, названия одного товара. Закупка не того, не там, не по той цене.</p>
+        <div class="bx-list">
+          <span><i class="dx"></i> EUR ↔ USD ↔ AED</span>
+          <span><i class="dx"></i> «Шт» vs «Кг» vs «Уп»</span>
+          <span><i class="dx"></i> Похожие SKU поставщиков</span>
+        </div>
+      </div>
+
+      <div class="bx bx-3">
+        <img class="bx-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80" alt="" loading="lazy">
+        <div class="bx-shade dark"></div>
+        <span class="bx-tag bad on-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><path d="M3 4v5h5"/></svg>Скорость</span>
+        <div class="bx-metric on-dark"><span class="bx-num">×5</span><span class="bx-cap">медленнее, чем у конкурента с автоматизацией</span></div>
+        <div class="bx-bottom on-dark">
+          <h4>Упущенная выгода</h4>
+          <p>Пока сводится таблица, цены меняются. Лучшее предложение уходит к тому, кто решил быстрее.</p>
+        </div>
+      </div>
+
+      <div class="bx bx-4">
+        <span class="bx-tag money"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Деньги</span>
+        <div class="bx-mini-chart">
+          <svg viewBox="0 0 240 110" preserveAspectRatio="none">
+            <defs><linearGradient id="bxg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C51929" stop-opacity=".22"/><stop offset="1" stop-color="#C51929" stop-opacity="0"/></linearGradient></defs>
+            <polyline points="5,20 5,55 45,40 85,62 125,52 165,78 205,72 235,92 235,20" fill="url(#bxg)"/>
+            <path class="bx-line" d="M 5,55 L 45,40 L 85,62 L 125,52 L 165,78 L 205,72 L 235,92" fill="none" stroke="#C51929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="bx-dot" cx="235" cy="92" r="4.5" fill="#C51929"/>
+          </svg>
+        </div>
+        <h4>Переплата на каждой сделке</h4>
+        <p>Без сравнения по всем поставщикам, закупка идёт не по лучшей, а по «первой подходящей» цене.</p>
+        <div class="bx-stat-row"><span class="bx-stat-big">−6%</span><span class="bx-stat-lbl">маржи теряется ежемесячно</span></div>
+      </div>
+
+      <div class="bx bx-5">
+        <span class="bx-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/><path d="M3 3l18 18" stroke-width="2.4"/></svg>Прозрачность</span>
+        <div class="bx-grid-mini">
+          <div class="bx-cell"><span class="bx-q">?</span><span>Кто выбрал</span></div>
+          <div class="bx-cell"><span class="bx-q">?</span><span>Почему этот</span></div>
+          <div class="bx-cell"><span class="bx-q">?</span><span>Что с экономией</span></div>
+          <div class="bx-cell"><span class="bx-q">?</span><span>Где история</span></div>
+        </div>
+        <h4>Руководитель не видит закупку</h4>
+        <p>В Excel-файлах нет ответов: кто, почему и насколько выгодно купил. Решения уходят в «карман» менеджера.</p>
+      </div>
+    </div>
+
+    <div class="proc-cta reveal">
+      <div class="pc-row">
+        <div class="pc-ic-big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></div>
+        <div>
+          <div class="pc-h">IntDoc забирает всё это себе</div>
+          <div class="pc-s">Время менеджера, точность данных, скорость решения и прозрачность для руководителя.</div>
+        </div>
+      </div>
+      <a href="#form" class="btn btn-primary">Показать на наших документах <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Как это работает</span><h2>От пачки документов <span class="text-grad">до готового решения</span></h2><p>Четыре шага, и закупочное решение готово. Без ручного сведения таблиц и без ошибок менеджера.</p></div>
+    <div class="flow reveal">
+      <div class="fstep"><div class="fs-n">1</div><h4>Загрузка документов</h4><p>Прайсы, КП, спецификации в любом виде: Excel, PDF, сканы, фото, письма.</p><span class="fs-tag">любой формат</span><span class="fs-ghost">1</span></div>
+      <div class="fstep"><div class="fs-n">2</div><h4>Распознавание и нормализация</h4><p>IntDoc извлекает позиции, цены, сроки и наличие, приводит названия и валюты к единому виду.</p><span class="fs-tag">авто</span><span class="fs-ghost">2</span></div>
+      <div class="fstep"><div class="fs-n">3</div><h4>Сравнение поставщиков</h4><p>Сопоставляет похожие позиции и строит единую матрицу сравнения по каждой строке.</p><span class="fs-tag">матрица</span><span class="fs-ghost">3</span></div>
+      <div class="fstep"><div class="fs-n">4</div><h4>Решение и экономия</h4><p>Показывает лучший вариант, считает экономию и формирует готовое КП, с экспортом в Excel и PDF.</p><span class="fs-tag">результат</span><span class="fs-ghost">4</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Возможности IntDoc</span><h2>Всё, что закупщик делал руками, <span class="text-grad">теперь автоматически</span></h2><p>IntDoc закрывает весь цикл работы с документами поставщиков: от распознавания до готового коммерческого предложения.</p></div>
+    <div class="grid g3 reveal" style="gap:20px">
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h4>Сравнение прайсов</h4><p>Сводит десятки прайс-листов в одну таблицу и показывает лучший вариант по каждой позиции, цена, срок, наличие.</p></div>
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><h4>Контроль цен и наценок</h4><p>Отслеживает динамику цен поставщиков и подсвечивает отклонения от рынка и от вашей закупочной нормы.</p></div>
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h4>Сверка счетов и спецификаций</h4><p>Сверяет счёт со спецификацией и заказом, находит расхождения по позициям, количеству и суммам.</p></div>
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16M13 13h4M13 16h4"/></svg></div><h4>Тендерные таблицы</h4><p>Формирует сравнительную таблицу участников тендера и обоснование выбора победителя, для закупочной комиссии.</p></div>
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg></div><h4>История цен поставщика</h4><p>Хранит историю предложений по каждому поставщику и товару, видно, кто дорожает, а кто держит цену.</p></div>
+      <div class="cap"><div class="cap-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></div><h4>Готовое КП и экспорт</h4><p>Из выбранных позиций собирает коммерческое предложение для клиента и выгружает результат в Excel и PDF.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EFFECT FOR BUSINESS -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Эффект для бизнеса</span><h2>Меньше работы менеджера, <span class="text-grad">больше прибыли компании</span></h2><p>IntDoc ускоряет закупочный цикл, убирает ошибки и напрямую экономит деньги на каждой сделке.</p></div>
+    <div class="grid g4 reveal" style="gap:18px">
+      <div class="eff"><div class="eff-v">−90%</div><div class="eff-t">ручной работы</div><div class="eff-d">Сведение прайсов из часов превращается в минуты.</div></div>
+      <div class="eff"><div class="eff-v green">×5</div><div class="eff-t">быстрее закупка</div><div class="eff-d">Решение по поставщику, в день обращения, а не через неделю.</div></div>
+      <div class="eff"><div class="eff-v">0</div><div class="eff-t">ошибок сверки</div><div class="eff-d">Никакой пересортицы, потерянных позиций и неверных валют.</div></div>
+      <div class="eff"><div class="eff-v green">+</div><div class="eff-t">прямая экономия</div><div class="eff-d">Всегда виден самый выгодный вариант, и сколько вы сэкономили.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAVINGS BAND (photo) -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="band reveal">
+      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80&h=800" alt="">
+      <div class="ov"></div>
+      <div class="ct">
+        <span class="eyebrow on-dark" style="margin-bottom:16px"><span class="dot"></span>Деньги, а не отчёты</span>
+        <h2>Каждая закупка, по лучшей цене <span style="background:linear-gradient(120deg,#fff,#9cc0ff);-webkit-background-clip:text;background-clip:text;color:transparent">на рынке</span></h2>
+        <p>IntDoc не просто складывает документы в таблицу, он показывает, где вы переплачиваете, и сколько экономите, выбирая правильного поставщика.</p>
+        <div class="bstats">
+          <div class="bst"><div class="v">сотни</div><div class="l">прайсов за минуты</div></div>
+          <div class="bst"><div class="v">100%</div><div class="l">позиций под сравнением</div></div>
+          <div class="bst"><div class="v">0</div><div class="l">ручных ошибок</div></div>
+        </div>
+      </div>
+      <div class="glass">
+        <div class="gchip ok"><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span><div><div class="gt">Лучшая цена найдена</div><div class="gs">экономия € 70 на позиции</div></div></div>
+        <div class="gchip ok"><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span><div><div class="gt">Сроки сверены</div><div class="gs">наличие подтверждено</div></div></div>
+        <div class="gchip ok"><span class="gi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg></span><div><div class="gt">КП сформировано</div><div class="gs">экспорт в Excel и PDF</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Кому особенно полезно</span><h2>Создан для тех, кто <span class="text-grad">закупает много и часто</span></h2><p>Чем больше поставщиков, позиций и закупщиков, тем больше IntDoc экономит времени и денег.</p></div>
+    <div class="aud-grid reveal">
+      <div class="aud"><img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80&h=900" alt=""><div class="ov"></div><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 21V12h6v9"/></svg></span><div class="ct"><h3>Дистрибьюторы</h3><p>Сотни SKU, десятки поставщиков, частые переоценки, всё под контролем.</p></div></div>
+      <div class="aud"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80&h=900" alt=""><div class="ov"></div><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7M5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/></svg></span><div class="ct"><h3>Логисты и снабжение</h3><p>Сравнение цен, сроков и наличия по поставщикам в одном окне.</p></div></div>
+      <div class="aud"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80&h=900" alt=""><div class="ov"></div><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><div class="ct"><h3>Тендерные отделы</h3><p>Сравнительные таблицы участников и обоснование выбора победителя.</p></div></div>
+      <div class="aud"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1200&q=80&h=900" alt=""><div class="ov"></div><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5zM6 11v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></span><div class="ct"><h3>Торговые компании</h3><p>Готовое КП для клиента из лучших закупочных цен, за минуты.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYTICS SCENES -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Закупки в цифрах</span><h2>Документы превращаются <span class="text-grad">в понятные данные</span></h2><p>Цены, сроки и экономия, наглядно, в одном дашборде закупок.</p></div>
+    <div class="grid g3 reveal" style="gap:20px">
+      <div class="scene">
+        <div class="sc-head"><span class="t">Динамика закупочной цены</span><span class="b" style="color:var(--green);background:#e7f7ed">−12% за квартал</span></div>
+        <svg viewBox="0 0 440 180" width="100%" preserveAspectRatio="xMidYMid meet">
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#074EE8" stop-opacity=".18"/><stop offset="1" stop-color="#074EE8" stop-opacity="0"/></linearGradient></defs>
+          <polyline points="10,40 10,60 70,72 130,84 190,92 250,108 310,120 370,128 430,140 430,40" fill="url(#lg)" stroke="none"/>
+          <path class="ln" d="M 10,60 L 70,72 L 130,84 L 190,92 L 250,108 L 310,120 L 370,128 L 430,140" fill="none" stroke="#074EE8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle class="dot" cx="10" cy="60" r="4" fill="#074EE8" style="animation-delay:1.6s"/><circle class="dot" cx="130" cy="84" r="4" fill="#074EE8" style="animation-delay:1.8s"/><circle class="dot" cx="250" cy="108" r="4" fill="#074EE8" style="animation-delay:2.0s"/><circle class="dot" cx="370" cy="128" r="4" fill="#074EE8" style="animation-delay:2.2s"/><circle class="dot" cx="430" cy="140" r="5" fill="#1AB248" style="animation-delay:2.4s"/>
+        </svg>
+        <p style="font-size:12.5px;color:var(--muted-soft);margin-top:10px">Средняя цена закупки по месяцам</p>
+      </div>
+      <div class="scene">
+        <div class="sc-head"><span class="t">Сравнение поставщиков</span><span class="b">по позиции</span></div>
+        <div class="bars">
+          <div class="bar-row"><span>Поставщик A</span><div class="bar-track"><div class="bar-fill" style="--w:72%;background:var(--green);animation-delay:0s"></div></div><span class="bar-val" style="color:var(--green)">€1 240</span></div>
+          <div class="bar-row"><span>Поставщик B</span><div class="bar-track"><div class="bar-fill" style="--w:80%;background:var(--blue-active);animation-delay:.12s"></div></div><span class="bar-val" style="color:var(--blue-active)">€1 310</span></div>
+          <div class="bar-row"><span>Поставщик C</span><div class="bar-track"><div class="bar-fill" style="--w:78%;background:var(--gold);animation-delay:.24s"></div></div><span class="bar-val" style="color:var(--gold)">€1 295</span></div>
+          <div class="bar-row"><span>Поставщик D</span><div class="bar-track"><div class="bar-fill" style="--w:90%;background:var(--extra-blue);animation-delay:.36s"></div></div><span class="bar-val" style="color:var(--muted)">€1 460</span></div>
+        </div>
+        <p style="font-size:12.5px;color:var(--muted-soft);margin-top:14px">Зелёный, выбранное лучшее предложение</p>
+      </div>
+      <div class="scene" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+        <div class="sc-head" style="width:100%"><span class="t">Экономия за месяц</span><span class="b">по всем закупкам</span></div>
+        <div class="ring" style="--p:34"><div class="inner"><div><div class="v">€14k</div><div class="l">сэкономлено</div></div></div></div>
+        <p style="font-size:12.5px;color:var(--muted-soft)">−34% к прежней закупочной стоимости</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IntDoc vs manual -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>IntDoc против ручной работы</span><h2>Не таблицы ради таблиц, <span class="text-grad">а готовые закупочные решения</span></h2></div>
+    <div class="vs-grid reveal">
+      <div class="vs-card dark">
+        <h3>С IntDoc</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Сравнивает поставщиков автоматически</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Понимает любой формат документа</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Выбирает лучшее по цене, сроку, наличию</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Показывает источник и экономию</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Формирует готовое КП и экспорт</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Решение, за минуты, без ошибок</li>
+        </ul>
+      </div>
+      <div class="vs-card light">
+        <h3>Ручное сравнение</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Часы копирования в Excel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Каждый поставщик, свой формат</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Ошибки в валютах и единицах</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Непонятно, почему выбрали поставщика</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>КП собирается заново руками</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Упущенная выгода на каждой сделке</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section alt" id="price">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Тарифы</span><h2>Тарифы под <span class="text-grad">объём закупок</span></h2><p>Все тарифы включают обработку документов в любом формате, сравнение поставщиков, готовое КП и экспорт в Excel и PDF.</p></div>
+    <div class="plans reveal">
+      <div class="plan">
+        <div class="pl-name">Старт</div>
+        <div class="pl-price">2 000 <small>AED/мес</small></div>
+        <div class="pl-unit">до 500 документов в месяц</div>
+        <div class="pl-sub">для небольшого отдела закупок</div>
+        <div class="pl-desc">Базовое сравнение поставщиков и формирование решений по позициям.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Excel, PDF, сканы, письма</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Матрица сравнения поставщиков</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Экспорт в Excel и PDF</li>
+        </ul>
+        <a href="#form" class="btn btn-secondary">Выбрать Старт</a>
+      </div>
+      <div class="plan featured">
+        <div class="pl-name">Команда</div>
+        <div class="pl-price">5 000 <small>AED/мес</small></div>
+        <div class="pl-unit">до 2 500 документов в месяц</div>
+        <div class="pl-sub">для активного отдела закупок</div>
+        <div class="pl-desc">Полный цикл: сравнение, контроль цен, история поставщиков и готовые КП.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Всё из «Старт»</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Контроль цен и история поставщиков</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Тендерные таблицы и готовые КП</li>
+        </ul>
+        <a href="#form" class="btn btn-primary">Выбрать Команда</a>
+      </div>
+      <div class="plan">
+        <div class="pl-name">Масштаб</div>
+        <div class="pl-price">от 12 000 <small>AED/мес</small></div>
+        <div class="pl-unit">безлимит документов</div>
+        <div class="pl-sub">для дистрибьюторов и сетей</div>
+        <div class="pl-desc">Интеграции с 1С/ERP, несколько закупщиков, индивидуальные правила.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Всё из «Команда»</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Интеграции 1С, ERP, BI</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 6"/></svg>Несколько закупщиков и правила</li>
+        </ul>
+        <a href="#form" class="btn btn-secondary">Выбрать Масштаб</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" id="form">
+  <div class="wrap">
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Заявка</span><h2>Покажем IntDoc <span class="text-grad">на ваших документах</span></h2><p>Пришлите 1–2 примера прайсов или КП, вернём готовое сравнение поставщиков и расчёт экономии.</p></div>
+    <div class="form-grid reveal">
+      <div class="form-card">
+        <div data-form="intdoc" id="iform">
+          <div class="form-row">
+            <div class="field"><label>Имя</label><input type="text" name="name" placeholder="Ваше имя"></div>
+            <div class="field"><label>Компания</label><input type="text" name="company" placeholder="Название компании"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label>Телефон</label><input type="text" name="phone" placeholder="+971 …"></div>
+            <div class="field"><label>Ник в Telegram</label><input type="text" name="telegram" placeholder="@username"></div>
+          </div>
+          <div class="field"><label>Сфера закупок</label>
+            <select name="busy"><option value="" disabled selected>Выберите</option><option>Дистрибуция</option><option>Логистика и снабжение</option><option>Тендеры</option><option>Торговая компания</option><option>Другое</option></select>
+          </div>
+          <div class="field"><label>Сколько документов в месяц?</label><input type="text" name="format" placeholder="Примерный объём"></div>
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <button class="btn btn-primary" id="isubmit">Получить анализ на ваших документах <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-note">Это демонстрационная форма. Мы уважаем вашу конфиденциальность.</p>
+        </div>
+        <div id="isuccess" style="display:none;text-align:center;padding:20px">
+          <div style="width:64px;height:64px;border-radius:50%;background:var(--soft-blue);color:var(--blue-active);display:grid;place-items:center;margin:0 auto 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <h3 style="margin-bottom:8px">Спасибо!</h3><p style="color:var(--muted)">Заявка зафиксирована. Команда MakeBiz свяжется с вами, разберёт ваши документы в IntDoc и покажет экономию.</p>
+        </div>
+      </div>
+      <div class="aud" style="min-height:100%"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80&h=900" alt=""><div class="ov"></div><span class="ic-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span><div class="ct"><h3>Выбираем лучшего поставщика</h3><p style="margin:0">Пришлите документы, покажем сравнение и реальную экономию на ваших закупках.</p></div></div>
+    </div>
+    <div class="prod-nav reveal" style="margin-top:48px">
+      <a href="/openclaw"><span class="pn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="13.5" r="1.2" fill="currentColor"/><circle cx="15" cy="13.5" r="1.2" fill="currentColor"/></svg></span>OpenClaw</a>
+      <a href="/bitrix"><span class="pn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M8 4v16"/></svg></span>Bitrix</a>
+      <a href="/vector"><span class="pn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg></span>Vector</a>
+      <a href="/intdoc" class="active"><span class="pn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>IntDoc</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site"><div class="wrap"><div class="foot-top">
+      <div class="foot-brand"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101_f)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#FFFFFF"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#FFFFFF"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#FFFFFF"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#FFFFFF"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#FFFFFF"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#FFFFFF"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#FFFFFF"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101_f"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg><p>MakeBiz, IT-компания полного цикла: внедряем искусственный интеллект, CRM и аналитику, систематизируем процессы и выстраиваем управляемую цифровую среду для бизнеса.</p>
+        <div class="foot-actions"><a href="/contacts" class="btn btn-primary btn-sm">Обсудить проект</a><a href="/partners" class="btn btn-ghost btn-sm">Стать партнёром</a></div></div>
+      <div class="foot-col"><h4>Компания</h4><ul><li><a href="/company">О компании</a></li><li><a href="/partners">Партнёрам</a></li><li><a href="/">Главная</a></li><li><a href="/contacts">Контакты</a></li></ul></div>
+      <div class="foot-col"><h4>Продукты</h4><ul><li><a href="/openclaw">OpenClaw</a></li><li><a href="/vector">Vector</a></li><li><a href="/intdoc">IntDoc</a></li><li><a href="/bitrix">Bitrix</a></li></ul></div>
+      <div class="foot-col"><h4>Контакты</h4><ul><li><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram @Anton_MakeBiz</a></li><li><a href="tel:+971502620927">+971 50 262 0927</a></li></ul></div>
+    </div><div class="foot-bottom"><span>© <span id="yr"></span> MakeBiz. Все права защищены.</span>
+      <div class="ft-links"><a href="/company">О компании</a><a href="/">Главная</a><a href="/contacts">Контакты</a></div></div></div></footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+
+  var LEAD_ENDPOINT='/api/lead';
+  var btn=document.getElementById('isubmit');
+  btn&&btn.addEventListener('click',function(){
+    var box=document.getElementById('iform');
+    var data={form:'intdoc'};
+    box.querySelectorAll('input,select').forEach(function(el){ if(el.name) data[el.name]=el.value; });
+    btn.disabled=true; btn.style.opacity=.7;
+    fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(){ box.style.display='none'; document.getElementById('isuccess').style.display='block'; })
+      .catch(function(){ box.style.display='none'; document.getElementById('isuccess').style.display='block'; });
+  });
+})();
+</script>
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  if(hdr) window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var mt=document.getElementById('menuToggle'),nl=document.getElementById('navlinks');
+  if(mt&&nl) mt.addEventListener('click',function(){nl.classList.toggle('open');});
+})();
+</script>
+
+<script>var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();</script>
+
+</body>
+</html>

@@ -1,5 +1,12 @@
 // Vercel Serverless Function: принимает заявку с формы и шлёт в Telegram.
-// Токен и chat_id хранятся в Environment Variables проекта Vercel — в коде сайта НЕ видны.
+//
+// БЕЗОПАСНОСТЬ: токен бота и chat_id НЕ хранятся в коде.
+// Их нужно задать в настройках проекта Vercel:
+//   Settings -> Environment Variables ->
+//     TELEGRAM_BOT_TOKEN = <токен от @BotFather>
+//     TELEGRAM_CHAT_ID   = <id вашей группы, например -100xxxxxxxxxx>
+// После добавления переменных нужно сделать Redeploy.
+
 export default async function handler(req, res) {
   // CORS
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -14,16 +21,15 @@ export default async function handler(req, res) {
     // анти-спам honeypot
     if (data._gotcha) return res.status(200).json({ ok: true });
 
-    // ТОКЕН вписан прямо в код для быстрого старта.
-    // ⚠️ РЕКОМЕНДУЕТСЯ перевыпустить токен в @BotFather (/revoke) и вставить новый сюда,
-    // т.к. этот токен уже был отправлен в переписке. Заменить — просто в кавычках ниже.
-    // Ещё безопаснее: убрать строку и задать переменную окружения TELEGRAM_BOT_TOKEN в Vercel.
-    const TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8658216999:AAEHPvwuFw4RDEDYT18kHvjRu58OszbVk0E';
+    const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+    const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-    // CHAT_ID группы MakeBiz (не секретно). Можно переопределить переменной окружения.
-    const CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-5262045407';
-
-    if (!TOKEN) return res.status(500).json({ ok: false, error: 'No TELEGRAM_BOT_TOKEN' });
+    if (!TOKEN || !CHAT_ID) {
+      return res.status(500).json({
+        ok: false,
+        error: 'Не заданы переменные окружения TELEGRAM_BOT_TOKEN и/или TELEGRAM_CHAT_ID в настройках Vercel',
+      });
+    }
 
     const titles = {
       form: 'Тип заявки', name: 'Имя', company: 'Компания', role: 'Должность',
@@ -34,7 +40,7 @@ export default async function handler(req, res) {
     const formNames = {
       client: 'Обсудить проект', partner: 'Стать партнёром', contactpage: 'Контакты',
     };
-    const lines = ['🟦 <b>Новая заявка с сайта MakeBiz</b>', ''];
+    const lines = ['\u{1F7E6} <b>Новая заявка с сайта MakeBiz</b>', ''];
     if (data.form) lines.push(`<b>Форма:</b> ${formNames[data.form] || data.form}`);
     for (const [k, v] of Object.entries(data)) {
       if (k === '_gotcha' || k === 'form' || !v) continue;

@@ -1,5 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/company",  "destination": "/index.html" },
+    { "source": "/partners", "destination": "/index.html" },
+    { "source": "/contacts", "destination": "/index.html" }
+  ]
 }
