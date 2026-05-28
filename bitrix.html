@@ -8,7 +8,8 @@
 :root{
   --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--text-accent:#013CA4;--muted:#6B7A99;--muted-soft:#AAAAAA;
   --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;--extra-blue:#9CB5DB;--neutral:#E6E6E6;
-  --green:#1AB248;--red:#C51929;--border:#E7E7E7;
+  --green:#1AB248;
+  --gold:#E8A100;--red:#C51929;--border:#E7E7E7;
   --r-lg:32px;--r-md:20px;--r-sm:14px;
   --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
   --gut:clamp(20px,5vw,64px);
@@ -276,6 +277,14 @@ footer.site{background:var(--text)!important;color:#fff!important;padding:clamp(
 .foot-bottom .ft-links{display:flex;gap:22px;flex-wrap:wrap}
 .foot-bottom a{color:#c6d3ee}
 .foot-bottom a:hover{color:#fff}
+
+/* === MOBILE OVERFLOW FIX === */
+html{overflow-x:clip}body{max-width:100%;overflow-x:clip}
+*{min-width:0}
+img,svg,video{max-width:100%}
+@media(max-width:560px){
+  .wrap{width:100%;padding-left:18px;padding-right:18px}
+}
 
 </style>
 </head>

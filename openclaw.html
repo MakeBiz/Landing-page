@@ -8,7 +8,8 @@
 :root{
   --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--text-accent:#013CA4;--muted:#6B7A99;--muted-soft:#AAAAAA;
   --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;--extra-blue:#9CB5DB;--neutral:#E6E6E6;
-  --green:#1AB248;--red:#C51929;--border:#E7E7E7;
+  --green:#1AB248;
+  --gold:#E8A100;--red:#C51929;--border:#E7E7E7;
   --r-lg:32px;--r-md:20px;--r-sm:14px;
   --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
   --gut:clamp(20px,5vw,64px);
@@ -420,7 +421,7 @@ footer.site{background:var(--text)!important;color:#fff!important;padding:clamp(
 .ob-4 .ob-tag{grid-column:1;align-self:flex-start;margin-bottom:0}
 .ob-4 .ob-metric{grid-column:1;grid-row:2;margin:0;padding:0}
 .ob-4 .ob-bottom{grid-column:2;grid-row:1 / span 2;align-self:end}
-.ob.ob-tall{grid-row:1 / span 2;min-height:480px}
+.ob.ob-tall{grid-row:1;min-height:480px;align-self:stretch}
 @media(max-width:980px){.ob-1,.ob-2,.ob-3,.ob-4{grid-column:auto;grid-row:auto;min-height:300px;display:flex}.ob-tall{grid-row:auto;min-height:380px}}
 @keyframes obIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 
@@ -558,6 +559,20 @@ footer.site{background:var(--text)!important;color:#fff!important;padding:clamp(
 .ob-team-av.av-3{background:linear-gradient(135deg,#5ee89d,#37c476);animation-delay:.24s}
 .ob-team-av.av-4{background:rgba(255,255,255,.22);backdrop-filter:blur(6px);font-size:12px;animation-delay:.36s}
 @keyframes avIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+
+/* === MOBILE OVERFLOW FIX === */
+html{overflow-x:clip}body{max-width:100%;overflow-x:clip}
+*{min-width:0}
+img,svg,video{max-width:100%}
+@media(max-width:560px){
+  .wrap{width:100%;padding-left:18px;padding-right:18px}
+  /* высокие/тёмные плитки растут по контенту, ничего не обрезается и не накладывается */
+  .ob,.ob-tall,.ob-1,.ob-2,.ob-3,.ob-4,.ob-team-card,.ob-card-2,.ob-card-3,.ob-card-4{
+    min-height:0 !important;height:auto !important;overflow:visible}
+  .ob-tasks{margin-bottom:18px}
+  .ob.dark::after{display:none}
+  .ob-img{display:none}
+}
 
 </style>
 </head>
