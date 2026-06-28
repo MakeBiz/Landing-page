@@ -41,7 +41,7 @@ export default async function handler(req, res) {
     const formNames = {
       client: 'Обсудить проект', partner: 'Стать партнёром', contactpage: 'Контакты',
       bitrix: 'Страница Bitrix', openclaw: 'Страница OpenClaw',
-      vector: 'Страница Vector', intdoc: 'Страница IntDoc',
+      vector: 'Страница Vector', intdoc: 'Страница IntDoc', servers: 'Страница Серверы',
     };
 
     const lines = ['🟦 <b>Новая заявка с сайта MakeBiz</b>', ''];

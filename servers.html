@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Серверы: выберите под себя — реальные цены площадок | MakeBiz</title>
+<meta name="description" content="Честная выжимка по проверенным хостинг-площадкам с реальными ценами от $1/мес. Выберите сервер под свою задачу и зарегистрируйтесь сами, нужна помощь с настройкой — поможем под ключ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--muted:#6B7A99;--muted-soft:#AAB6CC;
+  --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;
+  --green:#1AB248;--green-dark:#0a7d36;--red:#C51929;--violet:#6b3fd4;--border:#E7E7E7;
+  --r-lg:32px;--r-md:20px;--r-sm:14px;
+  --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Oxygen',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--blue-active);text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+.text-grad{background:linear-gradient(120deg,#03235F,#074EE8 58%,#1AB248);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:8px 15px;border-radius:100px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue-active)}
+.sec-head{max-width:720px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.13;letter-spacing:-.02em;margin-top:18px}
+.sec-head p{margin-top:14px;color:var(--muted);font-size:1.08rem}
+.section{padding:clamp(56px,7vw,92px) 0}
+[id]{scroll-margin-top:88px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:14px 24px;border-radius:var(--r-sm);text-decoration:none;cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s,color .2s;line-height:1;font-family:inherit}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:var(--blue-active);color:#fff;box-shadow:0 12px 30px rgba(7,78,232,.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(7,78,232,.42)}
+.btn-secondary{background:#fff;color:var(--text);border:1px solid var(--border)}
+.btn-secondary:hover{transform:translateY(-2px);border-color:var(--blue-active);color:var(--blue-active)}
+.btn-sm{padding:11px 18px;font-size:14px}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(245,247,249,.85);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.96)}
+.nav{display:flex;align-items:center;gap:16px;height:74px}
+.brand{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;display:flex;align-items:center;gap:2px;color:var(--text)}
+.brand b{color:var(--blue-active)}
+.brand .tag{display:inline-flex;gap:4px;margin-left:8px}
+.brand .tag span{padding:2px 6px;border-radius:5px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:6px}
+.nav-links a{font-size:14.5px;font-weight:700;color:var(--text);padding:9px 13px;border-radius:11px;transition:background .2s,color .2s;white-space:nowrap;line-height:1}
+.nav-links a:hover{background:var(--soft-blue);color:var(--blue)}
+.nav-links a.active{color:var(--blue-active);background:var(--soft-blue)}
+.nav-cta{display:inline-flex;align-items:center;gap:14px;margin-left:auto}
+.nav-phone{font-weight:700;font-size:14.5px;display:inline-flex;align-items:center;gap:7px;color:var(--text)}
+.nav-phone svg{width:16px;height:16px;color:var(--blue-active)}
+.lang-switch{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px;box-shadow:var(--shadow-sm);gap:2px}
+.lang-switch a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:var(--muted);transition:all .2s;line-height:1}
+.lang-switch a.active{background:linear-gradient(135deg,var(--blue),var(--blue-active));color:#fff;box-shadow:0 6px 14px rgba(7,78,232,.32)}
+.lang-switch a:hover:not(.active){color:var(--text);background:var(--bg)}
+.lang-switch .flag{font-size:14px}
+.nav-burger{display:none;width:42px;height:42px;border:1px solid var(--border);border-radius:11px;background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0}
+.nav-burger span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+.nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:1080px){.nav-phone{display:none}}
+@media(max-width:980px){
+  .nav-links{position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-bottom:1px solid var(--border);padding:10px 18px;margin:0;box-shadow:0 24px 48px rgba(3,35,95,.14);display:none;z-index:60}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 14px;font-size:16px}
+  .nav-burger{display:flex}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(48px,6vw,84px) 0 clamp(36px,4vw,56px)}
+.hero::before{content:"";position:absolute;width:760px;height:760px;border-radius:50%;filter:blur(130px);opacity:.5;background:radial-gradient(circle,rgba(7,78,232,.16),transparent 70%);top:-300px;right:-200px;pointer-events:none}
+.hero::after{content:"";position:absolute;width:540px;height:540px;border-radius:50%;filter:blur(120px);opacity:.4;background:radial-gradient(circle,rgba(26,178,72,.13),transparent 70%);bottom:-260px;left:-180px;pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.025em;margin:18px 0 0}
+.hero .sub{font-size:1.15rem;color:var(--muted);max-width:545px;margin-top:18px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;color:var(--muted);font-size:14px;font-weight:700}
+.hero-trust span{display:inline-flex;align-items:center;gap:8px}
+.hero-trust svg{width:18px;height:18px;color:var(--green)}
+
+/* infra card */
+.infra{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);position:relative}
+.infra-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.infra-server{display:flex;align-items:center;gap:12px}
+.infra-ic{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--blue-active));display:grid;place-items:center;color:#fff;flex-shrink:0}
+.infra-ic svg{width:24px;height:24px}
+.infra-server .t{font-weight:700;font-size:1.05rem}
+.infra-server .s{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--green);font-weight:700;margin-top:2px}
+.infra-server .s .d{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(26,178,72,.5)}70%{box-shadow:0 0 0 9px rgba(26,178,72,0)}100%{box-shadow:0 0 0 0 rgba(26,178,72,0)}}
+.infra-up{text-align:right}
+.infra-up .v{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,#013CA4,#074EE8);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.infra-up .l{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+.infra-meters{display:grid;gap:14px;margin-bottom:18px}
+.meter .ml{display:flex;justify-content:space-between;font-size:12.5px;color:#48597a;font-weight:700;margin-bottom:6px}
+.meter .bar{height:9px;border-radius:6px;background:#eef1f6;overflow:hidden}
+.meter .fill{height:100%;border-radius:6px;width:0;transition:width 1.4s cubic-bezier(.3,.9,.3,1)}
+.meter .fill.b{background:linear-gradient(90deg,#074EE8,#4d8bff)}
+.meter .fill.g{background:linear-gradient(90deg,#1AB248,#5ed487)}
+.infra-spark{display:flex;align-items:flex-end;gap:5px;height:46px;padding-top:16px;border-top:1px dashed var(--border)}
+.infra-spark i{flex:1;border-radius:4px;background:linear-gradient(180deg,#074EE8,#9cc0ff);transform-origin:bottom;transform:scaleY(0);transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.infra.in .infra-spark i{transform:scaleY(1)}
+.infra-locs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.infra-locs span{font-size:12px;font-weight:700;color:var(--blue);background:var(--light-blue);padding:6px 12px;border-radius:100px}
+
+/* colorful comparison table */
+.ct-wrap{overflow-x:auto;border-radius:var(--r-md);border:1px solid var(--border);box-shadow:var(--shadow);background:#fff}
+table.ct{width:100%;border-collapse:collapse;min-width:900px}
+table.ct thead th{background:linear-gradient(120deg,#03235F,#074EE8);color:#fff;text-align:left;font-size:13px;font-weight:700;padding:16px 18px;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap}
+table.ct tbody td{padding:18px;border-bottom:1px solid #eef1f6;font-size:14.5px;color:#3a4f74;vertical-align:middle}
+table.ct tbody tr{transition:background .18s}
+table.ct tbody tr:nth-child(even){background:#fafbff}
+table.ct tbody tr:hover{background:var(--light-blue)}
+table.ct tbody tr:last-child td{border-bottom:none}
+.ct-name{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--text);font-size:16px;white-space:nowrap}
+.ct-price{display:inline-flex;align-items:baseline;gap:3px;font-weight:700;color:var(--green-dark);background:linear-gradient(135deg,rgba(26,178,72,.16),rgba(26,178,72,.05));border:1px solid rgba(26,178,72,.32);padding:8px 14px;border-radius:100px;white-space:nowrap;font-size:16px}
+.ct-price .mo{font-size:11.5px;color:#4b8f63;font-weight:700}
+.ttag{display:inline-block;font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:100px;white-space:nowrap;letter-spacing:.02em}
+.ttag.green{color:var(--green-dark);background:rgba(26,178,72,.12)}
+.ttag.blue{color:var(--blue);background:var(--soft-blue)}
+.ttag.violet{color:var(--violet);background:rgba(107,63,212,.12)}
+.ct-benefit{color:#3a4f74;font-size:14px;line-height:1.5;min-width:250px}
+.ct-go{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;color:#fff;background:var(--blue-active);padding:11px 18px;border-radius:100px;white-space:nowrap;box-shadow:0 8px 18px rgba(7,78,232,.28);transition:transform .18s,box-shadow .18s}
+.ct-go:hover{transform:translateY(-2px);box-shadow:0 13px 26px rgba(7,78,232,.42)}
+.ct-go svg{width:14px;height:14px;transition:transform .18s}
+.ct-go:hover svg{transform:translateX(3px)}
+.ct-hot{font-size:10px;font-weight:700;color:#fff;background:linear-gradient(135deg,#1AB248,#15a03f);padding:3px 8px;border-radius:6px;letter-spacing:.03em}
+.ct-foot{margin-top:16px;color:var(--muted);font-size:13.5px}
+
+/* provider cards */
+.prov-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:780px){.prov-grid{grid-template-columns:1fr}}
+.prov{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .28s,box-shadow .28s,border-color .28s}
+.prov::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--blue-active));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.prov:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:transparent}
+.prov:hover::before{transform:scaleX(1)}
+.prov-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.prov h3{font-size:1.28rem;letter-spacing:-.01em}
+.prov .ptype{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:5px 11px;border-radius:100px;white-space:nowrap}
+.prov .pprice{display:inline-flex;align-items:baseline;gap:3px;font-weight:700;color:var(--green-dark);background:rgba(26,178,72,.1);border:1px solid rgba(26,178,72,.28);padding:6px 13px;border-radius:100px;font-size:15px;margin-bottom:14px;align-self:flex-start}
+.prov .pprice .mo{font-size:11px;color:#4b8f63}
+.prov p{color:#48597a;font-size:14.5px;line-height:1.6;flex:1}
+.prov .pfor{margin-top:14px;font-size:13.5px;color:var(--text)}
+.prov .pfor b{color:var(--blue-active)}
+.prov .pbtn{margin-top:20px;width:100%;justify-content:center}
+
+/* service section (dark) */
+.service{background:linear-gradient(160deg,#04265f,#03235F 55%,#021a45);color:#fff;border-radius:var(--r-lg);padding:clamp(36px,5vw,60px);position:relative;overflow:hidden}
+.service::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.5;background:radial-gradient(circle,rgba(7,78,232,.5),transparent 70%);top:-220px;right:-140px}
+.service::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(120px);opacity:.4;background:radial-gradient(circle,rgba(26,178,72,.4),transparent 70%);bottom:-200px;left:-120px}
+.service .inner{position:relative;z-index:1}
+.service .eyebrow{color:#bcd3ff;background:rgba(124,166,247,.16)}
+.service .eyebrow .dot{background:#7ea6f7}
+.service h2{font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.14;letter-spacing:-.02em;margin:16px 0 14px;max-width:760px}
+.service .lead{color:#cdd9f2;font-size:1.08rem;max-width:720px;margin-bottom:36px}
+.svc-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px}
+@media(max-width:880px){.svc-grid{grid-template-columns:1fr}}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.svc-list{grid-template-columns:1fr}}
+.svc-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);padding:16px 18px;backdrop-filter:blur(6px);transition:transform .25s,background .25s}
+.svc-item:hover{transform:translateY(-3px);background:rgba(255,255,255,.1)}
+.svc-item .si-h{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;margin-bottom:5px}
+.svc-item .si-ic{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#074EE8,#3f7bff);display:grid;place-items:center;flex-shrink:0}
+.svc-item .si-ic svg{width:16px;height:16px;color:#fff}
+.svc-item p{color:#aebfdd;font-size:13px;line-height:1.5}
+.svc-why{display:flex;flex-direction:column;gap:14px}
+.svc-why .wc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-sm);padding:18px 20px}
+.svc-why .wc h4{font-size:15px;margin-bottom:5px;display:flex;align-items:center;gap:9px}
+.svc-why .wc h4 svg{width:18px;height:18px;color:#5ed487}
+.svc-why .wc p{color:#aebfdd;font-size:13.5px;line-height:1.5}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:24px 22px;box-shadow:var(--shadow-sm);position:relative;transition:transform .25s,box-shadow .25s}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.step .num{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--blue-active));color:#fff;display:grid;place-items:center;font-weight:700;font-size:1.05rem;margin-bottom:14px}
+.step p{font-size:14.5px;color:#3a4f74;line-height:1.5}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+.qa{background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);margin-bottom:12px;overflow:hidden;transition:box-shadow .25s,border-color .25s}
+.qa.open{box-shadow:var(--shadow);border-color:var(--soft-blue)}
+.qa-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;cursor:pointer;font-weight:700;font-size:1.05rem;color:var(--text);user-select:none}
+.qa-q .ic{width:28px;height:28px;border-radius:50%;background:var(--soft-blue);display:grid;place-items:center;flex-shrink:0;transition:transform .3s,background .3s}
+.qa-q .ic svg{width:15px;height:15px;color:var(--blue-active);transition:transform .3s}
+.qa.open .qa-q .ic{background:var(--blue-active)}
+.qa.open .qa-q .ic svg{color:#fff;transform:rotate(45deg)}
+.qa-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.qa-a .inner{padding:0 22px 20px;color:#48597a;font-size:14.5px;line-height:1.6}
+
+/* form */
+.cta-split{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:stretch}
+@media(max-width:860px){.cta-split{grid-template-columns:1fr}}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(28px,4vw,40px);box-shadow:var(--shadow)}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1px solid var(--border);border-radius:var(--r-sm);font-family:inherit;font-size:15px;color:var(--text);background:#fbfcfe;transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-active);box-shadow:0 0 0 4px rgba(7,78,232,.1)}
+.field textarea{min-height:96px;resize:vertical}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.field-row{grid-template-columns:1fr}}
+.form-note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+.form-note a{color:var(--blue-active);text-decoration:underline}
+.form-success{display:none;text-align:center;padding:20px 0}
+.form-success .si{width:64px;height:64px;border-radius:50%;background:rgba(26,178,72,.12);display:grid;place-items:center;margin:0 auto 18px}
+.form-success .si svg{width:30px;height:30px;color:var(--green)}
+.form-success h4{font-size:1.4rem;margin-bottom:8px}
+.form-success p{color:var(--muted)}
+.cta-aside{background:linear-gradient(160deg,#04265f,#03235F);border-radius:var(--r-lg);padding:clamp(28px,4vw,40px);color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.cta-aside::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(110px);opacity:.5;background:radial-gradient(circle,rgba(7,78,232,.5),transparent 70%);top:-160px;right:-120px}
+.cta-aside .inner{position:relative;z-index:1}
+.cta-aside h3{font-size:1.5rem;letter-spacing:-.01em;margin-bottom:12px}
+.cta-aside p{color:#cdd9f2;margin-bottom:24px}
+.cta-contacts{display:flex;flex-direction:column;gap:12px}
+.cta-contacts a{display:inline-flex;align-items:center;gap:11px;color:#fff;font-weight:700;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:var(--r-sm);padding:13px 18px;transition:background .2s}
+.cta-contacts a:hover{background:rgba(255,255,255,.16)}
+.cta-contacts a svg{width:18px;height:18px;color:#7ea6f7}
+
+/* footer */
+footer.site{background:var(--text);color:#fff;padding:44px 0 34px}
+footer.site .ftop{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:center;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer.site .brand{color:#fff}
+footer.site .brand b{color:#7ea6f7}
+footer.site .fl{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer.site .fl a{color:#cdd9f2;font-size:14px;font-weight:700}
+footer.site .fl a:hover{color:#fff}
+footer.site .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:22px;color:#7e9bd0;font-size:13px}
+footer.site .fbot a{color:#cdd9f2}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="site" id="hdr"><div class="wrap"><nav class="nav">
+  <a class="brand" href="/">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
+  <div class="nav-links" id="navlinks">
+    <a href="/openclaw">OpenClaw</a>
+    <a href="/bitrix">Bitrix</a>
+    <a href="/vector">Vector</a>
+    <a href="/intdoc">IntDoc</a>
+    <a href="/servers" class="active">Серверы</a>
+    <a href="#compare">Сравнить</a>
+  </div>
+  <div class="nav-cta">
+    <div class="lang-switch">
+      <a href="/servers" class="active"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a>
+      <a href="/en/servers"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a>
+    </div>
+    <a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
+    <button class="nav-burger" id="navburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <a href="#form" class="btn btn-primary btn-sm">Нужна помощь</a>
+  </div>
+</nav></div></header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>Серверы</span>
+        <h1>Выберите сервер <span class="text-grad">под себя</span></h1>
+        <p class="sub">Честная выжимка по проверенным площадкам с реальными ценами от $1 в месяц. Зарегистрируйтесь самостоятельно за пару минут, а если нужна помощь с настройкой и переносом, MakeBiz развернёт и обслужит сервер под ключ.</p>
+        <div class="hero-actions">
+          <a href="#compare" class="btn btn-primary">Сравнить серверы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#form" class="btn btn-secondary">Нужна помощь с настройкой</a>
+        </div>
+        <div class="hero-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Реальные цены площадок</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Регистрация за пару минут</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Поможем с настройкой</span>
+        </div>
+      </div>
+      <div class="infra reveal" id="infra">
+        <div class="infra-top">
+          <div class="infra-server">
+            <div class="infra-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
+            <div><div class="t">Ваш сервер</div><div class="s"><span class="d"></span>online · стабильно</div></div>
+          </div>
+          <div class="infra-up"><div class="v">99.9%</div><div class="l">аптайм</div></div>
+        </div>
+        <div class="infra-meters">
+          <div class="meter"><div class="ml"><span>Нагрузка CPU</span><span>34%</span></div><div class="bar"><div class="fill b" data-w="34"></div></div></div>
+          <div class="meter"><div class="ml"><span>Память</span><span>52%</span></div><div class="bar"><div class="fill b" data-w="52"></div></div></div>
+          <div class="meter"><div class="ml"><span>Защита и бэкапы</span><span>активно</span></div><div class="bar"><div class="fill g" data-w="100"></div></div></div>
+        </div>
+        <div class="infra-spark">
+          <i style="height:35%"></i><i style="height:50%"></i><i style="height:42%"></i><i style="height:64%"></i><i style="height:55%"></i><i style="height:72%"></i><i style="height:60%"></i><i style="height:80%"></i><i style="height:70%"></i><i style="height:88%"></i>
+        </div>
+        <div class="infra-locs"><span>🌍 Глобальные локации</span><span>⚡ Быстрый запуск</span><span>🔒 Бэкапы и защита</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE (top, colorful, with prices) -->
+<section class="section" id="compare" style="padding-top:clamp(16px,3vw,40px)">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:840px">
+      <span class="eyebrow"><span class="dot"></span>Честная выжимка по серверам</span>
+      <h2>Сравните и выберите <span class="text-grad">сервер под свою задачу</span></h2>
+      <p>Проверенные площадки с реальными ценами в одной таблице. Свой сервер это полный контроль, больше скорости и места под сайт, приложение, базу или CRM. Зарегистрироваться можно самостоятельно за пару минут, нажмите «Посмотреть» и оформите напрямую.</p>
+    </div>
+    <div class="ct-wrap reveal">
+      <table class="ct">
+        <thead><tr><th>Площадка</th><th>Цена от</th><th>Тип</th><th>Чем хороша</th><th>Переход</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="ct-name">Truehost <span class="ct-hot">дешевле всех</span></div><div style="margin-top:8px"><span class="ttag green">Минимальная цена</span></div></td>
+            <td><span class="ct-price">от $1<span class="mo">/мес</span></span></td>
+            <td>Хостинг, VPS</td>
+            <td class="ct-benefit">Самый бюджетный старт для сайта или WordPress, регистрация за минуты</td>
+            <td><a class="ct-go" href="https://truehost.cloud/cloud/aff.php?aff=225" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">VPS.org</div><div style="margin-top:8px"><span class="ttag green">Дёшево и быстро</span></div></td>
+            <td><span class="ct-price">от $2.50<span class="mo">/мес</span></span></td>
+            <td>Облачный VPS</td>
+            <td class="ct-benefit">Свой VPS за пару минут, 200+ приложений в один клик, поддержка 24/7</td>
+            <td><a class="ct-go" href="https://vps.org/?ref=G2EMGEI2" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">DataPacket</div><div style="margin-top:8px"><span class="ttag green">Бюджетно</span></div></td>
+            <td><span class="ct-price">от $3.32<span class="mo">/мес</span></span></td>
+            <td>Хостинг, VPS, выделенные</td>
+            <td class="ct-benefit">Доступные тарифы с 2001 года, от хостинга до выделенных серверов</td>
+            <td><a class="ct-go" href="https://portal.datapacket.net/aff.php?aff=189" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">Hostman</div><div style="margin-top:8px"><span class="ttag blue">Для разработки</span></div></td>
+            <td><span class="ct-price">от $4<span class="mo">/мес</span></span></td>
+            <td>Облако, VPS</td>
+            <td class="ct-benefit">Деплой за минуту, управляемые базы и Kubernetes, серверы в Европе, ISO 27001 и GDPR</td>
+            <td><a class="ct-go" href="https://hostman.com/r/pb752795" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">UltaHost</div><div style="margin-top:8px"><span class="ttag blue">Скорость</span></div></td>
+            <td><span class="ct-price">от $5<span class="mo">/мес</span></span></td>
+            <td>Хостинг, VPS, выделенные</td>
+            <td class="ct-benefit">Скорость и защита в каждом тарифе, рост от хостинга до своего сервера</td>
+            <td><a class="ct-go" href="https://ultahost.com/#MakeBiz" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">IShosting</div><div style="margin-top:8px"><span class="ttag violet">Приватность</span></div></td>
+            <td><span class="ct-price">от $5.94<span class="mo">/мес</span></span></td>
+            <td>VPS</td>
+            <td class="ct-benefit">Приватность и 40+ локаций по миру, KVM, NVMe, защита от DDoS и бэкапы</td>
+            <td><a class="ct-go" href="https://ishosting.io/affiliate/NzI2MSM2" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+          <tr>
+            <td><div class="ct-name">AEserver</div><div style="margin-top:8px"><span class="ttag blue">Всё в одном</span></div></td>
+            <td><span class="ct-price">от $6<span class="mo">/мес</span></span></td>
+            <td>Хостинг, VPS, домены</td>
+            <td class="ct-benefit">Хостинг, домены и почта в одном месте, проверенный регистратор с 2008 года</td>
+            <td><a class="ct-go" href="https://my.aeserver.com/aff.php?aff=1245" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ct-foot reveal">Цены это стартовые тарифы площадок на момент публикации, актуальные условия смотрите на их сайтах по кнопке «Посмотреть». Зарегистрироваться можно самостоятельно, а нужна помощь с настройкой <a href="#form">обращайтесь к нам</a>.</p>
+  </div>
+</section>
+
+<!-- PROVIDER CARDS (details) -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Подробнее</span>
+      <h2>Чем сильна <span class="text-grad">каждая площадка</span></h2>
+      <p>Те же площадки подробнее, с сильными сторонами и кнопкой перехода. Регистрация на стороне площадки, помощь с настройкой на нашей.</p>
+    </div>
+    <div class="prov-grid">
+      <div class="prov reveal">
+        <div class="prov-head"><h3>Truehost Cloud</h3><span class="ptype">Хостинг · домены</span></div>
+        <div class="pprice">от $1<span class="mo">/мес</span></div>
+        <p>Бюджетный хостинг и домены с недорогим WordPress-хостингом и быстрым стартом. Минимальный порог входа, чтобы быстро запустить сайт.</p>
+        <div class="pfor">Подходит небольшим сайтам и <b>быстрому старту</b> с минимальным бюджетом.</div>
+        <a class="btn btn-primary pbtn" href="https://truehost.cloud/cloud/aff.php?aff=225" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>VPS.org</h3><span class="ptype">Облачный VPS</span></div>
+        <div class="pprice">от $2.50<span class="mo">/мес</span></div>
+        <p>Облачный VPS с развёртыванием за несколько минут, глобальными дата-центрами, 200+ приложениями в один клик и поддержкой 24/7.</p>
+        <div class="pfor">Подходит, когда нужно <b>недорого и быстро</b> поднять сервер в нужном регионе.</div>
+        <a class="btn btn-primary pbtn" href="https://vps.org/?ref=G2EMGEI2" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>DataPacket</h3><span class="ptype">Хостинг · VPS · выделенные</span></div>
+        <div class="pprice">от $3.32<span class="mo">/мес</span></div>
+        <p>Доступный хостинг с 2001 года: веб-хостинг, реселлерский, VPS и выделенные серверы, простые и понятные тарифы.</p>
+        <div class="pfor">Подходит <b>бюджетным проектам, реселлерам</b> и тем, кому нужен надёжный хостинг без переплат.</div>
+        <a class="btn btn-primary pbtn" href="https://portal.datapacket.net/aff.php?aff=189" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>Hostman</h3><span class="ptype">Управляемое облако</span></div>
+        <div class="pprice">от $4<span class="mo">/мес</span></div>
+        <p>Управляемое облако с упором на скорость разработки: деплой за минуту, Kubernetes и управляемые базы, ISO 27001 и GDPR, серверы в Европе.</p>
+        <div class="pfor">Подходит командам, которым нужно <b>быстро деплоить</b> на управляемой инфраструктуре.</div>
+        <a class="btn btn-primary pbtn" href="https://hostman.com/r/pb752795" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>UltaHost</h3><span class="ptype">Хостинг · VPS · выделенные</span></div>
+        <div class="pprice">от $5<span class="mo">/мес</span></div>
+        <p>Скоростной хостинг с широкой линейкой: shared, VPS, выделенные серверы и домены, с акцентом на производительность и защиту.</p>
+        <div class="pfor">Подходит тем, кому нужна <b>скорость и рост</b> от простого хостинга до выделенного сервера.</div>
+        <a class="btn btn-primary pbtn" href="https://ultahost.com/#MakeBiz" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>IShosting</h3><span class="ptype">Хостинг · VPS</span></div>
+        <div class="pprice">от $5.94<span class="mo">/мес</span></div>
+        <p>VPS с акцентом на приватность и широкую географию: KVM, NVMe, 40+ локаций, защита от DDoS и регулярные резервные копии.</p>
+        <div class="pfor">Подходит проектам, которым важны <b>конфиденциальность, устойчивость</b> и выбор локаций.</div>
+        <a class="btn btn-primary pbtn" href="https://ishosting.io/affiliate/NzI2MSM2" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="prov reveal">
+        <div class="prov-head"><h3>AEserver</h3><span class="ptype">Хостинг · VPS · домены</span></div>
+        <div class="pprice">от $6<span class="mo">/мес</span></div>
+        <p>Аккредитованный регистратор доменов с 2008 года, которому доверяют более 40 000 клиентов. Хостинг, VPS, домены и почта в одном месте.</p>
+        <div class="pfor">Подходит проектам, которым нужны <b>домены, хостинг и почта</b> от проверенного провайдера.</div>
+        <a class="btn btn-primary pbtn" href="https://my.aeserver.com/aff.php?aff=1245" target="_blank" rel="sponsored nofollow noopener">Посмотреть <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE (dark) -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="service reveal">
+      <div class="inner">
+        <span class="eyebrow"><span class="dot"></span>Услуга MakeBiz</span>
+        <h2>Сервер берёте сами, <span style="color:#7ea6f7">а развернём и обслужим мы</span></h2>
+        <p class="lead">Площадку и сервер вы оформляете самостоятельно по ссылкам выше, это пара минут. А дальше MakeBiz берёт на себя всё техническое: правильно развернёт, защитит, установит ваши решения и возьмёт на поддержку, чтобы вы не разбирались в технике, а занимались бизнесом.</p>
+        <div class="svc-grid">
+          <div class="svc-list">
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>Консультация и подбор</div><p>Поможем выбрать площадку и тариф под вашу задачу и бюджет.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></span>Разворот и настройка</div><p>ОС и обновления, веб-сервер, SSL, файрвол, настройка доступов.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Безопасность</div><p>Усиление настроек, файрвол, регулярные бэкапы, защита от атак.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12l3 3 5-6"/></svg></span>Установка решений</div><p>Разворачиваем OpenClaw, Bitrix24, веб-приложения, базы и автоматизации.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></span>Миграция</div><p>Переносим сайт, приложение или CRM со старого хостинга без простоя.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Мониторинг 24/7</div><p>Следим за доступностью и нагрузкой, реагируем на инциденты.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.2-8.5"/><path d="M21 4v5h-5"/></svg></span>Поддержка</div><p>Обновления, помощь и консультации на сопровождении.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v6h-6"/></svg></span>Масштабирование</div><p>Помогаем расти, добавлять ресурсы и серверы под нагрузку.</p></div>
+            <div class="svc-item"><div class="si-h"><span class="si-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>Сделаем сами</div><p>Если не хотите разбираться, оформим сервер и настроим под ключ за вас.</p></div>
+          </div>
+          <div class="svc-why">
+            <div class="wc"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Экономия времени</h4><p>Не разбираетесь сами, мы поднимаем всё под ключ.</p></div>
+            <div class="wc"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Без ошибок</h4><p>Правильная настройка, безопасность и бэкапы с первого дня.</p></div>
+            <div class="wc"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Один ответственный</h4><p>И сервер, и решения, и поддержка в одном месте.</p></div>
+            <div class="wc"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4L12 17l-6.3 4.4L8 14 2 9.4h7.6z"/></svg>Честно</h4><p>Подбираем площадку под вашу задачу, а не наугад.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="dot"></span>Как мы работаем</span>
+      <h2>От выбора до <span class="text-grad">рабочего сервера</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num">1</div><p>Выбираете площадку по таблице и переходите по кнопке</p></div>
+      <div class="step reveal"><div class="num">2</div><p>Регистрируетесь и оформляете сервер сами, это пара минут</p></div>
+      <div class="step reveal"><div class="num">3</div><p>Нужна помощь, оставляете заявку, мы разворачиваем и настраиваем</p></div>
+      <div class="step reveal"><div class="num">4</div><p>Ставим защиту, бэкапы, ваши решения и переносим данные</p></div>
+      <div class="step reveal"><div class="num">5</div><p>Передаём готовое и берём на поддержку</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin:0 auto 40px">
+      <span class="eyebrow"><span class="dot"></span>Вопросы и ответы</span>
+      <h2>Частые <span class="text-grad">вопросы</span></h2>
+    </div>
+    <div class="faq">
+      <div class="qa reveal"><div class="qa-q">Какой сервер мне нужен?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Зависит от задачи: для сайта, приложения, базы или CRM нужны разные ресурсы. Поможем подобрать на короткой консультации.</div></div></div>
+      <div class="qa reveal"><div class="qa-q">Чем VPS отличается от обычного хостинга?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Обычный хостинг это место на общем сервере, а VPS это ваш отдельный виртуальный сервер с выделенными ресурсами и полным контролем. VPS стабильнее под нагрузкой и гибче в настройке.</div></div></div>
+      <div class="qa reveal"><div class="qa-q">Могу зарегистрироваться сам?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Да, выбираете площадку в таблице, переходите по кнопке «Посмотреть» и оформляете сервер напрямую за пару минут. Если потребуется помощь с настройкой или переносом, обращайтесь к нам.</div></div></div>
+      <div class="qa reveal"><div class="qa-q">Поможете перенести с текущего хостинга?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Да, делаем миграцию сайта, приложения или CRM без простоя.</div></div></div>
+      <div class="qa reveal"><div class="qa-q">Что с безопасностью и бэкапами?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Настраиваем с первого дня: файрвол, усиление настроек и регулярные резервные копии.</div></div></div>
+      <div class="qa reveal"><div class="qa-q">Можно установить ваши решения, например OpenClaw или Bitrix24?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></div><div class="qa-a"><div class="inner">Да, разворачиваем и наши продукты, и ваши на выбранном сервере.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + FORM -->
+<section class="section" id="form" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-split">
+      <div class="form-card reveal" id="srv-card">
+        <div class="form-body" id="srvform">
+          <h3 style="font-size:1.4rem;letter-spacing:-.01em;margin-bottom:6px">Нужна помощь с сервером?</h3>
+          <p style="color:var(--muted);font-size:14.5px;margin-bottom:22px">Зарегистрируйтесь сами или оставьте заявку, мы развернём и настроим под ключ.</p>
+          <div class="field-row">
+            <div class="field"><label>Имя</label><input type="text" placeholder="Ваше имя"></div>
+            <div class="field"><label>Компания</label><input type="text" placeholder="Название компании"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Телефон</label><input type="tel" placeholder="+971 ..."></div>
+            <div class="field"><label>Ник в Telegram</label><input type="text" placeholder="@username"></div>
+          </div>
+          <div class="field"><label>Что нужно?</label><select><option value="" disabled selected>Выберите задачу</option><option>Подбор площадки</option><option>Разворот и настройка сервера</option><option>Миграция с другого хостинга</option><option>Установка OpenClaw / Bitrix24</option><option>Поддержка и мониторинг</option><option>Нужна консультация</option></select></div>
+          <div class="field"><label>Опишите задачу</label><textarea placeholder="Что планируете разместить: сайт, приложение, база, CRM, ИИ-решение"></textarea></div>
+          <button class="btn btn-primary" id="srvsubmit" style="width:100%;justify-content:center">Отправить заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <p class="form-note">Отправляя форму, вы соглашаетесь с <a href="/privacy" target="_blank" rel="noopener">политикой конфиденциальности</a>.</p>
+        </div>
+        <div class="form-success" id="srvsuccess">
+          <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
+          <h4>Спасибо!</h4>
+          <p>Заявка отправлена. Команда MakeBiz свяжется с вами в ближайшее время.</p>
+        </div>
+      </div>
+      <div class="cta-aside reveal">
+        <div class="inner">
+          <h3>Выбирайте сервер сами, настройку доверьте нам</h3>
+          <p>Оставьте заявку, если нужна помощь с разворотом, переносом или поддержкой сервера.</p>
+          <div class="cta-contacts">
+            <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10l6 2 2 6 4-5 5 4z"/></svg>Telegram @Anton_MakeBiz</a>
+            <a href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site"><div class="wrap">
+  <div class="ftop">
+    <a href="/" class="brand">Make<b>Biz</b></a>
+    <div class="fl">
+      <a href="/openclaw">OpenClaw</a>
+      <a href="/bitrix">Bitrix</a>
+      <a href="/vector">Vector</a>
+      <a href="/intdoc">IntDoc</a>
+      <a href="/servers">Серверы</a>
+      <a href="/privacy">Политика конфиденциальности</a>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2026 MakeBiz · Дубай и Россия · ИИ, CRM, BI-аналитика</span>
+    <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram @Anton_MakeBiz · +971 50 262 0927</a>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+
+  var b=document.getElementById('navburger'),l=document.getElementById('navlinks');
+  if(b&&l){b.addEventListener('click',function(){l.classList.toggle('open');b.classList.toggle('open');});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.classList.remove('open');});});}
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  var infra=document.getElementById('infra');
+  if(infra){
+    var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      e.target.querySelectorAll('.fill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%';});
+      io2.unobserve(e.target);
+    }});},{threshold:.3});
+    io2.observe(infra);
+  }
+
+  document.querySelectorAll('.qa').forEach(function(qa){
+    var q=qa.querySelector('.qa-q'),a=qa.querySelector('.qa-a');
+    q.addEventListener('click',function(){
+      var open=qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(function(o){o.classList.remove('open');o.querySelector('.qa-a').style.maxHeight=null;});
+      if(!open){qa.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+    });
+  });
+
+  var btn=document.getElementById('srvsubmit');
+  function fieldKey(label){label=(label||'').toLowerCase();
+    if(label.indexOf('имя')>-1)return 'name';
+    if(label.indexOf('компан')>-1)return 'company';
+    if(label.indexOf('телефон')>-1)return 'phone';
+    if(label.indexOf('telegram')>-1)return 'telegram';
+    if(label.indexOf('что нужно')>-1)return 'product';
+    if(label.indexOf('опишите')>-1||label.indexOf('задач')>-1)return 'automate';
+    return null;}
+  btn&&btn.addEventListener('click',function(){
+    var body=document.getElementById('srvform');
+    var payload={form:'servers'};
+    body.querySelectorAll('.field').forEach(function(f){
+      var lbl=f.querySelector('label'),inp=f.querySelector('input,select,textarea');
+      if(!inp)return;var k=fieldKey(lbl?lbl.textContent:'')||('f_'+Math.random().toString(36).slice(2,6));
+      if(inp.value&&inp.value.trim())payload[k]=inp.value.trim();});
+    btn.disabled=true;var old=btn.innerHTML;btn.textContent='Отправляем...';
+    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.ok?r.json():Promise.reject(r);})
+      .then(function(){document.getElementById('srvform').style.display='none';document.getElementById('srvsuccess').style.display='block';document.getElementById('srvsuccess').scrollIntoView({behavior:'smooth',block:'center'});})
+      .catch(function(){document.getElementById('srvform').style.display='none';document.getElementById('srvsuccess').style.display='block';})
+      .finally(function(){btn.disabled=false;btn.innerHTML=old;});
+  });
+})();
+</script>
+</body></html>

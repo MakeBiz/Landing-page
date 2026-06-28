@@ -64,12 +64,20 @@ footer{background:var(--text);color:#fff;padding:36px 0}
 .foot .links a{color:#cdd9f2}
 .foot .links a:hover{color:#fff}
 .foot .cp{opacity:.65;font-size:13px}
+
+/* full nav menu (added) */
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.nav-links a{font-size:14px;font-weight:700;color:#03235F;padding:9px 12px;border-radius:11px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+.nav-links a:hover{background:#EDEEFC;color:#013CA4}
+.nav-links a.active{color:#074EE8;background:#EDEEFC}
+@media(max-width:880px){.nav-links{display:none}}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
     <a href="/" class="logo">Make<b>Biz</b></a>
+    <div class="nav-links"><a href="/openclaw">OpenClaw</a><a href="/bitrix">Bitrix</a><a href="/vector">Vector</a><a href="/intdoc">IntDoc</a><a href="/servers">Серверы</a></div>
     <div class="nav-right">
       <a href="/" class="back">← <span>На главную</span></a>
       <div class="lang-switch">
@@ -137,6 +145,7 @@ footer{background:var(--text);color:#fff;padding:36px 0}
       <a href="/bitrix">Bitrix</a>
       <a href="/vector">Vector</a>
       <a href="/intdoc">IntDoc</a>
+      <a href="/servers">Серверы</a>
       <a href="/privacy">Политика конфиденциальности</a>
     </div>
     <div class="cp">© 2026 MakeBiz · Дубай и Россия · ИИ, CRM, BI-аналитика</div>

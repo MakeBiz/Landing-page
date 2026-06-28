@@ -51,12 +51,20 @@ p.lead{font-size:1.15rem;color:var(--muted);max-width:480px;margin:0 auto 32px}
 .contacts a svg{width:16px;height:16px;vertical-align:middle;margin-right:6px}
 
 footer{padding:24px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);background:var(--surface)}
+
+/* full nav menu (added) */
+.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
+.nav-links a{font-size:14px;font-weight:700;color:#03235F;padding:9px 12px;border-radius:11px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+.nav-links a:hover{background:#EDEEFC;color:#013CA4}
+.nav-links a.active{color:#074EE8;background:#EDEEFC}
+@media(max-width:880px){.nav-links{display:none}}
 </style>
 </head><body>
 
 <header>
   <div class="nav">
     <a href="/" class="brand" style="text-decoration:none;color:inherit">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
+    <div class="nav-links"><a href="/en/">Home</a><a href="/en/openclaw">OpenClaw</a><a href="/en/bitrix">Bitrix24</a><a href="/en/vector" class="active">Vector</a><a href="/en/intdoc">IntDoc</a><a href="/servers">Servers</a></div>
     <div class="lang-switch">
       <a href="/">🇷🇺 RU</a>
       <a href="/en/" class="active">🇬🇧 EN</a>

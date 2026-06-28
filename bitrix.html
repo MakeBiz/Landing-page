@@ -213,17 +213,77 @@ footer.site .cp{color:#7e93c4;font-size:13px;margin-top:14px}
 </style>
 </head>
 <body>
-<header class="site" id="hdr"><div class="wrap"><nav class="nav">
-  <a class="brand" href="#">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
-  <a class="nav-back" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> На главную</a>
-  <div class="nav-cta"><div class="lang-switch">
-  <a href="/bitrix" class="active"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a>
-  <a href="/en/bitrix" class=""><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a>
-</div>
-    <a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
-    <a href="#form" class="btn btn-primary" style="padding:11px 20px">Оставить заявку</a>
-  </div>
-</nav></div></header>
+<style id="mb-upgrade">
+/* nav menu */
+.nav-links{display:flex;align-items:center;gap:2px;margin-left:6px}
+.nav-links a{font-size:14.5px;font-weight:700;color:var(--text);padding:9px 13px;border-radius:11px;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap;line-height:1}
+.nav-links a:hover{background:var(--soft-blue);color:var(--blue)}
+.nav-links a.active{color:var(--blue-active);background:var(--soft-blue)}
+.nav-burger{display:none;width:42px;height:42px;border:1px solid var(--border);border-radius:11px;background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0}
+.nav-burger span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+.nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:980px){
+  .nav-links{position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-bottom:1px solid var(--border);padding:10px 18px;margin:0;box-shadow:0 24px 48px rgba(3,35,95,.14);display:none;z-index:60}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:13px 14px;font-size:16px}
+  .nav-burger{display:flex}
+}
+
+/* efficiency band */
+.eff{position:relative;overflow:hidden;padding:clamp(56px,7vw,96px) 0;background:linear-gradient(180deg,#fff 0%,#F3F6FB 100%)}
+.eff::before{content:"";position:absolute;width:680px;height:680px;border-radius:50%;filter:blur(120px);opacity:.5;background:radial-gradient(circle,rgba(7,78,232,.16),transparent 70%);top:-260px;right:-180px;pointer-events:none}
+.eff::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.4;background:radial-gradient(circle,rgba(26,178,72,.14),transparent 70%);bottom:-240px;left:-160px;pointer-events:none}
+.eff .wrap{position:relative;z-index:1}
+.eff-head{max-width:680px;margin-bottom:40px}
+.eff-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:8px 15px;border-radius:100px;margin-bottom:18px}
+.eff-eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(26,178,72,.55);animation:eff-pulse 1.8s infinite}
+@keyframes eff-pulse{0%{box-shadow:0 0 0 0 rgba(26,178,72,.5)}70%{box-shadow:0 0 0 10px rgba(26,178,72,0)}100%{box-shadow:0 0 0 0 rgba(26,178,72,0)}}
+.eff-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.12;letter-spacing:-.02em}
+.eff-grad{background:linear-gradient(120deg,#03235F,#074EE8 55%,#1AB248);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eff-head p{margin-top:14px;color:var(--muted);font-size:1.08rem;max-width:560px}
+.eff-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:26px;align-items:stretch}
+@media(max-width:920px){.eff-grid{grid-template-columns:1fr}}
+
+.eff-kpis{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.eff-kpi{background:#fff;border:1px solid var(--border);border-radius:20px;padding:22px 22px 18px;box-shadow:0 14px 40px rgba(3,35,95,.06);position:relative;overflow:hidden;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.eff.in .eff-kpi{opacity:1;transform:translateY(0)}
+.eff.in .eff-kpi:nth-child(1){transition-delay:.05s}
+.eff.in .eff-kpi:nth-child(2){transition-delay:.13s}
+.eff.in .eff-kpi:nth-child(3){transition-delay:.21s}
+.eff.in .eff-kpi:nth-child(4){transition-delay:.29s}
+.eff-kpi:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(3,35,95,.12)}
+.eff-val{font-size:2.05rem;font-weight:700;letter-spacing:-.02em;line-height:1;background:linear-gradient(120deg,#013CA4,#074EE8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eff-lbl{margin-top:9px;color:#48597a;font-size:13.5px;line-height:1.4;min-height:38px}
+.eff-spark{display:flex;align-items:flex-end;gap:4px;height:26px;margin-top:12px}
+.eff-spark i{flex:1;background:linear-gradient(180deg,#074EE8,#9cc0ff);border-radius:3px;height:20%;transform-origin:bottom;transform:scaleY(0);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.eff.in .eff-spark i{transform:scaleY(1)}
+
+.eff-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:26px;box-shadow:0 20px 56px rgba(3,35,95,.10);display:flex;flex-direction:column}
+.eff-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.eff-card-top .t{font-weight:700;font-size:15px;color:var(--text)}
+.eff-live{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--green)}
+.eff-live .d{width:7px;height:7px;border-radius:50%;background:var(--green);animation:eff-pulse 1.8s infinite}
+.eff-line{width:100%;height:auto;display:block}
+.eff-line .area{opacity:0;transition:opacity 1.2s .3s}
+.eff.in .eff-line .area{opacity:1}
+.eff-line .ln{stroke-dasharray:900;stroke-dashoffset:900;transition:stroke-dashoffset 1.9s cubic-bezier(.4,0,.2,1)}
+.eff.in .eff-line .ln{stroke-dashoffset:0}
+.eff-line .dot{opacity:0;transform:scale(0);transform-box:fill-box;transform-origin:center;transition:opacity .4s,transform .4s}
+.eff.in .eff-line .dot{opacity:1;transform:scale(1)}
+.eff.in .eff-line .dot:nth-of-type(1){transition-delay:.7s}
+.eff.in .eff-line .dot:nth-of-type(2){transition-delay:.95s}
+.eff.in .eff-line .dot:nth-of-type(3){transition-delay:1.2s}
+.eff.in .eff-line .dot:nth-of-type(4){transition-delay:1.45s}
+.eff.in .eff-line .dot:nth-of-type(5){transition-delay:1.7s}
+.eff-bars{display:flex;align-items:flex-end;gap:10px;height:84px;margin-top:18px;padding-top:16px;border-top:1px dashed var(--border)}
+.eff-bars .b{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#1AB248,#7fd79a);transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.eff-bars .b.alt{background:linear-gradient(180deg,#074EE8,#9cc0ff)}
+.eff.in .eff-bars .b{transform:scaleY(1)}
+.eff-foot{margin-top:14px;color:var(--muted);font-size:12.5px;text-align:center}
+</style>
+<header class="site" id="hdr"><div class="wrap"><nav class="nav"><a class="brand" href="/">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a><div class="nav-links" id="navlinks"><a href="/openclaw">OpenClaw</a><a href="/bitrix" class="active">Bitrix</a><a href="/vector">Vector</a><a href="/intdoc">IntDoc</a><a href="/servers">Серверы</a><a href="#support">Поддержка</a><a href="#cases">Кейсы</a></div><div class="nav-cta" style="margin-left:auto"><div class="lang-switch"><a href="/bitrix" class="active"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a><a href="/en/bitrix"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a></div><a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a><button class="nav-burger" id="navburger" aria-label="Меню"><span></span><span></span><span></span></button><a href="#form" class="btn btn-primary" style="padding:11px 20px">Оставить заявку</a></div></nav></div></header>
 
 <section class="hero">
   <div class="aura a1"></div><div class="aura a2"></div>
@@ -384,6 +444,7 @@ footer.site .cp{color:#7e93c4;font-size:13px;margin-top:14px}
 @media(max-width:480px){.cs-metrics{grid-template-columns:1fr;gap:14px}.cs-m{text-align:left;display:flex;align-items:baseline;gap:10px}.cs-m .cs-l{margin-top:0}}
 </style>
 
+<section class="eff" id="efficiency"><div class="wrap"><div class="eff-head"><span class="eff-eyebrow"><span class="pulse"></span>Эффективность</span><h2>Видно, как <span class="eff-grad">растёт эффективность продаж</span></h2><p>Прозрачная CRM, автоматизация рутины и контроль воронки. Меньше потерь на этапах, больше доведённых сделок.</p></div><div class="eff-grid"><div class="eff-kpis"><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="37" data-prefix="+" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">к конверсии в сделку</div><div class="eff-spark"><i style="height:22%"></i><i style="height:30%"></i><i style="height:38%"></i><i style="height:45%"></i><i style="height:55%"></i><i style="height:68%"></i><i style="height:80%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="54" data-prefix="−" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">меньше ручной работы</div><div class="eff-spark"><i style="height:70%"></i><i style="height:60%"></i><i style="height:55%"></i><i style="height:45%"></i><i style="height:40%"></i><i style="height:30%"></i><i style="height:22%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="100" data-prefix="" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">сделок под контролем</div><div class="eff-spark"><i style="height:40%"></i><i style="height:50%"></i><i style="height:55%"></i><i style="height:65%"></i><i style="height:70%"></i><i style="height:80%"></i><i style="height:90%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="2.3" data-prefix="×" data-suffix="" data-dec="1">0</span></div><div class="eff-lbl">быстрее обработка лида</div><div class="eff-spark"><i style="height:25%"></i><i style="height:35%"></i><i style="height:40%"></i><i style="height:55%"></i><i style="height:60%"></i><i style="height:72%"></i><i style="height:85%"></i></div></div></div><div class="eff-card"><div class="eff-card-top"><span class="t">Динамика по воронке продаж</span><span class="eff-live"><span class="d"></span>в реальном времени</span></div><svg class="eff-line" viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="effLn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#013CA4"/><stop offset="0.6" stop-color="#074EE8"/><stop offset="1" stop-color="#1AB248"/></linearGradient><linearGradient id="effAr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#074EE8" stop-opacity="0.20"/><stop offset="1" stop-color="#074EE8" stop-opacity="0"/></linearGradient></defs><path class="area" d="M14,176 L120,150 L226,134 L332,92 L450,40 L450,200 L14,200 Z" fill="url(#effAr)"/><path class="ln" d="M14,176 L120,150 L226,134 L332,92 L450,40" fill="none" stroke="url(#effLn)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle class="dot" cx="14" cy="176" r="5" fill="#013CA4"/><circle class="dot" cx="120" cy="150" r="5" fill="#074EE8"/><circle class="dot" cx="226" cy="134" r="5" fill="#074EE8"/><circle class="dot" cx="332" cy="92" r="5" fill="#3f7bff"/><circle class="dot" cx="450" cy="40" r="6" fill="#1AB248"/></svg><div class="eff-bars"><div class="b alt" style="height:30%"></div><div class="b" style="height:42%"></div><div class="b alt" style="height:50%"></div><div class="b" style="height:64%"></div><div class="b alt" style="height:72%"></div><div class="b" style="height:86%"></div></div><div class="eff-foot">Показатели воронки после настройки Bitrix24</div></div></div></div></section>
 <section class="cs-section" id="cases">
   <div class="cs-wrap">
     <div class="cs-head">
@@ -525,6 +586,26 @@ footer.site .cp{color:#7e93c4;font-size:13px;margin-top:14px}
       .finally(function(){btn.disabled=false;btn.innerHTML=old;});
   });
   var _btn_unused=document.getElementById('bxsubmit_NOPE');
+})();
+</script>
+<script>
+(function(){
+  var b=document.getElementById('navburger'),l=document.getElementById('navlinks');
+  if(b&&l){b.addEventListener('click',function(){l.classList.toggle('open');b.classList.toggle('open');});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.classList.remove('open');});});}
+  var eff=document.querySelector('.eff');
+  function countUp(el){
+    var to=parseFloat(el.getAttribute('data-to')),dec=parseInt(el.getAttribute('data-dec')||'0',10);
+    var pre=el.getAttribute('data-prefix')||'',suf=el.getAttribute('data-suffix')||'';
+    var dur=1400,start=null;
+    function fmt(v){var s=dec>0?v.toFixed(dec).replace('.',','):Math.round(v).toString();return pre+s+suf;}
+    function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=fmt(to*e);if(p<1)requestAnimationFrame(step);else el.textContent=fmt(to);}
+    requestAnimationFrame(step);
+  }
+  if(eff){
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');en.target.querySelectorAll('.cnt').forEach(countUp);io.unobserve(en.target);}});},{threshold:.3});
+    io.observe(eff);
+  }
 })();
 </script>
 </body></html>
