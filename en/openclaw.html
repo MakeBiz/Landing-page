@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenClaw — Personal AI assistant — MakeBiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--muted:#6B7A99;
+  --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;
+  --green:#1AB248;--border:#E7E7E7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Oxygen','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+
+/* header */
+header{padding:24px clamp(20px,5vw,48px);background:rgba(245,247,249,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:0 auto}
+.brand{font-weight:700;font-size:1.3rem;letter-spacing:-.02em}
+.brand b{color:var(--blue-active)}
+.brand .tag{display:inline-flex;gap:4px;margin-left:8px;vertical-align:middle}
+.brand .tag span{padding:2px 6px;border-radius:5px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.04em}
+
+.lang-switch{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px;box-shadow:0 8px 24px rgba(3,35,95,.08);gap:2px}
+.lang-switch a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .2s;line-height:1}
+.lang-switch a.active{background:linear-gradient(135deg,var(--blue),var(--blue-active));color:#fff;box-shadow:0 6px 14px rgba(7,78,232,.32)}
+.lang-switch a:hover:not(.active){color:var(--text);background:#F5F7F9}
+
+/* main content */
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;position:relative;overflow:hidden}
+.aura{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(110px);opacity:.4;background:radial-gradient(circle,rgba(7,78,232,.4),transparent 70%);top:-200px;right:-150px;pointer-events:none;z-index:0}
+.aura2{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(110px);opacity:.3;background:radial-gradient(circle,rgba(26,178,72,.4),transparent 70%);bottom:-200px;left:-100px;pointer-events:none;z-index:0}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:36px;padding:clamp(40px,6vw,72px);box-shadow:0 30px 80px rgba(3,35,95,.10);max-width:680px;text-align:center;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:8px 16px;border-radius:100px;margin-bottom:26px}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-active)}
+
+h1{font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.02em;line-height:1.1;margin-bottom:18px}
+h1 .grad{background:linear-gradient(120deg,var(--text),var(--blue-active) 60%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+p.lead{font-size:1.15rem;color:var(--muted);max-width:480px;margin:0 auto 32px}
+
+.cta{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:15px 28px;border-radius:14px;background:var(--blue-active);color:#fff;text-decoration:none;box-shadow:0 12px 30px rgba(7,78,232,.3);transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(7,78,232,.42)}
+
+.contacts{display:flex;gap:20px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.contacts a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:700;transition:color .2s}
+.contacts a:hover{color:var(--blue)}
+.contacts a svg{width:16px;height:16px;vertical-align:middle;margin-right:6px}
+
+footer{padding:24px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border);background:var(--surface)}
+</style>
+</head><body>
+
+<header>
+  <div class="nav">
+    <a href="/" class="brand" style="text-decoration:none;color:inherit">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
+    <div class="lang-switch">
+      <a href="/">🇷🇺 RU</a>
+      <a href="/en/" class="active">🇬🇧 EN</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="aura"></div>
+  <div class="aura2"></div>
+  <div class="card">
+    <span class="eyebrow"><span></span>Coming soon</span>
+    <h1>English version <span class="grad">is on the way</span></h1>
+    <p class="lead">We are translating our website into English. In the meantime, feel free to explore the Russian version or contact us directly.</p>
+    <a href="/" class="cta">View Russian version →</a>
+    <div class="contacts">
+      <a href="https://t.me/Anton_MakeBiz">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10l6 2 2 6 4-5 5 4z"/></svg>
+        @Anton_MakeBiz
+      </a>
+      <a href="tel:+971502620927">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>
+        +971 50 262 0927
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>© 2026 MakeBiz · Dubai & Russia · AI, CRM, BI Analytics · <a href="/en/privacy" style="color:inherit">Privacy Policy</a></footer>
+
+</body></html>

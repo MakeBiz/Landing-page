@@ -1,62 +1,63 @@
-# MakeBiz — сайт
+# MakeBiz — сайт (RU + EN), деплой на Vercel
 
-Премиальный B2B-сайт MakeBiz: внедрение ИИ, CRM, BI-аналитики и автоматизации.
+Премиальный B2B-сайт MakeBiz. Чистый HTML + CSS + ванильный JS, без фреймворков.
+Заявки с форм уходят в Telegram через серверную функцию `api/lead.js`.
 
 ## Структура
 
 ```
-.
-├── index.html        # Главная + вкладки: О компании, Партнёрам, Контакты
-├── openclaw.html     # Страница продукта OpenClaw
-├── vector.html       # Страница продукта Vector
-├── intdoc.html       # Страница продукта IntDoc
-├── bitrix.html       # Страница продукта Bitrix
+/
+├── index.html          → главная (RU)
+├── bitrix.html         → Bitrix24 (RU)
+├── openclaw.html       → OpenClaw (RU)
+├── vector.html         → Vector (RU)
+├── intdoc.html         → IntDoc (RU)
+├── privacy.html        → Политика конфиденциальности (RU)
+├── en/
+│   ├── index.html      → главная (EN, готова)
+│   ├── bitrix.html     → Bitrix24 (EN, готова)
+│   ├── openclaw.html   → заглушка «English version is on the way»
+│   ├── vector.html     → заглушка
+│   ├── intdoc.html     → заглушка
+│   └── privacy.html    → Privacy Policy (EN)
 ├── api/
-│   └── lead.js       # Serverless-функция: приём заявок и отправка в Telegram
-├── vercel.json       # Настройки маршрутов (чистые URL)
-├── package.json
-└── .gitignore
+│   └── lead.js         → приём формы → Telegram
+├── vercel.json         → cleanUrls (адреса без .html)
+└── package.json
 ```
 
-## Адреса страниц
+URL после деплоя: `/`, `/bitrix`, `/openclaw`, `/vector`, `/intdoc`, `/privacy`, `/en/`, `/en/bitrix`, `/en/privacy` и т.д.
 
-| URL | Страница |
-|-----|----------|
-| `/`          | Главная |
-| `/company`   | О компании |
-| `/openclaw`  | OpenClaw |
-| `/vector`    | Vector |
-| `/intdoc`    | IntDoc |
-| `/bitrix`    | Bitrix |
-| `/partners`  | Партнёрам |
-| `/contacts`  | Контакты |
+## Что входит в этот сайт
 
-Каждая страница — отдельный HTML-файл. Благодаря `cleanUrls` в `vercel.json`
-файлы открываются по чистым адресам без расширения `.html`.
-Между вкладками также работает мгновенная JS-навигация (без перезагрузки).
+- Кейсы с метриками на каждой продуктовой странице (Bitrix, OpenClaw, Vector, IntDoc)
+- Переключатель RU/EN в шапке всех страниц
+- Рабочие формы на всех страницах → заявки падают в Telegram
+- Страница политики конфиденциальности + ссылка в подвале каждой страницы + строка согласия у каждой формы (требование Google Ads)
 
-## Деплой на Vercel
+## Деплой
 
-1. Залить этот репозиторий на GitHub.
-2. На vercel.com → **Add New → Project** → импортировать репозиторий с GitHub.
-3. Framework Preset: **Other** (статический сайт). Build Command и Output — оставить пустыми.
-4. **Обязательно** добавить переменные окружения (Settings → Environment Variables):
-   - `TELEGRAM_BOT_TOKEN` — токен бота от @BotFather
-   - `TELEGRAM_CHAT_ID` — ID группы/чата для заявок (например `-100xxxxxxxxxx`)
-5. Deploy. После добавления переменных — сделать **Redeploy**.
+1. Залить ВСЕ файлы из этой папки в репозиторий GitHub (заменив старые).
+2. В Vercel проект подхватит изменения автоматически.
+3. Задать переменные окружения (см. ниже) → Redeploy.
 
-## Формы заявок
+## Подключение Telegram (чтобы падали заявки)
 
-Все три формы (Обсудить проект / Стать партнёром / Контакты) отправляют данные
-на `/api/lead`, откуда они уходят в Telegram.
+Токен и chat_id хранятся в переменных окружения Vercel, в коде их нет.
 
-⚠️ **Безопасность:** токен бота в коде НЕ хранится — только в переменных окружения Vercel.
-Если ваш токен уже был где-то засвечен (например, в переписке) — перевыпустите его
-в @BotFather командой `/revoke` и впишите новый в переменную `TELEGRAM_BOT_TOKEN`.
+В Vercel → Settings → Environment Variables добавить:
+- `TELEGRAM_BOT_TOKEN` = токен из @BotFather
+- `TELEGRAM_CHAT_ID` = chat_id (личный или id группы со знаком минус)
 
-## Как получить TELEGRAM_CHAT_ID группы
+После добавления переменных — Redeploy.
 
-1. Добавьте бота в группу.
-2. Отправьте в группу любое сообщение.
-3. Откройте `https://api.telegram.org/bot<ВАШ_ТОКЕН>/getUpdates`
-4. Найдите `"chat":{"id":-100...}` — это и есть chat_id.
+Проверка через терминал:
+```
+curl -X POST https://makebiztehnologies.com/api/lead -H "Content-Type: application/json" -d '{"form":"intdoc","name":"Test","telegram":"@test"}'
+```
+Должно вернуть `{"ok":true}` и заявка придёт в Telegram.
+
+## Осталось доделать (опционально)
+
+- EN-страницы OpenClaw, Vector, IntDoc — пока заглушки, можно собрать по образцу en/bitrix.html
+- В политике конфиденциальности контакт — Telegram и телефон; при желании добавить e-mail

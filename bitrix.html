@@ -3,31 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Внедрение и поддержка Bitrix24: MakeBiz</title>
-<meta name="description" content="Внедрение, настройка и поддержка Bitrix24 от MakeBiz: CRM, автоматизация процессов и интеграции под ваш бизнес.">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<!-- Open Graph / соцсети -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MakeBiz">
-<meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="Внедрение и поддержка Bitrix24: MakeBiz">
-<meta property="og:description" content="Внедрение, настройка и поддержка Bitrix24 от MakeBiz: CRM, автоматизация процессов и интеграции под ваш бизнес.">
-<meta property="og:url" content="https://makebiztehnologies.com/bitrix">
-<meta property="og:image" content="https://makebiztehnologies.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Внедрение и поддержка Bitrix24: MakeBiz">
-<meta name="twitter:description" content="Внедрение, настройка и поддержка Bitrix24 от MakeBiz: CRM, автоматизация процессов и интеграции под ваш бизнес.">
-<meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
+<title>Внедрение и поддержка Bitrix24 — MakeBiz</title>
 <style>
 :root{
   --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--text-accent:#013CA4;--muted:#6B7A99;--muted-soft:#AAAAAA;
   --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;--extra-blue:#9CB5DB;--neutral:#E6E6E6;
-  --green:#1AB248;
-  --gold:#E8A100;--red:#C51929;--border:#E7E7E7;
+  --green:#1AB248;--red:#C51929;--border:#E7E7E7;
   --r-lg:32px;--r-md:20px;--r-sm:14px;
   --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
   --gut:clamp(20px,5vw,64px);
@@ -52,14 +33,8 @@ h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.1}
 .btn-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--extra-blue)}
 .btn-light{background:#fff;color:var(--blue);}
 .btn-light:hover{transform:translateY(-2px)}
-.section{padding:clamp(38px,4.8vw,72px) 0}
+.section{padding:clamp(56px,8vw,110px) 0}
 .section.alt{background:var(--surface)}
-/* плавный переход между секциями: белый блок растворяется в фон по краям */
-.section.alt{position:relative;isolation:isolate}
-.section.alt::before,.section.alt::after{content:"";position:absolute;left:0;right:0;height:64px;z-index:-1;pointer-events:none}
-.section.alt::before{top:0;background:linear-gradient(180deg,var(--bg),var(--surface))}
-.section.alt::after{bottom:0;background:linear-gradient(0deg,var(--bg),var(--surface))}
-@media(max-width:680px){.section.alt::before,.section.alt::after{height:40px}}
 .sec-head{margin-bottom:48px}
 .sec-head.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
 .sec-head h2{font-size:clamp(1.9rem,4vw,3rem)}
@@ -96,7 +71,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)
 .price-pill .pp-l{font-size:13px;color:var(--muted-soft);font-weight:700}
 .price-pill .pp-v{font-size:1.5rem;font-weight:700;background:linear-gradient(120deg,var(--blue),var(--blue-active));-webkit-background-clip:text;background-clip:text;color:transparent}
 
-/* hero visual, dashboard mock */
+/* hero visual — dashboard mock */
 .bx-mock{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow-lg);overflow:hidden;animation:floaty 6s ease-in-out infinite}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 .bx-mock .mk-top{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid var(--border);background:#fbfcfe}
@@ -107,7 +82,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)
 .mk-funnel{display:flex;flex-direction:column;gap:10px}
 .mk-stage{display:flex;align-items:center;gap:12px}
 .mk-stage .mk-lbl{flex:0 0 120px;font-size:13px;color:var(--muted);font-weight:700}
-.mk-stage .mk-bar{height:30px;border-radius:8px;background:linear-gradient(90deg,var(--blue),var(--blue-active));display:flex;align-items:center;justify-content:flex-end;padding:0 12px;color:#fff;font-size:12px;font-weight:700;transform-origin:left;animation:grow 1s cubic-bezier(.2.8.2,1) backwards}
+.mk-stage .mk-bar{height:30px;border-radius:8px;background:linear-gradient(90deg,var(--blue),var(--blue-active));display:flex;align-items:center;justify-content:flex-end;padding:0 12px;color:#fff;font-size:12px;font-weight:700;transform-origin:left;animation:grow 1s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .mk-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
 .mk-kpi{background:var(--bg);border-radius:12px;padding:14px}
@@ -118,12 +93,12 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)
 .grid{display:grid;gap:18px}
 .g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
 @media(max-width:880px){.g3{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.g3.g2{grid-template-columns:1fr}}
+@media(max-width:600px){.g3,.g2{grid-template-columns:1fr}}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:28px;box-shadow:var(--shadow-sm);transition:transform .28s,box-shadow .28s}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .card .ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active));margin-bottom:16px}
 .card .ic svg{width:25px;height:25px}
-.card h3.card h4{font-size:1.12rem;margin-bottom:8px}
+.card h3,.card h4{font-size:1.12rem;margin-bottom:8px}
 .card p{color:var(--muted);font-size:14.5px}
 
 /* package (pricing) */
@@ -190,8 +165,8 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)
 .field{margin-bottom:16px}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 @media(max-width:560px){.field-row{grid-template-columns:1fr}}
 .field label{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:7px}
-.field input.field select.field textarea{width:100%;padding:13px 15px;border:1px solid var(--border);border-radius:12px;font-family:inherit;font-size:15px;background:var(--bg);color:var(--text);transition:border-color .2s,box-shadow .2s}
-.field input:focus.field select:focus.field textarea:focus{outline:none;border-color:var(--blue-active);box-shadow:0 0 0 3px rgba(7,78,232,.12)}
+.field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1px solid var(--border);border-radius:12px;font-family:inherit;font-size:15px;background:var(--bg);color:var(--text);transition:border-color .2s,box-shadow .2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-active);box-shadow:0 0 0 3px rgba(7,78,232,.12)}
 .field textarea{resize:vertical;min-height:90px}
 .form-card .btn{width:100%;justify-content:center;margin-top:6px}
 .form-split{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,48px);align-items:stretch;max-width:1040px;margin:0 auto}
@@ -201,13 +176,13 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.95)
 .form-note{font-size:12px;color:var(--muted-soft);text-align:center;margin-top:12px}
 
 /* reveal */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2.8.2,1),transform .7s cubic-bezier(.2.8.2,1)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
 
 /* premium photos */
 .photo-card{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg)}
-.photo-card img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .9s cubic-bezier(.2.8.2,1)}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
 .photo-card:hover img{transform:scale(1.06)}
 .photo-card .pc-grad{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(3,35,95,.88));z-index:1}
 .photo-card .pc-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px;color:#fff}
@@ -225,110 +200,28 @@ footer.site{background:var(--text);color:#fff;padding:48px 0 30px;text-align:cen
 footer.site .fl{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:18px 0;font-size:14.5px}
 footer.site .fl a{color:#c6d3ee}
 footer.site .cp{color:#7e93c4;font-size:13px;margin-top:14px}
+</style>
 
-/* === ЕДИНАЯ ШАПКА (override) === */
-header.site{
-  position:sticky;top:0;z-index:100;
-  background:rgba(245,247,249,.82);
-  backdrop-filter:saturate(160%) blur(16px);
-  -webkit-backdrop-filter:saturate(160%) blur(16px);
-  border-bottom:1px solid transparent;transition:border-color .3s,background .3s,box-shadow .3s
-}
-header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94);box-shadow:0 4px 20px rgba(72,89,102,.06)}
-.nav{display:flex;align-items:center;gap:16px;height:74px}
-.brand{display:flex;align-items:center;flex-shrink:0}
-.brand svg{height:30px;width:auto}
-.nav-links{display:flex;align-items:center;gap:0;margin-left:4px}
-.nav-links a,.nav-links .nav-item{
-  font-weight:700;font-size:14.5px;color:var(--text);padding:9px 13px;border-radius:10px;
-  transition:background .2s,color .2s;display:inline-flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap
-}
-.nav-links a:hover,.nav-links .nav-item:hover{background:var(--soft-blue);color:var(--blue)}
-.nav-links a.active{color:var(--blue)}
-.nav-cta{margin-left:auto;display:flex;align-items:center;gap:14px;flex-shrink:0}
-.nav-phone{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px;color:var(--text);
-  padding:7px 10px;border-radius:10px;transition:color .2s}
-.nav-phone:hover{color:var(--blue)}
-.nav-phone svg{width:16px;height:16px;color:var(--blue-active)}
-.btn-sm{padding:11px 18px;font-size:13.5px}
-.menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:var(--text)}
-.menu-toggle svg{width:26px;height:26px}
-@media(max-width:1000px){.nav-phone{display:none}}
-@media(max-width:1100px){.nav-cta .btn-primary{display:none}}
-@media(max-width:900px){
-  .nav-links{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;align-items:stretch;
-    background:var(--surface);padding:14px var(--gut);gap:2px;box-shadow:var(--shadow);border-bottom:1px solid var(--border)}
-  .nav-links.open{display:flex}
-  .nav-links a,.nav-links .nav-item{padding:13px 14px;font-size:16px}
-  .menu-toggle{display:block;margin-left:auto}
-  .nav-cta{margin-left:0}
-  .nav-cta .btn-primary{display:inline-flex}
-}
-
-/* === ЕДИНЫЙ СТИЛЬ ФОРМ (как на главной) === */
-.form-card{background:var(--surface)!important;border:1px solid var(--border)!important;border-radius:var(--r-md)!important;padding:clamp(26px,3vw,38px)!important;box-shadow:var(--shadow)!important;position:relative;overflow:hidden;max-width:none!important;margin:0!important}
-.form-card h3{font-size:1.5rem;margin-bottom:8px;color:var(--text)}
-.form-card .fdesc{font-size:14.5px;margin-bottom:24px;color:var(--muted)}
-.field{margin-bottom:15px}
-.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text)}
-.field input,.field select,.field textarea{
-  width:100%;font-family:inherit;font-size:14.5px;padding:13px 15px;border-radius:12px;
-  border:1px solid var(--border);background:var(--bg);color:var(--text);transition:border .2s,box-shadow .2s;outline:none;box-sizing:border-box}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-active);box-shadow:0 0 0 4px rgba(7,78,232,.12)}
-.field textarea{resize:vertical;min-height:84px}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-@media(max-width:480px){.field-row{grid-template-columns:1fr}}
-.form-card .btn{width:100%!important;justify-content:center;margin-top:8px;box-sizing:border-box}
-.form-note{text-align:center;font-size:12.5px;color:var(--muted-soft);margin-top:14px}
-
-
-/* === ЕДИНЫЙ ПОДВАЛ (как на главной) === */
-footer.site{background:var(--text)!important;color:#fff!important;padding:clamp(48px,6vw,72px) 0 30px!important;text-align:left!important}
-.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:46px}
-@media(max-width:900px){.foot-top{grid-template-columns:1fr 1fr;gap:30px}}
-@media(max-width:560px){.foot-top{grid-template-columns:1fr;gap:30px}}
-.foot-brand svg{height:32px;margin-bottom:20px;width:auto}
-.foot-brand p{color:#aebfdf;font-size:14.5px;max-width:420px;margin-bottom:24px;line-height:1.55}
-.foot-actions{display:flex;flex-wrap:wrap;gap:12px}
-.foot-actions .btn-sm{padding:11px 18px;font-size:13.5px}
-.foot-actions .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.25)}
-.foot-actions .btn-ghost:hover{background:rgba(255,255,255,.08)}
-.foot-col h4{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#7e93c4;margin-bottom:18px;font-weight:700}
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;padding:0;margin:0}
-.foot-col a{color:#c6d3ee;font-size:14.5px;transition:color .2s,padding .2s}
-.foot-col a:hover{color:#fff;padding-left:4px}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;align-items:center;color:#7e93c4;font-size:13px;flex-wrap:wrap;gap:14px}
-.foot-bottom .ft-links{display:flex;gap:22px;flex-wrap:wrap}
-.foot-bottom a{color:#c6d3ee}
-.foot-bottom a:hover{color:#fff}
-
-/* === MOBILE OVERFLOW FIX === */
-html{overflow-x:clip}body{max-width:100%;overflow-x:clip}
-*{min-width:0}
-img,svg,video{max-width:100%}
-@media(max-width:560px){
-  .wrap{width:100%;padding-left:18px;padding-right:18px}
-}
-
+<style>
+/* Переключатель языка RU/EN */
+.lang-switch{display:inline-flex;align-items:center;background:#fff;border:1px solid #E7E7E7;border-radius:100px;padding:4px;box-shadow:0 8px 24px rgba(3,35,95,.08);gap:2px;margin-left:8px}
+.lang-switch a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:#6B7A99;text-decoration:none;transition:all .2s;line-height:1}
+.lang-switch a.active{background:linear-gradient(135deg,#013CA4,#074EE8);color:#fff;box-shadow:0 6px 14px rgba(7,78,232,.32)}
+.lang-switch a:hover:not(.active){color:#03235F;background:#F5F7F9}
+.lang-switch .flag{font-size:14px;line-height:1}
+@media(max-width:760px){.lang-switch a{padding:6px 10px;font-size:12px}.lang-switch .lang-code{display:none}}
 </style>
 </head>
 <body>
 <header class="site" id="hdr"><div class="wrap"><nav class="nav">
-  <a class="brand" href="/" aria-label="MakeBiz"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#03235F"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#03235F"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#03235F"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#03235F"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#03235F"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#03235F"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#03235F"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg></a>
-  <div class="nav-links" id="navlinks">
-    <a href="/">Главная</a>
-    <a href="/company">О компании</a>
-    <a href="/openclaw" >OpenClaw</a>
-    <a href="/vector" >Vector</a>
-    <a href="/intdoc" >IntDoc</a><a href="/bitrix" class="active">Bitrix</a>
-    
-    <a href="/partners">Партнёрам</a>
-    <a href="/contacts">Контакты</a>
-  </div>
-  <div class="nav-cta">
+  <a class="brand" href="#">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
+  <a class="nav-back" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> На главную</a>
+  <div class="nav-cta"><div class="lang-switch">
+  <a href="/bitrix" class="active"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a>
+  <a href="/en/bitrix" class=""><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a>
+</div>
     <a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
-    <a href="/contacts" class="btn btn-primary btn-sm">Обсудить проект</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a href="#form" class="btn btn-primary" style="padding:11px 20px">Оставить заявку</a>
   </div>
 </nav></div></header>
 
@@ -369,7 +262,7 @@ img,svg,video{max-width:100%}
 
 <section class="section alt">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Для руководителей</span><h2>Система, на которую опирается <span class="text-grad">управление компанией</span></h2><p>Прозрачные процессы, управляемая команда и данные для решений, в едином контуре Bitrix24.</p></div>
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Для руководителей</span><h2>Система, на которую опирается <span class="text-grad">управление компанией</span></h2><p>Прозрачные процессы, управляемая команда и данные для решений — в едином контуре Bitrix24.</p></div>
     <div class="showcase reveal">
       <div class="photo-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80&h=1200" alt=""><div class="pc-grad"></div><span class="pc-chip">Контроль и прозрачность</span><div class="pc-body"><h4>Решения на основе данных</h4><p>Руководитель видит полную картину бизнеса в реальном времени.</p></div></div>
       <div class="photo-card"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80&h=600" alt=""><div class="pc-grad"></div><div class="pc-body"><h4>Аналитика и отчётность</h4><p>Сквозные показатели по продажам и процессам.</p></div></div>
@@ -380,12 +273,12 @@ img,svg,video{max-width:100%}
 
 <section class="section" id="package">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Внедрение</span><h2>Начните со <span class="text-grad">Standard CRM Setup</span></h2><p>Стартовый пакет, задача которого, подготовить рабочую платформу: команда работает в единой структурной среде.</p></div>
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Внедрение</span><h2>Начните со <span class="text-grad">Standard CRM Setup</span></h2><p>Стартовый пакет, задача которого — подготовить рабочую платформу: команда работает в единой структурной среде.</p></div>
     <div class="pkg reveal">
       <div class="pkg-head"><div class="glow"></div>
         <span class="badge">Standard CRM Setup</span>
         <h3>Внедрение и настройка Bitrix24</h3>
-        <p>Если у компании более сложная логика процессов, интеграции, аналитика или дополнительные контуры, финальный объём определяется после предпроектного обследования.</p>
+        <p>Если у компании более сложная логика процессов, интеграции, аналитика или дополнительные контуры — финальный объём определяется после предпроектного обследования.</p>
         <div class="price">от 10 000 AED <small>/ внедрение</small></div>
       </div>
       <div class="pkg-body"><div class="pkg-cols">
@@ -401,7 +294,7 @@ img,svg,video{max-width:100%}
     <div class="reveal">
       <span class="eyebrow"><span class="dot"></span>Сложные проекты</span>
       <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px">Когда проекту нужно <span class="text-grad">больше, чем стандартная настройка</span></h2>
-      <p class="lead">Если у компании несколько подразделений, сложная внутренняя логика, требования к аналитике или межфункциональные процессы, внедрение начинается с предпроектного обследования.</p>
+      <p class="lead">Если у компании несколько подразделений, сложная внутренняя логика, требования к аналитике или межфункциональные процессы — внедрение начинается с предпроектного обследования.</p>
     </div>
     <div class="card reveal" style="padding:32px"><h3 style="margin-bottom:18px">На этом этапе мы:</h3><div class="incl-list"><div class="it"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Изучаем текущую бизнес-логику</div><div class="it"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Описываем процессы и точки взаимодействия</div><div class="it"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Определяем будущую архитектуру CRM</div><div class="it"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Выявляем узкие места и слабые зоны</div><div class="it"><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></span>Готовим объём работ, оценку и дорожную карту</div></div></div>
   </div></div>
@@ -410,7 +303,7 @@ img,svg,video{max-width:100%}
 <section class="section">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Процесс</span><h2>Как проходит <span class="text-grad">внедрение</span></h2></div>
-    <div class="steps"><div class="step reveal"><div class="sn">Шаг 01</div><h4>Разбор запроса</h4><p>Первичный анализ ситуации и текущих процессов.</p><span class="ghost">1</span></div><div class="step reveal"><div class="sn">Шаг 02</div><h4>Предпроектное обследование</h4><p>Если требуется, описываем контур и архитектуру.</p><span class="ghost">2</span></div><div class="step reveal"><div class="sn">Шаг 03</div><h4>Объём и архитектура</h4><p>Определяем работы, структуру системы и дорожную карту.</p><span class="ghost">3</span></div><div class="step reveal"><div class="sn">Шаг 04</div><h4>Настройка CRM</h4><p>Внедряем логику процессов, роли, автоматизацию.</p><span class="ghost">4</span></div><div class="step reveal"><div class="sn">Шаг 05</div><h4>Обучение команды</h4><p>Передаём рабочую логику и обучаем сотрудников.</p><span class="ghost">5</span></div><div class="step reveal"><div class="sn">Шаг 06</div><h4>Поддержка и развитие</h4><p>Сопровождение после запуска и дальнейшее развитие.</p><span class="ghost">6</span></div></div>
+    <div class="steps"><div class="step reveal"><div class="sn">Шаг 01</div><h4>Разбор запроса</h4><p>Первичный анализ ситуации и текущих процессов.</p><span class="ghost">1</span></div><div class="step reveal"><div class="sn">Шаг 02</div><h4>Предпроектное обследование</h4><p>Если требуется — описываем контур и архитектуру.</p><span class="ghost">2</span></div><div class="step reveal"><div class="sn">Шаг 03</div><h4>Объём и архитектура</h4><p>Определяем работы, структуру системы и дорожную карту.</p><span class="ghost">3</span></div><div class="step reveal"><div class="sn">Шаг 04</div><h4>Настройка CRM</h4><p>Внедряем логику процессов, роли, автоматизацию.</p><span class="ghost">4</span></div><div class="step reveal"><div class="sn">Шаг 05</div><h4>Обучение команды</h4><p>Передаём рабочую логику и обучаем сотрудников.</p><span class="ghost">5</span></div><div class="step reveal"><div class="sn">Шаг 06</div><h4>Поддержка и развитие</h4><p>Сопровождение после запуска и дальнейшее развитие.</p><span class="ghost">6</span></div></div>
   </div>
 </section>
 
@@ -420,7 +313,7 @@ img,svg,video{max-width:100%}
     <div class="reveal">
       <span class="eyebrow"><span class="dot"></span>Техническая поддержка</span>
       <h2 style="font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:18px">Постоянная поддержка <span class="text-grad">Bitrix24</span></h2>
-      <p class="lead">Внедрение, это старт. Чтобы система оставалась полезной и структурной, ей нужны поддержка, обновления и развитие. Без сопровождения CRM постепенно теряет ясность: приходят новые сотрудники, меняются роли, появляется новый функционал.</p>
+      <p class="lead">Внедрение — это старт. Чтобы система оставалась полезной и структурной, ей нужны поддержка, обновления и развитие. Без сопровождения CRM постепенно теряет ясность: приходят новые сотрудники, меняются роли, появляется новый функционал.</p>
     </div>
   </div></div>
 </section>
@@ -433,7 +326,7 @@ img,svg,video{max-width:100%}
       <div class="tier featured reveal"><div class="hrs">10 часов</div><div class="amt">2 300 AED</div><div class="per">в месяц</div><a href="#form" class="btn btn-primary">Выбрать пакет</a></div>
       <div class="tier reveal"><div class="hrs">20 часов</div><div class="amt">4 200 AED</div><div class="per">в месяц</div><a href="#form" class="btn btn-secondary">Выбрать пакет</a></div>
     </div>
-    <div class="tier-extra reveal">Дополнительный час сверх пакета<b>250 AED</b>. Использованные часы фиксируются прозрачно.</div>
+    <div class="tier-extra reveal">Дополнительный час сверх пакета — <b>250 AED</b>. Использованные часы фиксируются прозрачно.</div>
   </div>
 </section>
 
@@ -456,38 +349,151 @@ img,svg,video{max-width:100%}
   </div>
 </section>
 
+
+
+<style>
+/* === Блок кейсов (cs-*) === */
+.cs-section{padding:clamp(56px,8vw,110px) 0;background:linear-gradient(180deg,var(--bg,#F5F7F9),#fff)}
+.cs-section .cs-wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+.cs-head{text-align:center;max-width:780px;margin:0 auto 48px}
+.cs-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#013CA4;background:#EDEEFC;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+.cs-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:#074EE8}
+.cs-head h2{font-size:clamp(1.9rem,4vw,3rem);color:#03235F;letter-spacing:-.02em;line-height:1.15;margin-bottom:12px}
+.cs-head h2 .cs-grad{background:linear-gradient(120deg,#03235F,#074EE8 60%,#1AB248);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cs-head p{color:#6B7A99;font-size:1.1rem}
+.cs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+@media(max-width:880px){.cs-grid{grid-template-columns:1fr}}
+.cs-card{position:relative;background:#fff;border:1px solid #E7E7E7;border-radius:28px;overflow:hidden;box-shadow:0 8px 24px rgba(3,35,95,.07);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;display:flex;flex-direction:column;opacity:0;transform:translateY(20px)}
+.cs-card.cs-in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.cs-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px rgba(3,35,95,.16)}
+.cs-strip{height:6px}
+.cs-body{padding:28px 30px 30px;display:flex;flex-direction:column;gap:18px;flex:1}
+.cs-top{display:flex;align-items:center;gap:16px}
+.cs-mono{flex-shrink:0;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:-.01em;box-shadow:0 12px 26px rgba(3,35,95,.18);position:relative;overflow:hidden;transition:transform .35s}
+.cs-card:hover .cs-mono{transform:scale(1.06) rotate(-3deg)}
+.cs-mono::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.18) 60%,transparent 80%)}
+.cs-meta{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cs-name{font-weight:700;font-size:1.15rem;color:#03235F;letter-spacing:-.01em}
+.cs-ind{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#013CA4;background:#EDEEFC;padding:4px 10px;border-radius:100px;width:fit-content}
+.cs-card h3{font-size:1.08rem;line-height:1.35;color:#03235F;letter-spacing:-.01em}
+.cs-sum{color:#6B7A99;font-size:14.5px;line-height:1.55}
+.cs-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:auto;padding-top:18px;border-top:1px dashed #E7E7E7}
+.cs-m{text-align:center;padding:4px}
+.cs-m .cs-v{font-size:1.35rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,#013CA4,#074EE8);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
+.cs-m .cs-l{font-size:11px;color:#6B7A99;margin-top:6px;line-height:1.3}
+@media(max-width:480px){.cs-metrics{grid-template-columns:1fr;gap:14px}.cs-m{text-align:left;display:flex;align-items:baseline;gap:10px}.cs-m .cs-l{margin-top:0}}
+</style>
+
+<section class="cs-section" id="cases">
+  <div class="cs-wrap">
+    <div class="cs-head">
+      <span class="cs-eyebrow">Кейсы</span>
+      <h2>Реальные результаты <span class="cs-grad">Bitrix24</span></h2>
+      <p>Что меняется в управляемости бизнеса после внедрения CRM.</p>
+    </div>
+    <div class="cs-grid">
+        <article class="cs-card">
+          <div class="cs-strip" style="background:linear-gradient(90deg,#013CA4,#4d76bf)"></div>
+          <div class="cs-body">
+            <div class="cs-top">
+              <div class="cs-mono" style="background:linear-gradient(135deg,#013CA4,#002a72)">МБ</div>
+              <div class="cs-meta">
+                <div class="cs-name">МастерБыт Сервис</div>
+                <span class="cs-ind">Сервис техники</span>
+              </div>
+            </div>
+            <h3>CRM для управления заявками и выездами мастеров</h3>
+            <p class="cs-sum">Заявки терялись между чатами, таблицами и личными заметками операторов. Bitrix24 собрал поток в единый контур — от первого обращения до оплаты ремонта.</p>
+            <div class="cs-metrics"><div class="cs-m"><div class="cs-v">+25%</div><div class="cs-l">конверсия в выезд</div></div><div class="cs-m"><div class="cs-v">−46%</div><div class="cs-l">потерянных обращений</div></div><div class="cs-m"><div class="cs-v">4,9 млн ₽</div><div class="cs-l">валовой прибыли за квартал</div></div></div>
+          </div>
+        </article>
+        
+        <article class="cs-card">
+          <div class="cs-strip" style="background:linear-gradient(90deg,#074EE8,#5183ee)"></div>
+          <div class="cs-body">
+            <div class="cs-top">
+              <div class="cs-mono" style="background:linear-gradient(135deg,#074EE8,#0436a2)">АИ</div>
+              <div class="cs-meta">
+                <div class="cs-name">Атлас Интерьер</div>
+                <span class="cs-ind">Дизайн и ремонт</span>
+              </div>
+            </div>
+            <h3>Bitrix24 для управления продажами и проектами ремонта</h3>
+            <p class="cs-sum">CRM объединила продажи, замеры, дизайн, ремонт, закупки и оплаты в один путь объекта. Руководство впервые увидело реальный статус каждого проекта.</p>
+            <div class="cs-metrics"><div class="cs-m"><div class="cs-v">+19%</div><div class="cs-l">конверсия из замера в договор</div></div><div class="cs-m"><div class="cs-v">−43%</div><div class="cs-l">просроченных задач</div></div><div class="cs-m"><div class="cs-v">18 млн ₽</div><div class="cs-l">доп. выручки за квартал</div></div></div>
+          </div>
+        </article>
+        
+        <article class="cs-card">
+          <div class="cs-strip" style="background:linear-gradient(90deg,#1AB248,#5ec97e)"></div>
+          <div class="cs-body">
+            <div class="cs-top">
+              <div class="cs-mono" style="background:linear-gradient(135deg,#1AB248,#127c32)">ЛП</div>
+              <div class="cs-meta">
+                <div class="cs-name">ЛингваПарк</div>
+                <span class="cs-ind">Образование</span>
+              </div>
+            </div>
+            <h3>CRM-воронка для роста записи на пробные уроки</h3>
+            <p class="cs-sum">Заявки рассыпались по каналам, лиды без касаний терялись. Единая CRM ускорила обработку, повысила запись на пробные занятия и доходимость до оплаты курса.</p>
+            <div class="cs-metrics"><div class="cs-m"><div class="cs-v">+27%</div><div class="cs-l">конверсия в пробный урок</div></div><div class="cs-m"><div class="cs-v">−24%</div><div class="cs-l">стоимость ученика</div></div><div class="cs-m"><div class="cs-v">7,8 млн ₽</div><div class="cs-l">доп. выручки за цикл</div></div></div>
+          </div>
+        </article>
+        
+        <article class="cs-card">
+          <div class="cs-strip" style="background:linear-gradient(90deg,#013CA4,#4d76bf)"></div>
+          <div class="cs-body">
+            <div class="cs-top">
+              <div class="cs-mono" style="background:linear-gradient(135deg,#013CA4,#002a72)">ФL</div>
+              <div class="cs-meta">
+                <div class="cs-name">Форма Life</div>
+                <span class="cs-ind">Фитнес</span>
+              </div>
+            </div>
+            <h3>Единая CRM для абонементов, пробных визитов и продлений</h3>
+            <p class="cs-sum">Каждый клуб вёл базу по-своему, центральный офис не видел картину. Единая CRM подняла скорость обработки лидов, конверсии и продления абонементов.</p>
+            <div class="cs-metrics"><div class="cs-m"><div class="cs-v">+22%</div><div class="cs-l">конверсия в покупку</div></div><div class="cs-m"><div class="cs-v">+430</div><div class="cs-l">клубных карт продано</div></div><div class="cs-m"><div class="cs-v">12,6 млн ₽</div><div class="cs-l">доп. выручки за квартал</div></div></div>
+          </div>
+        </article>
+        </div>
+  </div>
+</section>
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('cs-in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.cs-card').forEach(function(el,i){el.style.transitionDelay=(i%2)*0.08+'s';io.observe(el);});
+})();
+</script>
+
 <section class="section" id="form">
   <div class="wrap">
-    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Заявка</span><h2>Расскажите о вашей компании и задаче</h2><p>Нужна стандартная настройка или крупный проект внедрения, оставьте заявку, и мы свяжемся со следующим шагом.</p></div>
+    <div class="sec-head center reveal"><span class="eyebrow"><span class="dot"></span>Заявка</span><h2>Расскажите о вашей компании и задаче</h2><p>Нужна стандартная настройка или крупный проект внедрения — оставьте заявку, и мы свяжемся со следующим шагом.</p></div>
     <div class="form-split">
       <div class="form-card reveal" style="max-width:none;margin:0">
         <div data-form="bitrix" id="bxform">
           <div class="field-row"><div class="field"><label>Имя</label><input type="text" placeholder="Ваше имя"></div><div class="field"><label>Компания</label><input type="text" placeholder="Название компании"></div></div>
           <div class="field-row"><div class="field"><label>Количество сотрудников</label><input type="text" placeholder="Например, 50"></div><div class="field"><label>Телефон</label><input type="tel" placeholder="+971 ..."></div></div>
           <div class="field"><label>Ник в Telegram</label><input type="text" placeholder="@username"></div>
-          <div class="field"><label>Что нужно</label><select><option value="" disabled selected>Выберите</option><option>Внедрение Bitrix24</option><option>Поддержка Bitrix24, 5 часов</option><option>Поддержка Bitrix24, 10 часов</option><option>Поддержка Bitrix24, 20 часов</option><option>Предпроектное обследование</option><option>Нужна консультация</option></select></div>
+          <div class="field"><label>Что нужно</label><select><option value="" disabled selected>Выберите</option><option>Внедрение Bitrix24</option><option>Поддержка Bitrix24 — 5 часов</option><option>Поддержка Bitrix24 — 10 часов</option><option>Поддержка Bitrix24 — 20 часов</option><option>Предпроектное обследование</option><option>Нужна консультация</option></select></div>
           <div class="field"><label>Кратко о задаче</label><textarea placeholder="Опишите процессы или цель"></textarea></div>
           <button class="btn btn-primary" id="bxsubmit">Отправить заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-          <p class="form-note">Это демонстрационная форма. Мы уважаем вашу конфиденциальность.</p>
+          <p class="form-note">Отправляя форму, вы соглашаетесь с <a href="/privacy" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">политикой конфиденциальности</a>.</p>
         </div>
         <div id="bxsuccess" style="display:none;text-align:center;padding:20px">
           <div style="width:64px;height:64px;border-radius:50%;background:var(--soft-blue);color:var(--blue-active);display:grid;place-items:center;margin:0 auto 18px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"/></svg></div>
           <h3 style="margin-bottom:8px">Спасибо!</h3><p style="color:var(--muted)">Заявка зафиксирована. Команда MakeBiz свяжется с вами в ближайшее время.</p>
         </div>
       </div>
-      <div class="photo-card reveal form-photo"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=1000&q=80&h=1200" alt=""><div class="pc-grad"></div><span class="pc-chip">MakeBiz · Дубай и Россия</span><div class="pc-body"><h4>Обсудим ваш проект</h4><p>Проведём диагностику и предложим решение под вашу компанию, в Zoom или лично.</p></div></div>
+      <div class="photo-card reveal form-photo"><img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=1000&q=80&h=1200" alt=""><div class="pc-grad"></div><span class="pc-chip">MakeBiz · Дубай и Россия</span><div class="pc-body"><h4>Обсудим ваш проект</h4><p>Проведём диагностику и предложим решение под вашу компанию — в Zoom или лично.</p></div></div>
     </div>
   </div>
 </section>
 
-<footer class="site"><div class="wrap"><div class="foot-top">
-      <div class="foot-brand"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101_f)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#FFFFFF"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#FFFFFF"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#FFFFFF"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#FFFFFF"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#FFFFFF"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#FFFFFF"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#FFFFFF"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101_f"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg><p>MakeBiz, IT-компания полного цикла: внедряем искусственный интеллект, CRM и аналитику, систематизируем процессы и выстраиваем управляемую цифровую среду для бизнеса.</p>
-        <div class="foot-actions"><a href="/contacts" class="btn btn-primary btn-sm">Обсудить проект</a><a href="/partners" class="btn btn-ghost btn-sm">Стать партнёром</a></div></div>
-      <div class="foot-col"><h4>Компания</h4><ul><li><a href="/company">О компании</a></li><li><a href="/partners">Партнёрам</a></li><li><a href="/">Главная</a></li><li><a href="/contacts">Контакты</a></li></ul></div>
-      <div class="foot-col"><h4>Продукты</h4><ul><li><a href="/openclaw">OpenClaw</a></li><li><a href="/vector">Vector</a></li><li><a href="/intdoc">IntDoc</a></li><li><a href="/bitrix">Bitrix</a></li></ul></div>
-      <div class="foot-col"><h4>Контакты</h4><ul><li><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram @Anton_MakeBiz</a></li><li><a href="tel:+971502620927">+971 50 262 0927</a></li></ul></div>
-    </div><div class="foot-bottom"><span>© <span id="yr"></span> MakeBiz. Все права защищены.</span>
-      <div class="ft-links"><a href="/company">О компании</a><a href="/">Главная</a><a href="/contacts">Контакты</a></div></div></div></footer>
+<footer class="site"><div class="wrap">
+  <div class="brand" style="justify-content:center;color:#fff">Make<b style="color:#7ea6f7">Biz</b></div>
+  <div class="fl"><a href="#package">Внедрение</a><a href="#support">Поддержка</a><a href="#form">Заявка</a><a href="tel:+971502620927">+971 50 262 0927</a><a href="/privacy">Политика конфиденциальности</a></div>
+  <div class="cp">© 2026 MakeBiz. Все права защищены.</div>
+</div></footer>
 
 <script>
 (function(){
@@ -521,15 +527,4 @@ img,svg,video{max-width:100%}
   var _btn_unused=document.getElementById('bxsubmit_NOPE');
 })();
 </script>
-<script>
-(function(){
-  var hdr=document.getElementById('hdr');
-  if(hdr) window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
-  var mt=document.getElementById('menuToggle'),nl=document.getElementById('navlinks');
-  if(mt&&nl) mt.addEventListener('click',function(){nl.classList.toggle('open');});
-})();
-</script>
-
-<script>var yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();</script>
-
 </body></html>
