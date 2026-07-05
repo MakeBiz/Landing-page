@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IntDoc — AI-обработка документов | MakeBiz</title>
+<title>IntDoc, AI-обработка документов | MakeBiz</title>
 <meta name="description" content="MakeBiz Group повышает эффективность бизнеса за счёт внедрения искусственного интеллекта в процессы и их оптимизации через CRM, автоматизацию и IT-инфраструктуру.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +26,9 @@
   --shadow:0 8px 28px rgba(72,89,102,.10);
   --shadow-sm:0 4px 14px rgba(72,89,102,.08);
   --shadow-lg:0 24px 60px rgba(3,35,95,.14);
-  --r-lg:40px;
+  --r-lg:32px;
   --r-md:20px;
-  --r-sm:16px;
+  --r-sm:14px;
   --maxw:1200px;
   --gut:clamp(20px,5vw,48px);
 }
@@ -64,7 +64,7 @@ section{position:relative}
 .btn-secondary:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
 .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.28)}
 .btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
-.btn-sm{padding:11px 20px;font-size:14px;border-radius:12px}
+.btn-sm{padding:11px 20px;font-size:14px;border-radius:14px}
 
 .eyebrow{
   display:inline-flex;align-items:center;gap:9px;
@@ -100,7 +100,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .nav-dd{position:relative}
 .nav-dd-menu{
   position:absolute;top:calc(100% + 10px);left:0;min-width:230px;background:var(--surface);
-  border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow-lg);padding:8px;
+  border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-lg);padding:8px;
   opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .22s cubic-bezier(.2,.8,.2,1);z-index:60;
 }
 .nav-dd:hover .nav-dd-menu,.nav-dd.open .nav-dd-menu{opacity:1;visibility:visible;transform:translateY(0)}
@@ -184,7 +184,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 /* hero dashboard mockup */
 .hero-visual{position:relative}
 .mock{
-  background:var(--surface);border:1px solid var(--border);border-radius:24px;
+  background:var(--surface);border:1px solid var(--border);border-radius:20px;
   box-shadow:var(--shadow-lg);padding:20px;position:relative;
 }
 .mock-top{display:flex;align-items:center;gap:7px;margin-bottom:16px}
@@ -197,7 +197,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .stat-card .lbl svg{width:13px;height:13px;opacity:.6}
 .stat-card .val{font-size:26px;font-weight:700;margin-top:4px;letter-spacing:-.02em}
 .stat-card .val.blue{color:var(--blue-active)}
-.stat-card .delta{font-size:12px;font-weight:700;color:#28a745;margin-top:2px}
+.stat-card .delta{font-size:12px;font-weight:700;color:#1AB248;margin-top:2px}
 .chart-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-sm);padding:16px}
 .chart-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
 .chart-head .t{font-size:13px;font-weight:700}
@@ -216,7 +216,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .fb-1{top:-22px;right:18px;animation-delay:0s}
 .fb-1 .ic{background:var(--blue-active)}
 .fb-2{bottom:-20px;left:-14px;animation-delay:1.5s}
-.fb-2 .ic{background:#28a745}
+.fb-2 .ic{background:#1AB248}
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 @media(max-width:920px){
   .hero-inner{grid-template-columns:1fr}
@@ -301,7 +301,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
   transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:transparent}
 .pcard:hover::before{transform:scaleX(1)}
-.pcard .picon{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;color:#fff;margin-bottom:20px;
+.pcard .picon{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;color:#fff;margin-bottom:20px;
   background:var(--accent,var(--blue-active));box-shadow:0 8px 20px rgba(7,78,232,.25)}
 .pcard .picon svg{width:27px;height:27px}
 .pcard h3{font-size:1.4rem;margin-bottom:6px}
@@ -314,10 +314,10 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .pcard:hover .plink svg{transform:translateX(3px)}
 
 /* ---------- product tabs ---------- */
-.tabs-nav{display:flex;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:18px;
+.tabs-nav{display:flex;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:20px;
   padding:7px;box-shadow:var(--shadow-sm);margin-bottom:40px;position:sticky;top:84px;z-index:40;flex-wrap:wrap}
 .tab-btn{flex:1;min-width:130px;font-family:inherit;font-size:15px;font-weight:700;color:var(--muted);
-  background:none;border:none;cursor:pointer;padding:14px 16px;border-radius:12px;transition:all .25s;
+  background:none;border:none;cursor:pointer;padding:14px 16px;border-radius:14px;transition:all .25s;
   display:flex;align-items:center;justify-content:center;gap:10px;letter-spacing:-.01em}
 .tab-btn .ti{width:18px;height:18px;opacity:.55;transition:opacity .25s}
 .tab-btn:hover{color:var(--blue);background:var(--soft-blue)}
@@ -345,7 +345,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 
 .bullet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:16px}
 .bullet-grid .bi-item{display:flex;gap:11px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);
-  border-radius:13px;padding:14px 16px;font-size:14px;color:#33476b;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s}
+  border-radius:14px;padding:14px 16px;font-size:14px;color:#33476b;box-shadow:var(--shadow-sm);transition:transform .22s,box-shadow .22s}
 .bullet-grid .bi-item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .bullet-grid .bi-item .dot{width:7px;height:7px;border-radius:50%;background:var(--accent,var(--blue-active));margin-top:7px;flex-shrink:0}
 
@@ -359,7 +359,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 
 .key-statement{background:var(--soft-blue);border:1px solid var(--extra-blue);border-radius:var(--r-md);
   padding:26px 30px;margin:28px 0;display:flex;gap:18px;align-items:flex-start}
-.key-statement .ki{flex-shrink:0;width:42px;height:42px;border-radius:12px;background:var(--blue);color:#fff;
+.key-statement .ki{flex-shrink:0;width:42px;height:42px;border-radius:14px;background:var(--blue);color:#fff;
   display:grid;place-items:center}
 .key-statement .ki svg{width:21px;height:21px}
 .key-statement p{font-size:1.12rem;font-weight:700;color:var(--text);letter-spacing:-.01em;margin:0}
@@ -374,7 +374,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .vcard h4 .vi svg{width:17px;height:17px}
 .vcard ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .vcard li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:#4a5a78}
-.vcard li svg{width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px}
+.vcard li svg{width:14px;height:14px;color:#1AB248;flex-shrink:0;margin-top:3px}
 
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;counter-reset:step}
@@ -409,7 +409,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 /* mockups inside tabs */
 .tab-mock{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--shadow-lg);
   padding:20px;position:relative}
-.list-row{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:13px;background:var(--bg);
+.list-row{display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:14px;background:var(--bg);
   border:1px solid var(--border);margin-bottom:9px;animation:slidein .5s backwards}
 @keyframes slidein{from{opacity:0;transform:translateX(-12px)}to{opacity:1;transform:translateX(0)}}
 .list-row .lr-ic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;color:#fff;flex-shrink:0}
@@ -418,7 +418,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .list-row .lr-t{font-size:13.5px;font-weight:700}
 .list-row .lr-s{font-size:12px;color:var(--muted-soft)}
 .list-row .lr-badge{font-size:11px;font-weight:700;padding:4px 10px;border-radius:8px;white-space:nowrap}
-.badge-green{background:#e6f7ec;color:#1a9c4a}.badge-blue{background:var(--light-blue);color:var(--blue)}
+.badge-green{background:#e6f7ec;color:#1AB248}.badge-blue{background:var(--light-blue);color:var(--blue)}
 .badge-red{background:#fdeaec;color:var(--red)}.badge-amber{background:#fff5e0;color:#c98a00}
 
 
@@ -447,7 +447,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text)}
 .partner-form .field label{color:#dbe6fa}
 .field input,.field select,.field textarea{
-  width:100%;font-family:inherit;font-size:14.5px;padding:13px 15px;border-radius:12px;
+  width:100%;font-family:inherit;font-size:14.5px;padding:13px 15px;border-radius:14px;
   border:1px solid var(--border);background:var(--bg);color:var(--text);transition:border .2s,box-shadow .2s;outline:none}
 .partner-form .field input,.partner-form .field select,.partner-form .field textarea{
   background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#fff}
@@ -463,7 +463,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .partner-form .form-note{color:#9fb4dd}
 .form-success{display:none;text-align:center;padding:30px 10px}
 .form-success.show{display:block;animation:fade .4s both}
-.form-success .si{width:60px;height:60px;border-radius:50%;background:#e6f7ec;color:#1a9c4a;display:grid;place-items:center;margin:0 auto 16px}
+.form-success .si{width:60px;height:60px;border-radius:50%;background:#e6f7ec;color:#1AB248;display:grid;place-items:center;margin:0 auto 16px}
 .partner-form .form-success .si{background:rgba(40,168,116,.2);color:#7be0a8}
 .form-success .si svg{width:30px;height:30px}
 .form-success h4{font-size:1.2rem;margin-bottom:6px}
@@ -487,7 +487,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .contact-card{display:flex;align-items:center;gap:18px;background:var(--surface);border:1px solid var(--border);
   border-radius:var(--r-md);padding:22px 26px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s,border-color .25s}
 .contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--extra-blue)}
-.contact-card .cc-ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;color:#fff;flex-shrink:0;
+.contact-card .cc-ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;flex-shrink:0;
   background:var(--blue-active);box-shadow:0 8px 20px rgba(7,78,232,.25)}
 .contact-card .cc-ic svg{width:26px;height:26px}
 .contact-card .cc-body{display:flex;flex-direction:column}
@@ -536,7 +536,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
   transform:scaleY(0);transform-origin:top;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
 .loss-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:transparent}
 .loss-card:hover::before{transform:scaleY(1)}
-.loss-card .li-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:var(--red);
+.loss-card .li-ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--red);
   background:#fdeaec;margin-bottom:16px}
 .loss-card .li-ic svg{width:23px;height:23px}
 .loss-card h4{font-size:1.08rem;margin-bottom:8px}
@@ -552,7 +552,7 @@ header.site.scrolled{border-color:var(--border);background:rgba(245,247,249,.94)
 .eff-hero p{color:#cdd9f2;font-size:1.05rem;max-width:520px}
 @media(max-width:760px){.eff-hero p{margin:0 auto}}
 
-/* о компании — статы */
+/* о компании, статы */
 .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
 @media(max-width:680px){.about-stats{grid-template-columns:1fr}}
 .astat{text-align:left}
@@ -625,7 +625,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 
 /* product cross-nav (между продуктами) */
 .prod-nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
-.prod-nav a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:13px;font-weight:700;
+.prod-nav a{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:14px;font-weight:700;
   font-size:14.5px;background:var(--surface);border:1px solid var(--border);color:var(--text);
   box-shadow:var(--shadow-sm);transition:all .22s}
 .prod-nav a:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--extra-blue)}
@@ -712,7 +712,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 /* KPI-плашки поверх фото-hero */
 .hero-kpis{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
 .hero-kpi{background:rgba(255,255,255,.7);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);
-  border-radius:16px;padding:14px 20px;box-shadow:var(--shadow-sm)}
+  border-radius:14px;padding:14px 20px;box-shadow:var(--shadow-sm)}
 .hero-kpi .hk-v{font-size:1.7rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,var(--blue),var(--blue-active));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-kpi .hk-l{font-size:12.5px;color:var(--muted);margin-top:2px}
 
@@ -725,9 +725,9 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 /* объёмные карточки с тенями */
 .prod-cards{display:grid;gap:24px}
 .photo-card{box-shadow:0 24px 70px rgba(3,35,95,.16),0 4px 12px rgba(3,35,95,.08)}
-.loss-card{box-shadow:0 14px 40px rgba(3,35,95,.10);border-radius:22px;padding:30px}
+.loss-card{box-shadow:0 14px 40px rgba(3,35,95,.10);border-radius:20px;padding:30px}
 .loss-card:hover{box-shadow:0 28px 70px rgba(3,35,95,.18)}
-.loss-card .li-ic{width:54px;height:54px;border-radius:16px}
+.loss-card .li-ic{width:54px;height:54px;border-radius:14px}
 .loss-card h4{font-size:1.18rem}
 .comm-card{box-shadow:0 20px 60px rgba(7,78,232,.18)}
 .metric{box-shadow:0 18px 50px rgba(3,35,95,.12)}
@@ -752,7 +752,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 .leak-chart{background:var(--surface);border-radius:var(--r-lg);padding:clamp(24px,3vw,36px);box-shadow:0 24px 70px rgba(3,35,95,.14)}
 .leak-row{display:flex;align-items:center;gap:16px;margin-bottom:14px}
 .leak-row:last-child{margin-bottom:0}
-.leak-bar{height:46px;border-radius:12px;display:flex;align-items:center;padding:0 18px;color:#fff;font-weight:700;font-size:14px;
+.leak-bar{height:46px;border-radius:14px;display:flex;align-items:center;padding:0 18px;color:#fff;font-weight:700;font-size:14px;
   position:relative;overflow:hidden;transform-origin:left;animation:leakGrow 1s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes leakGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .leak-row .leak-lbl{flex:0 0 150px;font-size:13.5px;font-weight:700;color:#3a4f74;text-align:right}
@@ -761,10 +761,10 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 /* чек-лист "что мы увидим" */
 .see-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
 @media(max-width:680px){.see-grid{grid-template-columns:1fr}}
-.see-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border-radius:16px;padding:20px 22px;
+.see-item{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border-radius:14px;padding:20px 22px;
   box-shadow:0 10px 30px rgba(3,35,95,.08);border:1px solid var(--border);transition:transform .25s,box-shadow .25s}
 .see-item:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(3,35,95,.14)}
-.see-item .se-ic{flex-shrink:0;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;
+.see-item .se-ic{flex-shrink:0;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:#fff;
   background:linear-gradient(135deg,var(--red),#e0556a)}
 .see-item .se-ic svg{width:21px;height:21px}
 .see-item h5{font-size:1rem;margin-bottom:4px;color:var(--text)}
@@ -775,13 +775,13 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 
 
 /* ===== v7: выравнивание hero, контакты, скриншоты, анимации ===== */
-/* выровнять KPI hero — одинаковая высота, ровная сетка */
+/* выровнять KPI hero, одинаковая высота, ровная сетка */
 .hero-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
 .hero-kpi{display:flex;flex-direction:column;justify-content:center;min-height:92px;text-align:left}
 @media(max-width:560px){.hero-kpis{grid-template-columns:1fr 1fr}}
 
 /* скриншоты продукта (рамка-браузер) */
-.shot{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(3,35,95,.20),0 4px 12px rgba(3,35,95,.08);
+.shot{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(3,35,95,.20),0 4px 12px rgba(3,35,95,.08);
   border:1px solid var(--border);background:#fff}
 .shot img{display:block;width:100%}
 .shot-cap{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--border);background:#fbfcfe}
@@ -794,23 +794,23 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 .contact-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,60px);align-items:start}
 @media(max-width:880px){.contact-hero{grid-template-columns:1fr;gap:28px}}
 .contact-ways{display:flex;flex-direction:column;gap:16px;margin-top:8px}
-.cway{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:18px;
+.cway{display:flex;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:20px;
   padding:20px 22px;box-shadow:0 12px 34px rgba(3,35,95,.08);transition:transform .25s,box-shadow .25s,border-color .25s}
 .cway:hover{transform:translateY(-4px);box-shadow:0 24px 56px rgba(3,35,95,.16);border-color:var(--extra-blue)}
-.cway .cw-ic{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--blue),var(--blue-active));box-shadow:0 10px 24px rgba(7,78,232,.3)}
+.cway .cw-ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;flex-shrink:0;background:linear-gradient(135deg,var(--blue),var(--blue-active));box-shadow:0 10px 24px rgba(7,78,232,.3)}
 .cway .cw-ic svg{width:26px;height:26px}
 .cway h4{font-size:1.05rem;margin-bottom:3px}.cway p{font-size:13.5px;color:var(--muted);margin:0}
 .contact-promise{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
 @media(max-width:760px){.contact-promise{grid-template-columns:1fr}}
-.promise{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 12px 34px rgba(3,35,95,.08)}
-.promise .pr-ic{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;color:var(--blue-active);background:var(--light-blue);margin-bottom:14px}
+.promise{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 12px 34px rgba(3,35,95,.08)}
+.promise .pr-ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:var(--blue-active);background:var(--light-blue);margin-bottom:14px}
 .promise .pr-ic svg{width:23px;height:23px}
 .promise h4{font-size:1.05rem;margin-bottom:7px}.promise p{font-size:14px;color:var(--muted);margin:0}
 
 /* кейсы (о компании) */
 .cases{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 @media(max-width:760px){.cases{grid-template-columns:1fr}}
-.case{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:0 16px 44px rgba(3,35,95,.10);
+.case{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:30px;box-shadow:0 16px 44px rgba(3,35,95,.10);
   transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
 .case:hover{transform:translateY(-5px);box-shadow:0 30px 70px rgba(3,35,95,.18)}
 .case .case-name{font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:8px}
@@ -823,9 +823,9 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:880px){.exp-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.exp-grid{grid-template-columns:1fr}}
-.exp{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(3,35,95,.07);transition:transform .25s,box-shadow .25s}
+.exp{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(3,35,95,.07);transition:transform .25s,box-shadow .25s}
 .exp:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(3,35,95,.14)}
-.exp .ex-ic{width:48px;height:48px;border-radius:13px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active));margin-bottom:16px}
+.exp .ex-ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active));margin-bottom:16px}
 .exp .ex-ic svg{width:24px;height:24px}
 .exp h4{font-size:1.08rem;margin-bottom:7px}.exp p{font-size:13.5px;color:var(--muted);margin:0}
 
@@ -850,7 +850,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
   animation:shine 4.5s ease-in-out infinite}
 @keyframes shine{0%,60%{left:-120%}80%,100%{left:140%}}
 
-</style>
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:2px solid var(--blue-active,#074EE8);outline-offset:2px}a[class*=cta]:active,a[class*=btn]:active,button:active,.nav-cta:active{transform:translateY(1px)}button:disabled,[disabled]{opacity:.55;cursor:not-allowed}.as-h1{font-size:clamp(2.1rem,3.9vw,3.25rem);margin-bottom:22px;text-wrap:balance}/*p2*/.text-grad{background:linear-gradient(120deg,var(--text),var(--blue-active))!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}.partner-badge{display:none!important}/*navresp*/#mobcta{display:none}@media(min-width:1181px){#navlinks{display:flex!important;position:static!important}.menu-toggle{display:none!important}#mobcta{display:none!important}}@media(max-width:1180px){#navlinks{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-top:1px solid var(--border,#E7E7E7);padding:10px;box-shadow:0 24px 50px rgba(3,35,95,.14);gap:2px;z-index:200}#navlinks.open{display:flex}#navlinks a{padding:14px 16px;font-size:16px;border-radius:12px}#navlinks a:hover{background:var(--bg,#F5F7F9)}.menu-toggle{display:block!important;margin-left:auto}.nav-cta>.btn{display:none!important}.nav-phone{display:none!important}#mobcta{display:block;margin-top:8px;background:var(--blue-active,#074EE8);color:#fff!important;text-align:center;font-weight:700;border-radius:100px;padding:15px!important}}</style>
 
 <style>
 /* Переключатель языка RU/EN */
@@ -875,6 +875,22 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
   .nav-cta{margin-left:auto}
 }
 </style>
+<link rel="canonical" href="https://makebiztehnologies.com/intdoc">
+<meta name="theme-color" content="#013CA4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MakeBiz">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="IntDoc, AI-обработка документов | MakeBiz">
+<meta property="og:description" content="MakeBiz Group повышает эффективность бизнеса за счёт внедрения искусственного интеллекта в процессы и их оптимизации через CRM, автоматизацию и IT-инфраструктуру.">
+<meta property="og:url" content="https://makebiztehnologies.com/intdoc">
+<meta property="og:image" content="https://makebiztehnologies.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IntDoc, AI-обработка документов | MakeBiz">
+<meta name="twitter:description" content="MakeBiz Group повышает эффективность бизнеса за счёт внедрения искусственного интеллекта в процессы и их оптимизации через CRM, автоматизацию и IT-инфраструктуру.">
+<meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
+<link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/intdoc">
+<link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/intdoc">
+<link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/intdoc">
 </head>
 <body>
 <style id="eff-styles">
@@ -907,7 +923,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 .eff-spark i{flex:1;background:linear-gradient(180deg,#074EE8,#9cc0ff);border-radius:3px;height:20%;transform-origin:bottom;transform:scaleY(0);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
 .eff.in .eff-spark i{transform:scaleY(1)}
 
-.eff-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:26px;box-shadow:0 20px 56px rgba(3,35,95,.10);display:flex;flex-direction:column}
+.eff-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:26px;box-shadow:0 20px 56px rgba(3,35,95,.10);display:flex;flex-direction:column}
 .eff-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
 .eff-card-top .t{font-weight:700;font-size:15px;color:var(--text)}
 .eff-live{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--green)}
@@ -933,7 +949,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 
 <header class="site" id="hdr"><div class="wrap"><nav class="nav">
       <a class="brand" href="/" aria-label="MakeBiz"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#03235F"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#03235F"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#03235F"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#03235F"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#03235F"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#03235F"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#03235F"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg></a>
-      <div class="nav-links" id="navlinks"><a href="/">Главная</a><a href="/company">О компании</a><a href="/openclaw">OpenClaw</a><a href="/vector">Vector</a><a href="/intdoc" class="active">IntDoc</a><a href="/bitrix">Битрикс24</a><a href="/servers">Серверы</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a></div>
+      <div class="nav-links" id="navlinks"><a href="/">Главная</a><a href="/company">О компании</a><a href="/openclaw">AI-агенты</a><a href="/vector">Vector</a><a href="/intdoc" class="active">IntDoc</a><a href="/bitrix">Bitrix</a><a href="/servers">VPS</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a><a id="mobcta" href="#contact">Обсудить проект</a></div>
       <div class="nav-cta"><div class="lang-switch">
   <a href="/intdoc" class="active"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a>
   <a href="/en/intdoc" class=""><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a>
@@ -949,17 +965,17 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
     <div class="pp-hero-grid" style="margin-top:30px">
       <div class="reveal">
         <span class="pp-tag" style="background:#074EE8">IntDoc · Документы и поставщики</span>
-        <h1>IntDoc выбирает лучшего поставщика за вас</h1><p class="pp-sub">AI обрабатывает прайсы, КП и спецификации, сопоставляет позиции и сравнивает поставщиков по цене, сроку и наличию — с источником и уверенностью по каждой строке.</p>
+        <h1>IntDoc выбирает лучшего поставщика за вас</h1><p class="pp-sub">AI обрабатывает прайсы, КП и спецификации, сопоставляет позиции и сравнивает поставщиков по цене, сроку и наличию, с источником и уверенностью по каждой строке.</p>
         <div class="hero-actions"><a href="#contact" class="btn btn-primary">Обсудить внедрение <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#contact" class="btn btn-secondary">Запросить демо</a></div>
       </div>
-      <div class="photo-card reveal" style="min-height:360px"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80&h=900" alt=""><div class="pc-grad"></div><span class="pc-chip">Закупки и поставщики</span><div class="pc-body"><h4>Сравнение поставщиков</h4><p>Лучший вариант по каждой позиции.</p></div></div>
+      <div class="photo-card reveal" style="min-height:360px"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=80&h=900" alt=""><div class="pc-grad"></div><span class="pc-chip">Закупки и поставщики</span><div class="pc-body"><h4>Сравнение поставщиков</h4><p>Лучший вариант по каждой позиции.</p></div></div>
     </div>
   </div>
 </section>
 <section class="section"><div class="wrap"><div class="block reveal"><h3 class="block-title"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>Поставщики, сведённые в одно решение</h3><p>Прайсы и КП приходят в разных форматах, один товар назван по-разному, цены в разных валютах. IntDoc сам сводит хаос поставщиков в понятное закупочное решение.</p><div class="bullet-grid"><div class="bi-item"><span class="dot"></span>обрабатывает Excel, PDF, сканы, письма</div><div class="bi-item"><span class="dot"></span>извлекает позиции, цены, сроки, наличие</div><div class="bi-item"><span class="dot"></span>нормализует названия и валюты</div><div class="bi-item"><span class="dot"></span>сопоставляет похожие позиции</div><div class="bi-item"><span class="dot"></span>строит матрицу сравнения поставщиков</div><div class="bi-item"><span class="dot"></span>показывает источник и уверенность</div></div></div><div class="key-statement reveal"><span class="ki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span><p>Проблема не в количестве документов, а в ручном превращении предложений поставщиков в решение.</p></div><div class="split" style="gap:32px;align-items:center;margin:8px 0"><div><div class="block reveal"><h3 class="block-title"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 4h6zM19 7l-3 4h6z"/><path d="M2 11a3 3 0 0 0 6 0M16 11a3 3 0 0 0 6 0M7 21h10"/></svg></span>Что вы получаете по поставщикам</h3><div class="bullet-grid"><div class="bi-item"><span class="dot"></span>лучший вариант по цене</div><div class="bi-item"><span class="dot"></span>лучший по сроку и наличию</div><div class="bi-item"><span class="dot"></span>объяснение выбора</div><div class="bi-item"><span class="dot"></span>строки на проверку</div><div class="bi-item"><span class="dot"></span>экспорт в Excel и PDF</div><div class="bi-item"><span class="dot"></span>готовое КП для клиента</div></div></div></div><div><div class="mini-chart reveal"><div class="mc-head"><span class="t">Сравнение поставщиков</span><span class="pill">авто</span></div>
 <div style="display:flex;flex-direction:column;gap:8px">
-<div class="list-row" style="margin:0"><span class="lr-ic" style="background:#1AB248"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3"/><ellipse cx="15" cy="14" rx="6" ry="3"/><path d="M9 17c0 1.7 2.7 3 6 3s6-1.3 6-3v-3"/></svg></span><div class="lr-body"><div class="lr-t">Поставщик A — лучшая цена</div><div class="lr-s">€ 1 240 · 3 дня</div></div><span class="lr-badge badge-green">Лучший</span></div>
-<div class="list-row" style="margin:0"><span class="lr-ic" style="background:#074EE8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div class="lr-body"><div class="lr-t">Поставщик B — быстрее срок</div><div class="lr-s">€ 1 310 · 1 день</div></div><span class="lr-badge badge-blue">Быстро</span></div>
+<div class="list-row" style="margin:0"><span class="lr-ic" style="background:#1AB248"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3"/><ellipse cx="15" cy="14" rx="6" ry="3"/><path d="M9 17c0 1.7 2.7 3 6 3s6-1.3 6-3v-3"/></svg></span><div class="lr-body"><div class="lr-t">Поставщик A, лучшая цена</div><div class="lr-s">€ 1 240 · 3 дня</div></div><span class="lr-badge badge-green">Лучший</span></div>
+<div class="list-row" style="margin:0"><span class="lr-ic" style="background:#074EE8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div class="lr-body"><div class="lr-t">Поставщик B, быстрее срок</div><div class="lr-s">€ 1 310 · 1 день</div></div><span class="lr-badge badge-blue">Быстро</span></div>
 <div class="list-row" style="margin:0"><span class="lr-ic" style="background:#C51929"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2M4 12h16"/></svg></span><div class="lr-body"><div class="lr-t">2 строки на проверку</div><div class="lr-s">низкая уверенность</div></div><span class="lr-badge badge-red">Проверка</span></div>
 </div></div></div></div><div class="block reveal"><h3 class="block-title"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M9 7h.01M15 7h.01M9 11h.01M15 11h.01M9 15h.01M15 15h.01M10 21v-3h4v3"/></svg></span>Кому особенно полезно</h3><div class="integ-grid"><span class="tagchip">дистрибьюторы</span><span class="tagchip">торговые компании</span><span class="tagchip">техническая закупка</span><span class="tagchip">строительство</span><span class="tagchip">промышленность</span><span class="tagchip">e-commerce</span><span class="tagchip">много SKU</span><span class="tagchip">несколько закупщиков</span></div></div><div class="block reveal"><h3 class="block-title"><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.6h-4l-.3 2.6a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.6h4l.3-2.6a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1z"/></svg></span>Как проходит пилот</h3><div class="steps"><div class="step"><div class="sn">01</div><h4>Документы клиента</h4><p>1–2 примера прайсов/КП.</p><span class="ghost">1</span></div><div class="step"><div class="sn">02</div><h4>Обработка ИИ</h4><p>Извлечение и нормализация.</p><span class="ghost">2</span></div><div class="step"><div class="sn">03</div><h4>Сравнение</h4><p>Матрица поставщиков.</p><span class="ghost">3</span></div><div class="step"><div class="sn">04</div><h4>Решение</h4><p>Лучший вариант и экспорт.</p><span class="ghost">4</span></div></div></div><div class="offer reveal"><div class="ol">Сильный оффер</div><p>Покажем на ваших документах, как IntDoc сравнивает поставщиков и формирует закупочное решение.</p><div class="offer-actions"><a href="#contact" class="btn btn-ghost" style="background:#fff;color:#074EE8">Получить анализ на ваших документах <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#contact" class="btn btn-ghost">Запросить демо</a></div></div></div></section>
 
@@ -980,7 +996,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 .cs-strip{height:6px}
 .cs-body{padding:28px 30px 30px;display:flex;flex-direction:column;gap:18px;flex:1}
 .cs-top{display:flex;align-items:center;gap:16px}
-.cs-mono{flex-shrink:0;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:-.01em;box-shadow:0 12px 26px rgba(3,35,95,.18);position:relative;overflow:hidden;transition:transform .35s}
+.cs-mono{flex-shrink:0;width:64px;height:64px;border-radius:20px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:1.25rem;letter-spacing:-.01em;box-shadow:0 12px 26px rgba(3,35,95,.18);position:relative;overflow:hidden;transition:transform .35s}
 .cs-card:hover .cs-mono{transform:scale(1.06) rotate(-3deg)}
 .cs-mono::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.18) 60%,transparent 80%)}
 .cs-meta{display:flex;flex-direction:column;gap:4px;min-width:0}
@@ -997,10 +1013,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
 
 <section class="eff" id="efficiency"><div class="wrap"><div class="eff-head"><span class="eff-eyebrow"><span class="pulse"></span>Эффективность</span><h2>Видно, как <span class="eff-grad">растёт эффективность закупок</span></h2><p>IntDoc сводит прайсы, КП и спецификации в единую матрицу и подсвечивает, где компания переплачивает. Решения по цифрам, а не вручную.</p></div><div class="eff-grid"><div class="eff-kpis"><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="78" data-prefix="−" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">времени на сведение таблиц</div><div class="eff-spark"><i style="height:70%"></i><i style="height:60%"></i><i style="height:52%"></i><i style="height:44%"></i><i style="height:36%"></i><i style="height:28%"></i><i style="height:20%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="9" data-prefix="−" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">на закупках по объектам</div><div class="eff-spark"><i style="height:60%"></i><i style="height:55%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:36%"></i><i style="height:30%"></i><i style="height:22%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="100" data-prefix="" data-suffix="%" data-dec="0">0</span></div><div class="eff-lbl">позиций с источником и проверкой</div><div class="eff-spark"><i style="height:45%"></i><i style="height:55%"></i><i style="height:60%"></i><i style="height:68%"></i><i style="height:75%"></i><i style="height:84%"></i><i style="height:92%"></i></div></div><div class="eff-kpi"><div class="eff-val"><span class="cnt" data-to="5" data-prefix="×" data-suffix="" data-dec="0">0</span></div><div class="eff-lbl">быстрее сравнение поставщиков</div><div class="eff-spark"><i style="height:22%"></i><i style="height:32%"></i><i style="height:42%"></i><i style="height:54%"></i><i style="height:64%"></i><i style="height:76%"></i><i style="height:88%"></i></div></div></div><div class="eff-card"><div class="eff-card-top"><span class="t">Экономия на закупках</span><span class="eff-live"><span class="d"></span>в реальном времени</span></div><svg class="eff-line" viewBox="0 0 480 210" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="effLn" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#013CA4"/><stop offset="0.6" stop-color="#074EE8"/><stop offset="1" stop-color="#1AB248"/></linearGradient><linearGradient id="effAr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#074EE8" stop-opacity="0.20"/><stop offset="1" stop-color="#074EE8" stop-opacity="0"/></linearGradient></defs><path class="area" d="M14,176 L120,150 L226,134 L332,92 L450,40 L450,200 L14,200 Z" fill="url(#effAr)"/><path class="ln" d="M14,176 L120,150 L226,134 L332,92 L450,40" fill="none" stroke="url(#effLn)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle class="dot" cx="14" cy="176" r="5" fill="#013CA4"/><circle class="dot" cx="120" cy="150" r="5" fill="#074EE8"/><circle class="dot" cx="226" cy="134" r="5" fill="#074EE8"/><circle class="dot" cx="332" cy="92" r="5" fill="#3f7bff"/><circle class="dot" cx="450" cy="40" r="6" fill="#1AB248"/></svg><div class="eff-bars"><div class="b alt" style="height:26%"></div><div class="b" style="height:40%"></div><div class="b alt" style="height:50%"></div><div class="b" style="height:62%"></div><div class="b alt" style="height:72%"></div><div class="b" style="height:86%"></div></div><div class="eff-foot">Снижение затрат на закупки после внедрения IntDoc</div></div></div></div></section>
 <section class="cs-section" id="cases-intdoc">
-  <div class="cs-wrap">
-    <div class="cs-head"><span class="cs-eyebrow">Кейсы</span><h2>Реальные результаты <span class="cs-grad">IntDoc</span></h2><p>Что меняется в закупках и работе с поставщиками после внедрения.</p></div>
-    <div class="cs-grid"><article class="cs-card"><div class="cs-strip" style="background:linear-gradient(90deg,#013CA4,#4d76bf)"></div><div class="cs-body"><div class="cs-top"><div class="cs-mono" style="background:linear-gradient(135deg,#013CA4,#002a72)">СК</div><div class="cs-meta"><div class="cs-name">СтройКомплект Регион</div><span class="cs-ind">Дистрибуция</span></div></div><h3>AI-сравнение прайсов поставщиков для дистрибьютора</h3><p class="cs-sum">Тысячи позиций, десятки поставщиков, прайсы в Excel/PDF/сканах. IntDoc свёл всё в единую матрицу и подсветил, где компания регулярно переплачивает.</p><div class="cs-metrics"><div class="cs-m"><div class="cs-v">4–5 ч → 18 мин</div><div class="cs-l">сведение таблицы</div></div><div class="cs-m"><div class="cs-v">−82%</div><div class="cs-l">ручных ошибок</div></div><div class="cs-m"><div class="cs-v">14,8 млн ₽</div><div class="cs-l">экономии за квартал</div></div></div></div></article><article class="cs-card"><div class="cs-strip" style="background:linear-gradient(90deg,#074EE8,#5183ee)"></div><div class="cs-body"><div class="cs-top"><div class="cs-mono" style="background:linear-gradient(135deg,#074EE8,#0436a2)">АИ</div><div class="cs-meta"><div class="cs-name">Атлас Интерьер</div><span class="cs-ind">Дизайн и ремонт</span></div></div><h3>AI-сравнение КП для комплектации квартир под ключ</h3><p class="cs-sum">Поставщики присылали КП в разных форматах и с разной комплектацией. IntDoc сопоставил позиции, подсветил риски и сохранил маржу на закупках по объектам.</p><div class="cs-metrics"><div class="cs-m"><div class="cs-v">2 дня → 2 ч</div><div class="cs-l">подготовка сравнения</div></div><div class="cs-m"><div class="cs-v">−9,4%</div><div class="cs-l">на закупках</div></div><div class="cs-m"><div class="cs-v">6,2 млн ₽</div><div class="cs-l">сохранённой маржи</div></div></div></div></article><article class="cs-card"><div class="cs-strip" style="background:linear-gradient(90deg,#1AB248,#5ec97e)"></div><div class="cs-body"><div class="cs-top"><div class="cs-mono" style="background:linear-gradient(135deg,#1AB248,#127c32)">МС</div><div class="cs-meta"><div class="cs-name">МедСнаб Профи</div><span class="cs-ind">Медоборудование</span></div></div><h3>AI-сверка спецификаций и тендерных таблиц</h3><p class="cs-sum">Тендеры в медоборудовании — это часы ручной сверки и риск ошибок. IntDoc ускорил подготовку, снизил ошибки в спецификациях и помог брать больше заявок.</p><div class="cs-metrics"><div class="cs-m"><div class="cs-v">−71%</div><div class="cs-l">время сравнения</div></div><div class="cs-m"><div class="cs-v">−69%</div><div class="cs-l">ошибок в спецификациях</div></div><div class="cs-m"><div class="cs-v">5,9 млн ₽</div><div class="cs-l">валовой прибыли</div></div></div></div></article><article class="cs-card"><div class="cs-strip" style="background:linear-gradient(90deg,#013CA4,#4d76bf)"></div><div class="cs-body"><div class="cs-top"><div class="cs-mono" style="background:linear-gradient(135deg,#013CA4,#002a72)">ЛП</div><div class="cs-meta"><div class="cs-name">ЛингваПарк</div><span class="cs-ind">Образование</span></div></div><h3>AI-контроль закупок для филиальной сети школ</h3><p class="cs-sum">Закупки филиалов согласовывались вручную и дольше двух дней. IntDoc ускорил сравнение КП и подсветил повторяющиеся переплаты по сети.</p><div class="cs-metrics"><div class="cs-m"><div class="cs-v">2 дня → 4 ч</div><div class="cs-l">согласование</div></div><div class="cs-m"><div class="cs-v">−10,8%</div><div class="cs-l">регулярные закупки</div></div><div class="cs-m"><div class="cs-v">3,4 млн ₽</div><div class="cs-l">экономии за квартал</div></div></div></div></article></div>
-  </div>
+  
 </section>
 <script>(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('cs-in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('#cases-intdoc .cs-card').forEach(function(el,i){el.style.transitionDelay=(i%2)*0.08+'s';io.observe(el);});})();</script>
 
@@ -1035,7 +1048,7 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
       <div class="foot-brand"><svg width="117" height="41" viewBox="0 0 117 41" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_12_2101)"><path d="M32.2077 24.0427H3.48188C1.55887 24.0427 -3.05176e-05 25.6016 -3.05176e-05 27.5246V36.2294C-3.05176e-05 38.1524 1.55887 39.7113 3.48188 39.7113H32.2077C34.1307 39.7113 35.6896 38.1524 35.6896 36.2294V27.5246C35.6896 25.6016 34.1307 24.0427 32.2077 24.0427Z" fill="#013CA4"/><path d="M20.8571 35.7816H18.932L18.4448 34.4388H15.0461L14.547 35.7816H12.6219L15.6878 27.8553H17.8031L20.8571 35.7816ZM17.9813 32.9533L16.7455 29.5428L15.5096 32.9533H17.9813Z" fill="white"/><path d="M23.2766 35.7816H21.5891V27.8553H23.2766V35.7816Z" fill="white"/><path d="M112.727 24.0427H80.084C78.161 24.0427 76.6021 25.6016 76.6021 27.5246V36.2294C76.6021 38.1524 78.161 39.7113 80.084 39.7113H112.727C114.65 39.7113 116.209 38.1524 116.209 36.2294V27.5246C116.209 25.6016 114.65 24.0427 112.727 24.0427Z" fill="#C51929"/><path d="M88.4257 36.0199C85.9331 36.0199 84.0011 34.275 84.0011 31.72C84.0011 29.165 85.9331 27.42 88.4257 27.42C90.2577 27.42 91.317 28.4171 91.9029 29.4516L90.3826 30.1994C90.0335 29.5264 89.2858 28.9904 88.4257 28.9904C86.9176 28.9904 85.8208 30.1496 85.8208 31.72C85.8208 33.2904 86.9176 34.4495 88.4257 34.4495C89.2858 34.4495 90.0335 33.926 90.3826 33.2405L91.9029 33.9759C91.3048 35.0103 90.2577 36.0199 88.4257 36.0199Z" fill="white"/><path d="M99.1883 35.8703H97.1566L95.524 32.9164H94.2279V35.8703H92.4578V27.5571H96.3466C98.0789 27.5571 99.1383 28.6913 99.1383 30.2368C99.1383 31.7075 98.216 32.4927 97.3185 32.7046L99.1883 35.8703ZM96.0846 31.3585C96.7954 31.3585 97.3311 30.9348 97.3311 30.2368C97.3311 29.5388 96.7954 29.1151 96.0846 29.1151H94.2279V31.3585H96.0846Z" fill="white"/><path d="M108.979 35.8703H107.197V30.0498L104.854 35.8703H104.081L101.738 30.0498V35.8703H99.9683V27.5571H102.448L104.467 32.5799L106.486 27.5571H108.979V35.8703Z" fill="white"/><path d="M71.8144 24.0427H40.4772C38.5542 24.0427 36.9953 25.6016 36.9953 27.5246V36.2294C36.9953 38.1524 38.5542 39.7113 40.4772 39.7113H71.8144C73.7374 39.7113 75.2963 38.1524 75.2963 36.2294V27.5246C75.2963 25.6016 73.7374 24.0427 71.8144 24.0427Z" fill="#013CA4"/><path d="M55.8655 36.5266H50.9229V27.42H55.7153C57.4489 27.42 58.3363 28.5259 58.3363 29.741C58.3363 30.8879 57.6265 31.6525 56.7664 31.83C57.7357 31.9802 58.5139 32.9222 58.5139 34.0691C58.5139 35.4344 57.599 36.5266 55.8655 36.5266ZM55.2918 31.0654C55.9473 31.0654 56.3569 30.6558 56.3569 30.0824C56.3569 29.509 55.9473 29.0857 55.2918 29.0857H52.8615V31.0654H55.2918ZM55.3602 34.8473C56.0975 34.8473 56.5345 34.4514 56.5345 33.796C56.5345 33.2226 56.1249 32.7311 55.3602 32.7311H52.8615V34.8473H55.3602Z" fill="white"/><path d="M61.3687 36.5266H59.4301V27.42H61.3687V36.5266Z" fill="white"/><path d="M22.307 21.1654H17.8949V6.75688L12.0945 21.1654H10.1816L4.38117 6.75688V21.1654H-3.05176e-05V0.586182H6.1398L11.138 13.0201L16.1363 0.586182H22.307V21.1654Z" fill="#FFFFFF"/><path d="M39.1674 21.1653H35.249V19.6227C34.2309 20.826 32.4722 21.5356 30.5284 21.5356C28.1527 21.5356 25.3451 19.9312 25.3451 16.5991C25.3451 13.1126 28.1527 11.7859 30.5284 11.7859C32.5031 11.7859 34.2617 12.4338 35.249 13.6063V11.6008C35.249 10.089 33.9532 9.1017 31.9786 9.1017C30.3742 9.1017 28.8932 9.68792 27.6282 10.8603L26.1473 8.23779C27.9676 6.63342 30.3125 5.89294 32.6573 5.89294C36.0512 5.89294 39.1674 7.2505 39.1674 11.5391V21.1653ZM32.102 18.8822C33.367 18.8822 34.6011 18.4503 35.249 17.5864V15.7352C34.6011 14.8713 33.367 14.4393 32.102 14.4393C30.5593 14.4393 29.2943 15.2415 29.2943 16.6916C29.2943 18.08 30.5593 18.8822 32.102 18.8822Z" fill="#FFFFFF"/><path d="M57.6169 21.1654H52.7108L48.7619 15.4267L46.9722 17.3396V21.1654H43.0539V0.586182H46.9722V12.8967L52.6186 6.26319H57.4314L51.5387 13.0201L57.6169 21.1654Z" fill="#FFFFFF"/><path d="M66.3882 21.5356C61.8526 21.5356 58.4282 18.4811 58.4282 13.6988C58.4282 9.37938 61.6058 5.89294 66.1415 5.89294C70.5844 5.89294 73.608 9.22509 73.608 14.0999V14.9638H62.5316C62.7784 16.8459 64.2904 18.4194 66.82 18.4194C68.0852 18.4194 69.8436 17.8641 70.8003 16.9384L72.5282 19.4684C71.047 20.826 68.7024 21.5356 66.3882 21.5356ZM69.8131 12.3105C69.7204 10.8912 68.7333 9.00912 66.1415 9.00912C63.7041 9.00912 62.6548 10.8295 62.4698 12.3105H69.8131Z" fill="#FFFFFF"/><path d="M87.6997 21.1654H76.5306V0.586182H87.3603C91.2787 0.586182 93.2843 3.08531 93.2843 5.83125C93.2843 8.42293 91.68 10.1507 89.7362 10.5518C91.9268 10.8912 93.6851 13.0201 93.6851 15.6118C93.6851 18.6971 91.6182 21.1654 87.6997 21.1654ZM86.404 8.82404C87.8847 8.82404 88.8105 7.89842 88.8105 6.60259C88.8105 5.30675 87.8847 4.3503 86.404 4.3503H80.9122V8.82404H86.404ZM86.5581 17.3704C88.2242 17.3704 89.2118 16.4757 89.2118 14.9947C89.2118 13.6989 88.286 12.5882 86.5581 12.5882H80.9122V17.3704H86.5581Z" fill="#FFFFFF"/><path d="M98.8406 4.65884C97.5753 4.65884 96.4955 3.60985 96.4955 2.314C96.4955 1.01816 97.5753 0 98.8406 0C100.136 0 101.185 1.01816 101.185 2.314C101.185 3.60985 100.136 4.65884 98.8406 4.65884ZM100.815 21.1654H96.8968V6.26322H100.815V21.1654Z" fill="#FFFFFF"/><path d="M116.209 21.1654H104.053V18.2343L110.779 9.68795H104.053V6.26318H116.085V9.10172L109.267 17.7407H116.209V21.1654Z" fill="#FFFFFF"/><path d="M98.8719 4.65884C97.6071 4.65884 96.5273 3.60985 96.5273 2.314C96.5273 1.01816 97.6071 0 98.8719 0C100.168 0 101.217 1.01816 101.217 2.314C101.217 3.60985 100.168 4.65884 98.8719 4.65884Z" fill="#C51929"/></g><defs><clipPath id="clip0_12_2101"><rect width="116.209" height="40.042" fill="white"/></clipPath></defs></svg><p>MakeBiz, IT-компания полного цикла: внедряем искусственный интеллект, CRM и аналитику, систематизируем процессы и выстраиваем управляемую цифровую среду для бизнеса.</p>
         <div class="foot-actions"><a href="/contacts" class="btn btn-primary btn-sm">Обсудить проект</a><a href="/partners" class="btn btn-ghost btn-sm">Стать партнёром</a></div></div>
       <div class="foot-col"><h4>Компания</h4><ul><li><a href="/company">О компании</a></li><li><a href="/partners">Партнёрам</a></li><li><a href="/">Продукты</a></li><li><a href="/contacts">Контакты</a></li></ul></div>
-      <div class="foot-col"><h4>Продукты</h4><ul><li><a href="/openclaw">OpenClaw</a></li><li><a href="/vector">Vector</a></li><li><a href="/intdoc">IntDoc</a></li><li><a href="/bitrix">Битрикс24</a></li><li><a href="/servers">Серверы</a></li></ul></div>
+      <div class="foot-col"><h4>Продукты</h4><ul><li><a href="/openclaw">AI-агенты</a></li><li><a href="/vector">Vector</a></li><li><a href="/intdoc">IntDoc</a></li><li><a href="/bitrix">Bitrix</a></li><li><a href="/servers">VPS</a></li></ul></div>
       <div class="foot-col"><h4>Контакты</h4><ul><li><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram @Anton_MakeBiz</a></li><li><a href="tel:+971502620927">+971 50 262 0927</a></li></ul></div>
     </div><div class="foot-bottom"><span>© <span id="yr"></span> MakeBiz. Все права защищены.</span>
       <div class="ft-links"><a href="/company">О компании</a><a href="/">Продукты</a><a href="/contacts">Контакты</a><a href="/privacy">Политика конфиденциальности</a></div></div></div></footer>
@@ -1095,4 +1108,4 @@ footer.site{background:var(--text);color:#fff;padding:clamp(48px,6vw,72px) 0 30p
   }
 })();
 </script>
-</body></html>
+<script>(function(){try{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;}catch(e){}var sel=".mnum,.an,.hk-v,.pct,.cmv,.eff-big,[data-count]";function anim(el){if(el.dataset.counted)return;el.dataset.counted="1";var raw=(el.textContent||"").trim();var m=raw.match(/^(\D*)(\d+(?:[.,]\d+)?)(.*)$/);if(!m)return;var pre=m[1],numStr=m[2],suf=m[3];if(suf.indexOf("/")>=0)return;var dec=(numStr.split(/[.,]/)[1]||"").length;var target=parseFloat(numStr.replace(",","."));var dur=1300,s=null;function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=pre+(target*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step);else el.textContent=pre+numStr+suf;}el.textContent=pre+(0).toFixed(dec)+suf;requestAnimationFrame(step);}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}})},{threshold:.4});document.querySelectorAll(sel).forEach(function(el){io.observe(el);});})();</script></body></html>
