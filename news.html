@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Новости MakeBiz · ИИ, агенты, CRM, автоматизация бизнеса</title>
+<meta name="description" content="Новости про ИИ-агентов, искусственный интеллект, CRM и продажи, автоматизацию и IT. Коротко и по делу, каждый день.">
+<link rel="canonical" href="https://makebiztehnologies.com/news">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Новости MakeBiz · ИИ, агенты, CRM, автоматизация">
+<meta property="og:description" content="Про ИИ-агентов, искусственный интеллект, CRM и автоматизацию бизнеса. Ленту ведут наши агенты">
+<meta property="og:url" content="https://makebiztehnologies.com/news">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Новости MakeBiz" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--txt:#EAF1FF;--mut:#93A4B8;--grn:#16C15A;--grnL:#4FE07F;--grnD:#052012;--red:#C8102E;--redL:#FF3B57;--line:rgba(255,255,255,.10);--glass:rgba(255,255,255,.05);
+--r-agents:#16C15A;--r-ai:#7A6CF7;--r-crm:#4C8DFF;--r-auto:#00C2C7;--r-it:#E0A100;--r-biz:#FF6B8A}
+*{box-sizing:border-box;margin:0}
+body{font-family:Oxygen,system-ui,sans-serif;background:transparent;color:var(--txt);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#07090D,#0A0E12 48%,#07090D)}
+.pagebg b{position:absolute;border-radius:50%;filter:blur(120px)}
+.pagebg .p1{width:680px;height:680px;background:radial-gradient(circle,rgba(200,16,46,.26),transparent 70%);top:-8%;left:-10%;animation:mbA 32s ease-in-out infinite alternate}
+.pagebg .p2{width:620px;height:620px;background:radial-gradient(circle,rgba(22,193,90,.28),transparent 70%);top:36%;right:-12%;animation:mbB 36s ease-in-out infinite alternate}
+.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(12,140,63,.36),transparent 70%);top:74%;left:14%;animation:mbA 40s ease-in-out infinite alternate}
+@keyframes mbA{to{transform:translate(60px,-40px) scale(1.14)}}@keyframes mbB{to{transform:translate(-50px,50px) scale(1.1)}}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px);position:relative;z-index:1}
+header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:8px;font:700 19px Oxygen}.logo b{color:var(--redL)}
+.logo .tag{display:flex;gap:3px}.logo .tag span{font:700 8px Oxygen;color:#fff;background:var(--red);padding:2px 4px;border-radius:4px}.logo .tag span.b{background:var(--grn)}
+nav.links{display:flex;gap:1px;margin-left:8px}
+nav.links a{font:400 13px Oxygen;color:var(--mut);padding:7px 9px;border-radius:8px;transition:color .15s}
+nav.links a:hover{color:#fff}nav.links a.active{color:var(--grnL);font-weight:700}
+.navcta{margin-left:auto;display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 14px Oxygen;padding:12px 22px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:transform .18s}
+.btn.p{background:linear-gradient(135deg,var(--grnL),var(--grn));color:var(--grnD);box-shadow:0 12px 26px -8px rgba(22,193,90,.45)}.btn.p:hover{transform:translateY(-2px)}
+.btn.s{background:var(--glass);color:var(--txt);border-color:var(--line)}.btn.s:hover{border-color:rgba(22,193,90,.5)}
+@media(max-width:1150px){nav.links{display:none}}
+.head{padding:clamp(34px,4.5vw,58px) 0 26px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#8FE7AE;background:var(--glass);border:1px solid var(--line);padding:7px 15px;border-radius:100px}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--grn);box-shadow:0 0 8px var(--grn);animation:blink 2.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font:700 clamp(2rem,4.2vw,3.1rem)/1.06 Oxygen;letter-spacing:-.035em;margin:18px 0 12px}
+.g{color:var(--grn)}
+.sub{color:var(--mut);font:300 clamp(15px,1.6vw,17px)/1.6 Oxygen;max-width:64ch}
+.byagents{display:flex;align-items:center;gap:14px;margin-top:22px;background:linear-gradient(120deg,rgba(22,193,90,.10),rgba(255,255,255,.02));border:1px solid rgba(22,193,90,.3);border-radius:16px;padding:14px 18px;flex-wrap:wrap}
+.byagents b{font:700 13.5px Oxygen;color:#fff}
+.byagents p{font:300 13px Oxygen;color:var(--mut)}
+.flow{display:flex;align-items:center;gap:7px;margin-left:auto;flex-wrap:wrap}
+.flow span{font:700 11px Oxygen;color:var(--grnD);background:linear-gradient(135deg,var(--grnL),var(--grn));padding:5px 10px;border-radius:100px}
+.flow i{color:var(--mut);font-style:normal;font-size:11px}
+/* фильтры */
+.filters{position:sticky;top:60px;z-index:60;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:14px 0}
+.frow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{font:700 12.5px Oxygen;color:var(--mut);background:var(--glass);border:1px solid var(--line);padding:8px 14px;border-radius:100px;cursor:pointer;transition:all .16s;display:inline-flex;align-items:center;gap:7px}
+.chip:hover{color:#fff;border-color:rgba(255,255,255,.25)}
+.chip i{width:7px;height:7px;border-radius:50%;font-style:normal;flex:none}
+.chip.on{color:#fff;border-color:transparent;background:rgba(255,255,255,.14)}
+.chip.on[data-r="all"]{background:linear-gradient(135deg,var(--grnL),var(--grn));color:var(--grnD)}
+.chip.on[data-r="agents"]{background:var(--r-agents);color:var(--grnD)}
+.chip.on[data-r="ai"]{background:var(--r-ai);color:#0A0820}
+.chip.on[data-r="crm"]{background:var(--r-crm);color:#04122E}
+.chip.on[data-r="auto"]{background:var(--r-auto);color:#00201F}
+.chip.on[data-r="it"]{background:var(--r-it);color:#1E1400}
+.chip.on[data-r="biz"]{background:var(--r-biz);color:#2A0710}
+.sep{width:1px;height:22px;background:var(--line);margin:0 4px}
+.srch{margin-left:auto;position:relative}
+.srch input{width:210px;font:400 13px Oxygen;color:var(--txt);background:var(--glass);border:1px solid var(--line);border-radius:100px;padding:9px 14px 9px 34px;outline:none;transition:border-color .16s,width .2s}
+.srch input:focus{border-color:rgba(22,193,90,.5);width:250px}
+.srch input::placeholder{color:#5E7183}
+.srch svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:.5}
+.frow2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:9px}
+.frow2 .lbl{font:700 10.5px Oxygen;letter-spacing:.12em;text-transform:uppercase;color:#5E7183;margin-right:2px}
+.chip.sm{font-size:11.5px;padding:6px 12px}
+select.per{font:700 11.5px Oxygen;color:var(--mut);background:var(--glass);border:1px solid var(--line);border-radius:100px;padding:6px 12px;outline:none;cursor:pointer}
+select.per option{background:#0E141C;color:var(--txt)}
+@media(max-width:860px){.srch{margin-left:0;width:100%}.srch input,.srch input:focus{width:100%}}
+.found{font:300 12.5px Oxygen;color:#5E7183;margin:18px 0 12px}
+.found b{color:var(--grnL);font-weight:700}
+.lead{display:grid;grid-template-columns:1.15fr .85fr;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--glass);margin-bottom:22px;transition:border-color .2s}
+.lead:hover{border-color:rgba(22,193,90,.45)}
+.lead .tile{min-height:280px;position:relative;display:grid;place-items:center}
+.lead .body{padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;justify-content:center}
+.lead h2{font:700 clamp(20px,2.4vw,28px)/1.2 Oxygen;letter-spacing:-.02em;margin:12px 0 10px}
+.lead p{font:300 14.5px/1.6 Oxygen;color:var(--mut)}
+@media(max-width:820px){.lead{grid-template-columns:1fr}.lead .tile{min-height:180px}}
+.tile{background:linear-gradient(150deg,rgba(255,255,255,.05),rgba(255,255,255,.01))}
+.tile .mark{font:700 clamp(15px,2vw,22px) Oxygen;letter-spacing:-.01em;opacity:.92;text-align:center;padding:0 14px}
+.tile .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:26px 26px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:980px){.grid3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid3{grid-template-columns:1fr}}
+.card{display:flex;flex-direction:column;background:var(--glass);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform .18s,border-color .18s}
+.card:hover{transform:translateY(-4px);border-color:rgba(22,193,90,.4)}
+.card .tile{height:120px;position:relative;display:grid;place-items:center}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.card h3{font:700 15.5px/1.35 Oxygen;margin:9px 0 7px}
+.card p{font:300 13px/1.5 Oxygen;color:var(--mut);flex:1}
+.meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tagr{font:700 10.5px Oxygen;padding:4px 9px;border-radius:100px}
+.when{font:300 11.5px Oxygen;color:#5E7183;margin-left:auto}
+.rt{font:300 11.5px Oxygen;color:#5E7183;margin-top:12px}
+.more{text-align:center;margin:32px 0 10px}
+.arch{margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
+.arch .lbl{font:700 10.5px Oxygen;letter-spacing:.12em;text-transform:uppercase;color:#5E7183;margin-bottom:12px}
+.arch .ms{display:flex;gap:8px;flex-wrap:wrap}
+.arch a{font:400 12.5px Oxygen;color:var(--mut);background:var(--glass);border:1px solid var(--line);padding:8px 13px;border-radius:10px;transition:all .16s}
+.arch a:hover{color:#fff;border-color:rgba(22,193,90,.4)}
+/* подписка и соцсети */
+.subs{margin:38px 0 10px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:linear-gradient(120deg,rgba(22,193,90,.09),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.subs b{font:700 15px Oxygen}.subs p{font:300 13px Oxygen;color:var(--mut)}
+.soc{margin-left:auto;display:flex;gap:9px;flex-wrap:wrap}
+.si{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--glass);border:1px solid var(--line);transition:all .16s}
+.si:hover{border-color:rgba(22,193,90,.5);transform:translateY(-2px)}
+.si svg{opacity:.85}
+.empty{display:none;text-align:center;padding:60px 20px}
+.empty b{font:700 16px Oxygen;display:block;margin-bottom:6px}
+.empty p{font:300 13.5px Oxygen;color:var(--mut)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
+.fgrid{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}
+.fcol .k{font:700 10.5px Oxygen;letter-spacing:.12em;text-transform:uppercase;color:#5E7183;margin-bottom:10px}
+.fcol a{display:block;font:300 13.5px Oxygen;color:var(--mut);padding:3px 0;transition:color .15s}
+.fcol a:hover{color:#fff}
+.fsoc{display:flex;gap:8px;margin-top:4px}
+.fbot{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:300 13px Oxygen;color:#5E7183}
+</style></head>
+<body>
+<div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="index.html">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></a>
+  <nav class="links">
+    <a href="index.html">Главная</a><a href="ai-agents.html">AI-Agents</a>
+    <a href="vector.html">Vector</a><a href="intdoc.html">IntDoc</a><a href="bitrix.html">Битрикс24</a>
+    <a href="servers.html">VPS</a><a href="news.html" class="active">Новости</a>
+    <a href="партнёрам.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+  </nav>
+  <div class="navcta"><a class="btn p" style="padding:10px 18px" href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Обсудить задачу</a></div>
+</div></header>
+
+<section class="head"><div class="wrap">
+  <span class="eyebrow"><i></i>Лента обновляется каждый день</span>
+  <h1>Про ИИ, агентов <span class="g">и бизнес без рутины</span></h1>
+  <p class="sub">Что происходит с искусственным интеллектом, как его применяют в продажах, CRM и документах. Коротко, по делу, без воды</p>
+  <div class="byagents">
+    <div><b>Эту ленту ведут наши агенты</b><p>Не редакция, а та же система, которую мы внедряем клиентам</p></div>
+    <div class="flow"><span>Радар</span><i>собрал</i><span>Аналитик</span><i>отобрал</i><span>Рупор</span><i>написал</i></div>
+  </div>
+</div></section>
+
+<div class="filters"><div class="wrap">
+  <div class="frow">
+    <button class="chip on" data-r="all">Все темы</button>
+    <button class="chip" data-r="agents"><i style="background:var(--r-agents)"></i>AI-агенты</button>
+    <button class="chip" data-r="ai"><i style="background:var(--r-ai)"></i>Искусственный интеллект</button>
+    <button class="chip" data-r="crm"><i style="background:var(--r-crm)"></i>CRM и продажи</button>
+    <button class="chip" data-r="auto"><i style="background:var(--r-auto)"></i>Автоматизация</button>
+    <button class="chip" data-r="it"><i style="background:var(--r-it)"></i>IT и серверы</button>
+    <button class="chip" data-r="biz"><i style="background:var(--r-biz)"></i>Бизнес</button>
+    <div class="srch">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#93A4B8" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Поиск по новостям" autocomplete="off">
+    </div>
+  </div>
+  <div class="frow2">
+    <span class="lbl">Период</span>
+    <button class="chip sm on" data-per="all">Всё время</button>
+    <button class="chip sm" data-per="7">За неделю</button>
+    <button class="chip sm" data-per="30">За месяц</button>
+    <select class="per" id="month"><option value="">Все месяцы</option><option value="2026-07">Июль 2026</option><option value="2026-06">Июнь 2026</option></select>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <div class="found" id="found"></div>
+
+  <a class="lead" id="lead" href="#" data-r="agents" data-date="2026-07-16">
+    <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.22),rgba(22,193,90,.04))">
+      <div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI-агенты</span>
+    </div>
+    <div class="body">
+      <div class="meta"><span class="tagr" style="color:var(--grnD);background:var(--r-agents)">AI-агенты</span><span class="when">16 июля</span></div>
+      <h2>Что такое ИИ-агент и чем он отличается от чат-бота</h2>
+      <p>Чат отвечает на вопрос и забывает. Агент имеет роль, память и доступ к системам: сам запускает процесс, ведёт его до результата и отчитывается. Разбираем на примере отдела продаж, где восемь ролей передают работу по цепочке</p>
+      <div class="rt">Читать 3 минуты</div>
+    </div>
+  </a>
+
+  <div class="grid3" id="feed">
+
+    <a class="card" href="#" data-r="agents" data-date="2026-07-15">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.2),rgba(22,193,90,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI-агенты</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:var(--grnD);background:var(--r-agents)">AI-агенты</span><span class="when">15 июля</span></div>
+        <h3>Почему ИИ забывает всё, и как это чинится памятью</h3>
+        <p>Обычный ассистент помнит только окно разговора. Если вынести память в базу и возвращать факты в контекст, договорённость месячной давности остаётся с агентом</p>
+        <div class="rt">2 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="crm" data-date="2026-07-14">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(76,141,255,.2),rgba(76,141,255,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-crm)">CRM и продажи</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#04122E;background:var(--r-crm)">CRM и продажи</span><span class="when">14 июля</span></div>
+        <h3>Где отдел продаж теряет клиента внутри звонка</h3>
+        <p>Проблема не в количестве звонков, а в том, что бизнес не слышит, на каком этапе ломается разговор. Что даёт разбор всех звонков по этапам скрипта</p>
+        <div class="rt">3 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="auto" data-date="2026-07-13">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(0,194,199,.2),rgba(0,194,199,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-auto)">Автоматизация</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#00201F;background:var(--r-auto)">Автоматизация</span><span class="when">13 июля</span></div>
+        <h3>Встречи проходят, а решения теряются: что с этим делать</h3>
+        <p>Расшифровка часовой встречи, разбор, выводы и задачи. Как сделать так, чтобы договорённости попадали в систему сами, а не в чью-то память</p>
+        <div class="rt">2 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="ai" data-date="2026-07-12">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(122,108,247,.2),rgba(122,108,247,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-ai)">Искусственный интеллект</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#0A0820;background:var(--r-ai)">Искусственный интеллект</span><span class="when">12 июля</span></div>
+        <h3>Почему ИИ выдумывает, и как закрыть это архитектурно</h3>
+        <p>Галлюцинации, главный риск ИИ в продажах и документах. Разбираем подход: факты только из проверенной базы, документы собирает генератор, а не модель</p>
+        <div class="rt">4 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="auto" data-date="2026-07-11">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(0,194,199,.2),rgba(0,194,199,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-auto)">Автоматизация</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#00201F;background:var(--r-auto)">Автоматизация</span><span class="when">11 июля</span></div>
+        <h3>Сравнение поставщиков: как перестать сводить прайсы руками</h3>
+        <p>КП приходят в PDF, сканах и письмах, а сравнивать приходится в Excel. Что даёт извлечение цены, срока и наличия из любых документов</p>
+        <div class="rt">2 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="crm" data-date="2026-07-10">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(76,141,255,.2),rgba(76,141,255,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-crm)">CRM и продажи</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#04122E;background:var(--r-crm)">CRM и продажи</span><span class="when">10 июля</span></div>
+        <h3>Почему данные в CRM разъезжаются, и как это лечится</h3>
+        <p>Классическая беда: каждый пишет по-своему. Решение простое, но неочевидное, единая точка записи, через которую идут все изменения</p>
+        <div class="rt">3 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="it" data-date="2026-07-09">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(224,161,0,.18),rgba(224,161,0,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-it)">IT и серверы</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#1E1400;background:var(--r-it)">IT и серверы</span><span class="when">9 июля</span></div>
+        <h3>Сервисы падают ночью: как система чинит себя сама</h3>
+        <p>Сторож проверяет сервисы каждые пару минут, поднимает упавшее и пишет владельцу, если что-то не встало. Плюс откат к любой точке</p>
+        <div class="rt">2 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="biz" data-date="2026-07-08">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(255,107,138,.18),rgba(255,107,138,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-biz)">Бизнес</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#2A0710;background:var(--r-biz)">Бизнес</span><span class="when">8 июля</span></div>
+        <h3>Данные компании и ИИ: что остаётся у вас, а что уходит</h3>
+        <p>Главный вопрос бизнеса перед внедрением. Разбираем, что значит self-hosted, и почему это меняет разговор о безопасности</p>
+        <div class="rt">3 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="agents" data-date="2026-07-07">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.2),rgba(22,193,90,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI-агенты</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:var(--grnD);background:var(--r-agents)">AI-агенты</span><span class="when">7 июля</span></div>
+        <h3>Один вход, десятки специалистов: как работает оркестратор</h3>
+        <p>Человек пишет как обычно, а внутри Дирижёр понимает запрос и поднимает нужные роли. Почему это удобнее, чем десять разных ботов</p>
+        <div class="rt">2 минуты</div></div>
+    </a>
+
+    <a class="card" href="#" data-r="biz" data-date="2026-06-30">
+      <div class="tile" style="background:linear-gradient(150deg,rgba(255,107,138,.18),rgba(255,107,138,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-biz)">Бизнес</span></div>
+      <div class="body"><div class="meta"><span class="tagr" style="color:#2A0710;background:var(--r-biz)">Бизнес</span><span class="when">30 июня</span></div>
+        <h3>С чего начинать внедрение ИИ, чтобы не выкинуть деньги</h3>
+        <p>Не «поставим ИИ», а разбор процесса и подбор ролей под конкретную боль. Почему диагностика важнее технологии</p>
+        <div class="rt">3 минуты</div></div>
+    </a>
+
+  </div>
+
+  <div class="empty" id="empty"><b>Ничего не нашлось</b><p>Попробуйте снять фильтры или изменить запрос</p></div>
+
+  <div class="more"><button class="btn s" id="loadmore">Показать ещё</button></div>
+
+  <div class="arch">
+    <div class="lbl">Архив по месяцам</div>
+    <div class="ms"><a href="#">Июль 2026</a><a href="#">Июнь 2026</a><a href="#">Май 2026</a><a href="#">Апрель 2026</a></div>
+  </div>
+
+  <div class="subs">
+    <div><b>Не пропускайте новое</b><p>Лента выходит каждый день, дублируем в Telegram и в RSS</p></div>
+    <div class="soc">
+      <a class="si" href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="#4FE07F"><path d="M22 3 2 11l6 2 2 6 3-4 5 4 4-16z"/></svg></a>
+      <!-- ССЫЛКА НУЖНА -->
+      <a class="si" href="#" title="X (Twitter)" aria-label="X" data-need="link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#EAF1FF"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-7-6.2 7H1.4l8.1-9.3L1 2h7.1l4.9 6.4L18.9 2zm-2.4 18h1.9L7.6 4H5.6l10.9 16z"/></svg></a>
+      <!-- ССЫЛКА НУЖНА -->
+      <a class="si" href="#" title="LinkedIn" aria-label="LinkedIn" data-need="link">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="#EAF1FF"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.9-.03-4.3-2.6-4.3-2.6 0-3 2.04-3 4.15V24H8V8z"/></svg></a>
+      <a class="si" href="/rss.xml" title="RSS" aria-label="RSS">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#E0A100"><circle cx="5" cy="19" r="2.5"/><path d="M2 10.5v3.6c4.1 0 7.4 3.3 7.4 7.4H13C13 15.5 8.1 10.5 2 10.5zM2 3v3.6c8.2 0 14.8 6.6 14.8 14.8h3.6C20.4 11.3 12.1 3 2 3z"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol"><div class="k">Продукты</div>
+      <a href="ai-agents.html">AI-Agents</a><a href="vector.html">Vector</a><a href="intdoc.html">IntDoc</a><a href="bitrix.html">Битрикс24</a><a href="servers.html">VPS</a></div>
+    <div class="fcol"><div class="k">Компания</div>
+      <a href="news.html">Новости</a><a href="партнёрам.html">Партнёрам</a><a href="contacts.html">Контакты</a></div>
+    <div class="fcol"><div class="k">Темы</div>
+      <a href="news.html?r=agents">AI-агенты</a><a href="news.html?r=ai">Искусственный интеллект</a><a href="news.html?r=crm">CRM и продажи</a><a href="news.html?r=auto">Автоматизация</a></div>
+    <div class="fcol"><div class="k">Мы в сети</div>
+      <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram</a>
+      <a href="#" data-need="link">X (Twitter)</a>
+      <a href="#" data-need="link">LinkedIn</a>
+      <a href="/rss.xml">RSS</a></div>
+    <div class="fcol"><div class="k">Контакты</div>
+      <a href="tel:+971502620927">+971 50 262 0927</a><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">@Anton_MakeBiz</a><a>Дубай, ОАЭ</a></div>
+  </div>
+  <div class="fbot"><div>© 2026 MakeBiz. Все права защищены</div><div>Ленту ведут агенты MakeBiz</div></div>
+</div></footer>
+
+<script>
+(function(){
+var R='all', PER='all', MONTH='', Q='';
+var items=[].slice.call(document.querySelectorAll('#feed .card'));
+var lead=document.getElementById('lead');
+var found=document.getElementById('found'), empty=document.getElementById('empty');
+var TODAY=new Date('2026-07-16T00:00:00');
+function daysAgo(d){return Math.floor((TODAY-new Date(d+'T00:00:00'))/86400000)}
+function match(el){
+  var r=el.dataset.r,d=el.dataset.date;
+  if(R!=='all'&&r!==R)return false;
+  if(MONTH&&d.slice(0,7)!==MONTH)return false;
+  if(PER!=='all'&&daysAgo(d)>+PER)return false;
+  if(Q&&el.textContent.toLowerCase().indexOf(Q)<0)return false;
+  return true}
+function apply(){
+  var n=0;
+  items.forEach(function(el){var ok=match(el);el.style.display=ok?'':'none';if(ok)n++});
+  var lok=match(lead);lead.style.display=lok?'':'none';if(lok)n++;
+  found.innerHTML=n?('Показано <b>'+n+'</b> из '+(items.length+1)):'';
+  empty.style.display=n?'none':'block';
+  var q=[];if(R!=='all')q.push('r='+R);if(MONTH)q.push('month='+MONTH);
+  history.replaceState(null,'',q.length?('?'+q.join('&')):location.pathname)}
+function group(sel,attr,cb){
+  var btns=[].slice.call(document.querySelectorAll(sel));
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cb(b.dataset[attr]);apply()})})}
+group('.chip[data-r]','r',function(v){R=v});
+group('.chip[data-per]','per',function(v){PER=v});
+document.getElementById('month').addEventListener('change',function(){MONTH=this.value;apply()});
+var qi=document.getElementById('q'),tm;
+qi.addEventListener('input',function(){clearTimeout(tm);var v=this.value.trim().toLowerCase();tm=setTimeout(function(){Q=v;apply()},160)});
+var sp=new URLSearchParams(location.search);
+if(sp.get('r')){R=sp.get('r');var b=document.querySelector('.chip[data-r="'+R+'"]');
+  if(b){document.querySelectorAll('.chip[data-r]').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}}
+if(sp.get('month')){MONTH=sp.get('month');document.getElementById('month').value=MONTH}
+apply();
+document.getElementById('loadmore').addEventListener('click',function(){
+  this.textContent='Это пока всё, лента наполняется';this.disabled=true;this.style.opacity=.6});
+})();
+</script>
+<script>window.__MBM_ACTIVE="news";</script>
+<script>
+/* MakeBiz — единое верхнее меню (шапка). Классы mbm-* изолированы.
+   Логотип взят 1:1 из дизайна Антона (Make + Biz красный + бейджи AI/BI/CRM).
+   Конфиг до подключения:
+   window.__MBM_ACTIVE — ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
+(function(){
+  if (window.__mbmDone) return; window.__mbmDone = true;
+
+  var ACTIVE = window.__MBM_ACTIVE || '';
+  var NAV = [
+    ['index.html','Главная','index'],
+    ['bitrix.html','Битрикс24','bitrix'],
+    ['ai-agents.html','AI-агенты','ai-agents'],
+    ['vector.html','AI-продажи','vector'],
+    ['intdoc.html','AI-закупки','intdoc'],
+    ['vps.html','Сервера','vps'],
+    ['news.html','Новости','news'],
+    ['partners.html','Партнёрам','partners'],
+    ['contacts.html','Контакты','contacts']
+  ];
+  function navLinks(){
+    return NAV.map(function(x){ return '<a href="'+x[0]+'"'+(x[2]===ACTIVE?' class="mbm-active"':'')+'>'+x[1]+'</a>'; }).join('');
+  }
+
+  var CSS = [
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header *{box-sizing:border-box}",
+"#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
+"#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
+"#mbm-header .mbm-biz{color:#C8102E}",
+"#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
+"#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
+"#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
+"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
+"#mbm-header .mbm-drop.mbm-open{display:block}",
+"#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
+"@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
+"@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
+  ].join("\n");
+
+  var HTML =
+'<header id="mbm-header">'+
+  '<div class="mbm-in">'+
+    '<a href="index.html" class="mbm-logo">MakeBiz'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
+    '</a>'+
+    '<nav class="mbm-nav">'+navLinks()+'</nav>'+
+    '<div class="mbm-right">'+
+      '<a href="#contact" class="mbm-cta">Обсудить проект</a>'+
+      '<button class="mbm-burger" id="mbm-burger" aria-label="Меню">☰</button>'+
+    '</div>'+
+  '</div>'+
+  '<div class="mbm-drop" id="mbm-drop"><nav>'+navLinks()+'</nav></div>'+
+'</header>';
+
+  // делегирование (бургер) — переживает повторный рендер бандла
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbm-burger'){ var d=document.getElementById('mbm-drop'); if(d) d.classList.toggle('mbm-open'); return; }
+    if(t.closest && t.closest('#mbm-drop a')){ var d2=document.getElementById('mbm-drop'); if(d2) d2.classList.remove('mbm-open'); }
+  });
+
+  function ensureStyle(){ if(!document.getElementById('mbm-style')){ var st=document.createElement('style'); st.id='mbm-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function findOld(){
+    // 1) явный селектор
+    if (window.__MBM_OLD){ var o=document.querySelector(window.__MBM_OLD); if(o) return o; }
+    // 2) старое глобальное меню помечено [data-mbnav] — убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
+    var mn=document.querySelector('[data-mbnav]');
+    if (mn){ var el=mn; while(el.parentElement && el.parentElement!==document.body) el=el.parentElement; return el; }
+    // 3) иначе — обычный <header>
+    return document.querySelector('header:not(#mbm-header)');
+  }
+  function build(){
+    if (document.getElementById('mbm-header')) return true;
+    var old=findOld();
+    if (!old || !old.parentNode) return false;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML; var node=wrap.firstElementChild;
+    old.parentNode.insertBefore(node, old); old.remove();
+    return true;
+  }
+  var tries=0;
+  function attempt(){
+    if (findOld()){ if(build()) return; }
+    if (tries++ > 40){
+      if (!document.getElementById('mbm-header') && document.body){ ensureStyle(); var w=document.createElement('div'); w.innerHTML=HTML; document.body.insertBefore(w.firstElementChild, document.body.firstChild); }
+      return;
+    }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>window.__MBCF_REMOVE=false;window.__MBCF_TARGET=null;</script>
+<script>
+/* MakeBiz — универсальный блок «Обсудить проект» (форма + чат).
+   Классы mbcf-* изолированы. Обработчики делегированы на document,
+   поэтому переживают повторный рендер/клонирование блока бандлом.
+   Конфиг задаётся до подключения:
+   window.__MBCF_REMOVE  — убрать старую контакт-форму перед футером (true/false)
+   window.__MBCF_TARGET  — селектор контейнера, если на странице нет <footer> (иначе null) */
+(function(){
+  if (window.__mbcfDone) return; window.__mbcfDone = true;
+
+  var CSS = [
+"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact *{box-sizing:border-box}",
+"#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
+"#mbcf-contact .mbcf-hide{display:none!important}",
+"#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
+"#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
+"#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
+"#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
+"#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
+"#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
+"#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
+"#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
+"#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
+"#mbcf-contact .mbcf-field{margin-bottom:12px}",
+"#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
+"#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
+"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
+"#mbcf-contact .mbcf-tg{position:relative}",
+"#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
+"#mbcf-contact .mbcf-tgi{padding-left:30px}",
+"#mbcf-contact .mbcf-lbl{font:700 12px Oxygen;color:var(--tx);margin:6px 0 8px}",
+"#mbcf-contact .mbcf-seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}",
+"#mbcf-contact .mbcf-seg button{font:700 13px Oxygen;color:var(--mu);background:var(--gl);border:1px solid var(--ln);padding:9px 16px;border-radius:100px;cursor:pointer;transition:.15s}",
+"#mbcf-contact .mbcf-seg button.mbcf-on{color:#fff;background:var(--r);border-color:var(--r)}",
+"#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
+"#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
+"#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
+"#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
+"#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
+"#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
+"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
+"#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
+"#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
+"#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
+"#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
+"#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
+"@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
+  ].join("\n");
+
+  var HTML =
+'<section class="mbcf-sec" id="mbcf-contact"><a id="contact" class="mbcf-anchor"></a>'+
+  '<div class="mbcf-eyebrow"><span>Обсудить проект</span></div>'+
+  '<div class="mbcf-cgrid">'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Первый шаг к повышению <span>эффективности</span></h3></div>'+
+      '<form class="mbcf-card" id="mbcf-lead" novalidate>'+
+        '<div id="mbcf-fields">'+
+          '<div class="mbcf-row2">'+
+            '<input id="mbcf-name" class="mbcf-inp" placeholder="Имя*" autocomplete="name">'+
+            '<input id="mbcf-company" class="mbcf-inp" placeholder="Компания" autocomplete="organization">'+
+          '</div>'+
+          '<div class="mbcf-field"><div class="mbcf-phone">'+
+            '<select id="mbcf-cc" class="mbcf-inp mbcf-cc" aria-label="Код страны">'+
+              '<option value="+971" selected>🇦🇪 +971</option>'+
+              '<option value="+7">🇷🇺 +7</option>'+
+              '<option value="other">🌍 Другой</option>'+
+            '</select>'+
+            '<input id="mbcf-phone" class="mbcf-inp" placeholder="Номер телефона*" inputmode="tel" autocomplete="tel">'+
+          '</div></div>'+
+          '<div class="mbcf-field"><div class="mbcf-tg">'+
+            '<span class="mbcf-at">@</span>'+
+            '<input id="mbcf-tg" class="mbcf-inp mbcf-tgi" placeholder="ник в Telegram*">'+
+          '</div></div>'+
+          '<div class="mbcf-lbl">Как с вами связаться</div>'+
+          '<div class="mbcf-seg" id="mbcf-seg">'+
+            '<button type="button" data-m="tg" class="mbcf-on">Telegram</button>'+
+            '<button type="button" data-m="wa">WhatsApp</button>'+
+          '</div>'+
+          '<textarea id="mbcf-task" class="mbcf-inp mbcf-ta" placeholder="Что хотите автоматизировать?"></textarea>'+
+          '<input id="mbcf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">'+
+          '<button type="submit" class="mbcf-submit">Отправить заявку</button>'+
+          '<div class="mbcf-consent">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</div>'+
+        '</div>'+
+        '<div class="mbcf-success mbcf-hide" id="mbcf-success">'+
+          '<div class="mbcf-okico">✓</div>'+
+          '<div class="mbcf-oktitle">Заявка принята</div>'+
+          '<div class="mbcf-oktext" id="mbcf-oktext">Спасибо! Свяжемся с вами удобным способом.</div>'+
+          '<button type="button" class="mbcf-again" id="mbcf-again">Отправить ещё одну</button>'+
+        '</div>'+
+      '</form>'+
+    '</div>'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Задайте вопрос <span>нашему агенту</span></h3><p class="mbcf-csub">Пообщайтесь с нашим агентом прямо в чате.</p></div>'+
+      '<div class="mbcf-chat">'+
+        '<div class="mbcf-chead"><div class="mbcf-avatar">AI</div><div><div class="mbcf-aname">AI-агент MakeBiz</div><div class="mbcf-astat"><i></i>онлайн, отвечает сразу</div></div></div>'+
+        '<div class="mbcf-msgs" id="mbcf-msgs"><div class="mbcf-bubble mbcf-bot">Здравствуйте! Я AI-агент MakeBiz. Какой процесс вы хотите автоматизировать? Я подскажу решение.</div></div>'+
+        '<div class="mbcf-cinput"><input id="mbcf-cin" class="mbcf-inp" placeholder="Напишите сообщение..."><button id="mbcf-csend" class="mbcf-sendbtn" aria-label="Отправить">➤</button></div>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+'</section>';
+
+  var method='tg';
+  function $(id){ return document.getElementById(id); }
+  function setErr(id,on){ var el=$(id); if(el) el.classList.toggle('mbcf-err',on); }
+
+  function setMethod(m){
+    method=m;
+    var seg=$('mbcf-seg'); if(seg) Array.prototype.forEach.call(seg.children,function(x){ x.classList.toggle('mbcf-on', x.getAttribute('data-m')===m); });
+    var tg=$('mbcf-tg'); if(tg) tg.placeholder = (m==='tg') ? 'ник в Telegram*' : 'ник в Telegram';
+  }
+  function submitForm(){
+    var name=$('mbcf-name'), phone=$('mbcf-phone'), tg=$('mbcf-tg'), cc=$('mbcf-cc'),
+        company=$('mbcf-company'), task=$('mbcf-task'), gotcha=$('mbcf-gotcha');
+    if(!name||!phone||!cc) return;
+    var okN=!!name.value.trim(), okP=!!phone.value.trim(), okT = method!=='tg' || (tg && !!tg.value.trim());
+    setErr('mbcf-name',!okN); setErr('mbcf-phone',!okP); setErr('mbcf-tg',!okT);
+    if(!(okN&&okP&&okT)) return;
+    var via = method==='tg' ? 'в Telegram' : 'в WhatsApp';
+    var ps = cc.value==='other' ? phone.value.trim() : (cc.value+' '+phone.value.trim());
+    // страница-источник: ключ активного пункта меню или путь
+    var page = (window.__MBM_ACTIVE || (location.pathname||'').replace(/^\//,'').replace(/\.html$/,'') || 'index');
+    var payload = {
+      form: 'client', page: page,
+      name: name.value.trim(),
+      company: company ? company.value.trim() : '',
+      phone: ps,
+      telegram: tg ? tg.value.trim() : '',
+      method: method==='tg' ? 'Telegram' : 'WhatsApp',
+      automate: task ? task.value.trim() : '',
+      _gotcha: gotcha ? gotcha.value : ''
+    };
+    try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){}); }catch(e){}
+    $('mbcf-oktext').textContent = 'Спасибо! Свяжемся с вами '+via+' по номеру '+ps+'.';
+    $('mbcf-fields').classList.add('mbcf-hide');
+    $('mbcf-success').classList.remove('mbcf-hide');
+  }
+  function resetForm(){
+    var form=$('mbcf-lead'); if(form) form.reset();
+    var ph=$('mbcf-phone'); if(ph) ph.placeholder='Номер телефона*';
+    $('mbcf-success').classList.add('mbcf-hide');
+    $('mbcf-fields').classList.remove('mbcf-hide');
+    setErr('mbcf-name',false); setErr('mbcf-phone',false); setErr('mbcf-tg',false);
+    setMethod('tg');
+  }
+  function addMsg(t,who){ var m=$('mbcf-msgs'); if(!m) return; var d=document.createElement('div'); d.className='mbcf-bubble '+(who==='me'?'mbcf-me':'mbcf-bot'); d.textContent=t; m.appendChild(d); m.scrollTop=m.scrollHeight; }
+  function typing(){ var m=$('mbcf-msgs'); if(!m) return null; var d=document.createElement('div'); d.className='mbcf-typing'; d.innerHTML='<i></i><i></i><i></i>'; m.appendChild(d); m.scrollTop=m.scrollHeight; return d; }
+  function send(){
+    var cin=$('mbcf-cin'); if(!cin) return; var t=cin.value.trim(); if(!t) return;
+    addMsg(t,'me'); cin.value='';
+    var d=typing();
+    setTimeout(function(){ if(d) d.remove();
+      /* TODO: сюда подключить реального AI-агента (запрос к API). Пока заглушка. */
+      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева — вернёмся с решением.','bot');
+    },900);
+  }
+
+  // Делегирование на document — работает независимо от времени вставки и повторного рендера блока
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    var seg=t.closest('#mbcf-seg button[data-m]'); if(seg){ setMethod(seg.getAttribute('data-m')); return; }
+    if(t.closest('#mbcf-csend')){ send(); return; }
+    if(t.closest('#mbcf-again')){ resetForm(); return; }
+  });
+  document.addEventListener('submit',function(e){ if(e.target && e.target.id==='mbcf-lead'){ e.preventDefault(); submitForm(); } });
+  document.addEventListener('input',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbcf-phone'){ var s=t.value.replace(/[^0-9+\-\s()]/g,''); if(s!==t.value) t.value=s; }
+    else if(t.id==='mbcf-tg'){ var s2=t.value.replace(/[^a-zA-Z0-9_]/g,''); if(s2!==t.value) t.value=s2; }
+  });
+  document.addEventListener('change',function(e){ if(e.target && e.target.id==='mbcf-cc'){ var ph=$('mbcf-phone'); if(ph) ph.placeholder = e.target.value==='other' ? 'Номер телефона с кодом страны*' : 'Номер телефона*'; } });
+  document.addEventListener('keydown',function(e){ if(e.target && e.target.id==='mbcf-cin' && e.key==='Enter'){ e.preventDefault(); send(); } });
+
+  function place(node){
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode){
+      if (window.__MBCF_REMOVE){
+        var p=footer.previousElementSibling;
+        while(p && (p.tagName==='SCRIPT'||p.tagName==='A'||p.tagName==='STYLE'||(p.textContent||'').trim()==='')) p=p.previousElementSibling;
+        if(p && p.querySelector && p.querySelector('input,textarea')) p.parentNode.removeChild(p);
+      }
+      footer.parentNode.insertBefore(node, footer);
+      return true;
+    }
+    if (window.__MBCF_TARGET){
+      var t=document.querySelector(window.__MBCF_TARGET);
+      if(t){ t.appendChild(node); return true; }
+    }
+    return false;
+  }
+  function ensureStyle(){ if(!$('mbcf-style')){ var st=document.createElement('style'); st.id='mbcf-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function build(){
+    if ($('mbcf-contact')) return true;
+    ensureStyle();
+    var old=$('contact'); if(old) old.removeAttribute('id');
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML;
+    return place(wrap.firstElementChild);
+  }
+
+  var tries=0;
+  function attempt(){
+    var ready = !!document.querySelector('footer') || (window.__MBCF_TARGET && !!document.querySelector(window.__MBCF_TARGET));
+    if (ready && build()) return;
+    if (tries++ > 40){ ensureStyle(); var wrap=document.createElement('div'); wrap.innerHTML=HTML; if(document.body) document.body.appendChild(wrap.firstElementChild); return; }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>
+/* MakeBiz — единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
+   Заменяет существующий <footer>. Реквизиты — плейсхолдеры, Антон подставит. */
+(function(){
+  if (window.__mbfDone) return; window.__mbfDone = true;
+
+  var CSS = [
+"#mbf-footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:#93A4B8;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
+"#mbf-footer *{box-sizing:border-box}",
+"#mbf-footer .mbf-in{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}",
+"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbf-footer .mbf-logo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;margin-bottom:14px}",
+"#mbf-footer .mbf-badges{display:flex;gap:3px}",
+"#mbf-footer .mbf-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
+"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#93A4B8;margin-bottom:16px;max-width:36ch}",
+"#mbf-footer .mbf-contacts{display:flex;flex-direction:column;gap:9px}",
+"#mbf-footer .mbf-contacts a{color:#B7C4D6;text-decoration:none;font:400 14px Oxygen}",
+"#mbf-footer .mbf-contacts a:hover{color:#fff}",
+"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}",
+"#mbf-footer .mbf-col a{display:block;color:#93A4B8;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
+"#mbf-footer .mbf-col a:hover{color:#16C15A}",
+"#mbf-footer .mbf-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font:300 12.5px/1.65 Oxygen;color:#6B7A99}",
+"#mbf-footer .mbf-req{max-width:70ch}",
+"#mbf-footer .mbf-ph{color:#8FA0B8}",
+"@media(max-width:900px){#mbf-footer .mbf-top{grid-template-columns:1fr 1fr}}",
+"@media(max-width:560px){#mbf-footer .mbf-top{grid-template-columns:1fr}}",
+"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85);font-family:Oxygen,system-ui,sans-serif}",
+"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}",
+"#mbf-cookie a{color:#16C15A;text-decoration:none}",
+"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
+"#mbf-cookie.mbf-hide{display:none!important}"
+  ].join("\n");
+
+  var FOOT =
+'<footer id="mbf-footer"><div class="mbf-in">'+
+  '<div class="mbf-top">'+
+    '<div>'+
+      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
+      '<div class="mbf-tag">IT-компания из Дубая. Внедряем ИИ, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Продукты</h4>'+
+      '<a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Разделы</h4>'+
+      '<a href="index.html">Главная</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Правовое</h4>'+
+      '<a href="privacy.html">Политика конфиденциальности</a><a href="privacy.html#cookie">Использование cookie</a><a href="terms.html">Пользовательское соглашение</a>'+
+    '</div>'+
+  '</div>'+
+  '<div class="mbf-bottom">'+
+    '<div>© 2026 MakeBiz. Все права защищены.</div>'+
+    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Политика конфиденциальности</a></div>'+
+  '</div>'+
+'</div></footer>';
+
+  var COOKIE =
+'<div id="mbf-cookie"><p>Мы используем cookie для работы сайта и веб-аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с этим. <a href="privacy.html#cookie">Подробнее</a></p>'+
+'<button class="mbf-ok" id="mbf-cookie-ok">Принять</button></div>';
+
+  // делегированный клик по «Принять» (переживает повторный рендер)
+  document.addEventListener('click',function(e){
+    if(e.target && e.target.id==='mbf-cookie-ok'){
+      var c=document.getElementById('mbf-cookie'); if(c) c.classList.add('mbf-hide');
+      try{ localStorage.setItem('mbf-cookie-ok','1'); }catch(err){}
+    }
+  });
+
+  function ensureStyle(){ if(!document.getElementById('mbf-style')){ var st=document.createElement('style'); st.id='mbf-style'; st.textContent=CSS; document.head.appendChild(st); } }
+
+  function addCookie(){
+    if(document.getElementById('mbf-cookie')) return;
+    var seen=false; try{ seen = localStorage.getItem('mbf-cookie-ok')==='1'; }catch(err){}
+    if(seen) return;
+    var w=document.createElement('div'); w.innerHTML=COOKIE; document.body.appendChild(w.firstElementChild);
+  }
+
+  function build(){
+    if (document.getElementById('mbf-footer')) return true;
+    var old=document.querySelector('footer:not(#mbf-footer)');
+    if (!old || !old.parentNode) return false;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=FOOT; var node=wrap.firstElementChild;
+    old.parentNode.insertBefore(node, old); old.remove();
+    addCookie();
+    return true;
+  }
+  function fallbackAppend(){
+    if (document.getElementById('mbf-footer')) return;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=FOOT;
+    if (document.body) document.body.appendChild(wrap.firstElementChild);
+    addCookie();
+  }
+
+  var tries=0;
+  function attempt(){
+    if (document.querySelector('footer:not(#mbf-footer)')){ if(build()) return; }
+    if (tries++ > 40){ fallbackAppend(); return; }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>
+/* MakeBiz — единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
+   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
+   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
+
+  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false;               // прозрачный/полупрозрачный — не трогаем
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) фиксированные декоративные полноэкранные слои — прячем
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) сплошная тёмная подложка страницы во всю высоту — делаем прозрачной, чтобы лучи были видны
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(){
+  var ID=110784864, SRC='https://mc.yandex.ru/metrika/tag.js?id='+ID, i='ym', m=window;
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  m[i](ID,'init',{ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  function ensure(){
+    try{
+      var ss=document.getElementsByTagName('script');
+      for(var j=0;j<ss.length;j++){ if(ss[j].src===SRC) return; }
+      var k=document.createElement('script'); k.async=1; k.src=SRC;
+      (document.head||document.documentElement).appendChild(k);
+    }catch(e){}
+  }
+  ensure();
+  var n=0, iv=setInterval(function(){ ensure(); if(++n>20) clearInterval(iv); }, 400);
+})();
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110784864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body></html>
