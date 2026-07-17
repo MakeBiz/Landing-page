@@ -131,31 +131,32 @@ nav.links{display:flex;gap:2px;margin-left:6px}nav.links a{font-size:14px;paddin
 .csend{width:44px;border:0;border-radius:12px;background:var(--acc);color:#fff;display:grid;place-items:center;cursor:pointer}
 @media(max-width:820px){.fgrid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}}
 footer{background:#06061A;color:#9DB4E2;padding:40px 0;font-size:14px;border-top:1px solid var(--line)}.fbot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-</style></head>
+</style><style>html{scroll-behavior:smooth!important}</style>
+</head>
 <body>
 <div class="pagebg"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
-<header><div class="wrap nav"><div class="logo">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></div><nav class="links"><a href="index.html">Главная</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">Vector</a><a class="active" href="intdoc.html">IntDoc</a><a href="bitrix.html">Битрикс24</a><a href="servers.html">VPS</a><a href="news.html">Новости</a><a href="партнёрам.html">Партнёрам</a><a href="contacts.html">Контакты</a></nav><div class="nav-cta"><span class="nav-phone">+971 50 262 0927</span><a class="btn p" style="padding:11px 20px">Запросить демо</a></div></div></header>
+<header><div class="wrap nav"><div class="logo">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></div><nav class="links"><a href="index.html">Главная</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">Vector</a><a class="active" href="intdoc.html">IntDoc</a><a href="bitrix.html">Битрикс24</a><a href="vps.html">VPS</a><a href="news.html">Новости</a><a href="партнёрам.html">Партнёрам</a><a href="contacts.html">Контакты</a></nav><div class="nav-cta"><span class="nav-phone">+971 50 262 0927</span><a class="btn p" style="padding:11px 20px">Запросить демо</a></div></div></header>
 
 <!-- HERO -->
 <section><div class="wrap hgrid">
   <div>
     <span class="eyebrow"><i></i>IntDoc · Document AI для закупок</span>
     <h1>Лучший поставщик, <span class="grad">выбранный за вас</span></h1>
-    <p class="sub" style="max-width:54ch">IntDoc извлекает данные из любых документов поставщиков, сравнивает предложения по цене, сроку и наличию и показывает лучшее, без ручной работы в Excel.</p>
-    <div class="hcta"><a class="btn p">Запросить демо →</a><a class="btn s">Рассчитать стоимость</a></div>
+    <p class="sub" style="max-width:54ch">IntDoc извлекает данные из любых документов поставщиков, сравнивает предложения по цене, сроку и наличию и показывает лучшее, без ручной работы в Excel</p>
+    <div class="hcta"><a class="btn p" href="#contact">Запросить демо →</a></div>
     <div class="pills"><span class="pill"><i></i>Извлечение данных из любых документов</span><span class="pill"><i></i>Сравнение по цене, сроку и наличию</span><span class="pill"><i></i>Лучшее предложение автоматически</span></div>
   </div>
   <div id="stage" class="stg herostage" data-accent="#1AB248">
     <canvas id="c"></canvas>
     <div class="grain"></div>
     <div class="tagline">Документы → сравнение поставщиков</div>
-    <button class="replay" id="replay"><span style="font-size:15px">↻</span> Повторить</button>
+    
   </div>
 </div></section>
 
 <!-- ПРОБЛЕМА -->
 <section class="pad"><div class="wrap">
-  <div class="center"><span class="eyebrow"><i></i>Почему это дорого</span><h2>Выбор поставщика <span class="grad">отнимает время и деньги</span></h2><p class="sub">Коммерческие предложения приходят в разных форматах, а сравнивать их приходится вручную. В этой рутине легко упустить лучшее условие.</p></div>
+  <div class="center"><span class="eyebrow"><i></i>Почему это дорого</span><h2>Выбор поставщика <span class="grad">отнимает время и деньги</span></h2><p class="sub">Коммерческие предложения приходят в разных форматах, а сравнивать их приходится вручную. В этой рутине легко упустить лучшее условие</p></div>
   <div class="pains">
     <div class="pain reveal">КП приходят в разных форматах: PDF, сканы, письма</div>
     <div class="pain reveal">Сравнение вручную в Excel занимает часы</div>
@@ -170,10 +171,10 @@ footer{background:#06061A;color:#9DB4E2;padding:40px 0;font-size:14px;border-top
 <section class="pad"><div class="wrap">
   <div class="center"><span class="eyebrow"><i></i>Как работает IntDoc</span><h2>От пачки документов <span class="grad">до лучшего предложения</span></h2></div>
   <div class="stages">
-    <div class="rc reveal"><div class="n">1</div><b>Загружаете документы</b><p>КП, счета, прайс-листы, PDF, сканы и фото поставщиков.</p></div>
-    <div class="rc reveal"><div class="n">2</div><b>IntDoc извлекает поля</b><p>Цена, срок, наличие, номенклатура и условия из каждого документа.</p></div>
-    <div class="rc reveal"><div class="n">3</div><b>Нормализует и сравнивает</b><p>Приводит предложения к единому виду и сопоставляет поставщиков.</p></div>
-    <div class="rc reveal"><div class="n">4</div><b>Показывает лучшее</b><p>Оптимальное предложение с обоснованием выбора.</p></div>
+    <div class="rc reveal"><div class="n">1</div><b>Загружаете документы</b><p>КП, счета, прайс-листы, PDF, сканы и фото поставщиков</p></div>
+    <div class="rc reveal"><div class="n">2</div><b>IntDoc извлекает поля</b><p>Цена, срок, наличие, номенклатура и условия из каждого документа</p></div>
+    <div class="rc reveal"><div class="n">3</div><b>Нормализует и сравнивает</b><p>Приводит предложения к единому виду и сопоставляет поставщиков</p></div>
+    <div class="rc reveal"><div class="n">4</div><b>Показывает лучшее</b><p>Оптимальное предложение с обоснованием выбора</p></div>
   </div>
 </div></section>
 
@@ -182,7 +183,7 @@ footer{background:#06061A;color:#9DB4E2;padding:40px 0;font-size:14px;border-top
   <div>
     <span class="eyebrow"><i></i>Извлечение данных</span>
     <h2>Что IntDoc <span class="grad">видит в документе</span></h2>
-    <p class="sub" style="margin-bottom:20px">IntDoc распознаёт документ построчно и вытягивает ключевые поля, даже из сканов и фото с телефона.</p>
+    <p class="sub" style="margin-bottom:20px">IntDoc распознаёт документ построчно и вытягивает ключевые поля, даже из сканов и фото с телефона</p>
     <div class="fields">
       <div class="field">Цена и валюта</div>
       <div class="field">Срок поставки</div>
@@ -230,7 +231,7 @@ footer{background:#06061A;color:#9DB4E2;padding:40px 0;font-size:14px;border-top
   </div>
 </div></section>
 
-<!-- ИНТЕГРАЦИИ -->
+<!-- ИНТЕГРАЦAI -->
 <section class="pad"><div class="wrap">
   <div class="center"><span class="eyebrow"><i></i>Интеграции</span><h2>Встраивается <span class="grad">в ваши процессы закупок</span></h2></div>
   <ul class="integ">
@@ -243,17 +244,17 @@ footer{background:#06061A;color:#9DB4E2;padding:40px 0;font-size:14px;border-top
 
 <!-- КАК НАЧАТЬ / ТАРИФЫ -->
 <section class="pad"><div class="wrap">
-  <div class="center"><span class="eyebrow"><i></i>Как начать</span><h2>Подключение <span class="grad">под ваш объём документов</span></h2><p class="sub">Стоимость рассчитывается под количество поставщиков и документов. Начнём с демо на ваших реальных КП.</p></div>
+  <div class="center"><span class="eyebrow"><i></i>Как начать</span><h2>Подключение <span class="grad">под ваш объём документов</span></h2><p class="sub">Стоимость рассчитывается под количество поставщиков и документов. Начнём с демо на ваших реальных КП</p></div>
   <div class="price">
-    <div class="pc"><div class="k">Старт</div><div class="mn">Для первого подключения и небольшого потока КП.</div><p>Сравнение поставщиков по базовым полям, выгрузка в Excel.</p><a class="btn s" style="justify-content:center">Обсудить Старт</a></div>
-    <div class="pc mid"><div class="k">Команда</div><div class="mn">Для отдела закупок с регулярным потоком документов.</div><p>Расширенные поля и критерии, история сравнений, выгрузка в CRM.</p><a class="btn p" style="justify-content:center">Обсудить Команда</a></div>
-    <div class="pc"><div class="k">Масштаб</div><div class="mn">Для крупных закупок, тендеров и больших объёмов.</div><p>Индивидуальные критерии, интеграции и приоритетная поддержка.</p><a class="btn s" style="justify-content:center">Обсудить Масштаб</a></div>
+    <div class="pc"><div class="k">Старт</div><div class="mn">Для первого подключения и небольшого потока КП.</div><p>Сравнение поставщиков по базовым полям, выгрузка в Excel</p><a class="btn s" style="justify-content:center">Обсудить Старт</a></div>
+    <div class="pc mid"><div class="k">Команда</div><div class="mn">Для отдела закупок с регулярным потоком документов.</div><p>Расширенные поля и критерии, история сравнений, выгрузка в CRM</p><a class="btn p" style="justify-content:center">Обсудить Команда</a></div>
+    <div class="pc"><div class="k">Масштаб</div><div class="mn">Для крупных закупок, тендеров и больших объёмов.</div><p>Индивидуальные критерии, интеграции и приоритетная поддержка</p><a class="btn s" style="justify-content:center">Обсудить Масштаб</a></div>
   </div>
 </div></section>
 
 <!-- CTA + ФОРМА -->
 <section class="pad"><div class="wrap">
-  <div class="center"><span class="eyebrow"><i></i>Заявка</span><h2>Покажем IntDoc <span class="grad">на ваших документах</span></h2><p class="sub">Пришлите пару реальных КП, сравним поставщиков и покажем лучшее предложение на демо.</p></div>
+  <div class="center"><span class="eyebrow"><i></i>Заявка</span><h2>Покажем IntDoc <span class="grad">на ваших документах</span></h2><p class="sub">Пришлите пару реальных КП, сравним поставщиков и покажем лучшее предложение на демо</p></div>
   <div class="fgrid">
     <div class="f2card">
       <div class="frow"><input class="inp" id="f-name" placeholder="Имя *"><input class="inp" id="f-company" placeholder="Компания"></div>
@@ -361,10 +362,10 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
 </script>
 <script>window.__MBM_ACTIVE="intdoc";</script>
 <script>
-/* MakeBiz — единое верхнее меню (шапка). Классы mbm-* изолированы.
+/* MakeBiz - единое верхнее меню (шапка). Классы mbm-* изолированы.
    Логотип взят 1:1 из дизайна Антона (Make + Biz красный + бейджи AI/BI/CRM).
    Конфиг до подключения:
-   window.__MBM_ACTIVE — ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
+   window.__MBM_ACTIVE - ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
 (function(){
   if (window.__mbmDone) return; window.__mbmDone = true;
 
@@ -424,7 +425,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
   '<div class="mbm-drop" id="mbm-drop"><nav>'+navLinks()+'</nav></div>'+
 '</header>';
 
-  // делегирование (бургер) — переживает повторный рендер бандла
+  // делегирование (бургер) - переживает повторный рендер бандла
   document.addEventListener('click',function(e){
     var t=e.target; if(!t) return;
     if(t.id==='mbm-burger'){ var d=document.getElementById('mbm-drop'); if(d) d.classList.toggle('mbm-open'); return; }
@@ -435,10 +436,10 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
   function findOld(){
     // 1) явный селектор
     if (window.__MBM_OLD){ var o=document.querySelector(window.__MBM_OLD); if(o) return o; }
-    // 2) старое глобальное меню помечено [data-mbnav] — убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
+    // 2) старое глобальное меню помечено [data-mbnav] - убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
     var mn=document.querySelector('[data-mbnav]');
     if (mn){ var el=mn; while(el.parentElement && el.parentElement!==document.body) el=el.parentElement; return el; }
-    // 3) иначе — обычный <header>
+    // 3) иначе - обычный <header>
     return document.querySelector('header:not(#mbm-header)');
   }
   function build(){
@@ -465,12 +466,12 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
 </script>
 <script>window.__MBCF_REMOVE=true;window.__MBCF_TARGET=null;</script>
 <script>
-/* MakeBiz — универсальный блок «Обсудить проект» (форма + чат).
+/* MakeBiz - универсальный блок «Обсудить проект» (форма + чат).
    Классы mbcf-* изолированы. Обработчики делегированы на document,
    поэтому переживают повторный рендер/клонирование блока бандлом.
    Конфиг задаётся до подключения:
-   window.__MBCF_REMOVE  — убрать старую контакт-форму перед футером (true/false)
-   window.__MBCF_TARGET  — селектор контейнера, если на странице нет <footer> (иначе null) */
+   window.__MBCF_REMOVE  - убрать старую контакт-форму перед футером (true/false)
+   window.__MBCF_TARGET  - селектор контейнера, если на странице нет <footer> (иначе null) */
 (function(){
   if (window.__mbcfDone) return; window.__mbcfDone = true;
 
@@ -577,7 +578,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
       '</form>'+
     '</div>'+
     '<div class="mbcf-col">'+
-      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Задайте вопрос <span>нашему агенту</span></h3><p class="mbcf-csub">Пообщайтесь с нашим агентом прямо в чате.</p></div>'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Задайте вопрос <span>нашему агенту</span></h3><p class="mbcf-csub">Пообщайтесь с нашим агентом прямо в чате</p></div>'+
       '<div class="mbcf-chat">'+
         '<div class="mbcf-chead"><div class="mbcf-avatar">AI</div><div><div class="mbcf-aname">AI-агент MakeBiz</div><div class="mbcf-astat"><i></i>онлайн, отвечает сразу</div></div></div>'+
         '<div class="mbcf-msgs" id="mbcf-msgs"><div class="mbcf-bubble mbcf-bot">Здравствуйте! Я AI-агент MakeBiz. Какой процесс вы хотите автоматизировать? Я подскажу решение.</div></div>'+
@@ -638,11 +639,11 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
     var d=typing();
     setTimeout(function(){ if(d) d.remove();
       /* TODO: сюда подключить реального AI-агента (запрос к API). Пока заглушка. */
-      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева — вернёмся с решением.','bot');
+      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева - вернёмся с решением.','bot');
     },900);
   }
 
-  // Делегирование на document — работает независимо от времени вставки и повторного рендера блока
+  // Делегирование на document - работает независимо от времени вставки и повторного рендера блока
   document.addEventListener('click',function(e){
     var t=e.target; if(!t||!t.closest) return;
     var seg=t.closest('#mbcf-seg button[data-m]'); if(seg){ setMethod(seg.getAttribute('data-m')); return; }
@@ -696,8 +697,8 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
 
 </script>
 <script>
-/* MakeBiz — единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
-   Заменяет существующий <footer>. Реквизиты — плейсхолдеры, Антон подставит. */
+/* MakeBiz - единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
+   Заменяет существующий <footer>. Реквизиты - плейсхолдеры, Антон подставит. */
 (function(){
   if (window.__mbfDone) return; window.__mbfDone = true;
 
@@ -733,7 +734,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
   '<div class="mbf-top">'+
     '<div>'+
       '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
-      '<div class="mbf-tag">IT-компания из Дубая. Внедряем ИИ, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
+      '<div class="mbf-tag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Продукты</h4>'+
       '<a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a>'+
@@ -801,7 +802,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
 
 </script>
 <script>
-/* MakeBiz — единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
    Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
    Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
    старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
@@ -842,7 +843,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
     var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
     if(!m) return false;
     var a=m[4]===undefined?1:parseFloat(m[4]);
-    if(a<0.85) return false;               // прозрачный/полупрозрачный — не трогаем
+    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
     return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
   }
   function hideOldBg(){
@@ -852,13 +853,13 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
         if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
         var s=window.getComputedStyle(el);
         var r=el.getBoundingClientRect();
-        // 1) фиксированные декоративные полноэкранные слои — прячем
+        // 1) фиксированные декоративные полноэкранные слои - прячем
         if(s.position==='fixed'){
           var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
           if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
           continue;
         }
-        // 2) сплошная тёмная подложка страницы во всю высоту — делаем прозрачной, чтобы лучи были видны
+        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
         if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
           el.style.setProperty('background-color','transparent','important');
           if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
@@ -909,4 +910,30 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110784864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script>
+/* MakeBiz — чистка: убрать «Повторить», снять точки в конце предложений, AI вместо ИИ, без длинных тире. */
+(function(){
+  if(window.__mbCleanDone) return; window.__mbCleanDone=true;
+  function walkText(fn){ try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;while(n=w.nextNode()){var p=n.parentNode;if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE'))continue;fn(n);}}catch(e){} }
+  function isAbbr(s){ return /(\bт\.\s?д|\bт\.\s?п|\bи\s?др|\d\.\d)\.?\s*$/.test(s); }
+  function stripEl(el){
+    if(el.querySelector('h1,h2,h3,h4,h5,h6,p,ul,ol,section,table')) return;
+    for(var i=el.childNodes.length-1;i>=0;i--){ var c=el.childNodes[i];
+      if(c.nodeType===3){ if(!/\S/.test(c.nodeValue)) continue;
+        if(/\.\s*$/.test(c.nodeValue) && !isAbbr(c.nodeValue)) c.nodeValue=c.nodeValue.replace(/\.(\s*)$/,'$1');
+        return;
+      } else if(c.nodeType===1){ return; } }
+  }
+  function clean(){
+    var bs=document.querySelectorAll('button,a');
+    for(var i=0;i<bs.length;i++){ var t=(bs[i].textContent||''); if(t.indexOf('Повторить')>-1 && t.replace(/\s/g,'').length<15) bs[i].remove(); }
+    walkText(function(n){ var v=n.nodeValue; if(!v)return; var nv=v; if(nv.indexOf('ИИ')>-1)nv=nv.replace(/ИИ/g,'AI'); if(nv.indexOf('—')>-1||nv.indexOf('–')>-1)nv=nv.replace(/[—–]/g,'-'); if(nv!==v)n.nodeValue=nv; });
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,figcaption');
+    for(var k=0;k<els.length;k++) stripEl(els[k]);
+  }
+  clean(); var m=0, iv=setInterval(function(){clean();if(++m>16)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(function(){clean();});try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},8000);}
+})();
+
+</script>
 </body></html>

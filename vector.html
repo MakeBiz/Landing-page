@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>/* MakeBiz: не даём дизайн-рантайму тянуть внешние компоненты (ломается на статике). Форма и аналитика работают. */
+(function(){var _f=window.fetch;if(!_f)return;window.fetch=function(input,init){try{var u=(typeof input==='string')?input:((input&&input.url)||'');if(/\/api\//.test(u)||/mc\.yandex\.ru/.test(u)||/^data:/.test(u)||/googleapis|gstatic/.test(u)){return _f.apply(this,arguments);}return Promise.reject(new Error('dc-remote-disabled'));}catch(e){return _f.apply(this,arguments);}};})();</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>/**
@@ -303,7 +306,7 @@ var d=null!=c&&c.hydratedSources||null,e=!1,f="",g=aj;null!==c&&void 0!==c&&(!0=
 function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmountComponentAtNode=function(a){if(!Vd(a))throw Error(m(40));return a._reactRootContainer?(yb(function(){Wd(null,null,a,!1,function(){a._reactRootContainer=null;a[Ja]=null})}),!0):!1};Q.unstable_batchedUpdates=Tf;Q.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!Vd(c))throw Error(m(200));if(null==a||void 0===a._reactInternals)throw Error(m(38));return Wd(a,b,c,!1,d)};Q.version="18.3.1-next-f1338f8080-20240426"});
 })();
 </script>
-<script>// GENERATED from dc-runtime/src/*.ts — do not edit. Rebuild with `cd dc-runtime && bun run build`.
+<script>// GENERATED from dc-runtime/src/*.ts - do not edit. Rebuild with `cd dc-runtime && bun run build`.
 "use strict";
 (() => {
   var __defProp = Object.defineProperty;
@@ -1129,7 +1132,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
         __publicField(this, "__name");
         __publicField(this, "__sub");
         __publicField(this, "__needsDidMount", false);
-        /** Snapshot of the registry's streaming flags taken at render time —
+        /** Snapshot of the registry's streaming flags taken at render time -
          *  builders read it off the RenderCtx (this) to pick placeholder vs
          *  render-nothing for unresolved values. */
         __publicField(this, "__streamingNow", false);
@@ -1142,7 +1145,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
         __publicField(this, "__failedLogic", null);
         __publicField(this, "__failedUserProps", null);
         __publicField(this, "__failedVer", -1);
-        /** Per-instance constructor error — kept here (not on the registry entry)
+        /** Per-instance constructor error - kept here (not on the registry entry)
          *  so one instance's successful construct can't hide a sibling's failure,
          *  and a construct can never wipe an eval error `updateJs` recorded on
          *  `r.logicError`. */
@@ -1171,7 +1174,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
         );
       }
       /** Instantiate the logic class (or the no-op base) and adopt `prevState`
-       *  over its initial state — used both at mount and on hot-swap. */
+       *  over its initial state - used both at mount and on hot-swap. */
       __makeLogic(Logic, prevState) {
         const L = Logic || StreamableLogic;
         try {
@@ -1193,7 +1196,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
         if (prevState)
           this.logic.state = { ...this.logic.state || {}, ...prevState };
       }
-      /** The props the author's logic + template see — internal __-prefixed
+      /** The props the author's logic + template see - internal __-prefixed
        *  wiring stripped. */
       __userProps() {
         const { __name, __hintSize, __tplId, __hostStyle, ...rest } = this.props;
@@ -2038,16 +2041,16 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
       },
       __dcStreaming: (name) => streams.live(name),
       __dcSetProps: (name, overrides) => runtime.setProps(name, overrides),
-      /** Name of the component currently mounted as the page root — DC tools
+      /** Name of the component currently mounted as the page root - DC tools
        *  push their template-stream here when targeting "the open page". */
       __dcRootName: () => rootName,
-      /** Editor bridge — the encoded, `data-dc-tpl`-annotated template source.
+      /** Editor bridge - the encoded, `data-dc-tpl`-annotated template source.
        *  The host editor parses this into its own template DOM so it can map a
        *  rendered node (carrying the same `data-dc-tpl`) back to the source
        *  node that emitted it. Returns the encoded form (`sc-camel-*` attrs,
        *  `<sc-raw-*>`/`<sc-helmet>` tags); the editor decodes on serialize. */
       __dcAnnotatedTemplate: (name) => runtime.annotatedTemplate(name),
-      /** Editor bridge — the *original* (decoded) template source. */
+      /** Editor bridge - the *original* (decoded) template source. */
       __dcTemplateSource: (name) => runtime.templateSource(name),
       __dcBoot: () => {
         rootName = boot(runtime, document) ?? rootName;
@@ -2178,7 +2181,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- PROBLEM + 3D FUNNEL -->
   <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:60ch;margin:0 auto 36px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Почему теряются клиенты</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Почему теряются клиенты</span>
       <h2 style="font:700 clamp(1.8rem,3.8vw,2.7rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Почему бизнес теряет клиентов, <span style="color:#E4384D;">даже если звонков много</span></h2>
       <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#95A0B2;margin:0;">Проблема не в количестве звонков. Проблема в том, что бизнес не видит, где внутри этих звонков теряется продажа.</p>
     </div>
@@ -2205,7 +2208,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- WHAT VECTOR SEES -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Разбор каждого звонка</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Разбор каждого звонка</span>
       <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что Vector видит <span style="color:#16C15A;">в каждом звонке</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" data-seesgrid>
@@ -2252,7 +2255,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <section id="cabinet" style="position:relative;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:radial-gradient(130% 100% at 50% 0%,#0B0D14,#05060A 72%);">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
       <div style="text-align:center;max-width:56ch;margin:0 auto 26px;">
-        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Личный кабинет Vector</span>
+        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Личный кабинет Vector</span>
         <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Контроль звонков, сотрудников <span style="color:#16C15A;">и точек роста в одном месте</span></h2>
       </div>
       <div data-cabtabs style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;">
@@ -2277,7 +2280,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
                 <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Точки роста</span>
                 <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Разбор звонков</span>
                 <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Возражения</span>
-                <div style="margin-top:auto;border:1px solid rgba(22,193,90,.25);border-radius:12px;padding:12px;background:linear-gradient(160deg,#0C1912,#0A0C12);"><div style="font:700 12px Oxygen;color:#8FE7AE;margin-bottom:3px;">AI-рекомендация</div><div style="font:300 11px/1.4 Oxygen;color:#95A0B2;">Усилить этап «Следующий шаг» — теряется 18% сделок.</div></div>
+                <div style="margin-top:auto;border:1px solid rgba(22,193,90,.25);border-radius:12px;padding:12px;background:linear-gradient(160deg,#0C1912,#0A0C12);"><div style="font:700 12px Oxygen;color:#8FE7AE;margin-bottom:3px;">AI-рекомендация</div><div style="font:300 11px/1.4 Oxygen;color:#95A0B2;">Усилить этап «Следующий шаг» - теряется 18% сделок.</div></div>
               </aside>
               <!-- main -->
               <div style="flex:1;min-width:0;padding:20px 24px;">
@@ -2294,7 +2297,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
                   <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Звонков за месяц</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">1 248</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +12% к прошлому</div></div>
                   <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Средняя оценка</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">7.8<span style="font:700 14px Oxygen;color:#63718A;"> / 10</span></div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +0.6 балла</div></div>
                   <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Конверсия в сделку</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">24%</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +3% к прошлому</div></div>
-                  <div style="border:1px solid rgba(228,56,77,.28);border-radius:14px;padding:15px 16px;background:linear-gradient(160deg,#1A0C10,#0E1219);"><div style="font:300 11.5px Oxygen;color:#F0A6B0;">Потери на этапах</div><div style="font:700 26px Oxygen;color:#E4384D;font-variant-numeric:tabular-nums;margin:5px 0 3px;">18%</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▼ −5% — стало меньше</div></div>
+                  <div style="border:1px solid rgba(228,56,77,.28);border-radius:14px;padding:15px 16px;background:linear-gradient(160deg,#1A0C10,#0E1219);"><div style="font:300 11.5px Oxygen;color:#F0A6B0;">Потери на этапах</div><div style="font:700 26px Oxygen;color:#E4384D;font-variant-numeric:tabular-nums;margin:5px 0 3px;">18%</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▼ −5% - стало меньше</div></div>
                 </div>
                 <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:12px;">
                   <!-- employees -->
@@ -2369,7 +2372,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- 10 STAGES -->
   <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 36px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Этапы продажи</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Этапы продажи</span>
       <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Vector оценивает <span style="color:#16C15A;">все 10 этапов разговора</span></h2>
     </div>
     <div data-stagerow style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
@@ -2389,7 +2392,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- BENEFIT TABS -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 30px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Польза для каждого</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Польза для каждого</span>
       <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что получает <span style="color:#16C15A;">бизнес и команда</span></h2>
     </div>
     <div data-tabs style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;">
@@ -2409,7 +2412,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- VS COMPARISON -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:62ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Vector против обычной аналитики</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Vector против обычной аналитики</span>
       <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Не контроль ради контроля, <span style="color:#16C15A;">а система роста продаж</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;" data-cmpgrid>
@@ -2442,7 +2445,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- ROADMAP -->
   <section id="connect" style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:58ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Подключение</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Подключение</span>
       <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Как быстро начать и сразу увидеть, <span style="color:#16C15A;">где теряются продажи</span></h2>
     </div>
     <div data-road style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
@@ -2457,13 +2460,13 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <section id="integ" style="position:relative;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:radial-gradient(120% 100% at 50% 30%,#0B0D14,#05060A 72%);">
     <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,4vw,52px);align-items:center;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);" data-integgrid>
       <div>
-        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Интеграции</span>
+        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Интеграции</span>
         <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 20px;text-wrap:balance;">Легко встраивается <span style="color:#16C15A;">в текущую инфраструктуру</span></h2>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;">
           <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>CRM и телефония подключаются быстро</li>
           <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>Можно подтянуть текущие звонки и прошлый период</li>
           <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>Данные можно передавать обратно в CRM</li>
-          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>При необходимости — глубокая аналитика в Power BI</li>
+          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>При необходимости - глубокая аналитика в Power BI</li>
         </ul>
       </div>
       <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(360px,40vw,460px);background:radial-gradient(120% 120% at 50% 40%,#101526,#06070C 74%);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -50px rgba(0,0,0,.9);">
@@ -2477,9 +2480,9 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- PRICING (interactive) -->
   <section id="price" style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:64ch;margin:0 auto 30px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">— Тарифы</span>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Тарифы</span>
       <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Выберите тариф под объём <span style="color:#16C15A;">звонков вашего отдела</span></h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#95A0B2;margin:0;">Все тарифы включают аналитику звонков, рекомендации по сотрудникам и компании, интеграции и управленческие выводы. Выберите срок предоплаты — цена и экономия пересчитаются мгновенно.</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#95A0B2;margin:0;">Все тарифы включают аналитику звонков, рекомендации по сотрудникам и компании, интеграции и управленческие выводы. Выберите срок предоплаты - цена и экономия пересчитаются мгновенно.</p>
     </div>
 
     <!-- period toggle -->
@@ -2523,7 +2526,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
     <div style="margin-top:18px;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:clamp(24px,3vw,34px);background:linear-gradient(160deg,#12141C,#0A0B10);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,44px);align-items:center;" data-calcgrid>
       <div>
         <div style="font:700 16px Oxygen;color:#fff;margin-bottom:4px;">Калькулятор стоимости</div>
-        <div style="font:300 13px Oxygen;color:#95A0B2;margin-bottom:22px;">Сдвиньте — покажем тариф и стоимость с учётом выбранной предоплаты.</div>
+        <div style="font:300 13px Oxygen;color:#95A0B2;margin-bottom:22px;">Сдвиньте - покажем тариф и стоимость с учётом выбранной предоплаты.</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
           <span style="font:700 13px Oxygen;color:#B7C0CE;">Минут звонков в месяц</span>
           <span data-role="minlabel" style="font:700 20px Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;">10 000</span>
@@ -2552,7 +2555,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
       <div style="position:relative;">
         <span style="display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.14em;text-transform:uppercase;color:#052012;background:#16C15A;padding:7px 14px;border-radius:100px;">Бесплатное подключение + 5 часов анализа</span>
         <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:16px 0 12px;">Подключите Vector и увидьте, <span style="color:#16C15A;">где отдел теряет клиентов</span></h2>
-        <p style="font:300 15.5px/1.6 Oxygen;color:#B7C0CE;margin:0 0 22px;max-width:42ch;">Подключим реальные звонки, покажем слабые места отдела, дадим первичные рекомендации по росту продаж — без оплаты на старте.</p>
+        <p style="font:300 15.5px/1.6 Oxygen;color:#B7C0CE;margin:0 0 22px;max-width:42ch;">Подключим реальные звонки, покажем слабые места отдела, дадим первичные рекомендации по росту продаж - без оплаты на старте.</p>
         <div style="display:flex;flex-direction:column;gap:12px;">
           <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:#16C15A;color:#052012;display:grid;place-items:center;flex:none;">@</span>@Anton_MakeBiz</div>
           <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);color:#8FE7AE;display:grid;place-items:center;flex:none;">✆</span>+971 50 262 0927</div>
@@ -2764,7 +2767,7 @@ class Component extends DCLogic {
 
   // ===================== INTEGRATIONS: 3D orbit hub =====================
   hubInit=(W,H,prev)=>({});
-  // "Легко встраивается" — интеграционная шина: системы по одной подключаются к ядру Vector
+  // "Легко встраивается" - интеграционная шина: системы по одной подключаются к ядру Vector
   hubDraw=(ctx,t,s)=>{
     const W=s.W,H=s.H, sc=Math.min(W/560,H/460)||1; ctx.clearRect(0,0,W,H);
     const acc=this.accent||'#16C15A';
@@ -2821,10 +2824,10 @@ class Component extends DCLogic {
 </script>
 <script>window.__MBM_ACTIVE="vector";</script>
 <script>
-/* MakeBiz — единое верхнее меню (шапка). Классы mbm-* изолированы.
+/* MakeBiz - единое верхнее меню (шапка). Классы mbm-* изолированы.
    Логотип взят 1:1 из дизайна Антона (Make + Biz красный + бейджи AI/BI/CRM).
    Конфиг до подключения:
-   window.__MBM_ACTIVE — ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
+   window.__MBM_ACTIVE - ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
 (function(){
   if (window.__mbmDone) return; window.__mbmDone = true;
 
@@ -2884,7 +2887,7 @@ class Component extends DCLogic {
   '<div class="mbm-drop" id="mbm-drop"><nav>'+navLinks()+'</nav></div>'+
 '</header>';
 
-  // делегирование (бургер) — переживает повторный рендер бандла
+  // делегирование (бургер) - переживает повторный рендер бандла
   document.addEventListener('click',function(e){
     var t=e.target; if(!t) return;
     if(t.id==='mbm-burger'){ var d=document.getElementById('mbm-drop'); if(d) d.classList.toggle('mbm-open'); return; }
@@ -2895,10 +2898,10 @@ class Component extends DCLogic {
   function findOld(){
     // 1) явный селектор
     if (window.__MBM_OLD){ var o=document.querySelector(window.__MBM_OLD); if(o) return o; }
-    // 2) старое глобальное меню помечено [data-mbnav] — убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
+    // 2) старое глобальное меню помечено [data-mbnav] - убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
     var mn=document.querySelector('[data-mbnav]');
     if (mn){ var el=mn; while(el.parentElement && el.parentElement!==document.body) el=el.parentElement; return el; }
-    // 3) иначе — обычный <header>
+    // 3) иначе - обычный <header>
     return document.querySelector('header:not(#mbm-header)');
   }
   function build(){
@@ -2925,12 +2928,12 @@ class Component extends DCLogic {
 </script>
 <script>window.__MBCF_REMOVE=true;window.__MBCF_TARGET=null;</script>
 <script>
-/* MakeBiz — универсальный блок «Обсудить проект» (форма + чат).
+/* MakeBiz - универсальный блок «Обсудить проект» (форма + чат).
    Классы mbcf-* изолированы. Обработчики делегированы на document,
    поэтому переживают повторный рендер/клонирование блока бандлом.
    Конфиг задаётся до подключения:
-   window.__MBCF_REMOVE  — убрать старую контакт-форму перед футером (true/false)
-   window.__MBCF_TARGET  — селектор контейнера, если на странице нет <footer> (иначе null) */
+   window.__MBCF_REMOVE  - убрать старую контакт-форму перед футером (true/false)
+   window.__MBCF_TARGET  - селектор контейнера, если на странице нет <footer> (иначе null) */
 (function(){
   if (window.__mbcfDone) return; window.__mbcfDone = true;
 
@@ -3098,11 +3101,11 @@ class Component extends DCLogic {
     var d=typing();
     setTimeout(function(){ if(d) d.remove();
       /* TODO: сюда подключить реального AI-агента (запрос к API). Пока заглушка. */
-      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева — вернёмся с решением.','bot');
+      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева - вернёмся с решением.','bot');
     },900);
   }
 
-  // Делегирование на document — работает независимо от времени вставки и повторного рендера блока
+  // Делегирование на document - работает независимо от времени вставки и повторного рендера блока
   document.addEventListener('click',function(e){
     var t=e.target; if(!t||!t.closest) return;
     var seg=t.closest('#mbcf-seg button[data-m]'); if(seg){ setMethod(seg.getAttribute('data-m')); return; }
@@ -3156,8 +3159,8 @@ class Component extends DCLogic {
 
 </script>
 <script>
-/* MakeBiz — единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
-   Заменяет существующий <footer>. Реквизиты — плейсхолдеры, Антон подставит. */
+/* MakeBiz - единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
+   Заменяет существующий <footer>. Реквизиты - плейсхолдеры, Антон подставит. */
 (function(){
   if (window.__mbfDone) return; window.__mbfDone = true;
 
@@ -3193,7 +3196,7 @@ class Component extends DCLogic {
   '<div class="mbf-top">'+
     '<div>'+
       '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
-      '<div class="mbf-tag">IT-компания из Дубая. Внедряем ИИ, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
+      '<div class="mbf-tag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Продукты</h4>'+
       '<a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a>'+
@@ -3261,7 +3264,7 @@ class Component extends DCLogic {
 
 </script>
 <script>
-/* MakeBiz — единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
    Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
    Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
    старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
@@ -3302,7 +3305,7 @@ class Component extends DCLogic {
     var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
     if(!m) return false;
     var a=m[4]===undefined?1:parseFloat(m[4]);
-    if(a<0.85) return false;               // прозрачный/полупрозрачный — не трогаем
+    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
     return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
   }
   function hideOldBg(){
@@ -3312,13 +3315,13 @@ class Component extends DCLogic {
         if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
         var s=window.getComputedStyle(el);
         var r=el.getBoundingClientRect();
-        // 1) фиксированные декоративные полноэкранные слои — прячем
+        // 1) фиксированные декоративные полноэкранные слои - прячем
         if(s.position==='fixed'){
           var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
           if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
           continue;
         }
-        // 2) сплошная тёмная подложка страницы во всю высоту — делаем прозрачной, чтобы лучи были видны
+        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
         if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
           el.style.setProperty('background-color','transparent','important');
           if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
@@ -3369,5 +3372,23 @@ class Component extends DCLogic {
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/110784864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<script>
+/* MakeBiz — универсальная чистка: убрать «Повторить», снять точки в конце предложений, AI вместо ИИ, без длинных тире. */
+(function(){
+  if(window.__mbCleanDone) return; window.__mbCleanDone=true;
+  function walkText(fn){ try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;while(n=w.nextNode()){var p=n.parentNode;if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE'))continue;fn(n);}}catch(e){} }
+  function clean(){
+    var bs=document.querySelectorAll('button,a');
+    for(var i=0;i<bs.length;i++){ var t=(bs[i].textContent||''); if(t.indexOf('Повторить')>-1 && t.replace(/\s/g,'').length<15) bs[i].remove(); }
+    walkText(function(n){ var v=n.nodeValue; if(!v)return; var nv=v; if(nv.indexOf('ИИ')>-1)nv=nv.replace(/ИИ/g,'AI'); if(nv.indexOf('—')>-1||nv.indexOf('–')>-1)nv=nv.replace(/[—–]/g,'-'); if(nv!==v)n.nodeValue=nv; });
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li');
+    for(var k=0;k<els.length;k++){ var el=els[k]; if(el.querySelector('h1,h2,h3,h4,p,ul,ol'))continue; var last=el.childNodes[el.childNodes.length-1];
+      if(last&&last.nodeType===3){ var vv=last.nodeValue; if(/[А-Яа-яЁёA-Za-z0-9)»"'']\s*\.\s*$/.test(vv) && !/(т\.д|т\.п|и\sдр)\.?\s*$/.test(vv)) last.nodeValue=vv.replace(/\.(\s*)$/,'$1'); } }
+  }
+  clean(); var n=0, iv=setInterval(function(){clean();if(++n>16)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(function(){clean();});try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},8000);}
+})();
+
+</script>
 </body>
 </html>
