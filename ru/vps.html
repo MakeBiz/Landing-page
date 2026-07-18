@@ -3234,27 +3234,60 @@ class Component extends DCLogic {
 
 </script>
 <script>
-/* MakeBiz — светлая тема: контраст-фиксер. Тёмный/светлый текст на светлом фоне делаем читаемым (тёмно-синим), но НЕ трогаем белый текст на цветных кнопках/градиентах. */
+/* MakeBiz — светлый фон в цветах флага РФ: белая база + синие и красные «лучи». Прячем тёмный canvas-фон. */
+(function(){
+  if(window.__mbLightBgDone) return; window.__mbLightBgDone=true;
+  var BG='radial-gradient(46% 42% at 22% 34%, rgba(3,80,200,.34), transparent 62%),'
+        +'radial-gradient(46% 42% at 84% 24%, rgba(210,30,45,.30), transparent 62%),'
+        +'radial-gradient(48% 42% at 60% 76%, rgba(3,80,200,.28), transparent 60%),'
+        +'radial-gradient(42% 38% at 90% 70%, rgba(210,30,45,.24), transparent 60%),'
+        +'radial-gradient(40% 36% at 6% 78%, rgba(3,80,200,.22), transparent 60%),'
+        +'radial-gradient(38% 32% at 50% 4%, rgba(210,30,45,.16), transparent 60%),'
+        +'linear-gradient(180deg,#FFFFFF,#EDF2FB)';
+  function apply(){
+    var c=document.getElementById('mb-bg'); if(c) c.style.display='none';
+    // flag gradient on <html> (stable — bundler does not manage it); viewport-fixed
+    var de=document.documentElement;
+    de.style.setProperty('background', BG, 'important');
+    de.style.setProperty('background-attachment', 'fixed', 'important');
+    if(document.body) document.body.style.setProperty('background','transparent','important');
+    // make page-background containers (#F5F7F9) transparent so the flag layer shows through; keep white cards
+    var els=document.querySelectorAll('div,section,main,header,footer,article,aside');
+    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.__mbtb) continue;
+      var bc=getComputedStyle(e).backgroundColor;
+      if(bc==='rgb(245, 247, 249)'){ e.style.setProperty('background-color','transparent','important'); e.__mbtb=1; }
+    }
+  }
+  apply(); var n=0, iv=setInterval(function(){ apply(); if(++n>20) clearInterval(iv); },400);
+  if(window.MutationObserver){ var mo=new MutationObserver(apply); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},9000); }
+})();
+</script>
+<script>
+/* MakeBiz — светлая тема: контраст-фиксер. Любой светлый текст на светлом фоне делаем читаемым (тёмно-синим), включая логотип, SVG-текст и текст на светлых градиентах. Белый текст на цветных кнопках/тёмных градиентах не трогаем. */
 (function(){
   if(window.__mbLightDone) return; window.__mbLightDone=true;
   function lum(r,g,b){ return .2126*r+.7152*g+.0722*b; }
-  function effBg(e){ var n=e; while(n){ var s=getComputedStyle(n);
-      var bi=s.backgroundImage; if(bi && bi.indexOf('gradient')>-1) return null; /* colored gradient -> skip */
-      var bg=s.backgroundColor, m=bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/);
-      if(m){ var a=m[4]!==undefined?+m[4]:1; if(a>0.5) return [+m[1],+m[2],+m[3]]; }
-      n=n.parentElement; } return [255,255,255]; }
+  function pc(s){ var m=(''+s).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/); if(!m) return null; return {r:+m[1],g:+m[2],b:+m[3],a:m[4]!==undefined?+m[4]:1}; }
+  function ph(h){ h=h.replace('#',''); if(h.length===3) h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2]; if(h.length<6) return null; return {r:parseInt(h.slice(0,2),16),g:parseInt(h.slice(2,4),16),b:parseInt(h.slice(4,6),16),a:1}; }
+  function gradLum(bi){ var cs=bi.match(/rgba?\([^)]+\)|#[0-9a-fA-F]{3,6}/g); if(!cs) return null; var tot=0,c=0; for(var i=0;i<cs.length;i++){ var p=cs[i][0]==='#'?ph(cs[i]):pc(cs[i]); if(p&&p.a>0.3){ tot+=lum(p.r,p.g,p.b); c++; } } return c?tot/c:null; }
+  function bgLum(e){ var n=e; while(n&&n.nodeType===1){ var s=getComputedStyle(n);
+      var bi=s.backgroundImage; if(bi&&bi!=='none'&&bi.indexOf('gradient')>-1){ var gl=gradLum(bi); if(gl!==null) return gl; }
+      var bc=pc(s.backgroundColor); if(bc&&bc.a>0.5) return lum(bc.r,bc.g,bc.b);
+      n=n.parentElement; } return 245; }
+  function ownText(e){ var cn=e.childNodes; for(var i=0;i<cn.length;i++){ if(cn[i].nodeType===3 && cn[i].textContent.trim()) return true; } return false; }
   function fix(){
-    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,div,li,button,td,label,strong,b,em,small');
-    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.children.length) continue;
-      var t=(e.textContent||'').trim(); if(!t) continue;
-      var m=getComputedStyle(e).color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)/); if(!m) continue;
-      if(lum(+m[1],+m[2],+m[3])<178) continue;            // text not light -> leave
-      var bg=effBg(e); if(bg===null) continue;            // on gradient/colored -> keep white
-      if(lum(bg[0],bg[1],bg[2])>150){ e.style.setProperty('color','#03235F','important'); }
+    var els=document.querySelectorAll('body *:not(script):not(style):not(svg)');
+    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.__mbl===2) continue;
+      var svgT=(e.tagName==='text'||e.tagName==='tspan'||e.tagName==='TEXT'||e.tagName==='TSPAN');
+      if(!svgT && !ownText(e)){ continue; }
+      var s=getComputedStyle(e);
+      var col=pc(svgT ? (s.fill||s.color) : s.color); if(!col){ continue; }
+      if(lum(col.r,col.g,col.b)<176){ e.__mbl=2; continue; }   // already dark text
+      if(bgLum(e)>150){ if(svgT) e.style.setProperty('fill','#03235F','important'); else e.style.setProperty('color','#03235F','important'); e.__mbl=2; }
     }
   }
   fix(); var n=0, iv=setInterval(function(){ fix(); if(++n>16) clearInterval(iv); },350);
-  if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},10000); }
+  if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},11000); }
 })();
 </script>
 </body></html>
