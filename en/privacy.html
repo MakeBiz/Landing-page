@@ -1,146 +1,458 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — MakeBiz</title>
-<meta name="description" content="How MakeBiz collects and uses personal data of website visitors: what we collect, why, legal basis, retention and your rights.">
+<title>Privacy Policy - MakeBiz</title>
+<meta name="description" content="How MakeBiz collects, uses and protects the personal data of website visitors: what data, why, legal basis, cookie, third parties, storage and your rights. In line with 152-FZ (Russia) and PDPL (UAE).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;
-  --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;
-  --green:#1AB248;--red:#C51929;--border:#E7E7E7;--muted:#6B7A99;
-}
+:root{--bg:#07090D;--tx:#EAF1FF;--mu:#93A4B8;--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--ln:rgba(255,255,255,.10);--gl:rgba(255,255,255,.05)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Oxygen',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
-a{color:var(--blue-active);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:920px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:50;background:rgba(245,247,249,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{font-weight:700;font-size:1.35rem;letter-spacing:-.01em;color:var(--text)}
-.logo b{color:var(--blue-active)}
-.nav-right{display:flex;align-items:center;gap:14px}
-.back{font-size:14px;font-weight:700;color:var(--muted)}
-.back:hover{color:var(--text);text-decoration:none}
-.lang-switch{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px;box-shadow:0 8px 24px rgba(3,35,95,.08);gap:2px}
-.lang-switch a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .2s;line-height:1}
-.lang-switch a.active{background:linear-gradient(135deg,var(--blue),var(--blue-active));color:#fff;box-shadow:0 6px 14px rgba(7,78,232,.32)}
-.lang-switch a:hover:not(.active){color:var(--text);background:var(--bg);text-decoration:none}
-.lang-switch .flag{font-size:14px;line-height:1}
-@media(max-width:600px){.lang-switch a{padding:6px 10px;font-size:12px}.lang-switch .lang-code{display:none}.back span{display:none}}
-.head{padding:64px 0 28px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:7px 14px;border-radius:100px;margin-bottom:18px}
-h1{font-size:2.4rem;line-height:1.12;letter-spacing:-.02em;background:linear-gradient(120deg,#03235F,#074EE8 60%,#1AB248);-webkit-background-clip:text;background-clip:text;color:transparent}
-.upd{margin-top:14px;color:var(--muted);font-size:14px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:40px;margin:24px 0 60px;box-shadow:0 18px 50px rgba(3,35,95,.06)}
-.card .intro{font-size:1.05rem;color:#3a4f74;margin-bottom:8px}
-.sec{padding:26px 0;border-bottom:1px dashed var(--border)}
-.sec:last-child{border-bottom:none;padding-bottom:4px}
-.sec h2{font-size:1.18rem;letter-spacing:-.01em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
-.sec h2 .n{flex-shrink:0;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:13px;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active))}
-.sec p{color:#3a4f74}
-.sec p+p{margin-top:10px}
+body{background:var(--bg);color:var(--tx);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.mesh{position:fixed;inset:0;z-index:-1;background:radial-gradient(720px 500px at 10% -6%,rgba(200,16,46,.14),transparent 60%),radial-gradient(780px 580px at 92% 4%,rgba(22,193,90,.14),transparent 62%),radial-gradient(700px 620px at 60% 108%,rgba(22,193,90,.10),transparent 60%),linear-gradient(180deg,#07090D,#0A0E12)}
+a{color:var(--g);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+/* header */
+header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hin{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}
+.logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none}
+.badges{display:flex;gap:3px}.badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}
+.nav{display:flex;gap:1px;margin-left:6px}
+.nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;white-space:nowrap;transition:.15s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.hr{margin-left:auto;display:flex;align-items:center;gap:14px}
+.cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:11px 18px;border-radius:100px;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}
+.drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}
+.drop.open{display:block}.drop nav{display:flex;flex-direction:column;gap:2px}.drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px}
+@media(max-width:1040px){.nav,.cta{display:none}.burger{display:block}}
+/* hero */
+.head{padding:56px 0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:7px 14px;border-radius:100px;margin-bottom:18px}
+h1{font:700 clamp(2rem,4vw,2.9rem)/1.08 Oxygen;letter-spacing:-.02em;color:#fff}
+h1 span{background:linear-gradient(115deg,#EAF1FF,#16C15A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.upd{margin-top:14px;color:var(--mu);font-size:14px}
+/* card */
+.card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:clamp(24px,4vw,44px);margin:22px 0 56px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85)}
+.intro{font-size:1.05rem;color:#C3D0E0;margin-bottom:6px}
+.note{font-size:.92rem;color:var(--mu);background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;padding:14px 16px;margin-top:16px}
+.sec{padding:24px 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+.sec:last-child{border-bottom:none;padding-bottom:2px}
+.sec h2{font:700 1.16rem Oxygen;letter-spacing:-.01em;margin-bottom:10px;display:flex;align-items:center;gap:11px;color:#fff}
+.sec h2 .n{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2))}
+.sec p{color:#AEBED2}.sec p+p{margin-top:10px}
+.sec ul{margin:8px 0 0;padding-left:20px;color:#AEBED2}.sec li{margin:5px 0}
+.ph{color:#F0A6B0}
 .contact-box{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
-.contact-box a{display:inline-flex;align-items:center;gap:8px;background:var(--light-blue);border:1px solid var(--border);border-radius:12px;padding:10px 16px;font-weight:700;color:var(--text)}
-.contact-box a:hover{text-decoration:none;border-color:var(--blue-active)}
-footer{background:var(--text);color:#fff;padding:36px 0}
-.foot{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-.foot .brand{font-weight:700;font-size:1.2rem}
-.foot .brand b{color:#7ea6f7}
-.foot .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;font-size:14px}
-.foot .links a{color:#cdd9f2}
-.foot .links a:hover{color:#fff}
-.foot .cp{opacity:.65;font-size:13px}
-
-/* full nav menu (added) */
-.nav-links{display:flex;align-items:center;gap:2px;flex-wrap:wrap}
-.nav-links a{font-size:14px;font-weight:700;color:#03235F;padding:9px 12px;border-radius:11px;text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
-.nav-links a:hover{background:#EDEEFC;color:#013CA4}
-.nav-links a.active{color:#074EE8;background:#EDEEFC}
-@media(max-width:880px){.nav-links{display:none}}
+.contact-box a{display:inline-flex;align-items:center;gap:8px;background:var(--gl);border:1px solid var(--ln);border-radius:12px;padding:10px 16px;font-weight:700;color:var(--tx)}
+.contact-box a:hover{border-color:var(--g)}
+/* footer */
+footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(--mu);padding:48px 0 26px}
+.ftop{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08);max-width:1240px;margin:0 auto;padding-left:clamp(18px,4vw,40px);padding-right:clamp(18px,4vw,40px)}
+.flogo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;margin-bottom:14px}
+.ftag{font:300 14px/1.6 Oxygen;color:var(--mu);margin-bottom:16px;max-width:36ch}
+.fcontacts{display:flex;flex-direction:column;gap:9px}.fcontacts a{color:#B7C4D6;font:400 14px Oxygen}.fcontacts a:hover{color:#fff}
+.fcol h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}
+.fcol a{display:block;color:var(--mu);font:400 14px Oxygen;padding:5px 0}.fcol a:hover{color:var(--g)}
+.fbot{max-width:1240px;margin:0 auto;padding:20px clamp(18px,4vw,40px) 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:300 12.5px/1.65 Oxygen;color:#6B7A99}
+.fbot .req{max-width:70ch}
+@media(max-width:900px){.ftop{grid-template-columns:1fr 1fr}}@media(max-width:560px){.ftop{grid-template-columns:1fr}}
+/* cookie */
+#cookiebar{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85)}
+#cookiebar p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}
+#cookiebar .ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}
+.hide{display:none!important}
 </style>
 </head>
 <body>
+<div class="mesh"></div>
+
 <header>
-  <div class="wrap nav">
-    <a href="/en/" class="logo">Make<b>Biz</b></a>
-    <div class="nav-links"><a href="/en/">Home</a><a href="/en/openclaw">OpenClaw</a><a href="/en/bitrix">Bitrix24</a><a href="/en/vector">Vector</a><a href="/en/intdoc">IntDoc</a><a href="/servers">Servers</a></div>
-    <div class="nav-right">
-      <a href="/en/" class="back">← <span>Home</span></a>
-      <div class="lang-switch">
-        <a href="/privacy"><span class="flag">🇷🇺</span><span class="lang-code">RU</span></a>
-        <a href="/en/privacy" class="active"><span class="flag">🇬🇧</span><span class="lang-code">EN</span></a>
-      </div>
+  <div class="hin">
+    <a href="index.html" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Home</a><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+    </nav>
+    <div class="hr">
+      <a href="index.html#contact" class="cta">Discuss a project</a>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
+  <div class="drop" id="drop"><nav>
+    <a href="index.html">Home</a><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+  </nav></div>
 </header>
 
 <section class="head">
   <div class="wrap">
-    <span class="eyebrow">Legal</span>
-    <h1>Privacy Policy</h1>
-    <p class="upd">Last updated: 28 June 2026</p>
+    <span class="eyebrow">Legal information</span>
+    <h1>Privacy <span>policy</span></h1>
+    <p class="upd">Updated: 16 July 2026</p>
   </div>
 </section>
 
 <div class="wrap">
   <div class="card">
-    <p class="intro">This policy explains how MakeBiz (“we”, “us”) collects and uses personal data of visitors to this website.</p>
+    <p class="intro">This Policy describes how MakeBiz (hereinafter we, the Operator) collects, uses, stores, and protects the personal data of website visitors. This Policy takes into account Russia Federal Law No. 152-FZ On Personal Data and UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL)</p>
+    <div class="note">Some Operator details below are marked as <span class="ph">[placeholders]</span> - they need to be replaced with the real legal entity data before publication.</div>
 
     <div class="sec">
-      <h2><span class="n">1</span>What we collect</h2>
-      <p>When you submit a contact form or request, we receive the information you provide: your name, company, role, phone number, Telegram username, and the content of your message. The site may use cookies for functionality and web analytics.</p>
+      <h2><span class="n">1</span>Personal data operator</h2>
+      <p>Operator: <span class="ph">[Legal name]</span>, address: <span class="ph">[legal address, emirate / city]</span>. Company details: <span class="ph">TIN [TIN] · PSRN/PSRNIE [PSRN]</span> (for Russia), <span class="ph">Trade License [№], [emirate]</span> (for UAE)</p>
+      <p>For any questions about the processing of your data, you can contact us through the contacts listed in section 8 and in the site footer</p>
     </div>
 
     <div class="sec">
-      <h2><span class="n">2</span>How we use it</h2>
-      <p>Only to handle your request, contact you, and provide the service or information you asked for. We do not use your data for purposes unrelated to your request.</p>
+      <h2><span class="n">2</span>What data we collect</h2>
+      <p>When you submit a feedback form or a request, we receive the data you provide: name, company name, phone number, Telegram handle, chosen contact method and the text of your message</p>
+      <p>When you visit the site, the following may be collected automatically: cookie files, IP address, technical data about your device and browser, as well as anonymized web analytics data about how you use the site</p>
     </div>
 
     <div class="sec">
-      <h2><span class="n">3</span>Legal basis</h2>
-      <p>We process this data based on your consent, which you give by submitting the form on the website.</p>
+      <h2><span class="n">3</span>Purposes and legal basis</h2>
+      <p>We process data only to handle your request, contact you and provide the requested service or information. We do not use data for purposes unrelated to your request</p>
+      <p>The legal basis for processing is your consent, which you give by submitting the form on the site. The consent is freely given, specific, informed and unambiguous. You can withdraw it at any time</p>
+    </div>
+
+    <div class="sec" id="cookie">
+      <h2><span class="n">4</span>Cookie and web analytics</h2>
+      <p>The Site uses cookie files for proper operation and for web analytics (for example, Yandex Metrica and/or Google Analytics). Optional cookies are set only after your consent via the cookie banner on your first visit</p>
+      <p>You can disable cookie in your browser settings, but some site features may not work correctly. You can configure personalized Google advertising in your Google ad settings</p>
     </div>
 
     <div class="sec">
-      <h2><span class="n">4</span>Sharing</h2>
-      <p>We do not sell your data to third parties. Data may be processed in our internal tools used to handle inquiries (including Telegram, where requests are delivered) and by web analytics services. We share only what is necessary to handle your request.</p>
+      <h2><span class="n">5</span>Data transfer to third parties</h2>
+      <p>We do not sell your data. To process inquiries, data may be transferred to our working tools: the Telegram messenger (where requests are received), CRM Bitrix24, web analytics services, and hosting (Vercel). We transfer only what is necessary to process your inquiry</p>
+      <p>Some services may process data on servers outside your country. We take measures to ensure that such transfer complies with applicable law (152-FZ, PDPL)</p>
     </div>
 
     <div class="sec">
-      <h2><span class="n">5</span>Retention and your rights</h2>
-      <p>We keep the data only as long as needed to handle your request and stay in touch. You can request access to or deletion of your data by contacting us using the details below.</p>
+      <h2><span class="n">6</span>Storage and protection</h2>
+      <p>We store data for as long as necessary to process your inquiry and to maintain communication with you, after which we delete or anonymize it. We apply technical and organizational protection measures: HTTPS encryption, restricted access to data, and storing only what is necessary</p>
     </div>
 
     <div class="sec">
-      <h2><span class="n">6</span>Privacy contact</h2>
-      <p>For any questions about how your data is processed, contact us:</p>
+      <h2><span class="n">7</span>Your rights</h2>
+      <p>You may request: access to your data, its correction, deletion, restriction or termination of processing, withdrawal of consent, as well as data portability (a right under PDPL). To do so, contact us using the details below - we will respond within the time frame established by applicable law</p>
+    </div>
+
+    <div class="sec">
+      <h2><span class="n">8</span>Contacts for data inquiries</h2>
+      <p>For any questions related to the processing of your personal data, contact us:</p>
       <div class="contact-box">
-        <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">✈ Telegram @Anton_MakeBiz</a>
-        <a href="tel:+971502620927">☎ +971 50 262 0927</a>
+        <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram @Anton_MakeBiz</a>
+        <a href="tel:+971502620927">+971 50 262 0927</a>
+        <a href="mailto:anton.makebiz@gmail.com">anton.makebiz@gmail.com</a>
       </div>
+      <p style="margin-top:12px">We may update this Policy. The current version is always posted on this page with the update date indicated</p>
     </div>
   </div>
 </div>
 
 <footer>
-  <div class="wrap foot">
-    <div class="brand">Make<b>Biz</b></div>
-    <div class="links">
-      <a href="/en/">Home</a>
-      <a href="/en/openclaw">OpenClaw</a>
-      <a href="/en/bitrix">Bitrix24</a>
-      <a href="/en/vector">Vector</a>
-      <a href="/en/intdoc">IntDoc</a>
-      <a href="/en/privacy">Privacy Policy</a>
+  <div class="ftop">
+    <div>
+      <a href="index.html" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+      <div class="ftag">An IT company from Dubai. We implement AI, CRM and BI analytics so your business loses less and grows faster.</div>
     </div>
-    <div class="cp">© 2026 MakeBiz · Dubai &amp; Russia · AI, CRM, BI analytics</div>
+    <div class="fcol"><h4>Products</h4><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a></div>
+    <div class="fcol"><h4>Sections</h4><a href="index.html">Home</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="privacy.html#cookie">Cookie Usage</a><a href="terms.html">Terms of Use</a></div>
+  </div>
+  <div class="fbot">
+    <div>© 2026 MakeBiz. All rights reserved.</div>
+    <div><a href="privacy.html" style="color:#8FA0B8">Privacy Policy</a></div>
   </div>
 </footer>
+
+<div id="cookiebar"><p>We use cookies for site functionality and web analytics. By continuing to use the site, you agree to this. <a href="#cookie">Learn more</a></p><button class="ok" id="cookieok">Accept</button></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),d=document.getElementById('drop');
+  if(b&&d){b.addEventListener('click',function(){d.classList.toggle('open')});d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open')})})}
+  var bar=document.getElementById('cookiebar'),ok=document.getElementById('cookieok');
+  try{ if(localStorage.getItem('mbf-cookie-ok')==='1') bar.classList.add('hide'); }catch(e){}
+  if(ok)ok.addEventListener('click',function(){bar.classList.add('hide');try{localStorage.setItem('mbf-cookie-ok','1')}catch(e){}});
+})();
+</script>
+<script>
+/* MakeBiz - unified Rays background (colors of the UAE flag). Self-contained module.
+   Canvas #mb-bg draws the dark backdrop + rays itself and sits BELOW the content (z-index:-1).
+   To make the canvas visible, html/body are forced to be transparent (inline !important),
+   old full-screen background layers are hidden. Survives a bundle re-render. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
+
+  // Force-remove the opaque background from html/body, otherwise it covers the canvas (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [position X (fraction of width), color, brightness, half-width px, phase]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // whether the background is dark and opaque (close to black)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false; // transparent/semi-transparent - do not touch
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) fixed decorative fullscreen layers - hide them
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) a solid dark page backdrop at full height - we make it transparent so the rays are visible
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H); // own opaque background layer
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
+<script>
+/* MakeBiz - unified Rays background (colors of the UAE flag). Self-contained module.
+   Canvas #mb-bg draws the dark backdrop + rays itself and sits BELOW the content (z-index:-1).
+   To make the canvas visible, html/body are forced to be transparent (inline !important),
+   old full-screen background layers are hidden. Survives a bundle re-render. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
+
+  // Force-remove the opaque background from html/body, otherwise it covers the canvas (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [position X (fraction of width), color, brightness, half-width px, phase]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // whether the background is dark and opaque (close to black)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false; // transparent/semi-transparent - do not touch
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) fixed decorative fullscreen layers - hide them
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) a solid dark page backdrop at full height - we make it transparent so the rays are visible
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H); // own opaque background layer
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function(){
+  var ID=110784864, SRC='https://mc.yandex.ru/metrika/tag.js?id='+ID, i='ym', m=window;
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  m[i](ID,'init',{ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  function ensure(){
+    try{
+      var ss=document.getElementsByTagName('script');
+      for(var j=0;j<ss.length;j++){ if(ss[j].src===SRC) return; }
+      var k=document.createElement('script'); k.async=1; k.src=SRC;
+      (document.head||document.documentElement).appendChild(k);
+    }catch(e){}
+  }
+  ensure();
+  var n=0, iv=setInterval(function(){ ensure(); if(++n>20) clearInterval(iv); }, 400);
+})();
+</script>
+<script>
+/* MakeBiz — чистка (EN-enhanced): убрать «Повторить», снять точки в конце предложений (в т.ч. div/label/footer и хвостовых ссылках), AI вместо ИИ, без длинных тире. */
+(function(){
+  if(window.__mbCleanDone) return; window.__mbCleanDone=true;
+  var INLINE={A:1,SPAN:1,B:1,I:1,EM:1,STRONG:1,U:1,MARK:1,SMALL:1,SUP:1,SUB:1,CODE:1};
+  function walkText(fn){ try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;while(n=w.nextNode()){var p=n.parentNode;if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE'))continue;fn(n);}}catch(e){} }
+  function isAbbr(s){ return /(\bт\.\s?д|\bт\.\s?п|\bи\s?др|\be\.\s?g|\bi\.\s?e|\betc|\d\.\d|\.\.\.)\.?\s*$/i.test(s); }
+  function stripEl(el){
+    if(el.querySelector('h1,h2,h3,h4,h5,h6,p,ul,ol,section,table')) return;
+    for(var i=el.childNodes.length-1;i>=0;i--){ var c=el.childNodes[i];
+      if(c.nodeType===3){ if(!/\S/.test(c.nodeValue)) continue;
+        if(/\.\s*$/.test(c.nodeValue) && !isAbbr(c.nodeValue)) c.nodeValue=c.nodeValue.replace(/\.(\s*)$/,'$1');
+        return;
+      } else if(c.nodeType===1){ if(INLINE[c.tagName]) stripEl(c); return; } }
+  }
+  function clean(){
+    var bs=document.querySelectorAll('button,a');
+    for(var i=0;i<bs.length;i++){ var t=(bs[i].textContent||''); if(t.indexOf('Повторить')>-1 && t.replace(/\s/g,'').length<15) bs[i].remove(); }
+    walkText(function(n){ var v=n.nodeValue; if(!v)return; var nv=v; if(nv.indexOf('ИИ')>-1)nv=nv.replace(/ИИ/g,'AI'); if(nv.indexOf('—')>-1||nv.indexOf('–')>-1)nv=nv.replace(/[—–]/g,'-'); if(nv!==v)n.nodeValue=nv; });
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,figcaption,div,label,footer,blockquote,td,dd');
+    for(var k=0;k<els.length;k++) stripEl(els[k]);
+  }
+  clean(); var m=0, iv=setInterval(function(){clean();if(++m>16)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(function(){clean();});try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},8000);}
+})();
+</script>
+<script>
+/* MakeBiz — переключатель языков. AE=корень, /en, /ru. Инлайн-стили (!important) — устойчивы к CSS страницы и очистке head. */
+(function(){
+  if(window.__mbLangDone) return; window.__mbLangDone=true;
+  var FLAG={ae:'<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#fff"/><rect width="12" height="2" fill="#00732F"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#FF0000"/></svg>',en:'<svg viewBox="0 0 19 13" preserveAspectRatio="none"><rect width="19" height="13" fill="#fff"/><rect y="0" width="19" height="1" fill="#B22234"/><rect y="2" width="19" height="1" fill="#B22234"/><rect y="4" width="19" height="1" fill="#B22234"/><rect y="6" width="19" height="1" fill="#B22234"/><rect y="8" width="19" height="1" fill="#B22234"/><rect y="10" width="19" height="1" fill="#B22234"/><rect y="12" width="19" height="1" fill="#B22234"/><rect width="8" height="7" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.3" cy="1.2" r=".45"/><circle cx="3" cy="1.2" r=".45"/><circle cx="4.7" cy="1.2" r=".45"/><circle cx="6.4" cy="1.2" r=".45"/><circle cx="2.1" cy="2.7" r=".45"/><circle cx="3.8" cy="2.7" r=".45"/><circle cx="5.5" cy="2.7" r=".45"/><circle cx="1.3" cy="4.2" r=".45"/><circle cx="3" cy="4.2" r=".45"/><circle cx="4.7" cy="4.2" r=".45"/><circle cx="6.4" cy="4.2" r=".45"/><circle cx="2.1" cy="5.6" r=".45"/><circle cx="3.8" cy="5.6" r=".45"/><circle cx="5.5" cy="5.6" r=".45"/></g></svg>',ru:'<svg viewBox="0 0 9 6" preserveAspectRatio="none"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg>'};
+  var CODE={ae:'AE',en:'EN',ru:'RU'}, NAME={ae:'Эмираты',en:'English',ru:'Русский'};
+  var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en','ru'];
+  function cur(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return 'en'; if(/^\/ru(\/|$)/.test(p))return 'ru'; return 'ae';}
+  function base(){var p=location.pathname.replace(/^\/(en|ru)(?=\/|$)/,''); return p===''?'/':p;}
+  function urlFor(l){var b=base(),pre=PRE[l]; if(b==='/')return pre===''?'/':pre+'/'; return pre+b;}
+  function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
+  var WRAP='display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;width:auto!important;vertical-align:middle';
+  var ITEM='box-sizing:border-box!important;display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;padding:6px 9px!important;border-radius:10px!important;border:1px solid rgba(255,255,255,.10)!important;text-decoration:none!important;cursor:pointer;width:auto!important;height:auto!important;box-shadow:none!important;transition:border-color .2s';
+  var ACT=';background:rgba(22,193,90,.14)!important;border-color:rgba(22,193,90,.55)!important';
+  var FL='width:20px!important;height:14px!important;min-width:20px!important;max-width:20px!important;border-radius:3px!important;overflow:hidden!important;display:inline-flex!important;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto!important;margin:0!important;padding:0!important';
+  var SVG='width:20px!important;height:14px!important;max-width:none!important;min-width:0!important;display:block!important;margin:0!important';
+  function cd(a){return 'display:inline-block!important;font:700 12px Oxygen,system-ui,sans-serif!important;letter-spacing:.05em!important;white-space:nowrap!important;line-height:1!important;color:'+(a?'#EAF1FF':'#93A4B8')+'!important';}
+  function build(){
+    var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
+    if(!right || right.querySelector('.mb-lang')) return;
+    var c=cur(), wrap=document.createElement('div'); wrap.className='mb-lang'; wrap.setAttribute('style',WRAP);
+    ordered().forEach(function(l){
+      var a=document.createElement('a'); a.className='mb-lang-i'; a.href=urlFor(l); a.setAttribute('hreflang',l); a.title=NAME[l];
+      a.setAttribute('style', ITEM+(l===c?ACT:''));
+      var f=document.createElement('span'); f.className='mb-lang-fl'; f.setAttribute('style',FL); f.innerHTML=FLAG[l];
+      var svg=f.querySelector('svg'); if(svg) svg.setAttribute('style',SVG);
+      var code=document.createElement('span'); code.className='mb-lang-cd'; code.setAttribute('style',cd(l===c)); code.textContent=CODE[l];
+      a.appendChild(f); a.appendChild(code); wrap.appendChild(a);
+    });
+    right.insertBefore(wrap, right.firstChild);
+  }
+  build();
+  var n=0, iv=setInterval(function(){build(); if(++n>25)clearInterval(iv);},300);
+  if(window.MutationObserver){var mo=new MutationObserver(build);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
+<script>
+/* MakeBiz — призывы (записаться/обсудить/запросить демо/оставить заявку и их англ. аналоги)
+   ведут на форму #contact внизу, а НЕ в Telegram. RU+EN. Telegram/WhatsApp/кабинет/калькулятор не трогаем. */
+(function(){
+  if(window.__mbCtaDone) return; window.__mbCtaDone=true;
+  var CTA=/(Записаться на демонстрац|Записаться на демо|Обсудить проект|Обсудить задачу|Обсудить внедрен|Запросить дем|Получить[\s\S]{0,20}анализ|Оставить заявку|Обсудить$|Book a demo|Schedule a demo|Request a demo|Get a demo|Discuss (a |your |the )?project|Discuss (the |your )?task|Leave a request|Send a request|Get[\s\S]{0,20}(analysis|hours)|Start a project|Talk to us|Contact us|Book a call)/i;
+  var SKIP=/Telegram|WhatsApp|Whats|кабинет|Войти|калькул|Рассчита|стать партн|партнёр|Отправить|Submit|Log ?in|Cabinet|Calculat|Become a partner|Open account/i;
+  function txt(el){return (el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();}
+  function isCTA(el){var t=txt(el); return t && t.length<=48 && CTA.test(t) && !SKIP.test(t);}
+  function fix(){document.querySelectorAll('a,button').forEach(function(el){if(el.__mbCta||!isCTA(el))return;el.__mbCta=1;if(el.tagName==='A'){el.setAttribute('href','#contact');el.removeAttribute('target');el.removeAttribute('rel');}el.removeAttribute('onclick');});}
+  document.addEventListener('click',function(e){var el=e.target&&e.target.closest&&e.target.closest('a,button');if(!el||!isCTA(el))return;var c=document.getElementById('contact')||document.querySelector('#mbcf-contact,.mbcf-wrap');if(c){e.preventDefault();e.stopPropagation();try{c.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){location.hash='#contact';}}},true);
+  fix();var n=0,iv=setInterval(function(){fix();if(++n>25)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
 </body>
 </html>

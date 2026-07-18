@@ -1,268 +1,1068 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8">
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MakeBiz, Bitrix implementation & support</title>
+<title>MakeBiz · Bitrix24</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--text-accent:#013CA4;--muted:#6B7A99;--muted-soft:#AAAAAA;
-  --blue:#013CA4;--blue-active:#074EE8;--soft-blue:#EDEEFC;--light-blue:#E6F1FD;--extra-blue:#9CB5DB;
-  --green:#1AB248;--red:#C51929;--border:#E7E7E7;
-  --shadow-sm:0 8px 24px rgba(3,35,95,.07);--shadow:0 16px 44px rgba(3,35,95,.10);--shadow-lg:0 30px 80px rgba(3,35,95,.16);
-  --r-lg:32px;--r-md:20px;--r-sm:14px;
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <style>/* latin-ext */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("0290ca26-ad07-438d-86bd-df913993004f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Oxygen','Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
-a{color:inherit;text-decoration:none}
-h1,h2,h3,h4{letter-spacing:-.02em;line-height:1.1}
-.text-grad{background:linear-gradient(120deg,var(--text),var(--blue-active) 60%,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:8px 16px;border-radius:100px;margin-bottom:22px}
-.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue-active)}
-
-header.site{position:sticky;top:0;z-index:50;background:rgba(245,247,249,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
-header.site.scrolled{box-shadow:0 8px 24px rgba(3,35,95,.06)}
-.nav{display:flex;align-items:center;gap:18px;height:74px}
-.brand{font-weight:700;font-size:1.3rem;display:inline-flex;align-items:center;gap:8px}
-.brand b{color:var(--blue-active)}
-.brand .tag{display:inline-flex;gap:4px}
-.brand .tag span{padding:2px 6px;border-radius:5px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.04em}
-.nav-links{display:flex;gap:4px;margin-left:24px;flex:1}
-.nav-links a{padding:8px 14px;border-radius:10px;font-size:14px;font-weight:700;color:var(--muted);transition:all .2s}
-.nav-links a:hover{color:var(--text);background:var(--soft-blue)}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.nav-phone{font-size:14px;font-weight:700;color:var(--text);display:inline-flex;align-items:center;gap:6px}
-.nav-phone svg{width:16px;height:16px;color:var(--blue-active)}
-
-.lang-switch{display:inline-flex;align-items:center;background:#fff;border:1px solid var(--border);border-radius:100px;padding:4px;box-shadow:var(--shadow-sm);gap:2px}
-.lang-switch a{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:100px;font-size:13px;font-weight:700;color:var(--muted);transition:all .2s;line-height:1}
-.lang-switch a.active{background:linear-gradient(135deg,var(--blue),var(--blue-active));color:#fff;box-shadow:0 6px 14px rgba(7,78,232,.32)}
-.lang-switch a:hover:not(.active){color:var(--text);background:#F5F7F9}
-
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:15px;padding:14px 26px;border-radius:14px;border:none;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s;white-space:nowrap}
-.btn-primary{background:var(--blue-active);color:#fff;box-shadow:0 12px 30px rgba(7,78,232,.3)}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(7,78,232,.42)}
-.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
-.btn-secondary:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--extra-blue)}
-
-.hero{padding:clamp(60px,8vw,110px) 0;position:relative;overflow:hidden}
-.aura{position:absolute;width:620px;height:620px;border-radius:50%;filter:blur(110px);opacity:.4;top:-180px;right:-120px;background:radial-gradient(circle,rgba(7,78,232,.4),transparent 70%);z-index:0;pointer-events:none}
-.aura2{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(110px);opacity:.3;background:radial-gradient(circle,rgba(26,178,72,.4),transparent 70%);bottom:-200px;left:-100px;pointer-events:none;z-index:0}
-.hero .wrap{position:relative;z-index:1}
-.hero h1{font-size:clamp(2.3rem,5vw,4rem);max-width:900px;margin-bottom:22px;text-wrap:balance}
-.hero p.sub{font-size:1.18rem;color:var(--muted);max-width:680px;margin-bottom:34px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-stats{display:flex;gap:48px;margin-top:60px;flex-wrap:wrap}
-.hero-stats .st .v{font-size:2.2rem;font-weight:700;letter-spacing:-.02em;background:linear-gradient(120deg,var(--blue),var(--blue-active));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-stats .st .l{font-size:13px;color:var(--muted);font-weight:700;margin-top:4px}
-
-.section{padding:clamp(56px,8vw,110px) 0}
-.section.alt{background:var(--surface)}
-.sec-head{margin-bottom:48px}
-.sec-head.center{text-align:center;max-width:780px;margin-left:auto;margin-right:auto}
-.sec-head h2{font-size:clamp(1.9rem,4vw,3rem)}
-.sec-head p{color:var(--muted);font-size:1.1rem;margin-top:14px}
-
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-@media(max-width:880px){.products{grid-template-columns:1fr}}
-.product{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:40px;box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;overflow:hidden}
-.product:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.product::before{content:"";position:absolute;top:0;left:0;height:4px;width:100%;background:linear-gradient(90deg,var(--blue),var(--blue-active),var(--green));transform:scaleX(0);transform-origin:left;transition:transform .4s}
-.product:hover::before{transform:scaleX(1)}
-.product .pic{width:60px;height:60px;border-radius:14px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,var(--blue),var(--blue-active));margin-bottom:22px;box-shadow:0 14px 30px rgba(7,78,232,.28)}
-.product .pic svg{width:30px;height:30px}
-.product h3{font-size:1.5rem;margin-bottom:10px}
-.product .ptag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:var(--soft-blue);padding:4px 10px;border-radius:100px;margin-bottom:14px}
-.product p{color:var(--muted);margin-bottom:22px}
-.product .plink{color:var(--blue-active);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
-.product:hover .plink{gap:10px}
-
-.clients{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
-.clients .c{background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:12px 24px;font-weight:700;font-size:14px;box-shadow:var(--shadow-sm)}
-
-.cta-band{background:linear-gradient(135deg,#031a44,#013CA4);border-radius:var(--r-lg);padding:clamp(40px,6vw,72px);color:#fff;text-align:center;position:relative;overflow:hidden;margin:0 auto;max-width:1200px}
-.cta-band .glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(7,78,232,.5),transparent 70%);top:-180px;left:50%;transform:translateX(-50%)}
-.cta-band h2{position:relative;font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:18px;max-width:680px;margin-left:auto;margin-right:auto}
-.cta-band p{position:relative;color:#cdd9f2;max-width:560px;margin:0 auto 26px;font-size:1.05rem}
-.cta-band .btn-primary{background:#fff;color:var(--blue);position:relative}
-
-footer.site{background:var(--text);color:#fff;padding:50px 0 30px}
-footer.site .brand{justify-content:center;color:#fff;margin-bottom:18px}
-footer.site .brand b{color:#7ea6f7}
-footer.site .fl{display:flex;justify-content:center;gap:24px;margin-bottom:18px;flex-wrap:wrap}
-footer.site .fl a{color:#cdd9f2;font-size:14px;font-weight:700;transition:color .2s}
-footer.site .fl a:hover{color:#fff}
-footer.site .cp{text-align:center;color:#7e9bd0;font-size:13px}
-
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:880px){.nav-links{display:none}}
-:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:2px solid var(--blue-active,#074EE8);outline-offset:2px}a[class*=cta]:active,a[class*=btn]:active,button:active,.nav-cta:active{transform:translateY(1px)}button:disabled,[disabled]{opacity:.55;cursor:not-allowed}.as-h1{font-size:clamp(2.1rem,3.9vw,3.25rem);margin-bottom:22px;text-wrap:balance}/*p2*/.text-grad{background:linear-gradient(120deg,var(--text),var(--blue-active))!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}.partner-badge{display:none!important}</style>
-<link rel="canonical" href="https://makebiztehnologies.com/en/bitrix">
-<meta name="theme-color" content="#013CA4">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MakeBiz">
-<meta property="og:locale" content="en_US">
-<meta property="og:title" content="MakeBiz, Bitrix implementation & support">
-<meta property="og:description" content="MakeBiz: AI, CRM и автоматизация.">
-<meta property="og:url" content="https://makebiztehnologies.com/en/bitrix">
-<meta property="og:image" content="https://makebiztehnologies.com/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MakeBiz, Bitrix implementation & support">
-<meta name="twitter:description" content="MakeBiz: AI, CRM и автоматизация.">
-<meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
-<link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/bitrix">
-<link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/bitrix">
-<link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/bitrix">
-</head><body>
-
-<header class="site" id="hdr"><div class="wrap"><nav class="nav">
-  <a class="brand" href="/en/">Make<b>Biz</b><span class="tag"><span style="background:#013CA4">AI</span><span style="background:#013CA4">BI</span><span style="background:#C51929">CRM</span></span></a>
-  <div class="nav-links">
-    <a href="/en/">Home</a>
-    <a href="/en/openclaw">OpenClaw</a>
-    <a href="/en/bitrix">Bitrix</a>
-    <a href="/en/vector">Vector</a>
-    <a href="/en/intdoc">IntDoc</a>
-    <a href="/servers">Servers</a>
+/* latin */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("0eaa9638-5dcb-4752-a7b6-0ccaabfc31dc") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("777780ec-719d-4567-937a-4ecbe4b9f051") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c00d643d-7940-431c-9c2f-b17916e7c36d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("a70c8fc6-bcc0-4513-918b-26c7b15c7cb5") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("af2deae7-bade-4b35-9e2a-b130527cb9e2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    html,body{margin:0}
+    body{background:transparent;font-family:Oxygen,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#16C15A;text-decoration:none}
+    a:hover{color:#4FE07F}
+    ::selection{background:rgba(22,193,90,.22)}
+    @keyframes mbFlow{0%{background-position:0 120%}100%{background-position:0 -120%}}
+  </style>
+<style>
+[data-mbnav] a{font:400 13.5px Oxygen;color:#95A0B2;padding:8px 11px;border-radius:8px;transition:color .15s;}
+[data-mbnav] a:hover{color:#fff;}
+[data-mbnav] a.active{color:#8FE7AE;font-weight:700;}
+@media(max-width:1080px){[data-mbnav],[data-mbhide]{display:none!important;}}
+.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#07090D,#0A0E12 48%,#07090D);}
+.pagebg b{position:absolute;border-radius:50%;filter:blur(120px);}
+.pagebg .p1{width:680px;height:680px;background:radial-gradient(circle,rgba(200,16,46,.30),transparent 70%);top:-8%;left:-10%;animation:mbA 32s ease-in-out infinite alternate;}
+.pagebg .p2{width:600px;height:600px;background:radial-gradient(circle,rgba(22,193,90,.28),transparent 70%);top:38%;right:-12%;animation:mbB 36s ease-in-out infinite alternate;}
+.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(12,140,63,.40),transparent 70%);top:76%;left:14%;animation:mbA 40s ease-in-out infinite alternate;}
+@keyframes mbA{to{transform:translate(60px,-40px) scale(1.14);}}
+@keyframes mbB{to{transform:translate(-50px,50px) scale(1.1);}}
+</style>
+</head>
+<body>
+<div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
+<div style="position:sticky;top:0;z-index:70;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);">
+  <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:18px;height:60px;padding:0 clamp(18px,4vw,44px);">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#16C15A;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
+    <nav data-mbnav style="display:flex;gap:2px;margin-left:6px;">
+      <a href="index.html">Home</a><a href="ai-agents.html">AI Agents</a>
+      <a href="vector.html">Vector</a><a href="intdoc.html">IntDoc</a><a href="bitrix.html" class="active">Bitrix24</a>
+      <a href="vps.html">VPS</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+    </nav>
+    <span data-mbhide style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
   </div>
-  <div class="nav-cta">
-    <div class="lang-switch">
-      <a href="/bitrix">🇷🇺 RU</a>
-      <a href="/en/bitrix" class="active">🇬🇧 EN</a>
-    </div>
-    <a class="nav-phone" href="tel:+971502620927"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>+971 50 262 0927</a>
-    <a href="#contact" class="btn btn-primary" style="padding:11px 20px">Get in touch</a>
-  </div>
-</nav></div></header>
+</div>
+<div id="bxroot" style="min-height:100vh;background:transparent;color:#EAF1FF;overflow-x:hidden">
 
-<section class="hero">
-  <div class="aura"></div>
-  <div class="aura2"></div>
-  <div class="wrap reveal">
-    <span class="eyebrow"><span class="dot"></span>AI · CRM · BI · Automation</span>
-    <h1>We grow your business with <span class="text-grad">applied artificial intelligence</span></h1>
-    <p class="sub">A full-cycle IT company bringing AI into real business processes: sales, calls, documents, analytics and operations. Dubai and Russia offices, 6 years on the market, 150+ projects delivered.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Discuss your project →</a>
-      <a href="#products" class="btn btn-secondary">Explore our products</a>
-    </div>
-    <div class="hero-stats">
-      <div class="st"><div class="v">6 years</div><div class="l">on the market</div></div>
-      <div class="st"><div class="v">150+</div><div class="l">projects delivered</div></div>
-      <div class="st"><div class="v">24/7</div><div class="l">client support</div></div>
-      <div class="st"><div class="v">2 offices</div><div class="l">Dubai & Russia</div></div>
-    </div>
-  </div>
-</section>
+  
 
-<section class="section alt" id="products">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow"><span class="dot"></span>Our products</span>
-      <h2>Four products, <span class="text-grad">one operating system</span> for your business</h2>
-      <p>From a personal AI assistant to call analytics, document AI and CRM under one roof.</p>
+  <a id="top"></a>
+  <section style="position:relative;max-width:1180px;margin:0 auto;padding:clamp(44px,6vw,92px) clamp(18px,4vw,40px) clamp(34px,5vw,64px)">
+    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,64px);align-items:center" data-hero-grid="" data-reveal="">
+      <div>
+        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Bitrix24 · implementation and support</span>
+        <h1 style="font:700 clamp(33px,5vw,60px)/1.04 Oxygen;letter-spacing:-.025em;color:#fff;margin:22px 0 18px;max-width:17ch;text-wrap:balance">Bitrix24 as <span style="color:#16C15A">a digital management environment</span> business</h1>
+        <p style="font:300 clamp(15px,1.6vw,19px)/1.6 Oxygen;color:#93A4B8;margin:0;max-width:52ch">We implement Bitrix24 not as a program but as a working system: processes, communications, accounting, roles and analytics come together into a single managed workflow of the company</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+          <a href="#form" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Leave a request <svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="#vnedrenie" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">What implementation includes</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:30px">
+          <span style="display:inline-flex;align-items:center;gap:8px;font:400 13.5px Oxygen;color:#C3D0E2;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:100px;padding:9px 15px"><span style="width:6px;height:6px;border-radius:50%;background:#16C15A"></span>Unified environment</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font:400 13.5px Oxygen;color:#C3D0E2;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:100px;padding:9px 15px"><span style="width:6px;height:6px;border-radius:50%;background:#16C15A"></span>Processes and roles</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font:400 13.5px Oxygen;color:#C3D0E2;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:100px;padding:9px 15px"><span style="width:6px;height:6px;border-radius:50%;background:#16C15A"></span>Turnkey implementation</span>
+        </div>
+      </div>
+      <div data-scene="board2" style="position:relative;border-radius:24px;overflow:hidden;min-height:clamp(360px,44vw,500px);background:radial-gradient(120% 110% at 50% 6%,rgba(22,193,90,.08),transparent 60%),linear-gradient(180deg,#0B0E13,#08090D);border:1px solid rgba(255,255,255,.07)">
+        <canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
+      </div>
     </div>
-    <div class="products">
-      <a href="/en/openclaw" class="product reveal">
-        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
-        <span class="ptag">Personal AI assistant</span>
-        <h3>OpenClaw</h3>
-        <p>Your personal AI agent that remembers everything: contacts, deadlines, documents. Works with your CRM, your team and your family.</p>
-        <span class="plink">Learn more →</span>
-      </a>
-      <a href="/en/vector" class="product reveal">
-        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h3l3-9 6 18 3-9h3"/></svg></div>
-        <span class="ptag">AI call analytics</span>
-        <h3>Vector</h3>
-        <p>Listens to and analyses 100% of your sales calls. Shows where deals are being lost and what to fix in your sales team.</p>
-        <span class="plink">Learn more →</span>
-      </a>
-      <a href="/en/bitrix" class="product reveal">
-        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
-        <span class="ptag">CRM implementation</span>
-        <h3>Bitrix</h3>
-        <p>End-to-end Bitrix implementation and support. A digital control plane for sales, processes, roles and analytics.</p>
-        <span class="plink">Learn more →</span>
-      </a>
-      <a href="/en/intdoc" class="product reveal">
-        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div>
-        <span class="ptag">Document AI</span>
-        <h3>IntDoc</h3>
-        <p>AI-powered processing of supplier quotes, price lists and specs. Compares vendors by price, lead time and stock automatically.</p>
-        <span class="plink">Learn more →</span>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow"><span class="dot"></span>Trusted by</span>
-      <h2>Companies that <span class="text-grad">trust us</span></h2>
-      <p>From mid-market to enterprise across retail, logistics, real estate, healthcare, education and services.</p>
+  <section style="position:relative;border-top:1px solid transparent;overflow:hidden">
+    <div data-scene="network" style="position:absolute;inset:0;pointer-events:none;opacity:.5;z-index:0"><canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
+    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px)">
+      <div data-reveal="" style="max-width:60ch;margin-bottom:44px">
+        <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">Unified workflow</span>
+        <h2 style="font:700 clamp(26px,3.6vw,42px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:14px 0 12px">All company work - in one environment</h2>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Bitrix24 connects sales, tasks, documents, and communications. Data no longer lives in scattered places - a single source of truth emerges that management can rely on</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" data-caps="" data-reveal="">
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">Processes and tasks</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">The team works in a unified structure of tasks, stages and owners</p></div>
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">CRM and deals</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">Clients, deals, and the entire interaction history in one place</p></div>
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">Telephony and email</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">Calls and correspondence are automatically linked to cards</p></div>
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">Roles and access</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">Everyone sees their own - permissions are structured to fit the company</p></div>
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 6-6"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">Analytics</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">Reports and dashboards on sales and processes to support decisions</p></div>
+        <div style="background:rgba(12,15,21,.72);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px"><span style="display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);color:#4FE07F;margin-bottom:16px"><svg sc-camel-view-box="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z"></path></svg></span><h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 6px">Automation</h3><p style="font:300 14px/1.55 Oxygen;color:#93A4B8;margin:0">The system moves deals forward, sets tasks, and sends reminders on its own</p></div>
+      </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
-<section class="section alt">
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <div class="glow"></div>
-      <h2>Let's discuss what AI can do for your business</h2>
-      <p>A 30-minute call with our team, no slides, no sales talk. We'll look at your processes and show where AI brings real value.</p>
-      <a href="https://t.me/Anton_MakeBiz" class="btn btn-primary">Message us on Telegram →</a>
+  <a id="vnedrenie"></a>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px);border-top:1px solid transparent">
+    <div data-reveal="" style="max-width:64ch;margin-bottom:40px">
+      <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">01 · Implementation</span>
+      <h2 style="font:700 clamp(26px,3.6vw,42px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:14px 0 12px">What is included in the standard CRM setup</h2>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">The starter package prepares a working platform: the team immediately works in a single structured environment. More complex logic, integrations, and additional workflows are assessed after the pre-project assessment</p>
     </div>
-  </div>
-</section>
+    <div style="display:grid;grid-template-columns:1.5fr .82fr;gap:clamp(24px,3vw,44px);align-items:stretch" data-pkg="" data-reveal="">
+      <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden">
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Company profile: details, currency, time zone</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Adding users, up to 20</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Structure of the company and its divisions</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M16 11l2 2 4-4"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Roles, groups, and access rights</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Security settings</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">CRM setup: modules and reference books</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="8.5" cy="10" r="2"></circle><path d="M14 9h4M14 13h4M6 16h12"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Counterparty and contact fields</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.5V19l4 2v-8.5L22 3z"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Logic of cards and the sales funnel</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06)"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Basic notifications and role logic</span></div>
+          <div style="display:flex;gap:14px;align-items:center;padding:16px 22px"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 2.5 9 2.5 12 0v-5"></path></svg></span><span style="font:400 15px Oxygen;color:#EAF1FF">Introductory team training</span></div>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;border:1px solid rgba(22,193,90,.24);border-radius:20px;background:radial-gradient(130% 120% at 85% 0%,rgba(22,193,90,.16),transparent 60%),linear-gradient(180deg,#0C0F15,#090B10)">
+        <div style="padding:26px 26px 22px;border-bottom:1px solid rgba(255,255,255,.07)">
+          <span style="display:inline-block;font:700 11px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#4FE07F;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);padding:5px 12px;border-radius:100px;margin-bottom:14px">Standard CRM setup</span>
+          <div style="font:300 13px Oxygen;color:#93A4B8;margin-bottom:4px">Implementation and setup</div>
+          <div style="font:700 clamp(28px,3.4vw,38px) Oxygen;letter-spacing:-.02em;color:#16C15A;line-height:1.1">from 10 000 AED</div>
+          <a href="#form" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:18px;font:700 14px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:13px 18px;border-radius:12px;box-shadow:0 12px 26px rgba(22,193,90,.3);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Calculate implementation <svg sc-camel-view-box="0 0 24 24" width="16" height="16" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+        <div style="padding:22px 26px 26px">
+          <h4 style="font:700 12px Oxygen;letter-spacing:.06em;text-transform:uppercase;color:#93A4B8;margin:0 0 14px">Paid separately</h4>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Bitrix24 license</li>
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Paid third-party services</li>
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Complex integrations</li>
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Data migration</li>
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Advanced analytics and dashboards</li>
+            <li style="font:300 13.5px Oxygen;color:#93A4B8;padding-left:16px;position:relative"><span style="position:absolute;left:0;color:#6B7688">-</span>Custom development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow"><span class="dot"></span>Contacts</span>
-      <h2>Get in <span class="text-grad">touch</span></h2>
-      <p>Dubai office for the Middle East. Russian office for CIS. English and Russian-speaking team.</p>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px);border-top:1px solid transparent">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,52px);align-items:center" data-two="" data-reveal="">
+      <div>
+        <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">Complex projects</span>
+        <h2 style="font:700 clamp(24px,3.2vw,36px)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:14px 0 12px">When you need more than the standard setup</h2>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0;max-width:48ch">Multiple divisions, complex internal logic, analytics requirements, or cross-functional processes - implementation begins with a pre-project assessment</p>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:clamp(24px,3vw,34px);background:rgba(255,255,255,.02)">
+        <h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 18px">At this stage we:</h3>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;gap:12px;align-items:flex-start;font:300 14.5px/1.5 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>We study your current business logic</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;font:300 14.5px/1.5 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg></span>We map out processes and interaction points</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;font:300 14.5px/1.5 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path></svg></span>We define the future CRM architecture</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;font:300 14.5px/1.5 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.3L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.3a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4M12 17h.01"></path></svg></span>We identify bottlenecks and weak spots</div>
+          <div style="display:flex;gap:12px;align-items:flex-start;font:300 14.5px/1.5 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:22px;height:22px;border-radius:7px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"></path><path d="M3 12h12"></path><path d="M21 4v16"></path></svg></span>We prepare the scope of work, the estimate, and the roadmap</div>
+        </div>
+      </div>
     </div>
-    <div class="reveal" style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap">
-      <a href="https://t.me/Anton_MakeBiz" class="btn btn-secondary" style="padding:18px 30px">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10l6 2 2 6 4-5 5 4z"/></svg>
-        @Anton_MakeBiz
-      </a>
-      <a href="tel:+971502620927" class="btn btn-secondary" style="padding:18px 30px">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L19 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"/></svg>
-        +971 50 262 0927
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site"><div class="wrap">
-  <div class="brand">Make<b>Biz</b></div>
-  <div class="fl">
-    <a href="/en/openclaw">OpenClaw</a>
-    <a href="/en/bitrix">Bitrix</a>
-    <a href="/en/vector">Vector</a>
-    <a href="/en/intdoc">IntDoc</a>
-    <a href="tel:+971502620927">+971 50 262 0927</a>
-    <a href="https://t.me/Anton_MakeBiz">Telegram</a>
-    <a href="/en/privacy">Privacy Policy</a>
-  </div>
-  <div class="cp">© 2026 MakeBiz · Dubai & Russia · AI, CRM, BI Analytics</div>
-</div></footer>
+  <a id="process"></a>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px);border-top:1px solid transparent">
+    <div data-reveal="" style="max-width:56ch;margin-bottom:40px">
+      <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">02 · Process</span>
+      <h2 style="font:700 clamp(26px,3.6vw,42px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:14px 0 0">How implementation works</h2>
+    </div>
+    <div data-reveal="" data-timeline="" data-steps-row="" style="position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+      <div data-track="" style="position:absolute;left:10%;right:10%;top:17px;height:2px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden"><div data-rail-fill="" style="position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,#16C15A,#4FE07F);box-shadow:0 0 10px rgba(22,193,90,.6)"></div></div>
+      <div data-step="" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center"><span data-dot="" style="width:34px;height:34px;border-radius:50%;background:#0C0F15;border:1px solid rgba(22,193,90,.4);display:grid;place-items:center;font:700 13px Oxygen;color:#4FE07F;transition:background .4s,border-color .4s,color .4s;margin-bottom:16px">1</span><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 5px">Request analysis</h4><p style="font:300 13px/1.5 Oxygen;color:#93A4B8;margin:0">Initial analysis of the situation and current processes</p></div>
+      <div data-step="" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center"><span data-dot="" style="width:34px;height:34px;border-radius:50%;background:#0C0F15;border:1px solid rgba(22,193,90,.4);display:grid;place-items:center;font:700 13px Oxygen;color:#4FE07F;transition:background .4s,border-color .4s,color .4s;margin-bottom:16px">2</span><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 5px">Pre-project assessment</h4><p style="font:300 13px/1.5 Oxygen;color:#93A4B8;margin:0">We map out the workflow and the future architecture of the system</p></div>
+      <div data-step="" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center"><span data-dot="" style="width:34px;height:34px;border-radius:50%;background:#0C0F15;border:1px solid rgba(22,193,90,.4);display:grid;place-items:center;font:700 13px Oxygen;color:#4FE07F;transition:background .4s,border-color .4s,color .4s;margin-bottom:16px">3</span><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 5px">CRM setup</h4><p style="font:300 13px/1.5 Oxygen;color:#93A4B8;margin:0">We implement process logic, roles and automation</p></div>
+      <div data-step="" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center"><span data-dot="" style="width:34px;height:34px;border-radius:50%;background:#0C0F15;border:1px solid rgba(22,193,90,.4);display:grid;place-items:center;font:700 13px Oxygen;color:#4FE07F;transition:background .4s,border-color .4s,color .4s;margin-bottom:16px">4</span><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 5px">Team training</h4><p style="font:300 13px/1.5 Oxygen;color:#93A4B8;margin:0">We hand over the working logic and train employees</p></div>
+      <div data-step="" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center"><span data-dot="" style="width:34px;height:34px;border-radius:50%;background:#0C0F15;border:1px solid rgba(22,193,90,.4);display:grid;place-items:center;font:700 13px Oxygen;color:#4FE07F;transition:background .4s,border-color .4s,color .4s;margin-bottom:16px">5</span><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 5px">Support and development</h4><p style="font:300 13px/1.5 Oxygen;color:#93A4B8;margin:0">Support after launch and development of the system</p></div>
+    </div>
+  </section>
+
+  <a id="pakety"></a>
+  <a id="podderzhka"></a>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px);border-top:1px solid transparent">
+    <div data-reveal="" style="max-width:58ch;margin-bottom:40px">
+      <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">03 · Support</span>
+      <h2 style="font:700 clamp(26px,3.6vw,42px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:14px 0 12px">Support packages</h2>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Transparent packages based on the number of hours per month. Used hours are recorded openly, an additional hour beyond the package - 250 AED</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch" data-tiers="" data-reveal="">
+      <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;display:flex;flex-direction:column;transition:transform .28s,border-color .28s;background:rgba(255,255,255,.02)" style-hover="transform:translateY(-5px);border-color:rgba(22,193,90,.4)">
+        <div style="font:700 15px Oxygen;color:#93A4B8;margin-bottom:12px">5 hours per month</div>
+        <div style="font:700 clamp(28px,3.4vw,38px) Oxygen;letter-spacing:-.03em;color:#fff;line-height:1">1 250 <span style="font:700 1rem Oxygen;color:#6B7688">AED</span></div>
+        <div style="font:300 13px Oxygen;color:#6B7688;margin:6px 0 24px">small recurring tasks</div>
+        <a href="#form" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;font:700 14px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:13px 18px;border-radius:12px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">Choose a package</a>
+      </div>
+      <div style="position:relative;border:1px solid rgba(22,193,90,.4);border-radius:20px;padding:30px;display:flex;flex-direction:column;background:radial-gradient(130% 120% at 80% 0%,rgba(22,193,90,.14),transparent 60%),linear-gradient(180deg,#0C0F15,#0A0C11);box-shadow:0 30px 70px -34px rgba(22,193,90,.4);transition:transform .28s" style-hover="transform:translateY(-6px)">
+        <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);font:700 10px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);padding:6px 14px;border-radius:100px">Optimal</span>
+        <div style="font:700 15px Oxygen;color:#4FE07F;margin-bottom:12px">10 hours per month</div>
+        <div style="font:700 clamp(28px,3.4vw,38px) Oxygen;letter-spacing:-.03em;color:#fff;line-height:1">2 300 <span style="font:700 1rem Oxygen;color:#6B7688">AED</span></div>
+        <div style="font:300 13px Oxygen;color:#6B7688;margin:6px 0 24px">development and regular improvements</div>
+        <a href="#form" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;font:700 14px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:13px 18px;border-radius:12px;box-shadow:0 12px 26px rgba(22,193,90,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Choose a package</a>
+      </div>
+      <div style="border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:30px;display:flex;flex-direction:column;transition:transform .28s,border-color .28s;background:rgba(255,255,255,.02)" style-hover="transform:translateY(-5px);border-color:rgba(22,193,90,.4)">
+        <div style="font:700 15px Oxygen;color:#93A4B8;margin-bottom:12px">20 hours per month</div>
+        <div style="font:700 clamp(28px,3.4vw,38px) Oxygen;letter-spacing:-.03em;color:#fff;line-height:1">4 200 <span style="font:700 1rem Oxygen;color:#6B7688">AED</span></div>
+        <div style="font:300 13px Oxygen;color:#6B7688;margin:6px 0 24px">active work and growth</div>
+        <a href="#form" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;font:700 14px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:13px 18px;border-radius:12px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">Choose a package</a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,44px);margin-top:clamp(28px,4vw,44px)" data-two="" data-reveal="">
+      <div>
+        <h3 style="font:700 18px Oxygen;color:#fff;margin:0 0 16px">What is included in support</h3>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>User and permission administration</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Onboarding new employees</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Adjustment of CRM entity settings</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Editing roles, groups and access logic</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Updating processes and automations</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Setup of notifications and workflow logic</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Email, telephony, messengers</div>
+          <div style="display:flex;gap:11px;align-items:flex-start;font:300 14.5px/1.45 Oxygen;color:#C3D0E2"><span style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16C15A;margin-top:7px"></span>Consultations on Bitrix24 functionality</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font:700 18px Oxygen;color:#fff;margin:0 0 16px">Why MakeBiz</h3>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px 20px;background:rgba(255,255,255,.02)"><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 4px">Full-cycle IT company</h4><p style="font:300 13.5px/1.5 Oxygen;color:#93A4B8;margin:0">Implementation, analytics, automation and AI in one team</p></div>
+          <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px 20px;background:rgba(255,255,255,.02)"><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 4px">We look at the business logic</h4><p style="font:300 13.5px/1.5 Oxygen;color:#93A4B8;margin:0">We work with company processes, not just with configuring buttons</p></div>
+          <div style="border:1px solid rgba(22,193,90,.24);border-radius:14px;padding:18px 20px;background:linear-gradient(180deg,rgba(22,193,90,.08),rgba(255,255,255,.02))"><h4 style="font:700 15px Oxygen;color:#fff;margin:0 0 4px">Implementation and support together</h4><p style="font:300 13.5px/1.5 Oxygen;color:#93A4B8;margin:0">One team from start to growth - with no handing off of tasks</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a id="form"></a>
+  <section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px) clamp(56px,7vw,100px);border-top:1px solid transparent">
+    <div style="position:relative;overflow:hidden;border-radius:26px;background:radial-gradient(120% 130% at 84% 0%,rgba(22,193,90,.16),transparent 58%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(22,193,90,.2);padding:clamp(28px,4vw,52px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,4vw,52px);align-items:center" data-form-grid="" data-reveal="">
+      <div>
+        <span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">Request</span>
+        <h2 style="font:700 clamp(26px,3.4vw,42px)/1.08 Oxygen;letter-spacing:-.025em;color:#fff;margin:14px 0 14px;max-width:18ch">Tell us about your company and task</h2>
+        <p style="font:300 clamp(15px,1.6vw,18px)/1.6 Oxygen;color:#93A4B8;margin:0 0 26px;max-width:44ch">Whether you need a standard setup or a large project - leave a request, we will run a diagnostic and propose a solution tailored to your company</p>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <a href="tel:+971502620927" style="display:inline-flex;align-items:center;gap:11px;font:700 15px Oxygen;color:#EAF1FF"><span style="width:38px;height:38px;border-radius:11px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l2 5v3a1 1 0 0 1-1 1A16 16 0 0 1 4 6a1 1 0 0 1 1-1Z"></path></svg></span>+971 50 262 0927</a>
+          <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:11px;font:700 15px Oxygen;color:#EAF1FF"><span style="width:38px;height:38px;border-radius:11px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 3-10 9M22 3l-7 18-4-8-8-4z"></path></svg></span>Telegram @Anton_MakeBiz</a>
+        </div>
+      </div>
+      <div style="background:rgba(7,9,13,.5);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:clamp(22px,2.6vw,32px)">
+        <div data-form="" style="display:flex;flex-direction:column;gap:14px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">Name</span><input type="text" placeholder="Your name" style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04);color:#EAF1FF;font:400 14px Oxygen;outline:none" style-focus="border-color:#16C15A"></label>
+            <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">Company</span><input type="text" placeholder="Name" style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04);color:#EAF1FF;font:400 14px Oxygen;outline:none" style-focus="border-color:#16C15A"></label>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">Employees</span><input type="text" placeholder="For example, 50" style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04);color:#EAF1FF;font:400 14px Oxygen;outline:none" style-focus="border-color:#16C15A"></label>
+            <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">Phone</span><input type="tel" placeholder="+971 ..." style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04);color:#EAF1FF;font:400 14px Oxygen;outline:none" style-focus="border-color:#16C15A"></label>
+          </div>
+          <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">What you need</span><sc-raw-select style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(12,15,21,.9);color:#EAF1FF;font:400 14px Oxygen;outline:none" style-focus="border-color:#16C15A"><option>Bitrix24 implementation</option><option>Support, 5 hours</option><option>Support, 10 hours</option><option>Support, 20 hours</option><option>Pre-project assessment</option><option>Need a consultation</option></sc-raw-select></label>
+          <label style="display:block"><span style="display:block;font:700 12px Oxygen;color:#EAF1FF;margin-bottom:6px">Briefly about the task</span><textarea placeholder="Describe the processes or the goal" style="width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04);color:#EAF1FF;font:400 14px Oxygen;outline:none;resize:vertical;min-height:84px" style-focus="border-color:#16C15A"></textarea></label>
+          <button data-submit="" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 18px;border-radius:12px;box-shadow:0 14px 30px rgba(22,193,90,.32);cursor:pointer;transition:transform .2s" style-hover="transform:translateY(-2px)">Send request <svg sc-camel-view-box="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+          <p style="font:300 11.5px Oxygen;color:#6B7688;text-align:center;margin:0">By submitting the form, you agree to the privacy policy</p>
+        </div>
+        <div data-success="" style="display:none;text-align:center;padding:30px 10px">
+          <div style="width:60px;height:60px;border-radius:50%;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;margin:0 auto 16px;color:#4FE07F"><svg sc-camel-view-box="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg></div>
+          <h3 style="font:700 20px Oxygen;color:#fff;margin:0 0 8px">Thank you!</h3>
+          <p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Request received. The MakeBiz team will contact you shortly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid rgba(255,255,255,.07);background:transparent">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(30px,4vw,44px) clamp(18px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:11px">
+        <span style="width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;font:700 13px Oxygen;color:#052012">M</span>
+        <span style="font:700 15px Oxygen;color:#EAF1FF">MakeBiz</span>
+        <span style="font:300 13px Oxygen;color:#6B7688;border-left:1px solid rgba(255,255,255,.14);padding-left:11px">Bitrix24 · implementation and support</span>
+      </div>
+      <span style="font:300 13px Oxygen;color:#6B7688">© 2026 MakeBiz. Dubai and Russia</span>
+    </div>
+  </footer>
+
+</div>
 
 <script>
+
+class Component {
+  renderVals(){
+    this._root = this._root || {current:null};
+    return { root: this._root };
+  }
+  componentDidMount(){
+    const root = this._root && this._root.current; if(!root) return;
+    const self = this;
+    let realRM=false; try{realRM=matchMedia('(prefers-reduced-motion:reduce)').matches;}catch(e){}
+    const C={txt:'#EAF1FF',grn:'#16C15A',grnL:'#4FE07F',grnD:'#052012',mut:'#93A4B8',red:'#C8102E',redL:'#FF3B57'};
+    function hx(h){h=h.replace('#','');return[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
+    function rgba(h,a){const c=hx(h);return'rgba('+c[0]+','+c[1]+','+c[2]+','+a+')';}
+    function lerp(a,b,t){return a+(b-a)*t;}
+    function rr(x,y,w,h,r,ctx){r=Math.max(0,Math.min(r,w/2,h/2));ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+    function glow(ctx,x,y,r,col,a){if(r<=0)return;const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(col,a));g.addColorStop(1,rgba(col,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();}
+
+    let RM=false, SPEED=1;
+
+    const SCENES={
+      board2(){return{cols:[[],[],[],[]],mover:null,spawnT:0,moveT:0,seq:0,done:0};},
+      network(){const pts=[];for(let i=0;i<15;i++)pts.push({fx:Math.random(),fy:Math.random(),vx:(Math.random()-0.5)*0.0005,vy:(Math.random()-0.5)*0.0005});return{pts};}
+    };
+
+    const DRAW={
+      board2(ctx,t,W,H,st){
+        const pad=16,headerH=30,n=4,cols=['Request','In progress','Appr.','Deal'];
+        const bx=pad,bw=W-pad*2,colW=bw/n,topY=pad+headerH+14,cardH=26,gap=9,cardW=colW-20,ez=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+        if(!RM){
+          st.spawnT+=0.016*SPEED;st.moveT+=0.016*SPEED;
+          const total=st.cols.reduce((a,c)=>a+c.length,0)+(st.mover?1:0);
+          if(st.spawnT>0.8&&total<14){st.spawnT=0;st.cols[0].push({id:++st.seq});}
+          if(!st.mover&&st.moveT>0.6){st.moveT=0;const src=[0,1,2].filter(i=>st.cols[i].length>0);if(src.length){const i=src[Math.floor(Math.random()*src.length)];st.mover={from:i,to:i+1,card:st.cols[i].shift(),p:0,reject:Math.random()<0.16,vy:0,a:1,dy:0,dropping:false};}}
+          if(st.mover){const m=st.mover;
+            if(m.reject&&!m.dropping){m.p+=0.015*SPEED;if(m.p>=0.5)m.dropping=true;}
+            else if(m.dropping){m.vy+=0.02*SPEED;m.dy+=m.vy*4;m.a-=0.015*SPEED;if(m.a<=0)st.mover=null;}
+            else{m.p+=0.015*SPEED;if(m.p>=1){if(m.to>=n)st.done++;else{st.cols[m.to].push(m.card);if(m.to===n-1&&st.cols[n-1].length>5){st.cols[n-1].shift();st.done++;}}st.mover=null;}}
+          }
+        }
+        const drawCard=(x,y,green,red,flash,a)=>{ctx.globalAlpha=a==null?1:a;rr(x,y,cardW,cardH,7,ctx);ctx.fillStyle=green?rgba(C.grn,.85):rgba('#141A22',.96);ctx.fill();ctx.strokeStyle=red?rgba(C.redL,.9):green?rgba(C.grnL,.9):rgba(C.grn,.24+0.5*(flash||0));ctx.lineWidth=1.3;ctx.stroke();const ix=x+11;ctx.fillStyle=green?rgba('#052012',.8):rgba(C.grn,.5);ctx.beginPath();ctx.arc(ix,y+cardH/2,4,0,7);ctx.fill();ctx.fillStyle=green?rgba('#052012',.5):rgba('#ffffff',.24);rr(ix+10,y+cardH/2-5,cardW-46,4,2,ctx);ctx.fill();rr(ix+10,y+cardH/2+2,cardW-58,4,2,ctx);ctx.fill();ctx.globalAlpha=1;};
+        for(let i=0;i<n;i++){const x=bx+colW*i,last=i===n-1;
+          rr(x+3,topY-10,colW-6,H-topY-pad+2,12,ctx);ctx.fillStyle=rgba('#0E1319',.5);ctx.fill();ctx.strokeStyle=rgba('#ffffff',.05);ctx.lineWidth=1;ctx.stroke();
+          ctx.fillStyle=last?rgba(C.grnL,.95):rgba(C.mut,.9);ctx.font='700 10px Oxygen,sans-serif';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(cols[i].toUpperCase(),x+12,pad+headerH/2);
+          const cnt=last?st.done:st.cols[i].length,bw2=22,bx2=x+colW-bw2-12;rr(bx2,pad+headerH/2-9,bw2,18,9,ctx);ctx.fillStyle=last?rgba(C.grn,.9):rgba(C.grn,.14);ctx.fill();ctx.fillStyle=last?'#052012':rgba(C.grnL,.95);ctx.font='700 11px Oxygen,sans-serif';ctx.textAlign='center';ctx.fillText(String(cnt),bx2+bw2/2,pad+headerH/2);}
+        for(let i=0;i<n;i++){for(let s=0;s<st.cols[i].length;s++)drawCard(bx+colW*i+10,topY+s*(cardH+gap),false,false,0,1);}
+        if(st.mover){const m=st.mover,x0=bx+colW*m.from+10,x1=bx+colW*Math.min(m.to,n-1)+10,x=lerp(x0,x1,ez(Math.min(m.p,1))),y=topY-2+m.dy;drawCard(x,y,!m.reject&&m.p>=1,m.reject,1,m.a);}
+      },
+      network(ctx,t,W,H,st){
+        const pts=st.pts;
+        for(const p of pts){if(!RM){p.fx+=p.vx*SPEED;p.fy+=p.vy*SPEED;}if(p.fx<0||p.fx>1)p.vx*=-1;if(p.fy<0||p.fy>1)p.vy*=-1;p.fx=Math.max(0,Math.min(1,p.fx));p.fy=Math.max(0,Math.min(1,p.fy));}
+        const md=Math.min(W,H)*0.4;
+        for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],ax=a.fx*W,ay=a.fy*H,bx=b.fx*W,by=b.fy*H,d=Math.hypot(ax-bx,ay-by);if(d<md){ctx.strokeStyle=rgba(C.grn,(1-d/md)*0.2);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(bx,by);ctx.stroke();}}
+        for(const p of pts){const x=p.fx*W,y=p.fy*H;glow(ctx,x,y,9,C.grn,.14);ctx.fillStyle=rgba(C.grnL,.5);ctx.beginPath();ctx.arc(x,y,1.8,0,7);ctx.fill();}
+      }
+    };
+
+    root.querySelectorAll('[data-scene]').forEach(el=>{
+      const name=el.dataset.scene, cv=el.querySelector('[data-canvas]'); if(!cv||!DRAW[name])return;
+      const ctx=cv.getContext('2d'); let st=SCENES[name](); let W=0,Hh=0,playing=false,raf=0,last=performance.now(),acc=0;
+      function size(){const r=el.getBoundingClientRect();if(!r.width||!r.height)return;const dpr=Math.min(window.devicePixelRatio||1,2);W=r.width;Hh=r.height;cv.width=W*dpr;cv.height=Hh*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+      function frame(now){const dt=now-last;last=now;const paused=realRM||!!(self.props&&self.props.pauseMotion);const sp=(self.props&&self.props.speed!=null)?self.props.speed:1;if(!paused)acc+=dt*sp;RM=paused;SPEED=sp;const t=acc/1000*0.85;ctx.clearRect(0,0,W,Hh);DRAW[name](ctx,t,W,Hh,st);if(playing&&!realRM)raf=requestAnimationFrame(frame);}
+      function start(){if(playing)return;playing=true;size();last=performance.now();if(realRM){frame(performance.now());playing=false;return;}raf=requestAnimationFrame(frame);}
+      function stop(){playing=false;cancelAnimationFrame(raf);}
+      new ResizeObserver(()=>{size();if(!playing)frame(performance.now());}).observe(el);
+      new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?start():stop()),{threshold:0.05}).observe(el);
+    });
+
+    const rev=root.querySelectorAll('[data-reveal]');
+    rev.forEach(el=>{el.style.opacity='0';el.style.transform='translateY(16px)';el.style.transition='opacity .7s ease,transform .7s ease';});
+    const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none';rio.unobserve(e.target);}}),{threshold:.12});
+    rev.forEach(el=>rio.observe(el));
+
+    const tl=root.querySelector('[data-timeline]');
+    if(tl){
+      const fill=tl.querySelector('[data-rail-fill]'), dots=[].slice.call(tl.querySelectorAll('[data-step] [data-dot]'));
+      const light=(p)=>dots.forEach((d,i)=>{if(p>=i/Math.max(1,dots.length-1)&&!d.dataset.lit){d.dataset.lit='1';d.style.background='linear-gradient(135deg,#4FE07F,#16C15A)';d.style.borderColor='transparent';d.style.color='#052012';}});
+      let started=false;
+      const run=()=>{if(started)return;started=true;
+        if(realRM){if(fill)fill.style.width='100%';light(1);return;}
+        const dur=2400;let s=null;
+        const step=(ts)=>{if(!s)s=ts;const p=Math.min((ts-s)/dur,1);if(fill)fill.style.width=(p*100).toFixed(1)+'%';light(p);if(p<1)requestAnimationFrame(step);};
+        requestAnimationFrame(step);};
+      const tio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){run();tio.unobserve(e.target);}}),{threshold:.25});
+      tio.observe(tl);
+    }
+
+    const fbtn=root.querySelector('[data-submit]');
+    if(fbtn)fbtn.addEventListener('click',()=>{const f=root.querySelector('[data-form]'),ok=root.querySelector('[data-success]');if(f&&ok){f.style.display='none';ok.style.display='block';}});
+
+    const applyResp=()=>{const w=root.clientWidth||window.innerWidth;
+      const restore=(g)=>{if(!g.dataset.cols)g.dataset.cols=g.style.gridTemplateColumns||'';return g.dataset.cols;};
+      root.querySelectorAll('[data-hero-grid],[data-two],[data-form-grid],[data-pkg]').forEach(g=>g.style.gridTemplateColumns=w<820?'1fr':restore(g));
+      root.querySelectorAll('[data-tiers]').forEach(g=>g.style.gridTemplateColumns=w<720?'1fr':'repeat(3,1fr)');
+      root.querySelectorAll('[data-caps]').forEach(g=>g.style.gridTemplateColumns=w<620?'1fr':(w<900?'1fr 1fr':'repeat(3,1fr)'));
+      root.querySelectorAll('[data-steps-row]').forEach(g=>g.style.gridTemplateColumns=w<820?'1fr':'repeat(5,1fr)');
+      const trk=root.querySelector('[data-track]');if(trk)trk.style.display=w<820?'none':'block';
+      const nav=root.querySelector('[data-nav]');if(nav)nav.style.display=w<900?'none':'flex';
+      const ph=root.querySelector('[data-phone]');if(ph)ph.style.display=w<680?'none':'inline-flex';
+    };
+    applyResp();
+    new ResizeObserver(applyResp).observe(root);
+  }
+}
+
+;(function(){
+function wireHovers(root){root.querySelectorAll('[style-hover]').forEach(function(el){var base=el.getAttribute('style')||'';var hov=el.getAttribute('style-hover');el.addEventListener('mouseenter',function(){el.setAttribute('style',base+';'+hov);});el.addEventListener('mouseleave',function(){el.setAttribute('style',base);});});}
+var __mb=new Component();__mb.props={pauseMotion:false,speed:1};
+function boot(){var r=document.getElementById('bxroot');if(!r)return;__mb._root={current:r};try{__mb.componentDidMount();}catch(e){console.error('bitrix init',e);}wireHovers(document);}
+if(document.readyState!=='loading')boot();else document.addEventListener('DOMContentLoaded',boot);
+})();
+
+</script>
+<script type="text/javascript">
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-  var hdr=document.getElementById('hdr');
-  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+  var ID=110784864, SRC='https://mc.yandex.ru/metrika/tag.js?id='+ID, i='ym', m=window;
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  m[i](ID,'init',{ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  function ensure(){
+    try{
+      var ss=document.getElementsByTagName('script');
+      for(var j=0;j<ss.length;j++){ if(ss[j].src===SRC) return; }
+      var k=document.createElement('script'); k.async=1; k.src=SRC;
+      (document.head||document.documentElement).appendChild(k);
+    }catch(e){}
+  }
+  ensure();
+  var n=0, iv=setInterval(function(){ ensure(); if(++n>20) clearInterval(iv); }, 400);
 })();
 </script>
-<script>(function(){try{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;}catch(e){}var sel=".mnum,.an,.hk-v,.pct,.cmv,.eff-big,[data-count]";function anim(el){if(el.dataset.counted)return;el.dataset.counted="1";var raw=(el.textContent||"").trim();var m=raw.match(/^(\D*)(\d+(?:[.,]\d+)?)(.*)$/);if(!m)return;var pre=m[1],numStr=m[2],suf=m[3];if(suf.indexOf("/")>=0)return;var dec=(numStr.split(/[.,]/)[1]||"").length;var target=parseFloat(numStr.replace(",","."));var dur=1300,s=null;function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=pre+(target*e).toFixed(dec)+suf;if(p<1)requestAnimationFrame(step);else el.textContent=pre+numStr+suf;}el.textContent=pre+(0).toFixed(dec)+suf;requestAnimationFrame(step);}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){anim(e.target);io.unobserve(e.target);}})},{threshold:.4});document.querySelectorAll(sel).forEach(function(el){io.observe(el);});})();</script></body></html>
+<script>window.__MBM_ACTIVE="bitrix";</script>
+<script>
+/* MakeBiz - единое верхнее меню (шапка). Классы mbm-* изолированы.
+   Логотип взят 1:1 из дизайна Антона (Make + Biz красный + бейджи AI/BI/CRM).
+   Конфиг до подключения:
+   window.__MBM_ACTIVE - ключ активного пункта ('index','ai-agents','bitrix','vector','intdoc','vps','news','partners','contacts') */
+(function(){
+  if (window.__mbmDone) return; window.__mbmDone = true;
+
+  var ACTIVE = window.__MBM_ACTIVE || '';
+  var NAV = [
+    ['index.html','Home','index'],
+    ['bitrix.html','Bitrix24','bitrix'],
+    ['ai-agents.html','AI Agents','ai-agents'],
+    ['vector.html','AI Sales','vector'],
+    ['intdoc.html','AI Procurement','intdoc'],
+    ['vps.html','Servers','vps'],
+    ['news.html','News','news'],
+    ['partners.html','Partners','partners'],
+    ['contacts.html','Contacts','contacts']
+  ];
+  function navLinks(){
+    return NAV.map(function(x){ return '<a href="'+x[0]+'"'+(x[2]===ACTIVE?' class="mbm-active"':'')+'>'+x[1]+'</a>'; }).join('');
+  }
+
+  var CSS = [
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header *{box-sizing:border-box}",
+"#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
+"#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
+"#mbm-header .mbm-biz{color:#C8102E}",
+"#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
+"#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
+"#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
+"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
+"#mbm-header .mbm-drop.mbm-open{display:block}",
+"#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
+"@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
+"@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
+  ].join("\n");
+
+  var HTML =
+'<header id="mbm-header">'+
+  '<div class="mbm-in">'+
+    '<a href="index.html" class="mbm-logo">MakeBiz'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
+    '</a>'+
+    '<nav class="mbm-nav">'+navLinks()+'</nav>'+
+    '<div class="mbm-right">'+
+      '<a href="#contact" class="mbm-cta">Discuss a project</a>'+
+      '<button class="mbm-burger" id="mbm-burger" aria-label="Menu">☰</button>'+
+    '</div>'+
+  '</div>'+
+  '<div class="mbm-drop" id="mbm-drop"><nav>'+navLinks()+'</nav></div>'+
+'</header>';
+
+  // делегирование (бургер) - переживает повторный рендер бандла
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbm-burger'){ var d=document.getElementById('mbm-drop'); if(d) d.classList.toggle('mbm-open'); return; }
+    if(t.closest && t.closest('#mbm-drop a')){ var d2=document.getElementById('mbm-drop'); if(d2) d2.classList.remove('mbm-open'); }
+  });
+
+  function ensureStyle(){ if(!document.getElementById('mbm-style')){ var st=document.createElement('style'); st.id='mbm-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function findOld(){
+    // 1) явный селектор
+    if (window.__MBM_OLD){ var o=document.querySelector(window.__MBM_OLD); if(o) return o; }
+    // 2) старое глобальное меню помечено [data-mbnav] - убрать его контейнер верхнего уровня (не трогая под-хедер дизайна)
+    var mn=document.querySelector('[data-mbnav]');
+    if (mn){ var el=mn; while(el.parentElement && el.parentElement!==document.body) el=el.parentElement; return el; }
+    // 3) иначе - обычный <header>
+    return document.querySelector('header:not(#mbm-header)');
+  }
+  function build(){
+    if (document.getElementById('mbm-header')) return true;
+    var old=findOld();
+    if (!old || !old.parentNode) return false;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML; var node=wrap.firstElementChild;
+    old.parentNode.insertBefore(node, old); old.remove();
+    return true;
+  }
+  var tries=0;
+  function attempt(){
+    if (findOld()){ if(build()) return; }
+    if (tries++ > 40){
+      if (!document.getElementById('mbm-header') && document.body){ ensureStyle(); var w=document.createElement('div'); w.innerHTML=HTML; document.body.insertBefore(w.firstElementChild, document.body.firstChild); }
+      return;
+    }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>window.__MBCF_REMOVE=true;window.__MBCF_TARGET=null;</script>
+<script>
+/* MakeBiz - универсальный блок «Discuss a project» (форма + чат).
+   Классы mbcf-* изолированы. Обработчики делегированы на document,
+   поэтому переживают повторный рендер/клонирование блока бандлом.
+   Конфиг задаётся до подключения:
+   window.__MBCF_REMOVE  - убрать старую контакт-форму перед футером (true/false)
+   window.__MBCF_TARGET  - селектор контейнера, если на странице нет <footer> (иначе null) */
+(function(){
+  if (window.__mbcfDone) return; window.__mbcfDone = true;
+
+  var CSS = [
+"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact *{box-sizing:border-box}",
+"#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
+"#mbcf-contact .mbcf-hide{display:none!important}",
+"#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
+"#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
+"#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
+"#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
+"#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
+"#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
+"#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
+"#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
+"#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
+"#mbcf-contact .mbcf-field{margin-bottom:12px}",
+"#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
+"#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
+"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
+"#mbcf-contact .mbcf-tg{position:relative}",
+"#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
+"#mbcf-contact .mbcf-tgi{padding-left:30px}",
+"#mbcf-contact .mbcf-lbl{font:700 12px Oxygen;color:var(--tx);margin:6px 0 8px}",
+"#mbcf-contact .mbcf-seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}",
+"#mbcf-contact .mbcf-seg button{font:700 13px Oxygen;color:var(--mu);background:var(--gl);border:1px solid var(--ln);padding:9px 16px;border-radius:100px;cursor:pointer;transition:.15s}",
+"#mbcf-contact .mbcf-seg button.mbcf-on{color:#fff;background:var(--r);border-color:var(--r)}",
+"#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
+"#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
+"#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
+"#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
+"#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
+"#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
+"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
+"#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
+"#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
+"#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
+"#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
+"#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
+"@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
+  ].join("\n");
+
+  var HTML =
+'<section class="mbcf-sec" id="mbcf-contact"><a id="contact" class="mbcf-anchor"></a>'+
+  '<div class="mbcf-eyebrow"><span>Discuss a project</span></div>'+
+  '<div class="mbcf-cgrid">'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">The first step to boosting <span>efficiency</span></h3></div>'+
+      '<form class="mbcf-card" id="mbcf-lead" novalidate>'+
+        '<div id="mbcf-fields">'+
+          '<div class="mbcf-row2">'+
+            '<input id="mbcf-name" class="mbcf-inp" placeholder="Name*" autocomplete="name">'+
+            '<input id="mbcf-company" class="mbcf-inp" placeholder="Company" autocomplete="organization">'+
+          '</div>'+
+          '<div class="mbcf-field"><div class="mbcf-phone">'+
+            '<select id="mbcf-cc" class="mbcf-inp mbcf-cc" aria-label="Country code">'+
+              '<option value="+971" selected>🇦🇪 +971</option>'+
+              '<option value="+7">🇷🇺 +7</option>'+
+              '<option value="other">🌍 Other</option>'+
+            '</select>'+
+            '<input id="mbcf-phone" class="mbcf-inp" placeholder="Phone number*" inputmode="tel" autocomplete="tel">'+
+          '</div></div>'+
+          '<div class="mbcf-field"><div class="mbcf-tg">'+
+            '<span class="mbcf-at">@</span>'+
+            '<input id="mbcf-tg" class="mbcf-inp mbcf-tgi" placeholder="Telegram handle*">'+
+          '</div></div>'+
+          '<div class="mbcf-lbl">How to reach you</div>'+
+          '<div class="mbcf-seg" id="mbcf-seg">'+
+            '<button type="button" data-m="tg" class="mbcf-on">Telegram</button>'+
+            '<button type="button" data-m="wa">WhatsApp</button>'+
+          '</div>'+
+          '<textarea id="mbcf-task" class="mbcf-inp mbcf-ta" placeholder="What would you like to automate?"></textarea>'+
+          '<input id="mbcf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">'+
+          '<button type="submit" class="mbcf-submit">Send request</button>'+
+          '<div class="mbcf-consent">By submitting the form, you agree to the privacy policy.</div>'+
+        '</div>'+
+        '<div class="mbcf-success mbcf-hide" id="mbcf-success">'+
+          '<div class="mbcf-okico">✓</div>'+
+          '<div class="mbcf-oktitle">Request received</div>'+
+          '<div class="mbcf-oktext" id="mbcf-oktext">Thank you! We will reach out in the way that suits you best.</div>'+
+          '<button type="button" class="mbcf-again" id="mbcf-again">Send another</button>'+
+        '</div>'+
+      '</form>'+
+    '</div>'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Ask a question <span>to our agent</span></h3><p class="mbcf-csub">Chat with our agent right here</p></div>'+
+      '<div class="mbcf-chat">'+
+        '<div class="mbcf-chead"><div class="mbcf-avatar">AI</div><div><div class="mbcf-aname">MakeBiz AI agent</div><div class="mbcf-astat"><i></i>online, replies instantly</div></div></div>'+
+        '<div class="mbcf-msgs" id="mbcf-msgs"><div class="mbcf-bubble mbcf-bot">Hello! I am the MakeBiz AI agent. Which process would you like to automate? I will suggest a solution.</div></div>'+
+        '<div class="mbcf-cinput"><input id="mbcf-cin" class="mbcf-inp" placeholder="Type a message..."><button id="mbcf-csend" class="mbcf-sendbtn" aria-label="Send">➤</button></div>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+'</section>';
+
+  var method='tg';
+  function $(id){ return document.getElementById(id); }
+  function setErr(id,on){ var el=$(id); if(el) el.classList.toggle('mbcf-err',on); }
+
+  function setMethod(m){
+    method=m;
+    var seg=$('mbcf-seg'); if(seg) Array.prototype.forEach.call(seg.children,function(x){ x.classList.toggle('mbcf-on', x.getAttribute('data-m')===m); });
+    var tg=$('mbcf-tg'); if(tg) tg.placeholder = (m==='tg') ? 'Telegram handle*' : 'Telegram handle';
+  }
+  function submitForm(){
+    var name=$('mbcf-name'), phone=$('mbcf-phone'), tg=$('mbcf-tg'), cc=$('mbcf-cc'),
+        company=$('mbcf-company'), task=$('mbcf-task'), gotcha=$('mbcf-gotcha');
+    if(!name||!phone||!cc) return;
+    var okN=!!name.value.trim(), okP=!!phone.value.trim(), okT = method!=='tg' || (tg && !!tg.value.trim());
+    setErr('mbcf-name',!okN); setErr('mbcf-phone',!okP); setErr('mbcf-tg',!okT);
+    if(!(okN&&okP&&okT)) return;
+    var via = method==='tg' ? 'via Telegram' : 'via WhatsApp';
+    var ps = cc.value==='other' ? phone.value.trim() : (cc.value+' '+phone.value.trim());
+    // страница-источник: ключ активного пункта меню или путь
+    var page = (window.__MBM_ACTIVE || (location.pathname||'').replace(/^\//,'').replace(/\.html$/,'') || 'index');
+    var payload = {
+      form: 'client', page: page,
+      name: name.value.trim(),
+      company: company ? company.value.trim() : '',
+      phone: ps,
+      telegram: tg ? tg.value.trim() : '',
+      method: method==='tg' ? 'Telegram' : 'WhatsApp',
+      automate: task ? task.value.trim() : '',
+      _gotcha: gotcha ? gotcha.value : ''
+    };
+    try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){}); }catch(e){}
+    $('mbcf-oktext').textContent = 'Thank you! We will contact you '+via+' at number '+ps+'.';
+    $('mbcf-fields').classList.add('mbcf-hide');
+    $('mbcf-success').classList.remove('mbcf-hide');
+  }
+  function resetForm(){
+    var form=$('mbcf-lead'); if(form) form.reset();
+    var ph=$('mbcf-phone'); if(ph) ph.placeholder='Phone number*';
+    $('mbcf-success').classList.add('mbcf-hide');
+    $('mbcf-fields').classList.remove('mbcf-hide');
+    setErr('mbcf-name',false); setErr('mbcf-phone',false); setErr('mbcf-tg',false);
+    setMethod('tg');
+  }
+  function addMsg(t,who){ var m=$('mbcf-msgs'); if(!m) return; var d=document.createElement('div'); d.className='mbcf-bubble '+(who==='me'?'mbcf-me':'mbcf-bot'); d.textContent=t; m.appendChild(d); m.scrollTop=m.scrollHeight; }
+  function typing(){ var m=$('mbcf-msgs'); if(!m) return null; var d=document.createElement('div'); d.className='mbcf-typing'; d.innerHTML='<i></i><i></i><i></i>'; m.appendChild(d); m.scrollTop=m.scrollHeight; return d; }
+  function send(){
+    var cin=$('mbcf-cin'); if(!cin) return; var t=cin.value.trim(); if(!t) return;
+    addMsg(t,'me'); cin.value='';
+    var d=typing();
+    setTimeout(function(){ if(d) d.remove();
+      /* TODO: сюда подключить реального AI-агента (запрос к API). Пока заглушка. */
+      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева - вернёмся с решением.','bot');
+    },900);
+  }
+
+  // Делегирование на document - работает независимо от времени вставки и повторного рендера блока
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    var seg=t.closest('#mbcf-seg button[data-m]'); if(seg){ setMethod(seg.getAttribute('data-m')); return; }
+    if(t.closest('#mbcf-csend')){ send(); return; }
+    if(t.closest('#mbcf-again')){ resetForm(); return; }
+  });
+  document.addEventListener('submit',function(e){ if(e.target && e.target.id==='mbcf-lead'){ e.preventDefault(); submitForm(); } });
+  document.addEventListener('input',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbcf-phone'){ var s=t.value.replace(/[^0-9+\-\s()]/g,''); if(s!==t.value) t.value=s; }
+    else if(t.id==='mbcf-tg'){ var s2=t.value.replace(/[^a-zA-Z0-9_]/g,''); if(s2!==t.value) t.value=s2; }
+  });
+  document.addEventListener('change',function(e){ if(e.target && e.target.id==='mbcf-cc'){ var ph=$('mbcf-phone'); if(ph) ph.placeholder = e.target.value==='other' ? 'Phone number with country code*' : 'Phone number*'; } });
+  document.addEventListener('keydown',function(e){ if(e.target && e.target.id==='mbcf-cin' && e.key==='Enter'){ e.preventDefault(); send(); } });
+
+  function place(node){
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode){
+      if (window.__MBCF_REMOVE){
+        var p=footer.previousElementSibling;
+        while(p && (p.tagName==='SCRIPT'||p.tagName==='A'||p.tagName==='STYLE'||(p.textContent||'').trim()==='')) p=p.previousElementSibling;
+        if(p && p.querySelector && p.querySelector('input,textarea')) p.parentNode.removeChild(p);
+      }
+      footer.parentNode.insertBefore(node, footer);
+      return true;
+    }
+    if (window.__MBCF_TARGET){
+      var t=document.querySelector(window.__MBCF_TARGET);
+      if(t){ t.appendChild(node); return true; }
+    }
+    return false;
+  }
+  function ensureStyle(){ if(!$('mbcf-style')){ var st=document.createElement('style'); st.id='mbcf-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function build(){
+    if ($('mbcf-contact')) return true;
+    ensureStyle();
+    var old=$('contact'); if(old) old.removeAttribute('id');
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML;
+    return place(wrap.firstElementChild);
+  }
+
+  var tries=0;
+  function attempt(){
+    var ready = !!document.querySelector('footer') || (window.__MBCF_TARGET && !!document.querySelector(window.__MBCF_TARGET));
+    if (ready && build()) return;
+    if (tries++ > 40){ ensureStyle(); var wrap=document.createElement('div'); wrap.innerHTML=HTML; if(document.body) document.body.appendChild(wrap.firstElementChild); return; }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>
+/* MakeBiz - единый подвал (тёмный) + cookie-баннер. Классы mbf-* изолированы.
+   Заменяет существующий <footer>. Реквизиты - плейсхолдеры, Антон подставит. */
+(function(){
+  if (window.__mbfDone) return; window.__mbfDone = true;
+
+  var CSS = [
+"#mbf-footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:#93A4B8;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
+"#mbf-footer *{box-sizing:border-box}",
+"#mbf-footer .mbf-in{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}",
+"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbf-footer .mbf-logo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;margin-bottom:14px}",
+"#mbf-footer .mbf-badges{display:flex;gap:3px}",
+"#mbf-footer .mbf-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
+"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#93A4B8;margin-bottom:16px;max-width:36ch}",
+"#mbf-footer .mbf-contacts{display:flex;flex-direction:column;gap:9px}",
+"#mbf-footer .mbf-contacts a{color:#B7C4D6;text-decoration:none;font:400 14px Oxygen}",
+"#mbf-footer .mbf-contacts a:hover{color:#fff}",
+"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}",
+"#mbf-footer .mbf-col a{display:block;color:#93A4B8;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
+"#mbf-footer .mbf-col a:hover{color:#16C15A}",
+"#mbf-footer .mbf-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font:300 12.5px/1.65 Oxygen;color:#6B7A99}",
+"#mbf-footer .mbf-req{max-width:70ch}",
+"#mbf-footer .mbf-ph{color:#8FA0B8}",
+"@media(max-width:900px){#mbf-footer .mbf-top{grid-template-columns:1fr 1fr}}",
+"@media(max-width:560px){#mbf-footer .mbf-top{grid-template-columns:1fr}}",
+"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85);font-family:Oxygen,system-ui,sans-serif}",
+"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}",
+"#mbf-cookie a{color:#16C15A;text-decoration:none}",
+"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
+"#mbf-cookie.mbf-hide{display:none!important}"
+  ].join("\n");
+
+  var FOOT =
+'<footer id="mbf-footer"><div class="mbf-in">'+
+  '<div class="mbf-top">'+
+    '<div>'+
+      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
+      '<div class="mbf-tag">An IT company from Dubai. We implement AI, CRM and BI analytics so your business loses less and grows faster.</div>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Products</h4>'+
+      '<a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Sections</h4>'+
+      '<a href="index.html">Home</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>'+
+    '</div>'+
+    '<div class="mbf-col"><h4>Legal</h4>'+
+      '<a href="privacy.html">Privacy Policy</a><a href="privacy.html#cookie">Cookie Usage</a><a href="terms.html">Terms of Use</a>'+
+    '</div>'+
+  '</div>'+
+  '<div class="mbf-bottom">'+
+    '<div>© 2026 MakeBiz. All rights reserved.</div>'+
+    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Privacy Policy</a></div>'+
+  '</div>'+
+'</div></footer>';
+
+  var COOKIE =
+'<div id="mbf-cookie"><p>We use cookies for site functionality and web analytics. By continuing to use the site, you agree to this. <a href="privacy.html#cookie">Learn more</a></p>'+
+'<button class="mbf-ok" id="mbf-cookie-ok">Accept</button></div>';
+
+  // делегированный клик по «Accept» (переживает повторный рендер)
+  document.addEventListener('click',function(e){
+    if(e.target && e.target.id==='mbf-cookie-ok'){
+      var c=document.getElementById('mbf-cookie'); if(c) c.classList.add('mbf-hide');
+      try{ localStorage.setItem('mbf-cookie-ok','1'); }catch(err){}
+    }
+  });
+
+  function ensureStyle(){ if(!document.getElementById('mbf-style')){ var st=document.createElement('style'); st.id='mbf-style'; st.textContent=CSS; document.head.appendChild(st); } }
+
+  function addCookie(){
+    if(document.getElementById('mbf-cookie')) return;
+    var seen=false; try{ seen = localStorage.getItem('mbf-cookie-ok')==='1'; }catch(err){}
+    if(seen) return;
+    var w=document.createElement('div'); w.innerHTML=COOKIE; document.body.appendChild(w.firstElementChild);
+  }
+
+  function build(){
+    if (document.getElementById('mbf-footer')) return true;
+    var old=document.querySelector('footer:not(#mbf-footer)');
+    if (!old || !old.parentNode) return false;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=FOOT; var node=wrap.firstElementChild;
+    old.parentNode.insertBefore(node, old); old.remove();
+    addCookie();
+    return true;
+  }
+  function fallbackAppend(){
+    if (document.getElementById('mbf-footer')) return;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=FOOT;
+    if (document.body) document.body.appendChild(wrap.firstElementChild);
+    addCookie();
+  }
+
+  var tries=0;
+  function attempt(){
+    if (document.querySelector('footer:not(#mbf-footer)')){ if(build()) return; }
+    if (tries++ > 40){ fallbackAppend(); return; }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>
+/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
+   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
+   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
+
+  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) фиксированные декоративные полноэкранные слои - прячем
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
+<script>
+/* MakeBiz — чистка (EN-enhanced): убрать «Повторить», снять точки в конце предложений (в т.ч. div/label/footer и хвостовых ссылках), AI вместо ИИ, без длинных тире. */
+(function(){
+  if(window.__mbCleanDone) return; window.__mbCleanDone=true;
+  var INLINE={A:1,SPAN:1,B:1,I:1,EM:1,STRONG:1,U:1,MARK:1,SMALL:1,SUP:1,SUB:1,CODE:1};
+  function walkText(fn){ try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;while(n=w.nextNode()){var p=n.parentNode;if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE'))continue;fn(n);}}catch(e){} }
+  function isAbbr(s){ return /(\bт\.\s?д|\bт\.\s?п|\bи\s?др|\be\.\s?g|\bi\.\s?e|\betc|\d\.\d|\.\.\.)\.?\s*$/i.test(s); }
+  function stripEl(el){
+    if(el.querySelector('h1,h2,h3,h4,h5,h6,p,ul,ol,section,table')) return;
+    for(var i=el.childNodes.length-1;i>=0;i--){ var c=el.childNodes[i];
+      if(c.nodeType===3){ if(!/\S/.test(c.nodeValue)) continue;
+        if(/\.\s*$/.test(c.nodeValue) && !isAbbr(c.nodeValue)) c.nodeValue=c.nodeValue.replace(/\.(\s*)$/,'$1');
+        return;
+      } else if(c.nodeType===1){ if(INLINE[c.tagName]) stripEl(c); return; } }
+  }
+  function clean(){
+    var bs=document.querySelectorAll('button,a');
+    for(var i=0;i<bs.length;i++){ var t=(bs[i].textContent||''); if(t.indexOf('Повторить')>-1 && t.replace(/\s/g,'').length<15) bs[i].remove(); }
+    walkText(function(n){ var v=n.nodeValue; if(!v)return; var nv=v; if(nv.indexOf('ИИ')>-1)nv=nv.replace(/ИИ/g,'AI'); if(nv.indexOf('—')>-1||nv.indexOf('–')>-1)nv=nv.replace(/[—–]/g,'-'); if(nv!==v)n.nodeValue=nv; });
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,figcaption,div,label,footer,blockquote,td,dd');
+    for(var k=0;k<els.length;k++) stripEl(els[k]);
+  }
+  clean(); var m=0, iv=setInterval(function(){clean();if(++m>16)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(function(){clean();});try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},8000);}
+})();
+</script>
+<script>
+/* MakeBiz — переключатель языков. AE=корень, /en, /ru. Инлайн-стили (!important) — устойчивы к CSS страницы и очистке head. */
+(function(){
+  if(window.__mbLangDone) return; window.__mbLangDone=true;
+  var FLAG={ae:'<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#fff"/><rect width="12" height="2" fill="#00732F"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#FF0000"/></svg>',en:'<svg viewBox="0 0 19 13" preserveAspectRatio="none"><rect width="19" height="13" fill="#fff"/><rect y="0" width="19" height="1" fill="#B22234"/><rect y="2" width="19" height="1" fill="#B22234"/><rect y="4" width="19" height="1" fill="#B22234"/><rect y="6" width="19" height="1" fill="#B22234"/><rect y="8" width="19" height="1" fill="#B22234"/><rect y="10" width="19" height="1" fill="#B22234"/><rect y="12" width="19" height="1" fill="#B22234"/><rect width="8" height="7" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.3" cy="1.2" r=".45"/><circle cx="3" cy="1.2" r=".45"/><circle cx="4.7" cy="1.2" r=".45"/><circle cx="6.4" cy="1.2" r=".45"/><circle cx="2.1" cy="2.7" r=".45"/><circle cx="3.8" cy="2.7" r=".45"/><circle cx="5.5" cy="2.7" r=".45"/><circle cx="1.3" cy="4.2" r=".45"/><circle cx="3" cy="4.2" r=".45"/><circle cx="4.7" cy="4.2" r=".45"/><circle cx="6.4" cy="4.2" r=".45"/><circle cx="2.1" cy="5.6" r=".45"/><circle cx="3.8" cy="5.6" r=".45"/><circle cx="5.5" cy="5.6" r=".45"/></g></svg>',ru:'<svg viewBox="0 0 9 6" preserveAspectRatio="none"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg>'};
+  var CODE={ae:'AE',en:'EN',ru:'RU'}, NAME={ae:'Эмираты',en:'English',ru:'Русский'};
+  var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en','ru'];
+  function cur(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return 'en'; if(/^\/ru(\/|$)/.test(p))return 'ru'; return 'ae';}
+  function base(){var p=location.pathname.replace(/^\/(en|ru)(?=\/|$)/,''); return p===''?'/':p;}
+  function urlFor(l){var b=base(),pre=PRE[l]; if(b==='/')return pre===''?'/':pre+'/'; return pre+b;}
+  function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
+  var WRAP='display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;width:auto!important;vertical-align:middle';
+  var ITEM='box-sizing:border-box!important;display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;padding:6px 9px!important;border-radius:10px!important;border:1px solid rgba(255,255,255,.10)!important;text-decoration:none!important;cursor:pointer;width:auto!important;height:auto!important;box-shadow:none!important;transition:border-color .2s';
+  var ACT=';background:rgba(22,193,90,.14)!important;border-color:rgba(22,193,90,.55)!important';
+  var FL='width:20px!important;height:14px!important;min-width:20px!important;max-width:20px!important;border-radius:3px!important;overflow:hidden!important;display:inline-flex!important;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto!important;margin:0!important;padding:0!important';
+  var SVG='width:20px!important;height:14px!important;max-width:none!important;min-width:0!important;display:block!important;margin:0!important';
+  function cd(a){return 'display:inline-block!important;font:700 12px Oxygen,system-ui,sans-serif!important;letter-spacing:.05em!important;white-space:nowrap!important;line-height:1!important;color:'+(a?'#EAF1FF':'#93A4B8')+'!important';}
+  function build(){
+    var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
+    if(!right || right.querySelector('.mb-lang')) return;
+    var c=cur(), wrap=document.createElement('div'); wrap.className='mb-lang'; wrap.setAttribute('style',WRAP);
+    ordered().forEach(function(l){
+      var a=document.createElement('a'); a.className='mb-lang-i'; a.href=urlFor(l); a.setAttribute('hreflang',l); a.title=NAME[l];
+      a.setAttribute('style', ITEM+(l===c?ACT:''));
+      var f=document.createElement('span'); f.className='mb-lang-fl'; f.setAttribute('style',FL); f.innerHTML=FLAG[l];
+      var svg=f.querySelector('svg'); if(svg) svg.setAttribute('style',SVG);
+      var code=document.createElement('span'); code.className='mb-lang-cd'; code.setAttribute('style',cd(l===c)); code.textContent=CODE[l];
+      a.appendChild(f); a.appendChild(code); wrap.appendChild(a);
+    });
+    right.insertBefore(wrap, right.firstChild);
+  }
+  build();
+  var n=0, iv=setInterval(function(){build(); if(++n>25)clearInterval(iv);},300);
+  if(window.MutationObserver){var mo=new MutationObserver(build);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
+<script>
+/* MakeBiz — призывы (записаться/обсудить/запросить демо/оставить заявку и их англ. аналоги)
+   ведут на форму #contact внизу, а НЕ в Telegram. RU+EN. Telegram/WhatsApp/кабинет/калькулятор не трогаем. */
+(function(){
+  if(window.__mbCtaDone) return; window.__mbCtaDone=true;
+  var CTA=/(Записаться на демонстрац|Записаться на демо|Обсудить проект|Обсудить задачу|Обсудить внедрен|Запросить дем|Получить[\s\S]{0,20}анализ|Оставить заявку|Обсудить$|Book a demo|Schedule a demo|Request a demo|Get a demo|Discuss (a |your |the )?project|Discuss (the |your )?task|Leave a request|Send a request|Get[\s\S]{0,20}(analysis|hours)|Start a project|Talk to us|Contact us|Book a call)/i;
+  var SKIP=/Telegram|WhatsApp|Whats|кабинет|Войти|калькул|Рассчита|стать партн|партнёр|Отправить|Submit|Log ?in|Cabinet|Calculat|Become a partner|Open account/i;
+  function txt(el){return (el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();}
+  function isCTA(el){var t=txt(el); return t && t.length<=48 && CTA.test(t) && !SKIP.test(t);}
+  function fix(){document.querySelectorAll('a,button').forEach(function(el){if(el.__mbCta||!isCTA(el))return;el.__mbCta=1;if(el.tagName==='A'){el.setAttribute('href','#contact');el.removeAttribute('target');el.removeAttribute('rel');}el.removeAttribute('onclick');});}
+  document.addEventListener('click',function(e){var el=e.target&&e.target.closest&&e.target.closest('a,button');if(!el||!isCTA(el))return;var c=document.getElementById('contact')||document.querySelector('#mbcf-contact,.mbcf-wrap');if(c){e.preventDefault();e.stopPropagation();try{c.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){location.hash='#contact';}}},true);
+  fix();var n=0,iv=setInterval(function(){fix();if(++n>25)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
+</body>
+</html>
