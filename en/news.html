@@ -931,41 +931,60 @@ document.getElementById('loadmore').addEventListener('click',function(){
 })();
 </script>
 <script>
-/* MakeBiz — переключатель языков. AE=корень, /en, /ru. Инлайн-стили (!important) — устойчивы к CSS страницы и очистке head. */
+/* MakeBiz — навигация по языку: относительные ссылки вида X.html делаем абсолютными с префиксом текущего языка (/en, /ru или корень), чтобы клики оставались внутри выбранного языка независимо от слэша в URL. */
+(function(){
+  if(window.__mbNavDone) return; window.__mbNavDone=true;
+  function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
+  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  function fix(){
+    var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
+    for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
+      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+    }
+  }
+  fix();
+  var n=0, iv=setInterval(function(){fix(); if(++n>25)clearInterval(iv);},300);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+</script>
+<script>
+/* MakeBiz — переключатель языков (Shadow DOM: устойчив к CSS бандла и очистке инлайн-стилей). AE=корень, /en, /ru. */
 (function(){
   if(window.__mbLangDone) return; window.__mbLangDone=true;
   var FLAG={ae:'<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#fff"/><rect width="12" height="2" fill="#00732F"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#FF0000"/></svg>',en:'<svg viewBox="0 0 19 13" preserveAspectRatio="none"><rect width="19" height="13" fill="#fff"/><rect y="0" width="19" height="1" fill="#B22234"/><rect y="2" width="19" height="1" fill="#B22234"/><rect y="4" width="19" height="1" fill="#B22234"/><rect y="6" width="19" height="1" fill="#B22234"/><rect y="8" width="19" height="1" fill="#B22234"/><rect y="10" width="19" height="1" fill="#B22234"/><rect y="12" width="19" height="1" fill="#B22234"/><rect width="8" height="7" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.3" cy="1.2" r=".45"/><circle cx="3" cy="1.2" r=".45"/><circle cx="4.7" cy="1.2" r=".45"/><circle cx="6.4" cy="1.2" r=".45"/><circle cx="2.1" cy="2.7" r=".45"/><circle cx="3.8" cy="2.7" r=".45"/><circle cx="5.5" cy="2.7" r=".45"/><circle cx="1.3" cy="4.2" r=".45"/><circle cx="3" cy="4.2" r=".45"/><circle cx="4.7" cy="4.2" r=".45"/><circle cx="6.4" cy="4.2" r=".45"/><circle cx="2.1" cy="5.6" r=".45"/><circle cx="3.8" cy="5.6" r=".45"/><circle cx="5.5" cy="5.6" r=".45"/></g></svg>',ru:'<svg viewBox="0 0 9 6" preserveAspectRatio="none"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg>'};
-  var CODE={ae:'AE',en:'EN',ru:'RU'}, NAME={ae:'Эмираты',en:'English',ru:'Русский'};
+  var CODE={ae:'AE',en:'EN',ru:'RU'}, NAME={ae:'Emirates',en:'English',ru:'Russian'};
   var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en','ru'];
   function cur(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return 'en'; if(/^\/ru(\/|$)/.test(p))return 'ru'; return 'ae';}
   function base(){var p=location.pathname.replace(/^\/(en|ru)(?=\/|$)/,''); return p===''?'/':p;}
   function urlFor(l){var b=base(),pre=PRE[l]; if(b==='/')return pre===''?'/':pre+'/'; return pre+b;}
   function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
-  var WRAP='display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;width:auto!important;vertical-align:middle';
-  var ITEM='box-sizing:border-box!important;display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;padding:6px 9px!important;border-radius:10px!important;border:1px solid rgba(255,255,255,.10)!important;text-decoration:none!important;cursor:pointer;width:auto!important;height:auto!important;box-shadow:none!important;transition:border-color .2s';
-  var ACT=';background:rgba(22,193,90,.14)!important;border-color:rgba(22,193,90,.55)!important';
-  var FL='width:20px!important;height:14px!important;min-width:20px!important;max-width:20px!important;border-radius:3px!important;overflow:hidden!important;display:inline-flex!important;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto!important;margin:0!important;padding:0!important';
-  var SVG='width:20px!important;height:14px!important;max-width:none!important;min-width:0!important;display:block!important;margin:0!important';
-  function cd(a){return 'display:inline-block!important;font:700 12px Oxygen,system-ui,sans-serif!important;letter-spacing:.05em!important;white-space:nowrap!important;line-height:1!important;color:'+(a?'#EAF1FF':'#93A4B8')+'!important';}
+  var CSS=':host{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;vertical-align:middle!important}'
+   +'.wrap{display:inline-flex;flex-direction:row;align-items:center;gap:6px}'
+   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid rgba(255,255,255,.10);text-decoration:none;cursor:pointer;transition:border-color .2s;background:rgba(255,255,255,.03)}'
+   +'a.active{background:rgba(22,193,90,.14);border-color:rgba(22,193,90,.55)}'
+   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto}'
+   +'.fl svg{width:20px;height:14px;display:block}'
+   +'.cd{font:700 12px Oxygen,system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap;line-height:1}'
+   +'.cd.on{color:#EAF1FF}.cd.off{color:#93A4B8}';
   function build(){
     var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
     if(!right || right.querySelector('.mb-lang')) return;
-    var c=cur(), wrap=document.createElement('div'); wrap.className='mb-lang'; wrap.setAttribute('style',WRAP);
+    var c=cur(), host=document.createElement('div'); host.className='mb-lang';
+    var items='';
     ordered().forEach(function(l){
-      var a=document.createElement('a'); a.className='mb-lang-i'; a.href=urlFor(l); a.setAttribute('hreflang',l); a.title=NAME[l];
-      a.setAttribute('style', ITEM+(l===c?ACT:''));
-      var f=document.createElement('span'); f.className='mb-lang-fl'; f.setAttribute('style',FL); f.innerHTML=FLAG[l];
-      var svg=f.querySelector('svg'); if(svg) svg.setAttribute('style',SVG);
-      var code=document.createElement('span'); code.className='mb-lang-cd'; code.setAttribute('style',cd(l===c)); code.textContent=CODE[l];
-      a.appendChild(f); a.appendChild(code); wrap.appendChild(a);
+      items+='<a href="'+urlFor(l)+'" hreflang="'+l+'" title="'+NAME[l]+'"'+(l===c?' class="active"':'')+'>'
+        +'<span class="fl">'+FLAG[l]+'</span>'
+        +'<span class="cd '+(l===c?'on':'off')+'">'+CODE[l]+'</span></a>';
     });
-    right.insertBefore(wrap, right.firstChild);
+    var html='<style>'+CSS+'</style><div class="wrap">'+items+'</div>';
+    var sh=null; try{ sh=host.attachShadow({mode:'open'}); }catch(e){ sh=null; }
+    if(sh){ sh.innerHTML=html; } else { host.innerHTML='<div class="wrap">'+items+'</div>'; }
+    right.insertBefore(host, right.firstChild);
   }
   build();
   var n=0, iv=setInterval(function(){build(); if(++n>25)clearInterval(iv);},300);
   if(window.MutationObserver){var mo=new MutationObserver(build);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
 })();
-
 </script>
 <script>
 /* MakeBiz — призывы (записаться/обсудить/запросить демо/оставить заявку и их англ. аналоги)
