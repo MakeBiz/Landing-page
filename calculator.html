@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MakeBiz · Калькулятор экономики проекта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F7F9;--surface:#FFFFFF;--text:#03235F;--muted:#6B7A99;--muted-2:#8A97B2;
+    --blue:#013CA4;--blue-active:#074EE8;--green:#1AB248;--red:#C51929;
+    --border:#E7E7E7;--hairline:#EAEEF3;
+    --tint-1:#EDEEFC;--tint-2:#E6F1FD;--tint-3:#9CB5DB;
+    --r-lg:32px;--r-md:20px;--r-sm:14px;
+    --shadow:0 8px 28px rgba(72,89,102,.10);
+    --dark:linear-gradient(135deg,#031A44 0%,#03235F 55%,#013CA4 120%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Oxygen',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+  .tnum{font-variant-numeric:tabular-nums}
+
+  /* ---------- header ---------- */
+  header{border-bottom:1px solid var(--border);background:rgba(245,247,249,.86);backdrop-filter:blur(8px);position:sticky;top:0;z-index:20}
+  .head-in{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,32px);height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .logo{display:flex;flex-direction:column;gap:3px;line-height:1;text-decoration:none}
+  .logo-wm{font-weight:700;font-size:23px;letter-spacing:-.02em;color:var(--text)}
+  .logo-wm i{font-style:normal;color:var(--blue-active)}
+  .logo-badges{display:flex;gap:4px}
+  .logo-badges b{font-size:9px;font-weight:700;letter-spacing:.04em;color:#fff;padding:1px 5px;border-radius:4px;text-transform:uppercase}
+  .b-blue{background:var(--blue-active)}
+  .b-red{background:var(--red)}
+  .head-meta{font-size:13px;color:var(--muted);text-align:right}
+  .head-meta b{color:var(--text);font-weight:700}
+
+  /* ---------- layout ---------- */
+  .wrap{max-width:1240px;margin:0 auto;padding:clamp(22px,4vw,40px) clamp(16px,3vw,32px) 80px}
+  .intro{margin-bottom:26px}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:#EAF0FB;border:1px solid #DCE6F7;padding:7px 15px;border-radius:100px}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--blue-active)}
+  h1{font-size:clamp(26px,4vw,40px);letter-spacing:-.035em;font-weight:700;margin:16px 0 8px;line-height:1.04}
+  .lede{font-size:clamp(15px,1.6vw,17px);color:var(--muted);max-width:74ch}
+
+  .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
+  .inputs,.results{min-width:0}
+  @media(max-width:960px){.grid{grid-template-columns:1fr}}
+
+  /* ---------- cards ---------- */
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,26px);margin-bottom:18px}
+  .card-h{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+  .card-h .ic{width:34px;height:34px;border-radius:10px;background:var(--tint-1);display:grid;place-items:center;flex:none}
+  .card-h .ic svg{width:18px;height:18px;stroke:var(--blue-active)}
+  .card-h h2{font-size:17px;font-weight:700;letter-spacing:-.01em}
+  .card-h .sub{font-size:12.5px;color:var(--muted-2);margin-top:1px}
+
+  .field{margin-bottom:17px}
+  .field:last-child{margin-bottom:0}
+  .flabel{display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:13px;font-weight:700;margin-bottom:8px;flex-wrap:wrap}
+  .flabel .hint{font-size:11.5px;font-weight:400;color:var(--muted-2)}
+
+  /* segmented */
+  .seg{display:grid;gap:8px}
+  .seg.c4{grid-template-columns:repeat(4,1fr)}
+  .seg.c3{grid-template-columns:repeat(3,1fr)}
+  .seg.c2{grid-template-columns:repeat(2,1fr)}
+  .seg.c1{grid-template-columns:1fr}
+  .seg button{position:relative;font:inherit;font-size:13px;font-weight:700;color:var(--muted);background:#fff;border:1px solid var(--border);border-radius:var(--r-sm);padding:11px 8px 9px;cursor:pointer;text-align:center;transition:.14s;line-height:1.2}
+  .seg button .s{display:block;font-size:11px;font-weight:400;color:var(--muted-2);margin-top:3px}
+  .seg button:hover{border-color:var(--tint-3);background:#FCFDFF}
+  .seg button[aria-pressed="true"]{background:var(--blue-active);border-color:var(--blue-active);color:#fff;box-shadow:0 8px 20px rgba(7,78,232,.24)}
+  .seg button[aria-pressed="true"] .s{color:rgba(255,255,255,.82)}
+  .seg button.rec:before{content:"реком.";position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;letter-spacing:.02em;color:#fff;background:var(--green);padding:1px 6px;border-radius:100px;text-transform:uppercase}
+  .ukv b{font-weight:700;background:rgba(120,140,170,.22);border-radius:4px;padding:0 5px;margin-left:2px}
+  .seg button[aria-pressed="true"] .ukv b{background:rgba(255,255,255,.22)}
+
+  /* toggle */
+  .toggle-row{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--bg);border:1px solid var(--hairline);border-radius:var(--r-sm);padding:12px 14px}
+  .toggle-row .tt{font-size:13.5px;font-weight:700}
+  .toggle-row .td{font-size:11.5px;color:var(--muted-2);margin-top:2px}
+  .switch{position:relative;width:46px;height:26px;flex:none}
+  .switch input{opacity:0;width:0;height:0}
+  .slider{position:absolute;inset:0;background:#CBD5E6;border-radius:100px;transition:.18s;cursor:pointer}
+  .slider:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .switch input:checked + .slider{background:var(--blue-active)}
+  .switch input:checked + .slider:before{transform:translateX(20px)}
+
+  /* number input */
+  .num{display:flex;align-items:stretch;border:1px solid var(--border);border-radius:var(--r-sm);overflow:hidden;background:#fff}
+  .num:focus-within{border-color:var(--blue-active);box-shadow:0 0 0 3px rgba(7,78,232,.12)}
+  .num input{flex:1;min-width:0;border:none;outline:none;font:inherit;font-size:16px;font-weight:700;color:var(--text);padding:11px 12px;background:transparent;font-variant-numeric:tabular-nums}
+  .num .unit{display:grid;place-items:center;padding:0 13px;font-size:12.5px;font-weight:700;color:var(--muted);background:var(--bg);border-left:1px solid var(--border)}
+  .num .step{display:grid;place-items:center;width:38px;font-size:18px;font-weight:700;color:var(--blue-active);background:var(--bg);border-left:1px solid var(--border);cursor:pointer;user-select:none}
+  .num .step:hover{background:#EAF0FB}
+  .num .step.minus{border-left:none;border-right:1px solid var(--border)}
+  .mk-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--blue);background:var(--tint-2);border-radius:100px;padding:3px 9px}
+
+  .hours-out{display:flex;justify-content:space-between;align-items:center;background:var(--tint-2);border-radius:10px;padding:9px 13px;margin-top:10px;font-size:12.5px;color:var(--blue)}
+  .hours-out b{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-.01em}
+
+  .note{font-size:11.5px;color:var(--muted-2);margin-top:9px;line-height:1.45}
+  .note.rec{color:var(--green);font-weight:700}
+  .rf-note{display:none;font-size:12px;color:var(--blue);background:var(--tint-2);border-radius:10px;padding:9px 12px;margin-top:12px;line-height:1.45}
+
+  /* ---------- results ---------- */
+  .results{position:static}
+  @media(max-width:960px){.results{position:static}}
+
+  .headline{background:var(--dark);color:#fff;border-radius:var(--r-md);padding:clamp(20px,2.6vw,28px);box-shadow:var(--shadow);margin-bottom:18px}
+  .headline .hl-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}
+  .headline .hl-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#CFE0FF;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);padding:5px 12px;border-radius:100px}
+  .headline .cur-sw{display:flex;gap:2px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:100px;padding:2px;flex:none}
+  .headline .cur-sw button{font:inherit;font-size:12px;font-weight:700;color:#CFE0FF;background:transparent;border:none;border-radius:100px;padding:5px 13px;cursor:pointer;transition:.14s}
+  .headline .cur-sw button[aria-pressed="true"]{background:#fff;color:var(--text)}
+  .headline .cur-rate{font-size:11.5px;color:#AFC0E0;margin:-2px 0 14px}
+  .headline .cur-rate input{width:48px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:6px;color:#fff;font:inherit;font-size:11.5px;font-weight:700;padding:2px 6px;text-align:center;font-variant-numeric:tabular-nums}
+  .headline .t{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8FB4FF}
+  .headline .price{font-size:clamp(34px,5vw,48px);font-weight:700;letter-spacing:-.04em;line-height:1;margin:8px 0 2px}
+  .headline .price small{font-size:.42em;font-weight:400;color:#AFC0E0;letter-spacing:0}
+  .headline .subline{font-size:13px;color:#C7D6F2}
+  .hl-split{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+  .hl-split .cell{flex:1;min-width:120px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:12px 13px}
+  .hl-split .cell .l{font-size:11px;color:#AFC0E0;letter-spacing:.02em}
+  .hl-split .cell .v{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-top:3px}
+  .hl-split .cell .v.pos{color:#7EE6A0}
+
+  .rescard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);box-shadow:var(--shadow);padding:clamp(18px,2.4vw,24px);margin-bottom:18px}
+  .rescard h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:15px}
+
+  /* distribution bar */
+  .distbar{display:flex;height:34px;border-radius:9px;overflow:hidden;background:var(--bg)}
+  .distbar span{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;transition:flex-basis .35s ease,width .35s ease;white-space:nowrap;overflow:hidden}
+  .seg-rf{background:var(--blue-active)}
+  .seg-uk{background:var(--text)}
+  .seg-pn{background:var(--tint-3)}
+  .legend{display:flex;flex-direction:column;gap:2px;margin-top:15px}
+  .legend .lg{display:flex;align-items:center;gap:10px;padding:9px 2px;border-bottom:1px solid var(--hairline)}
+  .legend .lg:last-child{border-bottom:none}
+  .legend .lg .dot{width:11px;height:11px;border-radius:3px;flex:none}
+  .legend .lg .nm{font-size:13.5px;font-weight:700;flex:1}
+  .legend .lg .nm .pct{font-weight:400;color:var(--muted-2);font-size:12px;margin-left:6px}
+  .legend .lg .amt{font-size:15px;font-weight:700;letter-spacing:-.01em}
+
+  /* breakdown */
+  .bd{width:100%;border-collapse:collapse}
+  .bd tr{border-bottom:1px solid var(--hairline)}
+  .bd tr:last-child{border-bottom:none}
+  .bd td{padding:10px 0;font-size:13.5px;vertical-align:top}
+  .bd td.r{text-align:right;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+  .bd td .d{display:block;margin-top:3px;font-size:11px;color:var(--muted-2);font-weight:400;letter-spacing:0}
+  .bd tr.sum{border-top:2px solid var(--border)}
+  .bd tr.sum td{padding-top:13px;font-weight:700}
+  .bd tr.grp td{padding:14px 0 4px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);border:none}
+  .bd td.pos{color:var(--green)}
+
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font:700 14px 'Oxygen',sans-serif;padding:12px 20px;border-radius:100px;border:1px solid var(--border);cursor:pointer;text-decoration:none;color:var(--text);background:#fff;transition:.14s}
+  .btn:hover{border-color:var(--tint-3)}
+  .btn-primary{background:var(--blue-active);color:#fff;border-color:var(--blue-active);box-shadow:0 10px 26px rgba(7,78,232,.28)}
+  .btn-primary:hover{border-color:var(--blue-active);filter:brightness(1.05)}
+
+  .methodology{margin-top:4px}
+  .methodology .meth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  @media(max-width:900px){.methodology .meth-grid{grid-template-columns:1fr;gap:18px}}
+  .methodology h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  .methodology .meth-p{font-size:13px;color:var(--muted);line-height:1.55;margin:0 0 12px}
+  .methodology .meth-t{width:100%;border-collapse:collapse;margin-bottom:12px}
+  .methodology .meth-t td{padding:7px 0;font-size:13px;border-bottom:1px solid var(--hairline);vertical-align:top}
+  .methodology .meth-t td:last-child{text-align:right;font-weight:700;white-space:nowrap;padding-left:12px}
+  .methodology .meth-t td .d{display:block;font-size:11px;color:var(--muted-2);font-weight:400;margin-top:2px}
+  .methodology .meth-t tr.tot td{border-bottom:none;border-top:2px solid var(--border);padding-top:10px;font-weight:700;color:var(--text)}
+  .methodology .meth-lead{font-size:13.5px;color:var(--muted);line-height:1.6;margin:2px 0 22px}
+  .methodology .meth-in{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--hairline)}
+  .methodology .meth-in label{font-size:13px;color:var(--text);font-weight:400}
+  .methodology .meth-in label .d{display:block;font-size:11px;color:var(--muted-2)}
+  .methodology .meth-in input{width:150px;border:1px solid var(--border);border-radius:10px;padding:8px 11px;font:inherit;font-size:16px;font-weight:700;color:var(--text);text-align:right;font-variant-numeric:tabular-nums;background:#fff}
+  .methodology .meth-in input:focus{outline:none;border-color:var(--blue-active);box-shadow:0 0 0 3px rgba(7,78,232,.12)}
+  .methodology .meth-res{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:13px;background:var(--bg);border-radius:10px;padding:10px 13px;font-size:12.5px;color:var(--muted)}
+  .methodology .meth-res b{font-size:15px;font-weight:700;color:var(--text);letter-spacing:-.01em}
+  .methodology .meth-out{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--hairline)}
+  .methodology .meth-out span{font-size:13px;font-weight:700;color:var(--text)}
+  .methodology .meth-out span .d{display:block;font-size:11px;color:var(--muted-2);font-weight:400}
+  .methodology .meth-out b{font-size:16px;font-weight:700;color:var(--blue-active);white-space:nowrap}
+  .methodology .meth-period{padding:12px 0;border-bottom:1px solid var(--hairline)}
+  .methodology .meth-period .flabel{margin-bottom:8px}
+  .methodology .meth-in input:disabled{background:var(--bg);color:var(--muted-2);cursor:not-allowed}
+
+  footer{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,32px) 40px;font-size:12px;color:var(--muted-2);line-height:1.6}
+  footer b{color:var(--muted);font-weight:700}
+
+  @media(max-width:560px){
+    .head-meta{display:none}
+    .head-in{height:60px}
+    .flabel .hint{display:none}
+  }
+  @media(max-width:440px){
+    .headline .hl-top{flex-wrap:wrap}
+    .methodology .meth-in{flex-wrap:wrap;gap:4px}
+    .methodology .meth-in input{width:100%}
+    .methodology .meth-in label{width:100%}
+    .hl-split .cell{min-width:calc(50% - 5px)}
+  }
+  @media print{
+    header,.actions,.intro .lede{display:none}
+    .results{position:static}
+    body{background:#fff}
+    .card,.rescard,.headline{box-shadow:none;break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<div id="mbGate">
+  <div class="mbg-card">
+    <div class="mbg-logo">Make<span>Biz</span></div>
+    <div class="mbg-sub">Внутренний инструмент. Введите пароль для доступа.</div>
+    <input id="mbGatePw" type="password" inputmode="numeric" autocomplete="off" placeholder="Пароль">
+    <div id="mbGateErr">Неверный пароль</div>
+    <button id="mbGateBtn" type="button">Войти</button>
+  </div>
+</div>
+<style>
+  #mbGate{position:fixed;inset:0;z-index:2147483647;background:#F5F7F9;display:flex;align-items:center;justify-content:center;font-family:'Oxygen',system-ui,-apple-system,sans-serif}
+  #mbGate .mbg-card{width:min(92vw,360px);background:#fff;border:1px solid #E7E7E7;border-radius:20px;box-shadow:0 8px 28px rgba(72,89,102,.12);padding:30px 26px;text-align:center}
+  #mbGate .mbg-logo{font-weight:700;font-size:22px;letter-spacing:-.02em;color:#03235F;margin-bottom:6px}
+  #mbGate .mbg-logo span{color:#074EE8}
+  #mbGate .mbg-sub{font-size:13.5px;color:#6B7A99;line-height:1.45;margin-bottom:18px}
+  #mbGate input{width:100%;border:1px solid #E7E7E7;border-radius:12px;padding:12px 14px;font:inherit;font-size:17px;color:#03235F;text-align:center;outline:none;font-variant-numeric:tabular-nums}
+  #mbGate input:focus{border-color:#074EE8;box-shadow:0 0 0 3px rgba(7,78,232,.12)}
+  #mbGate #mbGateErr{display:none;color:#C51929;font-size:12.5px;font-weight:700;margin-top:10px}
+  #mbGate button{width:100%;margin-top:16px;background:#074EE8;color:#fff;border:none;border-radius:100px;padding:13px;font:700 15px 'Oxygen',system-ui,sans-serif;cursor:pointer;transition:.14s}
+  #mbGate button:hover{filter:brightness(1.06)}
+</style>
+<script>
+(function(){
+  var PW="4444", KEY="mb_calc_ok";
+  var g=document.getElementById("mbGate");
+  function unlock(){ try{sessionStorage.setItem(KEY,"1");}catch(e){} if(g&&g.parentNode)g.parentNode.removeChild(g); document.documentElement.style.overflow=""; }
+  try{ if(sessionStorage.getItem(KEY)==="1"){ unlock(); return; } }catch(e){}
+  document.documentElement.style.overflow="hidden";
+  var inp=document.getElementById("mbGatePw"), btn=document.getElementById("mbGateBtn"), err=document.getElementById("mbGateErr");
+  function submit(){ if(inp.value===PW){ unlock(); } else { err.style.display="block"; inp.value=""; inp.focus(); } }
+  btn.addEventListener("click",submit);
+  inp.addEventListener("keydown",function(e){ if(e.key==="Enter"){ e.preventDefault(); submit(); } });
+  setTimeout(function(){ try{inp.focus();}catch(e){} },60);
+})();
+</script>
+
+
+<header>
+  <div class="head-in">
+    <a class="logo" href="#">
+      <span class="logo-wm">Make<i>Biz</i></span>
+      <span class="logo-badges"><b class="b-blue">AI</b><b class="b-blue">BI</b><b class="b-red">CRM</b></span>
+    </a>
+    <div class="head-meta"><b>Калькулятор экономики проекта</b><br>Дубайский коммерческий контур</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <span class="eyebrow"><span class="dot"></span>Внутренний инструмент</span>
+    <h1>Экономика проекта через <span style="color:var(--blue-active)">управляющую компанию</span></h1>
+    <p class="lede">Считает доли управляющей компании и партнёра от оборота, себестоимость, ценник для клиента и чистую прибыль компании в РФ. Если в сделке есть партнёр, доля УК снижается на 10 пунктов, а партнёр получает 10 или 20 процентов.</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- ================= INPUTS ================= -->
+    <div class="inputs">
+
+      <!-- client & deal -->
+      <div class="card">
+        <div class="card-h">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></span>
+          <div><h2>Клиент и сделка</h2><div class="sub">Определяет доли от оборота</div></div>
+        </div>
+
+        <div class="field">
+          <div class="flabel">Тип клиента и оплаты <span class="hint">задаёт УК, ставку и себестоимость</span></div>
+          <div class="seg c1" id="segClient">
+            <button data-v="dubai" aria-pressed="true">Клиент и оплата в Дубае<span class="s"><span class="ukv" data-base="30">УК 30%</span></span></button>
+            <button data-v="viaDubai" aria-pressed="false">Клиент в Дубае, оплата РФ<span class="s"><span class="ukv" data-base="20">УК 20%</span></span></button>
+            <button data-v="russia" aria-pressed="false">Клиент в РФ, оплата РФ<span class="s"><span class="ukv" data-base="0">УК 0%</span></span></button>
+          </div>
+          <div class="rf-note" id="rfNote">Внутренний клиент РФ: управляющая компания получает 0% от оборота. Партнёр при этом может участвовать в сделке.</div>
+        </div>
+
+        <div class="field">
+          <div class="toggle-row">
+            <div>
+              <div class="tt">Партнёр в сделке</div>
+              <div class="td" id="partnerDesc">Внешний партнёр не участвует</div>
+            </div>
+            <label class="switch"><input type="checkbox" id="partnerToggle"><span class="slider"></span></label>
+          </div>
+        </div>
+
+        <div class="field" id="partnerPctWrap" style="display:none">
+          <div class="flabel">Сколько процентов партнёру <span class="hint">от оборота</span></div>
+          <div class="seg c2" id="segPartnerPct">
+            <button data-v="20" aria-pressed="true">20%<span class="s">первая продажа</span></button>
+            <button data-v="10" aria-pressed="false">10%<span class="s">апсейл, поддержка</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- work -->
+      <div class="card">
+        <div class="card-h">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8"/></svg></span>
+          <div><h2>Работы</h2><div class="sub">Часы, себестоимость и цена продажи</div></div>
+        </div>
+
+        <div class="field">
+          <div class="flabel">Оценка часов</div>
+          <div class="num">
+            <div class="step minus" data-t="hours" data-d="-10">−</div>
+            <input type="number" id="hours" value="100" min="0" step="10" inputmode="numeric">
+            <div class="step plus" data-t="hours" data-d="10">+</div>
+            <div class="unit">ч</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="flabel">Надбавка к часам <span class="hint">увеличить оценку</span></div>
+          <div class="seg c4" id="segUplift">
+            <button data-v="0" aria-pressed="false">0%</button>
+            <button data-v="10" aria-pressed="false">+10%</button>
+            <button data-v="20" aria-pressed="true">+20%</button>
+            <button data-v="30" aria-pressed="false">+30%</button>
+          </div>
+          <div class="hours-out"><span>Часов в расчёте</span><b id="billableOut">120 ч</b></div>
+        </div>
+
+        <div class="field">
+          <div class="flabel">Себестоимость часа</div>
+          <div class="num">
+            <input type="number" id="costRate" value="600" min="0" step="100" inputmode="numeric">
+            <div class="unit">₽ / ч</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="toggle-row">
+            <div>
+              <div class="tt">Проджект (PM)</div>
+              <div class="td">Проектное управление: +30% к себестоимости часа</div>
+            </div>
+            <label class="switch"><input type="checkbox" id="pmToggle"><span class="slider"></span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="flabel">Стоимость часа для клиента <span class="mk-badge" id="mkBadge">маржа часа 86%</span></div>
+          <div class="num">
+            <input type="number" id="saleRate" value="4300" min="0" step="100" inputmode="numeric">
+            <div class="unit">₽ / ч</div>
+          </div>
+          <div class="note">Для дубайского клиента подставляется 4 300 ₽ (оплата в Дубае или в РФ), для клиента в РФ 3 900 ₽. Можно изменить вручную.</div>
+        </div>
+      </div>
+
+      <!-- license -->
+      <div class="card">
+        <div class="card-h">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6M9 17h4"/></svg></span>
+          <div><h2>Лицензия Bitrix</h2><div class="sub">Клиент платит за лицензию, часть остаётся нам</div></div>
+        </div>
+
+        <div class="field">
+          <div class="toggle-row">
+            <div>
+              <div class="tt">Лицензия в проекте</div>
+              <div class="td">Добавить стоимость лицензии и нашу прибыль с неё</div>
+            </div>
+            <label class="switch"><input type="checkbox" id="licToggle"><span class="slider"></span></label>
+          </div>
+        </div>
+
+        <div id="licFields" style="display:none">
+          <div class="field">
+            <div class="flabel">Стоимость лицензии для клиента</div>
+            <div class="num">
+              <input type="number" id="licPrice" value="220000" min="0" step="10000" inputmode="numeric">
+              <div class="unit">₽</div>
+            </div>
+            <div class="note">Подставляется по клиенту: клиент в Дубае 220 000 ₽, клиент в РФ 140 000 ₽. Можно изменить.</div>
+          </div>
+          <div class="field">
+            <div class="flabel">Наша доля с лицензии</div>
+            <div class="num">
+              <input type="number" id="licShare" value="40" min="0" max="100" step="5" inputmode="numeric">
+              <div class="unit">%</div>
+            </div>
+            <div class="note">Наша прибыль = доля × стоимость лицензии. Клиент в Дубае 40%, в РФ 50%. При 40% от 220 000 ₽ это 88 000 ₽. Лицензия всегда входит в оборот и делится с УК и партнёром.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= RESULTS ================= -->
+    <div class="results">
+
+      <div class="headline">
+        <div class="hl-top">
+          <div class="hl-tag" id="segTag">Клиент и оплата в Дубае</div>
+          <div class="cur-sw" id="curSw">
+            <button data-c="rub" aria-pressed="true">₽</button>
+            <button data-c="aed" aria-pressed="false">AED</button>
+          </div>
+        </div>
+        <div class="cur-rate" id="curRate" style="display:none">Курс: 1 AED = 22 ₽</div>
+        <div class="t">Ценник для клиента</div>
+        <div class="price" id="clientTotal">0 <small>₽</small></div>
+        <div class="subline" id="clientSub">Себестоимость 600 ₽/ч · ставка 4 300 ₽/ч · 120 ч</div>
+        <div class="hl-split">
+          <div class="cell"><div class="l">Себестоимость</div><div class="v" id="hlCost">0 ₽</div></div>
+          <div class="cell"><div class="l">Чистая прибыль в РФ</div><div class="v pos" id="hlProfit">0 ₽</div></div>
+          <div class="cell"><div class="l">Рентабельность</div><div class="v" id="hlMargin">0%</div></div>
+        </div>
+      </div>
+
+      <div class="rescard">
+        <h3>Распределение оборота</h3>
+        <div class="distbar" id="distbar">
+          <span class="seg-rf" id="barRf" style="flex-basis:100%">РФ</span>
+          <span class="seg-uk" id="barUk" style="flex-basis:0%"></span>
+          <span class="seg-pn" id="barPn" style="flex-basis:0%"></span>
+        </div>
+        <div class="legend">
+          <div class="lg"><span class="dot seg-rf"></span><span class="nm">Компания в РФ<span class="pct" id="pctRf">100%</span></span><span class="amt" id="amtRf">0 ₽</span></div>
+          <div class="lg"><span class="dot seg-uk"></span><span class="nm">Управляющая компания<span class="pct" id="pctUk">0%</span></span><span class="amt" id="amtUk">0 ₽</span></div>
+          <div class="lg"><span class="dot seg-pn"></span><span class="nm">Партнёр<span class="pct" id="pctPn">0%</span></span><span class="amt" id="amtPn">0 ₽</span></div>
+        </div>
+      </div>
+
+      <div class="rescard">
+        <h3>Детализация</h3>
+        <table class="bd">
+          <tbody>
+            <tr class="grp"><td colspan="2">Работы</td></tr>
+            <tr><td>Себестоимость работ<span class="d" id="wcD">120 ч × 2 000 ₽</span></td><td class="r" id="workCost">0 ₽</td></tr>
+            <tr><td>Оборот по работам<span class="d" id="wrD">120 ч × 4 300 ₽</span></td><td class="r" id="workRev">0 ₽</td></tr>
+            <tr><td>Валовая прибыль по работам</td><td class="r pos" id="workGross">0 ₽</td></tr>
+
+            <tr class="grp" id="grpLic"><td colspan="2">Лицензия Bitrix</td></tr>
+            <tr id="rowLicPrice"><td>Цена лицензии для клиента</td><td class="r" id="licPriceOut">0 ₽</td></tr>
+            <tr id="rowLicProfit"><td>Валовая прибыль с лицензии<span class="d" id="lpD">доля 40%</span></td><td class="r pos" id="licProfitOut">0 ₽</td></tr>
+            <tr id="rowLicCost"><td>Себестоимость лицензии</td><td class="r" id="licCostOut">0 ₽</td></tr>
+
+            <tr class="grp"><td colspan="2">Итог по проекту</td></tr>
+            <tr><td>Ценник для клиента (оборот)</td><td class="r" id="ttlClient">0 ₽</td></tr>
+            <tr><td>Себестоимость</td><td class="r" id="ttlCost">0 ₽</td></tr>
+            <tr><td>Управляющая компания<span class="d" id="ukD">0% от оборота</span></td><td class="r" id="ttlUk">0 ₽</td></tr>
+            <tr><td>Партнёр<span class="d" id="pnD">0% от оборота</span></td><td class="r" id="ttlPn">0 ₽</td></tr>
+            <tr><td>Выручка компании в РФ</td><td class="r" id="ttlRfRev">0 ₽</td></tr>
+            <tr class="sum"><td>Чистая прибыль компании в РФ</td><td class="r pos" id="ttlProfit">0 ₽</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+          Сохранить в PDF
+        </button>
+        <button class="btn" id="resetBtn">Сбросить</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card methodology">
+    <div class="card-h">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M8 15h2M12 15h2"/></svg></span>
+      <div><h2>Как считаются цифры</h2><div class="sub">Заполните финансы, себестоимость часа посчитается сама</div></div>
+    </div>
+    <p class="meth-lead">Себестоимость часа = расходы за период ÷ производственные часы (сотрудники × часов в день × рабочих дней). Для клиента с оплатой в Дубае берётся только ФОТ, накладные несёт управляющая компания. Для клиента с оплатой в РФ добавляются операционные и налоги, для клиента в РФ ещё маркетинг. Оборот = часы в расчёте × ставку часа плюс цена лицензии; УК и партнёр берут свою долю от оборота, при участии партнёра доля УК ниже на 10 пунктов. Выручка компании в РФ = оборот минус доли, чистая прибыль = выручка минус себестоимость. Цифры ниже примерные, подставьте свои.</p>
+    <div class="meth-grid">
+      <div class="meth-col">
+        <h3>Финансы за период</h3>
+        <div class="meth-in"><label>Выручка</label><input id="pnlRev" type="number" min="0" step="100000" value="10000000" inputmode="numeric"></div>
+        <div class="meth-in"><label>ФОТ</label><input id="pnlFot" type="number" min="0" step="100000" value="3000000" inputmode="numeric"></div>
+        <div class="meth-in"><label>Операционные <span class="d">включая закупки</span></label><input id="pnlOpex" type="number" min="0" step="100000" value="2000000" inputmode="numeric"></div>
+        <div class="meth-in"><label>Налоги и взносы</label><input id="pnlTax" type="number" min="0" step="50000" value="700000" inputmode="numeric"></div>
+        <div class="meth-in"><label>Маркетинг</label><input id="pnlMkt" type="number" min="0" step="50000" value="300000" inputmode="numeric"></div>
+        <div class="meth-res"><span>Валовая прибыль компании</span><b id="mcGross">0 ₽</b></div>
+      </div>
+      <div class="meth-col">
+        <h3>Производственные часы</h3>
+        <div class="meth-in"><label>Сотрудников</label><input id="pEmp" type="number" min="1" step="1" value="5" inputmode="numeric"></div>
+        <div class="meth-in"><label>Часов в день</label><input id="pHpd" type="number" min="1" step="1" value="6" inputmode="numeric"></div>
+        <div class="meth-period">
+          <div class="flabel">Период <span class="hint">задаёт рабочие дни</span></div>
+          <div class="seg c4" id="segPeriod">
+            <button data-v="year" aria-pressed="true">Год</button>
+            <button data-v="quarter" aria-pressed="false">Квартал</button>
+            <button data-v="month" aria-pressed="false">Месяц</button>
+            <button data-v="custom" aria-pressed="false">Свой</button>
+          </div>
+        </div>
+        <div class="meth-in"><label>Рабочих дней в периоде</label><input id="pDays" type="number" min="1" step="1" value="247" inputmode="numeric"></div>
+        <div class="meth-res"><span>Всего производственных часов</span><b id="mcHours">0 ч</b></div>
+      </div>
+      <div class="meth-col">
+        <h3>Себестоимость часа по сегментам</h3>
+        <div class="meth-out"><span>Клиент и оплата в Дубае<span class="d">только ФОТ</span></span><b id="mcDubai">0 ₽/ч</b></div>
+        <div class="meth-out"><span>Клиент в Дубае, оплата РФ<span class="d">без маркетинга</span></span><b id="mcVia">0 ₽/ч</b></div>
+        <div class="meth-out"><span>Клиент в РФ, оплата РФ<span class="d">все расходы</span></span><b id="mcRF">0 ₽/ч</b></div>
+        <p class="meth-p" style="margin-top:14px">Эти значения подставляются в расчёт выше при выборе сегмента. Для конкретного проекта себестоимость можно поправить вручную в блоке «Работы».</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  MakeBiz Group · внутренний расчётный инструмент. Доли распределения по модели «Управляющая компания в Дубае».
+  Контакты: <b>@Anton_MakeBiz</b> · <b>+971 50 262 0927</b>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- rates & defaults ----
+  var UK_BASE = { dubai:30, viaDubai:20, russia:0 };        // base УК by client type (no partner)
+  var SALE_DEF   = { dubai:4300, viaDubai:4300, russia:3900 }; // auto client hour rate by client type
+  var LIC_DEF    = { dubai:{p:220000,s:40}, viaDubai:{p:220000,s:40}, russia:{p:140000,s:50} }; // лицензия Bitrix: цена / наша доля %
+  var SEG_NAME   = { dubai:'Клиент и оплата в Дубае', viaDubai:'Клиент в Дубае, оплата РФ', russia:'Клиент в РФ, оплата РФ' };
+  var PERIOD_DAYS = { year:247, quarter:62, month:21 };        // рабочих дней по периоду (произв. календарь РФ)
+  var UPLIFT_DEF = { dubai:20, viaDubai:20, russia:0 };        // recommended hours uplift by client type
+
+  // ---- state ----
+  var st = {
+    client:'dubai', partner:false, partnerPct:20,
+    hours:100, uplift:20, costRate:770, saleRate:4300, pm:false, currency:'rub', rate:22,
+    lic:false, licPrice:220000, licShare:40,
+    pnlRev:10000000, pnlFot:3000000, pnlOpex:2000000, pnlTax:700000, pnlMkt:300000, emp:5, hpd:6, days:247, period:'year'
+  };
+
+  // ---- helpers ----
+  var $=function(id){return document.getElementById(id);};
+  var nf=new Intl.NumberFormat('ru-RU',{maximumFractionDigits:0});
+  function money(v){
+    if(st.currency==='aed'){ var r=st.rate>0?st.rate:22; return nf.format(Math.round(v/r))+' AED'; }
+    return nf.format(Math.round(v))+' ₽';
+  }
+  function numVal(el){var v=parseFloat(el.value);return isNaN(v)||v<0?0:v;}
+  function billableHours(){return Math.round(st.hours*(1+st.uplift/100));}
+  function effCost(){return st.costRate*(st.pm?1.3:1);}   // +30% к себестоимости при участии проджекта
+  function prodHours(){return Math.max(1, st.emp*st.hpd*st.days);}
+  function segCost(seg){
+    var h=prodHours();
+    if(seg==='dubai') return st.pnlFot/h;                              // только ФОТ
+    if(seg==='viaDubai') return (st.pnlFot+st.pnlOpex+st.pnlTax)/h;    // без маркетинга
+    return (st.pnlFot+st.pnlOpex+st.pnlTax+st.pnlMkt)/h;              // все расходы (РФ)
+  }
+  function segCostR(seg){return Math.round(segCost(seg)/10)*10;}       // округление до 10 ₽
+
+  function setSeg(wrapId,v){
+    [].forEach.call($(wrapId).querySelectorAll('button'),function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-v')===String(v)?'true':'false');
+    });
+  }
+  function bindSeg(wrapId, key, after){
+    var wrap=$(wrapId);
+    wrap.addEventListener('click',function(e){
+      var b=e.target.closest('button'); if(!b) return;
+      setSeg(wrapId, b.getAttribute('data-v'));
+      st[key]=b.getAttribute('data-v');
+      if(after) after();
+      render();
+    });
+  }
+
+  function updateMkBadge(){
+    var ec = effCost();
+    var m = st.saleRate>0 ? (st.saleRate-ec)/st.saleRate*100 : 0;
+    $('mkBadge').textContent = 'маржа часа '+Math.round(m)+'%';
+  }
+  function updateMethodology(){
+    var h=prodHours();
+    $('mcHours').textContent = nf.format(h)+' ч';
+    $('mcDubai').textContent = nf.format(segCostR('dubai'))+' ₽/ч';
+    $('mcVia').textContent   = nf.format(segCostR('viaDubai'))+' ₽/ч';
+    $('mcRF').textContent    = nf.format(segCostR('russia'))+' ₽/ч';
+    var exp=st.pnlFot+st.pnlOpex+st.pnlTax+st.pnlMkt, gross=st.pnlRev-exp;
+    var m=st.pnlRev>0?gross/st.pnlRev*100:0;
+    $('mcGross').textContent = nf.format(Math.round(gross))+' ₽ · '+Math.round(m)+'%';
+  }
+  function updatePartnerDesc(){
+    var el=$('partnerDesc');
+    if(!st.partner){ el.textContent='Внешний партнёр не участвует'; return; }
+    var base=UK_BASE[st.client], eff=Math.max(0,base-10);
+    el.textContent = base>0
+      ? ('Партнёр '+st.partnerPct+'%, УК снижается с '+base+'% до '+eff+'%')
+      : ('Партнёр '+st.partnerPct+'%, УК 0%');
+  }
+  function updateSegUk(){
+    [].forEach.call(document.querySelectorAll('#segClient .ukv'), function(el){
+      var base=parseInt(el.getAttribute('data-base'),10)||0;
+      var red=st.partner?Math.max(0,base-10):base;
+      if(st.partner && red!==base) el.innerHTML='УК '+base+'% <b>&rarr; '+red+'%</b>';
+      else el.textContent='УК '+base+'%';
+    });
+  }
+  function setCurBtns(c){[].forEach.call($('curSw').querySelectorAll('button'),function(b){b.setAttribute('aria-pressed', b.getAttribute('data-c')===c?'true':'false');});}
+  function updateCurUI(){
+    var isDubai=st.client==='dubai';
+    $('curSw').style.display=isDubai?'flex':'none';
+    if(!isDubai){ st.currency='rub'; setCurBtns('rub'); }
+    $('curRate').style.display=(isDubai&&st.currency==='aed')?'block':'none';
+  }
+  function updateUpliftUI(){
+    var isDubai = (st.client==='dubai'||st.client==='viaDubai');
+    // «реком.» на кнопке +20% только для дубайских клиентов
+    [].forEach.call($('segUplift').querySelectorAll('button'),function(b){
+      b.classList.toggle('rec', isDubai && b.getAttribute('data-v')==='20');
+    });
+  }
+
+  // ---- segmented controls ----
+  bindSeg('segClient','client',function(){
+    st.saleRate = SALE_DEF[st.client]; $('saleRate').value = st.saleRate;
+    st.costRate = segCostR(st.client); $('costRate').value = st.costRate;
+    st.uplift = UPLIFT_DEF[st.client]; setSeg('segUplift', st.uplift);
+    st.licPrice = LIC_DEF[st.client].p; $('licPrice').value = st.licPrice;
+    st.licShare = LIC_DEF[st.client].s; $('licShare').value = st.licShare;
+    $('rfNote').style.display = st.client==='russia' ? 'block':'none';
+    updateUpliftUI(); updateMkBadge(); updatePartnerDesc(); updateSegUk(); updateCurUI();
+  });
+  bindSeg('segUplift','uplift',function(){ st.uplift = parseFloat(st.uplift); });
+  bindSeg('segPeriod','period',function(){
+    if(st.period!=='custom'){ st.days=PERIOD_DAYS[st.period]; $('pDays').value=st.days; }
+    $('pDays').disabled = (st.period!=='custom');
+    st.costRate=segCostR(st.client); $('costRate').value=st.costRate; updateMkBadge();
+  });
+  bindSeg('segPartnerPct','partnerPct',function(){ st.partnerPct = parseFloat(st.partnerPct); updatePartnerDesc(); });
+
+  // ---- toggles ----
+  $('partnerToggle').addEventListener('change',function(){
+    st.partner=this.checked; $('partnerPctWrap').style.display=this.checked?'block':'none';
+    updatePartnerDesc(); updateSegUk(); updateCurUI(); render();
+  });
+  $('licToggle').addEventListener('change',function(){
+    st.lic=this.checked; $('licFields').style.display=this.checked?'block':'none'; render();
+  });
+  $('pmToggle').addEventListener('change',function(){ st.pm=this.checked; updateMkBadge(); render(); });
+  $('curSw').addEventListener('click',function(e){
+    var btn=e.target.closest('button'); if(!btn) return;
+    st.currency=btn.getAttribute('data-c'); setCurBtns(st.currency); updateCurUI(); render();
+  });
+
+  // ---- number inputs ----
+  function bindNum(id,key){
+    $(id).addEventListener('input',function(){
+      st[key]=numVal(this);
+      if(key==='saleRate'||key==='costRate') updateMkBadge();
+      render();
+    });
+  }
+  bindNum('hours','hours'); bindNum('costRate','costRate'); bindNum('saleRate','saleRate');
+  bindNum('licPrice','licPrice'); bindNum('licShare','licShare');
+
+  // P&L мини-калькулятор снизу: пересчитывает себестоимость сегмента и подставляет её в расчёт выше
+  function bindPnl(id,key){
+    $(id).addEventListener('input',function(){
+      st[key]=numVal(this);
+      st.costRate=segCostR(st.client); $('costRate').value=st.costRate; updateMkBadge();
+      render();
+    });
+  }
+  bindPnl('pnlRev','pnlRev'); bindPnl('pnlFot','pnlFot'); bindPnl('pnlOpex','pnlOpex');
+  bindPnl('pnlTax','pnlTax'); bindPnl('pnlMkt','pnlMkt');
+  bindPnl('pEmp','emp'); bindPnl('pHpd','hpd'); bindPnl('pDays','days');
+
+  [].forEach.call(document.querySelectorAll('.step'),function(s){
+    s.addEventListener('click',function(){
+      var key=s.getAttribute('data-t'), d=parseFloat(s.getAttribute('data-d'));
+      st[key]=Math.max(0, st[key]+d); $(key).value=st[key]; render();
+    });
+  });
+
+  // ---- core calculation ----
+  function calc(){
+    var base = UK_BASE[st.client];
+    var ukNom = st.partner ? Math.max(0, base-10) : base;   // partner reduces УК by 10 points
+    var pnNom = st.partner ? (parseFloat(st.partnerPct)||0) : 0;
+    var uk=ukNom/100, pn=pnNom/100;
+
+    var H = billableHours();
+    var ec = effCost();
+    var workCost = H*ec;
+    var workRev  = H*st.saleRate;
+    var workGross= workRev-workCost;
+
+    var licPrice=0, licProfit=0, licCost=0;
+    if(st.lic){ licPrice=st.licPrice; licProfit=licPrice*(st.licShare/100); licCost=licPrice-licProfit; }
+
+    var clientTotal = workRev + licPrice;
+    var totalCost   = workCost + licCost;
+
+    var distBase = workRev + (st.lic ? licPrice : 0);
+    var ukAmt = distBase*uk, pnAmt = distBase*pn;
+    var rfRev = clientTotal - ukAmt - pnAmt;
+    var rfProfit = rfRev - totalCost;
+    var margin = clientTotal>0 ? rfProfit/clientTotal : 0;
+
+    return {ukNom:ukNom,pnNom:pnNom,ukAmt:ukAmt,pnAmt:pnAmt,rfRev:rfRev,billable:H,effCost:ec,
+            workCost:workCost,workRev:workRev,workGross:workGross,
+            licPrice:licPrice,licProfit:licProfit,licCost:licCost,
+            clientTotal:clientTotal,totalCost:totalCost,rfProfit:rfProfit,margin:margin};
+  }
+
+  // ---- render ----
+  function render(){
+    var c=calc();
+    $('billableOut').textContent = nf.format(c.billable)+' ч';
+
+    var _cur = st.currency==='aed'?'AED':'₽', _big = st.currency==='aed'?c.clientTotal/(st.rate>0?st.rate:22):c.clientTotal;
+    $('clientTotal').innerHTML = nf.format(Math.round(_big))+' <small>'+_cur+'</small>';
+    $('segTag').textContent = SEG_NAME[st.client];
+    $('clientSub').textContent = 'Себестоимость '+money(c.effCost)+'/ч'+(st.pm?' (с PM)':'')+' · ставка '+money(st.saleRate)+'/ч · '+nf.format(c.billable)+' ч';
+    $('hlCost').textContent = money(c.totalCost);
+    $('hlProfit').textContent = money(c.rfProfit);
+    $('hlProfit').style.color = c.rfProfit>=0 ? '#7EE6A0' : '#FF9DA3';
+    $('hlMargin').textContent = (c.margin*100).toFixed(1).replace('.',',')+'%';
+
+    var t=c.clientTotal||1;
+    var pRf=Math.max(0,c.rfRev)/t*100, pUk=c.ukAmt/t*100, pPn=c.pnAmt/t*100;
+    $('barRf').style.flexBasis=pRf+'%'; $('barUk').style.flexBasis=pUk+'%'; $('barPn').style.flexBasis=pPn+'%';
+    $('barRf').textContent = pRf>12?'РФ':''; $('barUk').textContent = pUk>12?'УК':''; $('barPn').textContent = pPn>12?'Партнёр':'';
+    $('pctRf').textContent = Math.round(pRf)+'%'; $('pctUk').textContent = Math.round(pUk)+'%'; $('pctPn').textContent = Math.round(pPn)+'%';
+    $('amtRf').textContent = money(c.rfRev); $('amtUk').textContent = money(c.ukAmt); $('amtPn').textContent = money(c.pnAmt);
+
+    $('wcD').textContent = nf.format(c.billable)+' ч × '+money(c.effCost)+(st.pm?' (PM +30%)':'');
+    $('wrD').textContent = nf.format(c.billable)+' ч × '+money(st.saleRate);
+    $('workCost').textContent = money(c.workCost);
+    $('workRev').textContent = money(c.workRev);
+    $('workGross').textContent = money(c.workGross);
+
+    var licShow = st.lic?'':'none';
+    ['grpLic','rowLicPrice','rowLicProfit','rowLicCost'].forEach(function(id){$(id).style.display=licShow;});
+    $('lpD').textContent = 'доля '+st.licShare+'%';
+    $('licPriceOut').textContent = money(c.licPrice);
+    $('licProfitOut').textContent = money(c.licProfit);
+    $('licCostOut').textContent = money(c.licCost);
+
+    $('ttlClient').textContent = money(c.clientTotal);
+    $('ttlCost').textContent = money(c.totalCost);
+    $('ukD').textContent = c.ukNom+'% от оборота';
+    $('pnD').textContent = c.pnNom+'% от оборота';
+    $('ttlUk').textContent = money(c.ukAmt);
+    $('ttlPn').textContent = money(c.pnAmt);
+    $('ttlRfRev').textContent = money(c.rfRev);
+    $('ttlProfit').textContent = money(c.rfProfit);
+    $('ttlProfit').className = 'r '+(c.rfProfit>=0?'pos':'');
+    updateMethodology();
+  }
+
+  // ---- reset ----
+  $('resetBtn').addEventListener('click',function(){
+    st={client:'dubai',partner:false,partnerPct:20,
+        hours:100,uplift:20,costRate:770,saleRate:4300,pm:false,currency:'rub',rate:22,
+        lic:false,licPrice:220000,licShare:40,
+        pnlRev:10000000,pnlFot:3000000,pnlOpex:2000000,pnlTax:700000,pnlMkt:300000,emp:5,hpd:6,days:247,period:'year'};
+    setSeg('segClient','dubai'); setSeg('segPartnerPct','20'); setSeg('segUplift','20');
+    $('partnerToggle').checked=false; $('partnerPctWrap').style.display='none';
+    $('pmToggle').checked=false;
+    $('licToggle').checked=false;
+    $('licFields').style.display='none'; $('rfNote').style.display='none';
+    $('hours').value=100; $('saleRate').value=4300;
+    $('licPrice').value=220000; $('licShare').value=40;
+    $('pnlRev').value=10000000; $('pnlFot').value=3000000; $('pnlOpex').value=2000000; $('pnlTax').value=700000; $('pnlMkt').value=300000;
+    $('pEmp').value=5; $('pHpd').value=6; $('pDays').value=247; $('pDays').disabled=true;
+    setSeg('segPeriod','year'); setCurBtns('rub');
+    st.costRate=segCostR('dubai'); $('costRate').value=st.costRate;
+    updateUpliftUI(); updateMkBadge(); updatePartnerDesc(); updateSegUk(); updateCurUI(); render();
+  });
+
+  // init
+  st.costRate = segCostR(st.client); $('costRate').value = st.costRate;
+  $('pDays').disabled = (st.period!=='custom');
+  updateUpliftUI(); updateMkBadge(); updatePartnerDesc(); updateSegUk(); updateCurUI(); render();
+})();
+</script>
+</body>
+</html>
