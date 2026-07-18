@@ -411,7 +411,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
     .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
       color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
     .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
-      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      vertical-align:text-bottom;background:rgba(1,60,164,.3);border:1px solid rgba(255,255,255,.5);
       border-radius:2px;box-sizing:border-box;color:transparent;
       user-select:none}
     .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
@@ -1600,7 +1600,7 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   // src/helmet.ts
   var DESIGN_DOC_MODE_RE = /<meta\b[^>]*\bname\s*=\s*["']design_doc_mode["'][^>]*\b(?:content|value)\s*=\s*["'](\w+)["']/i;
   var CANVAS_BG_LIGHT = "#f0eee6";
-  var CANVAS_BG_DARK = "#2e2c26";
+  var CANVAS_BG_DARK = "#FFFFFF";
   function createHelmetManager(doc, isStreaming) {
     const mounted = /* @__PURE__ */ new Set();
     const live = /* @__PURE__ */ new Map();
@@ -2085,95 +2085,95 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <style>
     *{box-sizing:border-box;}
     html,body{margin:0;}
-    body{background:#05060A;font-family:Oxygen,system-ui,sans-serif;color:#F2F5FA;-webkit-font-smoothing:antialiased;}
-    a{color:#8FE7AE;text-decoration:none;}
-    a:hover{color:#16C15A;}
+    body{background:#F5F7F9;font-family:Oxygen,system-ui,sans-serif;color:#F2F5FA;-webkit-font-smoothing:antialiased;}
+    a{color:#9CB9EE;text-decoration:none;}
+    a:hover{color:#4E86E6;}
     ::selection{background:rgba(228,56,77,.28);}
-    input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:100px;background:linear-gradient(90deg,#16C15A var(--fill,40%),rgba(255,255,255,.1) var(--fill,40%));outline:none;}
-    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#16C15A;border:3px solid #05060A;box-shadow:0 0 0 1px #16C15A,0 6px 14px -4px rgba(22,193,90,.7);cursor:pointer;}
-    input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#16C15A;border:3px solid #05060A;box-shadow:0 0 0 1px #16C15A;cursor:pointer;}
+    input[type=range]{-webkit-appearance:none;appearance:none;height:6px;border-radius:100px;background:linear-gradient(90deg,#4E86E6 var(--fill,40%),#FFFFFF var(--fill,40%));outline:none;}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#4E86E6;border:3px solid #F5F7F9;box-shadow:0 0 0 1px #4E86E6,0 6px 14px -4px rgba(1,60,164,.7);cursor:pointer;}
+    input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#4E86E6;border:3px solid #F5F7F9;box-shadow:0 0 0 1px #4E86E6;cursor:pointer;}
     @keyframes mbLive{0%{box-shadow:0 0 0 0 rgba(228,56,77,.55);}70%{box-shadow:0 0 0 8px rgba(228,56,77,0);}100%{box-shadow:0 0 0 0 rgba(228,56,77,0);}}
     @keyframes mbEq{0%,100%{transform:scaleY(.32);}50%{transform:scaleY(1);}}
     @keyframes mbScan{0%{top:-8px;}100%{top:40px;}}
-    .mb-wave i{display:inline-block;width:4px;border-radius:2px;background:#8FE7AE;transform-origin:center;}
+    .mb-wave i{display:inline-block;width:4px;border-radius:2px;background:#9CB9EE;transform-origin:center;}
     .mb-wave i:nth-child(1){height:12px;animation:mbEq 1.1s ease-in-out infinite;}
     .mb-wave i:nth-child(2){height:26px;animation:mbEq 1.1s ease-in-out .15s infinite;}
     .mb-wave i:nth-child(3){height:36px;animation:mbEq 1.1s ease-in-out .3s infinite;}
     .mb-wave i:nth-child(4){height:18px;animation:mbEq 1.1s ease-in-out .45s infinite;}
     .mb-wave i:nth-child(5){height:30px;animation:mbEq 1.1s ease-in-out .6s infinite;}
     .mb-wave i:nth-child(6){height:13px;animation:mbEq 1.1s ease-in-out .75s infinite;}
-    .mb-scan{position:absolute;left:0;right:0;height:12px;background:linear-gradient(rgba(22,193,90,.85),transparent);animation:mbScan 2.4s ease-in-out infinite;}
+    .mb-scan{position:absolute;left:0;right:0;height:12px;background:linear-gradient(rgba(1,60,164,.85),transparent);animation:mbScan 2.4s ease-in-out infinite;}
     .mb-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s;}
     .mb-card:hover{transform:translateY(-5px);border-color:rgba(228,56,77,.45);box-shadow:0 34px 70px -34px rgba(228,56,77,.4);}
     .mb-tier{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;}
     .mb-tier:hover{transform:translateY(-6px);}
-    .mb-inp:focus{outline:none;border-color:rgba(228,56,77,.55)!important;background:rgba(255,255,255,.08)!important;}
+    .mb-inp:focus{outline:none;border-color:rgba(228,56,77,.55)!important;background:#FFFFFF!important;}
     .mb-tilt{transition:transform .18s ease-out;transform-style:preserve-3d;}
   </style>
 </helmet>
-<div ref="{{ root }}" style="min-height:100vh;background:#05060A;overflow-x:hidden;">
+<div ref="{{ root }}" style="min-height:100vh;background:#F5F7F9;overflow-x:hidden;">
 
   <!-- HEADER -->
-  <header style="position:sticky;top:0;z-index:60;background:rgba(5,6,10,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);">
+  <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;">
     <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:20px;height:70px;padding:0 clamp(18px,4vw,44px);">
-      <div style="display:flex;align-items:center;gap:9px;font:700 21px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span><span style="font:700 11px Oxygen;letter-spacing:.14em;color:#8FE7AE;border:1px solid rgba(22,193,90,.35);border-radius:6px;padding:3px 7px;">VECTOR</span></div>
+      <div style="display:flex;align-items:center;gap:9px;font:700 21px Oxygen;color:#fff;">Make<span style="color:#C51929;">Biz</span><span style="font:700 11px Oxygen;letter-spacing:.14em;color:#9CB9EE;border:1px solid rgba(1,60,164,.35);border-radius:6px;padding:3px 7px;">VECTOR</span></div>
       <nav style="display:flex;gap:2px;margin-left:8px;" data-hidemob>
-        <a href="#adv" style="font:400 13px Oxygen;color:#95A0B2;padding:8px 12px;" style-hover="color:#fff;">Преимущества</a>
-        <a href="#cabinet" style="font:400 13px Oxygen;color:#95A0B2;padding:8px 12px;" style-hover="color:#fff;">Кабинет</a>
-        <a href="#integ" style="font:400 13px Oxygen;color:#95A0B2;padding:8px 12px;" style-hover="color:#fff;">Интеграции</a>
-        <a href="#price" style="font:400 13px Oxygen;color:#95A0B2;padding:8px 12px;" style-hover="color:#fff;">Тарифы</a>
+        <a href="#adv" style="font:400 13px Oxygen;color:#6B7890;padding:8px 12px;" style-hover="color:#fff;">Преимущества</a>
+        <a href="#cabinet" style="font:400 13px Oxygen;color:#6B7890;padding:8px 12px;" style-hover="color:#fff;">Кабинет</a>
+        <a href="#integ" style="font:400 13px Oxygen;color:#6B7890;padding:8px 12px;" style-hover="color:#fff;">Интеграции</a>
+        <a href="#price" style="font:400 13px Oxygen;color:#6B7890;padding:8px 12px;" style-hover="color:#fff;">Тарифы</a>
       </nav>
       <div style="margin-left:auto;display:flex;align-items:center;gap:16px;">
         <span style="font:700 14px Oxygen;color:#F2F5FA;" data-hidemob>+971 50 262 0927</span>
-        <a href="#contact" style="font:700 14px Oxygen;color:#fff;background:#E4384D;padding:11px 20px;border-radius:10px;box-shadow:0 12px 26px -8px rgba(228,56,77,.55);" style-hover="background:#C8102E;">5 часов бесплатно</a>
+        <a href="#contact" style="font:700 14px Oxygen;color:#fff;background:#C51929;padding:11px 20px;border-radius:10px;box-shadow:0 12px 26px -8px rgba(228,56,77,.55);" style-hover="background:#C51929;">5 часов бесплатно</a>
       </div>
     </div>
   </header>
 
   <a id="top"></a>
   <!-- HERO (kept) -->
-  <section style="position:relative;border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden;">
+  <section style="position:relative;border-bottom:1px solid #E7E7E7;overflow:hidden;">
     <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4vw,56px);align-items:center;padding:clamp(36px,5vw,64px) clamp(18px,4vw,44px);" data-herogrid>
       <div>
-        <span style="display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#F0A6B0;background:rgba(228,56,77,.12);border:1px solid rgba(228,56,77,.32);padding:8px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#E4384D;animation:mbLive 2s infinite;"></span>Vector · аналитика звонков отдела продаж</span>
-        <h1 style="font:700 clamp(2.4rem,5.4vw,4.2rem)/1.0 Oxygen;letter-spacing:-.04em;color:#fff;margin:22px 0 16px;max-width:15ch;text-wrap:balance;">Vector видит, где отдел продаж <span style="color:#E4384D;">теряет клиентов</span></h1>
+        <span style="display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#F3B4BC;background:rgba(228,56,77,.12);border:1px solid rgba(228,56,77,.32);padding:8px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#C51929;animation:mbLive 2s infinite;"></span>Vector · аналитика звонков отдела продаж</span>
+        <h1 style="font:700 clamp(2.4rem,5.4vw,4.2rem)/1.0 Oxygen;letter-spacing:-.04em;color:#fff;margin:22px 0 16px;max-width:15ch;text-wrap:balance;">Vector видит, где отдел продаж <span style="color:#C51929;">теряет клиентов</span></h1>
         <p style="font:300 clamp(15px,1.6vw,18px)/1.6 Oxygen;color:#B7C0CE;margin:0;max-width:52ch;">Подключаемся к вашим звонкам, сразу показываем слабые места отдела продаж, даём первичные рекомендации и помогаем усилить скрипт, команду и следующий шаг.</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin:30px 0 22px;">
-          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#fff;background:#E4384D;padding:15px 28px;border-radius:12px;box-shadow:0 18px 36px -10px rgba(228,56,77,.55);" style-hover="transform:translateY(-2px);">Получить 5 часов анализа бесплатно →</a>
-          <a href="#price" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#F2F5FA;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:15px 28px;border-radius:12px;" style-hover="border-color:rgba(22,193,90,.5);">Тарифы</a>
+          <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#fff;background:#C51929;padding:15px 28px;border-radius:12px;box-shadow:0 18px 36px -10px rgba(228,56,77,.55);" style-hover="transform:translateY(-2px);">Получить 5 часов анализа бесплатно →</a>
+          <a href="#price" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#F2F5FA;background:#FFFFFF;border:1px solid #E7E7E7;padding:15px 28px;border-radius:12px;" style-hover="border-color:rgba(1,60,164,.5);">Тарифы</a>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#16C15A;box-shadow:0 0 8px #16C15A;"></span>Анализ 100% звонков</span>
-          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#16C15A;box-shadow:0 0 8px #16C15A;"></span>Рекомендации по сотрудникам и компании</span>
-          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#16C15A;box-shadow:0 0 8px #16C15A;"></span>Проблемные звонки и точки потерь</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:#FFFFFF;border:1px solid #E7E7E7;padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#4E86E6;box-shadow:0 0 8px #4E86E6;"></span>Анализ 100% звонков</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:#FFFFFF;border:1px solid #E7E7E7;padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#4E86E6;box-shadow:0 0 8px #4E86E6;"></span>Рекомендации по сотрудникам и компании</span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font:700 12.5px Oxygen;color:#CFE0FF;background:#FFFFFF;border:1px solid #E7E7E7;padding:9px 15px;border-radius:100px;"><span style="width:7px;height:7px;border-radius:50%;background:#4E86E6;box-shadow:0 0 8px #4E86E6;"></span>Проблемные звонки и точки потерь</span>
         </div>
       </div>
-      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(380px,44vw,500px);background:radial-gradient(120% 120% at 30% 0%,#111624,#06070C 72%);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -50px rgba(0,0,0,.9);">
+      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(380px,44vw,500px);background:radial-gradient(120% 120% at 30% 0%,#FFFFFF,#F5F7F9 72%);border:1px solid #E7E7E7;box-shadow:0 40px 90px -50px rgba(255,255,255,.9);">
         <canvas data-scene="vwave" style="position:absolute;inset:0;display:block;width:100%;height:100%;"></canvas>
         <div data-grain style="position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.4;background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22150%22%20height=%22150%22%3E%3Cfilter%20id=%22v%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%22.85%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3CfeColorMatrix%20type=%22saturate%22%20values=%220%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23v)%22/%3E%3C/svg%3E');"></div>
-        <button onClick="{{ replayWave }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(255,255,255,.82);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:rgba(255,255,255,.16);"><span style="font-size:14px;">↻</span> Повторить</button>
+        <button onClick="{{ replayWave }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(1,60,164,.82);background:#FFFFFF;border:1px solid #E7E7E7;border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:#FFFFFF;"><span style="font-size:14px;">↻</span> Повторить</button>
       </div>
     </div>
   </section>
 
   <!-- TRUST -->
   <section id="adv" style="max-width:1280px;margin:0 auto;padding:clamp(30px,4vw,52px) clamp(18px,4vw,44px) 0;">
-    <p style="font:300 13px Oxygen;letter-spacing:.04em;color:#63718A;text-align:center;margin:0 0 22px;">Нам доверяют компании, где качество звонков напрямую влияет на продажи</p>
+    <p style="font:300 13px Oxygen;letter-spacing:.04em;color:#6B7890;text-align:center;margin:0 0 22px;">Нам доверяют компании, где качество звонков напрямую влияет на продажи</p>
     <div style="display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;" data-proofgrid>
-      <div style="border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px 28px;background:linear-gradient(160deg,#12141C,#0A0B10);display:flex;flex-direction:column;justify-content:center;">
-        <div style="font:300 12.5px Oxygen;color:#95A0B2;margin-bottom:14px;">Работают на Vector</div>
+      <div style="border:1px solid #E7E7E7;border-radius:22px;padding:26px 28px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);display:flex;flex-direction:column;justify-content:center;">
+        <div style="font:300 12.5px Oxygen;color:#6B7890;margin-bottom:14px;">Работают на Vector</div>
         <div style="display:flex;align-items:center;gap:26px;flex-wrap:wrap;">
-          <span style="font:700 26px Oxygen;letter-spacing:.02em;color:#EAF1FF;opacity:.92;">HAVAL</span>
-          <span style="font:700 26px Oxygen;letter-spacing:.02em;color:#EAF1FF;opacity:.92;">СДЭК</span>
+          <span style="font:700 26px Oxygen;letter-spacing:.02em;color:#03235F;opacity:.92;">HAVAL</span>
+          <span style="font:700 26px Oxygen;letter-spacing:.02em;color:#03235F;opacity:.92;">СДЭК</span>
         </div>
       </div>
-      <div style="border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px;background:#0A0C12;">
-        <div style="font:700 clamp(30px,3.6vw,44px) Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;" data-count="35" data-prefix="+" data-suffix="%">+35%</div>
-        <div style="font:300 13px/1.45 Oxygen;color:#95A0B2;margin-top:6px;">рост эффективности отдела продаж</div>
+      <div style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:#F5F7F9;">
+        <div style="font:700 clamp(30px,3.6vw,44px) Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums;" data-count="35" data-prefix="+" data-suffix="%">+35%</div>
+        <div style="font:300 13px/1.45 Oxygen;color:#6B7890;margin-top:6px;">рост эффективности отдела продаж</div>
       </div>
-      <div style="border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px;background:#0A0C12;">
-        <div style="font:700 clamp(30px,3.6vw,44px) Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;" data-count="40" data-prefix="+" data-suffix="%">+40%</div>
-        <div style="font:300 13px/1.45 Oxygen;color:#95A0B2;margin-top:6px;">скорость обработки запросов · кейс СДЭК</div>
+      <div style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:#F5F7F9;">
+        <div style="font:700 clamp(30px,3.6vw,44px) Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums;" data-count="40" data-prefix="+" data-suffix="%">+40%</div>
+        <div style="font:300 13px/1.45 Oxygen;color:#6B7890;margin-top:6px;">скорость обработки запросов · кейс СДЭК</div>
       </div>
     </div>
   </section>
@@ -2181,25 +2181,25 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- PROBLEM + 3D FUNNEL -->
   <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:60ch;margin:0 auto 36px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Почему теряются клиенты</span>
-      <h2 style="font:700 clamp(1.8rem,3.8vw,2.7rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Почему бизнес теряет клиентов, <span style="color:#E4384D;">даже если звонков много</span></h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#95A0B2;margin:0;">Проблема не в количестве звонков. Проблема в том, что бизнес не видит, где внутри этих звонков теряется продажа.</p>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Почему теряются клиенты</span>
+      <h2 style="font:700 clamp(1.8rem,3.8vw,2.7rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Почему бизнес теряет клиентов, <span style="color:#C51929;">даже если звонков много</span></h2>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0;">Проблема не в количестве звонков. Проблема в том, что бизнес не видит, где внутри этих звонков теряется продажа.</p>
     </div>
     <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,44px);align-items:center;" data-probgrid>
-      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(380px,44vw,460px);background:radial-gradient(120% 120% at 35% 5%,#14111a,#06070C 72%);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -50px rgba(0,0,0,.9);">
+      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(380px,44vw,460px);background:radial-gradient(120% 120% at 35% 5%,#FFFFFF,#F5F7F9 72%);border:1px solid #E7E7E7;box-shadow:0 40px 90px -50px rgba(255,255,255,.9);">
         <canvas data-scene="funnel" style="position:absolute;inset:0;display:block;width:100%;height:100%;"></canvas>
         <div data-grain style="position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.4;background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22150%22%20height=%22150%22%3E%3Cfilter%20id=%22f%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%22.85%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3CfeColorMatrix%20type=%22saturate%22%20values=%220%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23f)%22/%3E%3C/svg%3E');"></div>
-        <button onClick="{{ replayFunnel }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(255,255,255,.82);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:rgba(255,255,255,.16);"><span style="font-size:14px;">↻</span> Повторить</button>
+        <button onClick="{{ replayFunnel }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(1,60,164,.82);background:#FFFFFF;border:1px solid #E7E7E7;border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:#FFFFFF;"><span style="font-size:14px;">↻</span> Повторить</button>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 15px 15px 42px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #E4384D;"></span>Менеджеры работают по-разному</div>
-        <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 15px 15px 42px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #E4384D;"></span>Не видно, где именно теряются лиды</div>
-        <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 15px 15px 42px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #E4384D;"></span>Руководители не могут прослушать все звонки</div>
-        <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 15px 15px 42px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #E4384D;"></span>Скрипт соблюдается нестабильно, новичков сложно обучать</div>
-        <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px 15px 15px 42px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #E4384D;"></span>Ручной контроль дорогой и не масштабируется</div>
+        <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 15px 15px 42px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #C51929;"></span>Менеджеры работают по-разному</div>
+        <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 15px 15px 42px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #C51929;"></span>Не видно, где именно теряются лиды</div>
+        <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 15px 15px 42px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #C51929;"></span>Руководители не могут прослушать все звонки</div>
+        <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 15px 15px 42px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #C51929;"></span>Скрипт соблюдается нестабильно, новичков сложно обучать</div>
+        <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 15px 15px 42px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;position:relative;"><span style="position:absolute;left:16px;top:18px;width:9px;height:9px;border-radius:50%;background:rgba(228,56,77,.25);border:2px solid #C51929;"></span>Ручной контроль дорогой и не масштабируется</div>
         <div style="display:flex;gap:26px;flex-wrap:wrap;margin-top:8px;padding-left:2px;">
-          <div><div style="font:700 32px Oxygen;color:#E4384D;font-variant-numeric:tabular-nums;">до 30%</div><div style="font:300 12.5px Oxygen;color:#95A0B2;margin-top:2px;">лидов теряется в звонках</div></div>
-          <div><div style="font:700 32px Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;">+35%</div><div style="font:300 12.5px Oxygen;color:#95A0B2;margin-top:2px;">эффективности с Vector</div></div>
+          <div><div style="font:700 32px Oxygen;color:#C51929;font-variant-numeric:tabular-nums;">до 30%</div><div style="font:300 12.5px Oxygen;color:#6B7890;margin-top:2px;">лидов теряется в звонках</div></div>
+          <div><div style="font:700 32px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums;">+35%</div><div style="font:300 12.5px Oxygen;color:#6B7890;margin-top:2px;">эффективности с Vector</div></div>
         </div>
       </div>
     </div>
@@ -2208,146 +2208,146 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- WHAT VECTOR SEES -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Разбор каждого звонка</span>
-      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что Vector видит <span style="color:#16C15A;">в каждом звонке</span></h2>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Разбор каждого звонка</span>
+      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что Vector видит <span style="color:#4E86E6;">в каждом звонке</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;" data-seesgrid>
-      <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;background:linear-gradient(160deg,#12141C,#0A0B10);">
-        <div style="width:54px;height:54px;border-radius:15px;background:#0A0C12;border:1px solid rgba(22,193,90,.25);display:grid;place-items:center;margin-bottom:18px;"><div class="mb-wave" style="display:flex;gap:3.5px;align-items:center;height:36px;"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);">
+        <div style="width:54px;height:54px;border-radius:15px;background:#F5F7F9;border:1px solid rgba(1,60,164,.25);display:grid;place-items:center;margin-bottom:18px;"><div class="mb-wave" style="display:flex;gap:3.5px;align-items:center;height:36px;"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
         <h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 12px;">Структура продажи и стандарты</h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Прохождение всех этапов продажи</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Соблюдение этапов скрипта</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Соответствие стандартам</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Прохождение всех этапов продажи</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Соблюдение этапов скрипта</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Соответствие стандартам</li>
         </ul>
       </div>
-      <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;background:linear-gradient(160deg,#12141C,#0A0B10);">
-        <div style="width:54px;height:54px;border-radius:15px;background:#0A0C12;border:1px solid rgba(22,193,90,.25);display:grid;place-items:center;margin-bottom:18px;overflow:hidden;position:relative;"><div style="width:26px;height:32px;background:#EAF1FF;border-radius:3px;position:relative;overflow:hidden;"><span style="position:absolute;left:5px;top:7px;width:14px;height:2px;border-radius:2px;background:#8FE0A5;"></span><span style="position:absolute;left:5px;top:14px;width:16px;height:2px;border-radius:2px;background:#8FE0A5;"></span><span style="position:absolute;left:5px;top:21px;width:11px;height:2px;border-radius:2px;background:#8FE0A5;"></span><span class="mb-scan"></span></div></div>
+      <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);">
+        <div style="width:54px;height:54px;border-radius:15px;background:#F5F7F9;border:1px solid rgba(1,60,164,.25);display:grid;place-items:center;margin-bottom:18px;overflow:hidden;position:relative;"><div style="width:26px;height:32px;background:#03235F;border-radius:3px;position:relative;overflow:hidden;"><span style="position:absolute;left:5px;top:7px;width:14px;height:2px;border-radius:2px;background:#9CB9EE;"></span><span style="position:absolute;left:5px;top:14px;width:16px;height:2px;border-radius:2px;background:#9CB9EE;"></span><span style="position:absolute;left:5px;top:21px;width:11px;height:2px;border-radius:2px;background:#9CB9EE;"></span><span class="mb-scan"></span></div></div>
         <h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 12px;">Что произошло с клиентом</h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Реакция клиента</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Расшифровка разговора</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Результат и следующий шаг</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Реакция клиента</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Расшифровка разговора</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Результат и следующий шаг</li>
         </ul>
       </div>
-      <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;background:linear-gradient(160deg,#12141C,#0A0B10);">
-        <div style="width:54px;height:54px;border-radius:15px;background:#0A0C12;border:1px solid rgba(22,193,90,.25);display:grid;place-items:center;margin-bottom:18px;position:relative;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 15 L9 9 L13 12 L20 5" stroke="#16C15A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="5" r="2.2" fill="#8FE7AE"/></svg></div>
+      <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);">
+        <div style="width:54px;height:54px;border-radius:15px;background:#F5F7F9;border:1px solid rgba(1,60,164,.25);display:grid;place-items:center;margin-bottom:18px;position:relative;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 15 L9 9 L13 12 L20 5" stroke="#4E86E6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="5" r="2.2" fill="#9CB9EE"/></svg></div>
         <h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 12px;">Ведёт ли к сделке</h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Оценка разговора</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Вероятность продажи</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Проблемный / хороший / критичный</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Оценка разговора</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Вероятность продажи</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Проблемный / хороший / критичный</li>
         </ul>
       </div>
-      <div class="mb-card" style="border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:26px;background:linear-gradient(160deg,#12141C,#0A0B10);">
-        <div style="width:54px;height:54px;border-radius:15px;background:#0A0C12;border:1px solid rgba(22,193,90,.25);display:grid;place-items:center;margin-bottom:18px;position:relative;"><span style="position:absolute;width:34px;height:34px;"><span style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(22,193,90,.3);"></span><span style="position:absolute;top:50%;left:50%;width:14px;height:2px;background:#16C15A;transform-origin:left;transform:translateY(-50%) rotate(-45deg);border-radius:2px;box-shadow:0 0 8px #16C15A;"></span></span><span style="width:6px;height:6px;border-radius:50%;background:#8FE7AE;z-index:2;"></span></div>
+      <div class="mb-card" style="border:1px solid #E7E7E7;border-radius:22px;padding:26px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);">
+        <div style="width:54px;height:54px;border-radius:15px;background:#F5F7F9;border:1px solid rgba(1,60,164,.25);display:grid;place-items:center;margin-bottom:18px;position:relative;"><span style="position:absolute;width:34px;height:34px;"><span style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(1,60,164,.3);"></span><span style="position:absolute;top:50%;left:50%;width:14px;height:2px;background:#4E86E6;transform-origin:left;transform:translateY(-50%) rotate(-45deg);border-radius:2px;box-shadow:0 0 8px #4E86E6;"></span></span><span style="width:6px;height:6px;border-radius:50%;background:#9CB9EE;z-index:2;"></span></div>
         <h3 style="font:700 16px Oxygen;color:#fff;margin:0 0 12px;">Контроль работы менеджера</h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Заполнение протокола</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Поведение менеджера</li>
-          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#95A0B2;"><span style="position:absolute;left:0;color:#16C15A;">›</span>Единый стандарт по отделу</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Заполнение протокола</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Поведение менеджера</li>
+          <li style="position:relative;padding-left:20px;font:300 13px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#4E86E6;">›</span>Единый стандарт по отделу</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- CABINET SHOWCASE (real screenshots) -->
-  <section id="cabinet" style="position:relative;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:radial-gradient(130% 100% at 50% 0%,#0B0D14,#05060A 72%);">
+  <section id="cabinet" style="position:relative;border-top:1px solid #E7E7E7;border-bottom:1px solid #E7E7E7;background:radial-gradient(130% 100% at 50% 0%,#F5F7F9,#F5F7F9 72%);">
     <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
       <div style="text-align:center;max-width:56ch;margin:0 auto 26px;">
-        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Личный кабинет Vector</span>
-        <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Контроль звонков, сотрудников <span style="color:#16C15A;">и точек роста в одном месте</span></h2>
+        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Личный кабинет Vector</span>
+        <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Контроль звонков, сотрудников <span style="color:#4E86E6;">и точек роста в одном месте</span></h2>
       </div>
       <div data-cabtabs style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;">
-        <button data-c="metrics" data-on style="font:700 13.5px Oxygen;color:#fff;background:#E4384D;border:1px solid #E4384D;padding:10px 18px;border-radius:100px;cursor:pointer;">Показатели</button>
-        <button data-c="analytics" style="font:700 13.5px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:10px 18px;border-radius:100px;cursor:pointer;">Аналитика</button>
-        <button data-c="call" style="font:700 13.5px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:10px 18px;border-radius:100px;cursor:pointer;">Разбор звонка</button>
+        <button data-c="metrics" data-on style="font:700 13.5px Oxygen;color:#fff;background:#C51929;border:1px solid #C51929;padding:10px 18px;border-radius:100px;cursor:pointer;">Показатели</button>
+        <button data-c="analytics" style="font:700 13.5px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:10px 18px;border-radius:100px;cursor:pointer;">Аналитика</button>
+        <button data-c="call" style="font:700 13.5px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:10px 18px;border-radius:100px;cursor:pointer;">Разбор звонка</button>
       </div>
       <div data-tiltwrap style="perspective:1600px;max-width:1080px;margin:0 auto;">
-        <div class="mb-tilt" data-tilt style="border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 50px 110px -50px rgba(0,0,0,.95),0 0 0 1px rgba(22,193,90,.08);background:#0A0C12;">
-          <div style="display:flex;align-items:center;gap:8px;padding:11px 16px;background:#0F1420;border-bottom:1px solid rgba(255,255,255,.08);">
-            <span style="width:11px;height:11px;border-radius:50%;background:#E4384D;"></span><span style="width:11px;height:11px;border-radius:50%;background:#E0A100;"></span><span style="width:11px;height:11px;border-radius:50%;background:#16C15A;"></span>
-            <span style="margin-left:12px;font:400 12px Oxygen;color:#63718A;">account.vectorsales.pro</span>
+        <div class="mb-tilt" data-tilt style="border-radius:16px;overflow:hidden;border:1px solid #E7E7E7;box-shadow:0 50px 110px -50px rgba(255,255,255,.95),0 0 0 1px rgba(1,60,164,.08);background:#F5F7F9;">
+          <div style="display:flex;align-items:center;gap:8px;padding:11px 16px;background:#FFFFFF;border-bottom:1px solid #E7E7E7;">
+            <span style="width:11px;height:11px;border-radius:50%;background:#C51929;"></span><span style="width:11px;height:11px;border-radius:50%;background:#E0A100;"></span><span style="width:11px;height:11px;border-radius:50%;background:#4E86E6;"></span>
+            <span style="margin-left:12px;font:400 12px Oxygen;color:#6B7890;">account.vectorsales.pro</span>
           </div>
           <div style="position:relative;">
             <!-- REDRAWN DASHBOARD: Контроль звонков сотрудников и точек роста -->
-            <div data-cab="metrics" style="display:flex;background:#0A0C12;font-family:Oxygen,system-ui;min-height:600px;">
+            <div data-cab="metrics" style="display:flex;background:#F5F7F9;font-family:Oxygen,system-ui;min-height:600px;">
               <!-- sidebar -->
-              <aside style="width:210px;flex:none;border-right:1px solid rgba(255,255,255,.07);background:#0C0F17;padding:18px 14px;display:flex;flex-direction:column;gap:4px;">
-                <div style="display:flex;align-items:center;gap:8px;padding:4px 8px 16px;"><span style="font:700 16px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span></span><span style="font:700 9px Oxygen;letter-spacing:.14em;color:#8FE7AE;border:1px solid rgba(22,193,90,.35);border-radius:5px;padding:2px 5px;">VECTOR</span></div>
-                <span style="display:flex;align-items:center;gap:10px;font:700 13px Oxygen;color:#fff;background:rgba(228,56,77,.14);border:1px solid rgba(228,56,77,.3);padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#E4384D;"></span>Контроль звонков</span>
-                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Сотрудники</span>
-                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Точки роста</span>
-                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Разбор звонков</span>
-                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#95A0B2;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#3A424E;"></span>Возражения</span>
-                <div style="margin-top:auto;border:1px solid rgba(22,193,90,.25);border-radius:12px;padding:12px;background:linear-gradient(160deg,#0C1912,#0A0C12);"><div style="font:700 12px Oxygen;color:#8FE7AE;margin-bottom:3px;">AI-рекомендация</div><div style="font:300 11px/1.4 Oxygen;color:#95A0B2;">Усилить этап «Следующий шаг» - теряется 18% сделок.</div></div>
+              <aside style="width:210px;flex:none;border-right:1px solid #E7E7E7;background:#FFFFFF;padding:18px 14px;display:flex;flex-direction:column;gap:4px;">
+                <div style="display:flex;align-items:center;gap:8px;padding:4px 8px 16px;"><span style="font:700 16px Oxygen;color:#fff;">Make<span style="color:#C51929;">Biz</span></span><span style="font:700 9px Oxygen;letter-spacing:.14em;color:#9CB9EE;border:1px solid rgba(1,60,164,.35);border-radius:5px;padding:2px 5px;">VECTOR</span></div>
+                <span style="display:flex;align-items:center;gap:10px;font:700 13px Oxygen;color:#fff;background:rgba(228,56,77,.14);border:1px solid rgba(228,56,77,.3);padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#C51929;"></span>Контроль звонков</span>
+                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#6B7890;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#FFFFFF;"></span>Сотрудники</span>
+                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#6B7890;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#FFFFFF;"></span>Точки роста</span>
+                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#6B7890;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#FFFFFF;"></span>Разбор звонков</span>
+                <span style="display:flex;align-items:center;gap:10px;font:400 13px Oxygen;color:#6B7890;padding:10px 12px;border-radius:10px;"><span style="width:7px;height:7px;border-radius:2px;background:#FFFFFF;"></span>Возражения</span>
+                <div style="margin-top:auto;border:1px solid rgba(1,60,164,.25);border-radius:12px;padding:12px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);"><div style="font:700 12px Oxygen;color:#9CB9EE;margin-bottom:3px;">AI-рекомендация</div><div style="font:300 11px/1.4 Oxygen;color:#6B7890;">Усилить этап «Следующий шаг» - теряется 18% сделок.</div></div>
               </aside>
               <!-- main -->
               <div style="flex:1;min-width:0;padding:20px 24px;">
                 <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px;">
-                  <div><div style="font:700 19px Oxygen;color:#fff;letter-spacing:-.01em;">Контроль звонков и точки роста</div><div style="font:300 12px Oxygen;color:#63718A;margin-top:2px;">Отдел продаж · 6 сотрудников · обновлено сегодня 14:20</div></div>
+                  <div><div style="font:700 19px Oxygen;color:#fff;letter-spacing:-.01em;">Контроль звонков и точки роста</div><div style="font:300 12px Oxygen;color:#6B7890;margin-top:2px;">Отдел продаж · 6 сотрудников · обновлено сегодня 14:20</div></div>
                   <div style="margin-left:auto;display:flex;gap:6px;">
-                    <span style="font:400 12px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:7px 12px;border-radius:100px;">Неделя</span>
-                    <span style="font:700 12px Oxygen;color:#052012;background:#16C15A;padding:7px 12px;border-radius:100px;">Месяц</span>
-                    <span style="font:400 12px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);padding:7px 12px;border-radius:100px;">Квартал</span>
+                    <span style="font:400 12px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:7px 12px;border-radius:100px;">Неделя</span>
+                    <span style="font:700 12px Oxygen;color:#FFFFFF;background:#4E86E6;padding:7px 12px;border-radius:100px;">Месяц</span>
+                    <span style="font:400 12px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:7px 12px;border-radius:100px;">Квартал</span>
                   </div>
                 </div>
                 <!-- KPI row -->
                 <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px;">
-                  <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Звонков за месяц</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">1 248</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +12% к прошлому</div></div>
-                  <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Средняя оценка</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">7.8<span style="font:700 14px Oxygen;color:#63718A;"> / 10</span></div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +0.6 балла</div></div>
-                  <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:15px 16px;background:#0E1219;"><div style="font:300 11.5px Oxygen;color:#95A0B2;">Конверсия в сделку</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">24%</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▲ +3% к прошлому</div></div>
-                  <div style="border:1px solid rgba(228,56,77,.28);border-radius:14px;padding:15px 16px;background:linear-gradient(160deg,#1A0C10,#0E1219);"><div style="font:300 11.5px Oxygen;color:#F0A6B0;">Потери на этапах</div><div style="font:700 26px Oxygen;color:#E4384D;font-variant-numeric:tabular-nums;margin:5px 0 3px;">18%</div><div style="font:700 11px Oxygen;color:#8FE7AE;">▼ −5% - стало меньше</div></div>
+                  <div style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 16px;background:#FFFFFF;"><div style="font:300 11.5px Oxygen;color:#6B7890;">Звонков за месяц</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">1 248</div><div style="font:700 11px Oxygen;color:#9CB9EE;">▲ +12% к прошлому</div></div>
+                  <div style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 16px;background:#FFFFFF;"><div style="font:300 11.5px Oxygen;color:#6B7890;">Средняя оценка</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">7.8<span style="font:700 14px Oxygen;color:#6B7890;"> / 10</span></div><div style="font:700 11px Oxygen;color:#9CB9EE;">▲ +0.6 балла</div></div>
+                  <div style="border:1px solid #E7E7E7;border-radius:14px;padding:15px 16px;background:#FFFFFF;"><div style="font:300 11.5px Oxygen;color:#6B7890;">Конверсия в сделку</div><div style="font:700 26px Oxygen;color:#fff;font-variant-numeric:tabular-nums;margin:5px 0 3px;">24%</div><div style="font:700 11px Oxygen;color:#9CB9EE;">▲ +3% к прошлому</div></div>
+                  <div style="border:1px solid rgba(228,56,77,.28);border-radius:14px;padding:15px 16px;background:linear-gradient(160deg,#FFFFFF,#FFFFFF);"><div style="font:300 11.5px Oxygen;color:#F3B4BC;">Потери на этапах</div><div style="font:700 26px Oxygen;color:#C51929;font-variant-numeric:tabular-nums;margin:5px 0 3px;">18%</div><div style="font:700 11px Oxygen;color:#9CB9EE;">▼ −5% - стало меньше</div></div>
                 </div>
                 <div style="display:grid;grid-template-columns:1.55fr 1fr;gap:12px;">
                   <!-- employees -->
-                  <div style="border:1px solid rgba(255,255,255,.08);border-radius:16px;background:#0E1219;overflow:hidden;">
-                    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;"><div style="font:700 14px Oxygen;color:#fff;">Сотрудники · качество и точки роста</div><span style="font:400 11px Oxygen;color:#63718A;">оценка · конверсия</span></div>
-                    <div style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;padding:6px 16px;font:700 10.5px Oxygen;letter-spacing:.04em;text-transform:uppercase;color:#63718A;border-bottom:1px solid rgba(255,255,255,.06);">
+                  <div style="border:1px solid #E7E7E7;border-radius:16px;background:#FFFFFF;overflow:hidden;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;"><div style="font:700 14px Oxygen;color:#fff;">Сотрудники · качество и точки роста</div><span style="font:400 11px Oxygen;color:#6B7890;">оценка · конверсия</span></div>
+                    <div style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;padding:6px 16px;font:700 10.5px Oxygen;letter-spacing:.04em;text-transform:uppercase;color:#6B7890;border-bottom:1px solid #E7E7E7;">
                       <span>Сотрудник</span><span>Качество</span><span>Конв.</span><span>Точка роста</span>
                     </div>
-                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05);">
-                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#16351F;color:#8FE7AE;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">АК</span><span style="font:400 13px Oxygen;color:#EAF1FF;">Анна Ковалёва</span></span>
-                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:91%;background:linear-gradient(90deg,#8FE7AE,#16C15A);"></span></span><b style="font:700 12px Oxygen;color:#8FE7AE;font-variant-numeric:tabular-nums;">9.1</b></span>
-                      <b style="font:700 13px Oxygen;color:#EAF1FF;font-variant-numeric:tabular-nums;">31%</b>
-                      <span style="font:700 10.5px Oxygen;color:#8FE7AE;background:rgba(22,193,90,.12);border:1px solid rgba(22,193,90,.28);padding:5px 9px;border-radius:100px;width:fit-content;">Эталон · наставник</span>
+                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid #E7E7E7;">
+                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#013CA4;color:#9CB9EE;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">АК</span><span style="font:400 13px Oxygen;color:#03235F;">Анна Ковалёва</span></span>
+                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:91%;background:linear-gradient(90deg,#9CB9EE,#4E86E6);"></span></span><b style="font:700 12px Oxygen;color:#9CB9EE;font-variant-numeric:tabular-nums;">9.1</b></span>
+                      <b style="font:700 13px Oxygen;color:#03235F;font-variant-numeric:tabular-nums;">31%</b>
+                      <span style="font:700 10.5px Oxygen;color:#9CB9EE;background:rgba(1,60,164,.12);border:1px solid rgba(1,60,164,.28);padding:5px 9px;border-radius:100px;width:fit-content;">Эталон · наставник</span>
                     </div>
-                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05);">
-                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#16351F;color:#8FE7AE;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">ДС</span><span style="font:400 13px Oxygen;color:#EAF1FF;">Дмитрий Седов</span></span>
-                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:82%;background:linear-gradient(90deg,#8FE7AE,#16C15A);"></span></span><b style="font:700 12px Oxygen;color:#8FE7AE;font-variant-numeric:tabular-nums;">8.2</b></span>
-                      <b style="font:700 13px Oxygen;color:#EAF1FF;font-variant-numeric:tabular-nums;">27%</b>
-                      <span style="font:700 10.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 9px;border-radius:100px;width:fit-content;">Следующий шаг</span>
+                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid #E7E7E7;">
+                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#013CA4;color:#9CB9EE;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">ДС</span><span style="font:400 13px Oxygen;color:#03235F;">Дмитрий Седов</span></span>
+                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:82%;background:linear-gradient(90deg,#9CB9EE,#4E86E6);"></span></span><b style="font:700 12px Oxygen;color:#9CB9EE;font-variant-numeric:tabular-nums;">8.2</b></span>
+                      <b style="font:700 13px Oxygen;color:#03235F;font-variant-numeric:tabular-nums;">27%</b>
+                      <span style="font:700 10.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:5px 9px;border-radius:100px;width:fit-content;">Следующий шаг</span>
                     </div>
-                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.05);">
-                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#3A2A12;color:#F0C674;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">МТ</span><span style="font:400 13px Oxygen;color:#EAF1FF;">Марина Титова</span></span>
-                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:64%;background:linear-gradient(90deg,#F0C674,#E0A100);"></span></span><b style="font:700 12px Oxygen;color:#F0C674;font-variant-numeric:tabular-nums;">6.4</b></span>
-                      <b style="font:700 13px Oxygen;color:#EAF1FF;font-variant-numeric:tabular-nums;">19%</b>
-                      <span style="font:700 10.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:5px 9px;border-radius:100px;width:fit-content;">Отработка возражений</span>
+                    <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;border-bottom:1px solid #E7E7E7;">
+                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#FFFFFF;color:#F0C674;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">МТ</span><span style="font:400 13px Oxygen;color:#03235F;">Марина Титова</span></span>
+                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:64%;background:linear-gradient(90deg,#F0C674,#E0A100);"></span></span><b style="font:700 12px Oxygen;color:#F0C674;font-variant-numeric:tabular-nums;">6.4</b></span>
+                      <b style="font:700 13px Oxygen;color:#03235F;font-variant-numeric:tabular-nums;">19%</b>
+                      <span style="font:700 10.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:5px 9px;border-radius:100px;width:fit-content;">Отработка возражений</span>
                     </div>
                     <div data-emprow style="display:grid;grid-template-columns:1.4fr 1.2fr .6fr 1.3fr;gap:10px;align-items:center;padding:11px 16px;">
-                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#3A1418;color:#F0A6B0;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">ИЛ</span><span style="font:400 13px Oxygen;color:#EAF1FF;">Игорь Лапин</span></span>
-                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:47%;background:linear-gradient(90deg,#E4384D,#C8102E);"></span></span><b style="font:700 12px Oxygen;color:#F0A6B0;font-variant-numeric:tabular-nums;">4.7</b></span>
-                      <b style="font:700 13px Oxygen;color:#EAF1FF;font-variant-numeric:tabular-nums;">11%</b>
-                      <span style="font:700 10.5px Oxygen;color:#F0A6B0;background:rgba(228,56,77,.12);border:1px solid rgba(228,56,77,.28);padding:5px 9px;border-radius:100px;width:fit-content;">Выявление потребности</span>
+                      <span style="display:flex;align-items:center;gap:9px;"><span style="width:28px;height:28px;border-radius:50%;background:#FFFFFF;color:#F3B4BC;font:700 11px Oxygen;display:grid;place-items:center;flex:none;">ИЛ</span><span style="font:400 13px Oxygen;color:#03235F;">Игорь Лапин</span></span>
+                      <span style="display:flex;align-items:center;gap:8px;"><span style="flex:1;height:7px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:47%;background:linear-gradient(90deg,#C51929,#C51929);"></span></span><b style="font:700 12px Oxygen;color:#F3B4BC;font-variant-numeric:tabular-nums;">4.7</b></span>
+                      <b style="font:700 13px Oxygen;color:#03235F;font-variant-numeric:tabular-nums;">11%</b>
+                      <span style="font:700 10.5px Oxygen;color:#F3B4BC;background:rgba(228,56,77,.12);border:1px solid rgba(228,56,77,.28);padding:5px 9px;border-radius:100px;width:fit-content;">Выявление потребности</span>
                     </div>
                   </div>
                   <!-- growth points + chart -->
                   <div style="display:flex;flex-direction:column;gap:12px;">
-                    <div style="border:1px solid rgba(255,255,255,.08);border-radius:16px;background:#0E1219;padding:15px 16px;">
+                    <div style="border:1px solid #E7E7E7;border-radius:16px;background:#FFFFFF;padding:15px 16px;">
                       <div style="font:700 14px Oxygen;color:#fff;margin-bottom:12px;">Качество по неделям</div>
                       <div style="display:flex;align-items:flex-end;gap:8px;height:96px;">
-                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:52%;border-radius:6px 6px 0 0;background:rgba(255,255,255,.12);"></span><span style="font:400 10px Oxygen;color:#63718A;">Н1</span></span>
-                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:64%;border-radius:6px 6px 0 0;background:rgba(255,255,255,.16);"></span><span style="font:400 10px Oxygen;color:#63718A;">Н2</span></span>
-                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:76%;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#8FE7AE,#16C15A);"></span><span style="font:400 10px Oxygen;color:#63718A;">Н3</span></span>
-                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:92%;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#8FE7AE,#16C15A);box-shadow:0 0 14px rgba(22,193,90,.5);"></span><span style="font:700 10px Oxygen;color:#8FE7AE;">Н4</span></span>
+                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:52%;border-radius:6px 6px 0 0;background:#FFFFFF;"></span><span style="font:400 10px Oxygen;color:#6B7890;">Н1</span></span>
+                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:64%;border-radius:6px 6px 0 0;background:#FFFFFF;"></span><span style="font:400 10px Oxygen;color:#6B7890;">Н2</span></span>
+                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:76%;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#9CB9EE,#4E86E6);"></span><span style="font:400 10px Oxygen;color:#6B7890;">Н3</span></span>
+                        <span style="flex:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;"><span style="width:100%;height:92%;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#9CB9EE,#4E86E6);box-shadow:0 0 14px rgba(1,60,164,.5);"></span><span style="font:700 10px Oxygen;color:#9CB9EE;">Н4</span></span>
                       </div>
                     </div>
-                    <div style="border:1px solid rgba(255,255,255,.08);border-radius:16px;background:#0E1219;padding:15px 16px;flex:1;">
+                    <div style="border:1px solid #E7E7E7;border-radius:16px;background:#FFFFFF;padding:15px 16px;flex:1;">
                       <div style="font:700 14px Oxygen;color:#fff;margin-bottom:12px;">Точки роста отдела</div>
                       <div style="display:flex;flex-direction:column;gap:10px;">
-                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#EAF1FF;margin-bottom:5px;"><span>Отработка возражений</span><b style="color:#E4384D;">−22%</b></div><span style="display:block;height:6px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:78%;background:linear-gradient(90deg,#E4384D,#C8102E);"></span></span></div>
-                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#EAF1FF;margin-bottom:5px;"><span>Следующий шаг</span><b style="color:#F0C674;">−18%</b></div><span style="display:block;height:6px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:60%;background:linear-gradient(90deg,#F0C674,#E0A100);"></span></span></div>
-                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#EAF1FF;margin-bottom:5px;"><span>Выявление потребности</span><b style="color:#8FE7AE;">−9%</b></div><span style="display:block;height:6px;border-radius:100px;background:rgba(255,255,255,.08);overflow:hidden;"><span style="display:block;height:100%;width:38%;background:linear-gradient(90deg,#8FE7AE,#16C15A);"></span></span></div>
+                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#03235F;margin-bottom:5px;"><span>Отработка возражений</span><b style="color:#C51929;">−22%</b></div><span style="display:block;height:6px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:78%;background:linear-gradient(90deg,#C51929,#C51929);"></span></span></div>
+                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#03235F;margin-bottom:5px;"><span>Следующий шаг</span><b style="color:#F0C674;">−18%</b></div><span style="display:block;height:6px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:60%;background:linear-gradient(90deg,#F0C674,#E0A100);"></span></span></div>
+                        <div><div style="display:flex;justify-content:space-between;font:400 12px Oxygen;color:#03235F;margin-bottom:5px;"><span>Выявление потребности</span><b style="color:#9CB9EE;">−9%</b></div><span style="display:block;height:6px;border-radius:100px;background:#FFFFFF;overflow:hidden;"><span style="display:block;height:100%;width:38%;background:linear-gradient(90deg,#9CB9EE,#4E86E6);"></span></span></div>
                       </div>
                     </div>
                   </div>
@@ -2360,11 +2360,11 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px;" data-cabfeat>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;background:#0A0C12;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Показатели</b><span style="font:300 12px/1.4 Oxygen;color:#95A0B2;">Качество, объём и динамика звонков отдела</span></div>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;background:#0A0C12;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Детализация</b><span style="font:300 12px/1.4 Oxygen;color:#95A0B2;">Каждый звонок с оценкой, этапами и расшифровкой</span></div>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;background:#0A0C12;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Рекомендации</b><span style="font:300 12px/1.4 Oxygen;color:#95A0B2;">По компании и по каждому сотруднику</span></div>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;background:#0A0C12;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Топ возражений</b><span style="font:300 12px/1.4 Oxygen;color:#95A0B2;">Частые возражения клиентов по отделу</span></div>
-        <div style="border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;background:#0A0C12;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Топ запросов</b><span style="font:300 12px/1.4 Oxygen;color:#95A0B2;">Формулировки клиентов для скрипта и SEO</span></div>
+        <div style="border:1px solid #E7E7E7;border-radius:14px;padding:16px;background:#F5F7F9;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Показатели</b><span style="font:300 12px/1.4 Oxygen;color:#6B7890;">Качество, объём и динамика звонков отдела</span></div>
+        <div style="border:1px solid #E7E7E7;border-radius:14px;padding:16px;background:#F5F7F9;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Детализация</b><span style="font:300 12px/1.4 Oxygen;color:#6B7890;">Каждый звонок с оценкой, этапами и расшифровкой</span></div>
+        <div style="border:1px solid #E7E7E7;border-radius:14px;padding:16px;background:#F5F7F9;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Рекомендации</b><span style="font:300 12px/1.4 Oxygen;color:#6B7890;">По компании и по каждому сотруднику</span></div>
+        <div style="border:1px solid #E7E7E7;border-radius:14px;padding:16px;background:#F5F7F9;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Топ возражений</b><span style="font:300 12px/1.4 Oxygen;color:#6B7890;">Частые возражения клиентов по отделу</span></div>
+        <div style="border:1px solid #E7E7E7;border-radius:14px;padding:16px;background:#F5F7F9;"><b style="font:700 14px Oxygen;color:#fff;display:block;margin-bottom:4px;">Топ запросов</b><span style="font:300 12px/1.4 Oxygen;color:#6B7890;">Формулировки клиентов для скрипта и SEO</span></div>
       </div>
     </div>
   </section>
@@ -2372,71 +2372,71 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- 10 STAGES -->
   <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 36px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Этапы продажи</span>
-      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Vector оценивает <span style="color:#16C15A;">все 10 этапов разговора</span></h2>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Этапы продажи</span>
+      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Vector оценивает <span style="color:#4E86E6;">все 10 этапов разговора</span></h2>
     </div>
     <div data-stagerow style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;">
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">01</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Приветствие</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">02</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Представление</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">03</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Выявление потребности</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">04</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Уточнение ситуации</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">05</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Усиление боли</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">06</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Презентация решения</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">07</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Работа с возражением</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">08</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Подтверждение интереса</b></div>
-      <div data-stage style="border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 15px;background:#0A0C12;"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">09</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Следующий шаг</b></div>
-      <div data-stage style="border:1px solid rgba(22,193,90,.3);border-radius:16px;padding:16px 15px;background:linear-gradient(160deg,#0C1912,#0A0C12);"><div class="mb-sn" style="font:700 13px Oxygen;color:#8FE7AE;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">10</div><b style="font:700 13.5px Oxygen;color:#D3DAE6;">Завершение разговора</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">01</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Приветствие</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">02</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Представление</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">03</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Выявление потребности</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">04</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Уточнение ситуации</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">05</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Усиление боли</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">06</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Презентация решения</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">07</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Работа с возражением</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">08</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Подтверждение интереса</b></div>
+      <div data-stage style="border:1px solid #E7E7E7;border-radius:16px;padding:16px 15px;background:#F5F7F9;"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">09</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Следующий шаг</b></div>
+      <div data-stage style="border:1px solid rgba(1,60,164,.3);border-radius:16px;padding:16px 15px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);"><div class="mb-sn" style="font:700 13px Oxygen;color:#9CB9EE;background:#FFFFFF;border:1px solid #E7E7E7;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;margin-bottom:11px;transition:all .4s;">10</div><b style="font:700 13.5px Oxygen;color:#6B7890;">Завершение разговора</b></div>
     </div>
   </section>
 
   <!-- BENEFIT TABS -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:52ch;margin:0 auto 30px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Польза для каждого</span>
-      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что получает <span style="color:#16C15A;">бизнес и команда</span></h2>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Польза для каждого</span>
+      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Что получает <span style="color:#4E86E6;">бизнес и команда</span></h2>
     </div>
     <div data-tabs style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:22px;">
-      <button data-t="biz" data-on style="font:700 14px Oxygen;color:#fff;background:#E4384D;border:1px solid #E4384D;padding:11px 22px;border-radius:100px;cursor:pointer;">Бизнес</button>
-      <button data-t="head" style="font:700 14px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 22px;border-radius:100px;cursor:pointer;">Руководитель</button>
-      <button data-t="mgr" style="font:700 14px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 22px;border-radius:100px;cursor:pointer;">Менеджеры</button>
-      <button data-t="mkt" style="font:700 14px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 22px;border-radius:100px;cursor:pointer;">Маркетинг</button>
+      <button data-t="biz" data-on style="font:700 14px Oxygen;color:#fff;background:#C51929;border:1px solid #C51929;padding:11px 22px;border-radius:100px;cursor:pointer;">Бизнес</button>
+      <button data-t="head" style="font:700 14px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 22px;border-radius:100px;cursor:pointer;">Руководитель</button>
+      <button data-t="mgr" style="font:700 14px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 22px;border-radius:100px;cursor:pointer;">Менеджеры</button>
+      <button data-t="mkt" style="font:700 14px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 22px;border-radius:100px;cursor:pointer;">Маркетинг</button>
     </div>
-    <div style="border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:clamp(24px,3vw,36px);background:linear-gradient(160deg,#12141C,#0A0B10);">
-      <div data-pane="biz"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Меньше потерь лидов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Меньше ручного контроля</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Прозрачная картина по отделу продаж</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Усиление качества обработки обращений</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Инструмент для роста продаж</li></ul></div>
-      <div data-pane="head" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Понимание, где проседает отдел</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Каких менеджеров усиливать</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Какие этапы скрипта ломаются</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Что менять в обучении и процессе</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Полная картина без ручной прослушки</li></ul></div>
-      <div data-pane="mgr" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Понятная обратная связь после звонков</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Рекомендации, как улучшать продажи</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Возможность учиться по своим разговорам</li></ul></div>
-      <div data-pane="mkt" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Самые частые вопросы клиентов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Самые частые возражения</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Реальные формулировки клиентов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#EAF1FF;"><span style="position:absolute;left:0;color:#16C15A;font-weight:700;">✔</span>Ключевые слова и фразы для SEO и контента</li></ul></div>
+    <div style="border:1px solid #E7E7E7;border-radius:24px;padding:clamp(24px,3vw,36px);background:linear-gradient(160deg,#FFFFFF,#F5F7F9);">
+      <div data-pane="biz"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Меньше потерь лидов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Меньше ручного контроля</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Прозрачная картина по отделу продаж</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Усиление качества обработки обращений</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Инструмент для роста продаж</li></ul></div>
+      <div data-pane="head" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Понимание, где проседает отдел</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Каких менеджеров усиливать</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Какие этапы скрипта ломаются</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Что менять в обучении и процессе</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Полная картина без ручной прослушки</li></ul></div>
+      <div data-pane="mgr" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Понятная обратная связь после звонков</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Рекомендации, как улучшать продажи</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Возможность учиться по своим разговорам</li></ul></div>
+      <div data-pane="mkt" style="display:none;"><ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;" data-benul><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Самые частые вопросы клиентов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Самые частые возражения</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Реальные формулировки клиентов</li><li style="position:relative;padding-left:30px;font:400 15px/1.4 Oxygen;color:#03235F;"><span style="position:absolute;left:0;color:#4E86E6;font-weight:700;">✔</span>Ключевые слова и фразы для SEO и контента</li></ul></div>
     </div>
   </section>
 
   <!-- VS COMPARISON -->
   <section style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:62ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Vector против обычной аналитики</span>
-      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Не контроль ради контроля, <span style="color:#16C15A;">а система роста продаж</span></h2>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Vector против обычной аналитики</span>
+      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Не контроль ради контроля, <span style="color:#4E86E6;">а система роста продаж</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;" data-cmpgrid>
-      <div style="border:1px solid rgba(22,193,90,.35);border-radius:22px;padding:28px;background:linear-gradient(180deg,rgba(22,193,90,.08),rgba(255,255,255,.02));">
-        <h3 style="display:flex;align-items:center;gap:10px;font:700 18px Oxygen;color:#fff;margin:0 0 18px;">Vector <span style="font:700 11px Oxygen;color:#052012;background:#16C15A;padding:4px 10px;border-radius:100px;">рост продаж</span></h3>
+      <div style="border:1px solid rgba(1,60,164,.35);border-radius:22px;padding:28px;background:linear-gradient(180deg,rgba(1,60,164,.08),#FFFFFF);">
+        <h3 style="display:flex;align-items:center;gap:10px;font:700 18px Oxygen;color:#fff;margin:0 0 18px;">Vector <span style="font:700 11px Oxygen;color:#FFFFFF;background:#4E86E6;padding:4px 10px;border-radius:100px;">рост продаж</span></h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Показывает, где теряется клиент</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Оценивает этапы продажи и скрипт</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Находит проблемные звонки</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Даёт рекомендации после каждого разговора</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Помогает менеджерам обучаться самостоятельно</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Даёт инсайты для маркетинга, контента и SEO</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:0;color:#8FE7AE;font-weight:700;">✓</span>Не требует тяжёлой интеграции на старте</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Показывает, где теряется клиент</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Оценивает этапы продажи и скрипт</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Находит проблемные звонки</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Даёт рекомендации после каждого разговора</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Помогает менеджерам обучаться самостоятельно</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Даёт инсайты для маркетинга, контента и SEO</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:0;color:#9CB9EE;font-weight:700;">✓</span>Не требует тяжёлой интеграции на старте</li>
         </ul>
       </div>
-      <div style="border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:28px;background:#0A0C12;">
-        <h3 style="display:flex;align-items:center;gap:10px;font:700 18px Oxygen;color:#95A0B2;margin:0 0 18px;">Обычная аналитика <span style="font:700 11px Oxygen;color:#95A0B2;background:rgba(255,255,255,.08);padding:4px 10px;border-radius:100px;">отчёты</span></h3>
+      <div style="border:1px solid #E7E7E7;border-radius:22px;padding:28px;background:#F5F7F9;">
+        <h3 style="display:flex;align-items:center;gap:10px;font:700 18px Oxygen;color:#6B7890;margin:0 0 18px;">Обычная аналитика <span style="font:700 11px Oxygen;color:#6B7890;background:#FFFFFF;padding:4px 10px;border-radius:100px;">отчёты</span></h3>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;">
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Показывает только текст звонка</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Даёт отчёты ради отчётов</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Контролирует, но не развивает</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Требует отдельного ручного разбора</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Не учит менеджера самостоятельно</li>
-          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#E4384D;font-weight:700;">✕</span>Не даёт понятных действий по росту продаж</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Показывает только текст звонка</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Даёт отчёты ради отчётов</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Контролирует, но не развивает</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Требует отдельного ручного разбора</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Не учит менеджера самостоятельно</li>
+          <li style="position:relative;padding-left:26px;font:400 14px/1.4 Oxygen;color:#7C879A;"><span style="position:absolute;left:0;color:#C51929;font-weight:700;">✕</span>Не даёт понятных действий по росту продаж</li>
         </ul>
       </div>
     </div>
@@ -2445,34 +2445,34 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- ROADMAP -->
   <section id="connect" style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(40px,5vw,72px);">
     <div style="text-align:center;max-width:58ch;margin:0 auto 34px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Подключение</span>
-      <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Как быстро начать и сразу увидеть, <span style="color:#16C15A;">где теряются продажи</span></h2>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Подключение</span>
+      <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 0;">Как быстро начать и сразу увидеть, <span style="color:#4E86E6;">где теряются продажи</span></h2>
     </div>
     <div data-road style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-      <div data-rstep style="border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:24px;background:#0A0C12;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.05);color:#8FE7AE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.12);transition:all .4s;">1</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Подключаем CRM и телефонию</b><p style="font:300 13px/1.5 Oxygen;color:#95A0B2;margin:0;">Битрикс24, amoCRM, UIS, Mango и другие сервисы.</p></div>
-      <div data-rstep style="border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:24px;background:#0A0C12;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.05);color:#8FE7AE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.12);transition:all .4s;">2</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Загружаем звонки</b><p style="font:300 13px/1.5 Oxygen;color:#95A0B2;margin:0;">Текущие разговоры и, при необходимости, прошлый период.</p></div>
-      <div data-rstep style="border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:24px;background:#0A0C12;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.05);color:#8FE7AE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.12);transition:all .4s;">3</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Строим аналитику</b><p style="font:300 13px/1.5 Oxygen;color:#95A0B2;margin:0;">По звонкам, сотрудникам, отделам и типам обращений.</p></div>
-      <div data-rstep data-rlast style="border:1px solid rgba(22,193,90,.3);border-radius:20px;padding:24px;background:linear-gradient(160deg,#0C1912,#0A0C12);"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.05);color:#8FE7AE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid rgba(255,255,255,.12);transition:all .4s;">4</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Даём рекомендации</b><p style="font:300 13px/1.5 Oxygen;color:#95A0B2;margin:0;">Слабые места, проблемные звонки и первые точки роста.</p></div>
+      <div data-rstep style="border:1px solid #E7E7E7;border-radius:20px;padding:24px;background:#F5F7F9;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;color:#9CB9EE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid #E7E7E7;transition:all .4s;">1</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Подключаем CRM и телефонию</b><p style="font:300 13px/1.5 Oxygen;color:#6B7890;margin:0;">Битрикс24, amoCRM, UIS, Mango и другие сервисы.</p></div>
+      <div data-rstep style="border:1px solid #E7E7E7;border-radius:20px;padding:24px;background:#F5F7F9;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;color:#9CB9EE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid #E7E7E7;transition:all .4s;">2</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Загружаем звонки</b><p style="font:300 13px/1.5 Oxygen;color:#6B7890;margin:0;">Текущие разговоры и, при необходимости, прошлый период.</p></div>
+      <div data-rstep style="border:1px solid #E7E7E7;border-radius:20px;padding:24px;background:#F5F7F9;"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;color:#9CB9EE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid #E7E7E7;transition:all .4s;">3</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Строим аналитику</b><p style="font:300 13px/1.5 Oxygen;color:#6B7890;margin:0;">По звонкам, сотрудникам, отделам и типам обращений.</p></div>
+      <div data-rstep data-rlast style="border:1px solid rgba(1,60,164,.3);border-radius:20px;padding:24px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);"><div class="mb-rn" style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;color:#9CB9EE;font:700 15px Oxygen;display:grid;place-items:center;margin-bottom:14px;border:1px solid #E7E7E7;transition:all .4s;">4</div><b style="font:700 15px Oxygen;color:#fff;display:block;margin-bottom:6px;">Даём рекомендации</b><p style="font:300 13px/1.5 Oxygen;color:#6B7890;margin:0;">Слабые места, проблемные звонки и первые точки роста.</p></div>
     </div>
   </section>
 
   <!-- INTEGRATIONS 3D orbit -->
-  <section id="integ" style="position:relative;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:radial-gradient(120% 100% at 50% 30%,#0B0D14,#05060A 72%);">
+  <section id="integ" style="position:relative;border-top:1px solid #E7E7E7;border-bottom:1px solid #E7E7E7;background:radial-gradient(120% 100% at 50% 30%,#F5F7F9,#F5F7F9 72%);">
     <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(28px,4vw,52px);align-items:center;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);" data-integgrid>
       <div>
-        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Интеграции</span>
-        <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 20px;text-wrap:balance;">Легко встраивается <span style="color:#16C15A;">в текущую инфраструктуру</span></h2>
+        <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Интеграции</span>
+        <h2 style="font:700 clamp(1.7rem,3.4vw,2.5rem)/1.08 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 20px;text-wrap:balance;">Легко встраивается <span style="color:#4E86E6;">в текущую инфраструктуру</span></h2>
         <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;">
-          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>CRM и телефония подключаются быстро</li>
-          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>Можно подтянуть текущие звонки и прошлый период</li>
-          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>Данные можно передавать обратно в CRM</li>
-          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:#0A0C12;font:400 14px/1.4 Oxygen;color:#D3DAE6;"><span style="position:absolute;left:16px;top:15px;color:#16C15A;font-weight:700;">⇄</span>При необходимости - глубокая аналитика в Power BI</li>
+          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid #E7E7E7;border-radius:14px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:16px;top:15px;color:#4E86E6;font-weight:700;">⇄</span>CRM и телефония подключаются быстро</li>
+          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid #E7E7E7;border-radius:14px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:16px;top:15px;color:#4E86E6;font-weight:700;">⇄</span>Можно подтянуть текущие звонки и прошлый период</li>
+          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid #E7E7E7;border-radius:14px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:16px;top:15px;color:#4E86E6;font-weight:700;">⇄</span>Данные можно передавать обратно в CRM</li>
+          <li style="position:relative;padding:14px 16px 14px 46px;border:1px solid #E7E7E7;border-radius:14px;background:#F5F7F9;font:400 14px/1.4 Oxygen;color:#6B7890;"><span style="position:absolute;left:16px;top:15px;color:#4E86E6;font-weight:700;">⇄</span>При необходимости - глубокая аналитика в Power BI</li>
         </ul>
       </div>
-      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(360px,40vw,460px);background:radial-gradient(120% 120% at 50% 40%,#101526,#06070C 74%);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -50px rgba(0,0,0,.9);">
+      <div style="position:relative;border-radius:26px;overflow:hidden;height:clamp(360px,40vw,460px);background:radial-gradient(120% 120% at 50% 40%,#FFFFFF,#F5F7F9 74%);border:1px solid #E7E7E7;box-shadow:0 40px 90px -50px rgba(255,255,255,.9);">
         <canvas data-scene="hub" style="position:absolute;inset:0;display:block;width:100%;height:100%;"></canvas>
         <div data-grain style="position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:.4;background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22150%22%20height=%22150%22%3E%3Cfilter%20id=%22h%22%3E%3CfeTurbulence%20type=%22fractalNoise%22%20baseFrequency=%22.85%22%20numOctaves=%222%22%20stitchTiles=%22stitch%22/%3E%3CfeColorMatrix%20type=%22saturate%22%20values=%220%22/%3E%3C/filter%3E%3Crect%20width=%22100%25%22%20height=%22100%25%22%20filter=%22url(%23h)%22/%3E%3C/svg%3E');"></div>
-        <button onClick="{{ replayHub }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(255,255,255,.82);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:rgba(255,255,255,.16);"><span style="font-size:14px;">↻</span> Повторить</button>
+        <button onClick="{{ replayHub }}" style="position:absolute;top:13px;right:13px;z-index:4;display:inline-flex;align-items:center;gap:6px;font:400 12px Oxygen;color:rgba(1,60,164,.82);background:#FFFFFF;border:1px solid #E7E7E7;border-radius:100px;padding:7px 12px;cursor:pointer;backdrop-filter:blur(6px);" style-hover="background:#FFFFFF;"><span style="font-size:14px;">↻</span> Повторить</button>
       </div>
     </div>
   </section>
@@ -2480,121 +2480,121 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
   <!-- PRICING (interactive) -->
   <section id="price" style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,44px);">
     <div style="text-align:center;max-width:64ch;margin:0 auto 30px;">
-      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F0A6B0;">- Тарифы</span>
-      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Выберите тариф под объём <span style="color:#16C15A;">звонков вашего отдела</span></h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#95A0B2;margin:0;">Все тарифы включают аналитику звонков, рекомендации по сотрудникам и компании, интеграции и управленческие выводы. Выберите срок предоплаты - цена и экономия пересчитаются мгновенно.</p>
+      <span style="font:700 11px Oxygen;letter-spacing:.2em;text-transform:uppercase;color:#F3B4BC;">- Тарифы</span>
+      <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:14px 0 10px;text-wrap:balance;">Выберите тариф под объём <span style="color:#4E86E6;">звонков вашего отдела</span></h2>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0;">Все тарифы включают аналитику звонков, рекомендации по сотрудникам и компании, интеграции и управленческие выводы. Выберите срок предоплаты - цена и экономия пересчитаются мгновенно.</p>
     </div>
 
     <!-- period toggle -->
     <div data-period style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;">
-      <button data-p="1" data-on style="font:700 13.5px Oxygen;color:#fff;background:#E4384D;border:1px solid #E4384D;padding:11px 18px;border-radius:100px;cursor:pointer;">Помесячно</button>
-      <button data-p="3" style="font:700 13.5px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 18px;border-radius:100px;cursor:pointer;">3 месяца <span style="color:#8FE7AE;">−5%</span></button>
-      <button data-p="6" style="font:700 13.5px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 18px;border-radius:100px;cursor:pointer;">6 месяцев <span style="color:#8FE7AE;">−10%</span></button>
-      <button data-p="12" style="font:700 13.5px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:11px 18px;border-radius:100px;cursor:pointer;">12 месяцев <span style="color:#8FE7AE;">−20%</span></button>
+      <button data-p="1" data-on style="font:700 13.5px Oxygen;color:#fff;background:#C51929;border:1px solid #C51929;padding:11px 18px;border-radius:100px;cursor:pointer;">Помесячно</button>
+      <button data-p="3" style="font:700 13.5px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 18px;border-radius:100px;cursor:pointer;">3 месяца <span style="color:#9CB9EE;">−5%</span></button>
+      <button data-p="6" style="font:700 13.5px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 18px;border-radius:100px;cursor:pointer;">6 месяцев <span style="color:#9CB9EE;">−10%</span></button>
+      <button data-p="12" style="font:700 13.5px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:11px 18px;border-radius:100px;cursor:pointer;">12 месяцев <span style="color:#9CB9EE;">−20%</span></button>
     </div>
-    <div data-saveline style="text-align:center;font:400 13px Oxygen;color:#63718A;margin-bottom:26px;height:18px;">Оплата помесячно · скидки применяются при предоплате</div>
+    <div data-saveline style="text-align:center;font:400 13px Oxygen;color:#6B7890;margin-bottom:26px;height:18px;">Оплата помесячно · скидки применяются при предоплате</div>
 
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;" data-pricegrid>
-      <div class="mb-tier" data-tier data-base="1000" data-min="0.20" data-vol="5 000" style="border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:30px;background:#0A0C12;display:flex;flex-direction:column;box-shadow:0 24px 50px -34px rgba(0,0,0,.8);">
-        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#8FE7AE;">Старт</div>
-        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">1 000 AED</span><span style="font:400 14px Oxygen;color:#95A0B2;">/мес</span></div>
-        <div style="font:400 13px Oxygen;color:#95A0B2;">0,20 AED/мин · 5 000 минут в месяц</div>
-        <div data-role="period" style="font:700 12.5px Oxygen;color:#8FE7AE;margin-top:10px;min-height:18px;"></div>
-        <p style="font:300 13.5px/1.5 Oxygen;color:#95A0B2;flex:1;margin:16px 0 22px;">Для первого подключения и небольших команд.</p>
-        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#F2F5FA;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:14px;border-radius:12px;" style-hover="border-color:rgba(22,193,90,.5);">Выбрать Старт</a>
+      <div class="mb-tier" data-tier data-base="1000" data-min="0.20" data-vol="5 000" style="border:1px solid #E7E7E7;border-radius:24px;padding:30px;background:#F5F7F9;display:flex;flex-direction:column;box-shadow:0 24px 50px -34px rgba(255,255,255,.8);">
+        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#9CB9EE;">Старт</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">1 000 AED</span><span style="font:400 14px Oxygen;color:#6B7890;">/мес</span></div>
+        <div style="font:400 13px Oxygen;color:#6B7890;">0,20 AED/мин · 5 000 минут в месяц</div>
+        <div data-role="period" style="font:700 12.5px Oxygen;color:#9CB9EE;margin-top:10px;min-height:18px;"></div>
+        <p style="font:300 13.5px/1.5 Oxygen;color:#6B7890;flex:1;margin:16px 0 22px;">Для первого подключения и небольших команд.</p>
+        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#F2F5FA;background:#FFFFFF;border:1px solid #E7E7E7;padding:14px;border-radius:12px;" style-hover="border-color:rgba(1,60,164,.5);">Выбрать Старт</a>
       </div>
-      <div class="mb-tier" data-tier data-base="1667" data-min="0.17" data-vol="10 000" style="position:relative;border:1px solid rgba(22,193,90,.55);border-radius:24px;padding:30px;background:linear-gradient(180deg,rgba(22,193,90,.09),#0A0C12 60%);display:flex;flex-direction:column;box-shadow:0 0 0 1px rgba(22,193,90,.28),0 30px 64px -34px rgba(22,193,90,.4);">
-        <span style="position:absolute;top:-12px;left:30px;font:700 11px Oxygen;letter-spacing:.06em;color:#052012;background:#16C15A;padding:5px 12px;border-radius:100px;">Популярный</span>
-        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#8FE7AE;">Команда</div>
-        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">1 667 AED</span><span style="font:400 14px Oxygen;color:#95A0B2;">/мес</span></div>
-        <div style="font:400 13px Oxygen;color:#95A0B2;">0,17 AED/мин · 10 000 минут в месяц</div>
-        <div data-role="period" style="font:700 12.5px Oxygen;color:#8FE7AE;margin-top:10px;min-height:18px;"></div>
-        <p style="font:300 13.5px/1.5 Oxygen;color:#95A0B2;flex:1;margin:16px 0 22px;">Для стабильного отдела продаж со средним объёмом звонков.</p>
-        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#fff;background:#E4384D;padding:14px;border-radius:12px;box-shadow:0 16px 32px -12px rgba(228,56,77,.55);" style-hover="background:#C8102E;">Выбрать Команда</a>
+      <div class="mb-tier" data-tier data-base="1667" data-min="0.17" data-vol="10 000" style="position:relative;border:1px solid rgba(1,60,164,.55);border-radius:24px;padding:30px;background:linear-gradient(180deg,rgba(1,60,164,.09),#F5F7F9 60%);display:flex;flex-direction:column;box-shadow:0 0 0 1px rgba(1,60,164,.28),0 30px 64px -34px rgba(1,60,164,.4);">
+        <span style="position:absolute;top:-12px;left:30px;font:700 11px Oxygen;letter-spacing:.06em;color:#FFFFFF;background:#4E86E6;padding:5px 12px;border-radius:100px;">Популярный</span>
+        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#9CB9EE;">Команда</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">1 667 AED</span><span style="font:400 14px Oxygen;color:#6B7890;">/мес</span></div>
+        <div style="font:400 13px Oxygen;color:#6B7890;">0,17 AED/мин · 10 000 минут в месяц</div>
+        <div data-role="period" style="font:700 12.5px Oxygen;color:#9CB9EE;margin-top:10px;min-height:18px;"></div>
+        <p style="font:300 13.5px/1.5 Oxygen;color:#6B7890;flex:1;margin:16px 0 22px;">Для стабильного отдела продаж со средним объёмом звонков.</p>
+        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#fff;background:#C51929;padding:14px;border-radius:12px;box-shadow:0 16px 32px -12px rgba(228,56,77,.55);" style-hover="background:#C51929;">Выбрать Команда</a>
       </div>
-      <div class="mb-tier" data-tier data-base="4000" data-min="0.13" data-vol="от 30 000" data-from="1" style="border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:30px;background:#0A0C12;display:flex;flex-direction:column;box-shadow:0 24px 50px -34px rgba(0,0,0,.8);">
-        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#8FE7AE;">Масштаб</div>
-        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">от 4 000 AED</span><span style="font:400 14px Oxygen;color:#95A0B2;">/мес</span></div>
-        <div style="font:400 13px Oxygen;color:#95A0B2;">0,13 AED/мин · от 30 000 минут в месяц</div>
-        <div data-role="period" style="font:700 12.5px Oxygen;color:#8FE7AE;margin-top:10px;min-height:18px;"></div>
-        <p style="font:300 13.5px/1.5 Oxygen;color:#95A0B2;flex:1;margin:16px 0 22px;">Для крупных отделов продаж, сетей и call-heavy компаний.</p>
-        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#F2F5FA;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);padding:14px;border-radius:12px;" style-hover="border-color:rgba(22,193,90,.5);">Выбрать Масштаб</a>
+      <div class="mb-tier" data-tier data-base="4000" data-min="0.13" data-vol="от 30 000" data-from="1" style="border:1px solid #E7E7E7;border-radius:24px;padding:30px;background:#F5F7F9;display:flex;flex-direction:column;box-shadow:0 24px 50px -34px rgba(255,255,255,.8);">
+        <div style="font:700 12px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#9CB9EE;">Масштаб</div>
+        <div style="display:flex;align-items:baseline;gap:6px;margin:14px 0 2px;"><span data-role="mo" style="font:700 34px Oxygen;color:#fff;font-variant-numeric:tabular-nums;">от 4 000 AED</span><span style="font:400 14px Oxygen;color:#6B7890;">/мес</span></div>
+        <div style="font:400 13px Oxygen;color:#6B7890;">0,13 AED/мин · от 30 000 минут в месяц</div>
+        <div data-role="period" style="font:700 12.5px Oxygen;color:#9CB9EE;margin-top:10px;min-height:18px;"></div>
+        <p style="font:300 13.5px/1.5 Oxygen;color:#6B7890;flex:1;margin:16px 0 22px;">Для крупных отделов продаж, сетей и call-heavy компаний.</p>
+        <a href="#contact" style="display:flex;justify-content:center;font:700 14px Oxygen;color:#F2F5FA;background:#FFFFFF;border:1px solid #E7E7E7;padding:14px;border-radius:12px;" style-hover="border-color:rgba(1,60,164,.5);">Выбрать Масштаб</a>
       </div>
     </div>
 
     <!-- calculator -->
-    <div style="margin-top:18px;border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:clamp(24px,3vw,34px);background:linear-gradient(160deg,#12141C,#0A0B10);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,44px);align-items:center;" data-calcgrid>
+    <div style="margin-top:18px;border:1px solid #E7E7E7;border-radius:24px;padding:clamp(24px,3vw,34px);background:linear-gradient(160deg,#FFFFFF,#F5F7F9);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,44px);align-items:center;" data-calcgrid>
       <div>
         <div style="font:700 16px Oxygen;color:#fff;margin-bottom:4px;">Калькулятор стоимости</div>
-        <div style="font:300 13px Oxygen;color:#95A0B2;margin-bottom:22px;">Сдвиньте - покажем тариф и стоимость с учётом выбранной предоплаты.</div>
+        <div style="font:300 13px Oxygen;color:#6B7890;margin-bottom:22px;">Сдвиньте - покажем тариф и стоимость с учётом выбранной предоплаты.</div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;">
           <span style="font:700 13px Oxygen;color:#B7C0CE;">Минут звонков в месяц</span>
-          <span data-role="minlabel" style="font:700 20px Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;">10 000</span>
+          <span data-role="minlabel" style="font:700 20px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums;">10 000</span>
         </div>
         <div data-slider style="position:relative;height:48px;--fill:13.8%;">
-          <div data-role="bubble-wrap" style="position:absolute;top:0;left:var(--fill);transform:translateX(-50%);font:700 12px Oxygen;color:#052012;background:#16C15A;padding:4px 10px;border-radius:100px;white-space:nowrap;box-shadow:0 6px 14px -4px rgba(22,193,90,.7);"><span data-role="bubble">10 000</span> мин</div>
-          <div style="position:absolute;left:0;right:0;top:32px;height:6px;border-radius:100px;background:rgba(255,255,255,.1);"><div style="height:100%;width:var(--fill);background:linear-gradient(90deg,#0C7A33,#16C15A);border-radius:100px;"></div></div>
-          <div style="position:absolute;top:24px;left:var(--fill);transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:#16C15A;border:3px solid #05060A;box-shadow:0 0 0 1px #16C15A,0 6px 14px -4px rgba(22,193,90,.7);pointer-events:none;"></div>
+          <div data-role="bubble-wrap" style="position:absolute;top:0;left:var(--fill);transform:translateX(-50%);font:700 12px Oxygen;color:#FFFFFF;background:#4E86E6;padding:4px 10px;border-radius:100px;white-space:nowrap;box-shadow:0 6px 14px -4px rgba(1,60,164,.7);"><span data-role="bubble">10 000</span> мин</div>
+          <div style="position:absolute;left:0;right:0;top:32px;height:6px;border-radius:100px;background:#FFFFFF;"><div style="height:100%;width:var(--fill);background:linear-gradient(90deg,#0B4FD1,#4E86E6);border-radius:100px;"></div></div>
+          <div style="position:absolute;top:24px;left:var(--fill);transform:translateX(-50%);width:22px;height:22px;border-radius:50%;background:#4E86E6;border:3px solid #F5F7F9;box-shadow:0 0 0 1px #4E86E6,0 6px 14px -4px rgba(1,60,164,.7);pointer-events:none;"></div>
           <input type="range" data-vol-slider min="2000" max="60000" step="1000" value="10000" style="position:absolute;top:24px;left:0;width:100%;height:22px;margin:0;opacity:0;cursor:pointer;background:transparent;">
         </div>
-        <div style="display:flex;justify-content:space-between;font:300 11px Oxygen;color:#63718A;margin-top:4px;"><span>2 000 мин</span><span>60 000 мин</span></div>
+        <div style="display:flex;justify-content:space-between;font:300 11px Oxygen;color:#6B7890;margin-top:4px;"><span>2 000 мин</span><span>60 000 мин</span></div>
       </div>
-      <div style="border:1px solid rgba(22,193,90,.3);border-radius:18px;padding:24px;background:linear-gradient(160deg,#0C1912,#0A0C12);text-align:center;">
-        <div style="font:300 12px Oxygen;letter-spacing:.06em;text-transform:uppercase;color:#8FE7AE;margin-bottom:8px;">Рекомендуем тариф</div>
+      <div style="border:1px solid rgba(1,60,164,.3);border-radius:18px;padding:24px;background:linear-gradient(160deg,#FFFFFF,#F5F7F9);text-align:center;">
+        <div style="font:300 12px Oxygen;letter-spacing:.06em;text-transform:uppercase;color:#9CB9EE;margin-bottom:8px;">Рекомендуем тариф</div>
         <div data-role="rec-tier" style="font:700 26px Oxygen;color:#fff;">Команда</div>
-        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;margin:14px 0 4px;"><span data-role="rec-cost" style="font:700 32px Oxygen;color:#16C15A;font-variant-numeric:tabular-nums;">1 700 AED</span><span style="font:400 13px Oxygen;color:#95A0B2;">/мес</span></div>
-        <div data-role="rec-note" style="font:300 12px Oxygen;color:#95A0B2;min-height:16px;">оценка при выбранной предоплате</div>
+        <div style="display:flex;align-items:baseline;justify-content:center;gap:6px;margin:14px 0 4px;"><span data-role="rec-cost" style="font:700 32px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums;">1 700 AED</span><span style="font:400 13px Oxygen;color:#6B7890;">/мес</span></div>
+        <div data-role="rec-note" style="font:300 12px Oxygen;color:#6B7890;min-height:16px;">оценка при выбранной предоплате</div>
       </div>
     </div>
   </section>
 
   <!-- FINAL CTA + FORM -->
   <section id="contact" style="max-width:1280px;margin:0 auto;padding:clamp(30px,4vw,52px) clamp(18px,4vw,44px) clamp(30px,4vw,60px);">
-    <div style="position:relative;overflow:hidden;border-radius:30px;border:1px solid rgba(228,56,77,.3);background:linear-gradient(150deg,#1A0C10,#0A0B10 62%);padding:clamp(28px,4vw,52px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(24px,4vw,48px);align-items:stretch;" data-contactgrid>
+    <div style="position:relative;overflow:hidden;border-radius:30px;border:1px solid rgba(228,56,77,.3);background:linear-gradient(150deg,#FFFFFF,#F5F7F9 62%);padding:clamp(28px,4vw,52px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(24px,4vw,48px);align-items:stretch;" data-contactgrid>
       <div style="position:absolute;left:-60px;bottom:-60px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(228,56,77,.22),transparent 70%);pointer-events:none;"></div>
       <div style="position:relative;">
-        <span style="display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.14em;text-transform:uppercase;color:#052012;background:#16C15A;padding:7px 14px;border-radius:100px;">Бесплатное подключение + 5 часов анализа</span>
-        <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:16px 0 12px;">Подключите Vector и увидьте, <span style="color:#16C15A;">где отдел теряет клиентов</span></h2>
+        <span style="display:inline-flex;align-items:center;gap:9px;font:700 11px Oxygen;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF;background:#4E86E6;padding:7px 14px;border-radius:100px;">Бесплатное подключение + 5 часов анализа</span>
+        <h2 style="font:700 clamp(1.8rem,3.6vw,2.6rem)/1.06 Oxygen;letter-spacing:-.03em;color:#fff;margin:16px 0 12px;">Подключите Vector и увидьте, <span style="color:#4E86E6;">где отдел теряет клиентов</span></h2>
         <p style="font:300 15.5px/1.6 Oxygen;color:#B7C0CE;margin:0 0 22px;max-width:42ch;">Подключим реальные звонки, покажем слабые места отдела, дадим первичные рекомендации по росту продаж - без оплаты на старте.</p>
         <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:#16C15A;color:#052012;display:grid;place-items:center;flex:none;">@</span>@Anton_MakeBiz</div>
-          <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.08);color:#8FE7AE;display:grid;place-items:center;flex:none;">✆</span>+971 50 262 0927</div>
+          <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:#4E86E6;color:#FFFFFF;display:grid;place-items:center;flex:none;">@</span>@Anton_MakeBiz</div>
+          <div style="display:flex;align-items:center;gap:12px;font:700 15px Oxygen;color:#fff;"><span style="width:40px;height:40px;border-radius:50%;background:#FFFFFF;color:#9CB9EE;display:grid;place-items:center;flex:none;">✆</span>+971 50 262 0927</div>
         </div>
       </div>
       <div style="position:relative;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-          <input class="mb-inp" placeholder="Имя *" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font:400 14px Oxygen;color:#F2F5FA;transition:border-color .2s,background .2s;">
-          <input class="mb-inp" placeholder="Компания" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font:400 14px Oxygen;color:#F2F5FA;transition:border-color .2s,background .2s;">
+          <input class="mb-inp" placeholder="Имя *" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E7E7E7;background:#FFFFFF;font:400 14px Oxygen;color:#F2F5FA;transition:border-color .2s,background .2s;">
+          <input class="mb-inp" placeholder="Компания" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E7E7E7;background:#FFFFFF;font:400 14px Oxygen;color:#F2F5FA;transition:border-color .2s,background .2s;">
         </div>
-        <input class="mb-inp" placeholder="Телефон или @Telegram" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font:400 14px Oxygen;color:#F2F5FA;margin-bottom:12px;transition:border-color .2s,background .2s;">
+        <input class="mb-inp" placeholder="Телефон или @Telegram" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E7E7E7;background:#FFFFFF;font:400 14px Oxygen;color:#F2F5FA;margin-bottom:12px;transition:border-color .2s,background .2s;">
         <div style="font:700 12px Oxygen;color:#B7C0CE;margin:6px 0 8px;">Какая у вас CRM?</div>
         <div data-seg style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
-          <button data-on style="font:700 13px Oxygen;color:#fff;background:#E4384D;border:1px solid #E4384D;padding:10px 16px;border-radius:100px;cursor:pointer;">Битрикс24</button>
-          <button style="font:700 13px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:10px 16px;border-radius:100px;cursor:pointer;">amoCRM</button>
-          <button style="font:700 13px Oxygen;color:#95A0B2;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:10px 16px;border-radius:100px;cursor:pointer;">Нет CRM</button>
+          <button data-on style="font:700 13px Oxygen;color:#fff;background:#C51929;border:1px solid #C51929;padding:10px 16px;border-radius:100px;cursor:pointer;">Битрикс24</button>
+          <button style="font:700 13px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:10px 16px;border-radius:100px;cursor:pointer;">amoCRM</button>
+          <button style="font:700 13px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;padding:10px 16px;border-radius:100px;cursor:pointer;">Нет CRM</button>
         </div>
-        <input class="mb-inp" placeholder="Сколько звонков в месяц?" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);font:400 14px Oxygen;color:#F2F5FA;margin-bottom:14px;transition:border-color .2s,background .2s;">
-        <a href="#contact" style="display:flex;justify-content:center;align-items:center;gap:8px;width:100%;font:700 15px Oxygen;color:#fff;background:#E4384D;padding:15px;border-radius:12px;box-shadow:0 16px 32px -10px rgba(228,56,77,.5);" style-hover="background:#C8102E;">Получить 5 часов анализа бесплатно →</a>
-        <div style="font:300 11.5px/1.4 Oxygen;color:#63718A;margin-top:12px;text-align:center;">Отправляя форму, вы соглашаетесь с политикой обработки персональных данных.</div>
+        <input class="mb-inp" placeholder="Сколько звонков в месяц?" style="width:100%;padding:14px 16px;border-radius:12px;border:1px solid #E7E7E7;background:#FFFFFF;font:400 14px Oxygen;color:#F2F5FA;margin-bottom:14px;transition:border-color .2s,background .2s;">
+        <a href="#contact" style="display:flex;justify-content:center;align-items:center;gap:8px;width:100%;font:700 15px Oxygen;color:#fff;background:#C51929;padding:15px;border-radius:12px;box-shadow:0 16px 32px -10px rgba(228,56,77,.5);" style-hover="background:#C51929;">Получить 5 часов анализа бесплатно →</a>
+        <div style="font:300 11.5px/1.4 Oxygen;color:#6B7890;margin-top:12px;text-align:center;">Отправляя форму, вы соглашаетесь с политикой обработки персональных данных.</div>
       </div>
     </div>
   </section>
 
-  <footer style="border-top:1px solid rgba(255,255,255,.07);color:#95A0B2;padding:34px 0;font:300 14px Oxygen;">
+  <footer style="border-top:1px solid #E7E7E7;color:#6B7890;padding:34px 0;font:300 14px Oxygen;">
     <div style="max-width:1280px;margin:0 auto;padding:0 clamp(18px,4vw,44px);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;">
       <div>© 2026 MakeBiz · Vector. Все права защищены.</div>
-      <div>Telegram <span style="color:#8FE7AE;">@Anton_MakeBiz</span> · +971 50 262 0927 · Дубай, ОАЭ</div>
+      <div>Telegram <span style="color:#9CB9EE;">@Anton_MakeBiz</span> · +971 50 262 0927 · Дубай, ОАЭ</div>
     </div>
   </footer>
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Плавно&quot;,&quot;Стандарт&quot;],&quot;default&quot;:&quot;Плавно&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Анимация&quot;},&quot;grain&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Анимация&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#16C15A&quot;,&quot;options&quot;:[&quot;#16C15A&quot;,&quot;#4C8DFF&quot;,&quot;#E4384D&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Палитра&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Плавно&quot;,&quot;Стандарт&quot;],&quot;default&quot;:&quot;Плавно&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Анимация&quot;},&quot;grain&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Анимация&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#4E86E6&quot;,&quot;options&quot;:[&quot;#4E86E6&quot;,&quot;#4C8DFF&quot;,&quot;#C51929&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Палитра&quot;}}">
 class Component extends DCLogic {
   root = React.createRef();
   scenes = {};
   cleanups = [];
-  WIN='#16C15A'; WIN2='#0C7A33'; WING='#8FE7AE'; loss='#E4384D';
+  WIN='#4E86E6'; WIN2='#0B4FD1'; WING='#9CB9EE'; loss='#C51929';
   NODES=['Битрикс24','amoCRM','UIS','Mango','Power BI','Телефония'];
   period=1;
 
@@ -2626,7 +2626,7 @@ class Component extends DCLogic {
   componentDidUpdate(){ this.applyTweaks(); Object.values(this.scenes).forEach(s=>{ if(!s.running&&s.opts) s.opts.draw(s.ctx,s.clock||0,s); }); }
   componentWillUnmount(){ if(this.io)this.io.disconnect(); Object.values(this.scenes).forEach(s=>s.pause&&s.pause()); if(this.revIo)this.revIo.disconnect(); if(this._onResize)window.removeEventListener('resize',this._onResize); this.cleanups.forEach(fn=>{try{fn();}catch(e){}}); }
 
-  applyTweaks(){ const p=this.props||{}; this.accent=p.accent||'#16C15A'; this.speed=(p.motion==='Стандарт')?1:0.72; this.grainOn=p.grain!==false; const root=this.root.current; if(root) root.querySelectorAll('[data-grain]').forEach(el=>{ el.style.display=this.grainOn?'block':'none'; }); }
+  applyTweaks(){ const p=this.props||{}; this.accent=p.accent||'#4E86E6'; this.speed=(p.motion==='Стандарт')?1:0.72; this.grainOn=p.grain!==false; const root=this.root.current; if(root) root.querySelectorAll('[data-grain]').forEach(el=>{ el.style.display=this.grainOn?'block':'none'; }); }
   applyResponsive(){ const root=this.root.current; if(!root)return; const set=()=>{ const w=window.innerWidth, stack=w<=900, mid=w<=1120, tab=w<=680;
       root.querySelectorAll('[data-herogrid]').forEach(g=>g.style.gridTemplateColumns=stack?'1fr':'1.02fr .98fr');
       root.querySelectorAll('[data-probgrid]').forEach(g=>g.style.gridTemplateColumns=stack?'1fr':'1.05fr .95fr');
@@ -2666,9 +2666,9 @@ class Component extends DCLogic {
       else if(t.hasAttribute('data-road')){ t.querySelectorAll('[data-rstep]').forEach((st,i)=>setTimeout(()=>this.litRoad(st,st.hasAttribute('data-rlast')),260+i*420)); }
     }); },{threshold:0.28});
     root.querySelectorAll('[data-count]').forEach(el=>this.revIo.observe(el)); root.querySelectorAll('[data-stagerow]').forEach(el=>this.revIo.observe(el)); root.querySelectorAll('[data-road]').forEach(el=>this.revIo.observe(el)); }
-  litStage(st,last){ const n=st.querySelector('.mb-sn'); const b=st.querySelector('b'); if(n){ n.style.background='linear-gradient(135deg,'+(last?'#16C15A,#0C7A33':'#4FE07F,#16C15A')+')'; n.style.color='#052012'; n.style.borderColor=this.WIN; n.style.boxShadow='0 0 0 5px rgba(22,193,90,.12),0 8px 18px -6px rgba(22,193,90,.5)'; } if(b)b.style.color='#F2F5FA'; }
-  litRoad(st,last){ const n=st.querySelector('.mb-rn'); if(n){ n.style.background='linear-gradient(135deg,'+(last?'#16C15A,#0C7A33':'#4FE07F,#16C15A')+')'; n.style.color='#052012'; n.style.borderColor=this.WIN; n.style.boxShadow='0 0 0 6px rgba(22,193,90,.14),0 10px 22px -6px rgba(22,193,90,.5)'; } }
-  segStyle(b,on){ if(on){ b.style.color='#fff'; b.style.background='#E4384D'; b.style.borderColor='#E4384D'; } else { b.style.color='#95A0B2'; b.style.background='rgba(255,255,255,.05)'; b.style.borderColor='rgba(255,255,255,.14)'; } }
+  litStage(st,last){ const n=st.querySelector('.mb-sn'); const b=st.querySelector('b'); if(n){ n.style.background='linear-gradient(135deg,'+(last?'#4E86E6,#0B4FD1':'#4E86E6,#4E86E6')+')'; n.style.color='#FFFFFF'; n.style.borderColor=this.WIN; n.style.boxShadow='0 0 0 5px rgba(1,60,164,.12),0 8px 18px -6px rgba(1,60,164,.5)'; } if(b)b.style.color='#F2F5FA'; }
+  litRoad(st,last){ const n=st.querySelector('.mb-rn'); if(n){ n.style.background='linear-gradient(135deg,'+(last?'#4E86E6,#0B4FD1':'#4E86E6,#4E86E6')+')'; n.style.color='#FFFFFF'; n.style.borderColor=this.WIN; n.style.boxShadow='0 0 0 6px rgba(1,60,164,.14),0 10px 22px -6px rgba(1,60,164,.5)'; } }
+  segStyle(b,on){ if(on){ b.style.color='#fff'; b.style.background='#C51929'; b.style.borderColor='#C51929'; } else { b.style.color='#6B7890'; b.style.background='#FFFFFF'; b.style.borderColor='#FFFFFF'; } }
   wireTabs(root){ const tabs=root.querySelector('[data-tabs]'); if(!tabs)return; const btns=[...tabs.querySelectorAll('button')]; btns.forEach(b=>{ const h=()=>{ btns.forEach(x=>this.segStyle(x,false)); this.segStyle(b,true); const t=b.getAttribute('data-t'); root.querySelectorAll('[data-pane]').forEach(p=>{ p.style.display=(p.getAttribute('data-pane')===t)?'block':'none'; }); }; b.addEventListener('click',h); this.cleanups.push(()=>b.removeEventListener('click',h)); }); }
   wireSeg(root){ root.querySelectorAll('[data-seg]').forEach(seg=>{ const btns=[...seg.querySelectorAll('button')]; btns.forEach(b=>{ const h=()=>{ btns.forEach(x=>this.segStyle(x,false)); this.segStyle(b,true); }; b.addEventListener('click',h); this.cleanups.push(()=>b.removeEventListener('click',h)); }); }); }
   wireCabinet(root){ const tabs=root.querySelector('[data-cabtabs]'); if(!tabs)return; const btns=[...tabs.querySelectorAll('button')]; const imgs=[...root.querySelectorAll('[data-cab]')]; btns.forEach(b=>{ const h=()=>{ btns.forEach(x=>this.segStyle(x,false)); this.segStyle(b,true); const c=b.getAttribute('data-c'); imgs.forEach(im=>im.style.display=(im.getAttribute('data-cab')===c)?'block':'none'); }; b.addEventListener('click',h); this.cleanups.push(()=>b.removeEventListener('click',h)); }); }
@@ -2683,9 +2683,9 @@ class Component extends DCLogic {
     let totalSave=0;
     root.querySelectorAll('[data-tier]').forEach(card=>{ const base=+card.getAttribute('data-base'); const from=card.getAttribute('data-from')==='1'; const eff=base*(1-d); const moEl=card.querySelector('[data-role=mo]'); const pEl=card.querySelector('[data-role=period]');
       if(moEl) moEl.textContent=(from?'от ':'')+this.fmt(eff)+' AED';
-      if(pEl){ if(m>1){ const total=base*m*(1-d), save=base*m*d; totalSave+=save; pEl.textContent='за '+m+' мес: '+(from?'от ':'')+this.fmt(total)+' AED · экономия '+this.fmt(save)+' AED'; pEl.style.color='#8FE7AE'; } else { pEl.textContent='оплата помесячно, без предоплаты'; pEl.style.color='#63718A'; } }
+      if(pEl){ if(m>1){ const total=base*m*(1-d), save=base*m*d; totalSave+=save; pEl.textContent='за '+m+' мес: '+(from?'от ':'')+this.fmt(total)+' AED · экономия '+this.fmt(save)+' AED'; pEl.style.color='#9CB9EE'; } else { pEl.textContent='оплата помесячно, без предоплаты'; pEl.style.color='#6B7890'; } }
     });
-    if(saveEl){ if(m>1){ saveEl.innerHTML='Предоплата '+m+' мес · скидка '+Math.round(d*100)+'% · суммарная экономия по трём тарифам <span style="color:#8FE7AE;font-weight:700;">'+this.fmt(totalSave)+' AED</span>'; } else { saveEl.textContent='Оплата помесячно · выберите срок предоплаты, чтобы получить скидку'; } }
+    if(saveEl){ if(m>1){ saveEl.innerHTML='Предоплата '+m+' мес · скидка '+Math.round(d*100)+'% · суммарная экономия по трём тарифам <span style="color:#9CB9EE;font-weight:700;">'+this.fmt(totalSave)+' AED</span>'; } else { saveEl.textContent='Оплата помесячно · выберите срок предоплаты, чтобы получить скидку'; } }
     // calculator
     const slider=root.querySelector('[data-vol-slider]'); if(slider){ const vol=+slider.value; const ml=root.querySelector('[data-role=minlabel]'); if(ml)ml.textContent=this.fmt(vol); const bub=root.querySelector('[data-role=bubble]'); if(bub)bub.textContent=this.fmt(vol);
       let tier='Команда', perMin=0.17; if(vol<7500){ tier='Старт'; perMin=0.20; } else if(vol<=20000){ tier='Команда'; perMin=0.17; } else { tier='Масштаб'; perMin=0.13; }
@@ -2705,28 +2705,28 @@ class Component extends DCLogic {
     for(let i=0;i<5;i++){ const gy=midY+maxA+2 + i*14*sc; const shrink=i*10*sc; ctx.beginPath(); ctx.moveTo(x0-shrink,gy); ctx.lineTo(x1+shrink,gy); ctx.stroke(); }
     const bars=s.data.bars, N=s.data.N, bw=span/N, w=bw*0.6;
     for(let i=0;i<N;i++){ const fr=i/(N-1), x=x0+fr*span; const a=bars[i]*maxA*(0.9+0.1*Math.sin(t*1.1+i*0.5)); const heard=fr<=prog; const topY=midY-a, botY=midY+a;
-      let front; if(heard){ const col=this.mix(this.loss, this.accent||'#16C15A', fr); const g=ctx.createLinearGradient(0,topY,0,botY); g.addColorStop(0,col); g.addColorStop(1,this.rgba('#05060A',.35)); front=g; } else { front=this.rgba('#39435A',.55); }
-      ctx.fillStyle=heard?this.rgba('#EAF1FF',.5):this.rgba('#4A566E',.4); ctx.beginPath(); ctx.moveTo(x-w/2,topY); ctx.lineTo(x-w/2+dx,topY+dy); ctx.lineTo(x+w/2+dx,topY+dy); ctx.lineTo(x+w/2,topY); ctx.closePath(); ctx.fill();
-      ctx.fillStyle=heard?this.rgba(this.WIN2,.5):this.rgba('#2A3346',.45); ctx.beginPath(); ctx.moveTo(x+w/2,topY); ctx.lineTo(x+w/2+dx,topY+dy); ctx.lineTo(x+w/2+dx,botY+dy); ctx.lineTo(x+w/2,botY); ctx.closePath(); ctx.fill();
+      let front; if(heard){ const col=this.mix(this.loss, this.accent||'#4E86E6', fr); const g=ctx.createLinearGradient(0,topY,0,botY); g.addColorStop(0,col); g.addColorStop(1,this.rgba('#F5F7F9',.35)); front=g; } else { front=this.rgba('#FFFFFF',.55); }
+      ctx.fillStyle=heard?this.rgba('#03235F',.5):this.rgba('#4A566E',.4); ctx.beginPath(); ctx.moveTo(x-w/2,topY); ctx.lineTo(x-w/2+dx,topY+dy); ctx.lineTo(x+w/2+dx,topY+dy); ctx.lineTo(x+w/2,topY); ctx.closePath(); ctx.fill();
+      ctx.fillStyle=heard?this.rgba(this.WIN2,.5):this.rgba('#FFFFFF',.45); ctx.beginPath(); ctx.moveTo(x+w/2,topY); ctx.lineTo(x+w/2+dx,topY+dy); ctx.lineTo(x+w/2+dx,botY+dy); ctx.lineTo(x+w/2,botY); ctx.closePath(); ctx.fill();
       ctx.fillStyle=front; this.rr(ctx,x-w/2,topY,w,a*2,Math.min(w/2,3)); ctx.fill();
     }
     const px=x0+prog*span;
-    ctx.globalCompositeOperation='lighter'; this.glow(ctx,px,midY,42*sc,this.accent||'#16C15A',.28); ctx.globalCompositeOperation='source-over';
+    ctx.globalCompositeOperation='lighter'; this.glow(ctx,px,midY,42*sc,this.accent||'#4E86E6',.28); ctx.globalCompositeOperation='source-over';
     ctx.strokeStyle=this.rgba('#FFFFFF',.85); ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(px,midY-maxA-46*sc); ctx.lineTo(px,midY+maxA+18*sc); ctx.stroke();
-    ctx.fillStyle='#FFFFFF'; ctx.beginPath(); ctx.arc(px,midY-maxA-46*sc,3.4*sc,0,6.2832); ctx.fill();
+    ctx.fillStyle='#03235F'; ctx.beginPath(); ctx.arc(px,midY-maxA-46*sc,3.4*sc,0,6.2832); ctx.fill();
     for(let i=0;i<10;i++){ const fr=(i+0.5)/10, x=x0+fr*span, y=midY-maxA-64*sc, passed=prog>=fr;
-      if(passed){ ctx.globalCompositeOperation='lighter'; this.glow(ctx,x,y,13*sc,this.accent||'#16C15A',.5); ctx.globalCompositeOperation='source-over'; }
+      if(passed){ ctx.globalCompositeOperation='lighter'; this.glow(ctx,x,y,13*sc,this.accent||'#4E86E6',.5); ctx.globalCompositeOperation='source-over'; }
       ctx.fillStyle=passed?this.rgba(this.WING,1):this.rgba('#5A6478',.7); ctx.beginPath(); ctx.arc(x,y,(passed?4.2:2.6)*sc,0,6.2832); ctx.fill();
-      ctx.strokeStyle=this.rgba(passed?(this.accent||'#16C15A'):'#5A6478',passed?.32:.14); ctx.lineWidth=1; ctx.setLineDash([3,4]); ctx.beginPath(); ctx.moveTo(x,y+6*sc); ctx.lineTo(x,midY-maxA*0.35); ctx.stroke(); ctx.setLineDash([]);
+      ctx.strokeStyle=this.rgba(passed?(this.accent||'#4E86E6'):'#5A6478',passed?.32:.14); ctx.lineWidth=1; ctx.setLineDash([3,4]); ctx.beginPath(); ctx.moveTo(x,y+6*sc); ctx.lineTo(x,midY-maxA*0.35); ctx.stroke(); ctx.setLineDash([]);
     }
     ctx.globalCompositeOperation='lighter';
-    for(let p=0;p<16;p++){ const ph=(t*0.18+this.hash(p*4))%1; const pxp=x0+span*this.hash(p*7); const pyp=midY-ph*maxA*0.9; const al=Math.sin(ph*Math.PI)*0.35; this.glow(ctx,pxp,pyp,5*sc,this.accent||'#16C15A',al*0.4); }
+    for(let p=0;p<16;p++){ const ph=(t*0.18+this.hash(p*4))%1; const pxp=x0+span*this.hash(p*7); const pyp=midY-ph*maxA*0.9; const al=Math.sin(ph*Math.PI)*0.35; this.glow(ctx,pxp,pyp,5*sc,this.accent||'#4E86E6',al*0.4); }
     ctx.globalCompositeOperation='source-over';
     const prob=Math.round(this.lerp(18,74,prog));
     ctx.textAlign='left'; ctx.textBaseline='alphabetic';
     ctx.fillStyle=this.rgba(this.WING,.9); ctx.font='700 '+Math.round(11*sc)+'px Oxygen, system-ui'; ctx.fillText('ВЕРОЯТНОСТЬ СДЕЛКИ', x0, H*0.14);
-    ctx.fillStyle=this.mix(this.loss, this.accent||'#16C15A', prog); ctx.font='700 '+Math.round(48*sc)+'px Oxygen, system-ui'; ctx.fillText(prob+'%', x0, H*0.14+Math.round(46*sc));
-    ctx.fillStyle=this.rgba('#95A0B2',.9); ctx.font='300 '+Math.round(12.5*sc)+'px Oxygen, system-ui'; ctx.fillText(prog<0.5?'Vector слушает звонок…':'Найдены точки потерь и роста', x0, midY+maxA+50*sc);
+    ctx.fillStyle=this.mix(this.loss, this.accent||'#4E86E6', prog); ctx.font='700 '+Math.round(48*sc)+'px Oxygen, system-ui'; ctx.fillText(prob+'%', x0, H*0.14+Math.round(46*sc));
+    ctx.fillStyle=this.rgba('#6B7890',.9); ctx.font='300 '+Math.round(12.5*sc)+'px Oxygen, system-ui'; ctx.fillText(prog<0.5?'Vector слушает звонок…':'Найдены точки потерь и роста', x0, midY+maxA+50*sc);
   };
 
   // ===================== PROBLEM: 3D loss funnel -> recovered =====================
@@ -2738,31 +2738,31 @@ class Component extends DCLogic {
     const colX=W*0.70, colW=W*0.15, colBot=H*0.82, colTopMax=H*0.16;
     const wAt=y=>this.lerp(topW,botW,this.clamp01((y-topY)/(botY-topY)));
     ctx.beginPath(); ctx.moveTo(fx-topW/2,topY); ctx.lineTo(fx+topW/2,topY); ctx.lineTo(fx+botW/2,botY); ctx.lineTo(fx-botW/2,botY); ctx.closePath();
-    const fg=ctx.createLinearGradient(fx-topW/2,0,fx+topW/2,0); fg.addColorStop(0,this.rgba('#EAF1FF',.06)); fg.addColorStop(.5,this.rgba('#0E1520',.85)); fg.addColorStop(1,this.rgba('#050810',.9)); ctx.fillStyle=fg; ctx.fill();
+    const fg=ctx.createLinearGradient(fx-topW/2,0,fx+topW/2,0); fg.addColorStop(0,this.rgba('#03235F',.06)); fg.addColorStop(.5,this.rgba('#FFFFFF',.85)); fg.addColorStop(1,this.rgba('#F5F7F9',.9)); ctx.fillStyle=fg; ctx.fill();
     ctx.strokeStyle=this.rgba('#FFFFFF',.12); ctx.lineWidth=1.2; ctx.stroke();
     ctx.save(); ctx.clip(); ctx.globalCompositeOperation='lighter';
-    for(let d=0;d<26;d++){ const ph=(t*0.55+this.hash(d*3))%1; const y=topY+ph*(botY-topY); const w=wAt(y); const x=fx+(this.hash(d*7)-0.5)*w*0.6; const a=this.smooth(0,.1,ph)*this.smooth(1,.8,ph); const rad=(1.6+this.hash(d)*2)*sc; this.glow(ctx,x,y,rad*3,this.accent||'#16C15A',.3*a); ctx.fillStyle=this.rgba(this.WING,.85*a); ctx.beginPath(); ctx.arc(x,y,rad,0,6.2832); ctx.fill(); }
+    for(let d=0;d<26;d++){ const ph=(t*0.55+this.hash(d*3))%1; const y=topY+ph*(botY-topY); const w=wAt(y); const x=fx+(this.hash(d*7)-0.5)*w*0.6; const a=this.smooth(0,.1,ph)*this.smooth(1,.8,ph); const rad=(1.6+this.hash(d)*2)*sc; this.glow(ctx,x,y,rad*3,this.accent||'#4E86E6',.3*a); ctx.fillStyle=this.rgba(this.WING,.85*a); ctx.beginPath(); ctx.arc(x,y,rad,0,6.2832); ctx.fill(); }
     ctx.globalCompositeOperation='source-over'; ctx.restore();
     let lostAvg=0;
     s.data.rings.forEach((ry,i)=>{ const y=this.lerp(topY,botY,ry); const w=wAt(y); const sealed=this.smooth(3.6+i*0.4,5.6+i*0.4,p); const open=1-sealed; lostAvg+=open;
-      ctx.save(); const rg=ctx.createLinearGradient(fx-w/2,0,fx+w/2,0); if(sealed>0.3){ rg.addColorStop(0,this.WIN2); rg.addColorStop(.5,this.WING); rg.addColorStop(1,this.WIN2); } else { rg.addColorStop(0,'#20303F'); rg.addColorStop(.5,'#33475A'); rg.addColorStop(1,'#20303F'); } ctx.fillStyle=rg; this.rr(ctx,fx-w/2-3,y-4,w+6,8,4); ctx.fill(); ctx.restore();
-      if(sealed>0.2) this.glow(ctx,fx,y,w*0.7,this.accent||'#16C15A',.16*sealed);
+      ctx.save(); const rg=ctx.createLinearGradient(fx-w/2,0,fx+w/2,0); if(sealed>0.3){ rg.addColorStop(0,this.WIN2); rg.addColorStop(.5,this.WING); rg.addColorStop(1,this.WIN2); } else { rg.addColorStop(0,'#FFFFFF'); rg.addColorStop(.5,'#FFFFFF'); rg.addColorStop(1,'#FFFFFF'); } ctx.fillStyle=rg; this.rr(ctx,fx-w/2-3,y-4,w+6,8,4); ctx.fill(); ctx.restore();
+      if(sealed>0.2) this.glow(ctx,fx,y,w*0.7,this.accent||'#4E86E6',.16*sealed);
       if(open>0.02||catch_>0.02){ ctx.globalCompositeOperation='lighter';
         for(let d=0;d<10;d++){ const seed=i*23+d; const ph=(t*0.85+this.hash(seed))%1; const side=-1; const sx=fx+side*(w/2), sy=y; const escX=sx+side*(30+this.hash(seed+2)*60)*sc*ph; const escY=sy+ph*ph*(H*0.30); const tgX=colX+colW*this.hash(seed+5), tgY=colBot-10; const useCatch=catch_>0.15 && this.hash(seed+9)<catch_; const px=this.lerp(escX,tgX,useCatch?this.smooth(0.15,0.9,ph):0); const py=this.lerp(escY,tgY,useCatch?this.smooth(0.15,0.9,ph):0); const col=useCatch?this.WING:this.loss; const a=(1-ph)*(useCatch?1:Math.max(open,0.15)); if(a<=0.02)continue; const rad=(1.7+this.hash(seed+7)*2)*sc; this.glow(ctx,px,py,rad*3,col,a*.5); ctx.fillStyle=this.rgba(col,a); ctx.beginPath(); ctx.arc(px,py,rad,0,6.2832); ctx.fill(); }
         ctx.globalCompositeOperation='source-over'; }
     });
     lostAvg/=3;
     const poolA=Math.max(0,lostAvg*(1-catch_));
-    if(poolA>0.02){ const pw=W*0.2*poolA; this.glow(ctx,W*0.13,H*0.9,pw,this.loss,.28*poolA); ctx.fillStyle=this.rgba(this.loss,.3*poolA); this.rr(ctx,W*0.05,H*0.9-4,pw,7,4); ctx.fill(); ctx.fillStyle=this.rgba('#F0A6B0',.8*poolA); ctx.textAlign='left'; ctx.font='700 10px Oxygen, system-ui'; ctx.fillText('УТЕКАЕТ', W*0.05, H*0.9-12); }
+    if(poolA>0.02){ const pw=W*0.2*poolA; this.glow(ctx,W*0.13,H*0.9,pw,this.loss,.28*poolA); ctx.fillStyle=this.rgba(this.loss,.3*poolA); this.rr(ctx,W*0.05,H*0.9-4,pw,7,4); ctx.fill(); ctx.fillStyle=this.rgba('#F3B4BC',.8*poolA); ctx.textAlign='left'; ctx.font='700 10px Oxygen, system-ui'; ctx.fillText('УТЕКАЕТ', W*0.05, H*0.9-12); }
     const colH=(colBot-colTopMax)*this.lerp(0.12,1,catch_); const colY=colBot-colH;
-    this.rr(ctx,colX,colTopMax,colW,colBot-colTopMax,12); ctx.fillStyle=this.rgba('#0E1520',.8); ctx.fill();
+    this.rr(ctx,colX,colTopMax,colW,colBot-colTopMax,12); ctx.fillStyle=this.rgba('#FFFFFF',.8); ctx.fill();
     ctx.save(); this.rr(ctx,colX,colTopMax,colW,colBot-colTopMax,12); ctx.clip(); const cg=ctx.createLinearGradient(0,colY,0,colBot); cg.addColorStop(0,this.WING); cg.addColorStop(1,this.WIN2); ctx.fillStyle=cg; ctx.fillRect(colX,colY,colW,colH); ctx.fillStyle=this.rgba('#FFFFFF',.25); ctx.beginPath(); ctx.ellipse(colX+colW/2,colY,colW/2,3+Math.sin(t*2)*1.4,0,0,6.2832); ctx.fill(); ctx.restore();
     this.rr(ctx,colX,colTopMax,colW,colBot-colTopMax,12); ctx.strokeStyle=this.rgba('#FFFFFF',.15); ctx.lineWidth=1.2; ctx.stroke();
     const pct=Math.round(this.lerp(0,35,catch_));
-    ctx.textAlign='center'; ctx.fillStyle='#EAF1FF'; ctx.font='700 '+Math.round(25*sc)+'px Oxygen, system-ui'; ctx.fillText('+'+pct+'%', colX+colW/2, colTopMax-16);
+    ctx.textAlign='center'; ctx.fillStyle='#03235F'; ctx.font='700 '+Math.round(25*sc)+'px Oxygen, system-ui'; ctx.fillText('+'+pct+'%', colX+colW/2, colTopMax-16);
     ctx.fillStyle=this.rgba(this.WING,.9); ctx.font='700 '+Math.round(10*sc)+'px Oxygen, system-ui'; ctx.fillText('ЭФФЕКТИВНОСТЬ', colX+colW/2, colTopMax-3);
-    ctx.textAlign='center'; ctx.fillStyle=this.rgba('#EAF1FF',.55); ctx.font='700 10px Oxygen, system-ui'; ctx.fillText('ВОРОНКА', fx, topY-8);
-    ctx.textAlign='left'; ctx.fillStyle=this.rgba('#95A0B2',.9*(1-fade)); ctx.font='300 12.5px Oxygen, system-ui'; ctx.fillText(catch_<0.5?'Клиенты утекают мимо воронки…':'Vector перехватил потери и вернул в продажи', W*0.05, H*0.965);
+    ctx.textAlign='center'; ctx.fillStyle=this.rgba('#03235F',.55); ctx.font='700 10px Oxygen, system-ui'; ctx.fillText('ВОРОНКА', fx, topY-8);
+    ctx.textAlign='left'; ctx.fillStyle=this.rgba('#6B7890',.9*(1-fade)); ctx.font='300 12.5px Oxygen, system-ui'; ctx.fillText(catch_<0.5?'Клиенты утекают мимо воронки…':'Vector перехватил потери и вернул в продажи', W*0.05, H*0.965);
   };
 
   // ===================== INTEGRATIONS: 3D orbit hub =====================
@@ -2770,7 +2770,7 @@ class Component extends DCLogic {
   // "Легко встраивается" - интеграционная шина: системы по одной подключаются к ядру Vector
   hubDraw=(ctx,t,s)=>{
     const W=s.W,H=s.H, sc=Math.min(W/560,H/460)||1; ctx.clearRect(0,0,W,H);
-    const acc=this.accent||'#16C15A';
+    const acc=this.accent||'#4E86E6';
     const nodes=this.NODES, M=nodes.length;
     const rrp=(x,y,w,h,r)=>{ r=Math.min(r,w/2,h/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); };
     const cub=(a,b,c,d,p)=>{ const q=1-p; return q*q*q*a+3*q*q*p*b+3*q*p*p*c+p*p*p*d; };
@@ -2787,7 +2787,7 @@ class Component extends DCLogic {
       const arrive=this.smooth(i+0.2,i+1,cycle), on=cycle>i+1;
       // cable (grows as it connects)
       ctx.save();
-      ctx.strokeStyle=this.rgba(on?acc:'#33475A', on?0.7:0.28); ctx.lineWidth=on?2.4:1.4;
+      ctx.strokeStyle=this.rgba(on?acc:'#FFFFFF', on?0.7:0.28); ctx.lineWidth=on?2.4:1.4;
       if(on){ ctx.shadowColor=this.rgba(acc,.6); ctx.shadowBlur=10; }
       ctx.beginPath(); ctx.moveTo(x0,y0);
       const seg=Math.max(0.02,arrive);
@@ -2799,12 +2799,12 @@ class Component extends DCLogic {
         ctx.globalCompositeOperation='source-over'; }
       // chip
       rrp(chipX,cyi-chipH/2,chipW,chipH,10);
-      const g=ctx.createLinearGradient(chipX,cyi-chipH/2,chipX,cyi+chipH/2); g.addColorStop(0,'#141826'); g.addColorStop(1,'#0A0C12'); ctx.fillStyle=g; ctx.fill();
+      const g=ctx.createLinearGradient(chipX,cyi-chipH/2,chipX,cyi+chipH/2); g.addColorStop(0,'#FFFFFF'); g.addColorStop(1,'#F5F7F9'); ctx.fillStyle=g; ctx.fill();
       ctx.strokeStyle=this.rgba(on?acc:'#FFFFFF', on?0.5:0.12); ctx.lineWidth=1.3; ctx.stroke();
-      ctx.fillStyle=on?acc:'#3A424E'; ctx.beginPath(); ctx.arc(chipX+15*sc,cyi,3.6*sc,0,6.2832); ctx.fill();
+      ctx.fillStyle=on?acc:'#FFFFFF'; ctx.beginPath(); ctx.arc(chipX+15*sc,cyi,3.6*sc,0,6.2832); ctx.fill();
       if(on){ this.glow(ctx,chipX+15*sc,cyi,10*sc,acc,0.6); }
-      ctx.fillStyle=this.rgba('#EAF1FF',0.92); ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.font='700 '+Math.round(12*sc)+'px Oxygen, system-ui'; ctx.fillText(nodes[i], chipX+26*sc, cyi);
-      ctx.fillStyle=this.rgba(on?acc:'#63718A',on?1:0.7); ctx.textAlign='right'; ctx.font='700 '+Math.round(11*sc)+'px Oxygen, system-ui'; ctx.fillText(on?'✓ подключено':'…', chipX+chipW-11*sc, cyi);
+      ctx.fillStyle=this.rgba('#03235F',0.92); ctx.textAlign='left'; ctx.textBaseline='middle'; ctx.font='700 '+Math.round(12*sc)+'px Oxygen, system-ui'; ctx.fillText(nodes[i], chipX+26*sc, cyi);
+      ctx.fillStyle=this.rgba(on?acc:'#6B7890',on?1:0.7); ctx.textAlign='right'; ctx.font='700 '+Math.round(11*sc)+'px Oxygen, system-ui'; ctx.fillText(on?'✓ подключено':'…', chipX+chipW-11*sc, cyi);
     }
     // core
     const pulse=0.5+0.5*Math.sin(t*1.6);
@@ -2813,10 +2813,10 @@ class Component extends DCLogic {
     const cg=ctx.createLinearGradient(coreX,coreY-coreH/2,coreX,coreY+coreH/2); cg.addColorStop(0,this.WING); cg.addColorStop(1,this.WIN2); ctx.fillStyle=cg; ctx.fill();
     ctx.strokeStyle=this.rgba('#FFFFFF',0.25); ctx.lineWidth=1.2; ctx.stroke();
     // connector sockets on core left edge
-    for(let i=0;i<M;i++){ const y1=coreY-coreH/2+coreH*((i+0.5)/M); const on=cycle>i+1; ctx.fillStyle=on?'#EFFFF4':this.rgba('#052012',0.5); ctx.beginPath(); ctx.arc(coreX,y1,3*sc,0,6.2832); ctx.fill(); }
+    for(let i=0;i<M;i++){ const y1=coreY-coreH/2+coreH*((i+0.5)/M); const on=cycle>i+1; ctx.fillStyle=on?'#EFFFF4':this.rgba('#FFFFFF',0.5); ctx.beginPath(); ctx.arc(coreX,y1,3*sc,0,6.2832); ctx.fill(); }
     const connCount=Math.max(0,Math.min(M,Math.floor(cycle-1)));
-    ctx.fillStyle='#052012'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.font='700 '+Math.round(18*sc)+'px Oxygen, system-ui'; ctx.fillText('Vector',coreX+coreW/2,coreY-7*sc);
-    ctx.font='700 '+Math.round(10.5*sc)+'px Oxygen, system-ui'; ctx.fillStyle=this.rgba('#052012',0.82); ctx.fillText(connCount+' / '+M+' систем',coreX+coreW/2,coreY+12*sc);
+    ctx.fillStyle='#FFFFFF'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.font='700 '+Math.round(18*sc)+'px Oxygen, system-ui'; ctx.fillText('Vector',coreX+coreW/2,coreY-7*sc);
+    ctx.font='700 '+Math.round(10.5*sc)+'px Oxygen, system-ui'; ctx.fillStyle=this.rgba('#FFFFFF',0.82); ctx.fillText(connCount+' / '+M+' систем',coreX+coreW/2,coreY+12*sc);
   };
 
   renderVals(){ return { root:this.root, replayWave:()=>{ this.scenes.vwave&&this.scenes.vwave.replay(); }, replayFunnel:()=>{ this.scenes.funnel&&this.scenes.funnel.replay(); }, replayHub:()=>{ this.scenes.hub&&this.scenes.hub.replay(); } }; }
@@ -2848,26 +2848,26 @@ class Component extends DCLogic {
   }
 
   var CSS = [
-"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
 "#mbm-header *{box-sizing:border-box}",
 "#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
 "#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
-"#mbm-header .mbm-biz{color:#C8102E}",
+"#mbm-header .mbm-biz{color:#C51929}",
 "#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
 "#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
 "#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
-"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
-"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
-"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#6B7890;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:#FFFFFF}",
+"#mbm-header .mbm-nav a.mbm-active{color:#4E86E6;font-weight:700}",
 "#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
-"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
-"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
-"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
-"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#03235F;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#C51929,#C51929);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid #E7E7E7;color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid #E7E7E7;padding:8px clamp(16px,4vw,40px) 14px;background:rgba(255,255,255,.97)}",
 "#mbm-header .mbm-drop.mbm-open{display:block}",
 "#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
-"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
-"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#6B7890;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#4E86E6;font-weight:700}",
 "@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
 "@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
   ].join("\n");
@@ -2876,7 +2876,7 @@ class Component extends DCLogic {
 '<header id="mbm-header">'+
   '<div class="mbm-in">'+
     '<a href="index.html" class="mbm-logo">MakeBiz'+
-      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C51929">CRM</span></span>'+
     '</a>'+
     '<nav class="mbm-nav">'+navLinks()+'</nav>'+
     '<div class="mbm-right">'+
@@ -2938,28 +2938,28 @@ class Component extends DCLogic {
   if (window.__mbcfDone) return; window.__mbcfDone = true;
 
   var CSS = [
-"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact{--g:#4E86E6;--g2:#0B4FD1;--r:#C51929;--r2:#C51929;--tx:#03235F;--mu:#6B7890;--ln:#FFFFFF;--gl:#FFFFFF;max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
 "#mbcf-contact *{box-sizing:border-box}",
 "#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
 "#mbcf-contact .mbcf-hide{display:none!important}",
 "#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
-"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F3B4BC;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
 "#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
 "#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
 "#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
 "#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
 "#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
 "#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
-"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#FFFFFF,#F5F7F9);border:1px solid #E7E7E7;border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1}",
 "#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
-"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
-"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#6B7890}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(1,60,164,.55);background:rgba(1,60,164,.05)}",
 "#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
 "#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
 "#mbcf-contact .mbcf-field{margin-bottom:12px}",
 "#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
 "#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
-"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
+"#mbcf-contact .mbcf-cc option{background:#FFFFFF;color:var(--tx)}",
 "#mbcf-contact .mbcf-tg{position:relative}",
 "#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
 "#mbcf-contact .mbcf-tgi{padding-left:30px}",
@@ -2970,30 +2970,30 @@ class Component extends DCLogic {
 "#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
 "#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
 "#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
-"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#6B7890;margin-top:12px}",
 "#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
-"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(1,60,164,.5)}",
 "#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
 "#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
 "#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
-"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
-"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
-"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-chat{background:#FFFFFF;border:1px solid #E7E7E7;border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid #E7E7E7}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0B4FD1);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(1,60,164,.5)}",
 "#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
 "#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
 "#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
 "#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
 "#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
-"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:#FFFFFF;border:1px solid #E7E7E7;color:var(--tx);border-radius:16px 16px 16px 5px}",
 "#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
-"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
-"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:#FFFFFF;border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#9CB9EE;animation:mbcfDot 1.4s infinite}",
 "#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
 "#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
 "@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
-"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid #E7E7E7}",
 "#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
-"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0B4FD1);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
 "@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
   ].join("\n");
 
@@ -3165,29 +3165,29 @@ class Component extends DCLogic {
   if (window.__mbfDone) return; window.__mbfDone = true;
 
   var CSS = [
-"#mbf-footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:#93A4B8;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
+"#mbf-footer{background:#F5F7F9;border-top:1px solid #E7E7E7;color:#6B7890;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
 "#mbf-footer *{box-sizing:border-box}",
 "#mbf-footer .mbf-in{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}",
-"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid #E7E7E7}",
 "#mbf-footer .mbf-logo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;margin-bottom:14px}",
 "#mbf-footer .mbf-badges{display:flex;gap:3px}",
 "#mbf-footer .mbf-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
-"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#93A4B8;margin-bottom:16px;max-width:36ch}",
+"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#6B7890;margin-bottom:16px;max-width:36ch}",
 "#mbf-footer .mbf-contacts{display:flex;flex-direction:column;gap:9px}",
-"#mbf-footer .mbf-contacts a{color:#B7C4D6;text-decoration:none;font:400 14px Oxygen}",
+"#mbf-footer .mbf-contacts a{color:#6B7890;text-decoration:none;font:400 14px Oxygen}",
 "#mbf-footer .mbf-contacts a:hover{color:#fff}",
-"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}",
-"#mbf-footer .mbf-col a{display:block;color:#93A4B8;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
-"#mbf-footer .mbf-col a:hover{color:#16C15A}",
+"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#03235F;margin:0 0 13px}",
+"#mbf-footer .mbf-col a{display:block;color:#6B7890;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
+"#mbf-footer .mbf-col a:hover{color:#4E86E6}",
 "#mbf-footer .mbf-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font:300 12.5px/1.65 Oxygen;color:#6B7A99}",
 "#mbf-footer .mbf-req{max-width:70ch}",
-"#mbf-footer .mbf-ph{color:#8FA0B8}",
+"#mbf-footer .mbf-ph{color:#6B7890}",
 "@media(max-width:900px){#mbf-footer .mbf-top{grid-template-columns:1fr 1fr}}",
 "@media(max-width:560px){#mbf-footer .mbf-top{grid-template-columns:1fr}}",
-"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85);font-family:Oxygen,system-ui,sans-serif}",
-"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}",
-"#mbf-cookie a{color:#16C15A;text-decoration:none}",
-"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
+"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(255,255,255,.97);border:1px solid #E7E7E7;border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(255,255,255,.85);font-family:Oxygen,system-ui,sans-serif}",
+"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#6B7890;margin:0;flex:1;min-width:220px}",
+"#mbf-cookie a{color:#4E86E6;text-decoration:none}",
+"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#C51929,#C51929);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
 "#mbf-cookie.mbf-hide{display:none!important}"
   ].join("\n");
 
@@ -3195,7 +3195,7 @@ class Component extends DCLogic {
 '<footer id="mbf-footer"><div class="mbf-in">'+
   '<div class="mbf-top">'+
     '<div>'+
-      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
+      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C51929">CRM</span></span></a>'+
       '<div class="mbf-tag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Продукты</h4>'+
@@ -3210,7 +3210,7 @@ class Component extends DCLogic {
   '</div>'+
   '<div class="mbf-bottom">'+
     '<div>© 2026 MakeBiz. Все права защищены.</div>'+
-    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Политика конфиденциальности</a></div>'+
+    '<div><a href="privacy.html" style="color:#6B7890;text-decoration:none">Политика конфиденциальности</a></div>'+
   '</div>'+
 '</div></footer>';
 
@@ -3270,7 +3270,7 @@ class Component extends DCLogic {
    старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
 (function(){
   if (window.__mbbgDone) return; window.__mbbgDone = true;
-  var BG='#04050A';
+  var BG='#F5F7F9';
   var st=document.createElement('style'); st.id='mb-bg-style';
   st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
     '.pagebg,.mesh{display:none !important}';
@@ -3290,7 +3290,7 @@ class Component extends DCLogic {
   var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduced) b.t=4.2;
   // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
-  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var BEAMS=[[.12,'#4E86E6',.15,120,0],[.30,'#03235F',.08,90,1.6],[.48,'#0B4FD1',.17,150,3.1],[.68,'#C51929',.13,110,4.4],[.86,'#4E86E6',.12,130,2.2]];
   var canvas=null, ctx=null;
   function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
   function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
@@ -3339,10 +3339,10 @@ class Component extends DCLogic {
     ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
     for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
     ctx.restore();
-    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
-    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0B4FD1',.12));tg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#03235F',.04*b.af);
     ctx.globalCompositeOperation='source-over';
-    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(255,255,255,0)');vg.addColorStop(1,'rgba(255,255,255,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
   }
   var last=null;
   function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
@@ -3421,12 +3421,12 @@ class Component extends DCLogic {
   function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
   var CSS=':host{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;vertical-align:middle!important}'
    +'.wrap{display:inline-flex;flex-direction:row;align-items:center;gap:6px}'
-   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid rgba(255,255,255,.10);text-decoration:none;cursor:pointer;transition:border-color .2s;background:rgba(255,255,255,.03)}'
-   +'a.active{background:rgba(22,193,90,.14);border-color:rgba(22,193,90,.55)}'
-   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto}'
+   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid #E7E7E7;text-decoration:none;cursor:pointer;transition:border-color .2s;background:#FFFFFF}'
+   +'a.active{background:rgba(1,60,164,.14);border-color:rgba(1,60,164,.55)}'
+   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px #FFFFFF inset;flex:0 0 auto}'
    +'.fl svg{width:20px;height:14px;display:block}'
    +'.cd{font:700 12px Oxygen,system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap;line-height:1}'
-   +'.cd.on{color:#EAF1FF}.cd.off{color:#93A4B8}';
+   +'.cd.on{color:#03235F}.cd.off{color:#6B7890}';
   function build(){
     var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
     if(!right || right.querySelector('.mb-lang')) return;
@@ -3463,6 +3463,30 @@ class Component extends DCLogic {
   if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
 })();
 
+</script>
+<script>
+/* MakeBiz — светлая тема: контраст-фиксер. Тёмный/светлый текст на светлом фоне делаем читаемым (тёмно-синим), но НЕ трогаем белый текст на цветных кнопках/градиентах. */
+(function(){
+  if(window.__mbLightDone) return; window.__mbLightDone=true;
+  function lum(r,g,b){ return .2126*r+.7152*g+.0722*b; }
+  function effBg(e){ var n=e; while(n){ var s=getComputedStyle(n);
+      var bi=s.backgroundImage; if(bi && bi.indexOf('gradient')>-1) return null; /* colored gradient -> skip */
+      var bg=s.backgroundColor, m=bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/);
+      if(m){ var a=m[4]!==undefined?+m[4]:1; if(a>0.5) return [+m[1],+m[2],+m[3]]; }
+      n=n.parentElement; } return [255,255,255]; }
+  function fix(){
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,div,li,button,td,label,strong,b,em,small');
+    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.children.length) continue;
+      var t=(e.textContent||'').trim(); if(!t) continue;
+      var m=getComputedStyle(e).color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)/); if(!m) continue;
+      if(lum(+m[1],+m[2],+m[3])<178) continue;            // text not light -> leave
+      var bg=effBg(e); if(bg===null) continue;            // on gradient/colored -> keep white
+      if(lum(bg[0],bg[1],bg[2])>150){ e.style.setProperty('color','#03235F','important'); }
+    }
+  }
+  fix(); var n=0, iv=setInterval(function(){ fix(); if(++n>16) clearInterval(iv); },350);
+  if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},10000); }
+})();
 </script>
 </body>
 </html>

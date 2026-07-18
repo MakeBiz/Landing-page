@@ -9,32 +9,32 @@
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:transparent;font-family:Oxygen,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-    a{color:#16C15A;text-decoration:none}
-    a:hover{color:#4FE07F}
-    ::selection{background:rgba(22,193,90,.22)}
-    @keyframes mbGlow{0%,100%{box-shadow:0 0 0 3px rgba(22,193,90,.22)}50%{box-shadow:0 0 0 6px rgba(22,193,90,.05)}}
+    a{color:#4E86E6;text-decoration:none}
+    a:hover{color:#4E86E6}
+    ::selection{background:rgba(1,60,164,.22)}
+    @keyframes mbGlow{0%,100%{box-shadow:0 0 0 3px rgba(1,60,164,.22)}50%{box-shadow:0 0 0 6px rgba(1,60,164,.05)}}
     @keyframes mbLive{0%,100%{opacity:.4}50%{opacity:1}}
     @keyframes mbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
   </style>
 <style>
-[data-mbnav] a{font:400 13.5px Oxygen;color:#95A0B2;padding:8px 11px;border-radius:8px;transition:color .15s;}
+[data-mbnav] a{font:400 13.5px Oxygen;color:#6B7890;padding:8px 11px;border-radius:8px;transition:color .15s;}
 [data-mbnav] a:hover{color:#fff;}
-[data-mbnav] a.active{color:#8FE7AE;font-weight:700;}
+[data-mbnav] a.active{color:#9CB9EE;font-weight:700;}
 @media(max-width:1080px){[data-mbnav],[data-mbhide]{display:none!important;}}
-.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#07090D,#0A0E12 48%,#07090D);}
+.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#F5F7F9,#F5F7F9 48%,#F5F7F9);}
 .pagebg b{position:absolute;border-radius:50%;filter:blur(120px);}
 .pagebg .p1{width:680px;height:680px;background:radial-gradient(circle,rgba(200,16,46,.30),transparent 70%);top:-8%;left:-10%;animation:mbA 32s ease-in-out infinite alternate;}
-.pagebg .p2{width:600px;height:600px;background:radial-gradient(circle,rgba(22,193,90,.28),transparent 70%);top:38%;right:-12%;animation:mbB 36s ease-in-out infinite alternate;}
-.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(12,140,63,.40),transparent 70%);top:76%;left:14%;animation:mbA 40s ease-in-out infinite alternate;}
+.pagebg .p2{width:600px;height:600px;background:radial-gradient(circle,rgba(1,60,164,.28),transparent 70%);top:38%;right:-12%;animation:mbB 36s ease-in-out infinite alternate;}
+.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(1,60,164,.40),transparent 70%);top:76%;left:14%;animation:mbA 40s ease-in-out infinite alternate;}
 @keyframes mbA{to{transform:translate(60px,-40px) scale(1.14);}}
 @keyframes mbB{to{transform:translate(-50px,50px) scale(1.1);}}
 </style>
 </head>
 <body>
 <div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
-<div style="position:sticky;top:0;z-index:70;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);">
+<div style="position:sticky;top:0;z-index:70;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;">
   <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:18px;height:60px;padding:0 clamp(18px,4vw,44px);">
-    <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#16C15A;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#C51929;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#C51929;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#4E86E6;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#C51929;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
     <nav data-mbnav style="display:flex;gap:2px;margin-left:6px;">
       <a href="index.html">Главная</a>
       
@@ -49,7 +49,7 @@
     <span data-mbhide style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
   </div>
 </div>
-<div id="partroot" style="min-height:100vh;background:transparent;color:#EAF1FF;overflow-x:hidden">
+<div id="partroot" style="min-height:100vh;background:transparent;color:#03235F;overflow-x:hidden">
 
 <!-- вторая шапка убрана (оставлен вход в кабинет в hero) -->
 
@@ -58,32 +58,32 @@
     <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,60px);align-items:center" data-hero-grid>
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#FF3B57;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:6px 13px;border-radius:100px">Партнёрская программа MakeBiz</span>
-        <h1 style="font:700 clamp(32px,5vw,58px)/1.05 Oxygen;letter-spacing:-.025em;color:#fff;margin:20px 0 16px;max-width:16ch;text-wrap:balance">Приводите бизнес и <span style="color:#16C15A">зарабатывайте с каждой оплаты</span></h1>
-        <p style="font:300 clamp(15px,1.6vw,19px)/1.6 Oxygen;color:#93A4B8;margin:0;max-width:52ch">Вы рекомендуете, мы берём на себя встречи, внедрение и поддержку. Вы получаете 20% с первой сделки и 10% со всех платежей клиента ещё год</p>
+        <h1 style="font:700 clamp(32px,5vw,58px)/1.05 Oxygen;letter-spacing:-.025em;color:#fff;margin:20px 0 16px;max-width:16ch;text-wrap:balance">Приводите бизнес и <span style="color:#4E86E6">зарабатывайте с каждой оплаты</span></h1>
+        <p style="font:300 clamp(15px,1.6vw,19px)/1.6 Oxygen;color:#6B7890;margin:0;max-width:52ch">Вы рекомендуете, мы берём на себя встречи, внедрение и поддержку. Вы получаете 20% с первой сделки и 10% со всех платежей клиента ещё год</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
-          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);cursor:pointer;text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Стать партнёром <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">Войти в кабинет</a>
+          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#FFFFFF;background:linear-gradient(135deg,#4E86E6,#4E86E6);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(1,60,164,.32);cursor:pointer;text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Стать партнёром <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(1,60,164,.5)">Войти в кабинет</a>
         </div>
         <div style="display:flex;gap:clamp(20px,3vw,40px);flex-wrap:wrap;margin-top:38px">
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#16C15A">20%</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">с первой сделки</div></div>
-          <div style="width:1px;background:rgba(255,255,255,.1)"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#16C15A">10%</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">со всех платежей 12 месяцев</div></div>
-          <div style="width:1px;background:rgba(255,255,255,.1)"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#EAF1FF">по договору</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">выплаты закреплены официально</div></div>
+          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#4E86E6">20%</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">с первой сделки</div></div>
+          <div style="width:1px;background:#FFFFFF"></div>
+          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#4E86E6">10%</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">со всех платежей 12 месяцев</div></div>
+          <div style="width:1px;background:#FFFFFF"></div>
+          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#03235F">по договору</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">выплаты закреплены официально</div></div>
         </div>
       </div>
-      <div data-scene="hero" style="position:relative;border-radius:26px;overflow:hidden;min-height:clamp(360px,44vw,520px);background:radial-gradient(120% 110% at 72% 8%,rgba(22,193,90,.14),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -40px rgba(0,0,0,.8)">
+      <div data-scene="hero" style="position:relative;border-radius:26px;overflow:hidden;min-height:clamp(360px,44vw,520px);background:radial-gradient(120% 110% at 72% 8%,rgba(1,60,164,.14),transparent 62%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 40px 90px -40px rgba(255,255,255,.8)">
         <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <div style="position:absolute;left:20px;top:20px;z-index:4;background:rgba(7,9,13,.55);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:16px;padding:14px 18px">
-          <div style="font:400 11px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#93A4B8">Начислено вам</div>
+        <div style="position:absolute;left:20px;top:20px;z-index:4;background:rgba(255,255,255,.55);border:1px solid #E7E7E7;backdrop-filter:blur(10px);border-radius:16px;padding:14px 18px">
+          <div style="font:400 11px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#6B7890">Начислено вам</div>
           <div data-counter style="font:700 clamp(24px,2.6vw,32px) Oxygen;letter-spacing:-.02em;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums">AED 0</div>
-          <div style="font:700 12px Oxygen;color:#16C15A;margin-top:2px">растёт с каждой сделкой</div>
+          <div style="font:700 12px Oxygen;color:#4E86E6;margin-top:2px">растёт с каждой сделкой</div>
         </div>
         <div style="position:absolute;right:18px;bottom:16px;z-index:4;display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#C3D0E2"><i style="width:9px;height:9px;border-radius:50%;background:#C8102E;display:inline-block"></i>лиды</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#C3D0E2"><i style="width:9px;height:9px;border-radius:50%;background:#16C15A;display:inline-block"></i>доход</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#6B7890"><i style="width:9px;height:9px;border-radius:50%;background:#C51929;display:inline-block"></i>лиды</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#6B7890"><i style="width:9px;height:9px;border-radius:50%;background:#4E86E6;display:inline-block"></i>доход</span>
         </div>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
       </div>
     </div>
   </section>
@@ -91,31 +91,31 @@
   <a id="how"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:60ch;margin:0 auto 44px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Как устроено</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Как устроено</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">От рекомендации до вашей выплаты</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Вы приводите клиента любым удобным способом, всё остальное берём на себя. Каждый лид закрепляется за вами автоматически</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Вы приводите клиента любым удобным способом, всё остальное берём на себя. Каждый лид закрепляется за вами автоматически</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);align-items:center" data-two>
-      <div data-scene="flow" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(300px,34vw,380px);background:radial-gradient(120% 110% at 30% 10%,rgba(22,193,90,.1),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+      <div data-scene="flow" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(300px,34vw,380px);background:radial-gradient(120% 110% at 30% 10%,rgba(1,60,164,.1),transparent 62%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
         <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;font:700 14px Oxygen;color:#EAF1FF">1</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Делитесь ссылкой или контактом</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">В канале, соцсетях, на сайте или лично, как вам удобнее</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#FFFFFF;border:1px solid #E7E7E7;display:grid;place-items:center;font:700 14px Oxygen;color:#03235F">1</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Делитесь ссылкой или контактом</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">В канале, соцсетях, на сайте или лично, как вам удобнее</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
           <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(200,16,46,.14);border:1px solid rgba(200,16,46,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#FF3B57">2</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Лид закрепляется за вами</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Заявка автоматически привязывается к вам, без таблиц и споров</p></div>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Лид закрепляется за вами</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Заявка автоматически привязывается к вам, без таблиц и споров</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#4FE07F">3</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Мы закрываем сделку и внедряем</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Встречи, предложение, запуск и поддержка на нашей стороне</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(1,60,164,.14);border:1px solid rgba(1,60,164,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#4E86E6">3</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Мы закрываем сделку и внедряем</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Встречи, предложение, запуск и поддержка на нашей стороне</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(22,193,90,.1),#0A0C11);border:1px solid rgba(22,193,90,.24);border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:grid;place-items:center;font:700 14px Oxygen;color:#052012">4</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Вы получаете выплату</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Начисляем по факту оплаты клиентом, вывод удобным вам способом</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(1,60,164,.1),#F5F7F9);border:1px solid rgba(1,60,164,.24);border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4E86E6,#4E86E6);display:grid;place-items:center;font:700 14px Oxygen;color:#FFFFFF">4</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Вы получаете выплату</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Начисляем по факту оплаты клиентом, вывод удобным вам способом</p></div>
         </div>
       </div>
     </div>
@@ -124,26 +124,26 @@
   <a id="reward"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center" data-two>
-      <div data-scene="tiers" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(22,193,90,.1),transparent 60%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+      <div data-scene="tiers" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(1,60,164,.1),transparent 60%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
         <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
       </div>
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Вознаграждение</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Вознаграждение</span>
         <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">20% сразу и 10% весь следующий год</h2>
-        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0 0 26px;max-width:46ch">Это не разовая комиссия, а доход, который растёт с каждым платежом клиента. Один хороший контакт кормит вас 12 месяцев</p>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0 0 26px;max-width:46ch">Это не разовая комиссия, а доход, который растёт с каждым платежом клиента. Один хороший контакт кормит вас 12 месяцев</p>
         <div style="display:flex;flex-direction:column;gap:14px">
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#052012"><b style="font:700 22px Oxygen;line-height:1">20%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">сразу</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">С первой сделки</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Начисляем 20% после первой оплаты клиента</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:linear-gradient(135deg,#4E86E6,#4E86E6);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#FFFFFF"><b style="font:700 22px Oxygen;line-height:1">20%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">сразу</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">С первой сделки</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Начисляем 20% после первой оплаты клиента</p></div>
           </div>
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(22,193,90,.16);border:1px solid rgba(22,193,90,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4FE07F"><b style="font:700 22px Oxygen;line-height:1">10%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">12 мес</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Со всех последующих платежей</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Ещё 10% с каждого платежа этого клиента год, подписки, поддержка, доработки</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(1,60,164,.16);border:1px solid rgba(1,60,164,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4E86E6"><b style="font:700 22px Oxygen;line-height:1">10%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">12 мес</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Со всех последующих платежей</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Ещё 10% с каждого платежа этого клиента год, подписки, поддержка, доработки</p></div>
           </div>
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#EAF1FF"><b style="font:700 20px Oxygen;line-height:1">×N</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.7">клиентов</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Складывается по всем клиентам</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Чем больше приведёте, тем выше накопительный ежемесячный доход</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:#FFFFFF;border:1px solid #E7E7E7;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#03235F"><b style="font:700 20px Oxygen;line-height:1">×N</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.7">клиентов</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Складывается по всем клиентам</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Чем больше приведёте, тем выше накопительный ежемесячный доход</p></div>
           </div>
         </div>
       </div>
@@ -152,43 +152,43 @@
 
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:56ch;margin:0 auto 40px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Прозрачность</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Прозрачность</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Доход, лиды и операции видно в реальном времени</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Всё в личном кабинете, честно и без ручного пересчёта</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Всё в личном кабинете, честно и без ручного пересчёта</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px)" data-two>
-      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px">
-          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Рост дохода по месяцам</h3><p style="font:300 13px Oxygen;color:#93A4B8;margin:5px 0 0">Накопительно по всем вашим клиентам</p></div>
-          <span style="flex-shrink:0;font:700 12px Oxygen;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.24);padding:5px 11px;border-radius:100px">2026</span>
+          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Рост дохода по месяцам</h3><p style="font:300 13px Oxygen;color:#6B7890;margin:5px 0 0">Накопительно по всем вашим клиентам</p></div>
+          <span style="flex-shrink:0;font:700 12px Oxygen;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.24);padding:5px 11px;border-radius:100px">2026</span>
         </div>
         <div data-scene="growth" style="position:relative;height:clamp(220px,26vw,280px);border-radius:14px;overflow:hidden"><canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
       </div>
-      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px">
-          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Последние операции</h3><p style="font:300 13px Oxygen;color:#93A4B8;margin:5px 0 0">Каждый лид и выплата на виду</p></div>
-          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font:700 12px Oxygen;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.24);padding:5px 11px;border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#16C15A;animation:mbLive 1.8s ease-in-out infinite"></span>live</span>
+          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Последние операции</h3><p style="font:300 13px Oxygen;color:#6B7890;margin:5px 0 0">Каждый лид и выплата на виду</p></div>
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font:700 12px Oxygen;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.24);padding:5px 11px;border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#4E86E6;animation:mbLive 1.8s ease-in-out infinite"></span>live</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:9px">
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Выплата, Nimbus Retail</div><div style="font:300 12px Oxygen;color:#93A4B8">20% с первой сделки</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 280</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#4E86E6"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Выплата, Nimbus Retail</div><div style="font:300 12px Oxygen;color:#6B7890">20% с первой сделки</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums">+AED 280</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Сделка закрыта, Granite Works</div><div style="font:300 12px Oxygen;color:#93A4B8">оплата получена</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 360</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#4E86E6"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Сделка закрыта, Granite Works</div><div style="font:300 12px Oxygen;color:#6B7890">оплата получена</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums">+AED 360</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#C8102E"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Новый лид, Northwind Group</div><div style="font:300 12px Oxygen;color:#93A4B8">закреплён за вами</div></div>
-            <div style="flex-shrink:0;font:700 13px Oxygen;color:#93A4B8">в работе</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#C51929"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Новый лид, Northwind Group</div><div style="font:300 12px Oxygen;color:#6B7890">закреплён за вами</div></div>
+            <div style="flex-shrink:0;font:700 13px Oxygen;color:#6B7890">в работе</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Продление, Mercury Logistics</div><div style="font:300 12px Oxygen;color:#93A4B8">10% с платежа</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 30</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#4E86E6"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Продление, Mercury Logistics</div><div style="font:300 12px Oxygen;color:#6B7890">10% с платежа</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4E86E6;font-variant-numeric:tabular-nums">+AED 30</div>
           </div>
         </div>
       </div>
@@ -198,34 +198,34 @@
   <a id="cabinet"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,58px);align-items:center" data-two>
-      <div style="border-radius:16px;overflow:hidden;background:#0C0F15;border:1px solid rgba(255,255,255,.1);box-shadow:0 50px 100px -40px rgba(0,0,0,.9);transform:perspective(1600px) rotateY(-8deg) rotateX(3deg)">
-        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#12161E;border-bottom:1px solid rgba(255,255,255,.08)">
-          <span style="width:10px;height:10px;border-radius:50%;background:#C8102E;display:inline-block"></span>
+      <div style="border-radius:16px;overflow:hidden;background:#F5F7F9;border:1px solid #E7E7E7;box-shadow:0 50px 100px -40px rgba(255,255,255,.9);transform:perspective(1600px) rotateY(-8deg) rotateX(3deg)">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#FFFFFF;border-bottom:1px solid #E7E7E7">
+          <span style="width:10px;height:10px;border-radius:50%;background:#C51929;display:inline-block"></span>
           <span style="width:10px;height:10px;border-radius:50%;background:#E8A100;display:inline-block"></span>
-          <span style="width:10px;height:10px;border-radius:50%;background:#16C15A;display:inline-block"></span>
-          <span style="flex:1;margin-left:8px;font:400 12px Oxygen;color:#93A4B8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">makebiz.ru/cabinet</span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#4E86E6;display:inline-block"></span>
+          <span style="flex:1;margin-left:8px;font:400 12px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:8px;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">makebiz.ru/cabinet</span>
         </div>
         <img data-cabimg src="cabinet-dark.png" alt="Личный кабинет партнёра MakeBiz" style="display:block;width:100%;height:auto">
       </div>
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Личный кабинет</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Личный кабинет</span>
         <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Удобный кабинет со статистикой</h2>
-        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0 0 24px;max-width:44ch">Заходите и видите всё, сколько привели, что в работе, что к выплате и когда. Прозрачно по каждому лиду и каждой операции</p>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0 0 24px;max-width:44ch">Заходите и видите всё, сколько привели, что в работе, что к выплате и когда. Прозрачно по каждому лиду и каждой операции</p>
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 6-6"></path></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Статистика и аналитика</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Сделки по месяцам, конверсия, заработано и сумма к выплате</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4E86E6,#0B4FD1);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 6-6"></path></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Статистика и аналитика</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Сделки по месяцам, конверсия, заработано и сумма к выплате</p></div>
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Прозрачность лидов и операций</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Статус каждой сделки и расчёт вознаграждения по каждому платежу</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4E86E6,#0B4FD1);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Прозрачность лидов и операций</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Статус каждой сделки и расчёт вознаграждения по каждому платежу</p></div>
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8 14l-2 7 6-3 6 3-2-7"></path></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Уровни и достижения</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Растите от Бронзы до Голда, открывайте бонусы за активность</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#4E86E6,#0B4FD1);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8 14l-2 7 6-3 6 3-2-7"></path></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Уровни и достижения</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Растите от Бронзы до Голда, открывайте бонусы за активность</p></div>
           </div>
         </div>
-        <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Войти в кабинет <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"></path></svg></a>
+        <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#FFFFFF;background:linear-gradient(135deg,#4E86E6,#4E86E6);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(1,60,164,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Войти в кабинет <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"></path></svg></a>
       </div>
     </div>
   </section>
@@ -233,30 +233,30 @@
   <a id="guarantees"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:56ch;margin:0 auto 40px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Гарантии выплат</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#4E86E6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Гарантии выплат</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Выплаты закреплены договором</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Процент, сроки и порядок выплат зафиксированы в официальном партнёрском договоре</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Процент, сроки и порядок выплат зафиксированы в официальном партнёрском договоре</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" data-guar>
-      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#4E86E6,#0B4FD1);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Гарантия по договору</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0">Процент и сроки выплат закреплены официально, вы всегда знаете, сколько и когда получите</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0">Процент и сроки выплат закреплены официально, вы всегда знаете, сколько и когда получите</p>
       </div>
-      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#4E86E6,#0B4FD1);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Платим по факту оплаты</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0">Как только клиент оплатил, начисляем ваше вознаграждение без отложенных условий</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0">Как только клиент оплатил, начисляем ваше вознаграждение без отложенных условий</p>
       </div>
-      <div style="background:linear-gradient(180deg,rgba(22,193,90,.1),#090B10);border:1px solid rgba(22,193,90,.26);border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M16 12h2M3 10h18"></path></svg></span>
+      <div style="background:linear-gradient(180deg,rgba(1,60,164,.1),#F5F7F9);border:1px solid rgba(1,60,164,.26);border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#4E86E6,#4E86E6);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M16 12h2M3 10h18"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Выплата удобным способом</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0 0 16px">Выберите формат вывода, мы подстроимся под вас</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0 0 16px">Выберите формат вывода, мы подстроимся под вас</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Карта</span>
-          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">USDT</span>
-          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Перевод</span>
-          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Наличные</span>
+          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Карта</span>
+          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">USDT</span>
+          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Перевод</span>
+          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Наличные</span>
         </div>
       </div>
     </div>
@@ -276,7 +276,7 @@ class Component {
   componentDidMount(){
     const root = this._root && this._root.current; if(!root) return;
     let RM=false; try{RM=matchMedia('(prefers-reduced-motion:reduce)').matches;}catch(e){}
-    const C={txt:'#EAF1FF',grn:'#16C15A',grnL:'#4FE07F',grnD:'#052012',red:'#C8102E',redL:'#FF3B57',mut:'#93A4B8',line:'rgba(255,255,255,.10)'};
+    const C={txt:'#03235F',grn:'#4E86E6',grnL:'#4E86E6',grnD:'#FFFFFF',red:'#C51929',redL:'#FF3B57',mut:'#6B7890',line:'#FFFFFF'};
     function hx(h){h=h.replace('#','');return[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
     function rgba(h,a){const c=hx(h);return'rgba('+c[0]+','+c[1]+','+c[2]+','+a+')';}
     function lerp(a,b,t){return a+(b-a)*t;}
@@ -320,8 +320,8 @@ class Component {
         ctx.strokeStyle=C.grn;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(m,y);ctx.lineTo(m+gap*Math.min(prog,n-1),y);ctx.stroke();
         for(let i=0;i<n;i++){const x=m+gap*i,active=prog>=i-0.15,r=15;
           if(active)glow(ctx,x,y,34,stages[i][1],.26);
-          ctx.fillStyle=active?stages[i][1]:'#12161E';ctx.strokeStyle=active?stages[i][1]:rgba('#ffffff',.18);ctx.lineWidth=2.4;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.stroke();
-          if(active){ctx.strokeStyle=i===0?C.grnD:'#052012';ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(x-5,y);ctx.lineTo(x-1.5,y+4);ctx.lineTo(x+6,y-4);ctx.stroke();}
+          ctx.fillStyle=active?stages[i][1]:'#FFFFFF';ctx.strokeStyle=active?stages[i][1]:rgba('#ffffff',.18);ctx.lineWidth=2.4;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.stroke();
+          if(active){ctx.strokeStyle=i===0?C.grnD:'#FFFFFF';ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(x-5,y);ctx.lineTo(x-1.5,y+4);ctx.lineTo(x+6,y-4);ctx.stroke();}
           ctx.fillStyle=active?C.txt:C.mut;ctx.font='700 13px Oxygen,sans-serif';ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText(stages[i][0],x,y+26);}
         const px=m+gap*Math.min(prog,n-1),col=prog>=2?C.grnL:C.red;
         glow(ctx,px,y-42,16,col,.4);ctx.fillStyle=col;ctx.beginPath();ctx.arc(px,y-42,7,0,7);ctx.fill();
@@ -356,7 +356,7 @@ class Component {
           ctx.strokeStyle=rgba(C.grn,.2);ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(x,y);ctx.stroke();
           nd.ph+=(RM?0:0.01)*(nd.sp*3);const pp=nd.ph%1,dx=lerp(x,cx,pp),dy=lerp(y,cy,pp);
           glow(ctx,dx,dy,7,C.grn,.5);ctx.fillStyle=C.grnL;ctx.beginPath();ctx.arc(dx,dy,2.6,0,7);ctx.fill();
-          const pu=0.6+Math.abs(Math.sin(t*1.5+i))*0.4;glow(ctx,x,y,15,C.grn,.28*pu);ctx.fillStyle=rgba('#EAF1FF',pu);ctx.beginPath();ctx.arc(x,y,4.5,0,7);ctx.fill();}
+          const pu=0.6+Math.abs(Math.sin(t*1.5+i))*0.4;glow(ctx,x,y,15,C.grn,.28*pu);ctx.fillStyle=rgba('#03235F',pu);ctx.beginPath();ctx.arc(x,y,4.5,0,7);ctx.fill();}
         const g=ctx.createLinearGradient(cx-24,cy-24,cx+24,cy+24);g.addColorStop(0,C.grnL);g.addColorStop(1,C.grn);ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,17,0,7);ctx.fill();
         ctx.fillStyle=C.grnD;ctx.font='700 12px Oxygen,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('MB',cx,cy);
       }
@@ -415,26 +415,26 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   }
 
   var CSS = [
-"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
 "#mbm-header *{box-sizing:border-box}",
 "#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
 "#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
-"#mbm-header .mbm-biz{color:#C8102E}",
+"#mbm-header .mbm-biz{color:#C51929}",
 "#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
 "#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
 "#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
-"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
-"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
-"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#6B7890;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:#FFFFFF}",
+"#mbm-header .mbm-nav a.mbm-active{color:#4E86E6;font-weight:700}",
 "#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
-"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
-"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
-"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
-"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#03235F;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#C51929,#C51929);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid #E7E7E7;color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid #E7E7E7;padding:8px clamp(16px,4vw,40px) 14px;background:rgba(255,255,255,.97)}",
 "#mbm-header .mbm-drop.mbm-open{display:block}",
 "#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
-"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
-"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#6B7890;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#4E86E6;font-weight:700}",
 "@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
 "@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
   ].join("\n");
@@ -443,7 +443,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 '<header id="mbm-header">'+
   '<div class="mbm-in">'+
     '<a href="index.html" class="mbm-logo">MakeBiz'+
-      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C51929">CRM</span></span>'+
     '</a>'+
     '<nav class="mbm-nav">'+navLinks()+'</nav>'+
     '<div class="mbm-right">'+
@@ -505,28 +505,28 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   if (window.__mbcfDone) return; window.__mbcfDone = true;
 
   var CSS = [
-"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact{--g:#4E86E6;--g2:#0B4FD1;--r:#C51929;--r2:#C51929;--tx:#03235F;--mu:#6B7890;--ln:#FFFFFF;--gl:#FFFFFF;max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
 "#mbcf-contact *{box-sizing:border-box}",
 "#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
 "#mbcf-contact .mbcf-hide{display:none!important}",
 "#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
-"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F3B4BC;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
 "#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
 "#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
 "#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
 "#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
 "#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
 "#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
-"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#FFFFFF,#F5F7F9);border:1px solid #E7E7E7;border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1}",
 "#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
-"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
-"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#6B7890}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(1,60,164,.55);background:rgba(1,60,164,.05)}",
 "#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
 "#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
 "#mbcf-contact .mbcf-field{margin-bottom:12px}",
 "#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
 "#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
-"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
+"#mbcf-contact .mbcf-cc option{background:#FFFFFF;color:var(--tx)}",
 "#mbcf-contact .mbcf-tg{position:relative}",
 "#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
 "#mbcf-contact .mbcf-tgi{padding-left:30px}",
@@ -537,30 +537,30 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 "#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
 "#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
 "#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
-"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#6B7890;margin-top:12px}",
 "#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
-"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(1,60,164,.5)}",
 "#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
 "#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
 "#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
-"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
-"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
-"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-chat{background:#FFFFFF;border:1px solid #E7E7E7;border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid #E7E7E7}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0B4FD1);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(1,60,164,.5)}",
 "#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
 "#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
 "#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
 "#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
 "#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
-"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:#FFFFFF;border:1px solid #E7E7E7;color:var(--tx);border-radius:16px 16px 16px 5px}",
 "#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
-"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
-"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:#FFFFFF;border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#9CB9EE;animation:mbcfDot 1.4s infinite}",
 "#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
 "#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
 "@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
-"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid #E7E7E7}",
 "#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
-"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0B4FD1);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
 "@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
   ].join("\n");
 
@@ -732,29 +732,29 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   if (window.__mbfDone) return; window.__mbfDone = true;
 
   var CSS = [
-"#mbf-footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:#93A4B8;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
+"#mbf-footer{background:#F5F7F9;border-top:1px solid #E7E7E7;color:#6B7890;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
 "#mbf-footer *{box-sizing:border-box}",
 "#mbf-footer .mbf-in{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}",
-"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid #E7E7E7}",
 "#mbf-footer .mbf-logo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;margin-bottom:14px}",
 "#mbf-footer .mbf-badges{display:flex;gap:3px}",
 "#mbf-footer .mbf-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
-"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#93A4B8;margin-bottom:16px;max-width:36ch}",
+"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#6B7890;margin-bottom:16px;max-width:36ch}",
 "#mbf-footer .mbf-contacts{display:flex;flex-direction:column;gap:9px}",
-"#mbf-footer .mbf-contacts a{color:#B7C4D6;text-decoration:none;font:400 14px Oxygen}",
+"#mbf-footer .mbf-contacts a{color:#6B7890;text-decoration:none;font:400 14px Oxygen}",
 "#mbf-footer .mbf-contacts a:hover{color:#fff}",
-"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}",
-"#mbf-footer .mbf-col a{display:block;color:#93A4B8;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
-"#mbf-footer .mbf-col a:hover{color:#16C15A}",
+"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#03235F;margin:0 0 13px}",
+"#mbf-footer .mbf-col a{display:block;color:#6B7890;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
+"#mbf-footer .mbf-col a:hover{color:#4E86E6}",
 "#mbf-footer .mbf-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font:300 12.5px/1.65 Oxygen;color:#6B7A99}",
 "#mbf-footer .mbf-req{max-width:70ch}",
-"#mbf-footer .mbf-ph{color:#8FA0B8}",
+"#mbf-footer .mbf-ph{color:#6B7890}",
 "@media(max-width:900px){#mbf-footer .mbf-top{grid-template-columns:1fr 1fr}}",
 "@media(max-width:560px){#mbf-footer .mbf-top{grid-template-columns:1fr}}",
-"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85);font-family:Oxygen,system-ui,sans-serif}",
-"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}",
-"#mbf-cookie a{color:#16C15A;text-decoration:none}",
-"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
+"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(255,255,255,.97);border:1px solid #E7E7E7;border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(255,255,255,.85);font-family:Oxygen,system-ui,sans-serif}",
+"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#6B7890;margin:0;flex:1;min-width:220px}",
+"#mbf-cookie a{color:#4E86E6;text-decoration:none}",
+"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#C51929,#C51929);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
 "#mbf-cookie.mbf-hide{display:none!important}"
   ].join("\n");
 
@@ -762,7 +762,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 '<footer id="mbf-footer"><div class="mbf-in">'+
   '<div class="mbf-top">'+
     '<div>'+
-      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
+      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C51929">CRM</span></span></a>'+
       '<div class="mbf-tag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Продукты</h4>'+
@@ -777,7 +777,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   '</div>'+
   '<div class="mbf-bottom">'+
     '<div>© 2026 MakeBiz. Все права защищены.</div>'+
-    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Политика конфиденциальности</a></div>'+
+    '<div><a href="privacy.html" style="color:#6B7890;text-decoration:none">Политика конфиденциальности</a></div>'+
   '</div>'+
 '</div></footer>';
 
@@ -837,7 +837,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
    старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
 (function(){
   if (window.__mbbgDone) return; window.__mbbgDone = true;
-  var BG='#04050A';
+  var BG='#F5F7F9';
   var st=document.createElement('style'); st.id='mb-bg-style';
   st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
     '.pagebg,.mesh{display:none !important}';
@@ -857,7 +857,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduced) b.t=4.2;
   // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
-  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var BEAMS=[[.12,'#4E86E6',.15,120,0],[.30,'#03235F',.08,90,1.6],[.48,'#0B4FD1',.17,150,3.1],[.68,'#C51929',.13,110,4.4],[.86,'#4E86E6',.12,130,2.2]];
   var canvas=null, ctx=null;
   function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
   function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
@@ -906,10 +906,10 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
     ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
     for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
     ctx.restore();
-    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
-    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0B4FD1',.12));tg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#03235F',.04*b.af);
     ctx.globalCompositeOperation='source-over';
-    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(255,255,255,0)');vg.addColorStop(1,'rgba(255,255,255,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
   }
   var last=null;
   function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
@@ -1015,12 +1015,12 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
   var CSS=':host{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;vertical-align:middle!important}'
    +'.wrap{display:inline-flex;flex-direction:row;align-items:center;gap:6px}'
-   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid rgba(255,255,255,.10);text-decoration:none;cursor:pointer;transition:border-color .2s;background:rgba(255,255,255,.03)}'
-   +'a.active{background:rgba(22,193,90,.14);border-color:rgba(22,193,90,.55)}'
-   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto}'
+   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid #E7E7E7;text-decoration:none;cursor:pointer;transition:border-color .2s;background:#FFFFFF}'
+   +'a.active{background:rgba(1,60,164,.14);border-color:rgba(1,60,164,.55)}'
+   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px #FFFFFF inset;flex:0 0 auto}'
    +'.fl svg{width:20px;height:14px;display:block}'
    +'.cd{font:700 12px Oxygen,system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap;line-height:1}'
-   +'.cd.on{color:#EAF1FF}.cd.off{color:#93A4B8}';
+   +'.cd.on{color:#03235F}.cd.off{color:#6B7890}';
   function build(){
     var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
     if(!right || right.querySelector('.mb-lang')) return;
@@ -1057,5 +1057,29 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
 })();
 
+</script>
+<script>
+/* MakeBiz — светлая тема: контраст-фиксер. Тёмный/светлый текст на светлом фоне делаем читаемым (тёмно-синим), но НЕ трогаем белый текст на цветных кнопках/градиентах. */
+(function(){
+  if(window.__mbLightDone) return; window.__mbLightDone=true;
+  function lum(r,g,b){ return .2126*r+.7152*g+.0722*b; }
+  function effBg(e){ var n=e; while(n){ var s=getComputedStyle(n);
+      var bi=s.backgroundImage; if(bi && bi.indexOf('gradient')>-1) return null; /* colored gradient -> skip */
+      var bg=s.backgroundColor, m=bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/);
+      if(m){ var a=m[4]!==undefined?+m[4]:1; if(a>0.5) return [+m[1],+m[2],+m[3]]; }
+      n=n.parentElement; } return [255,255,255]; }
+  function fix(){
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,span,a,div,li,button,td,label,strong,b,em,small');
+    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.children.length) continue;
+      var t=(e.textContent||'').trim(); if(!t) continue;
+      var m=getComputedStyle(e).color.match(/rgb\((\d+),\s*(\d+),\s*(\d+)/); if(!m) continue;
+      if(lum(+m[1],+m[2],+m[3])<178) continue;            // text not light -> leave
+      var bg=effBg(e); if(bg===null) continue;            // on gradient/colored -> keep white
+      if(lum(bg[0],bg[1],bg[2])>150){ e.style.setProperty('color','#03235F','important'); }
+    }
+  }
+  fix(); var n=0, iv=setInterval(function(){ fix(); if(++n>16) clearInterval(iv); },350);
+  if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},10000); }
+})();
 </script>
 </body></html>
