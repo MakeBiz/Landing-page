@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" style="background:radial-gradient(46% 44% at 17% 20%, rgba(0,45,140,.36), transparent 55%),radial-gradient(44% 40% at 89% 15%, rgba(200,26,36,.32), transparent 55%),radial-gradient(50% 44% at 55% 88%, rgba(0,45,140,.30), transparent 53%),radial-gradient(42% 38% at 97% 80%, rgba(200,26,36,.26), transparent 53%),radial-gradient(40% 36% at 1% 68%, rgba(0,45,140,.24), transparent 53%),linear-gradient(180deg,#FFFFFF,#E6EDF8) !important;background-attachment:fixed !important;">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,7 +68,7 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
 .hide{display:none!important}
 </style>
 </head>
-<body>
+<body style="background:transparent !important">
 <div class="mesh"></div>
 
 <header>
@@ -180,182 +180,8 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
   if(ok)ok.addEventListener('click',function(){bar.classList.add('hide');try{localStorage.setItem('mbf-cookie-ok','1')}catch(e){}});
 })();
 </script>
-<script>
-/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
-   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
-   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
-   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
-(function(){
-  if (window.__mbbgDone) return; window.__mbbgDone = true;
-  var BG='#F5F7F9';
-  var st=document.createElement('style'); st.id='mb-bg-style';
-  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
-    '.pagebg,.mesh{display:none !important}';
-  (document.head||document.documentElement).appendChild(st);
 
-  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
-  function clearBase(){
-    try{
-      var de=document.documentElement;
-      if(de) de.style.setProperty('background','transparent','important');
-      if(document.body) document.body.style.setProperty('background','transparent','important');
-    }catch(e){}
-  }
-  clearBase();
 
-  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
-  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduced) b.t=4.2;
-  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
-  var BEAMS=[[.12,'#0A46D6',.15,120,0],[.30,'#03235F',.08,90,1.6],[.48,'#0039A6',.17,150,3.1],[.68,'#D4202A',.13,110,4.4],[.86,'#0A46D6',.12,130,2.2]];
-  var canvas=null, ctx=null;
-  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
-  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
-  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
-  function ensureCanvas(){
-    var c=document.getElementById('mb-bg');
-    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
-    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
-    return c;
-  }
-  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
-    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
-    if(!m) return false;
-    var a=m[4]===undefined?1:parseFloat(m[4]);
-    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
-    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
-  }
-  function hideOldBg(){
-    try{ var vw=window.innerWidth,vh=window.innerHeight;
-      var list=document.querySelectorAll('body *');
-      for(var i=0;i<list.length;i++){ var el=list[i];
-        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
-        var s=window.getComputedStyle(el);
-        var r=el.getBoundingClientRect();
-        // 1) фиксированные декоративные полноэкранные слои - прячем
-        if(s.position==='fixed'){
-          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
-          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
-          continue;
-        }
-        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
-        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
-          el.style.setProperty('background-color','transparent','important');
-          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
-        }
-      }
-    }catch(e){}
-  }
-  window.addEventListener('resize',resize);
-  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
-  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
-  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
-    ctx.globalCompositeOperation='source-over';
-    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
-    ctx.globalCompositeOperation='lighter';
-    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
-    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
-    ctx.restore();
-    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0039A6',.12));tg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
-    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#03235F',.04*b.af);
-    ctx.globalCompositeOperation='source-over';
-    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(255,255,255,0)');vg.addColorStop(1,'rgba(255,255,255,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
-  }
-  var last=null;
-  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
-  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
-  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
-})();
-</script>
-<script>
-/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
-   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
-   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
-   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
-(function(){
-  if (window.__mbbgDone) return; window.__mbbgDone = true;
-  var BG='#F5F7F9';
-  var st=document.createElement('style'); st.id='mb-bg-style';
-  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
-    '.pagebg,.mesh{display:none !important}';
-  (document.head||document.documentElement).appendChild(st);
-
-  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
-  function clearBase(){
-    try{
-      var de=document.documentElement;
-      if(de) de.style.setProperty('background','transparent','important');
-      if(document.body) document.body.style.setProperty('background','transparent','important');
-    }catch(e){}
-  }
-  clearBase();
-
-  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
-  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduced) b.t=4.2;
-  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
-  var BEAMS=[[.12,'#0A46D6',.15,120,0],[.30,'#03235F',.08,90,1.6],[.48,'#0039A6',.17,150,3.1],[.68,'#D4202A',.13,110,4.4],[.86,'#0A46D6',.12,130,2.2]];
-  var canvas=null, ctx=null;
-  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
-  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
-  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
-  function ensureCanvas(){
-    var c=document.getElementById('mb-bg');
-    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
-    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
-    return c;
-  }
-  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
-    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
-    if(!m) return false;
-    var a=m[4]===undefined?1:parseFloat(m[4]);
-    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
-    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
-  }
-  function hideOldBg(){
-    try{ var vw=window.innerWidth,vh=window.innerHeight;
-      var list=document.querySelectorAll('body *');
-      for(var i=0;i<list.length;i++){ var el=list[i];
-        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
-        var s=window.getComputedStyle(el);
-        var r=el.getBoundingClientRect();
-        // 1) фиксированные декоративные полноэкранные слои - прячем
-        if(s.position==='fixed'){
-          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
-          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
-          continue;
-        }
-        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
-        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
-          el.style.setProperty('background-color','transparent','important');
-          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
-        }
-      }
-    }catch(e){}
-  }
-  window.addEventListener('resize',resize);
-  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
-  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
-  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
-    ctx.globalCompositeOperation='source-over';
-    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
-    ctx.globalCompositeOperation='lighter';
-    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
-    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
-    ctx.restore();
-    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0039A6',.12));tg.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
-    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#03235F',.04*b.af);
-    ctx.globalCompositeOperation='source-over';
-    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(255,255,255,0)');vg.addColorStop(1,'rgba(255,255,255,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
-  }
-  var last=null;
-  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
-  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
-  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
-})();
-</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
 (function(){
@@ -478,29 +304,6 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
 
 </script>
 <script>
-/* MakeBiz — светлый фон в цветах флага РФ: белая база + синие и красные «лучи». Прячем тёмный canvas-фон. */
-(function(){
-  if(window.__mbLightBgDone) return; window.__mbLightBgDone=true;
-  var BG='radial-gradient(48% 46% at 18% 24%, rgba(0,45,140,.42), transparent 56%),'
-        +'radial-gradient(46% 42% at 88% 18%, rgba(200,26,36,.38), transparent 56%),'
-        +'radial-gradient(52% 46% at 54% 84%, rgba(0,45,140,.36), transparent 54%),'
-        +'radial-gradient(44% 40% at 96% 76%, rgba(200,26,36,.32), transparent 54%),'
-        +'radial-gradient(42% 38% at 2% 70%, rgba(0,45,140,.30), transparent 54%),'
-        +'radial-gradient(36% 30% at 70% 46%, rgba(200,26,36,.14), transparent 58%),'
-        +'linear-gradient(180deg,#FFFFFF,#E3EBF8)';
-  function apply(){
-    var c=document.getElementById('mb-bg'); if(c) c.style.display='none';
-    // flag gradient on <html> (stable — bundler does not manage it); viewport-fixed. Page-bg transparency is baked in source, so no runtime toggling / no flicker.
-    var de=document.documentElement;
-    de.style.setProperty('background', BG, 'important');
-    de.style.setProperty('background-attachment', 'fixed', 'important');
-    if(document.body) document.body.style.setProperty('background','transparent','important');
-  }
-  apply(); var n=0, iv=setInterval(function(){ apply(); if(++n>20) clearInterval(iv); },400);
-  if(window.MutationObserver){ var mo=new MutationObserver(apply); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},9000); }
-})();
-</script>
-<script>
 /* MakeBiz — светлая тема: контраст-фиксер. Любой светлый текст на светлом фоне делаем читаемым (тёмно-синим), включая логотип, SVG-текст и текст на светлых градиентах. Белый текст на цветных кнопках/тёмных градиентах не трогаем. */
 (function(){
   if(window.__mbLightDone) return; window.__mbLightDone=true;
@@ -526,6 +329,33 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
   }
   fix(); var n=0, iv=setInterval(function(){ fix(); if(++n>16) clearInterval(iv); },350);
   if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},11000); }
+})();
+</script>
+<script>
+/* MakeBiz — светлая тема: чёткость. Границы и мягкая тень для карточек и полей формы, чтобы блоки читались на светлом фоне. */
+(function(){
+  if(window.__mbDefDone) return; window.__mbDefDone=true;
+  function pc(s){var m=(''+s).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/);return m?{r:+m[1],g:+m[2],b:+m[3],a:m[4]!==undefined?+m[4]:1}:null;}
+  function fix(){
+    var ins=document.querySelectorAll('input,textarea,select');
+    for(var i=0;i<ins.length;i++){var el=ins[i]; if(el.__mbd) continue; el.__mbd=1;
+      el.style.setProperty('border','1.5px solid #BCC9E0','important');
+      el.style.setProperty('background-color','#FFFFFF','important');
+      el.style.setProperty('border-radius','10px','important');
+    }
+    var els=document.querySelectorAll('div,section,article,form,label,li,figure');
+    for(var j=0;j<els.length;j++){var e=els[j]; if(e.__mbc) continue;
+      var cs=getComputedStyle(e); var br=parseFloat(cs.borderTopLeftRadius)||0;
+      var bg=pc(cs.backgroundColor); var r=e.getBoundingClientRect();
+      if(br>=9 && bg && bg.a>0.85 && (bg.r+bg.g+bg.b)/3>236 && r.width>=80 && r.height>=46){
+        e.__mbc=1;
+        if((parseFloat(cs.borderTopWidth)||0)<1) e.style.setProperty('border','1px solid #D7DFEC','important');
+        if(cs.boxShadow==='none') e.style.setProperty('box-shadow','0 8px 26px rgba(15,40,85,.09)','important');
+      }
+    }
+  }
+  fix(); var n=0, iv=setInterval(function(){fix(); if(++n>14) clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},10000);}
 })();
 </script>
 </body>
