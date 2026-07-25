@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/company", "destination": "/", "permanent": true },
+    { "source": "/openclaw", "destination": "/ai-agents", "permanent": true },
+    { "source": "/servers", "destination": "/vps", "permanent": true },
+    { "source": "/en/openclaw", "destination": "/en/ai-agents", "permanent": true },
+    { "source": "/en/company", "destination": "/en", "permanent": true },
+    { "source": "/en/servers", "destination": "/en/vps", "permanent": true }
+  ]
 }
