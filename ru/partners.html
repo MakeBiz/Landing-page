@@ -1,6 +1,5 @@
-<!doctype html>
-<html lang="ru" style="background:radial-gradient(46% 44% at 17% 20%, rgba(0,45,140,.36), transparent 55%),radial-gradient(44% 40% at 89% 15%, rgba(200,26,36,.32), transparent 55%),radial-gradient(50% 44% at 55% 88%, rgba(0,45,140,.30), transparent 53%),radial-gradient(42% 38% at 97% 80%, rgba(200,26,36,.26), transparent 53%),radial-gradient(40% 36% at 1% 68%, rgba(0,45,140,.24), transparent 53%),linear-gradient(180deg,#FFFFFF,#E6EDF8) !important;background-attachment:fixed !important;"><head>
-<meta name="robots" content="noindex,nofollow">
+<!DOCTYPE html>
+<html lang="ru"><head>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MakeBiz Group">
   <meta property="og:title" content="MakeBiz Group, AI, CRM и автоматизация для эффективности бизнеса">
@@ -12,42 +11,55 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
 <meta charset="utf-8">
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MakeBiz · Партнёрам</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box}
     html,body{margin:0}
     body{background:transparent;font-family:Oxygen,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-    a{color:#0A46D6;text-decoration:none}
-    a:hover{color:#0A46D6}
-    ::selection{background:rgba(1,60,164,.22)}
-    @keyframes mbGlow{0%,100%{box-shadow:0 0 0 3px rgba(1,60,164,.22)}50%{box-shadow:0 0 0 6px rgba(1,60,164,.05)}}
+    a{color:#16C15A;text-decoration:none}
+    a:hover{color:#4FE07F}
+    ::selection{background:rgba(22,193,90,.22)}
+    @keyframes mbGlow{0%,100%{box-shadow:0 0 0 3px rgba(22,193,90,.22)}50%{box-shadow:0 0 0 6px rgba(22,193,90,.05)}}
     @keyframes mbLive{0%,100%{opacity:.4}50%{opacity:1}}
     @keyframes mbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    .mbrv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+    .mbrv.on{opacity:1;transform:none}
+    .mbshine{position:relative;overflow:hidden}
+    .mbshine::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.32) 50%,transparent 58%);transform:translateX(-140%);animation:mbShine 4.6s ease-in-out infinite;pointer-events:none}
+    @keyframes mbShine{0%,58%{transform:translateX(-140%)}78%,100%{transform:translateX(140%)}}
+    [data-hero3d] canvas{opacity:.9}
+    @media(max-width:900px){[data-hero3d]{opacity:.5}}
+    @media(prefers-reduced-motion:reduce){.mbrv{opacity:1;transform:none;transition:none}.mbshine::after{animation:none;opacity:0}}
   </style>
 <style>
-[data-mbnav] a{font:400 13.5px Oxygen;color:#6B7890;padding:8px 11px;border-radius:8px;transition:color .15s;}
+[data-mbnav] a{font:400 13.5px Oxygen;color:#95A0B2;padding:8px 11px;border-radius:8px;transition:color .15s;}
 [data-mbnav] a:hover{color:#fff;}
-[data-mbnav] a.active{color:#4E7EDC;font-weight:700;}
+[data-mbnav] a.active{color:#8FE7AE;font-weight:700;}
 @media(max-width:1080px){[data-mbnav],[data-mbhide]{display:none!important;}}
-.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:transparent;}
+.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#07090D,#0A0E12 48%,#07090D);}
 .pagebg b{position:absolute;border-radius:50%;filter:blur(120px);}
 .pagebg .p1{width:680px;height:680px;background:radial-gradient(circle,rgba(200,16,46,.30),transparent 70%);top:-8%;left:-10%;animation:mbA 32s ease-in-out infinite alternate;}
-.pagebg .p2{width:600px;height:600px;background:radial-gradient(circle,rgba(1,60,164,.28),transparent 70%);top:38%;right:-12%;animation:mbB 36s ease-in-out infinite alternate;}
-.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(1,60,164,.40),transparent 70%);top:76%;left:14%;animation:mbA 40s ease-in-out infinite alternate;}
+.pagebg .p2{width:600px;height:600px;background:radial-gradient(circle,rgba(22,193,90,.28),transparent 70%);top:38%;right:-12%;animation:mbB 36s ease-in-out infinite alternate;}
+.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(12,140,63,.40),transparent 70%);top:76%;left:14%;animation:mbA 40s ease-in-out infinite alternate;}
 @keyframes mbA{to{transform:translate(60px,-40px) scale(1.14);}}
 @keyframes mbB{to{transform:translate(-50px,50px) scale(1.1);}}
 </style>
 </head>
-<body style="background:transparent !important">
+<body>
+
 <div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
-<div style="position:sticky;top:0;z-index:70;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;">
+<div style="position:sticky;top:0;z-index:70;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);">
   <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:18px;height:60px;padding:0 clamp(18px,4vw,44px);">
-    <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#D4202A;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#D4202A;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#0A46D6;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#D4202A;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
-    <nav data-mbnav style="display:flex;gap:2px;margin-left:6px;">
+    <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#16C15A;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
+    <nav data-mbnav="" style="display:flex;gap:2px;margin-left:6px;">
       <a href="index.html">Главная</a>
       
       <a href="ai-agents.html">AI-агенты</a>
@@ -55,79 +67,178 @@
       <a href="intdoc.html">IntDoc</a>
       <a href="bitrix.html">Битрикс24</a>
       <a href="vps.html">VPS</a>
-      <a href="news.html">Новости</a><a href="партнёрам.html" class="active">Партнёрам</a>
-      <a href="контакты.html">Контакты</a>
+      <a href="news.html">Новости</a><a href="partners.html" class="active">Партнёрам</a>
+      <a href="contacts.html">Контакты</a>
     </nav>
-    <span data-mbhide style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
+    <span data-mbhide="" style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
   </div>
 </div>
-<div id="partroot" style="min-height:100vh;background:transparent;color:#03235F;overflow-x:hidden">
+<div id="partroot" style="min-height:100vh;background:transparent;color:#EAF1FF;overflow-x:hidden">
 
 <!-- вторая шапка убрана (оставлен вход в кабинет в hero) -->
 
   <a id="top"></a>
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(18px,4vw,40px) clamp(30px,4vw,56px)">
-    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,60px);align-items:center" data-hero-grid>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(18px,4vw,40px) clamp(30px,4vw,56px);position:relative">
+    <div data-hero3d="" aria-hidden="true" style="position:absolute;top:-90px;bottom:-50px;left:50%;transform:translateX(-50%);width:100vw;pointer-events:none;z-index:0;overflow:hidden"></div>
+    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,60px);align-items:center;position:relative;z-index:1" data-hero-grid="">
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#FF3B57;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:6px 13px;border-radius:100px">Партнёрская программа MakeBiz</span>
-        <h1 style="font:700 clamp(32px,5vw,58px)/1.05 Oxygen;letter-spacing:-.025em;color:#fff;margin:20px 0 16px;max-width:16ch;text-wrap:balance">Приводите бизнес и <span style="color:#0A46D6">зарабатывайте с каждой оплаты</span></h1>
-        <p style="font:300 clamp(15px,1.6vw,19px)/1.6 Oxygen;color:#6B7890;margin:0;max-width:52ch">Вы рекомендуете, мы берём на себя встречи, внедрение и поддержку. Вы получаете 20% с первой сделки и 10% со всех платежей клиента ещё год</p>
+        <h1 style="font:700 clamp(32px,5vw,58px)/1.05 Oxygen;letter-spacing:-.025em;color:#fff;margin:20px 0 16px;max-width:16ch;text-wrap:balance">Приводите бизнес и <span style="color:#16C15A">зарабатывайте с каждой оплаты</span></h1>
+        <p style="font:300 clamp(15px,1.6vw,19px)/1.6 Oxygen;color:#93A4B8;margin:0;max-width:52ch">Вы рекомендуете, мы берём на себя встречи, внедрение и поддержку. Вы получаете 20% с первой сделки и 10% со всех платежей клиента ещё год</p>
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:30px">
-          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#FFFFFF;background:linear-gradient(135deg,#0A46D6,#0A46D6);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(1,60,164,.32);cursor:pointer;text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Стать партнёром <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(1,60,164,.5)">Войти в кабинет</a>
+          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);cursor:pointer;text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Стать партнёром <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">Войти в кабинет</a>
         </div>
-        <div style="display:flex;gap:clamp(20px,3vw,40px);flex-wrap:wrap;margin-top:38px">
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#0A46D6">20%</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">с первой сделки</div></div>
-          <div style="width:1px;background:#FFFFFF"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#0A46D6">10%</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">со всех платежей 12 месяцев</div></div>
-          <div style="width:1px;background:#FFFFFF"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#03235F">по договору</div><div style="font:300 13px Oxygen;color:#6B7890;margin-top:4px">выплаты закреплены официально</div></div>
+        <style>
+        .mbhstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.8vw,24px);margin-top:38px}
+        .mbhstats > div + div{padding-left:clamp(12px,1.8vw,24px);border-left:1px solid rgba(255,255,255,.1)}
+        .mbhstats .n{font:700 clamp(22px,2.6vw,32px) Oxygen;letter-spacing:-.02em;color:#16C15A;line-height:1.05}
+        .mbhstats .n.w{color:#EAF1FF;font-size:clamp(19px,2.1vw,26px)}
+        .mbhstats .c{font:300 12.5px/1.45 Oxygen;color:#93A4B8;margin-top:6px}
+        @media(max-width:460px){.mbhstats{grid-template-columns:1fr 1fr}.mbhstats > div:nth-child(3){grid-column:1 / -1;padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.1);padding-top:14px}}
+        </style>
+        <div class="mbhstats">
+          <div><div class="n">20%</div><div class="c">с первой сделки</div></div>
+          <div><div class="n">10%</div><div class="c">со всех платежей 12 месяцев</div></div>
+          <div><div class="n w">по договору</div><div class="c">выплаты закреплены официально</div></div>
         </div>
       </div>
-      <div data-scene="hero" style="position:relative;border-radius:26px;overflow:hidden;min-height:clamp(360px,44vw,520px);background:radial-gradient(120% 110% at 72% 8%,rgba(1,60,164,.14),transparent 62%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 40px 90px -40px rgba(255,255,255,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <div style="position:absolute;left:20px;top:20px;z-index:4;background:rgba(255,255,255,.55);border:1px solid #E7E7E7;backdrop-filter:blur(10px);border-radius:16px;padding:14px 18px">
-          <div style="font:400 11px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#6B7890">Начислено вам</div>
-          <div data-counter style="font:700 clamp(24px,2.6vw,32px) Oxygen;letter-spacing:-.02em;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums">AED 0</div>
-          <div style="font:700 12px Oxygen;color:#0A46D6;margin-top:2px">растёт с каждой сделкой</div>
+      <div id="mbpcalc">
+        <style>
+        #mbpcalc{position:relative;border-radius:26px;background:radial-gradient(120% 110% at 72% 8%,rgba(22,193,90,.13),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.09);box-shadow:0 40px 90px -40px rgba(0,0,0,.8);padding:24px 26px 26px;font-family:Oxygen,system-ui,sans-serif}
+        #mbpcalc .lb{font:400 11px Oxygen;letter-spacing:.14em;text-transform:uppercase;color:#93A4B8}
+        #mbpcalc .hd{font:700 22px Oxygen;color:#fff;margin:4px 0 16px;letter-spacing:-.01em}
+        #mbpcalc .top{background:linear-gradient(135deg,rgba(22,193,90,.17),rgba(22,193,90,.04));border:1px solid rgba(22,193,90,.34);border-radius:18px;padding:17px 19px 16px;margin-bottom:16px}
+        #mbpcalc .top .rw{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+        #mbpcalc .top .rw .l{font:700 15px Oxygen;color:#fff}
+        #mbpcalc .top .rw .v{font:700 clamp(28px,3.2vw,38px) Oxygen;color:#4FE07F;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+        #mbpcalc .top .sb{font:300 12px Oxygen;color:#93A4B8;margin:4px 0 15px}
+        #mbpcalc .sl .t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+        #mbpcalc .sl .t .l{font:700 12.5px Oxygen;color:#C3D0E2}
+        #mbpcalc .sl .t .n{font:700 17px Oxygen;color:#fff}
+        #mbpcalc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:100px;background:rgba(255,255,255,.14);outline:none;cursor:pointer;display:block}
+        #mbpcalc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#4FE07F;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 5px rgba(22,193,90,.2)}
+        #mbpcalc input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-radius:50%;background:#4FE07F;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 5px rgba(22,193,90,.2)}
+        #mbpcalc .sl .sc{display:flex;justify-content:space-between;font:300 11px Oxygen;color:#7C8A9E;margin-top:7px}
+        #mbpcalc .cap{font:700 13px Oxygen;color:#C3D0E2;margin-bottom:9px}
+        #mbpcalc .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+        #mbpcalc .opt{border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.02);padding:11px 13px;cursor:pointer;transition:border-color .15s,background .15s}
+        #mbpcalc .opt:hover{border-color:rgba(22,193,90,.42)}
+        #mbpcalc .opt.on{border-color:#16C15A;background:rgba(22,193,90,.1)}
+        #mbpcalc .opt .r1{display:flex;align-items:center;gap:9px}
+        #mbpcalc .opt .ck{width:18px;height:18px;border-radius:5px;border:1.5px solid rgba(255,255,255,.28);flex:none;display:flex;align-items:center;justify-content:center}
+        #mbpcalc .opt.on .ck{background:#16C15A;border-color:#16C15A}
+        #mbpcalc .opt .ck svg{width:11px;height:11px;display:none}
+        #mbpcalc .opt.on .ck svg{display:block}
+        #mbpcalc .opt .nm{font:700 13.5px Oxygen;color:#EAF1FF}
+        #mbpcalc .opt .pr{font:300 12.5px Oxygen;color:#93A4B8;margin:5px 0 0 27px}
+        #mbpcalc .opt.on .pr{color:#4FE07F}
+        #mbpcalc .chk{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.04);border-radius:12px;padding:11px 15px;margin-bottom:13px}
+        #mbpcalc .chk .l{font:300 13px Oxygen;color:#C3D0E2}
+        #mbpcalc .chk .v{font:700 21px Oxygen;color:#fff;font-variant-numeric:tabular-nums}
+        #mbpcalc .res{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:4px 15px}
+        #mbpcalc .res .r{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font:300 13.5px Oxygen;color:#C3D0E2}
+        #mbpcalc .res .r:last-child{border-bottom:none}
+        #mbpcalc .res .r b{font:700 15px Oxygen;color:#EAF1FF;white-space:nowrap;font-variant-numeric:tabular-nums}
+        #mbpcalc .res .r .s{display:block;font:300 11px Oxygen;color:#7C8A9E;margin-top:2px}
+        #mbpcalc .nt{font:300 11.5px/1.5 Oxygen;color:#7C8A9E;margin-top:12px}
+        @media(max-width:900px){[data-hero-grid]{grid-template-columns:1fr!important}}
+        @media(max-width:420px){#mbpcalc .opts{grid-template-columns:1fr}}
+        </style>
+        <div class="lb">Калькулятор партнёра</div>
+        <div class="hd">Сколько вы заработаете</div>
+        <div class="top">
+          <div class="rw"><span class="l">Ваш доход за год</span><span class="v" id="mbpcTotal">0 AED</span></div>
+          <div class="sb" id="mbpcSub">с 5 клиентов</div>
+          <div class="sl">
+            <div class="t"><span class="l">Клиентов приведёте за год</span><span class="n" id="mbpcN">5</span></div>
+            <input type="range" min="1" max="20" value="5" id="mbpcSlider" aria-label="Количество клиентов за год">
+            <div class="sc"><span>1</span><span>20</span></div>
+          </div>
         </div>
-        <div style="position:absolute;right:18px;bottom:16px;z-index:4;display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#6B7890"><i style="width:9px;height:9px;border-radius:50%;background:#D4202A;display:inline-block"></i>лиды</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#6B7890"><i style="width:9px;height:9px;border-radius:50%;background:#0A46D6;display:inline-block"></i>доход</span>
+        <div class="cap">Что внедряем клиенту</div>
+        <div class="opts" id="mbpcOpts"></div>
+        <div class="chk"><span class="l">Средний чек клиента</span><span class="v" id="mbpcCheck">0 AED</span></div>
+        <div class="res">
+          <div class="r"><span>С первой оплаты · 20%</span><b id="mbpcFirst">0 AED</b></div>
+          <div class="r"><span>С повторных оплат · 10%<span class="s">3 оплаты в год по 50% чека</span></span><b id="mbpcRep">0 AED</b></div>
+          <div class="r"><span>С одного клиента за год</span><b id="mbpcClient">0 AED</b></div>
         </div>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <div class="nt">Оценка. 20% с первой оплаты клиента и 10% со всех последующих ещё год. В среднем клиент платит 4 раза в год, повторная оплата около 50% от первой</div>
       </div>
+      <script>
+      (function(){
+        var P=[
+          {n:'Внедрение Битрикс',p:10000,u:'10 000 AED',on:true},
+          {n:'Лицензия Битрикс',p:6000,u:'6 000 AED',on:true},
+          {n:'AI-агенты',p:10000,u:'10 000 AED',on:true},
+          {n:'IT custom',p:10000,u:'10 000 AED',on:false}
+        ];
+        var FREQ=4, SHARE=0.5, cl=5;
+        var nf=new Intl.NumberFormat('ru-RU');
+        function money(v){return nf.format(Math.round(v))+' AED';}
+        function pl(n){var a=n%10,b=n%100;if(a===1&&b!==11)return 'клиента';return 'клиентов';}
+        var CK='<svg viewBox="0 0 24 24" fill="none" stroke="#04120a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+        function id(x){return document.getElementById(x);}
+        function draw(){
+          var o=id('mbpcOpts'); if(!o) return; o.innerHTML='';
+          P.forEach(function(x){
+            var d=document.createElement('div');
+            d.className='opt'+(x.on?' on':'');
+            d.innerHTML='<div class="r1"><span class="ck">'+CK+'</span><span class="nm">'+x.n+'</span></div><div class="pr">'+x.u+'</div>';
+            d.addEventListener('click',function(){x.on=!x.on;draw();});
+            o.appendChild(d);
+          });
+          var check=P.reduce(function(a,x){return a+(x.on?x.p:0);},0);
+          var first=check*0.2, rep=check*SHARE*0.1*(FREQ-1), per=first+rep, tot=per*cl;
+          id('mbpcCheck').textContent=money(check);
+          id('mbpcFirst').textContent=money(first);
+          id('mbpcRep').textContent=money(rep);
+          id('mbpcClient').textContent=money(per);
+          id('mbpcN').textContent=cl;
+          id('mbpcSub').textContent='с '+cl+' '+pl(cl);
+          id('mbpcTotal').textContent=money(tot);
+          var sl=id('mbpcSlider'), pct=(cl-1)/19*100;
+          sl.style.background='linear-gradient(90deg,#16C15A '+pct+'%, rgba(255,255,255,.14) '+pct+'%)';
+        }
+        function boot(){
+          var sl=id('mbpcSlider'); if(!sl) return;
+          sl.addEventListener('input',function(){cl=+this.value;draw();});
+          draw();
+        }
+        if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+      })();
+      </script>
     </div>
   </section>
 
   <a id="how"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:60ch;margin:0 auto 44px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Как устроено</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Как устроено</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">От рекомендации до вашей выплаты</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Вы приводите клиента любым удобным способом, всё остальное берём на себя. Каждый лид закрепляется за вами автоматически</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Вы приводите клиента любым удобным способом, всё остальное берём на себя. Каждый лид закрепляется за вами автоматически</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);align-items:center" data-two>
-      <div data-scene="flow" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(300px,34vw,380px);background:radial-gradient(120% 110% at 30% 10%,rgba(1,60,164,.1),transparent 62%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);align-items:center" data-two="">
+      <div data-scene="flow" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(300px,34vw,380px);background:radial-gradient(120% 110% at 30% 10%,rgba(22,193,90,.1),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+        <canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:#FFFFFF;border:1px solid #E7E7E7;display:grid;place-items:center;font:700 14px Oxygen;color:#03235F">1</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Делитесь ссылкой или контактом</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">В канале, соцсетях, на сайте или лично, как вам удобнее</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;place-items:center;font:700 14px Oxygen;color:#EAF1FF">1</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Делитесь ссылкой или контактом</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">В канале, соцсетях, на сайте или лично, как вам удобнее</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
           <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(200,16,46,.14);border:1px solid rgba(200,16,46,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#FF3B57">2</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Лид закрепляется за вами</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Заявка автоматически привязывается к вам, без таблиц и споров</p></div>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Лид закрепляется за вами</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Заявка автоматически привязывается к вам, без таблиц и споров</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(1,60,164,.14);border:1px solid rgba(1,60,164,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#0A46D6">3</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Мы закрываем сделку и внедряем</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Встречи, предложение, запуск и поддержка на нашей стороне</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.3);display:grid;place-items:center;font:700 14px Oxygen;color:#4FE07F">3</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Мы закрываем сделку и внедряем</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Встречи, предложение, запуск и поддержка на нашей стороне</p></div>
         </div>
-        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(1,60,164,.1),#F5F7F9);border:1px solid rgba(1,60,164,.24);border-radius:16px;padding:18px 20px">
-          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0A46D6,#0A46D6);display:grid;place-items:center;font:700 14px Oxygen;color:#FFFFFF">4</span>
-          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Вы получаете выплату</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Начисляем по факту оплаты клиентом, вывод удобным вам способом</p></div>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(22,193,90,.1),#0A0C11);border:1px solid rgba(22,193,90,.24);border-radius:16px;padding:18px 20px">
+          <span style="flex-shrink:0;width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:grid;place-items:center;font:700 14px Oxygen;color:#052012">4</span>
+          <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 4px">Вы получаете выплату</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Начисляем по факту оплаты клиентом, вывод удобным вам способом</p></div>
         </div>
       </div>
     </div>
@@ -135,27 +246,28 @@
 
   <a id="reward"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
-    <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center" data-two>
-      <div data-scene="tiers" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(1,60,164,.1),transparent 60%),linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid #E7E7E7;background:#FFFFFF;color:#03235F;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+    <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center" data-two="">
+      <div data-scene3d="tower" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(22,193,90,.1),transparent 60%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+        <div data-t3d="" style="position:absolute;inset:0"></div>
+        <div data-lb2="" style="position:absolute;left:0;right:0;top:18px;text-align:center;opacity:0;transition:opacity .6s;pointer-events:none"><span style="font:700 15px Oxygen;color:#EAF1FF;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);padding:7px 15px;border-radius:100px">+10% × 12 месяцев</span></div>
+        <div data-lb1="" style="position:absolute;left:0;right:0;bottom:16px;text-align:center;opacity:0;transition:opacity .6s;pointer-events:none"><span style="font:700 13.5px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);padding:7px 15px;border-radius:100px;box-shadow:0 10px 24px rgba(22,193,90,.35)">20% первая сделка</span></div>
       </div>
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Вознаграждение</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Вознаграждение</span>
         <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">20% сразу и 10% весь следующий год</h2>
-        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0 0 26px;max-width:46ch">Это не разовая комиссия, а доход, который растёт с каждым платежом клиента. Один хороший контакт кормит вас 12 месяцев</p>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0 0 26px;max-width:46ch">Это не разовая комиссия, а доход, который растёт с каждым платежом клиента. Один хороший контакт кормит вас 12 месяцев</p>
         <div style="display:flex;flex-direction:column;gap:14px">
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:linear-gradient(135deg,#0A46D6,#0A46D6);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#FFFFFF"><b style="font:700 22px Oxygen;line-height:1">20%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">сразу</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">С первой сделки</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Начисляем 20% после первой оплаты клиента</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#052012"><b style="font:700 22px Oxygen;line-height:1">20%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">сразу</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">С первой сделки</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Начисляем 20% после первой оплаты клиента</p></div>
           </div>
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(1,60,164,.16);border:1px solid rgba(1,60,164,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#0A46D6"><b style="font:700 22px Oxygen;line-height:1">10%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">12 мес</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Со всех последующих платежей</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Ещё 10% с каждого платежа этого клиента год, подписки, поддержка, доработки</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(22,193,90,.16);border:1px solid rgba(22,193,90,.34);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#4FE07F"><b style="font:700 22px Oxygen;line-height:1">10%</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.8">12 мес</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Со всех последующих платежей</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Ещё 10% с каждого платежа этого клиента год, подписки, поддержка, доработки</p></div>
           </div>
-          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:16px;padding:16px 20px">
-            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:#FFFFFF;border:1px solid #E7E7E7;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#03235F"><b style="font:700 20px Oxygen;line-height:1">×N</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.7">клиентов</span></div>
-            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Складывается по всем клиентам</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Чем больше приведёте, тем выше накопительный ежемесячный доход</p></div>
+          <div style="display:flex;gap:16px;align-items:center;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 20px">
+            <div style="flex-shrink:0;width:66px;height:66px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#EAF1FF"><b style="font:700 20px Oxygen;line-height:1">×N</b><span style="font:700 9px Oxygen;letter-spacing:.06em;text-transform:uppercase;opacity:.7">клиентов</span></div>
+            <div><h4 style="font:700 17px Oxygen;color:#fff;margin:0 0 3px">Складывается по всем клиентам</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Чем больше приведёте, тем выше накопительный ежемесячный доход</p></div>
           </div>
         </div>
       </div>
@@ -164,43 +276,43 @@
 
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:56ch;margin:0 auto 40px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Прозрачность</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Прозрачность</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Доход, лиды и операции видно в реальном времени</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Всё в личном кабинете, честно и без ручного пересчёта</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Всё в личном кабинете, честно и без ручного пересчёта</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px)" data-two>
-      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px)" data-two="">
+      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px">
-          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Рост дохода по месяцам</h3><p style="font:300 13px Oxygen;color:#6B7890;margin:5px 0 0">Накопительно по всем вашим клиентам</p></div>
-          <span style="flex-shrink:0;font:700 12px Oxygen;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.24);padding:5px 11px;border-radius:100px">2026</span>
+          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Рост дохода по месяцам</h3><p style="font:300 13px Oxygen;color:#93A4B8;margin:5px 0 0">Накопительно по всем вашим клиентам</p></div>
+          <span style="flex-shrink:0;font:700 12px Oxygen;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.24);padding:5px 11px;border-radius:100px">2026</span>
         </div>
-        <div data-scene="growth" style="position:relative;height:clamp(220px,26vw,280px);border-radius:14px;overflow:hidden"><canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
+        <div data-scene="growth" style="position:relative;height:clamp(220px,26vw,280px);border-radius:14px;overflow:hidden"><canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
       </div>
-      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(255,255,255,.8)">
+      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px">
-          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Последние операции</h3><p style="font:300 13px Oxygen;color:#6B7890;margin:5px 0 0">Каждый лид и выплата на виду</p></div>
-          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font:700 12px Oxygen;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.24);padding:5px 11px;border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#0A46D6;animation:mbLive 1.8s ease-in-out infinite"></span>live</span>
+          <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Последние операции</h3><p style="font:300 13px Oxygen;color:#93A4B8;margin:5px 0 0">Каждый лид и выплата на виду</p></div>
+          <span style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;font:700 12px Oxygen;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.24);padding:5px 11px;border-radius:100px"><span style="width:6px;height:6px;border-radius:50%;background:#16C15A;animation:mbLive 1.8s ease-in-out infinite"></span>live</span>
         </div>
         <div style="display:flex;flex-direction:column;gap:9px">
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#0A46D6"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Выплата, Nimbus Retail</div><div style="font:300 12px Oxygen;color:#6B7890">20% с первой сделки</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#0A46D6;font-variant-numeric:tabular-nums">+AED 280</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Выплата, Nimbus Retail</div><div style="font:300 12px Oxygen;color:#93A4B8">20% с первой сделки</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 280</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#0A46D6"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Сделка закрыта, Granite Works</div><div style="font:300 12px Oxygen;color:#6B7890">оплата получена</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#0A46D6;font-variant-numeric:tabular-nums">+AED 360</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Сделка закрыта, Granite Works</div><div style="font:300 12px Oxygen;color:#93A4B8">оплата получена</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 360</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#D4202A"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Новый лид, Northwind Group</div><div style="font:300 12px Oxygen;color:#6B7890">закреплён за вами</div></div>
-            <div style="flex-shrink:0;font:700 13px Oxygen;color:#6B7890">в работе</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#C8102E"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Новый лид, Northwind Group</div><div style="font:300 12px Oxygen;color:#93A4B8">закреплён за вами</div></div>
+            <div style="flex-shrink:0;font:700 13px Oxygen;color:#93A4B8">в работе</div>
           </div>
-          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:13px">
-            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#0A46D6"></span>
-            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#03235F">Продление, Mercury Logistics</div><div style="font:300 12px Oxygen;color:#6B7890">10% с платежа</div></div>
-            <div style="flex-shrink:0;font:700 14px Oxygen;color:#0A46D6;font-variant-numeric:tabular-nums">+AED 30</div>
+          <div style="display:flex;align-items:center;gap:13px;padding:12px 14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:13px">
+            <span style="flex-shrink:0;width:8px;height:8px;border-radius:50%;background:#16C15A"></span>
+            <div style="flex:1;min-width:0"><div style="font:700 14px Oxygen;color:#EAF1FF">Продление, Mercury Logistics</div><div style="font:300 12px Oxygen;color:#93A4B8">10% с платежа</div></div>
+            <div style="flex-shrink:0;font:700 14px Oxygen;color:#4FE07F;font-variant-numeric:tabular-nums">+AED 30</div>
           </div>
         </div>
       </div>
@@ -209,35 +321,35 @@
 
   <a id="cabinet"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
-    <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,58px);align-items:center" data-two>
-      <div style="border-radius:16px;overflow:hidden;background:#F5F7F9;border:1px solid #E7E7E7;box-shadow:0 50px 100px -40px rgba(255,255,255,.9);transform:perspective(1600px) rotateY(-8deg) rotateX(3deg)">
-        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#FFFFFF;border-bottom:1px solid #E7E7E7">
-          <span style="width:10px;height:10px;border-radius:50%;background:#D4202A;display:inline-block"></span>
+    <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,58px);align-items:center" data-two="">
+      <div style="border-radius:16px;overflow:hidden;background:#0C0F15;border:1px solid rgba(255,255,255,.1);box-shadow:0 50px 100px -40px rgba(0,0,0,.9);transform:perspective(1600px) rotateY(-8deg) rotateX(3deg)">
+        <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#12161E;border-bottom:1px solid rgba(255,255,255,.08)">
+          <span style="width:10px;height:10px;border-radius:50%;background:#C8102E;display:inline-block"></span>
           <span style="width:10px;height:10px;border-radius:50%;background:#E8A100;display:inline-block"></span>
-          <span style="width:10px;height:10px;border-radius:50%;background:#0A46D6;display:inline-block"></span>
-          <span style="flex:1;margin-left:8px;font:400 12px Oxygen;color:#6B7890;background:#FFFFFF;border:1px solid #E7E7E7;border-radius:8px;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">makebiz.ru/cabinet</span>
+          <span style="width:10px;height:10px;border-radius:50%;background:#16C15A;display:inline-block"></span>
+          <span style="flex:1;margin-left:8px;font:400 12px Oxygen;color:#93A4B8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">makebiz.ru/cabinet</span>
         </div>
-        <img data-cabimg src="cabinet-dark.png" alt="Личный кабинет партнёра MakeBiz" style="display:block;width:100%;height:auto">
+        <img data-cabimg="" src="cabinet-dark.png" alt="Личный кабинет партнёра MakeBiz" style="display:block;width:100%;height:auto">
       </div>
       <div>
-        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Личный кабинет</span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Личный кабинет</span>
         <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Удобный кабинет со статистикой</h2>
-        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0 0 24px;max-width:44ch">Заходите и видите всё, сколько привели, что в работе, что к выплате и когда. Прозрачно по каждому лиду и каждой операции</p>
+        <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0 0 24px;max-width:44ch">Заходите и видите всё, сколько привели, что в работе, что к выплате и когда. Прозрачно по каждому лиду и каждой операции</p>
         <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px">
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#0A46D6,#0039A6);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 6-6"></path></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Статистика и аналитика</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Сделки по месяцам, конверсия, заработано и сумма к выплате</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 6-6"></path></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Статистика и аналитика</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Сделки по месяцам, конверсия, заработано и сумма к выплате</p></div>
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#0A46D6,#0039A6);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Прозрачность лидов и операций</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Статус каждой сделки и расчёт вознаграждения по каждому платежу</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Прозрачность лидов и операций</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Статус каждой сделки и расчёт вознаграждения по каждому платежу</p></div>
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start">
-            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#0A46D6,#0039A6);display:grid;place-items:center;color:#FFFFFF"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8 14l-2 7 6-3 6 3-2-7"></path></svg></span>
-            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Уровни и достижения</h4><p style="font:300 14px/1.5 Oxygen;color:#6B7890;margin:0">Растите от Бронзы до Голда, открывайте бонусы за активность</p></div>
+            <span style="flex-shrink:0;width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"></circle><path d="M8 14l-2 7 6-3 6 3-2-7"></path></svg></span>
+            <div><h4 style="font:700 16px Oxygen;color:#fff;margin:0 0 3px">Уровни и достижения</h4><p style="font:300 14px/1.5 Oxygen;color:#93A4B8;margin:0">Растите от Бронзы до Голда, открывайте бонусы за активность</p></div>
           </div>
         </div>
-        <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#FFFFFF;background:linear-gradient(135deg,#0A46D6,#0A46D6);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(1,60,164,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Войти в кабинет <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"></path></svg></a>
+        <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Войти в кабинет <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"></path></svg></a>
       </div>
     </div>
   </section>
@@ -245,30 +357,30 @@
   <a id="guarantees"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
     <div style="text-align:center;max-width:56ch;margin:0 auto 40px">
-      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#0A46D6;background:rgba(1,60,164,.1);border:1px solid rgba(1,60,164,.28);padding:6px 13px;border-radius:100px">Гарантии выплат</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Гарантии выплат</span>
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Выплаты закреплены договором</h2>
-      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#6B7890;margin:0">Процент, сроки и порядок выплат зафиксированы в официальном партнёрском договоре</p>
+      <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Процент, сроки и порядок выплат зафиксированы в официальном партнёрском договоре</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" data-guar>
-      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#0A46D6,#0039A6);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" data-guar="">
+      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Гарантия по договору</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0">Процент и сроки выплат закреплены официально, вы всегда знаете, сколько и когда получите</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0">Процент и сроки выплат закреплены официально, вы всегда знаете, сколько и когда получите</p>
       </div>
-      <div style="background:linear-gradient(180deg,#F5F7F9,#F5F7F9);border:1px solid #E7E7E7;border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#0A46D6,#0039A6);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+      <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Платим по факту оплаты</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0">Как только клиент оплатил, начисляем ваше вознаграждение без отложенных условий</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0">Как только клиент оплатил, начисляем ваше вознаграждение без отложенных условий</p>
       </div>
-      <div style="background:linear-gradient(180deg,rgba(1,60,164,.1),#F5F7F9);border:1px solid rgba(1,60,164,.26);border-radius:20px;padding:28px">
-        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#0A46D6,#0A46D6);display:grid;place-items:center;color:#FFFFFF;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M16 12h2M3 10h18"></path></svg></span>
+      <div style="background:linear-gradient(180deg,rgba(22,193,90,.1),#090B10);border:1px solid rgba(22,193,90,.26);border-radius:20px;padding:28px">
+        <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#4FE07F,#16C15A);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M16 12h2M3 10h18"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Выплата удобным способом</h4>
-        <p style="font:300 14.5px/1.55 Oxygen;color:#6B7890;margin:0 0 16px">Выберите формат вывода, мы подстроимся под вас</p>
+        <p style="font:300 14.5px/1.55 Oxygen;color:#93A4B8;margin:0 0 16px">Выберите формат вывода, мы подстроимся под вас</p>
         <div style="display:flex;flex-wrap:wrap;gap:8px">
-          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Карта</span>
-          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">USDT</span>
-          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Перевод</span>
-          <span style="font:700 12.5px Oxygen;color:#03235F;background:#FFFFFF;border:1px solid #E7E7E7;padding:6px 12px;border-radius:100px">Наличные</span>
+          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Карта</span>
+          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">USDT</span>
+          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Перевод</span>
+          <span style="font:700 12.5px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:6px 12px;border-radius:100px">Наличные</span>
         </div>
       </div>
     </div>
@@ -288,7 +400,7 @@ class Component {
   componentDidMount(){
     const root = this._root && this._root.current; if(!root) return;
     let RM=false; try{RM=matchMedia('(prefers-reduced-motion:reduce)').matches;}catch(e){}
-    const C={txt:'#03235F',grn:'#0A46D6',grnL:'#0A46D6',grnD:'#FFFFFF',red:'#D4202A',redL:'#FF3B57',mut:'#6B7890',line:'#FFFFFF'};
+    const C={txt:'#EAF1FF',grn:'#16C15A',grnL:'#4FE07F',grnD:'#052012',red:'#C8102E',redL:'#FF3B57',mut:'#93A4B8',line:'rgba(255,255,255,.10)'};
     function hx(h){h=h.replace('#','');return[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)];}
     function rgba(h,a){const c=hx(h);return'rgba('+c[0]+','+c[1]+','+c[2]+','+a+')';}
     function lerp(a,b,t){return a+(b-a)*t;}
@@ -327,13 +439,13 @@ class Component {
       flow(ctx,t,W,H,st){
         const stages=[['Клик',C.txt],['Лид',C.red],['Сделка',C.grn],['Выплата',C.grnL]];
         const n=stages.length,m=W*0.14,gap=(W-m*2)/(n-1),y=H*0.44;
-        st.p+=(RM?0:0.006);const prog=(st.p%1)*(n-1);
+        st.p+=(RM?0:0.002);const prog=(st.p%1)*(n-1);
         ctx.strokeStyle=rgba('#ffffff',.12);ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(m,y);ctx.lineTo(W-m,y);ctx.stroke();
         ctx.strokeStyle=C.grn;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(m,y);ctx.lineTo(m+gap*Math.min(prog,n-1),y);ctx.stroke();
         for(let i=0;i<n;i++){const x=m+gap*i,active=prog>=i-0.15,r=15;
           if(active)glow(ctx,x,y,34,stages[i][1],.26);
-          ctx.fillStyle=active?stages[i][1]:'#FFFFFF';ctx.strokeStyle=active?stages[i][1]:rgba('#ffffff',.18);ctx.lineWidth=2.4;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.stroke();
-          if(active){ctx.strokeStyle=i===0?C.grnD:'#FFFFFF';ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(x-5,y);ctx.lineTo(x-1.5,y+4);ctx.lineTo(x+6,y-4);ctx.stroke();}
+          ctx.fillStyle=active?stages[i][1]:'#12161E';ctx.strokeStyle=active?stages[i][1]:rgba('#ffffff',.18);ctx.lineWidth=2.4;ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fill();ctx.stroke();
+          if(active){ctx.strokeStyle=i===0?C.grnD:'#052012';ctx.lineWidth=2.6;ctx.beginPath();ctx.moveTo(x-5,y);ctx.lineTo(x-1.5,y+4);ctx.lineTo(x+6,y-4);ctx.stroke();}
           ctx.fillStyle=active?C.txt:C.mut;ctx.font='700 13px Oxygen,sans-serif';ctx.textAlign='center';ctx.textBaseline='top';ctx.fillText(stages[i][0],x,y+26);}
         const px=m+gap*Math.min(prog,n-1),col=prog>=2?C.grnL:C.red;
         glow(ctx,px,y-42,16,col,.4);ctx.fillStyle=col;ctx.beginPath();ctx.arc(px,y-42,7,0,7);ctx.fill();
@@ -368,7 +480,7 @@ class Component {
           ctx.strokeStyle=rgba(C.grn,.2);ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(x,y);ctx.stroke();
           nd.ph+=(RM?0:0.01)*(nd.sp*3);const pp=nd.ph%1,dx=lerp(x,cx,pp),dy=lerp(y,cy,pp);
           glow(ctx,dx,dy,7,C.grn,.5);ctx.fillStyle=C.grnL;ctx.beginPath();ctx.arc(dx,dy,2.6,0,7);ctx.fill();
-          const pu=0.6+Math.abs(Math.sin(t*1.5+i))*0.4;glow(ctx,x,y,15,C.grn,.28*pu);ctx.fillStyle=rgba('#03235F',pu);ctx.beginPath();ctx.arc(x,y,4.5,0,7);ctx.fill();}
+          const pu=0.6+Math.abs(Math.sin(t*1.5+i))*0.4;glow(ctx,x,y,15,C.grn,.28*pu);ctx.fillStyle=rgba('#EAF1FF',pu);ctx.beginPath();ctx.arc(x,y,4.5,0,7);ctx.fill();}
         const g=ctx.createLinearGradient(cx-24,cy-24,cx+24,cy+24);g.addColorStop(0,C.grnL);g.addColorStop(1,C.grn);ctx.fillStyle=g;ctx.beginPath();ctx.arc(cx,cy,17,0,7);ctx.fill();
         ctx.fillStyle=C.grnD;ctx.font='700 12px Oxygen,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('MB',cx,cy);
       }
@@ -389,6 +501,227 @@ class Component {
     root.querySelectorAll('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{
       const tgt=root.querySelector('#'+a.dataset.scroll);if(tgt){e.preventDefault();tgt.scrollIntoView({behavior:'smooth',block:'center'});}
     }));
+
+    /* === 3D-сцены и продающие анимации (three.js, ленивая загрузка) === */
+    (function(){
+      var MOBILE=false;try{MOBILE=matchMedia('(max-width:720px)').matches;}catch(e){}
+      var secs=root.querySelectorAll('section');
+      if(!RM){
+        var rv=[];
+        for(var si=1;si<secs.length;si++){
+          Array.prototype.forEach.call(secs[si].children,function(ch){
+            if(ch.tagName!=='DIV')return;
+            var st=ch.getAttribute('style')||'';
+            if(ch.hasAttribute('data-two')||ch.hasAttribute('data-guar')){
+              Array.prototype.forEach.call(ch.children,function(c){
+                if((c.getAttribute('style')||'').indexOf('perspective')<0)rv.push(c);
+              });
+            } else if(st.indexOf('perspective')<0) rv.push(ch);
+          });
+        }
+        rv.forEach(function(el,i){el.classList.add('mbrv');el.style.transitionDelay=(i%4)*80+'ms';});
+        if('IntersectionObserver' in window){
+          var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+          rv.forEach(function(el){ro.observe(el);});
+        } else rv.forEach(function(el){el.classList.add('on');});
+        if(secs[0])Array.prototype.forEach.call(secs[0].querySelectorAll('div'),function(d){
+          if(d.children.length===0&&/^\d{1,2}%$/.test((d.textContent||'').trim())){
+            var target=parseInt(d.textContent,10),t0=null;
+            requestAnimationFrame(function step(now){if(!t0)t0=now;var p=Math.min((now-t0)/950,1);p=1-Math.pow(1-p,3);d.textContent=Math.round(target*p)+'%';if(p<1)requestAnimationFrame(step);});
+          }
+        });
+        Array.prototype.forEach.call(root.querySelectorAll('a[style*="linear-gradient(135deg,#4FE07F"]'),function(a){a.classList.add('mbshine');});
+      }
+      /* наклон мокапа кабинета за курсором */
+      (function(){
+        var img=root.querySelector('[data-cabimg]');if(!img||RM)return;
+        var wrap=img.parentElement;
+        while(wrap&&wrap!==root&&(wrap.getAttribute('style')||'').indexOf('perspective')<0)wrap=wrap.parentElement;
+        if(!wrap||wrap===root)return;
+        var sec=wrap.closest('section')||wrap;
+        wrap.style.position='relative';
+        var glare=document.createElement('div');
+        glare.style.cssText='position:absolute;inset:-2px;pointer-events:none;z-index:3;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.10) 50%,transparent 60%);transform:translateX(-70%)';
+        wrap.appendChild(glare);
+        var cur={x:3,y:-8},tgt={x:3,y:-8},raf=0;
+        function loop(){
+          cur.x+=(tgt.x-cur.x)*.09;cur.y+=(tgt.y-cur.y)*.09;
+          wrap.style.transform='perspective(1600px) rotateY('+cur.y.toFixed(2)+'deg) rotateX('+cur.x.toFixed(2)+'deg)';
+          glare.style.transform='translateX('+(((cur.y+15)/14)*160-90).toFixed(1)+'%)';
+          if(Math.abs(tgt.x-cur.x)+Math.abs(tgt.y-cur.y)>.02)raf=requestAnimationFrame(loop);else raf=0;
+        }
+        sec.addEventListener('pointermove',function(e){
+          var r=wrap.getBoundingClientRect();if(!r.width)return;
+          var nx=(e.clientX-r.left)/r.width-.5,ny=(e.clientY-r.top)/r.height-.5;
+          nx=Math.max(-.8,Math.min(.8,nx));ny=Math.max(-.8,Math.min(.8,ny));
+          tgt.y=-8+nx*8;tgt.x=3-ny*7;if(!raf)raf=requestAnimationFrame(loop);
+        },{passive:true});
+        sec.addEventListener('pointerleave',function(){tgt={x:3,y:-8};if(!raf)raf=requestAnimationFrame(loop);});
+      })();
+      /* three.js: ленивая подгрузка одним скриптом */
+      var heroHolder=root.querySelector('[data-hero3d]');
+      var towerHolder=root.querySelector('[data-scene3d="tower"]');
+      function showTowerStatic(){
+        if(!towerHolder)return;
+        var a=towerHolder.querySelector('[data-lb1]'),b=towerHolder.querySelector('[data-lb2]');
+        if(a)a.style.opacity=1;if(b)b.style.opacity=1;
+      }
+      if(RM){showTowerStatic();return;}
+      var THREE_SRCS=['/three.min.js','https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'];
+      function withThree(cb){
+        if(window.THREE)return cb();
+        if(window.__mbThreeQ){window.__mbThreeQ.push(cb);return;}
+        window.__mbThreeQ=[cb];
+        (function load(i){
+          if(i>=THREE_SRCS.length){window.__mbThreeQ=null;showTowerStatic();return;}
+          var s=document.createElement('script');s.src=THREE_SRCS[i];s.async=true;
+          s.onload=function(){
+            if(!window.THREE){load(i+1);return;}
+            var q=window.__mbThreeQ||[];window.__mbThreeQ=null;
+            q.forEach(function(f){try{f();}catch(err){console.error('3d',err);}});
+          };
+          s.onerror=function(){load(i+1);};
+          document.head.appendChild(s);
+        })(0);
+      }
+      function lazy(el,fn){
+        if(!el)return;
+        if(!('IntersectionObserver' in window)){withThree(function(){fn(el);});return;}
+        var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.disconnect();withThree(function(){fn(el);});}});},{rootMargin:'240px'});
+        io.observe(el);
+      }
+      function watchRun(el,run){
+        run.vis=true;run.tab=!document.hidden;
+        try{new IntersectionObserver(function(es){es.forEach(function(e){run.vis=e.isIntersecting;if(run.kick)run.kick();});},{threshold:.04}).observe(el);}catch(e){}
+        document.addEventListener('visibilitychange',function(){run.tab=!document.hidden;if(run.kick)run.kick();});
+      }
+      function glowTex(rgb){
+        var c=document.createElement('canvas');c.width=c.height=64;var x=c.getContext('2d');
+        var g=x.createRadialGradient(32,32,0,32,32,32);
+        g.addColorStop(0,'rgba('+rgb+',1)');g.addColorStop(.4,'rgba('+rgb+',.45)');g.addColorStop(1,'rgba('+rgb+',0)');
+        x.fillStyle=g;x.fillRect(0,0,64,64);
+        return new THREE.CanvasTexture(c);
+      }
+
+      /* герой: восходящий 3D-поток дохода за контентом */
+      lazy(heroHolder,function(holder){
+        var W=holder.clientWidth,H=holder.clientHeight;if(!W||!H)return;
+        var rnd;try{rnd=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(e){return;}
+        rnd.setPixelRatio(Math.min(window.devicePixelRatio||1,1.75));rnd.setSize(W,H);
+        rnd.domElement.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%';
+        holder.appendChild(rnd.domElement);
+        var scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x07090D,.05);
+        var cam=new THREE.PerspectiveCamera(50,W/H,.1,80);cam.position.set(0,.4,16);
+        scene.add(new THREE.AmbientLight(0x24352b,1.3));
+        var key=new THREE.DirectionalLight(0xEAF1FF,1.05);key.position.set(4,8,6);scene.add(key);
+        var pg=new THREE.PointLight(0x16C15A,2.4,34);pg.position.set(-4,2,6);scene.add(pg);
+        var pr=new THREE.PointLight(0xC8102E,1.2,26);pr.position.set(7,-4,2);scene.add(pr);
+        function cloud(n,rgb,size,op){
+          var pos=new Float32Array(n*3),spd=new Float32Array(n),ph=new Float32Array(n);
+          for(var i=0;i<n;i++){pos[i*3]=(Math.random()*2-1)*15;pos[i*3+1]=Math.random()*17-7.5;pos[i*3+2]=(Math.random()*2-1)*7;spd[i]=.22+Math.random()*.6;ph[i]=Math.random()*6.28;}
+          var g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+          var p=new THREE.Points(g,new THREE.PointsMaterial({size:size,map:glowTex(rgb),transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true}));
+          p.userData={pos:pos,spd:spd,ph:ph,n:n};return p;
+        }
+        var green=cloud(MOBILE?180:420,'79,224,127',.36,.8);
+        var red=cloud(MOBILE?36:72,'255,59,87',.32,.4);
+        scene.add(green);scene.add(red);
+        var coinGeo=new THREE.CylinderGeometry(.4,.4,.085,42),coins=[];
+        for(var i=0;i<(MOBILE?6:12);i++){
+          var mat=new THREE.MeshStandardMaterial({color:new THREE.Color().setHSL(.39,.72,.3+Math.random()*.16),metalness:.85,roughness:.3,emissive:0x03140a});
+          var c=new THREE.Mesh(coinGeo,mat);
+          c.position.set((Math.random()*2-1)*13,Math.random()*16-7.5,(Math.random()*2-1)*5-1);
+          c.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);
+          c.userData={vy:.45+Math.random()*.7,rx:(Math.random()-.5)*.9,rz:(Math.random()-.5)*.9};
+          coins.push(c);scene.add(c);
+        }
+        var run={},mx=0,my=0,last=0,t=0,raf=0;
+        watchRun(holder,run);
+        window.addEventListener('pointermove',function(e){mx=e.clientX/window.innerWidth-.5;my=e.clientY/window.innerHeight-.5;},{passive:true});
+        try{new ResizeObserver(function(){var w=holder.clientWidth,h=holder.clientHeight;if(!w||!h)return;W=w;H=h;rnd.setSize(W,H);cam.aspect=W/H;cam.updateProjectionMatrix();}).observe(holder);}catch(e){}
+        function frame(now){
+          raf=0;if(!(run.vis&&run.tab))return;
+          var dt=last?Math.min((now-last)/1000,.05):.016;last=now;t+=dt;
+          [green,red].forEach(function(cl){
+            var u=cl.userData,p=u.pos;
+            for(var i=0;i<u.n;i++){p[i*3+1]+=u.spd[i]*dt/3;p[i*3]+=Math.sin(t*.17+u.ph[i])*dt*.053;if(p[i*3+1]>9.5)p[i*3+1]=-7.5;}
+            cl.geometry.attributes.position.needsUpdate=true;
+          });
+          coins.forEach(function(c){c.position.y+=c.userData.vy*dt/3;c.rotation.x+=c.userData.rx*dt/3;c.rotation.z+=c.userData.rz*dt/3;if(c.position.y>9.5)c.position.y=-7.5;});
+          cam.position.x+=(mx*1.6-cam.position.x)*.04;
+          cam.position.y+=((.4-my*1.1+Math.sin(t*.073)*.3)-cam.position.y)*.04;
+          cam.lookAt(0,.6,0);
+          rnd.render(scene,cam);
+          raf=requestAnimationFrame(frame);
+        }
+        run.kick=function(){if(run.vis&&run.tab&&!raf){last=0;raf=requestAnimationFrame(frame);}};
+        run.kick();
+      });
+
+      /* вознаграждение: 3D-башня дохода, 20% основание + 12 монет по 10% */
+      lazy(towerHolder,function(holder){
+        var box=holder.querySelector('[data-t3d]')||holder;
+        var W=box.clientWidth,H=box.clientHeight;if(!W||!H){showTowerStatic();return;}
+        var rnd;try{rnd=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(e){showTowerStatic();return;}
+        rnd.setPixelRatio(Math.min(window.devicePixelRatio||1,2));rnd.setSize(W,H);
+        rnd.domElement.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%';
+        box.appendChild(rnd.domElement);
+        var scene=new THREE.Scene();
+        var cam=new THREE.PerspectiveCamera(40,W/H,.1,60);
+        scene.add(new THREE.AmbientLight(0x243530,1.5));
+        var key=new THREE.DirectionalLight(0xEAF1FF,1.25);key.position.set(5,9,4);scene.add(key);
+        var pg=new THREE.PointLight(0x16C15A,2.6,26);pg.position.set(-3.4,3.2,4.2);scene.add(pg);
+        var back=new THREE.PointLight(0x4FE07F,1,18);back.position.set(2.5,4.5,-3);scene.add(back);
+        function radTex(stops,size){
+          var c=document.createElement('canvas');c.width=c.height=size;var x=c.getContext('2d');
+          var g=x.createRadialGradient(size/2,size/2,0,size/2,size/2,size/2);
+          stops.forEach(function(s){g.addColorStop(s[0],s[1]);});
+          x.fillStyle=g;x.fillRect(0,0,size,size);return new THREE.CanvasTexture(c);
+        }
+        var floor=new THREE.Mesh(new THREE.PlaneGeometry(9,9),new THREE.MeshBasicMaterial({map:radTex([[0,'rgba(22,193,90,.30)'],[.55,'rgba(22,193,90,.10)'],[1,'rgba(22,193,90,0)']],256),transparent:true,depthWrite:false}));
+        floor.rotation.x=-Math.PI/2;scene.add(floor);
+        var shadow=new THREE.Mesh(new THREE.PlaneGeometry(3.6,3.6),new THREE.MeshBasicMaterial({map:radTex([[0,'rgba(0,0,0,.55)'],[1,'rgba(0,0,0,0)']],128),transparent:true,depthWrite:false}));
+        shadow.rotation.x=-Math.PI/2;shadow.position.y=.012;scene.add(shadow);
+        var group=new THREE.Group();scene.add(group);
+        function coinMat(l){return new THREE.MeshStandardMaterial({color:new THREE.Color().setHSL(.394,.7,l),metalness:.8,roughness:.24,emissive:0x03140a});}
+        var base=new THREE.Mesh(new THREE.CylinderGeometry(1.18,1.18,.36,56),coinMat(.34));
+        group.add(base);
+        var rows=[],MONTHS=12;
+        for(var i=0;i<MONTHS;i++){var m=new THREE.Mesh(new THREE.CylinderGeometry(.9,.9,.165,48),coinMat(.29+.017*i));group.add(m);rows.push(m);}
+        var lb1=holder.querySelector('[data-lb1]'),lb2=holder.querySelector('[data-lb2]');
+        function bounce(p){var n1=7.5625,d1=2.75;if(p<1/d1)return n1*p*p;if(p<2/d1)return n1*(p-=1.5/d1)*p+.75;if(p<2.5/d1)return n1*(p-=2.25/d1)*p+.9375;return n1*(p-=2.625/d1)*p+.984375;}
+        var CYCLE=28.5,t=0,T=0,last=0,raf=0,run={};
+        watchRun(holder,run);
+        function setState(tt){
+          var pb=Math.min(Math.max(tt/2.7,0),1);
+          base.visible=tt>0;
+          base.position.y=.18+(1-bounce(pb))*3.4;
+          for(var i=0;i<MONTHS;i++){
+            var st=3.45+i*1.14,p=Math.min(Math.max((tt-st)/1.65,0),1),r=rows[i];
+            r.visible=p>0;
+            r.position.y=(.36+.05+.0825+i*.215)+(1-bounce(p))*3.2;
+          }
+          if(lb1)lb1.style.opacity=tt>2.4?1:0;
+          if(lb2)lb2.style.opacity=tt>17.55?1:0;
+          group.rotation.y=T*.047;
+          var a=Math.sin(T*.053)*.14;
+          cam.position.set(Math.sin(.62+a)*7.7,3.1+Math.sin(T*.1)*.15,Math.cos(.62+a)*7.7);
+          cam.lookAt(0,1.35,0);
+        }
+        function frame(now){
+          raf=0;if(!(run.vis&&run.tab))return;
+          var dt=last?Math.min((now-last)/1000,.05):.016;last=now;
+          t+=dt;T+=dt;if(t>CYCLE)t=0;
+          setState(t);rnd.render(scene,cam);
+          raf=requestAnimationFrame(frame);
+        }
+        run.kick=function(){if(run.vis&&run.tab&&!raf){last=0;raf=requestAnimationFrame(frame);}};
+        var rb=holder.querySelector('[data-replay]');
+        if(rb)rb.addEventListener('click',function(){t=0;run.kick();});
+        try{new ResizeObserver(function(){var w=box.clientWidth,h=box.clientHeight;if(!w||!h)return;W=w;H=h;rnd.setSize(W,H);cam.aspect=W/H;cam.updateProjectionMatrix();}).observe(box);}catch(e){}
+        run.kick();
+      });
+    })();
   }
 }
 
@@ -427,26 +760,26 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   }
 
   var CSS = [
-"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #E7E7E7;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
 "#mbm-header *{box-sizing:border-box}",
 "#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
 "#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
-"#mbm-header .mbm-biz{color:#D4202A}",
+"#mbm-header .mbm-biz{color:#C8102E}",
 "#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
 "#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
 "#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
-"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#6B7890;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
-"#mbm-header .mbm-nav a:hover{color:#fff;background:#FFFFFF}",
-"#mbm-header .mbm-nav a.mbm-active{color:#0A46D6;font-weight:700}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
+"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
 "#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
-"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#03235F;white-space:nowrap}",
-"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#D4202A,#D4202A);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
-"#mbm-header .mbm-burger{display:none;background:none;border:1px solid #E7E7E7;color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
-"#mbm-header .mbm-drop{display:none;border-top:1px solid #E7E7E7;padding:8px clamp(16px,4vw,40px) 14px;background:rgba(255,255,255,.97)}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
 "#mbm-header .mbm-drop.mbm-open{display:block}",
 "#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
-"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#6B7890;padding:11px 8px;border-radius:8px;text-decoration:none}",
-"#mbm-header .mbm-drop a.mbm-active{color:#0A46D6;font-weight:700}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
 "@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
 "@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
   ].join("\n");
@@ -455,7 +788,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 '<header id="mbm-header">'+
   '<div class="mbm-in">'+
     '<a href="index.html" class="mbm-logo">MakeBiz'+
-      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span>'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
     '</a>'+
     '<nav class="mbm-nav">'+navLinks()+'</nav>'+
     '<div class="mbm-right">'+
@@ -517,28 +850,28 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   if (window.__mbcfDone) return; window.__mbcfDone = true;
 
   var CSS = [
-"#mbcf-contact{--g:#0A46D6;--g2:#0039A6;--r:#D4202A;--r2:#D4202A;--tx:#03235F;--mu:#6B7890;--ln:#FFFFFF;--gl:#FFFFFF;max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
 "#mbcf-contact *{box-sizing:border-box}",
 "#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
 "#mbcf-contact .mbcf-hide{display:none!important}",
 "#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
-"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0AAB0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
 "#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
 "#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
 "#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
 "#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
 "#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
 "#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
-"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#FFFFFF,#F5F7F9);border:1px solid #E7E7E7;border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
 "#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
-"#mbcf-contact .mbcf-inp::placeholder{color:#6B7890}",
-"#mbcf-contact .mbcf-inp:focus{border-color:rgba(1,60,164,.55);background:rgba(1,60,164,.05)}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
 "#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
 "#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
 "#mbcf-contact .mbcf-field{margin-bottom:12px}",
 "#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
 "#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
-"#mbcf-contact .mbcf-cc option{background:#FFFFFF;color:var(--tx)}",
+"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
 "#mbcf-contact .mbcf-tg{position:relative}",
 "#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
 "#mbcf-contact .mbcf-tgi{padding-left:30px}",
@@ -549,30 +882,30 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 "#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
 "#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
 "#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
-"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#6B7890;margin-top:12px}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
 "#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
-"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(1,60,164,.5)}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
 "#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
 "#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
 "#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
-"#mbcf-contact .mbcf-chat{background:#FFFFFF;border:1px solid #E7E7E7;border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(255,255,255,.85);flex:1;min-height:420px}",
-"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid #E7E7E7}",
-"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0039A6);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(1,60,164,.5)}",
+"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
 "#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
 "#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
 "#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
 "#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
 "#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
-"#mbcf-contact .mbcf-bot{align-self:flex-start;background:#FFFFFF;border:1px solid #E7E7E7;color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
 "#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
-"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:#FFFFFF;border-radius:16px}",
-"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#4E7EDC;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
 "#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
 "#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
 "@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
-"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid #E7E7E7}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
 "#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
-"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0039A6);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
 "@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
   ].join("\n");
 
@@ -744,29 +1077,29 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   if (window.__mbfDone) return; window.__mbfDone = true;
 
   var CSS = [
-"#mbf-footer{background:transparent;border-top:1px solid #E7E7E7;color:#6B7890;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
+"#mbf-footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:#93A4B8;font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:48px 0 26px;position:relative;z-index:1}",
 "#mbf-footer *{box-sizing:border-box}",
 "#mbf-footer .mbf-in{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}",
-"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid #E7E7E7}",
+"#mbf-footer .mbf-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08)}",
 "#mbf-footer .mbf-logo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;margin-bottom:14px}",
 "#mbf-footer .mbf-badges{display:flex;gap:3px}",
 "#mbf-footer .mbf-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
-"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#6B7890;margin-bottom:16px;max-width:36ch}",
+"#mbf-footer .mbf-tag{font:300 14px/1.6 Oxygen;color:#93A4B8;margin-bottom:16px;max-width:36ch}",
 "#mbf-footer .mbf-contacts{display:flex;flex-direction:column;gap:9px}",
-"#mbf-footer .mbf-contacts a{color:#6B7890;text-decoration:none;font:400 14px Oxygen}",
+"#mbf-footer .mbf-contacts a{color:#B7C4D6;text-decoration:none;font:400 14px Oxygen}",
 "#mbf-footer .mbf-contacts a:hover{color:#fff}",
-"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#03235F;margin:0 0 13px}",
-"#mbf-footer .mbf-col a{display:block;color:#6B7890;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
-"#mbf-footer .mbf-col a:hover{color:#0A46D6}",
+"#mbf-footer .mbf-col h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}",
+"#mbf-footer .mbf-col a{display:block;color:#93A4B8;text-decoration:none;font:400 14px Oxygen;padding:5px 0;transition:color .15s}",
+"#mbf-footer .mbf-col a:hover{color:#16C15A}",
 "#mbf-footer .mbf-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;font:300 12.5px/1.65 Oxygen;color:#6B7A99}",
 "#mbf-footer .mbf-req{max-width:70ch}",
-"#mbf-footer .mbf-ph{color:#6B7890}",
+"#mbf-footer .mbf-ph{color:#8FA0B8}",
 "@media(max-width:900px){#mbf-footer .mbf-top{grid-template-columns:1fr 1fr}}",
 "@media(max-width:560px){#mbf-footer .mbf-top{grid-template-columns:1fr}}",
-"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(255,255,255,.97);border:1px solid #E7E7E7;border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(255,255,255,.85);font-family:Oxygen,system-ui,sans-serif}",
-"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#6B7890;margin:0;flex:1;min-width:220px}",
-"#mbf-cookie a{color:#0A46D6;text-decoration:none}",
-"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#D4202A,#D4202A);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
+"#mbf-cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85);font-family:Oxygen,system-ui,sans-serif}",
+"#mbf-cookie p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}",
+"#mbf-cookie a{color:#16C15A;text-decoration:none}",
+"#mbf-cookie .mbf-ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}",
 "#mbf-cookie.mbf-hide{display:none!important}"
   ].join("\n");
 
@@ -774,7 +1107,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 '<footer id="mbf-footer"><div class="mbf-in">'+
   '<div class="mbf-top">'+
     '<div>'+
-      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span></a>'+
+      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
       '<div class="mbf-tag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Продукты</h4>'+
@@ -789,7 +1122,7 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
   '</div>'+
   '<div class="mbf-bottom">'+
     '<div>© 2026 MakeBiz. Все права защищены.</div>'+
-    '<div><a href="privacy.html" style="color:#6B7890;text-decoration:none">Политика конфиденциальности</a></div>'+
+    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Политика конфиденциальности</a></div>'+
   '</div>'+
 '</div></footer>';
 
@@ -842,7 +1175,94 @@ if(document.readyState!=='loading')boot();else document.addEventListener('DOMCon
 })();
 
 </script>
+<script>
+/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
+   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
+   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
 
+  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) фиксированные декоративные полноэкранные слои - прячем
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
 <!-- Yandex.Metrika counter (consent-gated) -->
 <script type="text/javascript">
 window.__mbYM=function(){
@@ -932,19 +1352,19 @@ window.__mbYM=function(){
   if(window.__mbLangDone) return; window.__mbLangDone=true;
   var FLAG={ae:'<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#fff"/><rect width="12" height="2" fill="#00732F"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#FF0000"/></svg>',en:'<svg viewBox="0 0 19 13" preserveAspectRatio="none"><rect width="19" height="13" fill="#fff"/><rect y="0" width="19" height="1" fill="#B22234"/><rect y="2" width="19" height="1" fill="#B22234"/><rect y="4" width="19" height="1" fill="#B22234"/><rect y="6" width="19" height="1" fill="#B22234"/><rect y="8" width="19" height="1" fill="#B22234"/><rect y="10" width="19" height="1" fill="#B22234"/><rect y="12" width="19" height="1" fill="#B22234"/><rect width="8" height="7" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.3" cy="1.2" r=".45"/><circle cx="3" cy="1.2" r=".45"/><circle cx="4.7" cy="1.2" r=".45"/><circle cx="6.4" cy="1.2" r=".45"/><circle cx="2.1" cy="2.7" r=".45"/><circle cx="3.8" cy="2.7" r=".45"/><circle cx="5.5" cy="2.7" r=".45"/><circle cx="1.3" cy="4.2" r=".45"/><circle cx="3" cy="4.2" r=".45"/><circle cx="4.7" cy="4.2" r=".45"/><circle cx="6.4" cy="4.2" r=".45"/><circle cx="2.1" cy="5.6" r=".45"/><circle cx="3.8" cy="5.6" r=".45"/><circle cx="5.5" cy="5.6" r=".45"/></g></svg>',ru:'<svg viewBox="0 0 9 6" preserveAspectRatio="none"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg>'};
   var CODE={ae:'RU',en:'EN',ru:'RU'}, NAME={ae:'Emirates',en:'English',ru:'Russian'};
-  var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en','ru'];
+  var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en'];
   function cur(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return 'en'; if(/^\/ru(\/|$)/.test(p))return 'ru'; return 'ae';}
   function base(){var p=location.pathname.replace(/^\/(en|ru)(?=\/|$)/,''); return p===''?'/':p;}
   function urlFor(l){var b=base(),pre=PRE[l]; if(b==='/')return pre===''?'/':pre+'/'; return pre+b;}
   function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
   var CSS=':host{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;vertical-align:middle!important}'
    +'.wrap{display:inline-flex;flex-direction:row;align-items:center;gap:6px}'
-   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid #E7E7E7;text-decoration:none;cursor:pointer;transition:border-color .2s;background:#FFFFFF}'
-   +'a.active{background:rgba(1,60,164,.14);border-color:rgba(1,60,164,.55)}'
-   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px #FFFFFF inset;flex:0 0 auto}'
+   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid rgba(255,255,255,.10);text-decoration:none;cursor:pointer;transition:border-color .2s;background:rgba(255,255,255,.03)}'
+   +'a.active{background:rgba(22,193,90,.14);border-color:rgba(22,193,90,.55)}'
+   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto}'
    +'.fl svg{width:20px;height:14px;display:block}'
    +'.cd{font:700 12px Oxygen,system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap;line-height:1}'
-   +'.cd.on{color:#03235F}.cd.off{color:#6B7890}';
+   +'.cd.on{color:#EAF1FF}.cd.off{color:#93A4B8}';
   function build(){
     var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
     if(!right || right.querySelector('.mb-lang')) return;
@@ -981,61 +1401,6 @@ window.__mbYM=function(){
   if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
 })();
 
-</script>
-<script>
-/* MakeBiz — светлая тема: контраст-фиксер. Любой светлый текст на светлом фоне делаем читаемым (тёмно-синим), включая логотип, SVG-текст и текст на светлых градиентах. Белый текст на цветных кнопках/тёмных градиентах не трогаем. */
-(function(){
-  if(window.__mbLightDone) return; window.__mbLightDone=true;
-  function lum(r,g,b){ return .2126*r+.7152*g+.0722*b; }
-  function pc(s){ var m=(''+s).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/); if(!m) return null; return {r:+m[1],g:+m[2],b:+m[3],a:m[4]!==undefined?+m[4]:1}; }
-  function ph(h){ h=h.replace('#',''); if(h.length===3) h=h[0]+h[0]+h[1]+h[1]+h[2]+h[2]; if(h.length<6) return null; return {r:parseInt(h.slice(0,2),16),g:parseInt(h.slice(2,4),16),b:parseInt(h.slice(4,6),16),a:1}; }
-  function gradLum(bi){ var cs=bi.match(/rgba?\([^)]+\)|#[0-9a-fA-F]{3,6}/g); if(!cs) return null; var tot=0,c=0; for(var i=0;i<cs.length;i++){ var p=cs[i][0]==='#'?ph(cs[i]):pc(cs[i]); if(p&&p.a>0.3){ tot+=lum(p.r,p.g,p.b); c++; } } return c?tot/c:null; }
-  function bgLum(e){ var n=e; while(n&&n.nodeType===1){ var s=getComputedStyle(n);
-      var bi=s.backgroundImage; if(bi&&bi!=='none'&&bi.indexOf('gradient')>-1){ var gl=gradLum(bi); if(gl!==null) return gl; }
-      var bc=pc(s.backgroundColor); if(bc&&bc.a>0.5) return lum(bc.r,bc.g,bc.b);
-      n=n.parentElement; } return 245; }
-  function ownText(e){ var cn=e.childNodes; for(var i=0;i<cn.length;i++){ if(cn[i].nodeType===3 && cn[i].textContent.trim()) return true; } return false; }
-  function fix(){
-    var els=document.querySelectorAll('body *:not(script):not(style):not(svg)');
-    for(var i=0;i<els.length;i++){ var e=els[i]; if(e.__mbl===2) continue;
-      var svgT=(e.tagName==='text'||e.tagName==='tspan'||e.tagName==='TEXT'||e.tagName==='TSPAN');
-      if(!svgT && !ownText(e)){ continue; }
-      var s=getComputedStyle(e);
-      var col=pc(svgT ? (s.fill||s.color) : s.color); if(!col){ continue; }
-      if(lum(col.r,col.g,col.b)<176){ e.__mbl=2; continue; }   // already dark text
-      if(bgLum(e)>150){ if(svgT) e.style.setProperty('fill','#03235F','important'); else e.style.setProperty('color','#03235F','important'); e.__mbl=2; }
-    }
-  }
-  fix(); var n=0, iv=setInterval(function(){ fix(); if(++n>16) clearInterval(iv); },350);
-  if(window.MutationObserver){ var mo=new MutationObserver(fix); try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){} setTimeout(function(){mo.disconnect();},11000); }
-})();
-</script>
-<script>
-/* MakeBiz — светлая тема: чёткость. Границы и мягкая тень для карточек и полей формы, чтобы блоки читались на светлом фоне. */
-(function(){
-  if(window.__mbDefDone) return; window.__mbDefDone=true;
-  function pc(s){var m=(''+s).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([0-9.]+))?/);return m?{r:+m[1],g:+m[2],b:+m[3],a:m[4]!==undefined?+m[4]:1}:null;}
-  function fix(){
-    var ins=document.querySelectorAll('input,textarea,select');
-    for(var i=0;i<ins.length;i++){var el=ins[i]; if(el.__mbd) continue; el.__mbd=1;
-      el.style.setProperty('border','1.5px solid #BCC9E0','important');
-      el.style.setProperty('background-color','#FFFFFF','important');
-      el.style.setProperty('border-radius','10px','important');
-    }
-    var els=document.querySelectorAll('div,section,article,form,label,li,figure');
-    for(var j=0;j<els.length;j++){var e=els[j]; if(e.__mbc) continue;
-      var cs=getComputedStyle(e); var br=parseFloat(cs.borderTopLeftRadius)||0;
-      var bg=pc(cs.backgroundColor); var r=e.getBoundingClientRect();
-      if(br>=9 && bg && bg.a>0.85 && (bg.r+bg.g+bg.b)/3>236 && r.width>=80 && r.height>=46){
-        e.__mbc=1;
-        if((parseFloat(cs.borderTopWidth)||0)<1) e.style.setProperty('border','1px solid #D7DFEC','important');
-        if(cs.boxShadow==='none') e.style.setProperty('box-shadow','0 8px 26px rgba(15,40,85,.09)','important');
-      }
-    }
-  }
-  fix(); var n=0, iv=setInterval(function(){fix(); if(++n>14) clearInterval(iv);},350);
-  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},10000);}
-})();
 </script>
 
 <!-- MakeBiz cookie consent -->
@@ -1088,5 +1453,6 @@ window.__mbYM=function(){
 })();
 </script>
 <!-- /MakeBiz cookie consent -->
+
 
 </body></html>
