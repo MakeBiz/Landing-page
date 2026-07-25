@@ -1,19 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://makebiztehnologies.com/</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/bitrix</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/company</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/contacts</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en/bitrix</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en/intdoc</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en/openclaw</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en/privacy</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/en/vector</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/intdoc</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/openclaw</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/partners</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/privacy</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/servers</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
-  <url><loc>https://makebiztehnologies.com/vector</loc><lastmod>2026-07-06</lastmod><changefreq>monthly</changefreq></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://makebiztehnologies.com/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/bitrix</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/bitrix"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/ai-agents</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/ai-agents"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/vector</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/vector"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/vector"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/vector"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/intdoc</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/intdoc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/intdoc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/intdoc"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/vps</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/vps"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/vps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/vps"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/news</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/news"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/partners"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/contacts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/contacts"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/privacy"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/terms"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/bitrix</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/bitrix"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/ai-agents</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/ai-agents"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/vector</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/vector"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/vector"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/vector"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/intdoc</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/intdoc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/intdoc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/intdoc"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/vps</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/vps"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/vps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/vps"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/news</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/news"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/partners"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/contacts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/contacts"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/privacy"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztehnologies.com/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/terms"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
