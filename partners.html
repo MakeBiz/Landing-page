@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru"><head>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MakeBiz Group">
@@ -11,10 +11,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
 <meta charset="utf-8">
+
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MakeBiz · Партнёрам</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box}
@@ -26,6 +30,14 @@
     @keyframes mbGlow{0%,100%{box-shadow:0 0 0 3px rgba(22,193,90,.22)}50%{box-shadow:0 0 0 6px rgba(22,193,90,.05)}}
     @keyframes mbLive{0%,100%{opacity:.4}50%{opacity:1}}
     @keyframes mbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+    .mbrv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+    .mbrv.on{opacity:1;transform:none}
+    .mbshine{position:relative;overflow:hidden}
+    .mbshine::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.32) 50%,transparent 58%);transform:translateX(-140%);animation:mbShine 4.6s ease-in-out infinite;pointer-events:none}
+    @keyframes mbShine{0%,58%{transform:translateX(-140%)}78%,100%{transform:translateX(140%)}}
+    [data-hero3d] canvas{opacity:.9}
+    @media(max-width:900px){[data-hero3d]{opacity:.5}}
+    @media(prefers-reduced-motion:reduce){.mbrv{opacity:1;transform:none;transition:none}.mbshine::after{animation:none;opacity:0}}
   </style>
 <style>
 [data-mbnav] a{font:400 13.5px Oxygen;color:#95A0B2;padding:8px 11px;border-radius:8px;transition:color .15s;}
@@ -42,11 +54,12 @@
 </style>
 </head>
 <body>
+
 <div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
 <div style="position:sticky;top:0;z-index:70;background:rgba(7,9,13,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07);">
   <div style="max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:18px;height:60px;padding:0 clamp(18px,4vw,44px);">
     <a href="index.html" style="display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;">Make<span style="color:#E4384D;">Biz</span><span style="display:flex;gap:3px;margin-left:2px;"><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">AI</span><span style="font:700 8px Oxygen;color:#fff;background:#16C15A;padding:2px 4px;border-radius:4px;">BI</span><span style="font:700 8px Oxygen;color:#fff;background:#C8102E;padding:2px 4px;border-radius:4px;">CRM</span></span></a>
-    <nav data-mbnav style="display:flex;gap:2px;margin-left:6px;">
+    <nav data-mbnav="" style="display:flex;gap:2px;margin-left:6px;">
       <a href="index.html">Главная</a>
       
       <a href="ai-agents.html">AI-агенты</a>
@@ -54,10 +67,10 @@
       <a href="intdoc.html">IntDoc</a>
       <a href="bitrix.html">Битрикс24</a>
       <a href="vps.html">VPS</a>
-      <a href="news.html">Новости</a><a href="партнёрам.html" class="active">Партнёрам</a>
-      <a href="контакты.html">Контакты</a>
+      <a href="news.html">Новости</a><a href="partners.html" class="active">Партнёрам</a>
+      <a href="contacts.html">Контакты</a>
     </nav>
-    <span data-mbhide style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
+    <span data-mbhide="" style="margin-left:auto;font:700 14px Oxygen;color:#F2F5FA;">+971 50 262 0927</span>
   </div>
 </div>
 <div id="partroot" style="min-height:100vh;background:transparent;color:#EAF1FF;overflow-x:hidden">
@@ -65,8 +78,9 @@
 <!-- вторая шапка убрана (оставлен вход в кабинет в hero) -->
 
   <a id="top"></a>
-  <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(18px,4vw,40px) clamp(30px,4vw,56px)">
-    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,60px);align-items:center" data-hero-grid>
+  <section style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(18px,4vw,40px) clamp(30px,4vw,56px);position:relative">
+    <div data-hero3d="" aria-hidden="true" style="position:absolute;top:-90px;bottom:-50px;left:50%;transform:translateX(-50%);width:100vw;pointer-events:none;z-index:0;overflow:hidden"></div>
+    <div style="display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,60px);align-items:center;position:relative;z-index:1" data-hero-grid="">
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#FF3B57;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:6px 13px;border-radius:100px">Партнёрская программа MakeBiz</span>
         <h1 style="font:700 clamp(32px,5vw,58px)/1.05 Oxygen;letter-spacing:-.025em;color:#fff;margin:20px 0 16px;max-width:16ch;text-wrap:balance">Приводите бизнес и <span style="color:#16C15A">зарабатывайте с каждой оплаты</span></h1>
@@ -75,27 +89,126 @@
           <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);border:none;padding:14px 24px;border-radius:14px;box-shadow:0 14px 30px rgba(22,193,90,.32);cursor:pointer;text-decoration:none;transition:transform .2s" style-hover="transform:translateY(-2px)">Стать партнёром <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#052012" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
           <a href="cabinet.html" style="display:inline-flex;align-items:center;gap:9px;font:700 15px Oxygen;color:#EAF1FF;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);padding:14px 24px;border-radius:14px;text-decoration:none;transition:border-color .2s" style-hover="border-color:rgba(22,193,90,.5)">Войти в кабинет</a>
         </div>
-        <div style="display:flex;gap:clamp(20px,3vw,40px);flex-wrap:wrap;margin-top:38px">
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#16C15A">20%</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">с первой сделки</div></div>
-          <div style="width:1px;background:rgba(255,255,255,.1)"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#16C15A">10%</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">со всех платежей 12 месяцев</div></div>
-          <div style="width:1px;background:rgba(255,255,255,.1)"></div>
-          <div><div style="font:700 clamp(24px,3vw,34px) Oxygen;letter-spacing:-.02em;color:#EAF1FF">по договору</div><div style="font:300 13px Oxygen;color:#93A4B8;margin-top:4px">выплаты закреплены официально</div></div>
+        <style>
+        .mbhstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.8vw,24px);margin-top:38px}
+        .mbhstats > div + div{padding-left:clamp(12px,1.8vw,24px);border-left:1px solid rgba(255,255,255,.1)}
+        .mbhstats .n{font:700 clamp(22px,2.6vw,32px) Oxygen;letter-spacing:-.02em;color:#16C15A;line-height:1.05}
+        .mbhstats .n.w{color:#EAF1FF;font-size:clamp(19px,2.1vw,26px)}
+        .mbhstats .c{font:300 12.5px/1.45 Oxygen;color:#93A4B8;margin-top:6px}
+        @media(max-width:460px){.mbhstats{grid-template-columns:1fr 1fr}.mbhstats > div:nth-child(3){grid-column:1 / -1;padding-left:0;border-left:none;border-top:1px solid rgba(255,255,255,.1);padding-top:14px}}
+        </style>
+        <div class="mbhstats">
+          <div><div class="n">20%</div><div class="c">с первой сделки</div></div>
+          <div><div class="n">10%</div><div class="c">со всех платежей 12 месяцев</div></div>
+          <div><div class="n w">по договору</div><div class="c">выплаты закреплены официально</div></div>
         </div>
       </div>
-      <div data-scene="hero" style="position:relative;border-radius:26px;overflow:hidden;min-height:clamp(360px,44vw,520px);background:radial-gradient(120% 110% at 72% 8%,rgba(22,193,90,.14),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 40px 90px -40px rgba(0,0,0,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <div style="position:absolute;left:20px;top:20px;z-index:4;background:rgba(7,9,13,.55);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:16px;padding:14px 18px">
-          <div style="font:400 11px Oxygen;letter-spacing:.08em;text-transform:uppercase;color:#93A4B8">Начислено вам</div>
-          <div data-counter style="font:700 clamp(24px,2.6vw,32px) Oxygen;letter-spacing:-.02em;color:#fff;line-height:1.05;font-variant-numeric:tabular-nums">AED 0</div>
-          <div style="font:700 12px Oxygen;color:#16C15A;margin-top:2px">растёт с каждой сделкой</div>
+      <div id="mbpcalc">
+        <style>
+        #mbpcalc{position:relative;border-radius:26px;background:radial-gradient(120% 110% at 72% 8%,rgba(22,193,90,.13),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.09);box-shadow:0 40px 90px -40px rgba(0,0,0,.8);padding:24px 26px 26px;font-family:Oxygen,system-ui,sans-serif}
+        #mbpcalc .lb{font:400 11px Oxygen;letter-spacing:.14em;text-transform:uppercase;color:#93A4B8}
+        #mbpcalc .hd{font:700 22px Oxygen;color:#fff;margin:4px 0 16px;letter-spacing:-.01em}
+        #mbpcalc .top{background:linear-gradient(135deg,rgba(22,193,90,.17),rgba(22,193,90,.04));border:1px solid rgba(22,193,90,.34);border-radius:18px;padding:17px 19px 16px;margin-bottom:16px}
+        #mbpcalc .top .rw{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+        #mbpcalc .top .rw .l{font:700 15px Oxygen;color:#fff}
+        #mbpcalc .top .rw .v{font:700 clamp(28px,3.2vw,38px) Oxygen;color:#4FE07F;letter-spacing:-.02em;line-height:1;font-variant-numeric:tabular-nums}
+        #mbpcalc .top .sb{font:300 12px Oxygen;color:#93A4B8;margin:4px 0 15px}
+        #mbpcalc .sl .t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+        #mbpcalc .sl .t .l{font:700 12.5px Oxygen;color:#C3D0E2}
+        #mbpcalc .sl .t .n{font:700 17px Oxygen;color:#fff}
+        #mbpcalc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:100px;background:rgba(255,255,255,.14);outline:none;cursor:pointer;display:block}
+        #mbpcalc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#4FE07F;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 5px rgba(22,193,90,.2)}
+        #mbpcalc input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-radius:50%;background:#4FE07F;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.45),0 0 0 5px rgba(22,193,90,.2)}
+        #mbpcalc .sl .sc{display:flex;justify-content:space-between;font:300 11px Oxygen;color:#7C8A9E;margin-top:7px}
+        #mbpcalc .cap{font:700 13px Oxygen;color:#C3D0E2;margin-bottom:9px}
+        #mbpcalc .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+        #mbpcalc .opt{border:1px solid rgba(255,255,255,.1);border-radius:12px;background:rgba(255,255,255,.02);padding:11px 13px;cursor:pointer;transition:border-color .15s,background .15s}
+        #mbpcalc .opt:hover{border-color:rgba(22,193,90,.42)}
+        #mbpcalc .opt.on{border-color:#16C15A;background:rgba(22,193,90,.1)}
+        #mbpcalc .opt .r1{display:flex;align-items:center;gap:9px}
+        #mbpcalc .opt .ck{width:18px;height:18px;border-radius:5px;border:1.5px solid rgba(255,255,255,.28);flex:none;display:flex;align-items:center;justify-content:center}
+        #mbpcalc .opt.on .ck{background:#16C15A;border-color:#16C15A}
+        #mbpcalc .opt .ck svg{width:11px;height:11px;display:none}
+        #mbpcalc .opt.on .ck svg{display:block}
+        #mbpcalc .opt .nm{font:700 13.5px Oxygen;color:#EAF1FF}
+        #mbpcalc .opt .pr{font:300 12.5px Oxygen;color:#93A4B8;margin:5px 0 0 27px}
+        #mbpcalc .opt.on .pr{color:#4FE07F}
+        #mbpcalc .chk{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.04);border-radius:12px;padding:11px 15px;margin-bottom:13px}
+        #mbpcalc .chk .l{font:300 13px Oxygen;color:#C3D0E2}
+        #mbpcalc .chk .v{font:700 21px Oxygen;color:#fff;font-variant-numeric:tabular-nums}
+        #mbpcalc .res{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:4px 15px}
+        #mbpcalc .res .r{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font:300 13.5px Oxygen;color:#C3D0E2}
+        #mbpcalc .res .r:last-child{border-bottom:none}
+        #mbpcalc .res .r b{font:700 15px Oxygen;color:#EAF1FF;white-space:nowrap;font-variant-numeric:tabular-nums}
+        #mbpcalc .res .r .s{display:block;font:300 11px Oxygen;color:#7C8A9E;margin-top:2px}
+        #mbpcalc .nt{font:300 11.5px/1.5 Oxygen;color:#7C8A9E;margin-top:12px}
+        @media(max-width:900px){[data-hero-grid]{grid-template-columns:1fr!important}}
+        @media(max-width:420px){#mbpcalc .opts{grid-template-columns:1fr}}
+        </style>
+        <div class="lb">Калькулятор партнёра</div>
+        <div class="hd">Сколько вы заработаете</div>
+        <div class="top">
+          <div class="rw"><span class="l">Ваш доход за год</span><span class="v" id="mbpcTotal">0 AED</span></div>
+          <div class="sb" id="mbpcSub">с 5 клиентов</div>
+          <div class="sl">
+            <div class="t"><span class="l">Клиентов приведёте за год</span><span class="n" id="mbpcN">5</span></div>
+            <input type="range" min="1" max="20" value="5" id="mbpcSlider" aria-label="Количество клиентов за год">
+            <div class="sc"><span>1</span><span>20</span></div>
+          </div>
         </div>
-        <div style="position:absolute;right:18px;bottom:16px;z-index:4;display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end">
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#C3D0E2"><i style="width:9px;height:9px;border-radius:50%;background:#C8102E;display:inline-block"></i>лиды</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;font:400 11px Oxygen;color:#C3D0E2"><i style="width:9px;height:9px;border-radius:50%;background:#16C15A;display:inline-block"></i>доход</span>
+        <div class="cap">Что внедряем клиенту</div>
+        <div class="opts" id="mbpcOpts"></div>
+        <div class="chk"><span class="l">Средний чек клиента</span><span class="v" id="mbpcCheck">0 AED</span></div>
+        <div class="res">
+          <div class="r"><span>С первой оплаты · 20%</span><b id="mbpcFirst">0 AED</b></div>
+          <div class="r"><span>С повторных оплат · 10%<span class="s">3 оплаты в год по 50% чека</span></span><b id="mbpcRep">0 AED</b></div>
+          <div class="r"><span>С одного клиента за год</span><b id="mbpcClient">0 AED</b></div>
         </div>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <div class="nt">Оценка. 20% с первой оплаты клиента и 10% со всех последующих ещё год. В среднем клиент платит 4 раза в год, повторная оплата около 50% от первой</div>
       </div>
+      <script>
+      (function(){
+        var P=[
+          {n:'Внедрение Битрикс',p:10000,u:'10 000 AED',on:true},
+          {n:'Лицензия Битрикс',p:6000,u:'6 000 AED',on:true},
+          {n:'AI-агенты',p:10000,u:'10 000 AED',on:true},
+          {n:'IT custom',p:10000,u:'10 000 AED',on:false}
+        ];
+        var FREQ=4, SHARE=0.5, cl=5;
+        var nf=new Intl.NumberFormat('ru-RU');
+        function money(v){return nf.format(Math.round(v))+' AED';}
+        function pl(n){var a=n%10,b=n%100;if(a===1&&b!==11)return 'клиента';return 'клиентов';}
+        var CK='<svg viewBox="0 0 24 24" fill="none" stroke="#04120a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+        function id(x){return document.getElementById(x);}
+        function draw(){
+          var o=id('mbpcOpts'); if(!o) return; o.innerHTML='';
+          P.forEach(function(x){
+            var d=document.createElement('div');
+            d.className='opt'+(x.on?' on':'');
+            d.innerHTML='<div class="r1"><span class="ck">'+CK+'</span><span class="nm">'+x.n+'</span></div><div class="pr">'+x.u+'</div>';
+            d.addEventListener('click',function(){x.on=!x.on;draw();});
+            o.appendChild(d);
+          });
+          var check=P.reduce(function(a,x){return a+(x.on?x.p:0);},0);
+          var first=check*0.2, rep=check*SHARE*0.1*(FREQ-1), per=first+rep, tot=per*cl;
+          id('mbpcCheck').textContent=money(check);
+          id('mbpcFirst').textContent=money(first);
+          id('mbpcRep').textContent=money(rep);
+          id('mbpcClient').textContent=money(per);
+          id('mbpcN').textContent=cl;
+          id('mbpcSub').textContent='с '+cl+' '+pl(cl);
+          id('mbpcTotal').textContent=money(tot);
+          var sl=id('mbpcSlider'), pct=(cl-1)/19*100;
+          sl.style.background='linear-gradient(90deg,#16C15A '+pct+'%, rgba(255,255,255,.14) '+pct+'%)';
+        }
+        function boot(){
+          var sl=id('mbpcSlider'); if(!sl) return;
+          sl.addEventListener('input',function(){cl=+this.value;draw();});
+          draw();
+        }
+        if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+      })();
+      </script>
     </div>
   </section>
 
@@ -106,10 +219,9 @@
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">От рекомендации до вашей выплаты</h2>
       <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Вы приводите клиента любым удобным способом, всё остальное берём на себя. Каждый лид закрепляется за вами автоматически</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);align-items:center" data-two>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);align-items:center" data-two="">
       <div data-scene="flow" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(300px,34vw,380px);background:radial-gradient(120% 110% at 30% 10%,rgba(22,193,90,.1),transparent 62%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+        <canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
       </div>
       <div style="display:flex;flex-direction:column;gap:14px">
         <div style="display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,#0C0F15,#0A0C11);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px 20px">
@@ -134,10 +246,11 @@
 
   <a id="reward"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
-    <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center" data-two>
-      <div data-scene="tiers" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(22,193,90,.1),transparent 60%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
-        <canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas>
-        <button data-replay style="position:absolute;top:14px;right:14px;z-index:5;width:36px;height:36px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:#EAF1FF;cursor:pointer;display:grid;place-items:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></button>
+    <div style="display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,4vw,60px);align-items:center" data-two="">
+      <div data-scene3d="tower" style="position:relative;border-radius:22px;overflow:hidden;min-height:clamp(320px,38vw,420px);background:radial-gradient(120% 110% at 70% 8%,rgba(22,193,90,.1),transparent 60%),linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
+        <div data-t3d="" style="position:absolute;inset:0"></div>
+        <div data-lb2="" style="position:absolute;left:0;right:0;top:18px;text-align:center;opacity:0;transition:opacity .6s;pointer-events:none"><span style="font:700 15px Oxygen;color:#EAF1FF;background:rgba(22,193,90,.14);border:1px solid rgba(22,193,90,.32);padding:7px 15px;border-radius:100px">+10% × 12 месяцев</span></div>
+        <div data-lb1="" style="position:absolute;left:0;right:0;bottom:16px;text-align:center;opacity:0;transition:opacity .6s;pointer-events:none"><span style="font:700 13.5px Oxygen;color:#052012;background:linear-gradient(135deg,#4FE07F,#16C15A);padding:7px 15px;border-radius:100px;box-shadow:0 10px 24px rgba(22,193,90,.35)">20% первая сделка</span></div>
       </div>
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Вознаграждение</span>
@@ -167,13 +280,13 @@
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Доход, лиды и операции видно в реальном времени</h2>
       <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Всё в личном кабинете, честно и без ручного пересчёта</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px)" data-two>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px)" data-two="">
       <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px">
           <div><h3 style="font:700 20px Oxygen;color:#fff;margin:0">Рост дохода по месяцам</h3><p style="font:300 13px Oxygen;color:#93A4B8;margin:5px 0 0">Накопительно по всем вашим клиентам</p></div>
           <span style="flex-shrink:0;font:700 12px Oxygen;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.24);padding:5px 11px;border-radius:100px">2026</span>
         </div>
-        <div data-scene="growth" style="position:relative;height:clamp(220px,26vw,280px);border-radius:14px;overflow:hidden"><canvas data-canvas style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
+        <div data-scene="growth" style="position:relative;height:clamp(220px,26vw,280px);border-radius:14px;overflow:hidden"><canvas data-canvas="" style="position:absolute;inset:0;display:block;width:100%;height:100%"></canvas></div>
       </div>
       <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:clamp(20px,2.4vw,28px);box-shadow:0 30px 70px -40px rgba(0,0,0,.8)">
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:18px">
@@ -208,7 +321,7 @@
 
   <a id="cabinet"></a>
   <section style="max-width:1200px;margin:0 auto;padding:clamp(36px,5vw,72px) clamp(18px,4vw,40px);border-top:1px solid transparent">
-    <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,58px);align-items:center" data-two>
+    <div style="display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(30px,4vw,58px);align-items:center" data-two="">
       <div style="border-radius:16px;overflow:hidden;background:#0C0F15;border:1px solid rgba(255,255,255,.1);box-shadow:0 50px 100px -40px rgba(0,0,0,.9);transform:perspective(1600px) rotateY(-8deg) rotateX(3deg)">
         <div style="display:flex;align-items:center;gap:8px;padding:11px 14px;background:#12161E;border-bottom:1px solid rgba(255,255,255,.08)">
           <span style="width:10px;height:10px;border-radius:50%;background:#C8102E;display:inline-block"></span>
@@ -216,7 +329,7 @@
           <span style="width:10px;height:10px;border-radius:50%;background:#16C15A;display:inline-block"></span>
           <span style="flex:1;margin-left:8px;font:400 12px Oxygen;color:#93A4B8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">makebiz.ru/cabinet</span>
         </div>
-        <img data-cabimg src="cabinet-dark.png" alt="Личный кабинет партнёра MakeBiz" style="display:block;width:100%;height:auto">
+        <img data-cabimg="" src="cabinet-dark.png" alt="Личный кабинет партнёра MakeBiz" style="display:block;width:100%;height:auto">
       </div>
       <div>
         <span style="display:inline-flex;align-items:center;gap:8px;font:700 11px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:6px 13px;border-radius:100px">Личный кабинет</span>
@@ -248,7 +361,7 @@
       <h2 style="font:700 clamp(26px,3.4vw,40px)/1.1 Oxygen;letter-spacing:-.02em;color:#fff;margin:18px 0 12px">Выплаты закреплены договором</h2>
       <p style="font:300 clamp(15px,1.5vw,17px)/1.6 Oxygen;color:#93A4B8;margin:0">Процент, сроки и порядок выплат зафиксированы в официальном партнёрском договоре</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" data-guar>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" data-guar="">
       <div style="background:linear-gradient(180deg,#0C0F15,#090B10);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:28px">
         <span style="width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,#16C15A,#0C8C3F);display:grid;place-items:center;color:#052012;margin-bottom:18px"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
         <h4 style="font:700 19px Oxygen;color:#fff;margin:0 0 9px">Гарантия по договору</h4>
@@ -326,7 +439,7 @@ class Component {
       flow(ctx,t,W,H,st){
         const stages=[['Клик',C.txt],['Лид',C.red],['Сделка',C.grn],['Выплата',C.grnL]];
         const n=stages.length,m=W*0.14,gap=(W-m*2)/(n-1),y=H*0.44;
-        st.p+=(RM?0:0.006);const prog=(st.p%1)*(n-1);
+        st.p+=(RM?0:0.002);const prog=(st.p%1)*(n-1);
         ctx.strokeStyle=rgba('#ffffff',.12);ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(m,y);ctx.lineTo(W-m,y);ctx.stroke();
         ctx.strokeStyle=C.grn;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(m,y);ctx.lineTo(m+gap*Math.min(prog,n-1),y);ctx.stroke();
         for(let i=0;i<n;i++){const x=m+gap*i,active=prog>=i-0.15,r=15;
@@ -388,6 +501,227 @@ class Component {
     root.querySelectorAll('[data-scroll]').forEach(a=>a.addEventListener('click',e=>{
       const tgt=root.querySelector('#'+a.dataset.scroll);if(tgt){e.preventDefault();tgt.scrollIntoView({behavior:'smooth',block:'center'});}
     }));
+
+    /* === 3D-сцены и продающие анимации (three.js, ленивая загрузка) === */
+    (function(){
+      var MOBILE=false;try{MOBILE=matchMedia('(max-width:720px)').matches;}catch(e){}
+      var secs=root.querySelectorAll('section');
+      if(!RM){
+        var rv=[];
+        for(var si=1;si<secs.length;si++){
+          Array.prototype.forEach.call(secs[si].children,function(ch){
+            if(ch.tagName!=='DIV')return;
+            var st=ch.getAttribute('style')||'';
+            if(ch.hasAttribute('data-two')||ch.hasAttribute('data-guar')){
+              Array.prototype.forEach.call(ch.children,function(c){
+                if((c.getAttribute('style')||'').indexOf('perspective')<0)rv.push(c);
+              });
+            } else if(st.indexOf('perspective')<0) rv.push(ch);
+          });
+        }
+        rv.forEach(function(el,i){el.classList.add('mbrv');el.style.transitionDelay=(i%4)*80+'ms';});
+        if('IntersectionObserver' in window){
+          var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -6% 0px'});
+          rv.forEach(function(el){ro.observe(el);});
+        } else rv.forEach(function(el){el.classList.add('on');});
+        if(secs[0])Array.prototype.forEach.call(secs[0].querySelectorAll('div'),function(d){
+          if(d.children.length===0&&/^\d{1,2}%$/.test((d.textContent||'').trim())){
+            var target=parseInt(d.textContent,10),t0=null;
+            requestAnimationFrame(function step(now){if(!t0)t0=now;var p=Math.min((now-t0)/950,1);p=1-Math.pow(1-p,3);d.textContent=Math.round(target*p)+'%';if(p<1)requestAnimationFrame(step);});
+          }
+        });
+        Array.prototype.forEach.call(root.querySelectorAll('a[style*="linear-gradient(135deg,#4FE07F"]'),function(a){a.classList.add('mbshine');});
+      }
+      /* наклон мокапа кабинета за курсором */
+      (function(){
+        var img=root.querySelector('[data-cabimg]');if(!img||RM)return;
+        var wrap=img.parentElement;
+        while(wrap&&wrap!==root&&(wrap.getAttribute('style')||'').indexOf('perspective')<0)wrap=wrap.parentElement;
+        if(!wrap||wrap===root)return;
+        var sec=wrap.closest('section')||wrap;
+        wrap.style.position='relative';
+        var glare=document.createElement('div');
+        glare.style.cssText='position:absolute;inset:-2px;pointer-events:none;z-index:3;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.10) 50%,transparent 60%);transform:translateX(-70%)';
+        wrap.appendChild(glare);
+        var cur={x:3,y:-8},tgt={x:3,y:-8},raf=0;
+        function loop(){
+          cur.x+=(tgt.x-cur.x)*.09;cur.y+=(tgt.y-cur.y)*.09;
+          wrap.style.transform='perspective(1600px) rotateY('+cur.y.toFixed(2)+'deg) rotateX('+cur.x.toFixed(2)+'deg)';
+          glare.style.transform='translateX('+(((cur.y+15)/14)*160-90).toFixed(1)+'%)';
+          if(Math.abs(tgt.x-cur.x)+Math.abs(tgt.y-cur.y)>.02)raf=requestAnimationFrame(loop);else raf=0;
+        }
+        sec.addEventListener('pointermove',function(e){
+          var r=wrap.getBoundingClientRect();if(!r.width)return;
+          var nx=(e.clientX-r.left)/r.width-.5,ny=(e.clientY-r.top)/r.height-.5;
+          nx=Math.max(-.8,Math.min(.8,nx));ny=Math.max(-.8,Math.min(.8,ny));
+          tgt.y=-8+nx*8;tgt.x=3-ny*7;if(!raf)raf=requestAnimationFrame(loop);
+        },{passive:true});
+        sec.addEventListener('pointerleave',function(){tgt={x:3,y:-8};if(!raf)raf=requestAnimationFrame(loop);});
+      })();
+      /* three.js: ленивая подгрузка одним скриптом */
+      var heroHolder=root.querySelector('[data-hero3d]');
+      var towerHolder=root.querySelector('[data-scene3d="tower"]');
+      function showTowerStatic(){
+        if(!towerHolder)return;
+        var a=towerHolder.querySelector('[data-lb1]'),b=towerHolder.querySelector('[data-lb2]');
+        if(a)a.style.opacity=1;if(b)b.style.opacity=1;
+      }
+      if(RM){showTowerStatic();return;}
+      var THREE_SRCS=['/three.min.js','https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'];
+      function withThree(cb){
+        if(window.THREE)return cb();
+        if(window.__mbThreeQ){window.__mbThreeQ.push(cb);return;}
+        window.__mbThreeQ=[cb];
+        (function load(i){
+          if(i>=THREE_SRCS.length){window.__mbThreeQ=null;showTowerStatic();return;}
+          var s=document.createElement('script');s.src=THREE_SRCS[i];s.async=true;
+          s.onload=function(){
+            if(!window.THREE){load(i+1);return;}
+            var q=window.__mbThreeQ||[];window.__mbThreeQ=null;
+            q.forEach(function(f){try{f();}catch(err){console.error('3d',err);}});
+          };
+          s.onerror=function(){load(i+1);};
+          document.head.appendChild(s);
+        })(0);
+      }
+      function lazy(el,fn){
+        if(!el)return;
+        if(!('IntersectionObserver' in window)){withThree(function(){fn(el);});return;}
+        var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.disconnect();withThree(function(){fn(el);});}});},{rootMargin:'240px'});
+        io.observe(el);
+      }
+      function watchRun(el,run){
+        run.vis=true;run.tab=!document.hidden;
+        try{new IntersectionObserver(function(es){es.forEach(function(e){run.vis=e.isIntersecting;if(run.kick)run.kick();});},{threshold:.04}).observe(el);}catch(e){}
+        document.addEventListener('visibilitychange',function(){run.tab=!document.hidden;if(run.kick)run.kick();});
+      }
+      function glowTex(rgb){
+        var c=document.createElement('canvas');c.width=c.height=64;var x=c.getContext('2d');
+        var g=x.createRadialGradient(32,32,0,32,32,32);
+        g.addColorStop(0,'rgba('+rgb+',1)');g.addColorStop(.4,'rgba('+rgb+',.45)');g.addColorStop(1,'rgba('+rgb+',0)');
+        x.fillStyle=g;x.fillRect(0,0,64,64);
+        return new THREE.CanvasTexture(c);
+      }
+
+      /* герой: восходящий 3D-поток дохода за контентом */
+      lazy(heroHolder,function(holder){
+        var W=holder.clientWidth,H=holder.clientHeight;if(!W||!H)return;
+        var rnd;try{rnd=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(e){return;}
+        rnd.setPixelRatio(Math.min(window.devicePixelRatio||1,1.75));rnd.setSize(W,H);
+        rnd.domElement.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%';
+        holder.appendChild(rnd.domElement);
+        var scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x07090D,.05);
+        var cam=new THREE.PerspectiveCamera(50,W/H,.1,80);cam.position.set(0,.4,16);
+        scene.add(new THREE.AmbientLight(0x24352b,1.3));
+        var key=new THREE.DirectionalLight(0xEAF1FF,1.05);key.position.set(4,8,6);scene.add(key);
+        var pg=new THREE.PointLight(0x16C15A,2.4,34);pg.position.set(-4,2,6);scene.add(pg);
+        var pr=new THREE.PointLight(0xC8102E,1.2,26);pr.position.set(7,-4,2);scene.add(pr);
+        function cloud(n,rgb,size,op){
+          var pos=new Float32Array(n*3),spd=new Float32Array(n),ph=new Float32Array(n);
+          for(var i=0;i<n;i++){pos[i*3]=(Math.random()*2-1)*15;pos[i*3+1]=Math.random()*17-7.5;pos[i*3+2]=(Math.random()*2-1)*7;spd[i]=.22+Math.random()*.6;ph[i]=Math.random()*6.28;}
+          var g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+          var p=new THREE.Points(g,new THREE.PointsMaterial({size:size,map:glowTex(rgb),transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true}));
+          p.userData={pos:pos,spd:spd,ph:ph,n:n};return p;
+        }
+        var green=cloud(MOBILE?180:420,'79,224,127',.36,.8);
+        var red=cloud(MOBILE?36:72,'255,59,87',.32,.4);
+        scene.add(green);scene.add(red);
+        var coinGeo=new THREE.CylinderGeometry(.4,.4,.085,42),coins=[];
+        for(var i=0;i<(MOBILE?6:12);i++){
+          var mat=new THREE.MeshStandardMaterial({color:new THREE.Color().setHSL(.39,.72,.3+Math.random()*.16),metalness:.85,roughness:.3,emissive:0x03140a});
+          var c=new THREE.Mesh(coinGeo,mat);
+          c.position.set((Math.random()*2-1)*13,Math.random()*16-7.5,(Math.random()*2-1)*5-1);
+          c.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);
+          c.userData={vy:.45+Math.random()*.7,rx:(Math.random()-.5)*.9,rz:(Math.random()-.5)*.9};
+          coins.push(c);scene.add(c);
+        }
+        var run={},mx=0,my=0,last=0,t=0,raf=0;
+        watchRun(holder,run);
+        window.addEventListener('pointermove',function(e){mx=e.clientX/window.innerWidth-.5;my=e.clientY/window.innerHeight-.5;},{passive:true});
+        try{new ResizeObserver(function(){var w=holder.clientWidth,h=holder.clientHeight;if(!w||!h)return;W=w;H=h;rnd.setSize(W,H);cam.aspect=W/H;cam.updateProjectionMatrix();}).observe(holder);}catch(e){}
+        function frame(now){
+          raf=0;if(!(run.vis&&run.tab))return;
+          var dt=last?Math.min((now-last)/1000,.05):.016;last=now;t+=dt;
+          [green,red].forEach(function(cl){
+            var u=cl.userData,p=u.pos;
+            for(var i=0;i<u.n;i++){p[i*3+1]+=u.spd[i]*dt/3;p[i*3]+=Math.sin(t*.17+u.ph[i])*dt*.053;if(p[i*3+1]>9.5)p[i*3+1]=-7.5;}
+            cl.geometry.attributes.position.needsUpdate=true;
+          });
+          coins.forEach(function(c){c.position.y+=c.userData.vy*dt/3;c.rotation.x+=c.userData.rx*dt/3;c.rotation.z+=c.userData.rz*dt/3;if(c.position.y>9.5)c.position.y=-7.5;});
+          cam.position.x+=(mx*1.6-cam.position.x)*.04;
+          cam.position.y+=((.4-my*1.1+Math.sin(t*.073)*.3)-cam.position.y)*.04;
+          cam.lookAt(0,.6,0);
+          rnd.render(scene,cam);
+          raf=requestAnimationFrame(frame);
+        }
+        run.kick=function(){if(run.vis&&run.tab&&!raf){last=0;raf=requestAnimationFrame(frame);}};
+        run.kick();
+      });
+
+      /* вознаграждение: 3D-башня дохода, 20% основание + 12 монет по 10% */
+      lazy(towerHolder,function(holder){
+        var box=holder.querySelector('[data-t3d]')||holder;
+        var W=box.clientWidth,H=box.clientHeight;if(!W||!H){showTowerStatic();return;}
+        var rnd;try{rnd=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch(e){showTowerStatic();return;}
+        rnd.setPixelRatio(Math.min(window.devicePixelRatio||1,2));rnd.setSize(W,H);
+        rnd.domElement.style.cssText='position:absolute;left:0;top:0;width:100%;height:100%';
+        box.appendChild(rnd.domElement);
+        var scene=new THREE.Scene();
+        var cam=new THREE.PerspectiveCamera(40,W/H,.1,60);
+        scene.add(new THREE.AmbientLight(0x243530,1.5));
+        var key=new THREE.DirectionalLight(0xEAF1FF,1.25);key.position.set(5,9,4);scene.add(key);
+        var pg=new THREE.PointLight(0x16C15A,2.6,26);pg.position.set(-3.4,3.2,4.2);scene.add(pg);
+        var back=new THREE.PointLight(0x4FE07F,1,18);back.position.set(2.5,4.5,-3);scene.add(back);
+        function radTex(stops,size){
+          var c=document.createElement('canvas');c.width=c.height=size;var x=c.getContext('2d');
+          var g=x.createRadialGradient(size/2,size/2,0,size/2,size/2,size/2);
+          stops.forEach(function(s){g.addColorStop(s[0],s[1]);});
+          x.fillStyle=g;x.fillRect(0,0,size,size);return new THREE.CanvasTexture(c);
+        }
+        var floor=new THREE.Mesh(new THREE.PlaneGeometry(9,9),new THREE.MeshBasicMaterial({map:radTex([[0,'rgba(22,193,90,.30)'],[.55,'rgba(22,193,90,.10)'],[1,'rgba(22,193,90,0)']],256),transparent:true,depthWrite:false}));
+        floor.rotation.x=-Math.PI/2;scene.add(floor);
+        var shadow=new THREE.Mesh(new THREE.PlaneGeometry(3.6,3.6),new THREE.MeshBasicMaterial({map:radTex([[0,'rgba(0,0,0,.55)'],[1,'rgba(0,0,0,0)']],128),transparent:true,depthWrite:false}));
+        shadow.rotation.x=-Math.PI/2;shadow.position.y=.012;scene.add(shadow);
+        var group=new THREE.Group();scene.add(group);
+        function coinMat(l){return new THREE.MeshStandardMaterial({color:new THREE.Color().setHSL(.394,.7,l),metalness:.8,roughness:.24,emissive:0x03140a});}
+        var base=new THREE.Mesh(new THREE.CylinderGeometry(1.18,1.18,.36,56),coinMat(.34));
+        group.add(base);
+        var rows=[],MONTHS=12;
+        for(var i=0;i<MONTHS;i++){var m=new THREE.Mesh(new THREE.CylinderGeometry(.9,.9,.165,48),coinMat(.29+.017*i));group.add(m);rows.push(m);}
+        var lb1=holder.querySelector('[data-lb1]'),lb2=holder.querySelector('[data-lb2]');
+        function bounce(p){var n1=7.5625,d1=2.75;if(p<1/d1)return n1*p*p;if(p<2/d1)return n1*(p-=1.5/d1)*p+.75;if(p<2.5/d1)return n1*(p-=2.25/d1)*p+.9375;return n1*(p-=2.625/d1)*p+.984375;}
+        var CYCLE=28.5,t=0,T=0,last=0,raf=0,run={};
+        watchRun(holder,run);
+        function setState(tt){
+          var pb=Math.min(Math.max(tt/2.7,0),1);
+          base.visible=tt>0;
+          base.position.y=.18+(1-bounce(pb))*3.4;
+          for(var i=0;i<MONTHS;i++){
+            var st=3.45+i*1.14,p=Math.min(Math.max((tt-st)/1.65,0),1),r=rows[i];
+            r.visible=p>0;
+            r.position.y=(.36+.05+.0825+i*.215)+(1-bounce(p))*3.2;
+          }
+          if(lb1)lb1.style.opacity=tt>2.4?1:0;
+          if(lb2)lb2.style.opacity=tt>17.55?1:0;
+          group.rotation.y=T*.047;
+          var a=Math.sin(T*.053)*.14;
+          cam.position.set(Math.sin(.62+a)*7.7,3.1+Math.sin(T*.1)*.15,Math.cos(.62+a)*7.7);
+          cam.lookAt(0,1.35,0);
+        }
+        function frame(now){
+          raf=0;if(!(run.vis&&run.tab))return;
+          var dt=last?Math.min((now-last)/1000,.05):.016;last=now;
+          t+=dt;T+=dt;if(t>CYCLE)t=0;
+          setState(t);rnd.render(scene,cam);
+          raf=requestAnimationFrame(frame);
+        }
+        run.kick=function(){if(run.vis&&run.tab&&!raf){last=0;raf=requestAnimationFrame(frame);}};
+        var rb=holder.querySelector('[data-replay]');
+        if(rb)rb.addEventListener('click',function(){t=0;run.kick();});
+        try{new ResizeObserver(function(){var w=box.clientWidth,h=box.clientHeight;if(!w||!h)return;W=w;H=h;rnd.setSize(W,H);cam.aspect=W/H;cam.updateProjectionMatrix();}).observe(box);}catch(e){}
+        run.kick();
+      });
+    })();
   }
 }
 
@@ -1119,5 +1453,6 @@ window.__mbYM=function(){
 })();
 </script>
 <!-- /MakeBiz cookie consent -->
+
 
 </body></html>
