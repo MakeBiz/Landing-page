@@ -8,5 +8,10 @@
     { "source": "/en/openclaw", "destination": "/en/ai-agents", "permanent": true },
     { "source": "/en/company", "destination": "/en", "permanent": true },
     { "source": "/en/servers", "destination": "/en/vps", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/keysy/:slug", "destination": "/keysy/case.html?c=:slug" },
+    { "source": "/ru/keysy/:slug", "destination": "/ru/keysy/case.html?c=:slug" },
+    { "source": "/en/keysy/:slug", "destination": "/en/keysy/case.html?c=:slug" }
   ]
 }
