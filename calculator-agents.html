@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#07090D">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MakeBiz Group">
   <meta property="og:title" content="MakeBiz Group, AI, CRM и автоматизация для эффективности бизнеса">
@@ -15,7 +16,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькулятор стоимости AI-агентов | MakeBiz</title>
-<meta name="description" content="Калькулятор стоимости AI-агентов MakeBiz: соберите команду из 77 агентов по девяти направлениям и получите ориентир по цене внедрения.">
+<meta name="description" content="Калькулятор стоимости AI-агентов MakeBiz: соберите команду из 77 агентов и получите ориентир по цене внедрения.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
@@ -78,14 +79,16 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 #cookiebar .ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}
 .hide{display:none!important}
 </style>
-  <link rel="canonical" href="https://makebiztehnologies.com/calculator">
-  <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/calculator">
-  <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/calculator">
-  <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/calculator">
+  <link rel="canonical" href="https://makebiztehnologies.com/calculator-agents">
+  <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/calculator-agents">
+  <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/calculator-agents">
+  <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/calculator-agents">
 <style>
-.calcframe{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.10);border-radius:18px;background:#07090D;box-shadow:0 34px 80px -44px rgba(0,0,0,.9);height:940px}
-.calcframe iframe{position:absolute;top:-63px;left:0;width:100%;height:1003px;border:0;background:#07090D}
-@media(max-width:900px){.calcframe{height:78vh;min-height:520px}.calcframe iframe{height:calc(78vh + 63px);min-height:583px}}
+.calcbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0 14px}
+.calcbar .l{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.calcframe{position:relative;overflow:hidden;background:#07090D;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);height:calc(100vh - 126px);min-height:520px}
+.calcframe iframe{position:absolute;top:-63px;left:0;width:100%;height:calc(100vh - 63px);min-height:583px;border:0;background:#07090D}
+@media(max-width:900px){.calcframe{height:calc(100vh - 150px);min-height:460px}}
 </style>
 </head>
 <body>
@@ -106,23 +109,17 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
     <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
   </nav></div>
 </header>
-<section class="head">
-  <div class="wrap">
-    <span class="eyebrow">Калькулятор стоимости</span>
-    <h1>Соберите команду <span>AI-агентов</span> и узнайте цену</h1>
-    <p class="upd" style="max-width:60ch">Каталог из 77 агентов по девяти направлениям. Отмечайте тех, кто нужен вашему бизнесу, расчёт считается сам.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-      <a href="ai-agents.html" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#04120A;background:#1FDB6D;padding:13px 22px;border-radius:12px;text-decoration:none;box-shadow:0 14px 34px -12px rgba(31,219,109,.5)">← Вернуться к AI-агентам</a>
-      <a href="/calculator-agents-app.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font:400 15px Oxygen;color:#CDE7D8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);padding:13px 22px;border-radius:12px;text-decoration:none">Открыть на весь экран ↗</a>
+<div class="wrap">
+  <div class="calcbar">
+    <div class="l">
+      <a href="ai-agents.html" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#04120A;background:#1FDB6D;padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 14px 34px -12px rgba(31,219,109,.5)">← Вернуться к AI-агентам</a>
+      <span style="font:700 16px Oxygen;color:#EAF2EC">Калькулятор стоимости AI-агентов</span>
     </div>
+    <a href="/calculator-agents-app.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font:400 14px Oxygen;color:#CDE7D8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);padding:11px 18px;border-radius:12px;text-decoration:none">Открыть на весь экран ↗</a>
   </div>
-</section>
-<div class="wrap" style="padding-bottom:34px">
-  <div class="calcframe">
-    <iframe src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов" loading="lazy"></iframe>
-  </div>
-  <p style="text-align:center;color:#8FA096;font:300 13px/1.5 Oxygen;margin:14px auto 0;max-width:60ch">Отмечайте агентов внутри калькулятора, расчёт справа обновляется сам. Ниже можно оставить заявку, а вернуться назад можно кнопкой выше или через меню.</p>
 </div>
+<div class="calcframe"><iframe src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов"></iframe></div>
+<div class="wrap"><p style="text-align:center;color:#8FA096;font:300 13px/1.5 Oxygen;margin:16px auto 4px;max-width:60ch">Ниже можно оставить заявку. Вернуться назад можно кнопкой выше или через меню.</p></div>
 <footer>
   <div class="ftop">
     <div>
