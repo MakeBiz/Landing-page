@@ -15,6 +15,22 @@
 window.MB_CASES = [
 
   {
+    slug:'pink-rabbit-agent', ind:'ecom', products:['ai-agents'], date:'2026-07',
+    title:'Pink Rabbit: an AI agent that <b>advises with tact</b>',
+    lead:'A tactful AI expert works around the clock: helps choose products without judgment, verifies age, guides the customer to purchase, acts as support and hands hot leads to managers.',
+    client:'Pink Rabbit, a chain of adult stores', region:'Saint Petersburg and Russia', built:'a 24/7 AI agent', term:'',
+    was:'night and sensitive questions waited for an operator',
+    now:'a tactful reply in seconds, around the clock',
+    metric:'',
+    problem:'The topic is intimate, so people tend to ask in the evening and at night and want privacy and expert advice without judgment. The chain has dozens of stores and an online shop with delivery across Russia, the flow of repetitive questions about availability, discreet delivery, product choice and care is huge, and operators cannot answer everyone around the clock. Some enquiries and hot customers were lost outside working hours.',
+    solution:'We trained the AI agent on the assortment, delivery rules and safety and care information, and set up tactful expert consultation in the role of a sexologist, without judgment and with privacy. The agent verifies age 18+, selects products by need, occasion and budget, including for couples and as gifts, answers questions about discreet delivery, payment, returns, materials and compatibility, and works on the site and in messengers around the clock. It qualifies and guides the customer to purchase, hands hot leads to managers, and escalates sensitive or complex cases to a human consultant. It collects feedback and NPS, cross-sells related items and reactivates dormant customers. Inside, it helps run deals in the CRM, enriches cards, segments the client base and runs mailings: back in stock, promotions and personal recommendations.',
+    result:'Now a customer gets an instant, private and tactful expert answer at any time of day. Fewer questions go unanswered, operators are freed to handle only the complex ones, more enquiries reach a purchase, and the brand tone of strengthening the family stays consistent in every chat.',
+    soft:'One agent: <b>consultant</b>, support, sales, 18+, NPS and mailings.',
+    quote:null
+  },
+
+
+  {
     slug:'performia-crm', ind:['obrazovanie','uslugi'], products:['crm'], date:'2026-07',
     title:'Performia: sales, training and finance <b>in one Bitrix24</b>',
     lead:'We brought the company entire cycle into one system: two sales lines, running training groups across all programs, account management and a finance block with installments, receivables and payables, plus electronic document flow.',
