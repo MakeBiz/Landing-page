@@ -15,6 +15,22 @@
 window.MB_CASES = [
 
   {
+    slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents','itdev'], date:'2026-07',
+    title:'HAVAL: Vector speech analytics <b>for a dealer network</b>',
+    lead:'We analyze dealership sales calls across Russia: Vector checks over 300,000 minutes of conversation a month against 40+ criteria, escalates to a senior manager when quality drops below 70%, and rolls everything up into BI dashboards.',
+    client:'HAVAL, a global carmaker', region:'Russia', built:'Vector, BI dashboards and AI agents', term:'',
+    was:'hundreds of thousands of call minutes went unchecked',
+    now:'40+ criteria on every call and escalation on risk',
+    metric:'300 000+',
+    problem:'HAVAL has a dealership network across Russia and a huge flow of sales calls, over 300,000 minutes of conversation a month even on a sample. Checking that volume by hand is impossible, spot checks covered a fraction of a percent, and off the shelf tools could not cope with such volumes and 40+ communication criteria. Script deviations and lost sales went unnoticed.',
+    solution:'We built Vector speech analytics as a fully custom solution: it processes calls across the whole network and scores every conversation against 40+ criteria based on a checklist and scripts, handling over 300,000 minutes a month. AI agents flag weak calls: if a conversation drops below 70%, it is automatically escalated to a senior manager so the sale is not lost. We connected BI dashboards with deep analytics on how calls influence sales and tracking of deals after a call, NPS and feedback collection, and we give management ready summaries. The speech analytics, the agents and the dashboards are all custom development. On top of that, agents book customers into the service center, remind about scheduled maintenance and upsells, and act as account managers.',
+    result:'Now HAVAL sees how the whole network talks to customers, at a scale beyond manual review or off the shelf tools. Weak calls are caught and escalated in time, script compliance is measurable, and the link between a call and a sale is visible in dashboards rather than guessed.',
+    soft:'Vector + agents + BI: <b>40+ criteria</b>, auto escalation below 70%, dashboards.',
+    quote:null
+  },
+
+
+  {
     slug:'pink-rabbit-agent', ind:'ecom', products:['ai-agents'], date:'2026-07',
     title:'Pink Rabbit: an AI agent that <b>advises with tact</b>',
     lead:'A tactful AI expert works around the clock: helps choose products without judgment, verifies age, guides the customer to purchase, acts as support and hands hot leads to managers.',
