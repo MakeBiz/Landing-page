@@ -15,13 +15,28 @@
 window.MB_CASES = [
 
   {
+    slug:'unilin-crm', ind:['proizvodstvo','prodazhi'], products:['crm','analytics','itdev'], date:'2026-07',
+    title:'Unilin: Bitrix24 for field managers <b>and market analytics</b>',
+    lead:'For a third year we develop and support Unilin: an on-premise Bitrix24 on their server, deeply customized for regional sales, field managers working from mobile, integrations with 1C and ERP, and BI analytics on the market, retail points, products and the company.',
+    client:'Unilin, a flooring manufacturer', region:'Russia', built:'On-premise Bitrix24, mobile processes, 1C and ERP, BI', term:'',
+    was:'field managers and regions outside a single system',
+    now:'the whole region in CRM from a phone, analytics on every cut',
+    metric:'',
+    problem:'Unilin has a large network of regional and field managers who work on the road: retail points, dealers and partners across the country. Data on visits, points and sales was scattered across spreadsheets and local files, the boxed CRM out of the box did not cover their processes, and management had no single picture of the market, points and products. They needed a system where a manager on the road works as comfortably as from the office.',
+    solution:'We deployed and deeply customized the on-premise Bitrix24 on the client server for their processes. We set up business processes and field manager work straight from the mobile app: visits to retail points, tasks, deals and reports from a phone in the field. We custom developed the boxed version for regional sales and have supported it for a third year. We built end to end integrations with 1C and ERP so that catalogue, shipments and data move between systems without manual transfer. We assembled BI dashboards with analytics across several cuts: market analytics, retail point analytics, product analytics and company wide analytics.',
+    result:'Now field managers run regions and retail points straight from a phone, and the data lands in a single system at once. Management sees the market, points, products and the company in dashboards, the boxed Bitrix24 is customized to Unilin real processes, and the link with 1C and ERP keeps data in one loop. This is the third year of development and support.',
+    soft:'On-premise Bitrix24, mobile field managers, 1C and ERP, <b>BI across 4 cuts</b>.',
+    quote:null
+  },
+
+  {
     slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
     title:'CDEK: corporate B2B on Bitrix24 <b>with agents and analytics</b>',
     lead:'For a second year we develop CDEK corporate direction in Russia and Kazakhstan: an on-premise Bitrix24 built to fit, integrations with internal systems, AI agents and BI dashboards for corporate clients.',
     client:'CDEK, logistics and delivery', region:'Russia and Kazakhstan', built:'On-premise Bitrix24, integrations, agents, BI', term:'',
     was:'corporate clients spread across systems and handled by hand',
     now:'management, support and analytics in one loop',
-    metric:'2 years',
+    metric:'',
     problem:'CDEK has a large corporate direction and branches in Russia and Kazakhstan, and work with B2B clients was spread across different systems and largely manual. The standard boxed CRM did not cover their processes, after hours requests and manager routine slowed client management down, and there was no unified analytics on corporate clients.',
     solution:'We deployed and heavily customized the on-premise Bitrix24 for corporate client work across branches in Russia and Kazakhstan: management, tracking, support and account management. We built end to end integrations with their internal CRM, internal systems and resources, telephony and messengers. We assembled a set of AI agents: one answers after hours, one qualifies leads, one parses incoming email, one assists managers, and one keeps tasks and deadlines moving. We connected BI dashboards with end to end analytics on corporate clients.',
     result:'Now the CDEK corporate team works in one loop: every client is managed, tracked and supported in one place, agents cover routine and after hours, and management sees corporate clients in dashboards. This is the second year of the partnership.',
@@ -37,7 +52,7 @@ window.MB_CASES = [
     client:'HAVAL, a global carmaker', region:'Russia', built:'Vector, BI dashboards and AI agents', term:'',
     was:'hundreds of thousands of call minutes went unchecked',
     now:'40+ criteria on every call and escalation on risk',
-    metric:'300 000+',
+    metric:'',
     problem:'HAVAL has a dealership network across Russia and a huge flow of sales calls, over 300,000 minutes of conversation a month even on a sample. Checking that volume by hand is impossible, spot checks covered a fraction of a percent, and off the shelf tools could not cope with such volumes and 40+ communication criteria. Script deviations and lost sales went unnoticed.',
     solution:'We built Vector speech analytics as a fully custom solution: it processes calls across the whole network and scores every conversation against 40+ criteria based on a checklist and scripts, handling over 300,000 minutes a month. AI agents flag weak calls: if a conversation drops below 70%, it is automatically escalated to a senior manager so the sale is not lost. We connected BI dashboards with deep analytics on how calls influence sales and tracking of deals after a call, NPS and feedback collection, and we give management ready summaries. The speech analytics, the agents and the dashboards are all custom development. On top of that, agents book customers into the service center, remind about scheduled maintenance and upsells, and act as account managers.',
     result:'Now HAVAL sees how the whole network talks to customers, at a scale beyond manual review or off the shelf tools. Weak calls are caught and escalated in time, script compliance is measurable, and the link between a call and a sale is visible in dashboards rather than guessed.',
