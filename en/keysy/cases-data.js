@@ -15,6 +15,22 @@
 window.MB_CASES = [
 
   {
+    slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
+    title:'CDEK: corporate B2B on Bitrix24 <b>with agents and analytics</b>',
+    lead:'For a second year we develop CDEK corporate direction in Russia and Kazakhstan: an on-premise Bitrix24 built to fit, integrations with internal systems, AI agents and BI dashboards for corporate clients.',
+    client:'CDEK, logistics and delivery', region:'Russia and Kazakhstan', built:'On-premise Bitrix24, integrations, agents, BI', term:'',
+    was:'corporate clients spread across systems and handled by hand',
+    now:'management, support and analytics in one loop',
+    metric:'2 years',
+    problem:'CDEK has a large corporate direction and branches in Russia and Kazakhstan, and work with B2B clients was spread across different systems and largely manual. The standard boxed CRM did not cover their processes, after hours requests and manager routine slowed client management down, and there was no unified analytics on corporate clients.',
+    solution:'We deployed and heavily customized the on-premise Bitrix24 for corporate client work across branches in Russia and Kazakhstan: management, tracking, support and account management. We built end to end integrations with their internal CRM, internal systems and resources, telephony and messengers. We assembled a set of AI agents: one answers after hours, one qualifies leads, one parses incoming email, one assists managers, and one keeps tasks and deadlines moving. We connected BI dashboards with end to end analytics on corporate clients.',
+    result:'Now the CDEK corporate team works in one loop: every client is managed, tracked and supported in one place, agents cover routine and after hours, and management sees corporate clients in dashboards. This is the second year of the partnership.',
+    soft:'On-premise Bitrix24, integrations, <b>5 AI agents</b> and BI dashboards.',
+    quote:null
+  },
+
+
+  {
     slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents','itdev'], date:'2026-07',
     title:'HAVAL: Vector speech analytics <b>for a dealer network</b>',
     lead:'We analyze dealership sales calls across Russia: Vector checks over 300,000 minutes of conversation a month against 40+ criteria, escalates to a senior manager when quality drops below 70%, and rolls everything up into BI dashboards.',
