@@ -14,6 +14,22 @@
 
 window.MB_CASES = [
 
+  {
+    slug:'performia-crm', ind:['obrazovanie','uslugi'], products:['crm'], date:'2026-07',
+    title:'Performia: sales, training and finance <b>in one Bitrix24</b>',
+    lead:'We brought the company entire cycle into one system: two sales lines, running training groups across all programs, account management and a finance block with installments, receivables and payables, plus electronic document flow.',
+    client:'Performia, training and recruitment', region:'Moscow', built:'Bitrix24, turnkey', term:'110 working days',
+    was:'sales, courses and finance lived apart',
+    now:'the whole cycle from lead to graduation in one system',
+    metric:'',
+    problem:'The company runs many training and recruitment programs, has five legal entities and settles in several currencies. Sales, course delivery, account management and finance were kept in different places and largely by hand, so it was hard to control payments and installments, launch training groups on time, and see the full picture of a client and the money.',
+    solution:'We rolled out Bitrix24 for the whole cycle. We set up the base for five legal entities and four currencies, two sales lines with qualification and payment control, handoff to delivery and a training-group funnel with attendance and surveys across all their programs and consulting. We added account management and upsell, finance smart-processes (installments, receivables and payables), electronic document flow, and 20 document templates for the finance team. We trained the team by role and supported the launch for a month.',
+    result:'Now the whole path from enquiry to a graduated group and closed payments lives in one system. Payments, installments and debts are under control, training groups launch by checklist, and the manager sees the client, sales and money in a single window.',
+    soft:'Two sales lines, group delivery across all programs, finance and documents in <b>one system</b>.',
+    quote:null
+  },
+
+
   /* --- SAMPLES. Delete these once you add your real cases. --- */
 
   {

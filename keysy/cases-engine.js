@@ -90,12 +90,14 @@
   function indLabel(k){ return SPHERE_LABEL[k] || k; }
   function prods(c){ return Array.isArray(c.products) ? c.products : (c.product ? [c.product] : []); }
   function prodTags(c){ return prods(c).map(function(k){ return '<span class="mb-prodtag">'+esc(prodLabel(k))+'</span>'; }).join(''); }
+  function inds(c){ return Array.isArray(c.ind) ? c.ind : (c.ind ? [c.ind] : []); }
+  function indTags(c, cls){ return inds(c).map(function(k){ return '<span class="mb-chip '+cls+'">'+esc(indLabel(k))+'</span>'; }).join(''); }
 
   /* ---- карточка кейса ---- */
   function card(c){
     var metric = c.metric ? '<div class="metric">'+esc(c.metric)+'</div>' : '<span></span>';
     return '<a class="mb-card" href="'+u('/keysy/case?c='+encodeURIComponent(c.slug))+'">'+
-      '<div class="mb-ctop"><span class="mb-chip n">'+esc(indLabel(c.ind))+'</span>'+
+      '<div class="mb-ctop"><span class="mb-tags" style="justify-content:flex-start">'+indTags(c,'n')+'</span>'+
         '<span class="mb-tags">'+prodTags(c)+'</span></div>'+
       '<h4>'+esc(plain(c.title))+'</h4>'+
       '<div class="mb-ba"><div class="li"><i class="r"></i><span><b>'+T.was+'</b> '+esc(c.was)+'</span></div>'+
@@ -108,7 +110,7 @@
   function initHub(host){
     var all = cases().sort(byDateDesc);
     var usedInd = {}, usedProd = {};
-    all.forEach(function(c){ usedInd[c.ind]=true; prods(c).forEach(function(p){ usedProd[p]=true; }); });
+    all.forEach(function(c){ inds(c).forEach(function(k){ usedInd[k]=true; }); prods(c).forEach(function(p){ usedProd[p]=true; }); });
 
     var sphereChips = SPHERES[LANG].filter(function(s){ return s[0]==='all' || usedInd[s[0]]; })
       .map(function(s){ return '<span class="mb-fchip'+(s[0]==='all'?' on':'')+'" data-f="'+s[0]+'">'+esc(s[1])+'</span>'; }).join('');
@@ -131,7 +133,7 @@
 
     function draw(){
       var list = all.filter(function(c){
-        var okI = state.ind==='all' || c.ind===state.ind;
+        var okI = state.ind==='all' || inds(c).indexOf(state.ind)>=0;
         var okP = state.product==='all' || prods(c).indexOf(state.product)>=0;
         return okI && okP;
       });
@@ -208,7 +210,7 @@
     host.innerHTML =
       '<div class="mb-case">'+
       '<a class="mb-back" href="'+u('/keysy')+'">'+T.back+'</a>'+
-      '<div class="mb-chips"><span class="mb-chip g">'+esc(indLabel(c.ind))+'</span>'+prodTags(c)+'</div>'+
+      '<div class="mb-chips">'+indTags(c,'g')+prodTags(c)+'</div>'+
       '<h1>'+c.title+'</h1>'+
       '<div class="mb-two"><div>'+
         '<div class="mb-blk"><div class="mb-lb rr">'+T.lbTask+'</div><h3>'+T.hTask+'</h3><div class="mb-prose"><p>'+esc(c.problem)+'</p></div></div>'+
