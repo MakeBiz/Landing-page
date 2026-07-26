@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MakeBiz Group">
+  <meta property="og:title" content="MakeBiz Group, AI, CRM и автоматизация для эффективности бизнеса">
+  <meta property="og:description" content="MakeBiz Group повышает эффективность бизнеса за счёт внедрения искусственного интеллекта в процессы и их оптимизации через CRM, автоматизацию и IT-инфраструктуру.">
+  <meta property="og:image" content="https://makebiztehnologies.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Калькулятор стоимости AI-агентов | MakeBiz</title>
+<meta name="description" content="Калькулятор стоимости AI-агентов MakeBiz: соберите команду из 77 агентов по девяти направлениям и получите ориентир по цене внедрения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090D;--tx:#EAF1FF;--mu:#93A4B8;--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--ln:rgba(255,255,255,.10);--gl:rgba(255,255,255,.05)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.mesh{position:fixed;inset:0;z-index:-1;background:radial-gradient(720px 500px at 10% -6%,rgba(200,16,46,.14),transparent 60%),radial-gradient(780px 580px at 92% 4%,rgba(22,193,90,.14),transparent 62%),radial-gradient(700px 620px at 60% 108%,rgba(22,193,90,.10),transparent 60%),linear-gradient(180deg,#07090D,#0A0E12)}
+a{color:var(--g);text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+/* header */
+header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hin{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}
+.logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none}
+.badges{display:flex;gap:3px}.badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}
+.nav{display:flex;gap:1px;margin-left:6px}
+.nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;white-space:nowrap;transition:.15s}
+.nav a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.hr{margin-left:auto;display:flex;align-items:center;gap:14px}
+.cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:11px 18px;border-radius:100px;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}
+.drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}
+.drop.open{display:block}.drop nav{display:flex;flex-direction:column;gap:2px}.drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px}
+@media(max-width:1040px){.nav,.cta{display:none}.burger{display:block}}
+/* hero */
+.head{padding:56px 0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:7px 14px;border-radius:100px;margin-bottom:18px}
+h1{font:700 clamp(2rem,4vw,2.9rem)/1.08 Oxygen;letter-spacing:-.02em;color:#fff}
+h1 span{background:linear-gradient(115deg,#EAF1FF,#16C15A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.upd{margin-top:14px;color:var(--mu);font-size:14px}
+/* card */
+.card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:clamp(24px,4vw,44px);margin:22px 0 56px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85)}
+.intro{font-size:1.05rem;color:#C3D0E0;margin-bottom:6px}
+.note{font-size:.92rem;color:var(--mu);background:rgba(255,255,255,.03);border:1px solid var(--ln);border-radius:14px;padding:14px 16px;margin-top:16px}
+.sec{padding:24px 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+.sec:last-child{border-bottom:none;padding-bottom:2px}
+.sec h2{font:700 1.16rem Oxygen;letter-spacing:-.01em;margin-bottom:10px;display:flex;align-items:center;gap:11px;color:#fff}
+.sec h2 .n{flex:none;width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2))}
+.sec p{color:#AEBED2}.sec p+p{margin-top:10px}
+.sec ul{margin:8px 0 0;padding-left:20px;color:#AEBED2}.sec li{margin:5px 0}
+.ph{color:#F0A6B0}
+.contact-box{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+.contact-box a{display:inline-flex;align-items:center;gap:8px;background:var(--gl);border:1px solid var(--ln);border-radius:12px;padding:10px 16px;font-weight:700;color:var(--tx)}
+.contact-box a:hover{border-color:var(--g)}
+/* footer */
+footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(--mu);padding:48px 0 26px}
+.ftop{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:30px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.08);max-width:1240px;margin:0 auto;padding-left:clamp(18px,4vw,40px);padding-right:clamp(18px,4vw,40px)}
+.flogo{display:inline-flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;margin-bottom:14px}
+.ftag{font:300 14px/1.6 Oxygen;color:var(--mu);margin-bottom:16px;max-width:36ch}
+.fcontacts{display:flex;flex-direction:column;gap:9px}.fcontacts a{color:#B7C4D6;font:400 14px Oxygen}.fcontacts a:hover{color:#fff}
+.fcol h4{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#EAF1FF;margin:0 0 13px}
+.fcol a{display:block;color:var(--mu);font:400 14px Oxygen;padding:5px 0}.fcol a:hover{color:var(--g)}
+.fbot{max-width:1240px;margin:0 auto;padding:20px clamp(18px,4vw,40px) 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:300 12.5px/1.65 Oxygen;color:#6B7A99}
+.fbot .req{max-width:70ch}
+@media(max-width:900px){.ftop{grid-template-columns:1fr 1fr}}@media(max-width:560px){.ftop{grid-template-columns:1fr}}
+/* cookie */
+#cookiebar{position:fixed;left:16px;right:16px;bottom:16px;z-index:95;max-width:720px;margin:0 auto;background:rgba(14,20,32,.97);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:15px 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;box-shadow:0 24px 60px -20px rgba(0,0,0,.85)}
+#cookiebar p{font:300 13.5px/1.5 Oxygen;color:#B7C4D6;margin:0;flex:1;min-width:220px}
+#cookiebar .ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}
+.hide{display:none!important}
+</style>
+  <link rel="canonical" href="https://makebiztehnologies.com/calculator">
+  <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/calculator">
+  <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/calculator">
+  <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/calculator">
+<style>
+.calcframe{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.10);border-radius:18px;background:#07090D;box-shadow:0 34px 80px -44px rgba(0,0,0,.9);height:940px}
+.calcframe iframe{position:absolute;top:-63px;left:0;width:100%;height:1003px;border:0;background:#07090D}
+@media(max-width:900px){.calcframe{height:78vh;min-height:520px}.calcframe iframe{height:calc(78vh + 63px);min-height:583px}}
+</style>
+</head>
+<body>
+<div class="mesh"></div>
+
+<header>
+  <div class="hin">
+    <a href="index.html" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+    <nav class="nav">
+      <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="hr">
+      <a href="index.html#contact" class="cta">Обсудить проект</a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+  <div class="drop" id="drop"><nav>
+    <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+  </nav></div>
+</header>
+<section class="head">
+  <div class="wrap">
+    <span class="eyebrow">Калькулятор стоимости</span>
+    <h1>Соберите команду <span>AI-агентов</span> и узнайте цену</h1>
+    <p class="upd" style="max-width:60ch">Каталог из 77 агентов по девяти направлениям. Отмечайте тех, кто нужен вашему бизнесу, расчёт считается сам.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a href="ai-agents.html" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#04120A;background:#1FDB6D;padding:13px 22px;border-radius:12px;text-decoration:none;box-shadow:0 14px 34px -12px rgba(31,219,109,.5)">← Вернуться к AI-агентам</a>
+      <a href="/calculator-agents-app.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font:400 15px Oxygen;color:#CDE7D8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);padding:13px 22px;border-radius:12px;text-decoration:none">Открыть на весь экран ↗</a>
+    </div>
+  </div>
+</section>
+<div class="wrap" style="padding-bottom:34px">
+  <div class="calcframe">
+    <iframe src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов" loading="lazy"></iframe>
+  </div>
+  <p style="text-align:center;color:#8FA096;font:300 13px/1.5 Oxygen;margin:14px auto 0;max-width:60ch">Отмечайте агентов внутри калькулятора, расчёт справа обновляется сам. Ниже можно оставить заявку, а вернуться назад можно кнопкой выше или через меню.</p>
+</div>
+<footer>
+  <div class="ftop">
+    <div>
+      <a href="index.html" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+      <div class="ftag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>
+    </div>
+    <div class="fcol"><h4>Продукты</h4><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a></div>
+    <div class="fcol"><h4>Разделы</h4><a href="index.html">Главная</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a></div>
+    <div class="fcol"><h4>Правовое</h4><a href="privacy.html">Политика конфиденциальности</a><a href="privacy.html#cookie">Использование cookie</a><a href="terms.html">Пользовательское соглашение</a></div>
+  </div>
+  <div class="freq" style="max-width:1240px;margin:0 auto;padding:18px clamp(18px,4vw,40px) 0"><div style="max-width:70ch;font:300 12px/1.7 Oxygen;color:#5E6B80">MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre. Регистрационный номер 2624215090888 от 18 мая 2026 года, уставный капитал 100 000 AED<br>Amber Gem Tower, 26 этаж, офис CWS-1V-226413, улица Шейха Халифы, Аджман, Объединённые Арабские Эмираты</div></div>
+  <div class="fbot">
+    <div>© 2026 MakeBiz. Все права защищены.</div>
+    <div><a href="privacy.html" style="color:#8FA0B8">Политика конфиденциальности</a></div>
+  </div>
+</footer>
+
+<div id="cookiebar"><p>Мы используем cookie для работы сайта и веб-аналитики. Продолжая пользоваться сайтом, вы соглашаетесь с этим. <a href="#cookie">Подробнее</a></p><button class="ok" id="cookieok">Принять</button></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),d=document.getElementById('drop');
+  if(b&&d){b.addEventListener('click',function(){d.classList.toggle('open')});d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open')})})}
+  var bar=document.getElementById('cookiebar'),ok=document.getElementById('cookieok');
+  try{ if(localStorage.getItem('mbf-cookie-ok')==='1') bar.classList.add('hide'); }catch(e){}
+  if(ok)ok.addEventListener('click',function(){bar.classList.add('hide');try{localStorage.setItem('mbf-cookie-ok','1')}catch(e){}});
+})();
+</script>
+<script>
+/* MakeBiz - единый фон «Лучи» (цвета флага ОАЭ). Самодостаточный модуль.
+   Canvas #mb-bg сам рисует тёмную подложку + лучи и лежит ПОД контентом (z-index:-1).
+   Чтобы холст был виден, html/body принудительно делаются прозрачными (inline !important),
+   старые полноэкранные фоновые слои прячутся. Переживает повторный рендер бандла. */
+(function(){
+  if (window.__mbbgDone) return; window.__mbbgDone = true;
+  var BG='#04050A';
+  var st=document.createElement('style'); st.id='mb-bg-style';
+  st.textContent='#mb-bg{position:fixed;inset:0;z-index:-1;display:block;width:100%;height:100%;pointer-events:none}'+
+    '.pagebg,.mesh{display:none !important}';
+  (document.head||document.documentElement).appendChild(st);
+
+  // Принудительно убираем непрозрачный фон у html/body, иначе он перекрывает холст (z-index:-1).
+  function clearBase(){
+    try{
+      var de=document.documentElement;
+      if(de) de.style.setProperty('background','transparent','important');
+      if(document.body) document.body.style.setProperty('background','transparent','important');
+    }catch(e){}
+  }
+  clearBase();
+
+  var b={W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced) b.t=4.2;
+  // [позиция X (доля ширины), цвет, яркость, полуширина px, фаза]
+  var BEAMS=[[.12,'#16C15A',.15,120,0],[.30,'#EAF1FF',.08,90,1.6],[.48,'#0C7A33',.17,150,3.1],[.68,'#C8102E',.13,110,4.4],[.86,'#16C15A',.12,130,2.2]];
+  var canvas=null, ctx=null;
+  function rgba(hex,a){var h=hex.replace('#',''),n=parseInt(h,16);return 'rgba('+((n>>16)&255)+','+((n>>8)&255)+','+(n&255)+','+a+')';}
+  function glow(x,y,r,color,a){if(r<=0||a<=0||!ctx)return;var g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(color,a));g.addColorStop(1,rgba(color,0));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,6.2832);ctx.fill();}
+  function resize(){ if(!canvas)return; b.W=window.innerWidth;b.H=window.innerHeight;var d=Math.min(window.devicePixelRatio||1,1.6);canvas.width=Math.round(b.W*d);canvas.height=Math.round(b.H*d);ctx.setTransform(d,0,0,d,0,0);}
+  function ensureCanvas(){
+    var c=document.getElementById('mb-bg');
+    if(!c && document.body){ c=document.createElement('canvas'); c.id='mb-bg'; c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block'; document.body.insertBefore(c, document.body.firstChild); }
+    if(c && c!==canvas){ canvas=c; ctx=c.getContext('2d'); resize(); }
+    return c;
+  }
+  function rgbDark(bc){ // тёмный ли непрозрачный фон (близко к чёрному)
+    var m=bc && bc.match(/rgba?\(([0-9]+),\s*([0-9]+),\s*([0-9]+)(?:,\s*([0-9.]+))?\)/);
+    if(!m) return false;
+    var a=m[4]===undefined?1:parseFloat(m[4]);
+    if(a<0.85) return false;               // прозрачный/полупрозрачный - не трогаем
+    return (+m[1]<=34 && +m[2]<=34 && +m[3]<=40);
+  }
+  function hideOldBg(){
+    try{ var vw=window.innerWidth,vh=window.innerHeight;
+      var list=document.querySelectorAll('body *');
+      for(var i=0;i<list.length;i++){ var el=list[i];
+        if(!el||el.id==='mb-bg'||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.tagName==='CANVAS') continue;
+        var s=window.getComputedStyle(el);
+        var r=el.getBoundingClientRect();
+        // 1) фиксированные декоративные полноэкранные слои - прячем
+        if(s.position==='fixed'){
+          var z=parseInt(s.zIndex,10); if(isNaN(z))z=0;
+          if(z<=0 && r.width>=vw*0.9 && r.height>=vh*0.85 && (el.textContent||'').replace(/\s/g,'').length<4){ el.style.setProperty('display','none','important'); }
+          continue;
+        }
+        // 2) сплошная тёмная подложка страницы во всю высоту - делаем прозрачной, чтобы лучи были видны
+        if(r.width>=vw*0.92 && r.height>=vh*0.99 && rgbDark(s.backgroundColor)){
+          el.style.setProperty('background-color','transparent','important');
+          if(s.backgroundImage && s.backgroundImage!=='none') el.style.setProperty('background-image','none','important');
+        }
+      }
+    }catch(e){}
+  }
+  window.addEventListener('resize',resize);
+  window.addEventListener('pointermove',function(e){b.tx=e.clientX/b.W;b.ty=e.clientY/b.H;b.active=true;});
+  document.documentElement.addEventListener('pointerleave',function(){b.active=false;});
+  function draw(){ if(!ctx)return; var W=b.W,H=b.H,t=b.t,mx=b.mx*W;
+    ctx.globalCompositeOperation='source-over';
+    ctx.fillStyle=BG; ctx.fillRect(0,0,W,H);           // собственная непрозрачная подложка
+    ctx.globalCompositeOperation='lighter';
+    ctx.save(); ctx.translate(W/2,0); ctx.rotate(-.3); ctx.translate(-W/2,0);
+    for(var i=0;i<BEAMS.length;i++){var o=BEAMS[i];var bx=o[0]*W+Math.sin(t*.18+o[4])*W*.04;var near=Math.exp(-((bx-mx)*(bx-mx))/160000)*b.af;var w=o[3]*(1+.35*near);var g=ctx.createLinearGradient(bx-w,0,bx+w,0);g.addColorStop(0,rgba(o[1],0));g.addColorStop(.5,rgba(o[1],o[2]*(1+1.1*near)));g.addColorStop(1,rgba(o[1],0));ctx.fillStyle=g;ctx.fillRect(bx-w,-H*.3,w*2,H*1.8);}
+    ctx.restore();
+    var tg=ctx.createLinearGradient(0,0,0,H*.5);tg.addColorStop(0,rgba('#0C7A33',.12));tg.addColorStop(1,'rgba(0,0,0,0)');ctx.fillStyle=tg;ctx.fillRect(0,0,W,H*.5);
+    if(b.af>.01) glow(b.mx*W,b.my*H,300,'#EAF1FF',.04*b.af);
+    ctx.globalCompositeOperation='source-over';
+    var vg=ctx.createLinearGradient(0,H*.55,0,H);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,'rgba(2,3,5,.55)');ctx.fillStyle=vg;ctx.fillRect(0,H*.55,W,H*.45);
+  }
+  var last=null;
+  function frame(now){ if(last==null)last=now; var dt=Math.min((now-last)/1000,.05);last=now; ensureCanvas(); if(!reduced)b.t+=dt*0.72; b.mx+=(b.tx-b.mx)*.07;b.my+=(b.ty-b.my)*.07;b.af+=((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  function start(){ ensureCanvas(); clearBase(); hideOldBg(); requestAnimationFrame(frame); }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start); else start();
+  var n=0,iv=setInterval(function(){ ensureCanvas(); clearBase(); hideOldBg(); if(++n>18) clearInterval(iv); },350);
+})();
+</script>
+<!-- Yandex.Metrika counter (consent-gated) -->
+<script type="text/javascript">
+window.__mbYM=function(){
+  var ID=110784864, SRC='https://mc.yandex.ru/metrika/tag.js?id='+ID, i='ym', m=window;
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  m[i](ID,'init',{ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  function ensure(){
+    try{
+      var ss=document.getElementsByTagName('script');
+      for(var j=0;j<ss.length;j++){ if(ss[j].src===SRC) return; }
+      var k=document.createElement('script'); k.async=1; k.src=SRC;
+      (document.head||document.documentElement).appendChild(k);
+    }catch(e){}
+  }
+  ensure();
+  var n=0, iv=setInterval(function(){ ensure(); if(++n>20) clearInterval(iv); }, 400);
+};
+</script>
+<!-- /Yandex.Metrika counter -->
+<script>
+/* MakeBiz — чистка: убрать «Повторить», снять точки в конце предложений, AI вместо ИИ, без длинных тире. */
+(function(){
+  if(window.__mbCleanDone) return; window.__mbCleanDone=true;
+  function walkText(fn){ try{var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),n;while(n=w.nextNode()){var p=n.parentNode;if(p&&(p.tagName==='SCRIPT'||p.tagName==='STYLE'))continue;fn(n);}}catch(e){} }
+  function isAbbr(s){ return /(\bт\.\s?д|\bт\.\s?п|\bи\s?др|\d\.\d)\.?\s*$/.test(s); }
+  function stripEl(el){
+    if(el.querySelector('h1,h2,h3,h4,h5,h6,p,ul,ol,section,table')) return;
+    for(var i=el.childNodes.length-1;i>=0;i--){ var c=el.childNodes[i];
+      if(c.nodeType===3){ if(!/\S/.test(c.nodeValue)) continue;
+        if(/\.\s*$/.test(c.nodeValue) && !isAbbr(c.nodeValue)) c.nodeValue=c.nodeValue.replace(/\.(\s*)$/,'$1');
+        return;
+      } else if(c.nodeType===1){ return; } }
+  }
+  function clean(){
+    var bs=document.querySelectorAll('button,a');
+    for(var i=0;i<bs.length;i++){ var t=(bs[i].textContent||''); if(t.indexOf('Повторить')>-1 && t.replace(/\s/g,'').length<15) bs[i].remove(); }
+    walkText(function(n){ var v=n.nodeValue; if(!v)return; var nv=v; if(nv.indexOf('ИИ')>-1)nv=nv.replace(/ИИ/g,'AI'); if(nv.indexOf('—')>-1||nv.indexOf('–')>-1)nv=nv.replace(/[—–]/g,'-'); if(nv!==v)n.nodeValue=nv; });
+    var els=document.querySelectorAll('h1,h2,h3,h4,h5,h6,p,li,figcaption');
+    for(var k=0;k<els.length;k++) stripEl(els[k]);
+  }
+  clean(); var m=0, iv=setInterval(function(){clean();if(++m>16)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(function(){clean();});try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},8000);}
+})();
+
+</script>
+
+<script>
+/* MakeBiz — навигация по языку: относительные ссылки вида X.html делаем абсолютными с префиксом текущего языка (/en, /ru или корень), чтобы клики оставались внутри выбранного языка независимо от слэша в URL. */
+(function(){
+  if(window.__mbNavDone) return; window.__mbNavDone=true;
+  function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
+  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  function fix(){
+    var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
+    for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
+      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+    }
+  }
+  fix();
+  var n=0, iv=setInterval(function(){fix(); if(++n>25)clearInterval(iv);},300);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+</script>
+<script>
+/* MakeBiz — переключатель языков (Shadow DOM: устойчив к CSS бандла и очистке инлайн-стилей). AE=корень, /en, /ru. */
+(function(){
+  if(window.__mbLangDone) return; window.__mbLangDone=true;
+  var FLAG={ae:'<svg viewBox="0 0 12 6" preserveAspectRatio="none"><rect width="12" height="6" fill="#fff"/><rect width="12" height="2" fill="#00732F"/><rect y="4" width="12" height="2" fill="#000"/><rect width="3" height="6" fill="#FF0000"/></svg>',en:'<svg viewBox="0 0 19 13" preserveAspectRatio="none"><rect width="19" height="13" fill="#fff"/><rect y="0" width="19" height="1" fill="#B22234"/><rect y="2" width="19" height="1" fill="#B22234"/><rect y="4" width="19" height="1" fill="#B22234"/><rect y="6" width="19" height="1" fill="#B22234"/><rect y="8" width="19" height="1" fill="#B22234"/><rect y="10" width="19" height="1" fill="#B22234"/><rect y="12" width="19" height="1" fill="#B22234"/><rect width="8" height="7" fill="#3C3B6E"/><g fill="#fff"><circle cx="1.3" cy="1.2" r=".45"/><circle cx="3" cy="1.2" r=".45"/><circle cx="4.7" cy="1.2" r=".45"/><circle cx="6.4" cy="1.2" r=".45"/><circle cx="2.1" cy="2.7" r=".45"/><circle cx="3.8" cy="2.7" r=".45"/><circle cx="5.5" cy="2.7" r=".45"/><circle cx="1.3" cy="4.2" r=".45"/><circle cx="3" cy="4.2" r=".45"/><circle cx="4.7" cy="4.2" r=".45"/><circle cx="6.4" cy="4.2" r=".45"/><circle cx="2.1" cy="5.6" r=".45"/><circle cx="3.8" cy="5.6" r=".45"/><circle cx="5.5" cy="5.6" r=".45"/></g></svg>',ru:'<svg viewBox="0 0 9 6" preserveAspectRatio="none"><rect width="9" height="6" fill="#fff"/><rect y="2" width="9" height="2" fill="#0039A6"/><rect y="4" width="9" height="2" fill="#D52B1E"/></svg>'};
+  var CODE={ae:'RU',en:'EN',ru:'RU'}, NAME={ae:'Emirates',en:'English',ru:'Russian'};
+  var PRE={ae:'',en:'/en',ru:'/ru'}, REST=['ae','en'];
+  function cur(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return 'en'; if(/^\/ru(\/|$)/.test(p))return 'ru'; return 'ae';}
+  function base(){var p=location.pathname.replace(/^\/(en|ru)(?=\/|$)/,''); return p===''?'/':p;}
+  function urlFor(l){var b=base(),pre=PRE[l]; if(b==='/')return pre===''?'/':pre+'/'; return pre+b;}
+  function ordered(){var c=cur(),o=[c]; REST.forEach(function(l){if(l!==c)o.push(l);}); return o;}
+  var CSS=':host{display:inline-flex!important;flex-direction:row!important;align-items:center!important;gap:6px!important;margin-right:8px!important;vertical-align:middle!important}'
+   +'.wrap{display:inline-flex;flex-direction:row;align-items:center;gap:6px}'
+   +'a{box-sizing:border-box;display:inline-flex;flex-direction:row;align-items:center;gap:6px;padding:6px 9px;border-radius:10px;border:1px solid rgba(255,255,255,.10);text-decoration:none;cursor:pointer;transition:border-color .2s;background:rgba(255,255,255,.03)}'
+   +'a.active{background:rgba(22,193,90,.14);border-color:rgba(22,193,90,.55)}'
+   +'.fl{width:20px;height:14px;min-width:20px;border-radius:3px;overflow:hidden;display:inline-flex;box-shadow:0 0 0 1px rgba(255,255,255,.14) inset;flex:0 0 auto}'
+   +'.fl svg{width:20px;height:14px;display:block}'
+   +'.cd{font:700 12px Oxygen,system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap;line-height:1}'
+   +'.cd.on{color:#EAF1FF}.cd.off{color:#93A4B8}';
+  function build(){
+    var right=document.querySelector('#mbm-header .mbm-right')||document.querySelector('.mbm-right');
+    if(!right || right.querySelector('.mb-lang')) return;
+    var c=cur(), host=document.createElement('div'); host.className='mb-lang';
+    var items='';
+    ordered().forEach(function(l){
+      items+='<a href="'+urlFor(l)+'" hreflang="'+l+'" title="'+NAME[l]+'"'+(l===c?' class="active"':'')+'>'
+        +''
+        +'<span class="cd '+(l===c?'on':'off')+'">'+CODE[l]+'</span></a>';
+    });
+    var html='<style>'+CSS+'</style><div class="wrap">'+items+'</div>';
+    var sh=null; try{ sh=host.attachShadow({mode:'open'}); }catch(e){ sh=null; }
+    if(sh){ sh.innerHTML=html; } else { host.innerHTML='<div class="wrap">'+items+'</div>'; }
+    right.insertBefore(host, right.firstChild);
+  }
+  build();
+  var n=0, iv=setInterval(function(){build(); if(++n>25)clearInterval(iv);},300);
+  if(window.MutationObserver){var mo=new MutationObserver(build);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+</script>
+
+<script>
+/* MakeBiz — призывы (записаться/обсудить/запросить демо/оставить заявку и их англ. аналоги)
+   ведут на форму #contact внизу, а НЕ в Telegram. RU+EN. Telegram/WhatsApp/кабинет/калькулятор не трогаем. */
+(function(){
+  if(window.__mbCtaDone) return; window.__mbCtaDone=true;
+  var CTA=/(Записаться на демонстрац|Записаться на демо|Обсудить проект|Обсудить задачу|Обсудить внедрен|Запросить дем|Получить[\s\S]{0,20}анализ|Оставить заявку|Обсудить$|Book a demo|Schedule a demo|Request a demo|Get a demo|Discuss (a |your |the )?project|Discuss (the |your )?task|Leave a request|Send a request|Get[\s\S]{0,20}(analysis|hours)|Start a project|Talk to us|Contact us|Book a call)/i;
+  var SKIP=/Telegram|WhatsApp|Whats|кабинет|Войти|калькул|Рассчита|стать партн|партнёр|Отправить|Submit|Log ?in|Cabinet|Calculat|Become a partner|Open account/i;
+  function txt(el){return (el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();}
+  function isCTA(el){var t=txt(el); return t && t.length<=48 && CTA.test(t) && !SKIP.test(t);}
+  function fix(){document.querySelectorAll('a,button').forEach(function(el){if(el.__mbCta||!isCTA(el))return;el.__mbCta=1;if(el.tagName==='A'){el.setAttribute('href','#contact');el.removeAttribute('target');el.removeAttribute('rel');}el.removeAttribute('onclick');});}
+  document.addEventListener('click',function(e){var el=e.target&&e.target.closest&&e.target.closest('a,button');if(!el||!isCTA(el))return;var c=document.getElementById('contact')||document.querySelector('#mbcf-contact,.mbcf-wrap');if(c){e.preventDefault();e.stopPropagation();try{c.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){location.hash='#contact';}}},true);
+  fix();var n=0,iv=setInterval(function(){fix();if(++n>25)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
+
+<!-- MakeBiz cookie consent -->
+<script>
+(function(){
+  if(window.__mbCookieInit) return; window.__mbCookieInit=1;
+  var KEY='mb_consent_v2';
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){window.dataLayer.push(arguments);}
+  if(!window.gtag) window.gtag=gtag;
+  gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+  var EN=/^\/en(\/|$)/.test(location.pathname);
+  var T=EN
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:'/en/privacy.html#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:'/privacy.html#cookie',s:'Настройки cookie'};
+  function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function grant(){
+    gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',personalization_storage:'granted'});
+    window.__mbConsent='granted';
+    if(typeof window.__mbYM==='function'){try{window.__mbYM();}catch(e){}}
+  }
+  function deny(){ gtag('consent','update',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied'}); window.__mbConsent='denied'; }
+  if(GT()==='accepted') grant();
+  var ICON='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10 3 3 0 0 1-3-3 3 3 0 0 1-3-3 3 3 0 0 1-1-2Z"/><circle cx="9" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="13" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"/></svg>';
+  var CSS='#mbCk{position:fixed;left:14px;right:14px;bottom:14px;z-index:2147483000;background:#0e1620;color:#eaf1fb;border:1px solid rgba(255,255,255,.14);border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.45);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}'
+   +'#mbCk .i{max-width:1080px;margin:0 auto;padding:15px 20px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}'
+   +'#mbCk .x{font-size:13px;line-height:1.5;flex:1;min-width:230px}#mbCk a{color:#7FB0FF;text-decoration:underline}'
+   +'#mbCk .z{display:flex;gap:10px;flex:none}#mbCk button{font:600 14px system-ui,sans-serif;padding:10px 22px;border-radius:100px;cursor:pointer;border:1px solid rgba(255,255,255,.22)}'
+   +'#mbCkD{background:transparent;color:#cbd6e8}#mbCkA{background:#16C15A;color:#04120a;border-color:#16C15A}'
+   +'#mbCkT{position:fixed;left:14px;bottom:14px;z-index:2147482000;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:#0e1620;color:#eaf1fb;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35)}';
+  function style(){ if(!document.getElementById('mbCkCSS')){var s=document.createElement('style');s.id='mbCkCSS';s.textContent=CSS;(document.head||document.documentElement).appendChild(s);} }
+  function done(){var x=document.getElementById('mbCk');if(x&&x.parentNode)x.parentNode.removeChild(x);}
+  function banner(){
+    if(document.getElementById('mbCk')) return;
+    var d=document.createElement('div');d.id='mbCk';
+    d.innerHTML='<div class="i"><div class="x">'+T.t+' <a href="'+T.u+'" target="_blank" rel="noopener">'+T.m+'</a></div><div class="z"><button id="mbCkD" type="button">'+T.d+'</button><button id="mbCkA" type="button">'+T.a+'</button></div></div>';
+    (document.body||document.documentElement).appendChild(d);
+    d.querySelector('#mbCkA').onclick=function(){ST('accepted');grant();done();};
+    d.querySelector('#mbCkD').onclick=function(){ST('declined');deny();done();};
+  }
+  function toggle(){
+    if(document.getElementById('mbCkT'))return;
+    var b=document.createElement('button');b.id='mbCkT';b.type='button';b.title=T.s;b.setAttribute('aria-label',T.s);b.innerHTML=ICON;
+    b.onclick=function(){ if(!document.getElementById('mbCk')) banner(); };
+    (document.body||document.documentElement).appendChild(b);
+  }
+  function ensure(){ style(); if(GT()){ done(); toggle(); } else { banner(); } }
+  ensure(); setInterval(ensure,800);
+})();
+</script>
+<!-- /MakeBiz cookie consent -->
+
+
+<script>
+/* MakeBiz — универсальный блок «Обсудить проект» (форма + чат).
+   Классы mbcf-* изолированы. Обработчики делегированы на document,
+   поэтому переживают повторный рендер/клонирование блока бандлом.
+   Конфиг задаётся до подключения:
+   window.__MBCF_REMOVE  — убрать старую контакт-форму перед футером (true/false)
+   window.__MBCF_TARGET  — селектор контейнера, если на странице нет <footer> (иначе null) */
+(function(){
+  if (window.__mbcfDone) return; window.__mbcfDone = true;
+
+  var CSS = [
+"#mbcf-contact{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.13);--gl:rgba(255,255,255,.05);max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(18px,4vw,40px) clamp(34px,4vw,60px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;position:relative;z-index:1}",
+"#mbcf-contact *{box-sizing:border-box}",
+"#mbcf-contact .mbcf-anchor{position:absolute;top:-72px;left:0;width:1px;height:1px}",
+"#mbcf-contact .mbcf-hide{display:none!important}",
+"#mbcf-contact .mbcf-eyebrow{display:flex;justify-content:center;margin-bottom:26px}",
+"#mbcf-contact .mbcf-eyebrow span{font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#F0A6B0;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.3);padding:8px 15px;border-radius:100px}",
+"#mbcf-contact .mbcf-cgrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,4vw,48px);align-items:stretch}",
+"#mbcf-contact .mbcf-col{display:flex;flex-direction:column;min-width:0}",
+"#mbcf-contact .mbcf-colhead{min-height:82px;display:flex;flex-direction:column;justify-content:flex-start;margin-bottom:18px}",
+"#mbcf-contact .mbcf-ctitle{font:700 clamp(1.3rem,2.2vw,1.85rem)/1.12 Oxygen;letter-spacing:-.02em;color:#fff;margin:0}",
+"#mbcf-contact .mbcf-ctitle span{color:var(--g)}",
+"#mbcf-contact .mbcf-csub{font:300 clamp(13px,1.2vw,14px)/1.45 Oxygen;color:var(--mu);margin:8px 0 0}",
+"#mbcf-contact .mbcf-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:26px;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1}",
+"#mbcf-contact .mbcf-inp{width:100%;padding:13px 15px;border-radius:12px;border:1px solid var(--ln);background:var(--gl);font:400 14px Oxygen;color:var(--tx);outline:none;transition:border-color .15s,background .15s}",
+"#mbcf-contact .mbcf-inp::placeholder{color:#7E8DA3}",
+"#mbcf-contact .mbcf-inp:focus{border-color:rgba(22,193,90,.55);background:rgba(22,193,90,.05)}",
+"#mbcf-contact .mbcf-inp.mbcf-err{border-color:var(--r2);background:rgba(200,16,46,.07)}",
+"#mbcf-contact .mbcf-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}",
+"#mbcf-contact .mbcf-field{margin-bottom:12px}",
+"#mbcf-contact .mbcf-phone{display:flex;gap:10px}",
+"#mbcf-contact .mbcf-cc{width:122px;flex:none;font-weight:700;-webkit-appearance:none;appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%228%22%3E%3Cpath d=%22M1 1l5 5 5-5%22 stroke=%22%2393A4B8%22 stroke-width=%221.6%22 fill=%22none%22/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 13px center;padding-right:30px;cursor:pointer}",
+"#mbcf-contact .mbcf-cc option{background:#0E1420;color:var(--tx)}",
+"#mbcf-contact .mbcf-tg{position:relative}",
+"#mbcf-contact .mbcf-at{position:absolute;left:14px;top:50%;transform:translateY(-50%);font:700 14px Oxygen;color:var(--g)}",
+"#mbcf-contact .mbcf-tgi{padding-left:30px}",
+"#mbcf-contact .mbcf-lbl{font:700 12px Oxygen;color:var(--tx);margin:6px 0 8px}",
+"#mbcf-contact .mbcf-seg{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}",
+"#mbcf-contact .mbcf-seg button{font:700 13px Oxygen;color:var(--mu);background:var(--gl);border:1px solid var(--ln);padding:9px 16px;border-radius:100px;cursor:pointer;transition:.15s}",
+"#mbcf-contact .mbcf-seg button.mbcf-on{color:#fff;background:var(--r);border-color:var(--r)}",
+"#mbcf-contact .mbcf-ta{resize:vertical;min-height:104px;line-height:1.5;margin-bottom:14px}",
+"#mbcf-contact .mbcf-submit{display:block;width:100%;font:700 15px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));padding:15px;border-radius:100px;border:none;cursor:pointer;box-shadow:0 14px 30px -8px rgba(200,16,46,.5);transition:filter .15s}",
+"#mbcf-contact .mbcf-submit:hover{filter:brightness(1.07)}",
+"#mbcf-contact .mbcf-consent{font:300 12px Oxygen;color:#7E8DA3;margin-top:12px}",
+"#mbcf-contact .mbcf-success{text-align:center;padding:22px 8px}",
+"#mbcf-contact .mbcf-okico{width:60px;height:60px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-size:30px;color:#fff;background:linear-gradient(135deg,var(--g),var(--g2));box-shadow:0 0 26px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-oktitle{font:700 20px Oxygen;color:#fff;margin-bottom:8px}",
+"#mbcf-contact .mbcf-oktext{font:300 14px/1.55 Oxygen;color:var(--mu);max-width:34ch;margin:0 auto 18px}",
+"#mbcf-contact .mbcf-again{font:700 13px Oxygen;color:var(--tx);background:var(--gl);border:1px solid var(--ln);padding:11px 20px;border-radius:100px;cursor:pointer}",
+"#mbcf-contact .mbcf-chat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:24px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 34px 80px -44px rgba(0,0,0,.85);flex:1;min-height:420px}",
+"#mbcf-contact .mbcf-chead{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;display:grid;place-items:center;font:700 14px Oxygen;box-shadow:0 0 16px rgba(22,193,90,.5)}",
+"#mbcf-contact .mbcf-aname{font:700 14.5px Oxygen;color:#fff}",
+"#mbcf-contact .mbcf-astat{font:300 12px Oxygen;color:var(--mu);display:flex;align-items:center;gap:6px}",
+"#mbcf-contact .mbcf-astat i{width:7px;height:7px;border-radius:50%;background:var(--g);box-shadow:0 0 8px var(--g);font-style:normal}",
+"#mbcf-contact .mbcf-msgs{flex:1;padding:18px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}",
+"#mbcf-contact .mbcf-bubble{max-width:82%;font:300 14px/1.45 Oxygen;padding:12px 15px;border-radius:16px}",
+"#mbcf-contact .mbcf-bot{align-self:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--tx);border-radius:16px 16px 16px 5px}",
+"#mbcf-contact .mbcf-me{align-self:flex-end;background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;font-weight:400;border-radius:16px 16px 5px 16px}",
+"#mbcf-contact .mbcf-typing{align-self:flex-start;display:flex;gap:4px;padding:13px 15px;background:rgba(255,255,255,.06);border-radius:16px}",
+"#mbcf-contact .mbcf-typing i{width:7px;height:7px;border-radius:50%;background:#8FE7AE;animation:mbcfDot 1.4s infinite}",
+"#mbcf-contact .mbcf-typing i:nth-child(2){animation-delay:.2s}",
+"#mbcf-contact .mbcf-typing i:nth-child(3){animation-delay:.4s}",
+"@keyframes mbcfDot{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}",
+"#mbcf-contact .mbcf-cinput{display:flex;gap:10px;padding:14px 16px;border-top:1px solid rgba(255,255,255,.08)}",
+"#mbcf-contact .mbcf-cinput .mbcf-inp{flex:1;border-radius:100px}",
+"#mbcf-contact .mbcf-sendbtn{width:44px;height:44px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--g),#0C7A33);color:#fff;cursor:pointer;display:grid;place-items:center;flex:none;font-size:16px}",
+"@media(max-width:820px){#mbcf-contact .mbcf-cgrid{grid-template-columns:1fr}#mbcf-contact .mbcf-colhead{min-height:0;margin-bottom:10px}}"
+  ].join("\n");
+
+  var HTML =
+'<section class="mbcf-sec" id="mbcf-contact"><a id="contact" class="mbcf-anchor"></a>'+
+  '<div class="mbcf-eyebrow"><span>Обсудить проект</span></div>'+
+  '<div class="mbcf-cgrid">'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Первый шаг к повышению <span>эффективности</span></h3></div>'+
+      '<form class="mbcf-card" id="mbcf-lead" novalidate>'+
+        '<div id="mbcf-fields">'+
+          '<div class="mbcf-row2">'+
+            '<input id="mbcf-name" class="mbcf-inp" placeholder="Имя*" autocomplete="name">'+
+            '<input id="mbcf-company" class="mbcf-inp" placeholder="Компания" autocomplete="organization">'+
+          '</div>'+
+          '<div class="mbcf-field"><div class="mbcf-phone">'+
+            '<select id="mbcf-cc" class="mbcf-inp mbcf-cc" aria-label="Код страны">'+
+              '<option value="+971" selected>🇦🇪 +971</option>'+
+              '<option value="+7">🇷🇺 +7</option>'+
+              '<option value="other">🌍 Другой</option>'+
+            '</select>'+
+            '<input id="mbcf-phone" class="mbcf-inp" placeholder="Номер телефона*" inputmode="tel" autocomplete="tel">'+
+          '</div></div>'+
+          '<div class="mbcf-field"><div class="mbcf-tg">'+
+            '<span class="mbcf-at">@</span>'+
+            '<input id="mbcf-tg" class="mbcf-inp mbcf-tgi" placeholder="ник в Telegram*">'+
+          '</div></div>'+
+          '<div class="mbcf-lbl">Как с вами связаться</div>'+
+          '<div class="mbcf-seg" id="mbcf-seg">'+
+            '<button type="button" data-m="tg" class="mbcf-on">Telegram</button>'+
+            '<button type="button" data-m="wa">WhatsApp</button>'+
+          '</div>'+
+          '<textarea id="mbcf-task" class="mbcf-inp mbcf-ta" placeholder="Что хотите автоматизировать?"></textarea>'+
+          '<input id="mbcf-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">'+
+          '<button type="submit" class="mbcf-submit">Отправить заявку</button>'+
+          '<div class="mbcf-consent">Отправляя форму, вы соглашаетесь с политикой конфиденциальности.</div>'+
+        '</div>'+
+        '<div class="mbcf-success mbcf-hide" id="mbcf-success">'+
+          '<div class="mbcf-okico">✓</div>'+
+          '<div class="mbcf-oktitle">Заявка принята</div>'+
+          '<div class="mbcf-oktext" id="mbcf-oktext">Спасибо! Свяжемся с вами удобным способом.</div>'+
+          '<button type="button" class="mbcf-again" id="mbcf-again">Отправить ещё одну</button>'+
+        '</div>'+
+      '</form>'+
+    '</div>'+
+    '<div class="mbcf-col">'+
+      '<div class="mbcf-colhead"><h3 class="mbcf-ctitle">Задайте вопрос <span>нашему агенту</span></h3><p class="mbcf-csub">Пообщайтесь с нашим агентом прямо в чате.</p></div>'+
+      '<div class="mbcf-chat">'+
+        '<div class="mbcf-chead"><div class="mbcf-avatar">AI</div><div><div class="mbcf-aname">AI-агент MakeBiz</div><div class="mbcf-astat"><i></i>онлайн, отвечает сразу</div></div></div>'+
+        '<div class="mbcf-msgs" id="mbcf-msgs"><div class="mbcf-bubble mbcf-bot">Здравствуйте! Я AI-агент MakeBiz. Какой процесс вы хотите автоматизировать? Я подскажу решение.</div></div>'+
+        '<div class="mbcf-cinput"><input id="mbcf-cin" class="mbcf-inp" placeholder="Напишите сообщение..."><button id="mbcf-csend" class="mbcf-sendbtn" aria-label="Отправить">➤</button></div>'+
+      '</div>'+
+    '</div>'+
+  '</div>'+
+'</section>';
+
+  var method='tg';
+  function $(id){ return document.getElementById(id); }
+  function setErr(id,on){ var el=$(id); if(el) el.classList.toggle('mbcf-err',on); }
+
+  function setMethod(m){
+    method=m;
+    var seg=$('mbcf-seg'); if(seg) Array.prototype.forEach.call(seg.children,function(x){ x.classList.toggle('mbcf-on', x.getAttribute('data-m')===m); });
+    var tg=$('mbcf-tg'); if(tg) tg.placeholder = (m==='tg') ? 'ник в Telegram*' : 'ник в Telegram';
+  }
+  function submitForm(){
+    var name=$('mbcf-name'), phone=$('mbcf-phone'), tg=$('mbcf-tg'), cc=$('mbcf-cc'),
+        company=$('mbcf-company'), task=$('mbcf-task'), gotcha=$('mbcf-gotcha');
+    if(!name||!phone||!cc) return;
+    var okN=!!name.value.trim(), okP=!!phone.value.trim(), okT = method!=='tg' || (tg && !!tg.value.trim());
+    setErr('mbcf-name',!okN); setErr('mbcf-phone',!okP); setErr('mbcf-tg',!okT);
+    if(!(okN&&okP&&okT)) return;
+    var via = method==='tg' ? 'в Telegram' : 'в WhatsApp';
+    var ps = cc.value==='other' ? phone.value.trim() : (cc.value+' '+phone.value.trim());
+    // страница-источник: ключ активного пункта меню или путь
+    var page = (window.__MBM_ACTIVE || (location.pathname||'').replace(/^\//,'').replace(/\.html$/,'') || 'index');
+    var payload = {
+      form: 'client', page: page,
+      name: name.value.trim(),
+      company: company ? company.value.trim() : '',
+      phone: ps,
+      telegram: tg ? tg.value.trim() : '',
+      method: method==='tg' ? 'Telegram' : 'WhatsApp',
+      automate: task ? task.value.trim() : '',
+      _gotcha: gotcha ? gotcha.value : ''
+    };
+    try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){}); }catch(e){}
+    $('mbcf-oktext').textContent = 'Спасибо! Свяжемся с вами '+via+' по номеру '+ps+'.';
+    $('mbcf-fields').classList.add('mbcf-hide');
+    $('mbcf-success').classList.remove('mbcf-hide');
+  }
+  function resetForm(){
+    var form=$('mbcf-lead'); if(form) form.reset();
+    var ph=$('mbcf-phone'); if(ph) ph.placeholder='Номер телефона*';
+    $('mbcf-success').classList.add('mbcf-hide');
+    $('mbcf-fields').classList.remove('mbcf-hide');
+    setErr('mbcf-name',false); setErr('mbcf-phone',false); setErr('mbcf-tg',false);
+    setMethod('tg');
+  }
+  function addMsg(t,who){ var m=$('mbcf-msgs'); if(!m) return; var d=document.createElement('div'); d.className='mbcf-bubble '+(who==='me'?'mbcf-me':'mbcf-bot'); d.textContent=t; m.appendChild(d); m.scrollTop=m.scrollHeight; }
+  function typing(){ var m=$('mbcf-msgs'); if(!m) return null; var d=document.createElement('div'); d.className='mbcf-typing'; d.innerHTML='<i></i><i></i><i></i>'; m.appendChild(d); m.scrollTop=m.scrollHeight; return d; }
+  function send(){
+    var cin=$('mbcf-cin'); if(!cin) return; var t=cin.value.trim(); if(!t) return;
+    addMsg(t,'me'); cin.value='';
+    var d=typing();
+    setTimeout(function(){ if(d) d.remove();
+      /* TODO: сюда подключить реального AI-агента (запрос к API). Пока заглушка. */
+      addMsg('Принял, спасибо. Чтобы подготовить разбор под вас, оставьте контакты в форме слева — вернёмся с решением.','bot');
+    },900);
+  }
+
+  // Делегирование на document — работает независимо от времени вставки и повторного рендера блока
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t||!t.closest) return;
+    var seg=t.closest('#mbcf-seg button[data-m]'); if(seg){ setMethod(seg.getAttribute('data-m')); return; }
+    if(t.closest('#mbcf-csend')){ send(); return; }
+    if(t.closest('#mbcf-again')){ resetForm(); return; }
+  });
+  document.addEventListener('submit',function(e){ if(e.target && e.target.id==='mbcf-lead'){ e.preventDefault(); submitForm(); } });
+  document.addEventListener('input',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbcf-phone'){ var s=t.value.replace(/[^0-9+\-\s()]/g,''); if(s!==t.value) t.value=s; }
+    else if(t.id==='mbcf-tg'){ var s2=t.value.replace(/[^a-zA-Z0-9_]/g,''); if(s2!==t.value) t.value=s2; }
+  });
+  document.addEventListener('change',function(e){ if(e.target && e.target.id==='mbcf-cc'){ var ph=$('mbcf-phone'); if(ph) ph.placeholder = e.target.value==='other' ? 'Номер телефона с кодом страны*' : 'Номер телефона*'; } });
+  document.addEventListener('keydown',function(e){ if(e.target && e.target.id==='mbcf-cin' && e.key==='Enter'){ e.preventDefault(); send(); } });
+
+  function place(node){
+    var footer = document.querySelector('footer');
+    if (footer && footer.parentNode){
+      if (window.__MBCF_REMOVE){
+        var p=footer.previousElementSibling;
+        while(p && (p.tagName==='SCRIPT'||p.tagName==='A'||p.tagName==='STYLE'||(p.textContent||'').trim()==='')) p=p.previousElementSibling;
+        if(p && p.querySelector && p.querySelector('input,textarea')) p.parentNode.removeChild(p);
+      }
+      footer.parentNode.insertBefore(node, footer);
+      return true;
+    }
+    if (window.__MBCF_TARGET){
+      var t=document.querySelector(window.__MBCF_TARGET);
+      if(t){ t.appendChild(node); return true; }
+    }
+    return false;
+  }
+  function ensureStyle(){ if(!$('mbcf-style')){ var st=document.createElement('style'); st.id='mbcf-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function build(){
+    if ($('mbcf-contact')) return true;
+    ensureStyle();
+    var old=$('contact'); if(old) old.removeAttribute('id');
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML;
+    return place(wrap.firstElementChild);
+  }
+
+  var tries=0;
+  function attempt(){
+    var ready = !!document.querySelector('footer') || (window.__MBCF_TARGET && !!document.querySelector(window.__MBCF_TARGET));
+    if (ready && build()) return;
+    if (tries++ > 40){ ensureStyle(); var wrap=document.createElement('div'); wrap.innerHTML=HTML; if(document.body) document.body.appendChild(wrap.firstElementChild); return; }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+
+</script>
+<script>
+/* MakeBiz — призывы (записаться/обсудить/запросить демо/оставить заявку и их англ. аналоги)
+   ведут на форму #contact внизу, а НЕ в Telegram. RU+EN. Telegram/WhatsApp/кабинет/калькулятор не трогаем. */
+(function(){
+  if(window.__mbCtaDone) return; window.__mbCtaDone=true;
+  var CTA=/(Записаться на демонстрац|Записаться на демо|Обсудить проект|Обсудить задачу|Обсудить внедрен|Запросить дем|Получить[\s\S]{0,20}анализ|Оставить заявку|Обсудить$|Book a demo|Schedule a demo|Request a demo|Get a demo|Discuss (a |your |the )?project|Discuss (the |your )?task|Leave a request|Send a request|Get[\s\S]{0,20}(analysis|hours)|Start a project|Talk to us|Contact us|Book a call)/i;
+  var SKIP=/Telegram|WhatsApp|Whats|кабинет|Войти|калькул|Рассчита|стать партн|партнёр|Отправить|Submit|Log ?in|Cabinet|Calculat|Become a partner|Open account/i;
+  function txt(el){return (el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();}
+  function isCTA(el){var t=txt(el); return t && t.length<=48 && CTA.test(t) && !SKIP.test(t);}
+  function fix(){document.querySelectorAll('a,button').forEach(function(el){if(el.__mbCta||!isCTA(el))return;el.__mbCta=1;if(el.tagName==='A'){el.setAttribute('href','#contact');el.removeAttribute('target');el.removeAttribute('rel');}el.removeAttribute('onclick');});}
+  document.addEventListener('click',function(e){var el=e.target&&e.target.closest&&e.target.closest('a,button');if(!el||!isCTA(el))return;var c=document.getElementById('contact')||document.querySelector('#mbcf-contact,.mbcf-wrap');if(c){e.preventDefault();e.stopPropagation();try{c.scrollIntoView({behavior:'smooth',block:'start'});}catch(_){location.hash='#contact';}}},true);
+  fix();var n=0,iv=setInterval(function(){fix();if(++n>25)clearInterval(iv);},350);
+  if(window.MutationObserver){var mo=new MutationObserver(fix);try{mo.observe(document.body,{childList:true,subtree:true});}catch(e){}setTimeout(function(){mo.disconnect();},12000);}
+})();
+
+</script>
+</body>
+</html>
