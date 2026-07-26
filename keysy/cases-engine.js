@@ -94,7 +94,7 @@
   /* ---- карточка кейса ---- */
   function card(c){
     var metric = c.metric ? '<div class="metric">'+esc(c.metric)+'</div>' : '<span></span>';
-    return '<a class="mb-card" href="'+u('/keysy/'+encodeURIComponent(c.slug))+'">'+
+    return '<a class="mb-card" href="'+u('/keysy/case?c='+encodeURIComponent(c.slug))+'">'+
       '<div class="mb-ctop"><span class="mb-chip n">'+esc(indLabel(c.ind))+'</span>'+
         '<span class="mb-tags">'+prodTags(c)+'</span></div>'+
       '<h4>'+esc(plain(c.title))+'</h4>'+
@@ -192,8 +192,8 @@
     setMeta('description', plain(c.lead));
     setMeta('og:title', plain(c.title)+T.ogSuffix, true);
     setMeta('og:description', plain(c.lead), true);
-    setMeta('og:url', location.origin+location.pathname, true);
-    setLink('canonical', location.origin+location.pathname);
+    setMeta('og:url', location.origin+location.pathname+location.search, true);
+    setLink('canonical', location.origin+location.pathname+location.search);
 
     var quote = c.quote ? '<div class="mb-quote"><p>'+T.qO+esc(c.quote.text)+T.qC+'</p>'+
       '<div class="who"><span class="av"></span><span><b>'+esc(c.quote.who)+'</b><span>'+esc(c.quote.org)+'</span></span></div></div>' : '';
