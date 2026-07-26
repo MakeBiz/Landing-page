@@ -16,7 +16,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькулятор стоимости AI-агентов | MakeBiz</title>
-<meta name="description" content="Калькулятор стоимости AI-агентов MakeBiz: соберите команду из 77 агентов и получите ориентир по цене внедрения.">
+<meta name="description" content="Калькулятор стоимости AI-агентов MakeBiz: соберите команду агентов и получите ориентир по цене.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
@@ -84,11 +84,11 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
   <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/calculator-agents">
   <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/calculator-agents">
 <style>
-.calcbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:16px 0 14px}
-.calcbar .l{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.calcframe{position:relative;overflow:hidden;background:#07090D;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);height:calc(100vh - 126px);min-height:520px}
-.calcframe iframe{position:absolute;top:-63px;left:0;width:100%;height:calc(100vh - 63px);min-height:583px;border:0;background:#07090D}
-@media(max-width:900px){.calcframe{height:calc(100vh - 150px);min-height:460px}}
+.calcwrap{position:relative;overflow:hidden;width:100%;background:#07090D;border-top:1px solid rgba(255,255,255,.06);min-height:640px}
+.calcwrap iframe{display:block;width:100%;border:0;margin-top:-63px;height:1400px;background:#07090D}
+.calcback{display:flex;justify-content:center;padding:20px 24px 6px}
+.calcback a{font:400 14px Oxygen;color:#8FA096;text-decoration:none;border:1px solid rgba(255,255,255,.12);padding:9px 18px;border-radius:100px;transition:.15s}
+.calcback a:hover{color:#EAF2EC;border-color:rgba(255,255,255,.25)}
 </style>
 </head>
 <body>
@@ -109,17 +109,18 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
     <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
   </nav></div>
 </header>
-<div class="wrap">
-  <div class="calcbar">
-    <div class="l">
-      <a href="ai-agents.html" style="display:inline-flex;align-items:center;gap:8px;font:700 15px Oxygen;color:#04120A;background:#1FDB6D;padding:11px 20px;border-radius:12px;text-decoration:none;box-shadow:0 14px 34px -12px rgba(31,219,109,.5)">← Вернуться к AI-агентам</a>
-      <span style="font:700 16px Oxygen;color:#EAF2EC">Калькулятор стоимости AI-агентов</span>
-    </div>
-    <a href="/calculator-agents-app.html" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;font:400 14px Oxygen;color:#CDE7D8;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);padding:11px 18px;border-radius:12px;text-decoration:none">Открыть на весь экран ↗</a>
-  </div>
-</div>
-<div class="calcframe"><iframe src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов"></iframe></div>
-<div class="wrap"><p style="text-align:center;color:#8FA096;font:300 13px/1.5 Oxygen;margin:16px auto 4px;max-width:60ch">Ниже можно оставить заявку. Вернуться назад можно кнопкой выше или через меню.</p></div>
+<div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов" scrolling="no"></iframe></div>
+<div class="calcback"><a href="ai-agents.html">← Вернуться к AI-агентам</a></div>
+<script>
+(function(){
+  var wrap=document.getElementById('mbcalcwrap'), fr=document.getElementById('mbcalcframe'), BAR=63;
+  window.addEventListener('message',function(e){
+    var d=e&&e.data; if(d&&typeof d.mbCalcHeight==='number'){
+      var h=Math.max(600,d.mbCalcHeight); fr.style.height=h+'px'; wrap.style.height=(h-BAR)+'px';
+    }
+  });
+})();
+</script>
 <footer>
   <div class="ftop">
     <div>
