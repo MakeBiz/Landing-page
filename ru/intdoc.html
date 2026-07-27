@@ -622,7 +622,7 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
     // страница-источник: ключ активного пункта меню или путь
     var page = (window.__MBM_ACTIVE || (location.pathname||'').replace(/^\//,'').replace(/\.html$/,'') || 'index');
     var payload = {
-      form: 'client', page: page,
+      form: 'client', page: page, from:(new URLSearchParams(location.search).get('from')||''),
       name: name.value.trim(),
       company: company ? company.value.trim() : '',
       phone: ps,
@@ -631,10 +631,13 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
       automate: task ? task.value.trim() : '',
       _gotcha: gotcha ? gotcha.value : ''
     };
-    try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(function(){}); }catch(e){}
-    $('mbcf-oktext').textContent = 'Спасибо! Свяжемся с вами '+via+' по номеру '+ps+'.';
+    $('mbcf-oktext').textContent = 'Отправляем заявку...';
     $('mbcf-fields').classList.add('mbcf-hide');
     $('mbcf-success').classList.remove('mbcf-hide');
+    try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){ if(!r||!r.ok) throw 0; return r.json(); })
+      .then(function(res){ if(res&&res.ok===false) throw 0; $('mbcf-oktext').textContent = 'Спасибо! Свяжемся с вами '+via+' по номеру '+ps+'.'; })
+      .catch(function(){ $('mbcf-oktext').textContent = 'Заявку не удалось отправить автоматически. Напишите нам напрямую в Telegram: @Anton_MakeBiz'; }); }catch(e){ $('mbcf-oktext').textContent = 'Заявку не удалось отправить. Напишите нам в Telegram: @Anton_MakeBiz'; }
   }
   function resetForm(){
     var form=$('mbcf-lead'); if(form) form.reset();

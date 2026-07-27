@@ -1,9 +1,9 @@
 // Vercel Serverless Function: принимает заявку с формы сайта и шлёт её в Telegram.
 //
 // БЕЗОПАСНОСТЬ: токен бота и chat_id НЕ хранятся в коде (репозиторий публичный).
-// Их нужно задать в Vercel → Settings → Environment Variables:
+// Их нужно задать в Vercel -> Settings -> Environment Variables:
 //   TELEGRAM_BOT_TOKEN  — токен из @BotFather
-//   TELEGRAM_CHAT_ID    — куда слать заявки (ваш личный chat_id или id группы)
+//   TELEGRAM_CHAT_ID    — куда слать заявки (id группы продаж)
 // После добавления переменных нужно сделать Redeploy.
 
 export default async function handler(req, res) {
@@ -30,24 +30,69 @@ export default async function handler(req, res) {
       });
     }
 
+    // ==== определяем, с какого сайта и страницы пришла заявка ====
+    // Главный источник истины: заголовок Referer (полный адрес страницы, откуда отправлена форма).
+    // Запасной вариант: поле page из тела запроса (без языка сайта).
+    const ref = req.headers['referer'] || req.headers['referrer'] || '';
+    let refPath = '';
+    try { refPath = new URL(ref).pathname || ''; } catch (e) { refPath = ''; }
+
+    // язык / версия сайта
+    let siteLabel;
+    if (/^\/en(\/|$)/.test(refPath)) siteLabel = 'Зарубежный (EN)';
+    else if (/^\/ru(\/|$)/.test(refPath)) siteLabel = 'Российский (копия /ru)';
+    else if (refPath) siteLabel = 'Российский (основной)';
+    else siteLabel = 'не определён';
+
+    // ключ страницы: из адреса (убираем язык, слэши и .html), иначе из тела запроса
+    let slug = refPath
+      .replace(/^\/(en|ru)(?=\/|$)/, '')
+      .replace(/^\/+/, '')
+      .replace(/\/+$/, '')
+      .replace(/\.html$/, '');
+    if (!slug) slug = (data.page || 'index');
+
+    const pageNames = {
+      'index': 'Главная', 'ai-agents': 'AI-агенты', 'bitrix': 'Bitrix24',
+      'vector': 'Vector (AI-продажи)', 'intdoc': 'IntDoc (AI-закупки)',
+      'vps': 'Серверы и VPS', 'servers': 'Серверы', 'contacts': 'Контакты',
+      'partners': 'Партнёрам', 'news': 'Новости', 'openclaw': 'OpenClaw',
+      'company': 'О компании', 'keysy': 'Кейсы Keysy', 'keysy/case': 'Кейс Keysy',
+      'calculator-agents': 'Калькулятор AI-агентов', 'calculator-agents-app': 'Калькулятор AI-агентов',
+      'calculator': 'Калькулятор', 'privacy': 'Политика конфиденциальности', 'terms': 'Пользовательское соглашение',
+    };
+    const pageName = pageNames[slug] || slug || 'неизвестна';
+
+    // тип формы (из тела запроса)
+    const formNames = {
+      client: 'Обсудить проект', servers: 'Заявка на сервер', openclaw: 'OpenClaw',
+      partner: 'Стать партнёром', contactpage: 'Контакты', contact: 'Контактная форма',
+      bitrix: 'Страница Bitrix', vector: 'Страница Vector', intdoc: 'Страница IntDoc',
+    };
+    const formLabel = data.form ? (formNames[data.form] || data.form) : '';
+
+    // откуда человек перешёл на форму (например, из кейса Keysy): ?from=... в ссылке
+    const origin = data.from || data.origin || '';
+
     // человекочитаемые подписи полей
     const titles = {
       name: 'Имя', company: 'Компания', role: 'Должность',
-      phone: 'Телефон', telegram: 'Telegram', product: 'Продукт',
+      phone: 'Телефон', telegram: 'Telegram', method: 'Способ связи', product: 'Продукт',
       automate: 'Что автоматизировать', comment: 'Комментарий', format: 'Формат',
       busy: 'Чем занимается', relevant: 'Был ли актуален',
     };
-    // откуда пришла заявка (какая форма / страница)
-    const formNames = {
-      client: 'Обсудить проект', partner: 'Стать партнёром', contactpage: 'Контакты',
-      bitrix: 'Страница Bitrix', openclaw: 'Страница OpenClaw',
-      vector: 'Страница Vector', intdoc: 'Страница IntDoc', servers: 'Страница Серверы',
-    };
 
     const lines = ['🟦 <b>Новая заявка с сайта MakeBiz</b>', ''];
-    if (data.form) lines.push(`<b>Источник:</b> ${formNames[data.form] || data.form}`);
+    lines.push(`<b>Сайт:</b> ${siteLabel}`);
+    lines.push(`<b>Страница:</b> ${pageName}` + (pageNames[slug] ? ` (${slug})` : ''));
+    if (formLabel) lines.push(`<b>Форма:</b> ${formLabel}`);
+    if (origin) lines.push(`<b>Перешёл с:</b> ${origin}`);
+    lines.push('');
+
+    // остальные поля заявки
+    const skip = { _gotcha: 1, form: 1, page: 1, from: 1, origin: 1 };
     for (const [k, v] of Object.entries(data)) {
-      if (k === '_gotcha' || k === 'form' || !v) continue;
+      if (skip[k] || !v) continue;
       lines.push(`<b>${titles[k] || k}:</b> ${String(v).slice(0, 1000)}`);
     }
     const text = lines.join('\n');
