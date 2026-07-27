@@ -780,10 +780,9 @@ var btn=q('f-submit');btn&&btn.addEventListener('click',function(e){e.preventDef
   function ensureStyle(){ if(!document.getElementById('mbf-style')){ var st=document.createElement('style'); st.id='mbf-style'; st.textContent=CSS; document.head.appendChild(st); } }
 
   function addCookie(){
-    if(document.getElementById('mbf-cookie')) return;
-    var seen=false; try{ seen = localStorage.getItem('mbf-cookie-ok')==='1'; }catch(err){}
-    if(seen) return;
-    var w=document.createElement('div'); w.innerHTML=COOKIE; document.body.appendChild(w.firstElementChild);
+    /* Отключено 2026-07-27: на сайте один баннер cookie (модуль mbCk с согласием Google Consent Mode).
+       Функция оставлена пустой, чтобы не трогать вызовы в build() и fallbackAppend(). */
+    return;
   }
 
   function build(){

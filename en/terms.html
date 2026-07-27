@@ -164,15 +164,15 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
   </div>
 </footer>
 
-<div id="cookiebar"><p>We use cookies for site functionality and web analytics. By continuing to use the site, you agree to this. <a href="privacy.html#cookie">Learn more</a></p><button class="ok" id="cookieok">Accept</button></div>
 
 <script>
 (function(){
   var b=document.getElementById('burger'),d=document.getElementById('drop');
   if(b&&d){b.addEventListener('click',function(){d.classList.toggle('open')});d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){d.classList.remove('open')})})}
+  /* Баннер cookiebar удалён 2026-07-27: на сайте один баннер (модуль mbCk). */
   var bar=document.getElementById('cookiebar'),ok=document.getElementById('cookieok');
-  try{ if(localStorage.getItem('mbf-cookie-ok')==='1') bar.classList.add('hide'); }catch(e){}
-  if(ok)ok.addEventListener('click',function(){bar.classList.add('hide');try{localStorage.setItem('mbf-cookie-ok','1')}catch(e){}});
+  if(bar){ try{ if(localStorage.getItem('mbf-cookie-ok')==='1') bar.classList.add('hide'); }catch(e){} }
+  if(ok&&bar)ok.addEventListener('click',function(){bar.classList.add('hide');try{localStorage.setItem('mbf-cookie-ok','1')}catch(e){}});
 })();
 </script>
 <script>
