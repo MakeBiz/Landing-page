@@ -2,8 +2,8 @@
 //
 // БЕЗОПАСНОСТЬ: токен бота и chat_id НЕ хранятся в коде (репозиторий публичный).
 // Их нужно задать в Vercel -> Settings -> Environment Variables:
-//   TELEGRAM_BOT_TOKEN  — токен из @BotFather
-//   TELEGRAM_CHAT_ID    — куда слать заявки (id группы продаж)
+//   TELEGRAM_BOT_TOKEN  -токен из @BotFather
+//   TELEGRAM_CHAT_ID    -куда слать заявки (id группы продаж)
 // После добавления переменных нужно сделать Redeploy.
 
 export default async function handler(req, res) {
@@ -82,18 +82,29 @@ export default async function handler(req, res) {
       busy: 'Чем занимается', relevant: 'Был ли актуален',
     };
 
+    // безопасный вывод и кликабельные ссылки
+    const esc = (x) => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    // ник в Telegram -> кликабельная ссылка t.me (нажал и открылся Telegram)
+    const tgLink = (v) => { const u = String(v).trim().replace(/^@+/, '').replace(/[^A-Za-z0-9_]/g, ''); return u ? `<a href="https://t.me/${u}">@${u}</a>` : esc(v); };
+    // телефон -> кликабельная ссылка wa.me (нажал и открылся WhatsApp с этим номером)
+    const waLink = (v) => { const t = esc(String(v).slice(0, 1000)); const d = String(v).replace(/[^0-9]/g, ''); return d ? `<a href="https://wa.me/${d}">${t}</a>` : t; };
+
     const lines = ['🟦 <b>Новая заявка с сайта MakeBiz</b>', ''];
     lines.push(`<b>Сайт:</b> ${siteLabel}`);
-    lines.push(`<b>Страница:</b> ${pageName}` + (pageNames[slug] ? ` (${slug})` : ''));
-    if (formLabel) lines.push(`<b>Форма:</b> ${formLabel}`);
-    if (origin) lines.push(`<b>Перешёл с:</b> ${origin}`);
+    lines.push(`<b>Страница:</b> ${esc(pageName)}` + (pageNames[slug] ? ` (${esc(slug)})` : ''));
+    if (formLabel) lines.push(`<b>Форма:</b> ${esc(formLabel)}`);
+    if (origin) lines.push(`<b>Перешёл с:</b> ${esc(origin)}`);
     lines.push('');
 
     // остальные поля заявки
     const skip = { _gotcha: 1, form: 1, page: 1, from: 1, origin: 1 };
     for (const [k, v] of Object.entries(data)) {
       if (skip[k] || !v) continue;
-      lines.push(`<b>${titles[k] || k}:</b> ${String(v).slice(0, 1000)}`);
+      let val;
+      if (k === 'telegram') val = tgLink(v);
+      else if (k === 'phone') val = waLink(v);
+      else val = esc(String(v).slice(0, 1000));
+      lines.push(`<b>${titles[k] || k}:</b> ${val}`);
     }
     const text = lines.join('\n');
 
