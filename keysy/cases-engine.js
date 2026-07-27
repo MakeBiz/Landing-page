@@ -52,7 +52,7 @@
       total:'Всего кейсов: ', found:'Найдено: ',
       empty:'По такому фильтру кейсов пока нет. Попробуйте сбросить одну из меток.',
       was:'Было:', now:'Стало:', open:'Открыть кейс →',
-      blockTitle:'Кейсы: ', fresh:'свежие проекты', allLink:'Все кейсы →',
+      blockTitle:'Кейсы: ', blockTitleAll:'Наши кейсы', fresh:'свежие проекты', allLink:'Все кейсы →',
       back:'← Все кейсы', notFound:'Кейс не найден',
       nfText:'Возможно, ссылка устарела. ', nfLink:'Посмотреть все кейсы',
       lbTask:'Задача', hTask:'С чем пришёл клиент', lbSol:'Что мы сделали', hSol:'Решение',
@@ -69,7 +69,7 @@
       total:'Total cases: ', found:'Found: ',
       empty:'No cases match this filter yet. Try clearing one of the tags.',
       was:'Before:', now:'After:', open:'Open case →',
-      blockTitle:'Cases: ', fresh:'recent projects', allLink:'All cases →',
+      blockTitle:'Cases: ', blockTitleAll:'Our cases', fresh:'recent projects', allLink:'All cases →',
       back:'← All cases', notFound:'Case not found',
       nfText:'This link may be outdated. ', nfLink:'See all cases',
       lbTask:'Task', hTask:'What the client came with', lbSol:'What we did', hSol:'Solution',
@@ -164,12 +164,22 @@
 
   /* ---- блок под продуктом: свежие кейсы по направлению ---- */
   function initBlock(host){
-    var prod = host.getAttribute('data-product');
-    var list = cases().filter(function(c){ return prods(c).indexOf(prod)>=0; }).sort(byDateDesc).slice(0,4);
+    var slugsAttr = host.getAttribute('data-slugs'), list, head, link;
+    if(slugsAttr){
+      var bySlug={}; cases().forEach(function(c){ bySlug[c.slug]=c; });
+      list = slugsAttr.split(',').map(function(s){ return bySlug[s.trim()]; }).filter(Boolean).slice(0,4);
+      head = T.blockTitleAll;
+      link = u('/keysy');
+    } else {
+      var prod = host.getAttribute('data-product');
+      list = cases().filter(function(c){ return prods(c).indexOf(prod)>=0; }).sort(byDateDesc).slice(0,4);
+      head = T.blockTitle+esc(prodLabel(prod))+' <span>'+T.fresh+'</span>';
+      link = u('/keysy?product='+encodeURIComponent(prod));
+    }
     if(!list.length){ host.innerHTML=''; return; }
     host.innerHTML =
-      '<div class="mb-block-top"><h3>'+T.blockTitle+esc(prodLabel(prod))+' <span>'+T.fresh+'</span></h3>'+
-      '<a class="mb-alllink" href="'+u('/keysy?product='+encodeURIComponent(prod))+'">'+T.allLink+'</a></div>'+
+      '<div class="mb-block-top"><h3>'+head+'</h3>'+
+      '<a class="mb-alllink" href="'+link+'">'+T.allLink+'</a></div>'+
       '<div class="mb-mini4">'+list.map(card).join('')+'</div>';
   }
 
