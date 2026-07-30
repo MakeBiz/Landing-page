@@ -107,7 +107,7 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
   <div class="hin">
     <a href="/" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
     <nav class="nav">
-      <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
+      <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
     </nav>
     <div class="hr">
       <a href="/#contact" class="cta">Обсудить проект</a>
@@ -115,7 +115,7 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
     </div>
   </div>
   <div class="drop" id="drop"><nav>
-    <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
+    <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
   </nav></div>
 </header>
 <div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" src="/calculator-agents-app.html" title="Калькулятор стоимости AI-агентов" scrolling="no"></iframe></div>
@@ -136,7 +136,7 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
       <a href="/" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
       <div class="ftag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>
     </div>
-    <div class="fcol"><h4>Продукты</h4><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a></div>
+    <div class="fcol"><h4>Продукты</h4><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a></div>
     <div class="fcol"><h4>Разделы</h4><a href="/">Главная</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a></div>
     <div class="fcol"><h4>Правовое</h4><a href="/privacy">Политика конфиденциальности</a><a href="/privacy#cookie">Использование cookie</a><a href="/terms">Пользовательское соглашение</a></div>
   </div>
@@ -670,5 +670,96 @@ window.__mbYM=function(){
 })();
 
 </script>
+<!-- MakeBiz: кнопка наверх -->
+<script>
+(function(){
+  if(window.__mbTopDone) return; window.__mbTopDone=1;
+
+  var EN = /^\/en(\/|$)/.test(location.pathname);
+  var LBL = EN ? 'Back to top' : 'Наверх';
+  var SHOW = 420;
+
+  /* Фон страниц рисует отдельный слой, поэтому он прозрачный и по нему тему
+     не определить. Надёжнее смотреть на цвет текста: тёмный текст значит
+     светлую страницу, как в русской версии. */
+  function isLight(){
+    try{
+      var c = getComputedStyle(document.body || document.documentElement).color || '';
+      var m = /(\d+)[,\s]+(\d+)[,\s]+(\d+)/.exec(c);
+      if(!m) return false;
+      return (m[1]*0.299 + m[2]*0.587 + m[3]*0.114) < 140;
+    }catch(e){ return false; }
+  }
+
+  function style(){
+    if(document.getElementById('mbTopCSS')) return;
+    var s = document.createElement('style'); s.id = 'mbTopCSS';
+    s.textContent =
+      '#mbTop{position:fixed;right:14px;bottom:14px;z-index:2147481500;width:46px;height:46px;'
+      + 'border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;'
+      + 'padding:0;background:#0e1620;color:#eaf1fb;border:1px solid rgba(255,255,255,.18);'
+      + 'box-shadow:0 8px 24px rgba(0,0,0,.38);opacity:0;visibility:hidden;transform:translateY(10px);'
+      + 'transition:opacity .2s ease,transform .2s ease,visibility .2s ease}'
+      + '#mbTop.on{opacity:1;visibility:visible;transform:translateY(0)}'
+      + '#mbTop:hover{border-color:#16C15A;color:#16C15A}'
+      + '#mbTop:focus-visible{outline:2px solid #16C15A;outline-offset:3px}'
+      + '#mbTop.lt{background:#FFFFFF;color:#0B235F;border-color:rgba(11,35,95,.16);box-shadow:0 8px 24px rgba(11,35,95,.16)}'
+      + '#mbTop.lt:hover{border-color:#0C7A33;color:#0C7A33}'
+      + '@media(max-width:520px){#mbTop{width:42px;height:42px;right:12px}}'
+      + '@media(prefers-reduced-motion:reduce){#mbTop{transition:none}}';
+    (document.head || document.documentElement).appendChild(s);
+  }
+
+  var btn = null;
+
+  function make(){
+    if(document.getElementById('mbTop')) return document.getElementById('mbTop');
+    var b = document.createElement('button');
+    b.id = 'mbTop'; b.type = 'button'; b.title = LBL; b.setAttribute('aria-label', LBL);
+    b.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+      + 'stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+      + '<path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>';
+    b.onclick = function(){
+      try{ window.scrollTo({ top:0, left:0, behavior:'smooth' }); }
+      catch(e){ window.scrollTo(0,0); }
+      var h = document.querySelector('header, #mbm-header, .nav');
+      if(h && h.focus){ setTimeout(function(){ try{ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }catch(e){} }, 620); }
+    };
+    (document.body || document.documentElement).appendChild(b);
+    return b;
+  }
+
+  function place(){
+    if(!btn) return;
+    var ck = document.getElementById('mbCk');
+    var off = 14;
+    if(ck && ck.offsetHeight) off = ck.offsetHeight + 24;
+    btn.style.bottom = off + 'px';
+  }
+
+  function tick(){
+    if(!btn) return;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if(y > SHOW) btn.classList.add('on'); else btn.classList.remove('on');
+    place();
+  }
+
+  function boot(){
+    if(!document.body) return;
+    style();
+    btn = make();
+    if(isLight()) btn.classList.add('lt'); else btn.classList.remove('lt');
+    tick();
+  }
+
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+
+  window.addEventListener('scroll', tick, { passive:true });
+  window.addEventListener('resize', tick);
+  setInterval(function(){ if(!document.getElementById('mbTop')) boot(); else tick(); }, 900);
+})();
+</script>
+<!-- /MakeBiz: кнопка наверх -->
 </body>
 </html>

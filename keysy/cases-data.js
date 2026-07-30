@@ -20,7 +20,7 @@
    - products это НАПРАВЛЕНИЯ, что внедряли. Это МАССИВ: у одного проекта
      их может быть несколько. Пишите в квадратных скобках через запятую,
      например products:['crm','ai-agents','analytics'].
-     Ключи направлений: ai-agents, crm, analytics, itdev.
+     Ключи направлений: ai-agents, crm, analytics.
    - Кавычки внутри текста пишите обычные « », а не двойные ", иначе
      сломается строка. Апострофы тоже избегайте.
    - metric это одна крупная честная цифра для карточки, например 1 396.
@@ -47,7 +47,6 @@
      ai-agents     AI-агенты
      crm           CRM
      analytics     Аналитика
-     itdev         IT-доработки
 
    // ШАБЛОН начало (скопируйте вместе с фигурными скобками и запятой)
    {
@@ -70,7 +69,7 @@
 window.MB_CASES = [
 
   {
-    slug:'apartika-crm', ind:['nedvizhimost','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
+    slug:'apartika-crm', ind:['nedvizhimost','uslugi'], products:['crm','ai-agents','analytics'], date:'2026-07',
     title:'Апартика: аренда недвижимости <b>по всей России в одной CRM</b>',
     lead:'Собрали аренду квартир, апартаментов, дач и домов в единую систему: больше тысячи объектов по всей стране, автопостинг объявлений на Avito, Циан и другие площадки, AI-агент квалифицирует заявки и помогает с бронированием, а речевая аналитика Vector следит за вежливостью и эмпатией в звонках.',
     client:'Апартика, аренда недвижимости', region:'Россия', built:'CRM, AI-агент, интеграции с площадками, Vector, BI', term:'',
@@ -85,7 +84,7 @@ window.MB_CASES = [
   },
 
   {
-    slug:'unilin-crm', ind:['proizvodstvo','prodazhi'], products:['crm','analytics','itdev'], date:'2026-07',
+    slug:'unilin-crm', ind:['proizvodstvo','prodazhi'], products:['crm','analytics'], date:'2026-07',
     title:'Unilin: Битрикс24 для разъездных менеджеров <b>и аналитика по рынку</b>',
     lead:'Третий год развиваем и поддерживаем Unilin: коробочный Битрикс24 на их сервере, глубоко доработанный под региональные продажи, работа разъездных менеджеров с мобильного, интеграции с 1С и ERP и BI-аналитика по рынку, торговым точкам, продуктам и компании.',
     client:'Unilin, производитель напольных покрытий', region:'Россия', built:'Битрикс24 коробочный, мобильные процессы, 1С и ERP, BI', term:'',
@@ -100,7 +99,7 @@ window.MB_CASES = [
   },
 
   {
-    slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
+    slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics'], date:'2026-07',
     title:'СДЭК: корпоративный B2B на Битрикс24 <b>с агентами и аналитикой</b>',
     lead:'Второй год развиваем корпоративное направление СДЭК в России и Казахстане: коробочный Битрикс24 под ключ, интеграции с внутренними системами, AI-агенты и BI-дашборды по корпоративным клиентам.',
     client:'СДЭК, логистика и доставка', region:'Россия и Казахстан', built:'Битрикс24 коробочный, интеграции, агенты, BI', term:'',
@@ -116,7 +115,7 @@ window.MB_CASES = [
 
 
   {
-    slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents','itdev'], date:'2026-07',
+    slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents'], date:'2026-07',
     title:'HAVAL: речевая аналитика Vector <b>для сети автосалонов</b>',
     lead:'Слушаем звонки автосалонов по всей России: Vector проверяет более 300 000 минут разговоров в месяц по 40+ критериям, при падении качества ниже 70% подключает старшего менеджера, а результат сводит в BI-дашборды.',
     client:'HAVAL, мировой автопроизводитель', region:'Россия', built:'Vector, BI-дашборды и AI-агенты', term:'',

@@ -7,7 +7,7 @@
    - No long dashes anywhere. Commas, colons and periods only.
    - slug is the case address in latin letters, unique per case.
    - ind is the industry key (one of eight, see the Russian file).
-   - products is an ARRAY of direction keys: ai-agents, crm, analytics, itdev.
+   - products is an ARRAY of direction keys: ai-agents, crm, analytics.
    - Keep the slug identical to the Russian case so the language switch lands
      on the same case in the other language.
    ===================================================================== */
@@ -15,7 +15,7 @@
 window.MB_CASES = [
 
   {
-    slug:'apartika-crm', ind:['nedvizhimost','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
+    slug:'apartika-crm', ind:['nedvizhimost','uslugi'], products:['crm','ai-agents','analytics'], date:'2026-07',
     title:'Apartico: property rental <b>across Russia in one CRM</b>',
     lead:'We brought rental of apartments, serviced apartments, dachas and houses into one system: over a thousand objects across the country, auto posting of listings to Avito, Cian and other portals, an AI agent that qualifies enquiries and helps with booking, and Vector speech analytics that watches politeness and empathy on calls.',
     client:'Apartico, property rental', region:'Russia', built:'CRM, AI agent, portal integrations, Vector, BI', term:'',
@@ -30,7 +30,7 @@ window.MB_CASES = [
   },
 
   {
-    slug:'unilin-crm', ind:['proizvodstvo','prodazhi'], products:['crm','analytics','itdev'], date:'2026-07',
+    slug:'unilin-crm', ind:['proizvodstvo','prodazhi'], products:['crm','analytics'], date:'2026-07',
     title:'Unilin: Bitrix24 for field managers <b>and market analytics</b>',
     lead:'For a third year we develop and support Unilin: an on-premise Bitrix24 on their server, deeply customized for regional sales, field managers working from mobile, integrations with 1C and ERP, and BI analytics on the market, retail points, products and the company.',
     client:'Unilin, a flooring manufacturer', region:'Russia', built:'On-premise Bitrix24, mobile processes, 1C and ERP, BI', term:'',
@@ -45,7 +45,7 @@ window.MB_CASES = [
   },
 
   {
-    slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics','itdev'], date:'2026-07',
+    slug:'cdek-b2b', ind:['prodazhi','logistika','uslugi'], products:['crm','ai-agents','analytics'], date:'2026-07',
     title:'CDEK: corporate B2B on Bitrix24 <b>with agents and analytics</b>',
     lead:'For a second year we develop CDEK corporate direction in Russia and Kazakhstan: an on-premise Bitrix24 built to fit, integrations with internal systems, AI agents and BI dashboards for corporate clients.',
     client:'CDEK, logistics and delivery', region:'Russia and Kazakhstan', built:'On-premise Bitrix24, integrations, agents, BI', term:'',
@@ -61,7 +61,7 @@ window.MB_CASES = [
 
 
   {
-    slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents','itdev'], date:'2026-07',
+    slug:'haval-vector', ind:['prodazhi','uslugi','logistika'], products:['analytics','ai-agents'], date:'2026-07',
     title:'HAVAL: Vector speech analytics <b>for a dealer network</b>',
     lead:'We analyze dealership sales calls across Russia: Vector checks over 300,000 minutes of conversation a month against 40+ criteria, escalates to a senior manager when quality drops below 70%, and rolls everything up into BI dashboards.',
     client:'HAVAL, a global carmaker', region:'Russia', built:'Vector, BI dashboards and AI agents', term:'',

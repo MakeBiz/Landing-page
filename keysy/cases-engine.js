@@ -36,10 +36,10 @@
     ]
   };
   var PRODUCTS = {
-    ru: { 'ai-agents':'AI-агенты', 'crm':'CRM', 'analytics':'Аналитика', 'itdev':'IT-доработки' },
-    en: { 'ai-agents':'AI Agents', 'crm':'CRM', 'analytics':'Analytics', 'itdev':'IT development' }
+    ru: { 'ai-agents':'AI-агенты', 'crm':'CRM', 'analytics':'Аналитика' },
+    en: { 'ai-agents':'AI Agents', 'crm':'CRM', 'analytics':'Analytics' }
   };
-  var PRODUCT_ORDER = ['ai-agents','crm','analytics','itdev'];
+  var PRODUCT_ORDER = ['ai-agents','crm','analytics'];
 
   var SPHERE_LABEL = {}; SPHERES[LANG].forEach(function(s){ SPHERE_LABEL[s[0]] = s[1]; });
 
