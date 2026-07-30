@@ -84,22 +84,30 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
   <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/terms">
   <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/terms">
   <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/terms">
+<style>
+/* Оглавление документа и якоря разделов */
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.toc a{display:inline-flex;align-items:center;gap:7px;color:inherit;text-decoration:none;font-size:13.5px;line-height:1.2;padding:8px 13px;border-radius:100px;border:1px solid rgba(127,127,127,.34);background:rgba(127,127,127,.06);opacity:.86;transition:opacity .16s,border-color .16s}
+.toc a i{font-style:normal;font-weight:700;opacity:.7}
+.toc a:hover{opacity:1;border-color:rgba(127,127,127,.6)}
+.sec{scroll-margin-top:104px}
+</style>
 </head>
 <body>
 <div class="mesh"></div>
 <header>
   <div class="hin">
-    <a href="index.html" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+    <a href="/en" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
     <nav class="nav">
-      <a href="index.html">Home</a><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a><a href="keysy.html">Cases</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+      <a href="/en">Home</a><a href="/en/bitrix">Bitrix24</a><a href="/en/ai-agents">AI Agents</a><a href="/en/vector">AI Sales</a><a href="/en/intdoc">AI Procurement</a><a href="/en/vps">Servers</a><a href="/en/keysy">Cases</a><a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a>
     </nav>
     <div class="hr">
-      <a href="index.html#contact" class="cta">Discuss a project</a>
+      <a href="/en#contact" class="cta">Discuss a project</a>
       <button class="burger" id="burger" aria-label="Menu">☰</button>
     </div>
   </div>
   <div class="drop" id="drop"><nav>
-    <a href="index.html">Home</a><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a><a href="keysy.html">Cases</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+    <a href="/en">Home</a><a href="/en/bitrix">Bitrix24</a><a href="/en/ai-agents">AI Agents</a><a href="/en/vector">AI Sales</a><a href="/en/intdoc">AI Procurement</a><a href="/en/vps">Servers</a><a href="/en/keysy">Cases</a><a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a>
   </nav></div>
 </header>
 
@@ -114,37 +122,38 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <div class="wrap">
   <div class="card">
     <p class="intro">This Agreement governs the use of the MakeBiz website (hereinafter the Site). By using the Site, you accept the terms of this Agreement</p>
-    <div class="sec">
+    <nav class="toc" aria-label="Document sections"><a href="#s1"><i>1</i>General provisions</a><a href="#s2"><i>2</i>Services and information on the site</a><a href="#s3"><i>3</i>Requests and feedback</a><a href="#s4"><i>4</i>Intellectual property</a><a href="#s5"><i>5</i>Limitation of liability</a><a href="#s6"><i>6</i>Applicable law</a><a href="#s7"><i>7</i>Contacts</a></nav>
+<div class="sec" id="s1">
       <h2><span class="n">1</span>General provisions</h2>
       <p>The website is owned and operated by MakeBiz Technologies FZE LLC, a company registered with Ajman NuVentures Centre Free Zone, United Arab Emirates, registration number 2624215090888 (hereinafter the Company, we). The agreement may be updated; the current version is always posted on this page</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s2">
       <h2><span class="n">2</span>Services and information on the site</h2>
       <p>The Company provides services for implementing AI, CRM, BI analytics, and server infrastructure for business. The information and prices on the Site are for reference only and do not constitute a public offer. Exact terms are agreed upon individually</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s3">
       <h2><span class="n">3</span>Requests and feedback</h2>
-      <p>By submitting the form on the Site, you confirm the accuracy of the provided data and give consent to its processing in accordance with <a href="privacy.html">Privacy Policy</a>. We use this data only to process your request and to contact you</p>
+      <p>By submitting the form on the Site, you confirm the accuracy of the provided data and give consent to its processing in accordance with <a href="/en/privacy">Privacy Policy</a>. We use this data only to process your request and to contact you</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s4">
       <h2><span class="n">4</span>Intellectual property</h2>
       <p>All materials of the Site (texts, images, logo, design, program code) belong to the Company or are used on a lawful basis. Copying and use without written permission are not allowed</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s5">
       <h2><span class="n">5</span>Limitation of liability</h2>
       <p>The Site is provided as is. We strive for uninterrupted operation but do not guarantee the absence of technical failures. The Company is not liable for any losses arising from the use of or inability to use the Site</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s6">
       <h2><span class="n">6</span>Applicable law</h2>
       <p>This Agreement is governed by the laws of the country where the Company is registered (Russia and/or UAE). Disputes are resolved through negotiations, and if no agreement is reached - in accordance with the applicable law</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s7">
       <h2><span class="n">7</span>Contacts</h2>
       <p>For questions related to the Agreement and operation of the Site, contact us:</p>
       <div class="contact-box">
@@ -159,17 +168,17 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <footer>
   <div class="ftop">
     <div>
-      <a href="index.html" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+      <a href="/en" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
       <div class="ftag">An IT company from Dubai. We implement AI, CRM and BI analytics so your business loses less and grows faster.</div>
     </div>
-    <div class="fcol"><h4>Products</h4><a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a><a href="keysy.html">Cases</a></div>
-    <div class="fcol"><h4>Sections</h4><a href="index.html">Home</a><a href="keysy.html">Cases</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a></div>
-    <div class="fcol"><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="privacy.html#cookie">Cookie Usage</a><a href="terms.html">Terms of Use</a></div>
+    <div class="fcol"><h4>Products</h4><a href="/en/bitrix">Bitrix24</a><a href="/en/ai-agents">AI Agents</a><a href="/en/vector">AI Sales</a><a href="/en/intdoc">AI Procurement</a><a href="/en/vps">Servers</a><a href="/en/keysy">Cases</a></div>
+    <div class="fcol"><h4>Sections</h4><a href="/en">Home</a><a href="/en/keysy">Cases</a><a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="/en/privacy">Privacy Policy</a><a href="/en/privacy#cookie">Cookie Usage</a><a href="/en/terms">Terms of Use</a></div>
   </div>
   <div class="freq" style="max-width:1240px;margin:0 auto;padding:18px clamp(18px,4vw,40px) 0"><div style="max-width:70ch;font:300 12px/1.7 Oxygen;color:#5E6B80">MakeBiz Technologies FZE LLC, an Ajman NuVentures Centre Free Zone establishment. Registration number 2624215090888 of 18 May 2026, share capital AED 100,000<br>Amber Gem Tower, 26th Floor, Office CWS-1V-226413, Sheikh Khalifa Street, Ajman, United Arab Emirates</div></div>
   <div class="fbot">
     <div>© 2026 MakeBiz. All rights reserved.</div>
-    <div><a href="privacy.html" style="color:#8FA0B8">Privacy Policy</a></div>
+    <div><a href="/en/privacy" style="color:#8FA0B8">Privacy Policy</a></div>
   </div>
 </footer>
 
@@ -321,11 +330,11 @@ window.__mbYM=function(){
 (function(){
   if(window.__mbNavDone) return; window.__mbNavDone=true;
   function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
-  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  var RE=/^([a-z0-9-]+)\.html((?:\?[^#]*)?(?:#[\w-]+)?)$/i;
   function fix(){
     var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
     for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
-      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+      m=h.match(RE); if(m){ var t=(m[1].toLowerCase()==='index')?(P||'/'):(P+'/'+m[1]); a.setAttribute('href', t+(m[2]||'')); }
     }
   }
   fix();
@@ -399,9 +408,10 @@ window.__mbYM=function(){
   if(!window.gtag) window.gtag=gtag;
   gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
   var EN=/^\/en(\/|$)/.test(location.pathname);
+  var PRE=EN?'/en':(/^\/ru(\/|$)/.test(location.pathname)?'/ru':'');
   var T=EN
-    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:'/en/privacy.html#cookie',s:'Cookie settings'}
-    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:'/privacy.html#cookie',s:'Настройки cookie'};
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:PRE+'/privacy#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:PRE+'/privacy#cookie',s:'Настройки cookie'};
   function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
   function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
   function grant(){

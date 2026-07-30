@@ -84,22 +84,30 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
   <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/terms">
   <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/terms">
   <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/terms">
+<style>
+/* Оглавление документа и якоря разделов */
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.toc a{display:inline-flex;align-items:center;gap:7px;color:inherit;text-decoration:none;font-size:13.5px;line-height:1.2;padding:8px 13px;border-radius:100px;border:1px solid rgba(127,127,127,.34);background:rgba(127,127,127,.06);opacity:.86;transition:opacity .16s,border-color .16s}
+.toc a i{font-style:normal;font-weight:700;opacity:.7}
+.toc a:hover{opacity:1;border-color:rgba(127,127,127,.6)}
+.sec{scroll-margin-top:104px}
+</style>
 </head>
 <body>
 <div class="mesh"></div>
 <header>
   <div class="hin">
-    <a href="index.html" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+    <a href="/" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
     <nav class="nav">
-      <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+      <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
     </nav>
     <div class="hr">
-      <a href="index.html#contact" class="cta">Обсудить проект</a>
+      <a href="/#contact" class="cta">Обсудить проект</a>
       <button class="burger" id="burger" aria-label="Меню">☰</button>
     </div>
   </div>
   <div class="drop" id="drop"><nav>
-    <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+    <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
   </nav></div>
 </header>
 
@@ -114,37 +122,38 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <div class="wrap">
   <div class="card">
     <p class="intro">Настоящее Соглашение регулирует использование сайта MakeBiz (далее «Сайт»). Пользуясь Сайтом, вы принимаете условия этого Соглашения</p>
-    <div class="sec">
+    <nav class="toc" aria-label="Разделы документа"><a href="#s1"><i>1</i>Общие положения</a><a href="#s2"><i>2</i>Услуги и информация на сайте</a><a href="#s3"><i>3</i>Заявки и обратная связь</a><a href="#s4"><i>4</i>Интеллектуальная собственность</a><a href="#s5"><i>5</i>Ограничение ответственности</a><a href="#s6"><i>6</i>Применимое право</a><a href="#s7"><i>7</i>Контакты</a></nav>
+<div class="sec" id="s1">
       <h2><span class="n">1</span>Общие положения</h2>
       <p>Сайт принадлежит и управляется компанией MakeBiz Technologies FZE LLC, зарегистрированной в свободной экономической зоне Ajman NuVentures Centre, ОАЭ, регистрационный номер 2624215090888 (далее «Компания», «мы»). Соглашение может обновляться; актуальная версия всегда размещена на этой странице</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s2">
       <h2><span class="n">2</span>Услуги и информация на сайте</h2>
       <p>Компания оказывает услуги по внедрению AI, CRM, BI-аналитики и серверной инфраструктуры для бизнеса. Информация и цены на Сайте носят справочный характер и не являются публичной офертой. Точные условия согласуются индивидуально</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s3">
       <h2><span class="n">3</span>Заявки и обратная связь</h2>
-      <p>Отправляя форму на Сайте, вы подтверждаете достоверность указанных данных и даёте согласие на их обработку в соответствии с <a href="privacy.html">Политикой конфиденциальности</a>. Мы используем эти данные только для обработки вашего обращения и связи с вами</p>
+      <p>Отправляя форму на Сайте, вы подтверждаете достоверность указанных данных и даёте согласие на их обработку в соответствии с <a href="/privacy">Политикой конфиденциальности</a>. Мы используем эти данные только для обработки вашего обращения и связи с вами</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s4">
       <h2><span class="n">4</span>Интеллектуальная собственность</h2>
       <p>Все материалы Сайта (тексты, изображения, логотип, оформление, программный код) принадлежат Компании или используются на законном основании. Копирование и использование без письменного разрешения не допускается</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s5">
       <h2><span class="n">5</span>Ограничение ответственности</h2>
       <p>Сайт предоставляется «как есть». Мы стремимся к бесперебойной работе, но не гарантируем отсутствие технических сбоев. Компания не несёт ответственности за возможные убытки, связанные с использованием или невозможностью использования Сайта</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s6">
       <h2><span class="n">6</span>Применимое право</h2>
       <p>К настоящему Соглашению применяется законодательство страны регистрации Компании (Россия и/или ОАЭ). Спорные вопросы решаются путём переговоров, а при недостижении согласия - в соответствии с применимым законодательством</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s7">
       <h2><span class="n">7</span>Контакты</h2>
       <p>По вопросам, связанным с Соглашением и работой Сайта, свяжитесь с нами:</p>
       <div class="contact-box">
@@ -159,17 +168,17 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <footer>
   <div class="ftop">
     <div>
-      <a href="index.html" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
+      <a href="/" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>
       <div class="ftag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>
     </div>
-    <div class="fcol"><h4>Продукты</h4><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a></div>
-    <div class="fcol"><h4>Разделы</h4><a href="index.html">Главная</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a></div>
-    <div class="fcol"><h4>Правовое</h4><a href="privacy.html">Политика конфиденциальности</a><a href="privacy.html#cookie">Использование cookie</a><a href="terms.html">Пользовательское соглашение</a></div>
+    <div class="fcol"><h4>Продукты</h4><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/intdoc">AI-закупки</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a></div>
+    <div class="fcol"><h4>Разделы</h4><a href="/">Главная</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a></div>
+    <div class="fcol"><h4>Правовое</h4><a href="/privacy">Политика конфиденциальности</a><a href="/privacy#cookie">Использование cookie</a><a href="/terms">Пользовательское соглашение</a></div>
   </div>
   <div class="freq" style="max-width:1240px;margin:0 auto;padding:18px clamp(18px,4vw,40px) 0"><div style="max-width:70ch;font:300 12px/1.7 Oxygen;color:#5E6B80">MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre. Регистрационный номер 2624215090888 от 18 мая 2026 года, уставный капитал 100 000 AED<br>Amber Gem Tower, 26 этаж, офис CWS-1V-226413, улица Шейха Халифы, Аджман, Объединённые Арабские Эмираты</div></div>
   <div class="fbot">
     <div>© 2026 MakeBiz. Все права защищены.</div>
-    <div><a href="privacy.html" style="color:#8FA0B8">Политика конфиденциальности</a></div>
+    <div><a href="/privacy" style="color:#8FA0B8">Политика конфиденциальности</a></div>
   </div>
 </footer>
 
@@ -324,11 +333,11 @@ window.__mbYM=function(){
 (function(){
   if(window.__mbNavDone) return; window.__mbNavDone=true;
   function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
-  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  var RE=/^([a-z0-9-]+)\.html((?:\?[^#]*)?(?:#[\w-]+)?)$/i;
   function fix(){
     var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
     for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
-      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+      m=h.match(RE); if(m){ var t=(m[1].toLowerCase()==='index')?(P||'/'):(P+'/'+m[1]); a.setAttribute('href', t+(m[2]||'')); }
     }
   }
   fix();
@@ -403,9 +412,10 @@ window.__mbYM=function(){
   if(!window.gtag) window.gtag=gtag;
   gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
   var EN=/^\/en(\/|$)/.test(location.pathname);
+  var PRE=EN?'/en':(/^\/ru(\/|$)/.test(location.pathname)?'/ru':'');
   var T=EN
-    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:'/en/privacy.html#cookie',s:'Cookie settings'}
-    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:'/privacy.html#cookie',s:'Настройки cookie'};
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:PRE+'/privacy#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:PRE+'/privacy#cookie',s:'Настройки cookie'};
   function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
   function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
   function grant(){

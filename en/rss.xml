@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>MakeBiz Group News</title>
+<link>https://makebiztehnologies.com/en/news</link>
+<description>AI agents, CRM, automation and servers: practical notes from MakeBiz Group, Dubai.</description>
+<language>en</language>
+<lastBuildDate>Thu, 16 Jul 2026 09:00:00 +0400</lastBuildDate>
+<atom:link href="https://makebiztehnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>What an AI agent is and how it differs from a chatbot</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-16</link>
+<guid isPermaLink="false">makebiz-news-2026-07-16</guid>
+<pubDate>Thu, 16 Jul 2026 09:00:00 +0400</pubDate>
+<category>AI Agents</category>
+<description>A chat answers a question and forgets. An agent has a role, memory, and access to systems: it launches the process itself, drives it through to a result, and reports back. We will illustrate this using the example of a sales department, where eight roles hand off work along a chain</description>
+</item>
+<item>
+<title>Why AI forgets everything and how memory fixes it</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-15</link>
+<guid isPermaLink="false">makebiz-news-2026-07-15</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0400</pubDate>
+<category>AI Agents</category>
+<description>A regular assistant remembers only the conversation window. If you move memory into a database and return facts to the context, an agreement from a month ago stays with the agent</description>
+</item>
+<item>
+<title>Where the sales team loses a client during a call</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-14</link>
+<guid isPermaLink="false">makebiz-news-2026-07-14</guid>
+<pubDate>Tue, 14 Jul 2026 09:00:00 +0400</pubDate>
+<category>CRM and sales</category>
+<description>The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down. What analyzing all calls by script stage gives you</description>
+</item>
+<item>
+<title>Meetings happen, but decisions get lost: what to do about it</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-13</link>
+<guid isPermaLink="false">makebiz-news-2026-07-13</guid>
+<pubDate>Mon, 13 Jul 2026 09:00:00 +0400</pubDate>
+<category>Automation</category>
+<description>Transcription of an hour-long meeting, analysis, conclusions and tasks. How to make sure agreements land in the system automatically, rather than in the memory of one person</description>
+</item>
+<item>
+<title>Why AI makes things up, and how to solve it architecturally</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-12</link>
+<guid isPermaLink="false">makebiz-news-2026-07-12</guid>
+<pubDate>Sun, 12 Jul 2026 09:00:00 +0400</pubDate>
+<category>Artificial intelligence</category>
+<description>Hallucinations, the main risk of AI in sales and documents. We break down our approach: facts come only from a verified database, documents are assembled by a generator, not the model</description>
+</item>
+<item>
+<title>Supplier comparison: how to stop reconciling price lists by hand</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-11</link>
+<guid isPermaLink="false">makebiz-news-2026-07-11</guid>
+<pubDate>Sat, 11 Jul 2026 09:00:00 +0400</pubDate>
+<category>Automation</category>
+<description>Quotes arrive as PDFs, scans, and emails, while you have to compare them in Excel. What extracting price, lead time, and availability from any document delivers</description>
+</item>
+<item>
+<title>Why CRM data drifts apart, and how to fix it</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-10</link>
+<guid isPermaLink="false">makebiz-news-2026-07-10</guid>
+<pubDate>Fri, 10 Jul 2026 09:00:00 +0400</pubDate>
+<category>CRM and sales</category>
+<description>A classic problem: everyone writes in their own way. The solution is simple but not obvious - a single point of record through which all changes flow</description>
+</item>
+<item>
+<title>Services go down at night: how the system fixes itself</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-09</link>
+<guid isPermaLink="false">makebiz-news-2026-07-09</guid>
+<pubDate>Thu, 09 Jul 2026 09:00:00 +0400</pubDate>
+<category>IT and servers</category>
+<description>The watchdog checks services every couple of minutes, restarts anything that has gone down, and messages the owner if something did not come back up. Plus rollback to any point</description>
+</item>
+<item>
+<title>Company data and AI: what stays with you and what leaves</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-08</link>
+<guid isPermaLink="false">makebiz-news-2026-07-08</guid>
+<pubDate>Wed, 08 Jul 2026 09:00:00 +0400</pubDate>
+<category>Business</category>
+<description>The main business question before implementation. We break down what self-hosted means and why it changes the conversation about security</description>
+</item>
+<item>
+<title>One entry point, dozens of specialists: how the orchestrator works</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-07-07</link>
+<guid isPermaLink="false">makebiz-news-2026-07-07</guid>
+<pubDate>Tue, 07 Jul 2026 09:00:00 +0400</pubDate>
+<category>AI Agents</category>
+<description>A person writes as usual, and inside the Conductor understands the request and brings up the right roles. Why this is more convenient than ten different bots</description>
+</item>
+<item>
+<title>Where to start with AI implementation so you do not waste money</title>
+<link>https://makebiztehnologies.com/en/news#n-2026-06-30</link>
+<guid isPermaLink="false">makebiz-news-2026-06-30</guid>
+<pubDate>Tue, 30 Jun 2026 09:00:00 +0400</pubDate>
+<category>Business</category>
+<description>Not just install AI, but analyze the process and match roles to a specific pain point. Why diagnostics matter more than technology</description>
+</item>
+</channel>
+</rss>

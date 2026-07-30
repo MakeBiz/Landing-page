@@ -25,7 +25,7 @@
 <meta name="description" content="News about AI agents, artificial intelligence, CRM and sales, automation and IT. Short and to the point, every day.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="alternate" type="application/rss+xml" title="MakeBiz news" href="/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="MakeBiz news" href="/en/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
@@ -144,17 +144,22 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
   <link rel="alternate" hreflang="ru" href="https://makebiztehnologies.com/news">
   <link rel="alternate" hreflang="en" href="https://makebiztehnologies.com/en/news">
   <link rel="alternate" hreflang="x-default" href="https://makebiztehnologies.com/news">
+<style>
+/* Якоря анонсов: переход из RSS-ленты подсвечивает нужную карточку */
+a.lead,#feed .card{scroll-margin-top:100px}
+a.lead:target,#feed .card:target{outline:2px solid rgba(22,193,90,.9);outline-offset:3px;box-shadow:0 0 0 6px rgba(22,193,90,.12)}
+</style>
 </head>
 <body>
 <div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
 
 <header><div class="wrap nav">
-  <a class="logo" href="index.html">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></a>
+  <a class="logo" href="/en">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></a>
   <nav class="links">
-    <a href="index.html">Home</a><a href="ai-agents.html">AI-Agents</a>
-    <a href="vector.html">Vector</a><a href="intdoc.html">IntDoc</a><a href="bitrix.html">Bitrix24</a>
-    <a href="vps.html">VPS</a><a href="news.html" class="active">News</a>
-    <a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>
+    <a href="/en">Home</a><a href="/en/ai-agents">AI-Agents</a>
+    <a href="/en/vector">Vector</a><a href="/en/intdoc">IntDoc</a><a href="/en/bitrix">Bitrix24</a>
+    <a href="/en/vps">VPS</a><a href="/en/news" class="active">News</a>
+    <a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a>
   </nav>
   <div class="navcta"><a class="btn p" style="padding:10px 18px" href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Discuss a task</a></div>
 </div></header>
@@ -195,7 +200,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
 <section><div class="wrap">
   <div class="found" id="found"></div>
 
-  <a class="lead" id="lead" href="#" data-r="agents" data-date="2026-07-16">
+  <a class="lead" id="n-2026-07-16" href="#n-2026-07-16" data-r="agents" data-date="2026-07-16">
     <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.22),rgba(22,193,90,.04))">
       <div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI Agents</span>
     </div>
@@ -209,7 +214,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
 
   <div class="grid3" id="feed">
 
-    <a class="card" href="#" data-r="agents" data-date="2026-07-15">
+    <a id="n-2026-07-15" class="card" href="#n-2026-07-15" data-r="agents" data-date="2026-07-15">
       <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.2),rgba(22,193,90,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI Agents</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:var(--grnD);background:var(--r-agents)">AI Agents</span><span class="when">15 July</span></div>
         <h3>Why AI forgets everything and how memory fixes it</h3>
@@ -217,7 +222,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">2 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="crm" data-date="2026-07-14">
+    <a id="n-2026-07-14" class="card" href="#n-2026-07-14" data-r="crm" data-date="2026-07-14">
       <div class="tile" style="background:linear-gradient(150deg,rgba(76,141,255,.2),rgba(76,141,255,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-crm)">CRM and sales</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#04122E;background:var(--r-crm)">CRM and sales</span><span class="when">July 14</span></div>
         <h3>Where the sales team loses a client during a call</h3>
@@ -225,7 +230,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">3 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="auto" data-date="2026-07-13">
+    <a id="n-2026-07-13" class="card" href="#n-2026-07-13" data-r="auto" data-date="2026-07-13">
       <div class="tile" style="background:linear-gradient(150deg,rgba(0,194,199,.2),rgba(0,194,199,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-auto)">Automation</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#00201F;background:var(--r-auto)">Automation</span><span class="when">13 July</span></div>
         <h3>Meetings happen, but decisions get lost: what to do about it</h3>
@@ -233,7 +238,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">2 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="ai" data-date="2026-07-12">
+    <a id="n-2026-07-12" class="card" href="#n-2026-07-12" data-r="ai" data-date="2026-07-12">
       <div class="tile" style="background:linear-gradient(150deg,rgba(122,108,247,.2),rgba(122,108,247,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-ai)">Artificial intelligence</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#0A0820;background:var(--r-ai)">Artificial intelligence</span><span class="when">12 July</span></div>
         <h3>Why AI makes things up, and how to solve it architecturally</h3>
@@ -241,7 +246,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">4 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="auto" data-date="2026-07-11">
+    <a id="n-2026-07-11" class="card" href="#n-2026-07-11" data-r="auto" data-date="2026-07-11">
       <div class="tile" style="background:linear-gradient(150deg,rgba(0,194,199,.2),rgba(0,194,199,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-auto)">Automation</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#00201F;background:var(--r-auto)">Automation</span><span class="when">July 11</span></div>
         <h3>Supplier comparison: how to stop reconciling price lists by hand</h3>
@@ -249,7 +254,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">2 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="crm" data-date="2026-07-10">
+    <a id="n-2026-07-10" class="card" href="#n-2026-07-10" data-r="crm" data-date="2026-07-10">
       <div class="tile" style="background:linear-gradient(150deg,rgba(76,141,255,.2),rgba(76,141,255,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-crm)">CRM and sales</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#04122E;background:var(--r-crm)">CRM and sales</span><span class="when">10 July</span></div>
         <h3>Why CRM data drifts apart, and how to fix it</h3>
@@ -257,7 +262,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">3 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="it" data-date="2026-07-09">
+    <a id="n-2026-07-09" class="card" href="#n-2026-07-09" data-r="it" data-date="2026-07-09">
       <div class="tile" style="background:linear-gradient(150deg,rgba(224,161,0,.18),rgba(224,161,0,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-it)">IT and servers</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#1E1400;background:var(--r-it)">IT and servers</span><span class="when">9 July</span></div>
         <h3>Services go down at night: how the system fixes itself</h3>
@@ -265,7 +270,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">2 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="biz" data-date="2026-07-08">
+    <a id="n-2026-07-08" class="card" href="#n-2026-07-08" data-r="biz" data-date="2026-07-08">
       <div class="tile" style="background:linear-gradient(150deg,rgba(255,107,138,.18),rgba(255,107,138,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-biz)">Business</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#2A0710;background:var(--r-biz)">Business</span><span class="when">July 8</span></div>
         <h3>Company data and AI: what stays with you and what leaves</h3>
@@ -273,7 +278,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">3 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="agents" data-date="2026-07-07">
+    <a id="n-2026-07-07" class="card" href="#n-2026-07-07" data-r="agents" data-date="2026-07-07">
       <div class="tile" style="background:linear-gradient(150deg,rgba(22,193,90,.2),rgba(22,193,90,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-agents)">AI Agents</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:var(--grnD);background:var(--r-agents)">AI Agents</span><span class="when">7 July</span></div>
         <h3>One entry point, dozens of specialists: how the orchestrator works</h3>
@@ -281,7 +286,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
         <div class="rt">2 minutes</div></div>
     </a>
 
-    <a class="card" href="#" data-r="biz" data-date="2026-06-30">
+    <a id="n-2026-06-30" class="card" href="#n-2026-06-30" data-r="biz" data-date="2026-06-30">
       <div class="tile" style="background:linear-gradient(150deg,rgba(255,107,138,.18),rgba(255,107,138,.03))"><div class="grid"></div><span class="mark" style="color:var(--r-biz)">Business</span></div>
       <div class="body"><div class="meta"><span class="tagr" style="color:#2A0710;background:var(--r-biz)">Business</span><span class="when">30 June</span></div>
         <h3>Where to start with AI implementation so you do not waste money</h3>
@@ -311,7 +316,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
       <!-- LINK NEEDED -->
       <a class="si" href="#" title="LinkedIn" aria-label="LinkedIn" data-need="link">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="#EAF1FF"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.9c0-1.9-.03-4.3-2.6-4.3-2.6 0-3 2.04-3 4.15V24H8V8z"/></svg></a>
-      <a class="si" href="/rss.xml" title="RSS" aria-label="RSS">
+      <a class="si" href="/en/rss.xml" title="RSS" aria-label="RSS">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="#E0A100"><circle cx="5" cy="19" r="2.5"/><path d="M2 10.5v3.6c4.1 0 7.4 3.3 7.4 7.4H13C13 15.5 8.1 10.5 2 10.5zM2 3v3.6c8.2 0 14.8 6.6 14.8 14.8h3.6C20.4 11.3 12.1 3 2 3z"/></svg></a>
     </div>
   </div>
@@ -320,16 +325,16 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
 <footer><div class="wrap">
   <div class="fgrid">
     <div class="fcol"><div class="k">Products</div>
-      <a href="ai-agents.html">AI-Agents</a><a href="vector.html">Vector</a><a href="intdoc.html">IntDoc</a><a href="bitrix.html">Bitrix24</a><a href="vps.html">VPS</a></div>
+      <a href="/en/ai-agents">AI-Agents</a><a href="/en/vector">Vector</a><a href="/en/intdoc">IntDoc</a><a href="/en/bitrix">Bitrix24</a><a href="/en/vps">VPS</a></div>
     <div class="fcol"><div class="k">Company</div>
-      <a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a></div>
+      <a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a></div>
     <div class="fcol"><div class="k">Topics</div>
-      <a href="news.html?r=agents">AI Agents</a><a href="news.html?r=ai">Artificial intelligence</a><a href="news.html?r=crm">CRM and sales</a><a href="news.html?r=auto">Automation</a></div>
+      <a href="/en/news?r=agents">AI Agents</a><a href="/en/news?r=ai">Artificial intelligence</a><a href="/en/news?r=crm">CRM and sales</a><a href="/en/news?r=auto">Automation</a></div>
     <div class="fcol"><div class="k">We are online</div>
       <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram</a>
       <a href="#" data-need="link">X (Twitter)</a>
       <a href="#" data-need="link">LinkedIn</a>
-      <a href="/rss.xml">RSS</a></div>
+      <a href="/en/rss.xml">RSS</a></div>
     <div class="fcol"><div class="k">Contacts</div>
       <a href="tel:+971502620927">+971 50 262 0927</a><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">@Anton_MakeBiz</a><a>Dubai, UAE</a></div>
   </div>
@@ -340,7 +345,7 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
 (function(){
 var R='all', PER='all', MONTH='', Q='';
 var items=[].slice.call(document.querySelectorAll('#feed .card'));
-var lead=document.getElementById('lead');
+var lead=document.querySelector('a.lead');
 var found=document.getElementById('found'), empty=document.getElementById('empty');
 var TODAY=new Date('2026-07-16T00:00:00');
 function daysAgo(d){return Math.floor((TODAY-new Date(d+'T00:00:00'))/86400000)}
@@ -449,7 +454,7 @@ window.__mbYM=function(){
   var HTML =
 '<header id="mbm-header">'+
   '<div class="mbm-in">'+
-    '<a href="index.html" class="mbm-logo">MakeBiz'+
+    '<a href="/en" class="mbm-logo">MakeBiz'+
       '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
     '</a>'+
     '<nav class="mbm-nav">'+navLinks()+'</nav>'+
@@ -772,28 +777,28 @@ window.__mbYM=function(){
 '<footer id="mbf-footer"><div class="mbf-in">'+
   '<div class="mbf-top">'+
     '<div>'+
-      '<a href="index.html" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
+      '<a href="/en" class="mbf-logo">MakeBiz<span class="mbf-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span></a>'+
       '<div class="mbf-tag">An IT company from Dubai. We implement AI, CRM and BI analytics so your business loses less and grows faster.</div>'+
     '</div>'+
     '<div class="mbf-col"><h4>Products</h4>'+
-      '<a href="bitrix.html">Bitrix24</a><a href="ai-agents.html">AI Agents</a><a href="vector.html">AI Sales</a><a href="intdoc.html">AI Procurement</a><a href="vps.html">Servers</a>'+
+      '<a href="/en/bitrix">Bitrix24</a><a href="/en/ai-agents">AI Agents</a><a href="/en/vector">AI Sales</a><a href="/en/intdoc">AI Procurement</a><a href="/en/vps">Servers</a>'+
     '</div>'+
     '<div class="mbf-col"><h4>Sections</h4>'+
-      '<a href="index.html">Home</a><a href="keysy.html">Cases</a><a href="news.html">News</a><a href="partners.html">Partners</a><a href="contacts.html">Contacts</a>'+
+      '<a href="/en">Home</a><a href="/en/keysy">Cases</a><a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a>'+
     '</div>'+
     '<div class="mbf-col"><h4>Legal</h4>'+
-      '<a href="privacy.html">Privacy Policy</a><a href="privacy.html#cookie">Cookie Usage</a><a href="terms.html">Terms of Use</a>'+
+      '<a href="/en/privacy">Privacy Policy</a><a href="/en/privacy#cookie">Cookie Usage</a><a href="/en/terms">Terms of Use</a>'+
     '</div>'+
   '</div>'+
   '<div class="mbf-req" style="padding-top:18px;font:300 12px/1.7 Oxygen;color:#5E6B80">MakeBiz Technologies FZE LLC, an Ajman NuVentures Centre Free Zone establishment. Registration number 2624215090888 of 18 May 2026, share capital AED 100,000<br>Amber Gem Tower, 26th Floor, Office CWS-1V-226413, Sheikh Khalifa Street, Ajman, United Arab Emirates</div>'+
   '<div class="mbf-bottom">'+
     '<div>© 2026 MakeBiz. All rights reserved.</div>'+
-    '<div><a href="privacy.html" style="color:#8FA0B8;text-decoration:none">Privacy Policy</a></div>'+
+    '<div><a href="/en/privacy" style="color:#8FA0B8;text-decoration:none">Privacy Policy</a></div>'+
   '</div>'+
 '</div></footer>';
 
   var COOKIE =
-'<div id="mbf-cookie"><p>We use cookies for site functionality and web analytics. By continuing to use the site, you agree to this. <a href="privacy.html#cookie">Learn more</a></p>'+
+'<div id="mbf-cookie"><p>We use cookies for site functionality and web analytics. By continuing to use the site, you agree to this. <a href="/en/privacy#cookie">Learn more</a></p>'+
 '<button class="mbf-ok" id="mbf-cookie-ok">Accept</button></div>';
 
   // делегированный клик по «Accept» (переживает повторный рендер)
@@ -959,11 +964,11 @@ window.__mbYM=function(){
 (function(){
   if(window.__mbNavDone) return; window.__mbNavDone=true;
   function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
-  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  var RE=/^([a-z0-9-]+)\.html((?:\?[^#]*)?(?:#[\w-]+)?)$/i;
   function fix(){
     var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
     for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
-      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+      m=h.match(RE); if(m){ var t=(m[1].toLowerCase()==='index')?(P||'/'):(P+'/'+m[1]); a.setAttribute('href', t+(m[2]||'')); }
     }
   }
   fix();
@@ -1037,9 +1042,10 @@ window.__mbYM=function(){
   if(!window.gtag) window.gtag=gtag;
   gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
   var EN=/^\/en(\/|$)/.test(location.pathname);
+  var PRE=EN?'/en':(/^\/ru(\/|$)/.test(location.pathname)?'/ru':'');
   var T=EN
-    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:'/en/privacy.html#cookie',s:'Cookie settings'}
-    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:'/privacy.html#cookie',s:'Настройки cookie'};
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:PRE+'/privacy#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:PRE+'/privacy#cookie',s:'Настройки cookie'};
   function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
   function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
   function grant(){

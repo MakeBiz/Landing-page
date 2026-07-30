@@ -86,23 +86,31 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
 #cookiebar .ok{font:700 13px Oxygen;color:#fff;background:linear-gradient(135deg,var(--r2),var(--r));border:none;padding:10px 20px;border-radius:100px;cursor:pointer;white-space:nowrap}
 .hide{display:none!important}
 </style>
+<style>
+/* Оглавление документа и якоря разделов */
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.toc a{display:inline-flex;align-items:center;gap:7px;color:inherit;text-decoration:none;font-size:13.5px;line-height:1.2;padding:8px 13px;border-radius:100px;border:1px solid rgba(127,127,127,.34);background:rgba(127,127,127,.06);opacity:.86;transition:opacity .16s,border-color .16s}
+.toc a i{font-style:normal;font-weight:700;opacity:.7}
+.toc a:hover{opacity:1;border-color:rgba(127,127,127,.6)}
+.sec{scroll-margin-top:104px}
+</style>
 </head>
 <body style="background:transparent !important">
 <div class="mesh"></div>
 
 <header>
   <div class="hin">
-    <a href="index.html" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span></a>
+    <a href="/ru" class="logo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span></a>
     <nav class="nav">
-      <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+      <a href="/ru">Главная</a><a href="/ru/bitrix">Битрикс24</a><a href="/ru/ai-agents">AI-агенты</a><a href="/ru/vector">AI-продажи</a><a href="/ru/intdoc">AI-закупки</a><a href="/ru/vps">Сервера</a><a href="/ru/keysy">Кейсы</a><a href="/ru/news">Новости</a><a href="/ru/partners">Партнёрам</a><a href="/ru/contacts">Контакты</a>
     </nav>
     <div class="hr">
-      <a href="index.html#contact" class="cta">Обсудить проект</a>
+      <a href="/ru#contact" class="cta">Обсудить проект</a>
       <button class="burger" id="burger" aria-label="Меню">☰</button>
     </div>
   </div>
   <div class="drop" id="drop"><nav>
-    <a href="index.html">Главная</a><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a>
+    <a href="/ru">Главная</a><a href="/ru/bitrix">Битрикс24</a><a href="/ru/ai-agents">AI-агенты</a><a href="/ru/vector">AI-продажи</a><a href="/ru/intdoc">AI-закупки</a><a href="/ru/vps">Сервера</a><a href="/ru/keysy">Кейсы</a><a href="/ru/news">Новости</a><a href="/ru/partners">Партнёрам</a><a href="/ru/contacts">Контакты</a>
   </nav></div>
 </header>
 
@@ -117,21 +125,21 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
 <div class="wrap">
   <div class="card">
     <p class="intro">Эта Политика описывает, как MakeBiz (далее «мы», «Оператор») собирает, использует, хранит и защищает персональные данные посетителей сайта. Политика учитывает Федеральный закон РФ №152-ФЗ «О персональных данных» и Федеральный декрет-закон ОАЭ №45 от 2021 года о защите персональных данных (PDPL)</p>
-    <div class="note">Некоторые реквизиты Оператора ниже отмечены как <span class="ph">[плейсхолдеры]</span> - их нужно заменить на реальные данные юридического лица перед публикацией.</div>
 
-    <div class="sec">
+    <nav class="toc" aria-label="Разделы документа"><a href="#s1"><i>1</i>Оператор персональных данных</a><a href="#s2"><i>2</i>Какие данные мы собираем</a><a href="#s3"><i>3</i>Цели и правовое основание</a><a href="#cookie"><i>4</i>Cookie и веб-аналитика</a><a href="#s5"><i>5</i>Передача данных третьим лицам</a><a href="#s6"><i>6</i>Хранение и защита</a><a href="#s7"><i>7</i>Ваши права</a><a href="#s8"><i>8</i>Контакты по вопросам данных</a></nav>
+<div class="sec" id="s1">
       <h2><span class="n">1</span>Оператор персональных данных</h2>
-      <p>Оператор: <span class="ph">[Юридическое название]</span>, адрес: <span class="ph">[юридический адрес, эмират / город]</span>. Реквизиты: <span class="ph">ИНН [ИНН] · ОГРН/ОГРНИП [ОГРН]</span> (для России), <span class="ph">Trade License [№], [эмират]</span> (для ОАЭ)</p>
+      <p>Оператор: MakeBiz Technologies FZE LLC, компания, зарегистрированная в свободной экономической зоне Ajman NuVentures Centre (ANC Free Zone), Правительство эмирата Аджман, ОАЭ. Регистрационный номер и номер лицензии 2624215090888, дата регистрации 18 мая 2026 года. Юридический адрес: офис CWS-1V-226413, 26 этаж, Amber Gem Tower, улица Шейха Халифы, Аджман, Объединённые Арабские Эмираты</p>
       <p>По любым вопросам об обработке ваших данных вы можете связаться с нами через контакты, указанные в разделе 8 и в подвале сайта</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s2">
       <h2><span class="n">2</span>Какие данные мы собираем</h2>
       <p>Когда вы отправляете форму обратной связи или заявку, мы получаем указанные вами данные: имя, название компании, номер телефона, ник в Telegram, выбранный способ связи и текст вашего сообщения</p>
       <p>Автоматически при посещении сайта могут собираться: файлы cookie, IP-адрес, технические данные об устройстве и браузере, а также обезличенные данные веб-аналитики о том, как вы пользуетесь сайтом</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s3">
       <h2><span class="n">3</span>Цели и правовое основание</h2>
       <p>Мы обрабатываем данные только для того, чтобы обработать ваше обращение, связаться с вами и предоставить запрошенную услугу или информацию. Мы не используем данные для целей, не связанных с вашим запросом</p>
       <p>Правовое основание обработки - ваше согласие, которое вы даёте, отправляя форму на сайте. Согласие является свободным, конкретным, информированным и однозначным. Вы можете отозвать его в любой момент</p>
@@ -143,23 +151,23 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
       <p>Вы можете отключить cookie в настройках браузера, но часть функций сайта может работать некорректно. Настроить показ персонализированной рекламы Google можно в настройках рекламы Google</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s5">
       <h2><span class="n">5</span>Передача данных третьим лицам</h2>
       <p>Мы не продаём ваши данные. Для обработки обращений данные могут передаваться в наши рабочие инструменты: мессенджер Telegram (куда поступают заявки), CRM Bitrix24, сервисы веб-аналитики и хостинг (Vercel). Мы передаём только то, что необходимо для обработки вашего обращения</p>
       <p>Часть сервисов может обрабатывать данные на серверах за пределами вашей страны. Мы принимаем меры, чтобы такая передача соответствовала применимому законодательству (152-ФЗ, PDPL)</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s6">
       <h2><span class="n">6</span>Хранение и защита</h2>
       <p>Мы храним данные столько, сколько необходимо для обработки обращения и поддержания связи с вами, после чего удаляем или обезличиваем их. Применяем технические и организационные меры защиты: HTTPS-шифрование, ограничение доступа к данным, хранение только необходимого</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s7">
       <h2><span class="n">7</span>Ваши права</h2>
       <p>Вы можете запросить: доступ к своим данным, их исправление, удаление, ограничение или прекращение обработки, отзыв согласия, а также перенос данных (право по PDPL). Для этого напишите нам по контактам ниже - мы ответим в срок, установленный применимым законом</p>
     </div>
 
-    <div class="sec">
+    <div class="sec" id="s8">
       <h2><span class="n">8</span>Контакты по вопросам данных</h2>
       <p>По любым вопросам, связанным с обработкой ваших персональных данных, свяжитесь с нами:</p>
       <div class="contact-box">
@@ -175,16 +183,16 @@ footer{background:transparent;border-top:1px solid #E7E7E7;color:var(--mu);paddi
 <footer>
   <div class="ftop">
     <div>
-      <a href="index.html" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span></a>
+      <a href="/ru" class="flogo">MakeBiz<span class="badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#D4202A">CRM</span></span></a>
       <div class="ftag">IT-компания из Дубая. Внедряем AI, CRM и BI-аналитику, чтобы бизнес терял меньше и рос быстрее.</div>
     </div>
-    <div class="fcol"><h4>Продукты</h4><a href="bitrix.html">Битрикс24</a><a href="ai-agents.html">AI-агенты</a><a href="vector.html">AI-продажи</a><a href="intdoc.html">AI-закупки</a><a href="vps.html">Сервера</a><a href="keysy.html">Кейсы</a></div>
-    <div class="fcol"><h4>Разделы</h4><a href="index.html">Главная</a><a href="keysy.html">Кейсы</a><a href="news.html">Новости</a><a href="partners.html">Партнёрам</a><a href="contacts.html">Контакты</a></div>
-    <div class="fcol"><h4>Правовое</h4><a href="privacy.html">Политика конфиденциальности</a><a href="privacy.html#cookie">Использование cookie</a><a href="terms.html">Пользовательское соглашение</a></div>
+    <div class="fcol"><h4>Продукты</h4><a href="/ru/bitrix">Битрикс24</a><a href="/ru/ai-agents">AI-агенты</a><a href="/ru/vector">AI-продажи</a><a href="/ru/intdoc">AI-закупки</a><a href="/ru/vps">Сервера</a><a href="/ru/keysy">Кейсы</a></div>
+    <div class="fcol"><h4>Разделы</h4><a href="/ru">Главная</a><a href="/ru/keysy">Кейсы</a><a href="/ru/news">Новости</a><a href="/ru/partners">Партнёрам</a><a href="/ru/contacts">Контакты</a></div>
+    <div class="fcol"><h4>Правовое</h4><a href="/ru/privacy">Политика конфиденциальности</a><a href="/ru/privacy#cookie">Использование cookie</a><a href="/ru/terms">Пользовательское соглашение</a></div>
   </div>
   <div class="fbot">
     <div>© 2026 MakeBiz. Все права защищены.</div>
-    <div><a href="privacy.html" style="color:#6B7890">Политика конфиденциальности</a></div>
+    <div><a href="/ru/privacy" style="color:#6B7890">Политика конфиденциальности</a></div>
   </div>
 </footer>
 
@@ -253,11 +261,11 @@ window.__mbYM=function(){
 (function(){
   if(window.__mbNavDone) return; window.__mbNavDone=true;
   function pre(){var p=location.pathname; if(/^\/en(\/|$)/.test(p))return '/en'; if(/^\/ru(\/|$)/.test(p))return '/ru'; return '';}
-  var RE=/^([a-z0-9-]+\.html)(#[\w-]+)?$/i;
+  var RE=/^([a-z0-9-]+)\.html((?:\?[^#]*)?(?:#[\w-]+)?)$/i;
   function fix(){
     var P=pre(), as=document.getElementsByTagName('a'), i, a, h, m;
     for(i=0;i<as.length;i++){ a=as[i]; h=a.getAttribute('href'); if(!h) continue;
-      m=h.match(RE); if(m){ a.setAttribute('href', P+'/'+m[1]+(m[2]||'')); }
+      m=h.match(RE); if(m){ var t=(m[1].toLowerCase()==='index')?(P||'/'):(P+'/'+m[1]); a.setAttribute('href', t+(m[2]||'')); }
     }
   }
   fix();
@@ -387,9 +395,10 @@ window.__mbYM=function(){
   if(!window.gtag) window.gtag=gtag;
   gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
   var EN=/^\/en(\/|$)/.test(location.pathname);
+  var PRE=EN?'/en':(/^\/ru(\/|$)/.test(location.pathname)?'/ru':'');
   var T=EN
-    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:'/en/privacy.html#cookie',s:'Cookie settings'}
-    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:'/privacy.html#cookie',s:'Настройки cookie'};
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:PRE+'/privacy#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:PRE+'/privacy#cookie',s:'Настройки cookie'};
   function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
   function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
   function grant(){
