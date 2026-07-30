@@ -60,7 +60,8 @@
       factsHead:'Кратко о проекте', fClient:'Клиент', fRegion:'Регион',
       fDir:'Что внедряли', fBuilt:'Что построили', fTerm:'Срок',
       keyRes:'Главный результат', discuss:'Обсудить проект', more:'Похожие кейсы',
-      qO:'«', qC:'»', titleSuffix:' | Кейсы MakeBiz', ogSuffix:' | MakeBiz'
+      qO:'«', qC:'»', titleSuffix:' | Кейсы MakeBiz', ogSuffix:' | MakeBiz',
+      crumbHome:'Главная', crumbCases:'Кейсы'
     },
     en: {
       hubTitle:'Client <b>case studies</b>',
@@ -77,7 +78,8 @@
       factsHead:'Project at a glance', fClient:'Client', fRegion:'Region',
       fDir:'What we implemented', fBuilt:'What we built', fTerm:'Timeline',
       keyRes:'Key result', discuss:'Discuss a project', more:'Similar cases',
-      qO:'“', qC:'”', titleSuffix:' | MakeBiz Cases', ogSuffix:' | MakeBiz'
+      qO:'“', qC:'”', titleSuffix:' | MakeBiz Cases', ogSuffix:' | MakeBiz',
+      crumbHome:'Home', crumbCases:'Case studies'
     }
   })[LANG];
 
@@ -96,7 +98,7 @@
   /* ---- карточка кейса ---- */
   function card(c){
     var metric = c.metric ? '<div class="metric">'+esc(c.metric)+'</div>' : '<span></span>';
-    return '<a class="mb-card" href="'+u('/keysy/case?c='+encodeURIComponent(c.slug))+'">'+
+    return '<a class="mb-card" href="'+u('/keysy/'+encodeURIComponent(c.slug))+'">'+
       '<div class="mb-ctop"><span class="mb-tags" style="justify-content:flex-start">'+indTags(c,'n')+'</span>'+
         '<span class="mb-tags">'+prodTags(c)+'</span></div>'+
       '<h4>'+esc(plain(c.title))+'</h4>'+
@@ -204,8 +206,12 @@
     setMeta('description', plain(c.lead));
     setMeta('og:title', plain(c.title)+T.ogSuffix, true);
     setMeta('og:description', plain(c.lead), true);
-    setMeta('og:url', location.origin+location.pathname+location.search, true);
-    setLink('canonical', location.origin+location.pathname+location.search);
+    // Один кейс открывается по двум адресам: /keysy/имя и /keysy/case?c=имя.
+    // Канонический адрес всегда чистый, иначе поисковик видит две одинаковые страницы.
+    var canon = location.origin + u('/keysy/' + encodeURIComponent(c.slug));
+    setMeta('og:url', canon, true);
+    setLink('canonical', canon);
+    caseLd(c, canon);
 
     var quote = c.quote ? '<div class="mb-quote"><p>'+T.qO+esc(c.quote.text)+T.qC+'</p>'+
       '<div class="who"><span class="av"></span><span><b>'+esc(c.quote.who)+'</b><span>'+esc(c.quote.org)+'</span></span></div></div>' : '';
@@ -243,6 +249,66 @@
   }
 
   function fact(k,v){ return v ? '<div class="f"><span class="k">'+esc(k)+'</span><span class="v">'+esc(v)+'</span></div>' : ''; }
+  /* ---- микроразметка страницы кейса ----
+     Страница кейса собирается в браузере, поэтому и разметку для поисковика
+     собираем здесь же: описание статьи и цепочку разделов.
+     Копия /ru пока не размечается, чтобы не плодить дубли в поиске. */
+  function setLd(id, obj){
+    var el = document.getElementById(id);
+    if(!el){
+      el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(obj);
+  }
+
+  function caseLd(c, canon){
+    if(PRE === '/ru') return;
+    var site = location.origin;
+    var org = site + '/#organization';
+    var home = site + (PRE || '/');
+    var hub = site + u('/keysy');
+    var day = /^\d{4}-\d{2}$/.test(c.date || '') ? c.date + '-01' : (c.date || '');
+    var tags = inds(c).map(indLabel).concat(prods(c).map(prodLabel));
+
+    setLd('mb-ld-case', {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': canon + '#article',
+      'headline': plain(c.title).slice(0, 110),
+      'name': plain(c.title),
+      'description': plain(c.lead),
+      'url': canon,
+      'mainEntityOfPage': { '@type': 'WebPage', '@id': canon },
+      'inLanguage': LANG,
+      'datePublished': day || undefined,
+      'dateModified': day || undefined,
+      'image': site + '/favicon.png',
+      'keywords': tags.join(', '),
+      'author': { '@id': org },
+      'publisher': {
+        '@type': 'Organization',
+        '@id': org,
+        'name': 'MakeBiz Group',
+        'url': site + '/',
+        'logo': { '@type': 'ImageObject', 'url': site + '/favicon.png', 'width': 310, 'height': 310 }
+      }
+    });
+
+    setLd('mb-ld-crumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      '@id': canon + '#breadcrumb',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': T.crumbHome, 'item': home },
+        { '@type': 'ListItem', 'position': 2, 'name': T.crumbCases, 'item': hub },
+        { '@type': 'ListItem', 'position': 3, 'name': plain(c.title), 'item': canon }
+      ]
+    });
+  }
+
   function setLink(rel, href){ var el=document.head.querySelector('link[rel="'+rel+'"]'); if(!el){ el=document.createElement('link'); el.setAttribute('rel',rel); document.head.appendChild(el); } el.setAttribute('href', href); }
   function setMeta(name, content, isProp){
     var attr = isProp ? 'property' : 'name';

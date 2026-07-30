@@ -1,5 +1,8 @@
+# Сайт открыт для поисковиков целиком.
+# Служебные страницы закрыты не здесь, а тегом robots noindex
+# внутри самих страниц: запрет в этом файле мешает поисковику
+# зайти на страницу и прочитать этот тег.
 User-agent: *
 Allow: /
-Disallow: /calculator
 
 Sitemap: https://makebiztehnologies.com/sitemap.xml

@@ -96,8 +96,43 @@ export default async function handler(req, res) {
     if (origin) lines.push(`<b>Перешёл с:</b> ${esc(origin)}`);
     lines.push('');
 
+    // ==== источник заявки: реклама, utm-метки, переход извне ====
+    // Данные собирает /mb-attr.js на стороне сайта и кладёт в поле attr.
+    // first -первое касание (откуда человек узнал о нас),
+    // last  -последнее касание перед заявкой (по какой рекламе пришёл).
+    const attrLines = (() => {
+      const a = data.attr;
+      if (!a || typeof a !== 'object') return [];
+      const cut = (v, n) => esc(String(v == null ? '' : v).slice(0, n || 200));
+      const named = {
+        utm_source: 'Источник', utm_medium: 'Канал', utm_campaign: 'Кампания',
+        utm_content: 'Объявление', utm_term: 'Ключевое слово',
+        gclid: 'Google Ads (gclid)', gbraid: 'Google Ads (gbraid)', wbraid: 'Google Ads (wbraid)',
+        yclid: 'Яндекс Директ (yclid)', ymclid: 'Яндекс Маркет (ymclid)',
+        fbclid: 'Facebook (fbclid)', ttclid: 'TikTok (ttclid)', msclkid: 'Microsoft Ads (msclkid)',
+      };
+      const one = (t, label) => {
+        if (!t || typeof t !== 'object') return [];
+        const out = [];
+        for (const [k, ru] of Object.entries(named)) {
+          if (t[k]) out.push(`   ${ru}: ${cut(t[k])}`);
+        }
+        if (t.ref) out.push(`   Переход с: ${cut(t.ref, 300)}`);
+        if (t.path) out.push(`   Страница входа: ${cut(t.path, 300)}`);
+        if (t.ts) {
+          const d = new Date(t.ts);
+          if (!isNaN(d)) out.push(`   Когда: ${d.toISOString().slice(0, 16).replace('T', ' ')} UTC`);
+        }
+        return out.length ? [`<b>${label}:</b>`, ...out] : [];
+      };
+      const first = one(a.first, 'Первое касание');
+      const last = one(a.last, 'Последнее касание');
+      if (!first.length && !last.length) return [];
+      return ['', ...first, ...last];
+    })();
+
     // остальные поля заявки
-    const skip = { _gotcha: 1, form: 1, page: 1, from: 1, origin: 1 };
+    const skip = { _gotcha: 1, form: 1, page: 1, from: 1, origin: 1, attr: 1 };
     for (const [k, v] of Object.entries(data)) {
       if (skip[k] || !v) continue;
       let val;
@@ -106,6 +141,7 @@ export default async function handler(req, res) {
       else val = esc(String(v).slice(0, 1000));
       lines.push(`<b>${titles[k] || k}:</b> ${val}`);
     }
+    lines.push(...attrLines);
     const text = lines.join('\n');
 
     const tgResp = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
