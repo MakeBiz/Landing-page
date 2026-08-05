@@ -8,20 +8,20 @@
 <lastBuildDate>Wed, 05 Aug 2026 09:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
+<title>Why AI forgets everything and how memory fixes it</title>
+<link>https://makebiztehnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
+<guid isPermaLink="false">makebiz-news-2026-08-05-2-en</guid>
+<pubDate>Wed, 05 Aug 2026 10:00:00 +0400</pubDate>
+<category>AI Agents</category>
+<description>A regular assistant remembers only the conversation window. If you move memory into a database and return facts to the context, an agreement from a month ago stays with the agent</description>
+</item>
+<item>
 <title>What an AI agent is and how it differs from a chatbot</title>
 <link>https://makebiztehnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</link>
 <guid isPermaLink="false">makebiz-news-2026-08-05-en</guid>
 <pubDate>Wed, 05 Aug 2026 09:00:00 +0400</pubDate>
 <category>AI Agents</category>
 <description>A chat answers a question and forgets. An agent has a role, memory, and access to systems: it launches the process itself, drives it through to a result, and reports back. We will illustrate this using the example of a sales department, where eight roles hand off work along a chain</description>
-</item>
-<item>
-<title>Why AI forgets everything and how memory fixes it</title>
-<link>https://makebiztehnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
-<guid isPermaLink="false">makebiz-news-2026-07-15</guid>
-<pubDate>Wed, 15 Jul 2026 09:00:00 +0400</pubDate>
-<category>AI Agents</category>
-<description>A regular assistant remembers only the conversation window. If you move memory into a database and return facts to the context, an agreement from a month ago stays with the agent</description>
 </item>
 <item>
 <title>Where the sales team loses a client during a call</title>
