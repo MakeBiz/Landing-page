@@ -148,5 +148,102 @@ h1.art-title{font:700 clamp(1.7rem,3.6vw,2.5rem)/1.14 Oxygen;letter-spacing:-.03
   </div>
   <div class="fbot"><div>© 2026 MakeBiz. Все права защищены</div><div>Ленту ведут агенты MakeBiz</div></div>
 </div></footer>
+<script>window.__MBM_ACTIVE="news";</script>
+<script>
+/* MakeBiz - единое верхнее меню (шапка), как на остальных страницах сайта.
+   Классы mbm-* изолированы. Пути абсолютные, т.к. страница лежит в /news/. */
+(function(){
+  if (window.__mbmDone) return; window.__mbmDone = true;
+
+  var ACTIVE = window.__MBM_ACTIVE || '';
+  var NAV = [
+    ['/','Главная','index'],
+    ['/bitrix','Битрикс24','bitrix'],
+    ['/ai-agents','AI-агенты','ai-agents'],
+    ['/vector','AI-продажи','vector'],
+    ['/vps','Сервера','vps'],
+    ['/keysy','Кейсы','keysy'],
+    ['/news','Новости','news'],
+    ['/partners','Партнёрам','partners'],
+    ['/contacts','Контакты','contacts']
+  ];
+  function navLinks(){
+    return NAV.map(function(x){ return '<a href="'+x[0]+'"'+(x[2]===ACTIVE?' class="mbm-active"':'')+'>'+x[1]+'</a>'; }).join('');
+  }
+
+  var CSS = [
+"#mbm-header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}",
+"#mbm-header *{box-sizing:border-box}",
+"#mbm-header .mbm-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:16px;height:66px;padding:0 clamp(16px,4vw,40px)}",
+"#mbm-header .mbm-logo{display:flex;align-items:center;gap:8px;font:700 20px Oxygen;color:#fff;text-decoration:none;flex:none}",
+"#mbm-header .mbm-biz{color:#C8102E}",
+"#mbm-header .mbm-badges{display:flex;gap:3px;margin-left:2px}",
+"#mbm-header .mbm-badges span{font:700 8px Oxygen;color:#fff;padding:2px 4px;border-radius:4px;line-height:1}",
+"#mbm-header .mbm-nav{display:flex;gap:1px;margin-left:6px}",
+"#mbm-header .mbm-nav a{font:400 14px Oxygen;color:#B7C4D6;padding:8px 10px;border-radius:10px;text-decoration:none;white-space:nowrap;transition:color .15s,background .15s}",
+"#mbm-header .mbm-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}",
+"#mbm-header .mbm-nav a.mbm-active{color:#16C15A;font-weight:700}",
+"#mbm-header .mbm-right{margin-left:auto;display:flex;align-items:center;gap:14px;flex:none}",
+"#mbm-header .mbm-phone{font:700 14px Oxygen;color:#EAF1FF;white-space:nowrap}",
+"#mbm-header .mbm-cta{display:inline-flex;align-items:center;font:700 14px Oxygen;color:#fff;background:linear-gradient(135deg,#E4384D,#C8102E);padding:11px 18px;border-radius:100px;text-decoration:none;box-shadow:0 12px 26px -8px rgba(200,16,46,.6);white-space:nowrap}",
+"#mbm-header .mbm-burger{display:none;background:none;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:17px;width:40px;height:40px;border-radius:10px;cursor:pointer}",
+"#mbm-header .mbm-drop{display:none;border-top:1px solid rgba(255,255,255,.08);padding:8px clamp(16px,4vw,40px) 14px;background:rgba(7,9,13,.97)}",
+"#mbm-header .mbm-drop.mbm-open{display:block}",
+"#mbm-header .mbm-drop nav{display:flex;flex-direction:column;gap:2px}",
+"#mbm-header .mbm-drop a{font:400 15px Oxygen;color:#B7C4D6;padding:11px 8px;border-radius:8px;text-decoration:none}",
+"#mbm-header .mbm-drop a.mbm-active{color:#16C15A;font-weight:700}",
+"@media(max-width:1120px){#mbm-header .mbm-phone{display:none}}",
+"@media(max-width:1000px){#mbm-header .mbm-nav,#mbm-header .mbm-cta{display:none}#mbm-header .mbm-burger{display:block}}"
+  ].join("\n");
+
+  var HTML =
+'<header id="mbm-header">'+
+  '<div class="mbm-in">'+
+    '<a href="/" class="mbm-logo">MakeBiz'+
+      '<span class="mbm-badges"><span style="background:#0B4FD1">AI</span><span style="background:#0B4FD1">BI</span><span style="background:#C8102E">CRM</span></span>'+
+    '</a>'+
+    '<nav class="mbm-nav">'+navLinks()+'</nav>'+
+    '<div class="mbm-right">'+
+      '<a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener" class="mbm-cta">Обсудить проект</a>'+
+      '<button class="mbm-burger" id="mbm-burger" aria-label="Меню">☰</button>'+
+    '</div>'+
+  '</div>'+
+  '<div class="mbm-drop" id="mbm-drop"><nav>'+navLinks()+'</nav></div>'+
+'</header>';
+
+  document.addEventListener('click',function(e){
+    var t=e.target; if(!t) return;
+    if(t.id==='mbm-burger'){ var d=document.getElementById('mbm-drop'); if(d) d.classList.toggle('mbm-open'); return; }
+    if(t.closest && t.closest('#mbm-drop a')){ var d2=document.getElementById('mbm-drop'); if(d2) d2.classList.remove('mbm-open'); }
+  });
+
+  function ensureStyle(){ if(!document.getElementById('mbm-style')){ var st=document.createElement('style'); st.id='mbm-style'; st.textContent=CSS; document.head.appendChild(st); } }
+  function findOld(){
+    if (window.__MBM_OLD){ var o=document.querySelector(window.__MBM_OLD); if(o) return o; }
+    var mn=document.querySelector('[data-mbnav]');
+    if (mn){ var el=mn; while(el.parentElement && el.parentElement!==document.body) el=el.parentElement; return el; }
+    return document.querySelector('header:not(#mbm-header)');
+  }
+  function build(){
+    if (document.getElementById('mbm-header')) return true;
+    var old=findOld();
+    if (!old || !old.parentNode) return false;
+    ensureStyle();
+    var wrap=document.createElement('div'); wrap.innerHTML=HTML; var node=wrap.firstElementChild;
+    old.parentNode.insertBefore(node, old); old.remove();
+    return true;
+  }
+  var tries=0;
+  function attempt(){
+    if (findOld()){ if(build()) return; }
+    if (tries++ > 40){
+      if (!document.getElementById('mbm-header') && document.body){ ensureStyle(); var w=document.createElement('div'); w.innerHTML=HTML; document.body.insertBefore(w.firstElementChild, document.body.firstChild); }
+      return;
+    }
+    setTimeout(attempt,150);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',attempt); else attempt();
+})();
+</script>
 </body>
 </html>
