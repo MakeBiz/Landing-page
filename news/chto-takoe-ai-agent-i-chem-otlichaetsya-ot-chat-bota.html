@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru"><head>
+<!--mb-icons-->
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!--/mb-icons--><meta name="color-scheme" content="dark"><meta name="theme-color" content="#07090D">
+  <meta property="og:title" content="Что такое AI-агент и чем он отличается от чат-бота · MakeBiz">
+  <meta property="og:description" content="Чат отвечает на вопрос и забывает. Агент имеет роль, память и доступ к системам: сам запускает процесс, ведёт его до результата и отчитывается. Разбираем на примере отдела продаж, где восемь ролей передают работу по цепочке.">
+  <meta property="og:url" content="https://makebiztehnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MakeBiz Group">
+  <meta property="og:image" content="https://makebiztehnologies.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://makebiztehnologies.com/og-image.jpg">
+<meta charset="utf-8">
+<!--mb-ld--><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://makebiztehnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://makebiztehnologies.com/"},{"@type":"ListItem","position":2,"name":"Новости","item":"https://makebiztehnologies.com/news"},{"@type":"ListItem","position":3,"name":"Что такое AI-агент и чем он отличается от чат-бота","item":"https://makebiztehnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"}]}</script><!--/mb-ld-->
+<!--mb-attr--><script src="/mb-attr.js"></script><!--/mb-attr-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Что такое AI-агент и чем он отличается от чат-бота · MakeBiz</title>
+<meta name="description" content="Чат отвечает на вопрос и забывает. Агент имеет роль, память и доступ к системам: сам запускает процесс, ведёт его до результата и отчитывается. Разбираем на примере отдела продаж, где восемь ролей передают работу по цепочке.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://makebiztehnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--txt:#EAF1FF;--mut:#93A4B8;--grn:#16C15A;--grnL:#4FE07F;--grnD:#052012;--red:#C8102E;--redL:#FF3B57;--line:rgba(255,255,255,.10);--glass:rgba(255,255,255,.05);
+--r-agents:#16C15A;--r-ai:#7A6CF7;--r-crm:#4C8DFF;--r-auto:#00C2C7;--r-it:#E0A100;--r-biz:#FF6B8A}
+*{box-sizing:border-box;margin:0}
+body{font-family:Oxygen,system-ui,sans-serif;background:transparent;color:var(--txt);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.pagebg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:linear-gradient(180deg,#07090D,#0A0E12 48%,#07090D)}
+.pagebg b{position:absolute;border-radius:50%;filter:blur(120px)}
+.pagebg .p1{width:680px;height:680px;background:radial-gradient(circle,rgba(200,16,46,.26),transparent 70%);top:-8%;left:-10%;animation:mbA 32s ease-in-out infinite alternate}
+.pagebg .p2{width:620px;height:620px;background:radial-gradient(circle,rgba(22,193,90,.28),transparent 70%);top:36%;right:-12%;animation:mbB 36s ease-in-out infinite alternate}
+.pagebg .p3{width:580px;height:580px;background:radial-gradient(circle,rgba(12,140,63,.36),transparent 70%);top:74%;left:14%;animation:mbA 40s ease-in-out infinite alternate}
+@keyframes mbA{to{transform:translate(60px,-40px) scale(1.14)}}@keyframes mbB{to{transform:translate(-50px,50px) scale(1.1)}}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px);position:relative;z-index:1}
+header{position:sticky;top:0;z-index:70;background:rgba(7,9,13,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:16px;height:60px}
+.logo{display:flex;align-items:center;gap:8px;font:700 19px Oxygen}.logo b{color:var(--redL)}
+.logo .tag{display:flex;gap:3px}.logo .tag span{font:700 8px Oxygen;color:#fff;background:var(--red);padding:2px 4px;border-radius:4px}.logo .tag span.b{background:var(--grn)}
+nav.links{display:flex;gap:1px;margin-left:8px}
+nav.links a{font:400 13px Oxygen;color:var(--mut);padding:7px 9px;border-radius:8px;transition:color .15s}
+nav.links a:hover{color:#fff}nav.links a.active{color:var(--grnL);font-weight:700}
+.navcta{margin-left:auto;display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 14px Oxygen;padding:12px 22px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:transform .18s}
+.btn.p{background:linear-gradient(135deg,var(--grnL),var(--grn));color:var(--grnD);box-shadow:0 12px 26px -8px rgba(22,193,90,.45)}.btn.p:hover{transform:translateY(-2px)}
+@media(max-width:1150px){nav.links{display:none}}
+footer{border-top:1px solid var(--line);margin-top:44px;padding:34px 0}
+.fgrid{display:flex;gap:30px;flex-wrap:wrap;justify-content:space-between}
+.fcol .k{font:700 10.5px Oxygen;letter-spacing:.12em;text-transform:uppercase;color:#5E7183;margin-bottom:10px}
+.fcol a{display:block;font:300 13.5px Oxygen;color:var(--mut);padding:3px 0;transition:color .15s}
+.fcol a:hover{color:#fff}
+.fbot{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:300 13px Oxygen;color:#5E7183}
+
+/* статья */
+.crumbs{font:300 12.5px Oxygen;color:#5E7183;margin:22px 0 0}
+.crumbs a{color:var(--mut)}.crumbs a:hover{color:#fff}
+.artwrap{max-width:760px;margin:0 auto;padding:22px 0 10px}
+.meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tagr{font:700 10.5px Oxygen;padding:4px 9px;border-radius:100px;color:var(--grnD);background:var(--r-agents)}
+.when{font:300 12px Oxygen;color:#5E7183}
+.rt{font:300 12px Oxygen;color:#5E7183}
+.dot{width:3px;height:3px;border-radius:50%;background:#5E7183}
+h1.art-title{font:700 clamp(1.7rem,3.6vw,2.5rem)/1.14 Oxygen;letter-spacing:-.03em;margin:14px 0 0}
+.cover{margin:26px 0 8px;border-radius:22px;overflow:hidden;border:1px solid var(--line)}
+.cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.cover-ph{aspect-ratio:16/9;background:linear-gradient(150deg,rgba(22,193,90,.18),rgba(255,255,255,.02));position:relative;display:grid;place-items:center;text-align:center;padding:20px}
+.cover-ph .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:26px 26px}
+.cover-ph-label{position:relative;font:700 15px Oxygen;color:#8FE7AE}
+.cover-ph-label small{display:block;margin-top:6px;font:300 12.5px Oxygen;color:var(--mut);font-weight:300}
+.art{padding:8px 0 0}
+.art p{font:300 16.5px/1.78 Oxygen;color:#D7E1EF;margin:0 0 20px}
+.art p:last-child{margin-bottom:0}
+.artcta{margin-top:38px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:linear-gradient(120deg,rgba(22,193,90,.10),rgba(255,255,255,.02));border:1px solid rgba(22,193,90,.3);border-radius:18px;padding:22px 24px}
+.artcta b{font:700 15px Oxygen;display:block;margin-bottom:4px}
+.artcta p{font:300 13px Oxygen;color:var(--mut);margin:0}
+.artcta .btn{margin-left:auto}
+@media(max-width:560px){.artcta{flex-direction:column;align-items:flex-start}.artcta .btn{margin-left:0}}
+.back{display:inline-flex;align-items:center;gap:6px;font:700 12.5px Oxygen;color:var(--mut);margin-top:36px}
+.back:hover{color:#fff}
+</style>
+</head>
+<body>
+<div class="pagebg" aria-hidden="true"><b class="p1"></b><b class="p2"></b><b class="p3"></b></div>
+
+<header><div class="wrap nav">
+  <a class="logo" href="/">Make<b>Biz</b><span class="tag"><span>AI</span><span class="b">BI</span><span>CRM</span></span></a>
+  <nav class="links">
+    <a href="/">Главная</a><a href="/ai-agents">AI-Agents</a>
+    <a href="/vector">Vector</a><a href="/bitrix">Битрикс24</a>
+    <a href="/vps">VPS</a><a href="/news" class="active">Новости</a>
+    <a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
+  </nav>
+  <div class="navcta"><a class="btn p" style="padding:10px 18px" href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Обсудить задачу</a></div>
+</div></header>
+
+<article class="wrap">
+  <div class="crumbs"><a href="/">Главная</a> / <a href="/news">Новости</a> / Что такое AI-агент и чем он отличается от чат-бота</div>
+
+  <div class="artwrap">
+    <div class="meta">
+      <span class="tagr">AI-агенты</span>
+      <span class="when">5 августа 2026</span>
+      <span class="dot"></span>
+      <span class="rt">Читать 3 минуты</span>
+    </div>
+    <h1 class="art-title">Что такое AI-агент и чем он отличается от чат-бота</h1>
+
+    <div class="cover">
+      <!-- Место для обложки. Как пришлёте файл картинки, эта заглушка заменяется на <img src="..." alt="..."> -->
+      <div class="cover-ph">
+        <div class="grid"></div>
+        <span class="cover-ph-label">Здесь будет обложка статьи<small>Заменим на присланный визуал (сравнение чат-бота и AI-агента)</small></span>
+      </div>
+    </div>
+
+    <div class="art">
+      <p>Чат-бот и AI-агент со стороны похожи, оба отвечают текстом в окне. Но в работе это два разных инструмента, и путаница между ними стоит компаниям денег и времени. Бот отвечает на вопрос и тут же его забывает. Агент берет задачу и доводит ее до результата, сам</p>
+      <p>Разница держится на трех вещах: роль, память и доступ к системам. У бота памяти нет, каждый диалог для него начинается с чистого листа, поэтому дальше одного ответа он не уходит. У агента есть роль (например, обработчик заявок), память о клиенте и прошлых шагах, и доступ к рабочим системам: CRM, почте, телефонии, таблицам. Он не просто отвечает, а запускает процесс, ведет его по шагам, принимает решения по ходу и отчитывается о результате</p>
+      <p>На практике одного агента на все не хватает, он захлебнется. Поэтому сложную задачу разбивают на роли и выстраивают в цепочку. Понятнее всего на отделе продаж: один агент принимает заявку и квалифицирует лид, второй заводит сделку в CRM и заполняет карточку, третий готовит ответ и коммерческое предложение, четвертый ставит менеджеру задачу со сроком, пятый следит за просрочками и напоминает. Оркестратор передает работу по цепочке как конвейер, где у каждого своя операция и никто не держит все в одной голове</p>
+      <p>Что это дает в цифрах процесса. Заявка перестает лежать в почте до утра, первый ответ клиенту уходит за секунды, а не через час, когда он уже ушел к конкуренту. Данные сразу падают в CRM без ручного переноса, а значит без потерянных контактов и забытых договоренностей. Менеджер разгружен от рутины и занимается сделками, где реально нужен человек. Там где раньше тихо терялась часть входящих, теперь фиксируется и ведется каждая</p>
+      <p>Важно не продавать это как магию. Агент работает ровно настолько, насколько чисты данные и понятен процесс под ним. Если в CRM бардак, половина полей пустая, а регламента нет, агент просто быстрее размножит этот бардак и добавит уверенности к неверным данным. Поэтому нормальное внедрение почти всегда начинается не с агента, а с аудита процесса и порядка в данных</p>
+      <p>Как понять что нужно именно вам. Если задача сводится к ответам на частые вопросы, хватит и обычного бота, не переплачивайте за агента. Если же нужно, чтобы система сама вела процесс от заявки до сделки и отвечала за результат, это уже работа для агента или для команды агентов. С этого вопроса и стоит начинать, а не с выбора модели или красивой демо</p>
+    </div>
+
+    <div class="artcta">
+      <div><b>Хотите так же в своём отделе продаж?</b><p>Разберём процесс и подберём роли под вашу задачу</p></div>
+      <a class="btn p" href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Обсудить задачу</a>
+    </div>
+
+    <a class="back" href="/news">← Все новости</a>
+  </div>
+</article>
+
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div class="fcol"><div class="k">Продукты</div>
+      <a href="/ai-agents">AI-Agents</a><a href="/vector">Vector</a><a href="/bitrix">Битрикс24</a><a href="/vps">VPS</a></div>
+    <div class="fcol"><div class="k">Компания</div>
+      <a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a></div>
+    <div class="fcol"><div class="k">Мы в сети</div>
+      <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">Telegram</a>
+      <a href="/rss.xml">RSS</a></div>
+    <div class="fcol"><div class="k">Контакты</div>
+      <a href="tel:+971502620927">+971 50 262 0927</a><a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener">@Anton_MakeBiz</a><a>Дубай, ОАЭ</a></div>
+  </div>
+  <div class="fbot"><div>© 2026 MakeBiz. Все права защищены</div><div>Ленту ведут агенты MakeBiz</div></div>
+</div></footer>
+</body>
+</html>
