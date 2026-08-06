@@ -5,23 +5,23 @@
 <link>https://makebiztehnologies.com/news</link>
 <description>AI-агенты, CRM, автоматизация и серверы: разборы и практика от MakeBiz Group, Дубай.</description>
 <language>ru</language>
-<lastBuildDate>Wed, 05 Aug 2026 09:00:00 +0400</lastBuildDate>
+<lastBuildDate>Thu, 16 Jul 2026 09:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
-<title>Почему AI забывает всё, и как это чинится памятью</title>
-<link>https://makebiztehnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
-<guid isPermaLink="false">makebiz-news-2026-08-05-2</guid>
-<pubDate>Wed, 05 Aug 2026 10:00:00 +0400</pubDate>
-<category>AI-агенты</category>
-<description>Обычный ассистент помнит только окно разговора. Если вынести память в базу и возвращать факты в контекст, договорённость месячной давности остаётся с агентом</description>
-</item>
-<item>
 <title>Что такое AI-агент и чем он отличается от чат-бота</title>
-<link>https://makebiztehnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</link>
-<guid isPermaLink="false">makebiz-news-2026-08-05</guid>
-<pubDate>Wed, 05 Aug 2026 09:00:00 +0400</pubDate>
+<link>https://makebiztehnologies.com/news#n-2026-07-16</link>
+<guid isPermaLink="false">makebiz-news-2026-07-16</guid>
+<pubDate>Thu, 16 Jul 2026 09:00:00 +0400</pubDate>
 <category>AI-агенты</category>
 <description>Чат отвечает на вопрос и забывает. Агент имеет роль, память и доступ к системам: сам запускает процесс, ведёт его до результата и отчитывается. Разбираем на примере отдела продаж, где восемь ролей передают работу по цепочке</description>
+</item>
+<item>
+<title>Почему AI забывает всё, и как это чинится памятью</title>
+<link>https://makebiztehnologies.com/news#n-2026-07-15</link>
+<guid isPermaLink="false">makebiz-news-2026-07-15</guid>
+<pubDate>Wed, 15 Jul 2026 09:00:00 +0400</pubDate>
+<category>AI-агенты</category>
+<description>Обычный ассистент помнит только окно разговора. Если вынести память в базу и возвращать факты в контекст, договорённость месячной давности остаётся с агентом</description>
 </item>
 <item>
 <title>Где отдел продаж теряет клиента внутри звонка</title>

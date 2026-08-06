@@ -7,7 +7,13 @@
     { "source": "/servers", "destination": "/vps", "permanent": true },
     { "source": "/en/openclaw", "destination": "/en/ai-agents", "permanent": true },
     { "source": "/en/company", "destination": "/en", "permanent": true },
-    { "source": "/en/servers", "destination": "/en/vps", "permanent": true }
+    { "source": "/en/servers", "destination": "/en/vps", "permanent": true },
+    { "source": "/keysy/pink-rabbit-agent", "destination": "/keysy", "permanent": true },
+    { "source": "/en/keysy/pink-rabbit-agent", "destination": "/en/keysy", "permanent": true },
+    { "source": "/ru/keysy/pink-rabbit-agent", "destination": "/keysy", "permanent": true },
+    { "source": "/keysy/case", "destination": "/keysy", "permanent": true },
+    { "source": "/en/keysy/case", "destination": "/en/keysy", "permanent": true },
+    { "source": "/ru/keysy/case", "destination": "/keysy", "permanent": true }
   ],
   "rewrites": [
     { "source": "/keysy/:slug", "destination": "/keysy/case" },
