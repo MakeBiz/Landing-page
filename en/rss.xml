@@ -5,8 +5,16 @@
 <link>https://makebiztehnologies.com/en/news</link>
 <description>AI agents, CRM, automation and servers: practical notes from MakeBiz Group, Dubai.</description>
 <language>en</language>
-<lastBuildDate>Wed, 05 Aug 2026 10:00:00 +0400</lastBuildDate>
+<lastBuildDate>Mon, 10 Aug 2026 09:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Where the sales team loses a client during a call</title>
+<link>https://makebiztehnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</link>
+<guid isPermaLink="false">makebiz-news-2026-08-10-en</guid>
+<pubDate>Mon, 10 Aug 2026 09:00:00 +0400</pubDate>
+<category>CRM and sales</category>
+<description>The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down. What analyzing all calls by script stage gives you</description>
+</item>
 <item>
 <title>Why AI forgets everything and how memory fixes it</title>
 <link>https://makebiztehnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
@@ -22,14 +30,6 @@
 <pubDate>Wed, 05 Aug 2026 09:00:00 +0400</pubDate>
 <category>AI Agents</category>
 <description>A chat answers a question and forgets. An agent has a role, memory, and access to systems: it launches the process itself, drives it through to a result, and reports back. We will illustrate this using the example of a sales department, where eight roles hand off work along a chain</description>
-</item>
-<item>
-<title>Where the sales team loses a client during a call</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-14</link>
-<guid isPermaLink="false">makebiz-news-2026-07-14</guid>
-<pubDate>Tue, 14 Jul 2026 09:00:00 +0400</pubDate>
-<category>CRM and sales</category>
-<description>The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down. What analyzing all calls by script stage gives you</description>
 </item>
 <item>
 <title>Meetings happen, but decisions get lost: what to do about it</title>

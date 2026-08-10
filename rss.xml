@@ -5,8 +5,16 @@
 <link>https://makebiztehnologies.com/news</link>
 <description>AI-агенты, CRM, автоматизация и серверы: разборы и практика от MakeBiz Group, Дубай.</description>
 <language>ru</language>
-<lastBuildDate>Wed, 05 Aug 2026 10:00:00 +0400</lastBuildDate>
+<lastBuildDate>Mon, 10 Aug 2026 09:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Где отдел продаж теряет клиента внутри звонка</title>
+<link>https://makebiztehnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</link>
+<guid isPermaLink="false">makebiz-news-2026-08-10</guid>
+<pubDate>Mon, 10 Aug 2026 09:00:00 +0400</pubDate>
+<category>CRM и продажи</category>
+<description>Проблема не в количестве звонков, а в том, что бизнес не слышит, на каком этапе ломается разговор. Что даёт разбор всех звонков по этапам скрипта</description>
+</item>
 <item>
 <title>Почему AI забывает всё, и как это чинится памятью</title>
 <link>https://makebiztehnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
@@ -22,14 +30,6 @@
 <pubDate>Wed, 05 Aug 2026 09:00:00 +0400</pubDate>
 <category>AI-агенты</category>
 <description>Чат отвечает на вопрос и забывает. Агент имеет роль, память и доступ к системам: сам запускает процесс, ведёт его до результата и отчитывается. Разбираем на примере отдела продаж, где восемь ролей передают работу по цепочке</description>
-</item>
-<item>
-<title>Где отдел продаж теряет клиента внутри звонка</title>
-<link>https://makebiztehnologies.com/news#n-2026-07-14</link>
-<guid isPermaLink="false">makebiz-news-2026-07-14</guid>
-<pubDate>Tue, 14 Jul 2026 09:00:00 +0400</pubDate>
-<category>CRM и продажи</category>
-<description>Проблема не в количестве звонков, а в том, что бизнес не слышит, на каком этапе ломается разговор. Что даёт разбор всех звонков по этапам скрипта</description>
 </item>
 <item>
 <title>Встречи проходят, а решения теряются: что с этим делать</title>
