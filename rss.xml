@@ -5,8 +5,16 @@
 <link>https://makebiztehnologies.com/news</link>
 <description>AI-агенты, CRM, автоматизация и серверы: разборы и практика от MakeBiz Group, Дубай.</description>
 <language>ru</language>
-<lastBuildDate>Mon, 10 Aug 2026 09:00:00 +0400</lastBuildDate>
+<lastBuildDate>Mon, 10 Aug 2026 12:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Почему один агент не тянет, а команда агентов доводит дело</title>
+<link>https://makebiztehnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</link>
+<guid isPermaLink="false">makebiz-news-2026-08-10-2</guid>
+<pubDate>Mon, 10 Aug 2026 12:00:00 +0400</pubDate>
+<category>AI-агенты</category>
+<description>Один бот на весь процесс ломается на реальном потоке: путает шаги и теряет контекст. Почему сложную рутину надежнее закрывает команда агентов с ролями и оркестратором, и где хватит одного</description>
+</item>
 <item>
 <title>Где отдел продаж теряет клиента внутри звонка</title>
 <link>https://makebiztehnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</link>
