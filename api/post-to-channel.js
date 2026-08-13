@@ -1,17 +1,19 @@
-// Vercel Serverless Function: публикует готовый пост в Telegram-канал MakeBiz.
+// Vercel Serverless Function: публикация / редактирование / удаление постов в Telegram-канале MakeBiz.
 //
 // БЕЗОПАСНОСТЬ: токен бота, id канала и секрет доступа НЕ хранятся в коде
 // (репозиторий публичный). Задать в Vercel -> Settings -> Environment Variables:
 //   TELEGRAM_CHANNEL_BOT_TOKEN  - токен бота канала из @BotFather
 //   TELEGRAM_CHANNEL_ID         - @makebizchannel или числовой -100...
 //   CHANNEL_POST_SECRET         - произвольный секрет, им защищён вызов
-// После добавления переменных сделать Redeploy.
+// После добавления/изменения переменных сделать Redeploy.
 //
 // Вызов (GET или POST). Обязателен параметр key = CHANNEL_POST_SECRET.
-//   GET  /api/post-to-channel?key=SECRET&text=...&photo=https://...jpg&n=UNIQUE
-//   POST /api/post-to-channel?key=SECRET   body: { "text": "...", "photo": "https://...jpg" }
-// Если photo задан - шлётся картинкой с подписью (sendPhoto), иначе текстом (sendMessage).
-// Параметр n (любое уникальное значение) не используется логикой, он только для обхода кэша.
+// Параметр n (любое уникальное значение) не используется логикой, только для обхода кэша.
+//
+//   Публикация:      ?key=SECRET&text=...&photo=https://...jpg   (photo необязателен)
+//   Удаление:        ?key=SECRET&action=delete&message_id=207
+//   Редактирование:  ?key=SECRET&action=edit&message_id=207&text=...
+//                    (сам определит, текстовый это пост или подпись под фото)
 
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
@@ -35,40 +37,68 @@ export default async function handler(req, res) {
       return res.status(401).json({ ok: false, error: 'Неверный или отсутствующий key.' });
     }
 
+    const action = String(pick(body.action, q.action) || 'post').toLowerCase();
+    const messageId = pick(body.message_id, q.message_id);
     const text = String(pick(body.text, q.text) || '');
     const photo = String(pick(body.photo, q.photo) || '');
-    // предпросмотр ссылки: по умолчанию выключен, включается preview=true
     const preview = String(pick(body.preview, q.preview)) === 'true';
 
-    if (!text.trim()) {
-      return res.status(400).json({ ok: false, error: 'Пустой text.' });
+    // ---- Удаление ----
+    if (action === 'delete') {
+      if (!messageId) return res.status(400).json({ ok: false, error: 'Нужен message_id.' });
+      const r = await callTg(TOKEN, 'deleteMessage', { chat_id: CHAT_ID, message_id: Number(messageId) });
+      return respond(res, r);
     }
 
-    let apiUrl, payload;
+    // ---- Редактирование ----
+    if (action === 'edit') {
+      if (!messageId) return res.status(400).json({ ok: false, error: 'Нужен message_id.' });
+      if (!text.trim()) return res.status(400).json({ ok: false, error: 'Пустой text.' });
+      // сначала пробуем как у текстового поста, если это фото - редактируем подпись
+      let r = await callTg(TOKEN, 'editMessageText', {
+        chat_id: CHAT_ID, message_id: Number(messageId), text, disable_web_page_preview: !preview,
+      });
+      if (!r.ok) {
+        r = await callTg(TOKEN, 'editMessageCaption', {
+          chat_id: CHAT_ID, message_id: Number(messageId), caption: text,
+        });
+      }
+      return respond(res, r);
+    }
+
+    // ---- Публикация (по умолчанию) ----
+    if (!text.trim()) return res.status(400).json({ ok: false, error: 'Пустой text.' });
+    let r;
     if (photo) {
       // caption у sendPhoto ограничен 1024 символами
-      apiUrl = `https://api.telegram.org/bot${TOKEN}/sendPhoto`;
-      payload = { chat_id: CHAT_ID, photo, caption: text };
+      r = await callTg(TOKEN, 'sendPhoto', { chat_id: CHAT_ID, photo, caption: text });
     } else {
-      apiUrl = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-      payload = { chat_id: CHAT_ID, text, disable_web_page_preview: !preview };
+      r = await callTg(TOKEN, 'sendMessage', { chat_id: CHAT_ID, text, disable_web_page_preview: !preview });
     }
-
-    const tgResp = await fetch(apiUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-    const raw = await tgResp.text();
-    if (!tgResp.ok) {
-      return res.status(502).json({ ok: false, error: raw });
-    }
-    return res.status(200).json({ ok: true, result: safeJson(raw) });
+    return respond(res, r);
   } catch (e) {
     return res.status(500).json({ ok: false, error: String(e) });
   }
 }
 
+async function callTg(token, method, payload) {
+  const resp = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  const raw = await resp.text();
+  return { ok: resp.ok && parsedOk(raw), raw };
+}
+
+function respond(res, r) {
+  if (!r.ok) return res.status(502).json({ ok: false, error: r.raw });
+  return res.status(200).json({ ok: true, result: safeJson(r.raw) });
+}
+
+function parsedOk(raw) {
+  try { return JSON.parse(raw).ok === true; } catch (e) { return false; }
+}
 function pick(a, b) {
   return a != null && a !== '' ? a : b;
 }
