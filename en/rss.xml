@@ -5,8 +5,16 @@
 <link>https://makebiztehnologies.com/en/news</link>
 <description>AI agents, CRM, automation and servers: practical notes from MakeBiz Group, Dubai.</description>
 <language>en</language>
-<lastBuildDate>Tue, 11 Aug 2026 12:00:00 +0400</lastBuildDate>
+<lastBuildDate>Mon, 24 Aug 2026 12:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>98% accuracy, and the invoices are still wrong</title>
+<link>https://makebiztehnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</link>
+<guid isPermaLink="false">makebiz-news-2026-08-24-en</guid>
+<pubDate>Mon, 24 Aug 2026 12:00:00 +0400</pubDate>
+<category>Automation</category>
+<description>Vendors show 97-99% accuracy on document parsing, yet the books fill up with duplicates and the wrong VAT. Why field accuracy is not process reliability, and what matters more than the bare number</description>
+</item>
 <item>
 <title>Why one agent stalls, and a team of agents gets the job done</title>
 <link>https://makebiztehnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</link>

@@ -5,8 +5,16 @@
 <link>https://makebiztehnologies.com/news</link>
 <description>AI-агенты, CRM, автоматизация и серверы: разборы и практика от MakeBiz Group, Дубай.</description>
 <language>ru</language>
-<lastBuildDate>Tue, 11 Aug 2026 12:00:00 +0400</lastBuildDate>
+<lastBuildDate>Mon, 24 Aug 2026 12:00:00 +0400</lastBuildDate>
 <atom:link href="https://makebiztehnologies.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Точность 98%, а счета все равно с ошибками</title>
+<link>https://makebiztehnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</link>
+<guid isPermaLink="false">makebiz-news-2026-08-24</guid>
+<pubDate>Mon, 24 Aug 2026 12:00:00 +0400</pubDate>
+<category>Автоматизация</category>
+<description>Вендоры показывают 97-99% точности разбора документов, а в учете всплывают дубли и не тот НДС. Почему точность на поле не равна надежности процесса и что важнее голой цифры</description>
+</item>
 <item>
 <title>Почему один агент не тянет, а команда агентов доводит дело</title>
 <link>https://makebiztehnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</link>
