@@ -1,8 +1,30 @@
-# Сайт открыт для поисковиков целиком.
-# Служебные страницы закрыты не здесь, а тегом robots noindex
-# внутри самих страниц: запрет в этом файле мешает поисковику
-# зайти на страницу и прочитать этот тег.
+# Сайт открыт для поисковиков и AI-ассистентов целиком.
+# Служебные страницы закрыты тегом robots noindex внутри самих страниц:
+# запрет в этом файле мешает поисковику зайти на страницу и прочитать этот тег.
 User-agent: *
 Allow: /
+Disallow: /api/
+
+# Яндекс: рекламные метки не создают дубли страниц
+User-agent: Yandex
+Allow: /
+Disallow: /api/
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&ymclid&gclid&gbraid&wbraid&fbclid&ttclid&msclkid&_openstat&from
+
+# AI-поиск и ассистенты (ChatGPT, Perplexity, Claude, Gemini, Apple, Яндекс Нейро): доступ открыт
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: YandexAdditional
+User-agent: YandexAdditionalBot
+Allow: /
+Disallow: /api/
 
 Sitemap: https://makebiztechnologies.com/sitemap.xml

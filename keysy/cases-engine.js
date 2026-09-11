@@ -60,7 +60,7 @@
       factsHead:'Кратко о проекте', fClient:'Клиент', fRegion:'Регион',
       fDir:'Что внедряли', fBuilt:'Что построили', fTerm:'Срок',
       keyRes:'Главный результат', discuss:'Обсудить проект', more:'Похожие кейсы',
-      qO:'«', qC:'»', titleSuffix:' | Кейсы MakeBiz', ogSuffix:' | MakeBiz',
+      qO:'«', qC:'»', titleSuffix:' | MakeBiz', ogSuffix:' | MakeBiz',
       crumbHome:'Главная', crumbCases:'Кейсы'
     },
     en: {
@@ -78,7 +78,7 @@
       factsHead:'Project at a glance', fClient:'Client', fRegion:'Region',
       fDir:'What we implemented', fBuilt:'What we built', fTerm:'Timeline',
       keyRes:'Key result', discuss:'Discuss a project', more:'Similar cases',
-      qO:'“', qC:'”', titleSuffix:' | MakeBiz Cases', ogSuffix:' | MakeBiz',
+      qO:'“', qC:'”', titleSuffix:' | MakeBiz', ogSuffix:' | MakeBiz',
       crumbHome:'Home', crumbCases:'Case studies'
     }
   })[LANG];
@@ -88,6 +88,12 @@
   function byDateDesc(a,b){ return (b.date||'').localeCompare(a.date||''); }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
   function plain(s){ return String(s==null?'':s).replace(/<[^>]+>/g,''); }
+  /* описание для поисковика: не длиннее 160 знаков, режем по предложению или по слову */
+  function short(s, n){ s = plain(s).replace(/\s+/g,' ').trim(); n = n || 160; if(s.length <= n) return s;
+    var out = '', re = /[^.!?]+[.!?]+(\s|$)/g, m;
+    while((m = re.exec(s))){ var c = (out + m[0]).trim(); if(c.length <= n) out = c + ' '; else break; }
+    out = out.trim(); if(out.length >= 90) return out;
+    return s.slice(0, n - 1).replace(/\s+\S*$/,'').replace(/[,;:]$/,'') + '\u2026'; }
   function prodLabel(k){ return (PRODUCTS[LANG][k]) || k; }
   function indLabel(k){ return SPHERE_LABEL[k] || k; }
   function prods(c){ return Array.isArray(c.products) ? c.products : (c.product ? [c.product] : []); }
@@ -203,7 +209,7 @@
       return;
     }
     document.title = plain(c.title)+T.titleSuffix;
-    setMeta('description', plain(c.lead));
+    setMeta('description', short(c.lead));
     setMeta('og:title', plain(c.title)+T.ogSuffix, true);
     setMeta('og:description', plain(c.lead), true);
     // Один кейс открывается по двум адресам: /keysy/имя и /keysy/case?c=имя.

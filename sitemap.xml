@@ -5,16 +5,34 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/bitrix</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/bitrix</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix"/>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -23,7 +41,16 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/ai-agents"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/ai-agents"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/ai-agents"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/ai-agents</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/ai-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/ai-agents"/>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -32,7 +59,16 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vector"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vector"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vector"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/vector</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vector"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vector"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vector"/>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -41,265 +77,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/intdoc"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/intdoc"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/intdoc"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/vps</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vps"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vps"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vps"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <lastmod>2026-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
-    <lastmod>2026-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
-    <lastmod>2026-08-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/partners</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/partners"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/partners"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/partners"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/contacts</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/contacts"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/contacts"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/contacts"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/privacy</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/privacy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/privacy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/privacy"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/terms</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/terms"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/terms"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/terms"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy/apartika-crm</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/apartika-crm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy/unilin-crm</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/unilin-crm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy/cdek-b2b</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/cdek-b2b"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy/haval-vector</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/haval-vector"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/haval-vector"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/haval-vector"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/keysy/performia-crm</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/performia-crm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/performia-crm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/performia-crm"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/calculator-agents</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/bitrix</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/ai-agents</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/ai-agents"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/ai-agents"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/ai-agents"/>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/vector</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vector"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vector"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vector"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -308,116 +86,338 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/intdoc"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/intdoc"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/intdoc"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/vps</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vps"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vps"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vps"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/vps</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/vps"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/vps"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/vps"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/news</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/partners</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/partners"/>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/partners</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/partners"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/partners"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/partners"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/contacts"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/contacts"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/contacts</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/contacts"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/contacts"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/contacts"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/privacy"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/privacy</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/privacy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/privacy"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/terms"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/terms</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/terms"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/terms"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/terms"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.1</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/calculator-agents</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy/apartika-crm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/apartika-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy/apartika-crm</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/apartika-crm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/apartika-crm"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy/unilin-crm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/unilin-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy/unilin-crm</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/unilin-crm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/unilin-crm"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy/cdek-b2b</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/cdek-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy/cdek-b2b</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/cdek-b2b"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/cdek-b2b"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy/haval-vector</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/haval-vector"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/haval-vector"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/haval-vector"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy/haval-vector</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/haval-vector"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/haval-vector"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/haval-vector"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/keysy/performia-crm</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/performia-crm"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/performia-crm"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/performia-crm"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/en/keysy/performia-crm</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/keysy/performia-crm"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/keysy/performia-crm"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/keysy/performia-crm"/>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

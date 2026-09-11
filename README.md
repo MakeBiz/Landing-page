@@ -18,4 +18,7 @@
 - Яндекс Вебмастер: мета-тег `yandex-verification` в `<head>` файла `index.html`
 - `Content-Security-Policy: frame-ancestors` в `timeweb-server.js` разрешает Метрике показывать сайт во фрейме (Вебвизор, карты кликов)
 
+## SEO и GEO
+- Текст для краулеров без JS (`#mb-ssr`), статические страницы кейсов, JSON-LD, `robots.txt` для AI-ботов, `llms.txt`, `sitemap.xml`: инструменты и порядок перегенерации в `.seo/README.md`
+
 Секреты только в переменных окружения Timeweb, в код и в этот репозиторий их не пишем: он публичный
