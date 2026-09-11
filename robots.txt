@@ -5,4 +5,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://makebiztehnologies.com/sitemap.xml
+Sitemap: https://makebiztechnologies.com/sitemap.xml

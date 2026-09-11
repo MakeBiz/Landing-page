@@ -1,4 +1,4 @@
-// MakeBiz: сервер сайта makebiztehnologies.com для Timeweb App Platform.
+// MakeBiz: сервер сайта makebiztechnologies.com для Timeweb App Platform.
 //
 // На Vercel чистые адреса, редиректы и кейсы делал vercel.json, а формы работали
 // как функции api/*.js. Timeweb этого не умеет, поэтому здесь Express-сервер,
@@ -25,11 +25,11 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT) || 3000;
 
 // Основной адрес сайта. Зеркала и www уводим на него 301 (если их привяжут к приложению).
-const CANONICAL_HOST = 'makebiztehnologies.com';
+const CANONICAL_HOST = 'makebiztechnologies.com';
 const ALIAS_HOSTS = new Set([
-  'www.makebiztehnologies.com',
-  'makebiztechnologies.com',
   'www.makebiztechnologies.com',
+  'makebiztehnologies.com',       // старый адрес с опечаткой: 301 на основной, путь сохраняется
+  'www.makebiztehnologies.com',
 ]);
 
 // ==== ROUTING CORE ====

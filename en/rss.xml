@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
 <title>MakeBiz Group News</title>
-<link>https://makebiztehnologies.com/en/news</link>
+<link>https://makebiztechnologies.com/en/news</link>
 <description>AI agents, CRM, automation and servers: practical notes from MakeBiz Group, Dubai.</description>
 <language>en</language>
 <lastBuildDate>Tue, 25 Aug 2026 12:00:00 +0400</lastBuildDate>
-<atom:link href="https://makebiztehnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="https://makebiztechnologies.com/en/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
 <title>The AI you don't notice</title>
-<link>https://makebiztehnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete</link>
+<link>https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete</link>
 <guid isPermaLink="false">makebiz-news-2026-08-25-en</guid>
 <pubDate>Tue, 25 Aug 2026 12:00:00 +0400</pubDate>
 <category>Artificial intelligence</category>
@@ -17,7 +17,7 @@
 </item>
 <item>
 <title>98% accuracy, and the invoices are still wrong</title>
-<link>https://makebiztehnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</link>
+<link>https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami</link>
 <guid isPermaLink="false">makebiz-news-2026-08-24-en</guid>
 <pubDate>Mon, 24 Aug 2026 12:00:00 +0400</pubDate>
 <category>Automation</category>
@@ -25,7 +25,7 @@
 </item>
 <item>
 <title>Why one agent stalls, and a team of agents gets the job done</title>
-<link>https://makebiztehnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</link>
+<link>https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo</link>
 <guid isPermaLink="false">makebiz-news-2026-08-11-en</guid>
 <pubDate>Tue, 11 Aug 2026 12:00:00 +0400</pubDate>
 <category>AI agents</category>
@@ -33,7 +33,7 @@
 </item>
 <item>
 <title>Where the sales team loses a client during a call</title>
-<link>https://makebiztehnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</link>
+<link>https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka</link>
 <guid isPermaLink="false">makebiz-news-2026-08-10-en</guid>
 <pubDate>Mon, 10 Aug 2026 09:00:00 +0400</pubDate>
 <category>CRM and sales</category>
@@ -41,7 +41,7 @@
 </item>
 <item>
 <title>Why AI forgets everything and how memory fixes it</title>
-<link>https://makebiztehnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
+<link>https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu</link>
 <guid isPermaLink="false">makebiz-news-2026-08-05-2-en</guid>
 <pubDate>Wed, 05 Aug 2026 10:00:00 +0400</pubDate>
 <category>AI Agents</category>
@@ -49,7 +49,7 @@
 </item>
 <item>
 <title>What an AI agent is and how it differs from a chatbot</title>
-<link>https://makebiztehnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</link>
+<link>https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota</link>
 <guid isPermaLink="false">makebiz-news-2026-08-05-en</guid>
 <pubDate>Wed, 05 Aug 2026 09:00:00 +0400</pubDate>
 <category>AI Agents</category>
@@ -57,7 +57,7 @@
 </item>
 <item>
 <title>Meetings happen, but decisions get lost: what to do about it</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-13</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-13</link>
 <guid isPermaLink="false">makebiz-news-2026-07-13</guid>
 <pubDate>Mon, 13 Jul 2026 09:00:00 +0400</pubDate>
 <category>Automation</category>
@@ -65,7 +65,7 @@
 </item>
 <item>
 <title>Why AI makes things up, and how to solve it architecturally</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-12</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-12</link>
 <guid isPermaLink="false">makebiz-news-2026-07-12</guid>
 <pubDate>Sun, 12 Jul 2026 09:00:00 +0400</pubDate>
 <category>Artificial intelligence</category>
@@ -73,7 +73,7 @@
 </item>
 <item>
 <title>Supplier comparison: how to stop reconciling price lists by hand</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-11</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-11</link>
 <guid isPermaLink="false">makebiz-news-2026-07-11</guid>
 <pubDate>Sat, 11 Jul 2026 09:00:00 +0400</pubDate>
 <category>Automation</category>
@@ -81,7 +81,7 @@
 </item>
 <item>
 <title>Why CRM data drifts apart, and how to fix it</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-10</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-10</link>
 <guid isPermaLink="false">makebiz-news-2026-07-10</guid>
 <pubDate>Fri, 10 Jul 2026 09:00:00 +0400</pubDate>
 <category>CRM and sales</category>
@@ -89,7 +89,7 @@
 </item>
 <item>
 <title>Services go down at night: how the system fixes itself</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-09</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-09</link>
 <guid isPermaLink="false">makebiz-news-2026-07-09</guid>
 <pubDate>Thu, 09 Jul 2026 09:00:00 +0400</pubDate>
 <category>IT and servers</category>
@@ -97,7 +97,7 @@
 </item>
 <item>
 <title>Company data and AI: what stays with you and what leaves</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-08</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-08</link>
 <guid isPermaLink="false">makebiz-news-2026-07-08</guid>
 <pubDate>Wed, 08 Jul 2026 09:00:00 +0400</pubDate>
 <category>Business</category>
@@ -105,7 +105,7 @@
 </item>
 <item>
 <title>One entry point, dozens of specialists: how the orchestrator works</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-07-07</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-07-07</link>
 <guid isPermaLink="false">makebiz-news-2026-07-07</guid>
 <pubDate>Tue, 07 Jul 2026 09:00:00 +0400</pubDate>
 <category>AI Agents</category>
@@ -113,7 +113,7 @@
 </item>
 <item>
 <title>Where to start with AI implementation so you do not waste money</title>
-<link>https://makebiztehnologies.com/en/news#n-2026-06-30</link>
+<link>https://makebiztechnologies.com/en/news#n-2026-06-30</link>
 <guid isPermaLink="false">makebiz-news-2026-06-30</guid>
 <pubDate>Tue, 30 Jun 2026 09:00:00 +0400</pubDate>
 <category>Business</category>
