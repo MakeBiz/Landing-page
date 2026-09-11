@@ -125,10 +125,13 @@ const app = express();
 app.disable('x-powered-by');
 app.use(compression());
 
-// заголовки безопасности из vercel.json, на все ответы
+// заголовки безопасности, на все ответы
 app.use((req, res, next) => {
   res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  // Во фрейме сайт могут показывать только он сам и Яндекс Метрика (Вебвизор, карты кликов и скроллинга).
+  // Раньше здесь стоял X-Frame-Options: SAMEORIGIN, он не пускал Метрику; frame-ancestors его заменяет.
+  res.setHeader('Content-Security-Policy', "frame-ancestors 'self' https://metrika.yandex.ru https://metrika.yandex.by "
+    + "https://metrika.yandex.kz https://metrica.yandex.com https://metrica.yandex.com.tr https://webvisor.com https://*.webvisor.com");
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000');
   res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=()');

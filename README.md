@@ -11,4 +11,11 @@
 - `api/lead.js`: заявки с форм в Telegram. `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
 - `api/post-to-channel.js`: посты в Telegram-канал. `TELEGRAM_CHANNEL_BOT_TOKEN`, `TELEGRAM_CHANNEL_ID`, `CHANNEL_POST_SECRET`
 
+## Аналитика
+- Яндекс Метрика, счётчик 112503709: код в конце каждой страницы (`window.__mbYM`), запускается после согласия на cookie в баннере
+- Google Analytics 4, G-YPNHBR4DXK: gtag.js с Consent Mode v2, до согласия работает без cookie
+- Цели шлёт `mb-attr.js`: `lead` после успешной заявки, `call`, `telegram`, `whatsapp`, `max`, `email` при клике по контакту (в GA4 события `generate_lead` и `contact_click`)
+- Яндекс Вебмастер: мета-тег `yandex-verification` в `<head>` файла `index.html`
+- `Content-Security-Policy: frame-ancestors` в `timeweb-server.js` разрешает Метрике показывать сайт во фрейме (Вебвизор, карты кликов)
+
 Секреты только в переменных окружения Timeweb, в код и в этот репозиторий их не пишем: он публичный

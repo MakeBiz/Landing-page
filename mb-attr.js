@@ -6,7 +6,11 @@
      2) хранит два касания: первое (откуда человек узнал о нас) и последнее
         (по какой рекламе он пришёл перед заявкой);
      3) незаметно подмешивает эти данные в любую отправку на /api/lead,
-        поэтому формы на страницах менять не нужно.
+        поэтому формы на страницах менять не нужно;
+     4) отправляет цели в Метрику (счётчик 112503709) и события в GA4:
+        lead после успешной заявки, call / telegram / whatsapp / max / email
+        при клике по контакту. Метрика включается только после согласия на cookie,
+        до согласия цели в неё не уходят.
 
    Файл подключается в <head> каждой страницы. Повторный запуск безопасен.
    ===================================================================== */
@@ -99,25 +103,71 @@
   }
   window.__mbAttr = snapshot;
 
-  /* ---- подмешиваем источник в заявку ---- */
+  /* ---- цели: заявка и клики по контактам ---- */
+  var YM_ID = 112503709;
+  function goal(name) {
+    var w = window;
+    try {
+      /* страница внутри iframe нашего же сайта (калькулятор): цель отдаём родителю */
+      if (typeof w.ym !== 'function' && typeof w.gtag !== 'function' &&
+          w.parent && w.parent !== w && typeof w.parent.__mbGoal === 'function') {
+        w.parent.__mbGoal(name);
+        return;
+      }
+    } catch (e) {}
+    try { if (typeof w.ym === 'function') w.ym(YM_ID, 'reachGoal', name); } catch (e) {}
+    try {
+      if (typeof w.gtag === 'function') {
+        if (name === 'lead') w.gtag('event', 'generate_lead');
+        else w.gtag('event', 'contact_click', { method: name });
+      }
+    } catch (e) {}
+  }
+  window.__mbGoal = goal;
+
+  function contactKind(href) {
+    var h = String(href || '').toLowerCase();
+    if (/^tel:/.test(h)) return 'call';
+    if (/^mailto:/.test(h)) return 'email';
+    if (/^tg:/.test(h) || /^https?:\/\/(www\.)?(t\.me|telegram\.me)\//.test(h)) return 'telegram';
+    if (/^whatsapp:/.test(h) || /^https?:\/\/(www\.)?(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com|whatsapp\.com)\//.test(h)) return 'whatsapp';
+    if (/^https?:\/\/(www\.)?max\.ru\//.test(h)) return 'max';
+    return '';
+  }
+  document.addEventListener('click', function (e) {
+    try {
+      var t = e.target;
+      var a = t && t.closest ? t.closest('a[href]') : null;
+      var g = a ? contactKind(a.getAttribute('href')) : '';
+      if (g) goal(g);
+    } catch (err) {}
+  }, true);
+
+  /* ---- подмешиваем источник в заявку и отмечаем успешную отправку ---- */
   var orig = window.fetch;
   if (typeof orig === 'function') {
     window.fetch = function (input, init) {
+      var lead = false, res = null;
       try {
         var url = typeof input === 'string' ? input
           : (input && typeof input.url === 'string' ? input.url : '');
-        if (/\/api\/lead(\?|$)/.test(url) && init && typeof init.body === 'string') {
+        lead = /\/api\/lead(\?|$)/.test(url);
+        if (lead && init && typeof init.body === 'string') {
           var b = JSON.parse(init.body);
           if (b && typeof b === 'object' && !Array.isArray(b) && !b.attr) {
             b.attr = snapshot();
             var next = {};
             for (var k in init) if (Object.prototype.hasOwnProperty.call(init, k)) next[k] = init[k];
             next.body = JSON.stringify(b);
-            return orig.call(this, input, next);
+            res = orig.call(this, input, next);
           }
         }
       } catch (e) {}
-      return orig.apply(this, arguments);
+      if (!res) res = orig.apply(this, arguments);
+      if (lead && res && typeof res.then === 'function') {
+        res.then(function (r) { if (r && r.ok) goal('lead'); }, function () {});
+      }
+      return res;
     };
   }
 
