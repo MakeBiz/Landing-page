@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+Icon?
+*.command
+.publish-request
+.publish-status
+.publish-delete
+PUBLISH-FAILED.txt
