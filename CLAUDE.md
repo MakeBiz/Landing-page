@@ -2,7 +2,7 @@
 
 ## Проект
 
-Многоязычный B2B-сайт MakeBiz Group. Статическая сборка, деплой через GitHub на Vercel. Продукты: OpenClaw, Vector, IntDoc, внедрение Bitrix, BI-аналитика, хостинг.
+Многоязычный B2B-сайт MakeBiz Group. Статическая сборка, деплой из GitHub (ветка main) на Timeweb App Platform, сервер `timeweb-server.js`. Домен makebiztechnologies.com. Продукты: AI-агенты, Vector, IntDoc, внедрение Bitrix, BI-аналитика, хостинг.
 
 ## Роль
 
@@ -27,7 +27,7 @@
 
 ## Правила контента
 
-- Названия продуктов только так: OpenClaw, Vector, IntDoc, Bitrix. Никаких вариантов написания
+- Названия продуктов: AI-агенты, Vector, IntDoc, Bitrix. Слово OpenClaw на сайте не используем
 - Формы всегда POST на `/api/lead` с полем Telegram-username, не email
 - Контакты: @Anton_MakeBiz, +971 50 262 0927
 - В русских текстах не используй длинное тире. Ставь запятую, двоеточие, скобки или дефис

@@ -49,6 +49,7 @@ const REDIRECTS = {
   '/keysy/case': '/keysy',
   '/en/keysy/case': '/en/keysy',
   '/ru/keysy/case': '/keysy',
+  '/calculator': '/calculator-agents',   // старая страница «Калькулятор экономики проекта» удалена
 };
 
 // rewrites из vercel.json: /keysy/<slug>, /en/keysy/<slug>, /ru/keysy/<slug> отдают шаблон case.html.
