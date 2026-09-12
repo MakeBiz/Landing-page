@@ -18,6 +18,8 @@
 import express from 'express';
 import compression from 'compression';
 import fs from 'node:fs';
+import os from 'node:os';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -197,8 +199,37 @@ app.use((err, req, res, next) => {
   res.status(status).type('text/plain').send(status >= 500 ? 'Server error' : 'Bad request');
 });
 
+// ==== IndexNow: сообщаем Bing и Яндексу об обновлении страниц ====
+// Подтверждение владения это файл-ключ в корне сайта, отдельная верификация не нужна.
+// Пингуем один раз на деплой: отпечаток считаем от sitemap.xml и запоминаем во временной папке.
+async function pingIndexNow() {
+  try {
+    if (process.env.INDEXNOW === 'off') return;
+    const keyFile = [...files].find((f) => /^[a-f0-9]{16,64}\.txt$/.test(f));
+    if (!keyFile) return;
+    const key = fs.readFileSync(path.join(ROOT, keyFile), 'utf8').trim();
+    const sm = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
+    const urlList = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    if (!urlList.length) return;
+    const stamp = crypto.createHash('sha1').update(sm).digest('hex').slice(0, 12);
+    const mark = path.join(os.tmpdir(), 'makebiz-indexnow-' + stamp);
+    if (fs.existsSync(mark)) return;
+    fs.writeFileSync(mark, '1');
+    const host = new URL(urlList[0]).host;
+    const r = await fetch('https://api.indexnow.org/indexnow', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({ host, key, keyLocation: 'https://' + host + '/' + keyFile, urlList }),
+    });
+    console.log('[indexnow]', r.status, urlList.length, 'адресов');
+  } catch (e) {
+    console.log('[indexnow] пропущено:', e && e.message);
+  }
+}
+
 app.listen(PORT, () => {
   console.log(`MakeBiz: порт ${PORT}, файлов ${files.size}, функции: ${apiNames.map((n) => '/api/' + n).join(', ') || 'нет'}`);
+  setTimeout(pingIndexNow, 4000);
 });
 
 // Переменные окружения (Timeweb, настройки приложения). Значения те же, что были в Vercel:
