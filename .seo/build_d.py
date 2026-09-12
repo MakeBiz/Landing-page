@@ -1,4 +1,5 @@
 # Часть D: robots.txt, llms.txt, sitemap.xml
+import time
 import sys, os, re, json, subprocess, datetime, html as H
 sys.path.insert(0, os.path.dirname(__file__))
 from seo_lib import *
@@ -92,13 +93,18 @@ wr('llms.txt', '\n'.join(L).rstrip() + '\n')
 
 # ---------- sitemap ----------
 def lastmod(paths):
-    ch = subprocess.check_output(['git', 'status', '--porcelain', '--'] + paths).decode().strip()
-    if ch: return TODAY
-    d = subprocess.check_output(['git', 'log', '-1', '--format=%cs', '--'] + paths).decode().strip()
-    return d or TODAY
+    # было по git-истории: в папке STAGE репозитория нет, берём время файла
+    best = 0
+    for p in paths:
+        if p and os.path.exists(p):
+            best = max(best, os.path.getmtime(p))
+    if not best:
+        return TODAY
+    return time.strftime('%Y-%m-%d', time.localtime(best))
 pages = []   # (ru_url, en_url or None, priority, changefreq, files)
 pairs = [('/', '/en', 'index.html', 'en/index.html', '1.0', 'weekly')]
-for k, pr in [('bitrix', '0.9'), ('ai-agents', '0.9'), ('vector', '0.9'), ('intdoc', '0.8'), ('vps', '0.6'), ('keysy', '0.7'), ('news', '0.7'),
+for k, pr in [('bitrix', '0.9'), ('bitrix-support', '0.8'), ('ai-agents', '0.9'), ('vector', '0.9'), ('intdoc', '0.8'),
+              ('vps', '0.6'), ('company', '0.7'), ('keysy', '0.7'), ('news', '0.7'),
               ('partners', '0.6'), ('contacts', '0.7'), ('privacy', '0.2'), ('terms', '0.2')]:
     pairs.append(('/' + k, '/en/' + k, k + '.html', 'en/' + k + '.html', pr, 'weekly' if k == 'news' else 'monthly'))
 pairs.append(('/calculator-agents', None, 'calculator-agents.html', None, '0.8', 'monthly'))

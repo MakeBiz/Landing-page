@@ -1,4 +1,5 @@
 # Часть B: структурированные данные (JSON-LD) для всех индексируемых страниц
+import os
 import sys, os, re, json, subprocess, html as H
 sys.path.insert(0, os.path.dirname(__file__))
 from seo_lib import *
@@ -169,7 +170,14 @@ def graph_for(f, s):
         return None
     return {'@context': 'https://schema.org', '@graph': g}
 
-files = [f for f in subprocess.check_output(['git', 'ls-files', '*.html']).decode().split()]
+SKIP = ('.', 'node_modules', '_')
+files = []
+for root, dirs, fs in os.walk('.'):
+    dirs[:] = [d for d in dirs if not d.startswith(SKIP)]
+    for f in fs:
+        if f.endswith('.html'):
+            files.append(os.path.relpath(os.path.join(root, f), '.'))
+files = sorted(files)  # было git ls-files: в папке STAGE нет репозитория
 done = []
 for f in files:
     if f in ('404.html', 'calculator-agents-app.html') or f.endswith('keysy/case.html'): continue

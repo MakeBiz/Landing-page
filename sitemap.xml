@@ -37,6 +37,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://makebiztechnologies.com/bitrix-support</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/bitrix-support</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://makebiztechnologies.com/ai-agents</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/ai-agents"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/ai-agents"/>
@@ -107,6 +125,24 @@
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/company</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/company</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/keysy</loc>
@@ -421,39 +457,21 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://makebiztechnologies.com/company</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <loc>https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://makebiztechnologies.com/en/company</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <loc>https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya"/>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/bitrix-support</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://makebiztechnologies.com/en/bitrix-support</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>

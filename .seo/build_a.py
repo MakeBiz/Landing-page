@@ -1,4 +1,5 @@
 # Часть A: title/description/og, заголовки EN, описания новостей, viewport, дубли twitter:card
+import os
 import sys, os, re, json, subprocess
 sys.path.insert(0, os.path.dirname(__file__))
 from seo_lib import *
@@ -71,7 +72,9 @@ for f, pairs in EN_FIX.items():
     wr(f, s); log.append(f'{f}: EN headings x{len(pairs)}')
 
 # новости: описания до 160 знаков, один twitter:card
-news = [f for f in subprocess.check_output(['git', 'ls-files', 'news/*.html', 'en/news/*.html']).decode().split()] + ['news.html', 'en/news.html']
+news = ([('news/' + f) for f in sorted(os.listdir('news')) if f.endswith('.html')]
+        + [('en/news/' + f) for f in sorted(os.listdir('en/news')) if f.endswith('.html')]
+        + ['news.html', 'en/news.html'])  # было git ls-files: в папке STAGE нет репозитория
 for f in news:
     s = rd(f); o = s
     d = get_meta(s, 'description')
