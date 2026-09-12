@@ -38,6 +38,8 @@ META = {
    None),
  'calculator-agents.html': ('Калькулятор стоимости AI-агентов для бизнеса | MakeBiz',
    'Соберите команду AI-агентов из каталога и сразу увидите цену внедрения и обслуживания в AED. Тарифы Старт, Бизнес и Холдинг, внедрение от 6 000 AED.'),
+ 'en/calculator-agents.html': ('AI agents cost calculator for business | MakeBiz',
+   'Build your team of AI agents from the catalogue and see the implementation and support price in AED at once. Start, Business and Holding plans, from AED 6,000.'),
  'partners.html': (None,
    'Партнёрская программа MakeBiz Group: 20% с первой оплаты клиента и 10% весь следующий год за рекомендации на AI-агентов, Битрикс24, Vector и IntDoc.'),
  'en/partners.html': (None,

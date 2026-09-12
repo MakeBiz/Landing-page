@@ -1,0 +1,22 @@
+{
+"arch":{
+ "ops":{"archru":"operational tasks","when":"Runs tasks continuously and reminds on deadlines","steps":["creates the task and assigns an owner","moves it through statuses and holds the deadline","reminds and escalates when it slips"]},
+ "triage":{"archru":"triage of incoming","when":"Fires on every incoming item, before a person sees it","steps":["takes the incoming item and extracts the point","checks it against the criteria and scores it","routes it to the right person or agent"]},
+ "reach":{"archru":"outbound touches","when":"Picks the moment itself and does not let the pause drag on","steps":["decides who to write to and when","prepares the touch with a real reason","records the reply and puts it back in play"]},
+ "analys":{"archru":"calculation and analytics","when":"Calculates on schedule and on any question you ask","steps":["pulls the data from the sources","calculates by the agreed model","explains the result in words and numbers"]},
+ "dialog":{"archru":"live conversation","when":"On your request, for as long as it takes","steps":["holds the conversation and keeps the context","adapts the wording to the person","records what was agreed and the next step"]},
+ "craft":{"archru":"producing a document","when":"Starts on request, when a finished document is needed","steps":["gathers the inputs from systems and conversations","prepares the document from your template","hands it to a person to check before it goes out"]},
+ "creat":{"archru":"creating content","when":"On a brief for material, keeps the publishing plan","steps":["works out the task and the audience","produces several options to choose from","edits on your notes until it is ready"]},
+ "watch":{"archru":"background watch","when":"On duty around the clock, speaks only on deviation","steps":["watches the source continuously","compares against the norm and the thresholds","raises the signal on deviation"]},
+ "stream":{"archru":"a stream of short tasks","when":"Runs constantly, reacts the moment a request arrives","steps":["catches the request the moment it appears","handles it by the agreed scenario","passes the result down the chain"]},
+ "guard":{"archru":"control and oversight","when":"Checks every action in the background, without you","steps":["checks actions against the rules","logs the deviation","raises the case for review"]}
+},
+"tools":{
+ "1С":"1C","API":"API","Adesk":"Adesk","BI-витрина":"BI layer","Bitrix24":"Bitrix24","GA4":"GA4","GitHub":"GitHub","Gmail":"Gmail",
+ "Google Calendar":"Google Calendar","Google Sheets":"Google Sheets","Notion":"Notion","PostgreSQL":"PostgreSQL","SIEM":"SIEM",
+ "T-Bank":"T-Bank","Telegram":"Telegram","VK Ads":"VK Ads","WhatsApp":"WhatsApp","hh.ru":"hh.ru",
+ "База знаний":"Knowledge base","Диск":"Drive","Календарь":"Calendar","Логи доступа":"Access logs","Логистика":"Logistics",
+ "Метрика":"Metrica","Мониторинг":"Monitoring","Почта":"Email","Реестры ФНС":"Company registers","Сайт":"Website",
+ "Телефония":"Telephony","ЭДО":"E-document flow","Яндекс Директ":"Yandex Direct"
+}
+}

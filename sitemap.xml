@@ -254,9 +254,21 @@
   </url>
   <url>
     <loc>https://makebiztechnologies.com/calculator-agents</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/calculator-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/calculator-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/calculator-agents"/>
     <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/calculator-agents</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/calculator-agents"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/calculator-agents"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/calculator-agents"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://makebiztechnologies.com/keysy/apartika-crm</loc>

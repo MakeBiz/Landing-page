@@ -44,9 +44,9 @@ for f in ['index.html', 'en/index.html', 'ai-agents.html', 'en/ai-agents.html', 
     wr(f, s); log.append(f'{f}: SSR {w} слов')
 
 # калькулятор: статичная страница, блок в конце body и сразу удаляется скриптом (посетитель видит калькулятор в iframe)
-f = 'calculator-agents.html'
-s = strip_old(rd(f)); blk, w = block(f, removable=True)
-i = s.rfind('</body>'); s = s[:i] + blk + '\n' + s[i:]; wr(f, s); log.append(f'{f}: SSR {w} слов')
+for f in ['calculator-agents.html', 'en/calculator-agents.html']:
+    s = strip_old(rd(f)); blk, w = block(f, removable=True)
+    i = s.rfind('</body>'); s = s[:i] + blk + '\n' + s[i:]; wr(f, s); log.append(f'{f}: SSR {w} слов')
 
 # x-dc страницы: ссылки для краулеров (шапку и подвал рисует скрипт), тоже удаляются сразу
 for f in ['vector.html', 'en/vector.html', 'vps.html', 'en/vps.html']:

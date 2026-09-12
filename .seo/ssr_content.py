@@ -95,7 +95,7 @@ SSR['ai-agents.html'] = '''<h1>Отдел AI-сотрудников для ва�
 
 SSR['en/ai-agents.html'] = '''<h1>An AI staff department for your business, not a bot, but a team</h1>
 <p>Each agent has its own role, shared memory and CRM access. They work where your team already works, in Telegram. We will show you the details live in a demo.</p>
-<p>An agent team starts from AED 6,000. <a href="/en/contacts">Ask us for a cost estimate</a></p>
+<p>An agent team starts from AED 6,000. <a href="/en/calculator-agents">Calculate the cost in the calculator</a></p>
 <ul><li>They remember: memory is stored in a database</li><li>They do not make things up: facts come only from a verified database</li><li>Your own server: the system is deployed on your server</li><li>They live in Telegram: a single sign-in for the team</li></ul>
 <p>Roles in the team: Conductor, Dispatcher, Financier, Lawyer, Analyst, Radar, Liaison, Mentor, Lead-gen, Qualifier, Sales rep, Pinger, Account manager, Herald, Auditor.</p>
 <h2>56 agents talk to each other and work in a chain</h2>
@@ -117,7 +117,7 @@ SSR['en/ai-agents.html'] = '''<h1>An AI staff department for your business, not 
 <h2>You do not configure it, you grow it</h2>
 <p>We start with the core and add new agents month by month for your tasks: Conductor, Proposal agent, Account manager, Project manager, Controller and more. This is not a deploy-and-forget system; it matures together with your business.</p>
 <h2>Calculate the cost of your agent team</h2>
-<p>The base core: Conductor, Dispatcher, memory and dashboard, from AED 6,000. Beyond that, the price depends on which roles you add; the exact figure depends on your team's composition.</p>
+<p>The base core: Conductor, Dispatcher, memory and dashboard, from AED 6,000. Beyond that, the price depends on which roles you add: assemble your team in the <a href="/en/calculator-agents">AI agents cost calculator</a> and get an estimate.</p>
 <h2>Case studies</h2>
 {CASES}'''
 
@@ -144,3 +144,13 @@ SSR['calculator-agents.html'] = '''<h1>Калькулятор стоимости
 <ul><li>Старт: 6 000 AED разово</li><li>Бизнес: 11 000 AED разово, самый популярный</li><li>Холдинг: 25 000 AED разово</li></ul>
 <p>Обслуживание: 10% от суммы внедрения в месяц (для тарифа Бизнес 1 100 AED в месяц): правки и донастройка агентов, разбор сбоев, улучшения каждый месяц и живой чат с человеком. Дополнительно: приложение в Telegram от 10 000 AED, дашборд компании от 10 000 AED.</p>
 <p><a href="/ai-agents">Подробнее об AI-агентах MakeBiz</a></p>'''
+
+SSR['en/calculator-agents.html'] = '''<h1>AI agents cost calculator</h1>
+<p>Build your own team of agents: a catalogue of 77 agents across nine areas. Tick the ones your business needs and the implementation and support figures update themselves.</p>
+<ol><li>Read: every card has a Details button with what the agent does, how it does it step by step, when it runs, what it is connected to and what it does not do</li><li>Choose: tick the agents you need or take a whole area at once</li><li>See the price: how many agents are selected, which plan fits, what implementation and monthly support cost</li></ol>
+<h2>Agent areas</h2>
+<ul><li>Sales: 12 agents, from the first touch to the signature (Qualifier, Quote writer, Closer, Follow-up, Reactivation, Sales forecast and others)</li><li>Marketing: 10 agents (SEO, Content writer, Ad analyst, Reputation, Competitor watch and others)</li><li>Customer service: 8 agents (Customer care, Knowledge base, Account manager, a Multilingual agent for correspondence in English and Arabic and others)</li><li>Finance and legal: 12 agents (Billing, Receivables, Management accounts, Legal, Budget versus actual and others)</li><li>HR: 5 agents</li><li>Operations: 4 agents</li><li>Analytics: 8 agents</li><li>IT and security: 8 agents</li><li>Management: 10 agents</li></ul>
+<h2>Implementation plans</h2>
+<ul><li>Start: AED 6,000 one-off</li><li>Business: AED 11,000 one-off, the most popular</li><li>Holding: AED 25,000 one-off</li></ul>
+<p>Support: 10% of the implementation price per month (AED 1,100 a month on the Business plan): changes and tuning of the agents, handling failures, improvements every month and a live chat with a human. Optional: a Telegram app from AED 10,000, a company dashboard from AED 10,000.</p>
+<p><a href="/en/ai-agents">More about MakeBiz AI agents</a></p>'''

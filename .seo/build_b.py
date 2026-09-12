@@ -121,12 +121,15 @@ def graph_for(f, s):
         g = [ORG_C, webpage(url, lang, title, desc, extra={'breadcrumb': {'@id': url + '#breadcrumb'}, 'mainEntity': {'@id': url + '#service'}}),
              crumbs(url, lang, [(CRUMB[key][lang == 'en'], pre + '/' + key)]), service(SERV[key], url, lang, desc)]
     elif key == 'calculator-agents':
+        en = lang == 'en'
+        nm = 'AI agents cost calculator' if en else 'Калькулятор стоимости AI-агентов'
         g = [ORG_C, webpage(url, lang, title, desc, extra={'breadcrumb': {'@id': url + '#breadcrumb'}}),
-             crumbs(url, lang, [('AI-агенты', '/ai-agents'), ('Калькулятор стоимости AI-агентов', '/calculator-agents')]),
-             {'@type': 'WebApplication', '@id': url + '#app', 'name': 'Калькулятор стоимости AI-агентов', 'url': url, 'applicationCategory': 'BusinessApplication',
-              'operatingSystem': 'Any', 'inLanguage': 'ru', 'provider': {'@id': ORG},
+             crumbs(url, lang, [('AI agents' if en else 'AI-агенты', pre + '/ai-agents'), (nm, pre + '/calculator-agents')]),
+             {'@type': 'WebApplication', '@id': url + '#app', 'name': nm, 'url': url, 'applicationCategory': 'BusinessApplication',
+              'operatingSystem': 'Any', 'inLanguage': lang, 'provider': {'@id': ORG},
               'offers': {'@type': 'AggregateOffer', 'priceCurrency': 'AED', 'lowPrice': 6000, 'highPrice': 25000, 'offerCount': 3,
-                         'description': 'Тарифы внедрения Старт, Бизнес и Холдинг'}}]
+                         'description': ('Start, Business and Holding implementation plans' if en
+                                         else 'Тарифы внедрения Старт, Бизнес и Холдинг')}}]
     elif key == 'keysy':
         cs = load_cases(lang)
         items = [{'@type': 'ListItem', 'position': i, 'url': BASE + pre + '/keysy/' + c['slug'], 'name': text(c['title'])} for i, c in enumerate(cs, 1)]

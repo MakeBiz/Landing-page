@@ -66,7 +66,7 @@ L.append('- All prices are in UAE dirhams (AED)\n')
 L.append('## Services\n')
 L.append('- [Bitrix24 implementation in Dubai and the UAE](%s/en/bitrix): CRM, sales pipelines, telephony, automation, BI and integrations. Standard CRM setup from AED 10,000; support packages of 5, 10 or 20 hours a month for AED 1,250, 2,300 or 4,200' % BASE)
 L.append('- [AI agents for business](%s/en/ai-agents): a team of AI employees with roles, shared memory and CRM access that works in Telegram and runs sales, documents, calls and reports. Deployed on the client\'s server. From AED 6,000' % BASE)
-L.append('- [AI agents cost calculator](%s/calculator-agents) (in Russian): 77 agents in 9 areas; implementation plans Start AED 6,000, Business AED 11,000, Holding AED 25,000 (one-off); maintenance 10%% of the implementation price per month' % BASE)
+L.append('- [AI agents cost calculator](%s/en/calculator-agents): 77 agents in 9 areas; implementation plans Start AED 6,000, Business AED 11,000, Holding AED 25,000 (one-off); maintenance 10%% of the implementation price per month' % BASE)
 L.append('- [Vector: AI speech analytics for sales calls](%s/en/vector): analyses 100%% of calls and all 10 conversation stages, shows where clients are lost. Plans: Start AED 1,000 a month (5,000 minutes), Team AED 1,700 a month (10,000 minutes), Scale from AED 4,000 a month (from 30,000 minutes); prepayment discounts up to 20%%' % BASE)
 L.append('- [IntDoc: AI supplier comparison from documents](%s/en/intdoc): extracts prices, lead times and availability from quotes, invoices, price lists and scans, compares suppliers in one table and justifies the choice' % BASE)
 L.append('- [Servers and VPS](%s/en/vps): comparison of 7 hosting providers (Truehost Cloud, VPS.org, DataPacket, Hostman, UltaHost, IShosting, AEserver); MakeBiz deploys and maintains the chosen server\n' % BASE)
@@ -109,7 +109,7 @@ for k, pr in [('bitrix', '0.9'), ('bitrix-support', '0.8'), ('ai-agents', '0.9')
               ('vps', '0.6'), ('company', '0.7'), ('keysy', '0.7'), ('news', '0.7'),
               ('partners', '0.6'), ('contacts', '0.7'), ('privacy', '0.2'), ('terms', '0.2')]:
     pairs.append(('/' + k, '/en/' + k, k + '.html', 'en/' + k + '.html', pr, 'weekly' if k == 'news' else 'monthly'))
-pairs.append(('/calculator-agents', None, 'calculator-agents.html', None, '0.8', 'monthly'))
+pairs.append(('/calculator-agents', '/en/calculator-agents', 'calculator-agents.html', 'en/calculator-agents.html', '0.8', 'monthly'))
 for c in cases('ru'):
     s = c['slug']; pairs.append(('/keysy/' + s, '/en/keysy/' + s, 'keysy/%s.html' % s, 'en/keysy/%s.html' % s, '0.6', 'monthly'))
 for f in news_ru:

@@ -5,7 +5,7 @@ NAV = {
  'ru': [('/', 'Главная'), ('/bitrix', 'Внедрение Битрикс24'), ('/ai-agents', 'AI-агенты'), ('/calculator-agents', 'Калькулятор AI-агентов'),
         ('/vector', 'Vector: речевая аналитика'), ('/intdoc', 'IntDoc: документы и закупки'), ('/vps', 'Серверы'), ('/keysy', 'Кейсы'),
         ('/news', 'Новости'), ('/partners', 'Партнёрам'), ('/contacts', 'Контакты'), ('/en', 'English')],
- 'en': [('/en', 'Home'), ('/en/bitrix', 'Bitrix24 implementation'), ('/en/ai-agents', 'AI agents'), ('/en/vector', 'Vector: speech analytics'),
+ 'en': [('/en', 'Home'), ('/en/bitrix', 'Bitrix24 implementation'), ('/en/ai-agents', 'AI agents'), ('/en/calculator-agents', 'AI agents cost calculator'), ('/en/vector', 'Vector: speech analytics'),
         ('/en/intdoc', 'IntDoc: documents and procurement'), ('/en/vps', 'Servers'), ('/en/keysy', 'Case studies'), ('/en/news', 'News'),
         ('/en/partners', 'Partners'), ('/en/contacts', 'Contacts'), ('/', 'Русская версия')],
 }
