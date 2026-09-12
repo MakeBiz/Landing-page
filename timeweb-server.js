@@ -176,6 +176,9 @@ for (const f of fs.existsSync(apiDir) ? fs.readdirSync(apiDir).sort() : []) {
 function sendPage(res, rel, status, next, versioned) {
   res.status(status);
   res.setHeader('Cache-Control', status === 200 ? cacheControlFor(rel, versioned) : 'no-store');
+  // Ассеты бандла нужны рендереру Гугла, поэтому в robots.txt они открыты,
+  // а из выдачи убраны заголовком: индексировать base64 незачем.
+  if (/^b\//.test(rel)) res.setHeader('X-Robots-Tag', 'noindex');
   res.sendFile(rel, { root: ROOT }, (err) => {
     if (err && !res.headersSent) next(err);
   });
