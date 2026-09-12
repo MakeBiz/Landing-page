@@ -34,6 +34,8 @@ User-agent: YandexAdditionalBot
 Allow: /
 Disallow: /api/
 
+Disallow: /b/
+
 Sitemap: https://makebiztechnologies.com/sitemap.xml
 '''
 wr('robots.txt', ROBOTS)

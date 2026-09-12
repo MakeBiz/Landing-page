@@ -112,6 +112,8 @@ function createRouter(files) {
 
 // Cache-Control как в vercel.json; остальное как по умолчанию у Vercel
 function cacheControlFor(rel, versioned) {
+  // Ассеты бандла: имя файла это отпечаток содержимого, значит меняться не может.
+  if (/^b\//.test(rel)) return 'public, max-age=31536000, immutable';
   // Картинки и шрифты меняются редко: месяц в кэше, неделя на фоновое обновление.
   if (/\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|otf)$/i.test(rel)) return 'public, max-age=2592000, stale-while-revalidate=604800';
   // Скрипты и стили с версией в адресе (?v=хэш) неизменны: год и immutable.
