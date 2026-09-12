@@ -79,6 +79,12 @@ PAIRS = [
 
     ('Whether you need a standard setup or a large project, leave a request: we will run a diagnostic and propose a solution built for your company',
      'Whether you need the starter setup or a large project, leave a request: we will go through your situation and propose a solution for your company in the UAE', 1),
+    # второй проход: остатки, совпадавшие с makebiz.life
+    ('CRM setup: modules and reference books', 'CRM modules and reference books for your profile', 1),
+    ('User and permission administration', 'Managing users and access rights', 1),
+    ('Editing roles, groups and access logic', 'Changes to roles, groups and access', 1),
+    ('Setup of notifications and workflow logic', 'Notifications and how the portal behaves', 1),
+    ('We prepare the scope of work, the estimate, and the roadmap', 'We put together the scope, an estimate in dirhams and a roadmap', 1),
 ]
 
 

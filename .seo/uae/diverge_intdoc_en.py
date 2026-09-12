@@ -32,10 +32,10 @@ PAIRS = [
     ('IntDoc recognizes the document line by line and extracts key fields, even from scans and phone photos',
      'IntDoc reads the document line by line and extracts the key fields even from a scan or a phone photo, in English and in Arabic', 1),
     ('>Price and currency<', '>Price, currency and the rate on the date<', 1),
-    ('>Delivery time<', '>Delivery time and shipping terms<', 1),
+    ('>Delivery time<', '>Lead time and shipping terms<', 1),
     ('>Stock availability<', '>Availability: local stock or import<', 1),
-    ('>Payment terms<', '>Payment terms and 5% VAT<', 1),
-    ('>Supplier details<', '>Supplier details and TRN<', 1),
+    ('>Payment terms<', '>Payment and 5% VAT<', 1),
+    ('>Supplier details<', '>Supplier TRN and details<', 1),
 
     ('Quotes, invoices, price lists, PDF, scans and supplier photos', 'Quotes, invoices, price lists, PDFs, scans and photos from suppliers', 1),
     ('Price, lead time, availability, product range and terms from each document',
@@ -77,6 +77,43 @@ PAIRS = [
      'Hello! What do you compare most often: quotes, invoices or price lists? I will show how IntDoc brings them to one currency and picks the best supplier.', 1),
     ('Great, IntDoc will extract the price, delivery time and availability from these quotes and build a comparison table with the best offer. Will you send a couple of documents for the demo?',
      'Great, IntDoc will pull the price, currency, VAT, delivery time and availability out of those quotes and build one table with the best offer. Will you send a couple of documents for the demo?', 1),
+    # второй проход 12 сен: добивка оставшихся совпадений
+    ('Advanced fields and criteria, comparison history, export to CRM', 'Advanced fields and criteria, comparison history, export to Bitrix24', 1),
+    ('For procurement departments with a regular flow of documents.', 'A procurement team with a steady flow of documents', 1),
+    ('Comparison by price, delivery time and availability', 'Comparison by price in one currency and lead time', 1),
+    ('Custom criteria, integrations and priority support', 'Your own criteria, integrations and priority support', 1),
+    ('For large purchases, tenders, and high volumes.', 'Large purchases, tenders and high volumes', 1),
+    ('For a first setup and a small flow of quotes.', 'A first setup and a small flow of quotes', 1),
+    ('Storage of comparison and decision history', 'History of comparisons and decisions kept', 1),
+    ('Quotes from suppliers, in PDF and scans', 'Supplier quotes in PDF and scans, some in Arabic', 1),
+    ('Export of the comparison table to Excel', 'The comparison table exported to Excel', 1),
+    ('Comparison history at your fingertips', 'The whole comparison history at hand', 1),
+    ('IntDoc · Document AI for procurement', 'IntDoc · Document AI for buyers in the UAE', 1),
+    ('Well-grounded procurement decisions', 'Procurement decisions that are easy to explain', 1),
+    ('Comparison by the criteria you need', 'Comparison by your own criteria', 1),
+    ('Exports the result to CRM and Excel', 'Hands the result to Bitrix24 and Excel', 1),
+    ('Data extraction from any documents', 'Any supplier document parsed', 1),
+    ('A single supplier comparison table', 'One table with every supplier on it', 1),
+    ('into your procurement processes', 'into how you already buy', 1),
+    ('Documents → supplier comparison', 'Documents → one currency, one table', 1),
+    ('>No unified comparison history<', '>There is simply no comparison history<', 1),
+    ('The best offer automatically', 'The best offer without manual checking', 1),
+    ('Fast consolidation of offers', 'Every offer consolidated in minutes', 1),
+    ('Export of comparison results', 'The finished comparison exported', 1),
+    ('IntDoc vs manual comparison', 'IntDoc against reconciling by hand', 1),
+    ('Discounts and special terms', 'Discounts and special conditions', 1),
+    ('Less routine reconciliation', 'Less routine checking by hand', 1),
+    ('What we compare most often', 'What buyers compare most often', 1),
+    ('From a stack of documents', 'From a pile of supplier documents', 1),
+    ('Audit trail for decisions', 'An audit trail behind every decision', 1),
+    ('Stores comparison history', 'Keeps the comparison history', 1),
+    ('for your document volume', 'for the volume you actually handle', 1),
+    ('Scanning document fields', 'Reading the fields of a document', 1),
+    ('Normalizes and compares', 'Brings to one currency and compares', 1),
+    ('Nomenclature and items', 'Line items and product range', 1),
+    ('IntDoc extracts fields', 'IntDoc pulls out the fields', 1),
+    ('>any supplier documents<', '>supplier documents in two languages<', 1),
+    ('Integrates seamlessly', 'Slots straight', 1),
 ]
 
 
@@ -85,12 +122,11 @@ def main():
     before = h
     done = skipped = 0
     for old, new, n in PAIRS:
-        if h.count(new) >= n:
-            skipped += 1
-            continue
+        assert old not in new, 'новая строка не должна содержать старую: %s' % old[:50]
         c = h.count(old)
         if c == 0:
-            raise SystemExit('НЕ НАЙДЕНО и не заменено ранее: %s' % old[:70])
+            skipped += 1     # уже заменено
+            continue
         if c != n:
             raise SystemExit('ожидалось %d вхождений, найдено %d: %s' % (n, c, old[:70]))
         h = h.replace(old, new)
