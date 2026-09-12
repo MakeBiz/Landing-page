@@ -370,19 +370,33 @@
      исходного head может не пережить перерисовку. Модуль возвращает его
      на место, если после отрисовки тега нет. Идемпотентен. */
   (function mbPx(){
-    var SRC = 'https://vps-analytics.vercel.app/px/t.js';
-    var tries = 0;
-    function put(){
-      tries++;
-      if (!document.querySelector('script[src*="vps-analytics.vercel.app/px"]')) {
-        var s = document.createElement('script');
-        s.defer = true; s.src = SRC;
-        s.setAttribute('data-site', 'makebiz-com');
-        s.setAttribute('data-endpoint', 'https://vps-analytics.vercel.app/px');
-        (document.head || document.documentElement).appendChild(s);
-      }
-      if (tries < 40) setTimeout(put, 900);
+    /* Пиксель панели сквозной аналитики.
+       На бандл-страницах документ перерисовывается и тег из исходного head
+       пропадает из DOM, хотя скрипт уже успел загрузиться и отправить событие.
+       Поэтому проверяем не DOM, а факт сетевого запроса: так мы не поставим
+       второй счётчик и не удвоим просмотры. */
+    var HOST = 'vps-analytics.vercel.app';
+    function loaded(){
+      try {
+        var e = performance.getEntriesByType('resource');
+        for (var i = 0; i < e.length; i++) if (e[i].name.indexOf(HOST) >= 0) return true;
+      } catch (err) {}
+      return !!document.querySelector('script[src*="' + HOST + '"]');
     }
-    put();
+    var tries = 0;
+    (function check(){
+      tries++;
+      if (loaded()) return;
+      if (tries > 12) {
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://' + HOST + '/px/t.js';
+        s.setAttribute('data-site', 'makebiz-com');
+        s.setAttribute('data-endpoint', 'https://' + HOST + '/px');
+        (document.head || document.documentElement).appendChild(s);
+        return;
+      }
+      setTimeout(check, 700);
+    })();
   })();
 })();
