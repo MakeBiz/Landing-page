@@ -243,5 +243,59 @@
     };
   }
 
+  /* ---- ссылка на политику конфиденциальности под формой ----
+     По 152-ФЗ и по требованиям модерации Яндекс.Директа фраза согласия должна
+     открывать политику по клику. Вёрстка этого текста на страницах разная,
+     поэтому вместо правки каждой формы находим фразу в тексте и оборачиваем
+     её в ссылку. Бандл перерисовывает документ, поэтому повторяем по таймеру. */
+  (function () {
+    var EN = /^\/en(\/|$)/.test(location.pathname);
+    var HREF = EN ? '/en/privacy' : '/privacy';
+    var RE = EN
+      ? /(personal data processing policy|privacy policy)/i
+      : /(политик(?:ой|и|у|а) конфиденциальности|политик(?:ой|и|у|а) обработки персональных данных)/i;
+    var runs = 0;
+    /* на самих правовых страницах фраза это заголовок, ссылку туда не ставим */
+    var SKIP_PAGE = /^\/(en\/)?(privacy|terms)(\/|$)/.test(location.pathname);
+
+    function pass() {
+      if (SKIP_PAGE) return;
+      var w, n, hits = [];
+      try { w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null); } catch (e) { return; }
+      while ((n = w.nextNode())) {
+        var v = n.nodeValue;
+        if (!v || v.length > 400 || !RE.test(v)) continue;
+        var p = n.parentNode;
+        if (!p || p.nodeType !== 1) continue;
+        if (p.closest('a, h1, h2, h3, script, style, #mb-ssr, #mbf-cookie, #mbcf-msgs')) continue;
+        hits.push(n);
+        if (hits.length > 12) break;
+      }
+      for (var i = 0; i < hits.length; i++) {
+        var node = hits[i], m = RE.exec(node.nodeValue);
+        if (!m) continue;
+        var before = node.nodeValue.slice(0, m.index);
+        var after = node.nodeValue.slice(m.index + m[0].length);
+        var a = document.createElement('a');
+        a.href = HREF;
+        a.textContent = m[0];
+        a.setAttribute('data-mb-policy', '1');
+        a.style.color = 'inherit';
+        a.style.textDecoration = 'underline';
+        a.style.textUnderlineOffset = '2px';
+        var frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(a);
+        if (after) frag.appendChild(document.createTextNode(after));
+        try { node.parentNode.replaceChild(frag, node); } catch (e) {}
+      }
+    }
+
+    function tick() { runs++; try { pass(); } catch (e) {} if (runs > 70) clearInterval(t); }
+    var t = setInterval(tick, 900);
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', tick);
+    else tick();
+  })();
+
   record();
 })();
