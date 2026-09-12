@@ -3,7 +3,7 @@
 FAQ = {
 'index.html': [
  ('Чем занимается MakeBiz Group?',
-  'MakeBiz Group, юридически MakeBiz Technologies FZE LLC, это IT-компания в ОАЭ. Мы внедряем CRM Битрикс24, AI-агентов, речевую аналитику звонков Vector, AI-обработку документов IntDoc, BI-аналитику и серверы. 12 лет на рынке IT и AI, более 150 проектов внедрения.'),
+  'MakeBiz Group, юридически MakeBiz Technologies FZE LLC, это IT-компания в ОАЭ. Мы внедряем CRM Битрикс24, AI-агентов, речевую аналитику звонков Vector, AI-обработку документов IntDoc, BI-аналитику и серверы. 8 лет на рынке IT и AI, более 150 проектов внедрения.'),
  ('Сколько стоит внедрение и от чего зависит цена?',
   'Стандартная настройка Битрикс24 от 10 000 AED, команда AI-агентов от 6 000 AED, речевая аналитика Vector от 1 000 AED в месяц. Цена зависит от числа процессов, интеграций и объёма данных. Смету в дирхамах фиксируем до начала работ.'),
  ('Как проходит работа над проектом?',
@@ -69,7 +69,7 @@ FAQ = {
 ],
 'company.html': [
  ('Кто такие MakeBiz Group?',
-  'IT-компания в ОАЭ, юридически MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre, регистрационный номер 2624215090888. 12 лет на рынке IT и AI, более 150 проектов внедрения, поддержка 24/7.'),
+  'IT-компания в ОАЭ, юридически MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre, регистрационный номер 2624215090888. 8 лет на рынке IT и AI, более 150 проектов внедрения, поддержка 24/7.'),
  ('С какими компаниями вы работаете?',
   'Среди клиентов крупные компании из логистики, автопрома, производства, недвижимости и обучения: СДЭК, HAVAL, Unilin, Apartico, Перформия.'),
  ('На каких языках вы работаете?',
@@ -82,7 +82,7 @@ FAQ = {
 FAQ_EN = {
 'en/index.html': [
  ('What does MakeBiz Group do?',
-  'MakeBiz Group, legally MakeBiz Technologies FZE LLC, is an IT company in the UAE. We implement Bitrix24 CRM, AI agents, Vector speech analytics for sales calls, IntDoc document AI, BI analytics and servers. 12 years in IT and AI, over 150 implementation projects.'),
+  'MakeBiz Group, legally MakeBiz Technologies FZE LLC, is an IT company in the UAE. We implement Bitrix24 CRM, AI agents, Vector speech analytics for sales calls, IntDoc document AI, BI analytics and servers. 8 years in IT and AI, over 150 implementation projects.'),
  ('How much does an implementation cost?',
   'A standard Bitrix24 setup starts at AED 10,000, a team of AI agents at AED 6,000, Vector speech analytics at AED 1,000 a month. The price depends on the number of processes, integrations and data volume. The quote in dirhams is fixed before the work starts.'),
  ('How does a project run?',
@@ -148,7 +148,7 @@ FAQ_EN = {
 ],
 'en/company.html': [
  ('Who is MakeBiz Group?',
-  'An IT company in the UAE, legally MakeBiz Technologies FZE LLC, a free zone company of Ajman NuVentures Centre, registration number 2624215090888. 12 years in IT and AI, over 150 implementation projects, 24/7 support.'),
+  'An IT company in the UAE, legally MakeBiz Technologies FZE LLC, a free zone company of Ajman NuVentures Centre, registration number 2624215090888. 8 years in IT and AI, over 150 implementation projects, 24/7 support.'),
  ('What kind of companies do you work with?',
   'Our clients include large companies in logistics, automotive, manufacturing, real estate and education: CDEK, HAVAL, Unilin, Apartico and Performia.'),
  ('Which languages do you work in?',

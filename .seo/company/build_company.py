@@ -35,14 +35,14 @@ def page(lang):
     if lang == 'ru':
         url = SITE + '/company'
         title = 'О компании MakeBiz Group: IT-компания в Дубае и ОАЭ'
-        desc = ('MakeBiz Technologies FZE LLC: 12 лет в IT и AI, 150+ проектов. Внедряем AI-агентов, Битрикс24, '
+        desc = ('MakeBiz Technologies FZE LLC: 8 лет в IT и AI, 150+ проектов. Внедряем AI-агентов, Битрикс24, '
                 'речевую аналитику и BI в Дубае и ОАЭ. Реквизиты и контакты.')
         crumbs = [('Главная', SITE + '/'), ('О компании', url)]
         locale = 'ru_RU'
     else:
         url = SITE + '/en/company'
         title = 'About MakeBiz Group: IT company in Dubai and the UAE'
-        desc = ('MakeBiz Technologies FZE LLC: 12 years in IT and AI, 150+ projects. AI agents, Bitrix24, speech '
+        desc = ('MakeBiz Technologies FZE LLC: 8 years in IT and AI, 150+ projects. AI agents, Bitrix24, speech '
                 'analytics and BI in Dubai and the UAE. Details, industries, contacts.')
         crumbs = [('Home', SITE + '/en'), ('About us', url)]
         locale = 'en_US'

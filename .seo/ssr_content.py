@@ -3,7 +3,7 @@
 SSR = {}
 SSR['index.html'] = '''<h1>Повышаем эффективность бизнеса через процессы, аналитику и AI</h1>
 <p>MakeBiz Group, IT-компания в ОАЭ. Отлаживаем процессы и встраиваем автоматизацию и искусственный интеллект в продажи, документы и звонки. Меньше рутины и потерь, больше прибыли.</p>
-<ul><li>12 лет на рынке IT и AI</li><li>150+ проектов внедрения</li><li>Поддержка и сопровождение 24/7</li><li>3 направления автоматизации: процессы, аналитика, искусственный интеллект</li></ul>
+<ul><li>8 лет на рынке IT и AI</li><li>150+ проектов внедрения</li><li>Поддержка и сопровождение 24/7</li><li>3 направления автоматизации: процессы, аналитика, искусственный интеллект</li></ul>
 <p>С нами работают компании из сфер: продажи, дистрибуция, недвижимость, логистика, производство, услуги B2B, ритейл.</p>
 <h2>Собираем процессы, аналитику и AI в одну систему</h2>
 <p>Не внедряем технологии ради технологий: сначала находим, где бизнес теряет деньги и время, затем встраиваем решения, которые дают измеримый результат.</p>
@@ -35,7 +35,7 @@ SSR['index.html'] = '''<h1>Повышаем эффективность бизн�
 
 SSR['en/index.html'] = '''<h1>We improve business efficiency through processes, analytics and AI</h1>
 <p>MakeBiz Group is an IT company in the UAE. We fine-tune processes and embed automation and artificial intelligence into sales, documents and calls. Less routine and fewer losses, more profit.</p>
-<ul><li>12 years in IT and AI</li><li>150+ implementation projects</li><li>24/7 support and maintenance</li><li>3 automation areas: processes, analytics, artificial intelligence</li></ul>
+<ul><li>8 years in IT and AI</li><li>150+ implementation projects</li><li>24/7 support and maintenance</li><li>3 automation areas: processes, analytics, artificial intelligence</li></ul>
 <p>We work with companies in sales, distribution, real estate, logistics, manufacturing, B2B services and retail.</p>
 <h2>We bring together processes, analytics and AI into a single system</h2>
 <p>We do not implement technology for the sake of technology: first we find where the business loses money and time, then we integrate solutions that deliver measurable results.</p>
@@ -124,14 +124,14 @@ SSR['en/ai-agents.html'] = '''<h1>An AI staff department for your business, not 
 SSR['contacts.html'] = '''<h1>Мы всегда готовы обсудить ваш проект</h1>
 <p>Контакты MakeBiz Group, IT-компании в ОАЭ. Оставьте заявку или напишите напрямую в Telegram или WhatsApp. Ответим быстро, разберём вашу задачу и предложим решение.</p>
 <ul><li>Telegram: <a href="https://t.me/Anton_MakeBiz">@Anton_MakeBiz</a>, быстрый ответ</li><li>WhatsApp: <a href="https://wa.me/971502620927">+971 50 262 0927</a></li><li>Почта: <a href="mailto:info@makebiztechnologies.com">info@makebiztechnologies.com</a></li></ul>
-<ul><li>12 лет на рынке IT и AI</li><li>150+ проектов внедрения</li><li>Поддержка и сопровождение 24/7</li></ul>
+<ul><li>8 лет на рынке IT и AI</li><li>150+ проектов внедрения</li><li>Поддержка и сопровождение 24/7</li></ul>
 <h2>Оставьте заявку</h2>
 <p>Ответим в Telegram или WhatsApp. Что важно обсудить, коротко напишите в комментарии. Покажем продукты в Zoom или лично в Дубае.</p>'''
 
 SSR['en/contacts.html'] = '''<h1>We are always ready to discuss your project</h1>
 <p>Contact MakeBiz Group, an IT company in the UAE. Leave a request or message us directly on Telegram or WhatsApp. We reply fast, dig into your task and propose a solution.</p>
 <ul><li>Telegram: <a href="https://t.me/Anton_MakeBiz">@Anton_MakeBiz</a>, quick reply</li><li>WhatsApp: <a href="https://wa.me/971502620927">+971 50 262 0927</a></li><li>Email: <a href="mailto:info@makebiztechnologies.com">info@makebiztechnologies.com</a></li></ul>
-<ul><li>12 years in the IT and AI market</li><li>150+ implementation projects</li><li>24/7 support and maintenance</li></ul>
+<ul><li>8 years in the IT and AI market</li><li>150+ implementation projects</li><li>24/7 support and maintenance</li></ul>
 <h2>Leave a request</h2>
 <p>We will reply on Telegram or WhatsApp. Add anything important in the comment. We can demo the products over Zoom or in person in Dubai.</p>'''
 
