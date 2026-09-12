@@ -111,10 +111,17 @@ function createRouter(files) {
 }
 
 // Cache-Control как в vercel.json; остальное как по умолчанию у Vercel
-function cacheControlFor(rel) {
-  if (/\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|otf)$/i.test(rel)) return 'public, max-age=86400, stale-while-revalidate=604800';
-  if (/\.(css|js)$/i.test(rel)) return 'public, max-age=600, stale-while-revalidate=3600';
-  return 'public, max-age=0, must-revalidate';
+function cacheControlFor(rel, versioned) {
+  // Картинки и шрифты меняются редко: месяц в кэше, неделя на фоновое обновление.
+  if (/\.(png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|otf)$/i.test(rel)) return 'public, max-age=2592000, stale-while-revalidate=604800';
+  // Скрипты и стили с версией в адресе (?v=хэш) неизменны: год и immutable.
+  // Без версии держим час, иначе правка общего файла неделю не доходит до людей.
+  if (/\.(css|js)$/i.test(rel)) {
+    return versioned ? 'public, max-age=31536000, immutable' : 'public, max-age=3600, stale-while-revalidate=86400';
+  }
+  // HTML меняется при каждом деплое: две минуты в кэше плюс фоновое обновление,
+  // чтобы переходы по сайту и кнопка «назад» не перекачивали страницу заново.
+  return 'public, max-age=120, stale-while-revalidate=600';
 }
 // ==== /ROUTING CORE ====
 
@@ -164,9 +171,9 @@ for (const f of fs.existsSync(apiDir) ? fs.readdirSync(apiDir).sort() : []) {
   });
 }
 
-function sendPage(res, rel, status, next) {
+function sendPage(res, rel, status, next, versioned) {
   res.status(status);
-  res.setHeader('Cache-Control', status === 200 ? cacheControlFor(rel) : 'no-store');
+  res.setHeader('Cache-Control', status === 200 ? cacheControlFor(rel, versioned) : 'no-store');
   res.sendFile(rel, { root: ROOT }, (err) => {
     if (err && !res.headersSent) next(err);
   });
@@ -180,7 +187,7 @@ app.use((req, res, next) => {
     const q = req.originalUrl.indexOf('?');
     return res.redirect(301, r.redirect + (q === -1 ? '' : req.originalUrl.slice(q)));
   }
-  if (r.file) return sendPage(res, r.file, 200, next);
+  if (r.file) return sendPage(res, r.file, 200, next, Object.prototype.hasOwnProperty.call(req.query || {}, 'v'));
   if (r.status === 404 && files.has('404.html')) return sendPage(res, '404.html', 404, next);
   res.status(r.status || 404).type('text/plain').send(r.status === 400 ? 'Bad request' : 'Not found');
 });

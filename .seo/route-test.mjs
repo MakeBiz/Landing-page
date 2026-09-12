@@ -88,10 +88,11 @@ function run(label, files) {
   }
   ok(route('//evil.com/').redirect === '/evil.com', 'схлопывание //');
 
-  // H. кэш-заголовки как в vercel.json
-  ok(cacheControlFor('og-image.jpg').includes('max-age=86400'), 'кэш картинок');
-  ok(cacheControlFor('three.min.js').includes('max-age=600'), 'кэш js');
-  ok(cacheControlFor('index.html') === 'public, max-age=0, must-revalidate', 'кэш html');
+  // H. кэш-заголовки
+  ok(cacheControlFor('og-image.jpg').includes('max-age=2592000'), 'кэш картинок: месяц');
+  ok(cacheControlFor('three.min.js', false).includes('max-age=3600'), 'кэш js без версии: час');
+  ok(cacheControlFor('mb-attr.js', true).includes('immutable'), 'кэш js с версией: год и immutable');
+  ok(cacheControlFor('index.html').includes('max-age=120'), 'кэш html: две минуты');
   return route;
 }
 
