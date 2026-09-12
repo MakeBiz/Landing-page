@@ -364,4 +364,25 @@
   })();
 
   record();
+
+  /* ---- пиксель панели сквозной аналитики ------------------------------
+     На бандл-страницах документ перерисовывается из шаблона, и тег из
+     исходного head может не пережить перерисовку. Модуль возвращает его
+     на место, если после отрисовки тега нет. Идемпотентен. */
+  (function mbPx(){
+    var SRC = 'https://vps-analytics.vercel.app/px/t.js';
+    var tries = 0;
+    function put(){
+      tries++;
+      if (!document.querySelector('script[src*="vps-analytics.vercel.app/px"]')) {
+        var s = document.createElement('script');
+        s.defer = true; s.src = SRC;
+        s.setAttribute('data-site', 'makebiz-com');
+        s.setAttribute('data-endpoint', 'https://vps-analytics.vercel.app/px');
+        (document.head || document.documentElement).appendChild(s);
+      }
+      if (tries < 40) setTimeout(put, 900);
+    }
+    put();
+  })();
 })();
