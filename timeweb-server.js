@@ -37,11 +37,9 @@ const ALIAS_HOSTS = new Set([
 
 // 301 из vercel.json, один в один
 const REDIRECTS = {
-  '/company': '/',
   '/openclaw': '/ai-agents',
   '/servers': '/vps',
   '/en/openclaw': '/en/ai-agents',
-  '/en/company': '/en',
   '/en/servers': '/en/vps',
   '/keysy/pink-rabbit-agent': '/keysy',
   '/en/keysy/pink-rabbit-agent': '/en/keysy',

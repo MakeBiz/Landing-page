@@ -420,4 +420,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://makebiztechnologies.com/company</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/company</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/company"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/company"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

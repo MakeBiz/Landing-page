@@ -1,0 +1,36 @@
+#mbabout{--g:#16C15A;--g2:#0C7A33;--r:#C8102E;--r2:#E4384D;--tx:#EAF1FF;--mu:#93A4B8;--ln:rgba(255,255,255,.12);--gl:rgba(255,255,255,.045);max-width:1240px;margin:0 auto;padding:clamp(96px,11vw,132px) clamp(18px,4vw,40px) clamp(20px,3vw,36px);font-family:Oxygen,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);position:relative;z-index:1}
+#mbabout *{box-sizing:border-box}
+#mbabout .mba-eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 12px Oxygen;letter-spacing:.13em;text-transform:uppercase;color:#8FE7AE;background:rgba(22,193,90,.1);border:1px solid rgba(22,193,90,.28);padding:8px 15px;border-radius:100px}
+#mbabout .mba-eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--g);display:block}
+#mbabout h1{font:700 clamp(2rem,4.4vw,3.35rem)/1.08 Oxygen;letter-spacing:-.025em;color:#fff;margin:26px 0 0;max-width:17ch}
+#mbabout h1 span{color:var(--g)}
+#mbabout .mba-lead{font:300 clamp(15px,1.5vw,18px)/1.62 Oxygen;color:var(--mu);margin:20px 0 0;max-width:68ch}
+#mbabout .mba-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:38px 0 0}
+#mbabout .mba-stat{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid var(--ln);border-radius:18px;padding:20px 22px}
+#mbabout .mba-stat b{display:block;font:700 clamp(1.6rem,2.8vw,2.2rem)/1 Oxygen;color:var(--g)}
+#mbabout .mba-stat span{display:block;font:300 13px/1.45 Oxygen;color:var(--mu);margin-top:9px}
+#mbabout h2{font:700 clamp(1.5rem,2.7vw,2.15rem)/1.14 Oxygen;letter-spacing:-.02em;color:#fff;margin:clamp(52px,6vw,78px) 0 0}
+#mbabout .mba-sub{font:300 clamp(14px,1.3vw,16px)/1.6 Oxygen;color:var(--mu);margin:14px 0 0;max-width:70ch}
+#mbabout .mba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 0}
+#mbabout .mba-grid.two{grid-template-columns:repeat(2,1fr)}
+#mbabout .mba-card{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid var(--ln);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;transition:border-color .16s,transform .16s}
+#mbabout a.mba-card:hover{border-color:rgba(22,193,90,.45);transform:translateY(-2px)}
+#mbabout .mba-card h3{font:700 17px/1.3 Oxygen;color:#fff;margin:0}
+#mbabout .mba-card p{font:300 14px/1.6 Oxygen;color:var(--mu);margin:0}
+#mbabout .mba-price{font:700 13px Oxygen;color:var(--g);margin-top:auto;padding-top:6px}
+#mbabout .mba-steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0 0}
+#mbabout .mba-step{background:var(--gl);border:1px solid var(--ln);border-radius:20px;padding:22px}
+#mbabout .mba-step b{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:11px;background:rgba(22,193,90,.14);color:var(--g);font:700 15px Oxygen;margin-bottom:14px}
+#mbabout .mba-step h3{font:700 16px/1.3 Oxygen;color:#fff;margin:0 0 8px}
+#mbabout .mba-step p{font:300 13.5px/1.55 Oxygen;color:var(--mu);margin:0}
+#mbabout .mba-list{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+#mbabout .mba-list li{position:relative;padding:0 0 0 30px;font:300 15px/1.6 Oxygen;color:#C7D3E3}
+#mbabout .mba-list li:before{content:"";position:absolute;left:6px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--g)}
+#mbabout .mba-req{background:linear-gradient(180deg,#0E1420,#0A0E15);border:1px solid var(--ln);border-radius:24px;padding:clamp(24px,3vw,34px);margin:30px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+#mbabout .mba-req dl{margin:0}
+#mbabout .mba-req dt{font:700 12px Oxygen;letter-spacing:.09em;text-transform:uppercase;color:#7E8DA3;margin:0 0 6px}
+#mbabout .mba-req dd{margin:0 0 18px;font:300 15px/1.55 Oxygen;color:var(--tx)}
+#mbabout .mba-req a{color:var(--g);text-decoration:none}
+#mbabout .mba-req a:hover{text-decoration:underline}
+@media(max-width:960px){#mbabout .mba-stats{grid-template-columns:repeat(2,1fr)}#mbabout .mba-grid,#mbabout .mba-grid.two{grid-template-columns:1fr 1fr}#mbabout .mba-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){#mbabout .mba-grid,#mbabout .mba-grid.two,#mbabout .mba-steps,#mbabout .mba-list,#mbabout .mba-req{grid-template-columns:1fr}#mbabout h1{max-width:none}}
