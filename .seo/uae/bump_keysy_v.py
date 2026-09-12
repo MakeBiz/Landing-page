@@ -43,7 +43,10 @@ def main():
         for a, v in want.items():
             name = a.rsplit('/', 1)[1]
             pre = '/en/keysy/' if a.startswith('en/') else '/keysy/'
+            # сначала обновляем адреса, где версия уже стояла
             h = re.sub(re.escape(pre + name) + r'\?v=[0-9a-f]+', pre + name + '?v=' + v, h)
+            # затем добавляем её туда, где её не было: иначе правка файла доходит до людей час
+            h = re.sub(re.escape(pre + name) + r'(?=")', pre + name + '?v=' + v, h)
         if h != o:
             io.open(f, 'w', encoding='utf-8').write(h)
             changed += 1
