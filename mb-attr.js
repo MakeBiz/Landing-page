@@ -8,9 +8,11 @@
      3) незаметно подмешивает эти данные в любую отправку на /api/lead,
         поэтому формы на страницах менять не нужно;
      4) отправляет цели в Метрику (счётчик 112503709) и события в GA4:
-        lead после успешной заявки, call / telegram / whatsapp / max / email
-        при клике по контакту. Метрика включается только после согласия на cookie,
-        до согласия цели в неё не уходят.
+        lead после успешной заявки; call / telegram / whatsapp / max / email / tg_channel
+        при клике по контакту; form_view и form_start по форме; demo по записи на
+        демонстрацию; calc_agent / calc_select / calc_tariff / calc_cta в калькуляторе;
+        scroll_75 по дочитыванию страницы. Метрика включается только после согласия
+        на cookie, до согласия цели в неё не уходят.
 
    Файл подключается в <head> каждой страницы. Повторный запуск безопасен.
    ===================================================================== */
@@ -103,9 +105,18 @@
   }
   window.__mbAttr = snapshot;
 
-  /* ---- цели: заявка и клики по контактам ---- */
+  /* ---- цели Метрики и события GA4 ----
+     Контакты: call, telegram, whatsapp, max, email, tg_channel
+     Форма: form_view (форма попала в зону видимости), form_start (начал заполнять), lead (сервер принял заявку)
+     Калькулятор в iframe: calc_agent (открыл карточку агента), calc_select (отметил агента),
+       calc_tariff (выбрал тариф), calc_cta (кнопка заявки внутри калькулятора)
+     Прочее: demo (запись на демонстрацию), scroll_75 (дочитал страницу до 75%)
+     Метрика включается после согласия на cookie, до него цели в неё не уходят. */
   var YM_ID = 112503709;
-  function goal(name) {
+  var CONTACTS = { call: 1, telegram: 1, whatsapp: 1, max: 1, email: 1, tg_channel: 1 };
+  var fired = {};
+  function goal(name, once) {
+    if (once) { if (fired[name]) return; fired[name] = 1; }
     var w = window;
     try {
       /* страница внутри iframe нашего же сайта (калькулятор): цель отдаём родителю */
@@ -119,7 +130,8 @@
     try {
       if (typeof w.gtag === 'function') {
         if (name === 'lead') w.gtag('event', 'generate_lead');
-        else w.gtag('event', 'contact_click', { method: name });
+        else if (CONTACTS[name]) w.gtag('event', 'contact_click', { method: name });
+        else w.gtag('event', name);
       }
     } catch (e) {}
   }
@@ -129,19 +141,79 @@
     var h = String(href || '').toLowerCase();
     if (/^tel:/.test(h)) return 'call';
     if (/^mailto:/.test(h)) return 'email';
+    if (/^https?:\/\/(www\.)?t\.me\/makebizchannel/.test(h)) return 'tg_channel';
     if (/^tg:/.test(h) || /^https?:\/\/(www\.)?(t\.me|telegram\.me)\//.test(h)) return 'telegram';
     if (/^whatsapp:/.test(h) || /^https?:\/\/(www\.)?(wa\.me|api\.whatsapp\.com|chat\.whatsapp\.com|whatsapp\.com)\//.test(h)) return 'whatsapp';
     if (/^https?:\/\/(www\.)?max\.ru\//.test(h)) return 'max';
     return '';
   }
+
+  var ON_CALC = /^\/calculator-agents-app/.test(location.pathname);
+  function txt(el) { return ((el && (el.innerText || el.textContent)) || '').replace(/\s+/g, ' ').trim(); }
+  /* ищем у клика ближайший осмысленный подпись-элемент: сам элемент или до четырёх родителей */
+  function nearText(el, re, maxLen) {
+    var n = el, i = 0, t;
+    while (n && n.nodeType === 1 && i < 5) {
+      t = txt(n);
+      if (t && t.length <= (maxLen || 80) && re.test(t)) return t;
+      n = n.parentElement; i++;
+    }
+    return '';
+  }
   document.addEventListener('click', function (e) {
     try {
       var t = e.target;
-      var a = t && t.closest ? t.closest('a[href]') : null;
-      var g = a ? contactKind(a.getAttribute('href')) : '';
-      if (g) goal(g);
+      if (!t || !t.closest) return;
+      var a = t.closest('a[href]');
+      if (a) { var g = contactKind(a.getAttribute('href')); if (g) goal(g); }
+      if (nearText(t, /^(Записаться на демонстрац|Записаться на демо|Book a demo|Request a demo)/i, 60)) goal('demo');
+      if (!ON_CALC) return;
+      if (nearText(t, /^(Подробнее|Details)$/i, 20)) goal('calc_agent');
+      else if (nearText(t, /^(Выбрать|Select)/i, 40)) goal('calc_select');
+      else if (nearText(t, /(Старт|Бизнес|Холдинг|Start|Business|Holding)[\s\S]{0,30}AED/, 70)) goal('calc_tariff');
+      else if (nearText(t, /(Обсудить проект|Оставить заявку|Получить расчёт|Discuss the project|Leave a request)/i, 60)) goal('calc_cta');
     } catch (err) {}
   }, true);
+
+  /* форма заявки: показ и начало заполнения */
+  function watchForm() {
+    var f = document.getElementById('mbcf-contact') || document.getElementById('mbcf-lead') || document.querySelector('.mbcf-wrap');
+    if (!f) return false;
+    if (f.__mbFormWatched) return true;
+    f.__mbFormWatched = 1;
+    try {
+      if (window.IntersectionObserver) {
+        var io = new IntersectionObserver(function (es) {
+          for (var i = 0; i < es.length; i++) if (es[i].isIntersecting) { goal('form_view', 1); io.disconnect(); }
+        }, { threshold: 0.35 });
+        io.observe(f);
+      } else { goal('form_view', 1); }
+    } catch (e) {}
+    var start = function (ev) {
+      var el = ev && ev.target;
+      if (el && el.tagName && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) && el.id !== 'mbcf-gotcha') goal('form_start', 1);
+    };
+    f.addEventListener('focusin', start, true);
+    f.addEventListener('input', start, true);
+    return true;
+  }
+  var fTries = 0, fIv = setInterval(function () { if (watchForm() || ++fTries > 40) clearInterval(fIv); }, 400);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watchForm); else watchForm();
+
+  /* дочитал страницу: 75% высоты */
+  var sTimer = null;
+  window.addEventListener('scroll', function () {
+    if (fired.scroll_75 || sTimer) return;
+    sTimer = setTimeout(function () {
+      sTimer = null;
+      try {
+        var h = document.documentElement;
+        var total = Math.max(h.scrollHeight, document.body ? document.body.scrollHeight : 0) - window.innerHeight;
+        var y = window.pageYOffset || h.scrollTop || 0;
+        if (total > 500 && y / total >= 0.75) goal('scroll_75', 1);
+      } catch (e) {}
+    }, 400);
+  }, false);
 
   /* ---- подмешиваем источник в заявку и отмечаем успешную отправку ---- */
   var orig = window.fetch;
