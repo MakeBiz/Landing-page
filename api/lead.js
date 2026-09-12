@@ -4,7 +4,7 @@
 // Их нужно задать в Vercel -> Settings -> Environment Variables:
 //   TELEGRAM_BOT_TOKEN  -токен из @BotFather
 //   TELEGRAM_CHAT_ID    -куда слать заявки (id группы продаж)
-// После добавления переменных нужно сделать Redeploy.
+// После добавления переменных приложение нужно перезапустить.
 
 export default async function handler(req, res) {
   // CORS
@@ -26,7 +26,7 @@ export default async function handler(req, res) {
     if (!TOKEN || !CHAT_ID) {
       return res.status(500).json({
         ok: false,
-        error: 'Не заданы переменные окружения TELEGRAM_BOT_TOKEN и/или TELEGRAM_CHAT_ID в настройках Vercel.',
+        error: 'Не заданы переменные окружения TELEGRAM_BOT_TOKEN и/или TELEGRAM_CHAT_ID в настройках приложения Timeweb.',
       });
     }
 

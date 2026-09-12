@@ -2881,7 +2881,7 @@ class Component extends DCLogic {
     try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){ if(!r||!r.ok) throw 0; return r.json(); })
       .then(function(res){ if(res&&res.ok===false) throw 0; $('mbcf-oktext').textContent = 'Спасибо! Свяжемся с вами '+via+' по номеру '+ps+'.'; })
-      .catch(function(){ $('mbcf-oktext').textContent = 'Заявку не удалось отправить автоматически. Напишите нам напрямую в Telegram: @Anton_MakeBiz'; }); }catch(e){ $('mbcf-oktext').textContent = 'Заявку не удалось отправить. Напишите нам в Telegram: @Anton_MakeBiz'; }
+      .catch(function(){ $('mbcf-oktext').innerHTML = 'Заявку не удалось отправить автоматически. Напишите нам напрямую: <a href="https://t.me/Anton_MakeBiz" style="color:#16C15A">Telegram @Anton_MakeBiz</a> или <a href="https://wa.me/971502620927" style="color:#16C15A">WhatsApp +971 50 262 0927</a>'; }); }catch(e){ $('mbcf-oktext').innerHTML = 'Заявку не удалось отправить автоматически. Напишите нам напрямую: <a href="https://t.me/Anton_MakeBiz" style="color:#16C15A">Telegram @Anton_MakeBiz</a> или <a href="https://wa.me/971502620927" style="color:#16C15A">WhatsApp +971 50 262 0927</a>'; }
   }
   function resetForm(){
     var form=$('mbcf-lead'); if(form) form.reset();
