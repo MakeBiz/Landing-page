@@ -55,7 +55,7 @@ Key facts:
 - [Серверы и VPS в ОАЭ и мире: подбор и настройка](https://makebiztechnologies.com/vps): Сравните 7 площадок: Truehost Cloud, VPS.org, DataPacket, Hostman, UltaHost, IShosting и AEserver. Сервер берёте сами, а развернём и обслужим его мы.
 - [Кейсы MakeBiz: внедрение CRM Битрикс24, AI-агентов и аналитики](https://makebiztechnologies.com/keysy): Кейсы MakeBiz по сферам и направлениям: AI-агенты, CRM Битрикс24 и аналитика. С какой задачей пришёл клиент, что мы сделали и что изменилось.
 - [Новости MakeBiz: AI-агенты, CRM и автоматизация бизнеса](https://makebiztechnologies.com/news): Разборы и новости про AI-агентов, искусственный интеллект, CRM, продажи и автоматизацию бизнеса: коротко, по делу и с примерами из проектов MakeBiz.
-- [Партнёрская программа MakeBiz Group: доход с рекомендаций](https://makebiztechnologies.com/partners): Партнёрская программа MakeBiz Group: 20% с первой оплаты клиента и 10% весь следующий год за рекомендации на AI-агентов, Битрикс24, Vector и IntDoc.
+- [Программа партнёров MakeBiz в ОАЭ Group: доход с рекомендаций](https://makebiztechnologies.com/partners): Партнёрская программа MakeBiz Group: 20% с первой оплаты клиента и 10% весь следующий год за рекомендации на AI-агентов, Битрикс24, Vector и IntDoc.
 - [Контакты MakeBiz Group в Дубае: Telegram, WhatsApp, заявка](https://makebiztechnologies.com/contacts): Свяжитесь с MakeBiz Group: Telegram @Anton_MakeBiz, WhatsApp +971 50 262 0927. Обсудим проект, покажем продукты в Zoom или лично в Дубае.
 - [AI, которого вы не замечаете](https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete)
 - [Что такое AI-агент и чем он отличается от чат-бота](https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
