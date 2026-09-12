@@ -297,5 +297,71 @@
     else tick();
   })();
 
+  /* ---- телефон в шапке ----
+     Шапку рисует общий скрипт mbm, места в ней впритык: на 1512 px строка заполнена
+     ровно по границе. Поэтому не задаём брейкпойнты наугад, а меряем: сначала пробуем
+     номер текстом, не влезло - оставляем только иконку, не влезло и это - убираем совсем.
+     В бургер-меню ссылка «Позвонить» есть всегда. */
+  (function () {
+    var TEL = '+971502620927';
+    var HUMAN = '+971 50 262 0927';
+    var EN = /^\/en(\/|$)/.test(location.pathname);
+    var CALL = EN ? 'Call' : 'Позвонить';
+    var ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+      + '<path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.58 3.6a1 1 0 0 1-.25 1z"/></svg>';
+    var CSS = '#mbm-header .mb-ph{display:inline-flex;align-items:center;gap:7px;font:700 14px Oxygen,system-ui,sans-serif;'
+      + 'color:#EAF1FF;text-decoration:none;white-space:nowrap;transition:color .15s}'
+      + '#mbm-header .mb-ph:hover{color:#16C15A}'
+      + '#mbm-header .mb-ph.mb-ph-icon .mb-ph-t{display:none}'
+      + '#mbm-drop .mb-ph-drop{color:#16C15A;font-weight:700}';
+
+    function style() {
+      if (document.getElementById('mb-ph-css')) return;
+      var st = document.createElement('style');
+      st.id = 'mb-ph-css';
+      st.textContent = CSS;
+      (document.head || document.documentElement).appendChild(st);
+    }
+
+    function fit() {
+      var inn = document.querySelector('#mbm-header .mbm-in');
+      var el = document.querySelector('#mbm-header .mb-ph');
+      if (!inn || !el) return;
+      el.style.display = '';
+      el.classList.remove('mb-ph-icon');
+      if (inn.scrollWidth > inn.clientWidth + 1) el.classList.add('mb-ph-icon');
+      if (inn.scrollWidth > inn.clientWidth + 1) el.style.display = 'none';
+    }
+
+    function place() {
+      style();
+      var right = document.querySelector('#mbm-header .mbm-right');
+      if (right && !right.querySelector('.mb-ph')) {
+        var a = document.createElement('a');
+        a.className = 'mb-ph';
+        a.href = 'tel:' + TEL;
+        a.title = HUMAN;
+        a.setAttribute('aria-label', CALL + ' ' + HUMAN);
+        a.innerHTML = ICON + '<span class="mb-ph-t">' + HUMAN + '</span>';
+        right.insertBefore(a, right.firstChild);
+      }
+      var drop = document.querySelector('#mbm-drop nav');
+      if (drop && !drop.querySelector('.mb-ph-drop')) {
+        var d = document.createElement('a');
+        d.className = 'mb-ph-drop';
+        d.href = 'tel:' + TEL;
+        d.textContent = CALL + ' ' + HUMAN;
+        drop.appendChild(d);
+      }
+      fit();
+    }
+
+    var t = setInterval(place, 900);
+    setTimeout(function () { clearInterval(t); setInterval(place, 2500); }, 60000);
+    window.addEventListener('resize', function () { clearTimeout(window.__mbPhT); window.__mbPhT = setTimeout(fit, 200); });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', place);
+    else place();
+  })();
+
   record();
 })();
