@@ -65,57 +65,57 @@ SSR['en/index.html'] = '''<h1>We improve business efficiency through processes, 
 {CASES}
 <p><a href="/en/keysy">All case studies</a></p>'''
 
-SSR['ai-agents.html'] = '''<h1>Отдел AI-сотрудников для вашего бизнеса, не бот, а команда</h1>
-<p>У каждого агента своя роль, общая память и доступ к CRM. Работают там, где уже работает ваша команда, в Telegram. Подробности покажем вживую на демонстрации.</p>
+SSR['ai-agents.html'] = '''<h1>Отдел AI-сотрудников для компании в ОАЭ, не бот, а команда</h1>
+<p>У каждого агента своя роль, общая память и доступ к CRM. Переписка с клиентом идёт на английском и русском, суммы считаются в дирхамах. Покажем систему вживую на вашем процессе.</p>
 <p>Команда агентов от 6 000 AED. <a href="/calculator-agents">Рассчитать стоимость в калькуляторе</a></p>
-<ul><li>Помнят: память вынесена в базу</li><li>Не выдумывают: берут факты только из проверенной базы</li><li>Свой сервер: система разворачивается на вашем сервере</li><li>Живут в Telegram: единый вход для команды</li></ul>
+<ul><li>Помнят: память вынесена в базу</li><li>Не выдумывают: берут факты только из вашей проверенной базы</li><li>Свой сервер: разворачиваем на вашем сервере в ОАЭ</li><li>Живут в Telegram: единый вход для команды</li></ul>
 <p>Роли в команде: Дирижёр, Диспетчер, Финансист, Юрист, Аналитик, Радар, Связной, Ментор, Лидогенератор, Квалификатор, Продажник, Пингер, Аккаунт-менеджер, Рупор, Аудитор.</p>
-<h2>56 агентов общаются между собой и ведут работу по цепочке</h2>
-<p>Дирижёр понимает запрос и поднимает нужных специалистов. Права выдаются точечно, данные между контурами изолированы. Три контура: бизнес, личное, семья.</p>
-<p>Контур продаж: восемь агентов ведут воронку от первого касания до сопровождения клиента. Поймал лид, обогатил, квалифицировал, собрал предложение, довёл до оплаты, ведёт клиента.</p>
-<h3>Бизнес</h3>
-<p>Команда агентов ведёт операционку по восьми направлениям, всё связано с вашей CRM: финансы, продажи, право, аналитика, найм и команда, операции, маркетинг, клиентский сервис.</p>
-<p>Те же агенты закрывают дела владельца: финансы, задачи, здоровье, обучение. Для семьи отдельный контур, данные изолированы от бизнеса.</p>
-<h2>Все цифры из одной базы, в телефоне и на большом экране</h2>
-<p>Ничего не нужно осваивать заново: люди пишут как писали, а рядом в Telegram живёт приложение с дашбордом и задачами.</p>
-<ul><li>Дашборд по доменам: финансы, задачи, продажи. Цифры из одной базы, а не из ощущений</li><li>Задачи с фильтрами и статусами, тап по задаче ведёт к действиям через Диспетчера</li><li>Большой экран для планёрок показывает те же данные, что и телефон</li></ul>
-<p>Интеграции: Bitrix24, Telegram, 1С, Adesk, банковские выписки, Google Sheets, Яндекс Директ, Яндекс Метрика.</p>
+<h2>56 агентов общаются между собой и передают работу по цепочке</h2>
+<p>Дирижёр понимает запрос и поднимает нужных специалистов. Права выдаются точечно, данные юрлиц в free zone и на материке не смешиваются. Три контура: компания, личное, семья.</p>
+<p>Контур продаж: восемь агентов ведут всю воронку от первой заявки до сопровождения клиента. Поймал лид, обогатил, квалифицировал, собрал предложение, довёл до оплаты, ведёт клиента.</p>
+<h3>Компания</h3>
+<p>Команда агентов ведёт операционку по восьми направлениям и связана с вашим Битрикс24: финансы, продажи, право, аналитика, найм и команда, операции, маркетинг, клиентский сервис.</p>
+<p>Те же агенты закрывают дела владельца: финансы, задачи, поездки, обучение. Для семьи отдельный контур, данные не пересекаются с бизнесом.</p>
+<h2>Все цифры из одной базы, в телефоне и на экране планёрки</h2>
+<p>Осваивать заново нечего: люди пишут как писали, а рядом в Telegram живёт приложение с дашбордом и задачами.</p>
+<ul><li>Дашборд по направлениям: финансы, задачи, продажи. Цифры из одной базы, а не из ощущений</li><li>Задачи с фильтрами и статусами, нажатие на задачу ведёт к действиям через Диспетчера</li><li>Экран для планёрки показывает ровно те же данные, что и телефон</li></ul>
+<p>Интеграции: Битрикс24, Telegram, WhatsApp, 1С, банковские выписки, Google Sheets, Яндекс Метрика, Google Analytics.</p>
 <h2>Покажем живую систему на вашем процессе</h2>
-<p>Не слайды, а работающие агенты. Разберём ваш процесс, подберём роли и посчитаем стоимость: 30-40 минут онлайн, живая система, роли под вашу задачу. Записаться: <a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a>, ответим в течение дня.</p>
-<h2>Это не GPT в окне, это сотрудник, который делает работу</h2>
-<p>Чат ждёт вопрос и отвечает текстом. Агент сам ведёт процесс до результата.</p>
-<ul><li>Чат отвечает и забывает, агент помнит: память вынесена в базу</li><li>Чат ждёт, пока спросят, агент сам стартует по событию и расписанию</li><li>Чат отдаёт текст, а дальше работает человек, агент ведёт до результата и отчитывается</li><li>Чат выдумывает, когда не знает, агент берёт факты только из проверенной базы</li></ul>
-<p>Агент делает работу сам: запускает процесс, ведёт, отчитывается. Человека зовёт только на спорное и крупное.</p>
+<p>Не слайды, а работающие агенты. Разберём процесс, подберём роли и посчитаем стоимость в дирхамах: 30-40 минут онлайн, живая система, роли под вашу задачу. Записаться: <a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a>, ответим в течение дня.</p>
+<h2>Это не GPT в окне, это сотрудник, который сам делает работу</h2>
+<p>Чат ждёт вопроса и отвечает текстом. Агент сам доводит процесс до результата.</p>
+<ul><li>Чат отвечает и забывает, агент помнит: память вынесена в базу</li><li>Чат ждёт, пока спросят, агент стартует сам по событию и расписанию</li><li>Чат отдаёт текст, дальше всё на человеке, агент доводит до результата и отчитывается</li><li>Чат выдумывает, если не знает, агент берёт факты только из вашей проверенной базы</li></ul>
+<p>Агент делает работу сам: запускает процесс, ведёт его и отчитывается. Человека зовёт только на спорное и на крупные суммы.</p>
 <h2>Его не настраивают, его растят</h2>
-<p>Начинаем с ядра и по месяцам подключаем новых агентов под ваши задачи: Дирижёр, КП-агент, Аккаунт-менеджер, Проджект, Контроллер и дальше. Систему не «внедрили и забыли», она взрослеет вместе с бизнесом.</p>
+<p>Начинаем с ядра и по месяцам добавляем роли под ваши задачи: Дирижёр, КП-агент, Аккаунт-менеджер, Проджект, Контроллер и дальше. Это не «поставили и забыли»: система растёт вместе с компанией.</p>
 <h2>Рассчитайте стоимость своей команды агентов</h2>
 <p>Базовое ядро: Дирижёр, Диспетчер, память и дашборд, от 6 000 AED. Дальше цена зависит от того, какие роли подключаете: соберите свою команду в <a href="/calculator-agents">калькуляторе AI-агентов</a> и получите ориентир.</p>
 <h2>Кейсы</h2>
 {CASES}'''
 
-SSR['en/ai-agents.html'] = '''<h1>An AI staff department for your business, not a bot, but a team</h1>
-<p>Each agent has its own role, shared memory and CRM access. They work where your team already works, in Telegram. We will show you the details live in a demo.</p>
+SSR['en/ai-agents.html'] = '''<h1>An AI staff department for a company in the UAE, not a bot, but a team</h1>
+<p>Each agent has its own role, shared memory and CRM access. Client correspondence runs in English and Russian, amounts are counted in dirhams. We will show you the system live on your own process.</p>
 <p>An agent team starts from AED 6,000. <a href="/en/calculator-agents">Calculate the cost in the calculator</a></p>
-<ul><li>They remember: memory is stored in a database</li><li>They do not make things up: facts come only from a verified database</li><li>Your own server: the system is deployed on your server</li><li>They live in Telegram: a single sign-in for the team</li></ul>
+<ul><li>They remember: memory is stored in a database</li><li>They never make things up: facts come only from your verified database</li><li>Your own server: deployed on your own server in the UAE</li><li>They live in Telegram: one sign-in for the whole team</li></ul>
 <p>Roles in the team: Conductor, Dispatcher, Financier, Lawyer, Analyst, Radar, Liaison, Mentor, Lead-gen, Qualifier, Sales rep, Pinger, Account manager, Herald, Auditor.</p>
-<h2>56 agents talk to each other and work in a chain</h2>
-<p>The Conductor understands the request and brings in the right specialists. Permissions are granted precisely, and data is isolated between domains. Three domains: business, personal, family.</p>
-<p>The sales domain: eight agents run the funnel from first touch to client support. Captured a lead, enriched it, qualified it, prepared a proposal, secured payment, manages the client.</p>
-<h3>Business</h3>
-<p>The agent team runs operations across eight areas, all connected to your CRM: finance, sales, legal, analytics, hiring and team, operations, marketing, customer service.</p>
-<p>The same agents handle the owner's affairs: finances, tasks, health, learning. A separate domain for family keeps its data isolated from the business.</p>
-<h2>All the numbers from one database, on your phone and on the big screen</h2>
-<p>Nothing to learn from scratch: people write the way they always have, and right beside them in Telegram lives an app with a dashboard and tasks.</p>
-<ul><li>A dashboard by domain: finance, tasks, sales. Numbers from one database, not from gut feel</li><li>Tasks with filters and statuses; tapping a task leads to actions via the Dispatcher</li><li>A big screen for standups shows the same data as your phone</li></ul>
-<p>Integrations: Bitrix24, Telegram, 1C, Adesk, bank statements, Google Sheets, Yandex Direct, Yandex Metrica.</p>
-<h2>We will show you a live system on your own process</h2>
-<p>Not slides, but working agents. We will map out your process, pick the roles and calculate the cost: 30-40 minutes online, a live system, roles tailored to your task. Book via <a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a>, we reply within the day.</p>
-<h2>This is not GPT in a window, it is an employee who does the work</h2>
-<p>A chat waits for a question and replies with text. An agent drives the process to a result on its own.</p>
-<ul><li>A chat answers and forgets, an agent remembers: memory is stored in a database</li><li>A chat waits to be asked, an agent starts on its own by event and schedule</li><li>A chat hands over text and the rest is on a human, an agent drives to a result and reports back</li><li>A chat makes things up when it does not know, an agent takes facts only from a verified database</li></ul>
-<p>The agent does the work itself: it launches the process, runs it and reports back. It brings in a human only for contentious or high-stakes calls.</p>
-<h2>You do not configure it, you grow it</h2>
-<p>We start with the core and add new agents month by month for your tasks: Conductor, Proposal agent, Account manager, Project manager, Controller and more. This is not a deploy-and-forget system; it matures together with your business.</p>
+<h2>56 agents talk to each other and hand work along the chain</h2>
+<p>The Conductor understands the request and brings in the right specialists. Permissions are granted precisely, and data from your free zone and mainland entities never mixes. Three domains: company, personal, family.</p>
+<p>The sales domain: eight agents run the entire funnel from the first enquiry to client support. Captured a lead, enriched it, qualified it, prepared a proposal, secured payment, manages the client.</p>
+<h3>Company</h3>
+<p>The agent team runs operations across eight areas and is wired into your Bitrix24: finance, sales, legal, analytics, hiring and team, operations, marketing, customer service.</p>
+<p>The same agents handle the owner's affairs: finances, tasks, travel, learning. A separate domain for family keeps its data away from the business.</p>
+<h2>Every number from one database, on your phone and on the standup screen</h2>
+<p>There is nothing to relearn: people write the way they always have, and right beside them in Telegram lives an app with a dashboard and tasks.</p>
+<ul><li>A dashboard by area: finance, tasks, sales. Numbers from one database, not from gut feel</li><li>Tasks with filters and statuses; a tap on a task leads to actions via the Dispatcher</li><li>The standup screen shows exactly the same data as your phone</li></ul>
+<p>Integrations: Bitrix24, Telegram, WhatsApp, 1C, bank statements, Google Sheets, Yandex Metrica, Google Analytics.</p>
+<h2>We will show a live system on your own process</h2>
+<p>Not slides, but working agents. We will map the process, pick the roles and price it in dirhams: 30-40 minutes online, a live system, roles picked for your task. Book via <a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a>, we reply within the day.</p>
+<h2>This is not GPT in a window, this is an employee that gets the work done</h2>
+<p>A chat waits to be asked and replies with text. An agent takes the process all the way to a result on its own.</p>
+<ul><li>A chat answers and forgets, an agent remembers: memory is stored in a database</li><li>A chat waits to be asked, an agent starts by itself on an event or a schedule</li><li>A chat hands over text and everything after that is on the human, an agent takes it to a result and reports back</li><li>A chat makes things up if it does not know, an agent takes facts only from your verified database</li></ul>
+<p>The agent does the work itself: it launches the process, runs it and reports back. It calls a human in only for contentious matters and large amounts.</p>
+<h2>You do not set it up, you grow it</h2>
+<p>We start with the core and add roles month by month for your tasks: Conductor, Proposal agent, Account manager, Project manager, Controller and more. This is not a set-it-and-forget-it system: it grows together with the company.</p>
 <h2>Calculate the cost of your agent team</h2>
 <p>The base core: Conductor, Dispatcher, memory and dashboard, from AED 6,000. Beyond that, the price depends on which roles you add: assemble your team in the <a href="/en/calculator-agents">AI agents cost calculator</a> and get an estimate.</p>
 <h2>Case studies</h2>

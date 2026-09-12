@@ -52,10 +52,6 @@ META = {
 
 # Грамматика английских заголовков (исходный HTML страницы или шаблона бандла)
 EN_FIX = {
- 'en/bitrix.html': [
-   ('Bitrix24 as <span style="color:#16C15A">a digital management environment</span> business',
-    'Bitrix24 as <span style="color:#16C15A">a digital environment</span> for running your business'),
-   ('>All company work - in one environment</h2>', ">All of your company's work in one environment</h2>")],
  'en/contacts.html': [
    ('<h1>We are always ready discuss your project</h1>', '<h1>We are always ready to discuss your project</h1>'),
    ('TPL:We are always ready <span style="background:linear-gradient(115deg,#48F58C,#12B857);-webkit-background-clip:text;background-clip:text;color:transparent;">discuss your project</span>',
@@ -75,7 +71,7 @@ EN_FIX = {
    ('>Whether it leads to a deal</h3>', '>Does it lead to a deal</h3>')],
  'en/intdoc.html': [
    ('What IntDoc does <span class="grad">sees in the document</span>', 'What IntDoc <span class="grad">sees in a document</span>'),
-   ('What you get <span class="grad">the procurement team</span>', 'What <span class="grad">the procurement team</span> gets'),
+   ('What you get <span class="grad">a procurement team in the UAE</span>', 'What <span class="grad">a procurement team in the UAE</span> gets'),
    ('Not a spreadsheet in Excel, <span class="grad">and the purchasing decision</span>', 'Not an Excel spreadsheet, <span class="grad">but a purchasing decision</span>')],
  'en/vps.html': [
    ('What makes it strong <span style="color:#1FDB6D;">each platform</span>', 'What <span style="color:#1FDB6D;">each platform</span> does best'),
