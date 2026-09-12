@@ -51,7 +51,7 @@ def page(lang):
         {"@type": "AboutPage", "@id": url + "#webpage", "url": url, "name": title,
          "inLanguage": lang, "description": desc,
          "isPartOf": {"@id": SITE + "/#website"}, "about": {"@id": SITE + "/#organization"},
-         "primaryImageOfPage": SITE + "/og-image.jpg",
+         "primaryImageOfPage": SITE + "/og/og-company.jpg",
          "breadcrumb": {"@id": url + "#breadcrumb"}},
         {"@type": "BreadcrumbList", "@id": url + "#breadcrumb",
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u}
