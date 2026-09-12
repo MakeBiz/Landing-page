@@ -106,3 +106,6 @@
 .mb-facts .soft b{color:var(--mb-g3);font-weight:700}
 .mb-more{margin-top:36px;padding-top:26px;border-top:1px solid var(--mb-ln)}
 .mb-more .mt{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mb-mu4);margin-bottom:14px}
+
+/* дисклеймер к результатам кейса */
+.mb-disc{margin:14px 0 0;font-size:13px;line-height:1.5;color:#6B7A90;max-width:70ch}

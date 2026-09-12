@@ -61,7 +61,9 @@
       fDir:'Что внедряли', fBuilt:'Что построили', fTerm:'Срок',
       keyRes:'Главный результат', discuss:'Обсудить проект', more:'Похожие кейсы',
       qO:'«', qC:'»', titleSuffix:' | MakeBiz', ogSuffix:' | MakeBiz',
-      crumbHome:'Главная', crumbCases:'Кейсы'
+      crumbHome:'Главная', crumbCases:'Кейсы',
+      discHub:'Результаты в кейсах индивидуальны: они зависят от процессов, данных и команды конкретной компании. Мы не гарантируем повторение тех же цифр.',
+      disc:'Результаты этого проекта индивидуальны: они зависят от процессов, данных и команды конкретной компании. Мы не гарантируем повторение тех же цифр.'
     },
     en: {
       hubTitle:'Client <b>case studies</b>',
@@ -79,7 +81,9 @@
       fDir:'What we implemented', fBuilt:'What we built', fTerm:'Timeline',
       keyRes:'Key result', discuss:'Discuss a project', more:'Similar cases',
       qO:'“', qC:'”', titleSuffix:' | MakeBiz', ogSuffix:' | MakeBiz',
-      crumbHome:'Home', crumbCases:'Case studies'
+      crumbHome:'Home', crumbCases:'Case studies',
+      discHub:'Results in these case studies are specific to each client: they depend on that company processes, data and team. We do not guarantee the same figures elsewhere.',
+      disc:'Results of this project are specific to this client: they depend on the processes, data and team of that company. We do not guarantee the same figures elsewhere.'
     }
   })[LANG];
 
@@ -128,7 +132,8 @@
 
     host.innerHTML =
       '<div class="mb-pagehero"><h1>'+T.hubTitle+'</h1>'+
-      '<p class="sub">'+T.hubSub+'</p></div>'+
+      '<p class="sub">'+T.hubSub+'</p>'+
+      '<p class="mb-disc">'+T.discHub+'</p></div>'+
       '<div class="mb-filterlabel">'+T.fSphere+'</div>'+
       '<div class="mb-filterbar" data-dim="ind">'+sphereChips+'</div>'+
       '<div class="mb-filterlabel">'+T.fProduct+'</div>'+
@@ -239,7 +244,8 @@
         '<div class="mb-blk"><div class="mb-lb gg">'+T.lbSol+'</div><h3>'+T.hSol+'</h3><div class="mb-prose"><p>'+esc(c.solution)+'</p></div></div>'+
         '<div class="mb-blk"><div class="mb-lb g3">'+T.lbRes+'</div><h3>'+T.hRes+'</h3><div class="mb-prose"><p>'+c.result+'</p></div>'+
           '<div class="mb-ba2"><div class="c b"><p class="h">'+T.baWas+'</p><p>'+esc(c.was)+'</p></div>'+
-          '<div class="c a"><p class="h">'+T.baNow+'</p><p>'+esc(c.now)+'</p></div></div></div>'+
+          '<div class="c a"><p class="h">'+T.baNow+'</p><p>'+esc(c.now)+'</p></div></div>'+
+          '<p class="mb-disc">'+T.disc+'</p></div>'+
         quote+
       '</div><div>'+
         '<div class="mb-facts"><div class="fh">'+T.factsHead+'</div>'+
