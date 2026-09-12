@@ -438,4 +438,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://makebiztechnologies.com/bitrix-support</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/bitrix-support</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-support"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-support"/>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

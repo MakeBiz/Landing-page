@@ -67,6 +67,16 @@ FAQ = {
  ('Зачем свой сервер для AI-агентов?',
   'Чтобы данные и доступы оставались внутри компании: агенты работают на вашем сервере, а не на чужой площадке.'),
 ],
+'bitrix-support.html': [
+ ('Сколько стоит техподдержка Битрикс24?',
+  'Пакеты по часам в месяц: 5 часов 1 250 AED, 10 часов 2 300 AED, 20 часов 4 200 AED. Дополнительный час сверх пакета 250 AED.'),
+ ('Что входит в поддержку?',
+  'Администрирование пользователей и прав, корректировка настроек CRM-сущностей, правка ролей и доступов, обновление процессов и автоматизаций, настройка уведомлений, почта, телефония и мессенджеры, отчёты и консультации команды.'),
+ ('Как считаются часы?',
+  'Использованные часы фиксируются открыто: вы видите, на какие задачи они ушли. Час сверх пакета стоит 250 AED.'),
+ ('С чего начинается сопровождение?',
+  'С аудита портала: смотрим, как настроены процессы, права и интеграции, и собираем план работ по приоритету. Дальше подбираем пакет часов под объём задач.'),
+],
 'company.html': [
  ('Кто такие MakeBiz Group?',
   'IT-компания в ОАЭ, юридически MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre, регистрационный номер 2624215090888. 8 лет на рынке IT и AI, более 150 проектов внедрения, поддержка 24/7.'),
@@ -145,6 +155,16 @@ FAQ_EN = {
   'Deployment, environment setup, updates, backups and monitoring. Support runs 24/7.'),
  ('Why do AI agents need our own server?',
   'So the data and the access stay inside the company: the agents run on your server rather than on someone else platform.'),
+],
+'en/bitrix-support.html': [
+ ('How much does Bitrix24 support cost?',
+  'Packages by hours per month: 5 hours AED 1,250, 10 hours AED 2,300, 20 hours AED 4,200. An extra hour beyond the package costs AED 250.'),
+ ('What does support include?',
+  'User and permission administration, adjustment of CRM entity settings, editing roles and access logic, updating processes and automations, notifications, email, telephony and messengers, reports and consultations for your team.'),
+ ('How are the hours counted?',
+  'Used hours are logged openly, so you can see which tasks they went to. An hour beyond the package costs AED 250.'),
+ ('How does the work start?',
+  'With a portal audit: we review how processes, permissions and integrations are set up and build a prioritized plan. Then we pick the package of hours to match the workload.'),
 ],
 'en/company.html': [
  ('Who is MakeBiz Group?',

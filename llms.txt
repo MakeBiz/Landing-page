@@ -14,6 +14,7 @@ Key facts:
 ## Services
 
 - [Bitrix24 implementation in Dubai and the UAE](https://makebiztechnologies.com/en/bitrix): CRM, sales pipelines, telephony, automation, BI and integrations. Standard CRM setup from AED 10,000; support packages of 5, 10 or 20 hours a month for AED 1,250, 2,300 or 4,200
+- [Bitrix24 support and maintenance](https://makebiztechnologies.com/en/bitrix-support): monthly hour packages, 5 hours AED 1,250, 10 hours AED 2,300, 20 hours AED 4,200, extra hour AED 250. Processes, permissions, integrations, reports and consultations
 - [AI agents for business](https://makebiztechnologies.com/en/ai-agents): a team of AI employees with roles, shared memory and CRM access that works in Telegram and runs sales, documents, calls and reports. Deployed on the client's server. From AED 6,000
 - [AI agents cost calculator](https://makebiztechnologies.com/calculator-agents) (in Russian): 77 agents in 9 areas; implementation plans Start AED 6,000, Business AED 11,000, Holding AED 25,000 (one-off); maintenance 10% of the implementation price per month
 - [Vector: AI speech analytics for sales calls](https://makebiztechnologies.com/en/vector): analyses 100% of calls and all 10 conversation stages, shows where clients are lost. Plans: Start AED 1,000 a month (5,000 minutes), Team AED 1,700 a month (10,000 minutes), Scale from AED 4,000 a month (from 30,000 minutes); prepayment discounts up to 20%
@@ -49,6 +50,7 @@ Key facts:
 
 - [Внедрение AI и CRM Битрикс24 в Дубае и ОАЭ](https://makebiztechnologies.com/): IT-компания в ОАЭ: внедряем AI-агентов, CRM Битрикс24, речевую аналитику звонков и BI. Находим, где бизнес теряет деньги, и автоматизируем продажи и документы.
 - [Внедрение Битрикс24 в Дубае и ОАЭ под ключ](https://makebiztechnologies.com/bitrix): Внедрение и настройка Битрикс24 в Дубае и ОАЭ: CRM, воронки, телефония, автоматизация, BI и интеграции. Настройка от 10 000 AED, сопровождение от 1 250 AED.
+- [Техподдержка Битрикс24 в Дубае и ОАЭ](https://makebiztechnologies.com/bitrix-support): сопровождение портала пакетами часов, 5 часов 1 250 AED, 10 часов 2 300 AED, 20 часов 4 200 AED, час сверх пакета 250 AED
 - [AI-агенты для бизнеса в Дубае и ОАЭ под ключ](https://makebiztechnologies.com/ai-agents): ИИ-агенты под ключ: команда AI-сотрудников ведёт продажи, документы, звонки и отчёты в Telegram и вашей CRM. Покажем систему на вашем процессе. От 6 000 AED.
 - [Калькулятор стоимости AI-агентов для бизнеса](https://makebiztechnologies.com/calculator-agents): Соберите команду AI-агентов из каталога и сразу увидите цену внедрения и обслуживания в AED. Тарифы Старт, Бизнес и Холдинг, внедрение от 6 000 AED.
 - [Vector: речевая аналитика звонков на базе AI](https://makebiztechnologies.com/vector): Vector слушает 100% звонков, оценивает 10 этапов разговора и показывает, где отдел продаж теряет клиентов. Тарифы от 1 000 AED в месяц, без смены телефонии.
