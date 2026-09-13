@@ -3104,6 +3104,8 @@ window.__mbYM=function(){
     var seg=$('mbcf-seg'); if(seg) Array.prototype.forEach.call(seg.children,function(x){ x.classList.toggle('mbcf-on', x.getAttribute('data-m')===m); });
     var tg=$('mbcf-tg'); if(tg) tg.placeholder = (m==='tg') ? 'Telegram handle*' : 'Telegram handle';
   }
+  /* The server did not take the request: we build a ready WhatsApp message so nothing has to be typed again */
+  function mbcfHelp(p){ var NL=String.fromCharCode(10); var t='Website request'+NL+'Name: '+(p.name||'')+NL+'Phone: '+(p.phone||''); if(p.company) t+=NL+'Company: '+p.company; if(p.telegram) t+=NL+'Telegram: '+p.telegram; if(p.automate) t+=NL+'Task: '+p.automate; t+=NL+'Page: '+(p.page||''); var w='https://wa.me/971502620927?text='+encodeURIComponent(t); return 'We could not send your request automatically. Send it in one tap: '+'<a href="'+w+'" target="_blank" rel="noopener" style="color:#16C15A">WhatsApp +971 50 262 0927</a>'+' or write to <a href="https://t.me/Anton_MakeBiz" target="_blank" rel="noopener" style="color:#16C15A">Telegram @Anton_MakeBiz</a>'; }
   function submitForm(){
     var name=$('mbcf-name'), phone=$('mbcf-phone'), tg=$('mbcf-tg'), cc=$('mbcf-cc'),
         company=$('mbcf-company'), task=$('mbcf-task'), gotcha=$('mbcf-gotcha');
@@ -3131,7 +3133,7 @@ window.__mbYM=function(){
     try{ fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)})
       .then(function(r){ if(!r||!r.ok) throw 0; return r.json(); })
       .then(function(res){ if(res&&res.ok===false) throw 0; $('mbcf-oktext').textContent = 'Thank you! We will contact you '+via+' at number '+ps+'.'; })
-      .catch(function(){ $('mbcf-oktext').innerHTML = 'We could not send your request automatically. Please write to us directly: <a href="https://t.me/Anton_MakeBiz" style="color:#16C15A">Telegram @Anton_MakeBiz</a> or <a href="https://wa.me/971502620927" style="color:#16C15A">WhatsApp +971 50 262 0927</a>'; }); }catch(e){ $('mbcf-oktext').innerHTML = 'We could not send your request automatically. Please write to us directly: <a href="https://t.me/Anton_MakeBiz" style="color:#16C15A">Telegram @Anton_MakeBiz</a> or <a href="https://wa.me/971502620927" style="color:#16C15A">WhatsApp +971 50 262 0927</a>'; }
+      .catch(function(){ $('mbcf-oktext').innerHTML = mbcfHelp(payload); }); }catch(e){ $('mbcf-oktext').innerHTML = mbcfHelp(payload); }
   }
   function resetForm(){
     var form=$('mbcf-lead'); if(form) form.reset();
