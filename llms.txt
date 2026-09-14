@@ -34,6 +34,7 @@ Key facts:
 - [Where the Sales Team Loses a Client During a Call](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka): The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down.
 - [Why AI Forgets Everything, and How Memory Fixes It](https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu): A regular assistant remembers only the conversation window. If you move memory into a database and return facts to the context, an agreement from a month ago…
 - [Why One Agent Stalls, and a Team of Agents Gets the Job Done](https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo): One bot for the whole process breaks down on a real workload: it mixes up steps and loses context.
+- [Which AI agent to start with in a sales team](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh): Not all of them at once. Start with one agent on a narrow task with a clear metric: qualifying inbound leads and reviving stalled deals.
 - [98% accuracy, and the invoices are still wrong](https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami): Vendors show 97-99% accuracy on document parsing, yet the books fill up with duplicates and the wrong VAT.
 - [Bitrix24 in the UAE: how the project differs from a Russian one](https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya): Same product, different project. The working week, WhatsApp instead of calls, dirhams and VAT, UAE data protection rules and two languages in one client record.
 
@@ -62,5 +63,6 @@ Key facts:
 - [Где отдел продаж теряет клиента внутри звонка](https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Почему AI забывает всё, и как это чинится памятью](https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu)
 - [Почему один агент не тянет, а команда агентов доводит дело](https://makebiztechnologies.com/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo)
+- [С какого AI-агента начинать в отделе продаж](https://makebiztechnologies.com/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
 - [Точность 98%, а счета все равно с ошибками](https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami)
 - [Внедрение Битрикс24 в ОАЭ: чем проект отличается от российского](https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya)
