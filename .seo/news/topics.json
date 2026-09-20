@@ -1,33 +1,108 @@
 {
   "note": "План тем ленты makebiztechnologies.com. Берём первую со status=planned, после публикации ставим used и дату. Ротация рубрик: две подряд одной рубрики не берём.",
-  "accents": {"ai": "#7A6CF7", "agents": "#16C15A", "crm": "#4C8DFF", "auto": "#00C2C7", "it": "#E0A100", "biz": "#FF6B8A"},
+  "accents": {
+    "ai": "#7A6CF7",
+    "agents": "#16C15A",
+    "crm": "#4C8DFF",
+    "auto": "#00C2C7",
+    "it": "#E0A100",
+    "biz": "#FF6B8A"
+  },
   "topics": [
-    {"key": "bitrix-uae-diff", "cat": "crm", "status": "used", "used_slug": "vnedrenie-bitrix24-v-oae-otlichiya", "used_date": "2026-09-12",
-     "angle": "Чем проект Битрикс24 в ОАЭ отличается от российского", "query": "внедрение битрикс24 оаэ"},
-
-    {"key": "first-ai-agent-sales", "cat": "agents", "status": "planned",
-     "angle": "С какого AI-агента начинать в отделе продаж и почему не со всех сразу", "query": "ии агенты для бизнеса внедрение"},
-    {"key": "crm-cost-breakdown", "cat": "crm", "status": "planned",
-     "angle": "Из чего складывается смета внедрения CRM и почему час стоит по-разному", "query": "сколько стоит внедрение crm"},
-    {"key": "speech-analytics-blindspot", "cat": "auto", "status": "planned",
-     "angle": "Что слышно в звонках и чего не видно в карточке сделки", "query": "речевая аналитика звонков"},
-    {"key": "agent-vs-robot", "cat": "ai", "status": "planned",
-     "angle": "Чем ИИ-агент отличается от робота и бизнес-процесса в CRM", "query": "ии агент или робот crm"},
-    {"key": "ai-rollout-mistakes", "cat": "agents", "status": "planned",
-     "angle": "Пять ошибок, из-за которых внедрение ИИ-агентов буксует", "query": "внедрение ии в бизнес ошибки"},
-    {"key": "supplier-docs-money", "cat": "auto", "status": "planned",
-     "angle": "Где в закупках теряются деньги на сравнении поставщиков", "query": "сравнение поставщиков автоматизация"},
-    {"key": "migration-to-bitrix", "cat": "crm", "status": "planned",
-     "angle": "Переезд с таблиц и старой CRM: что переносить, а что оставить", "query": "перенос данных в битрикс24"},
-    {"key": "dubai-first-automations", "cat": "biz", "status": "planned",
-     "angle": "Какие процессы компании в Дубае автоматизируют первыми", "query": "автоматизация бизнеса дубай"},
-    {"key": "ai-savings-honestly", "cat": "ai", "status": "planned",
-     "angle": "Честный счёт: на чём ИИ в продажах экономит, а на чём нет", "query": "ии в продажах экономия"},
-    {"key": "crm-access-rights", "cat": "crm", "status": "planned",
-     "angle": "Права доступа в CRM: кто что видит и почему в ОАЭ это не формальность", "query": "права доступа битрикс24"},
-    {"key": "whatsapp-agent", "cat": "agents", "status": "planned",
-     "angle": "ИИ-агент в WhatsApp: как устроена работа с входящими заявками", "query": "чат бот whatsapp для бизнеса"},
-    {"key": "bi-dashboards-sales", "cat": "auto", "status": "planned",
-     "angle": "Какие три дашборда реально смотрит руководитель отдела продаж", "query": "bi аналитика продаж"}
+    {
+      "key": "bitrix-uae-diff",
+      "cat": "crm",
+      "status": "used",
+      "used_slug": "vnedrenie-bitrix24-v-oae-otlichiya",
+      "used_date": "2026-09-12",
+      "angle": "Чем проект Битрикс24 в ОАЭ отличается от российского",
+      "query": "внедрение битрикс24 оаэ"
+    },
+    {
+      "key": "first-ai-agent-sales",
+      "cat": "agents",
+      "status": "used",
+      "used_slug": "s-kakogo-ai-agenta-nachinat-v-otdele-prodazh",
+      "used_date": "2026-09-14",
+      "angle": "С какого AI-агента начинать в отделе продаж и почему не со всех сразу",
+      "query": "ии агенты для бизнеса внедрение"
+    },
+    {
+      "key": "crm-cost-breakdown",
+      "cat": "crm",
+      "status": "planned",
+      "angle": "Из чего складывается смета внедрения CRM и почему час стоит по-разному",
+      "query": "сколько стоит внедрение crm"
+    },
+    {
+      "key": "speech-analytics-blindspot",
+      "cat": "auto",
+      "status": "planned",
+      "angle": "Что слышно в звонках и чего не видно в карточке сделки",
+      "query": "речевая аналитика звонков"
+    },
+    {
+      "key": "agent-vs-robot",
+      "cat": "ai",
+      "status": "planned",
+      "angle": "Чем ИИ-агент отличается от робота и бизнес-процесса в CRM",
+      "query": "ии агент или робот crm"
+    },
+    {
+      "key": "ai-rollout-mistakes",
+      "cat": "agents",
+      "status": "planned",
+      "angle": "Пять ошибок, из-за которых внедрение ИИ-агентов буксует",
+      "query": "внедрение ии в бизнес ошибки"
+    },
+    {
+      "key": "supplier-docs-money",
+      "cat": "auto",
+      "status": "planned",
+      "angle": "Где в закупках теряются деньги на сравнении поставщиков",
+      "query": "сравнение поставщиков автоматизация"
+    },
+    {
+      "key": "migration-to-bitrix",
+      "cat": "crm",
+      "status": "planned",
+      "angle": "Переезд с таблиц и старой CRM: что переносить, а что оставить",
+      "query": "перенос данных в битрикс24"
+    },
+    {
+      "key": "dubai-first-automations",
+      "cat": "biz",
+      "status": "planned",
+      "angle": "Какие процессы компании в Дубае автоматизируют первыми",
+      "query": "автоматизация бизнеса дубай"
+    },
+    {
+      "key": "ai-savings-honestly",
+      "cat": "ai",
+      "status": "planned",
+      "angle": "Честный счёт: на чём ИИ в продажах экономит, а на чём нет",
+      "query": "ии в продажах экономия"
+    },
+    {
+      "key": "crm-access-rights",
+      "cat": "crm",
+      "status": "planned",
+      "angle": "Права доступа в CRM: кто что видит и почему в ОАЭ это не формальность",
+      "query": "права доступа битрикс24"
+    },
+    {
+      "key": "whatsapp-agent",
+      "cat": "agents",
+      "status": "planned",
+      "angle": "ИИ-агент в WhatsApp: как устроена работа с входящими заявками",
+      "query": "чат бот whatsapp для бизнеса"
+    },
+    {
+      "key": "bi-dashboards-sales",
+      "cat": "auto",
+      "status": "planned",
+      "angle": "Какие три дашборда реально смотрит руководитель отдела продаж",
+      "query": "bi аналитика продаж"
+    }
   ]
 }

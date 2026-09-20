@@ -375,7 +375,7 @@
        пропадает из DOM, хотя скрипт уже успел загрузиться и отправить событие.
        Поэтому проверяем не DOM, а факт сетевого запроса: так мы не поставим
        второй счётчик и не удвоим просмотры. */
-    var HOST = 'vps-analytics.vercel.app';
+    var HOST = 'makebiz-makebiz-platform-3628.twc1.net';
     function loaded(){
       try {
         var e = performance.getEntriesByType('resource');
