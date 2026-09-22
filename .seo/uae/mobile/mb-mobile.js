@@ -46,8 +46,10 @@
 
   function tlen(el){ return (el.textContent||'').replace(/\s+/g,' ').trim().length; }
 
-  /* макеты интерфейса (кабинет, канбан, телефон) рисуют экран продукта: их сетки не трогаем */
+  /* макеты интерфейса рисуют экран продукта: их сетки не трогаем ([data-tilt] это и карточки
+     с наклоном, и макеты, поэтому для кегля и пальца исключаем только сам кабинет и svg) */
   function inMockup(el){ return !!(el.closest && el.closest('[data-cab],[data-tilt],svg')); }
+  function inScreen(el){ return !!(el.closest && el.closest('[data-cab],svg')); }
 
   function classOf(el){
     var cs=getComputedStyle(el);
@@ -71,6 +73,9 @@
     }
     /* две колонки трогаем, когда это раскладка секции или колонки вылезают за край */
     if(over) return 'mb-1col';
+    /* пары полей формы («Сотрудников | Телефон»): на 390px поле ~110px, подсказка обрезана */
+    var lab=0; for(i=0;i<kids.length;i++) if(kids[i].tagName==='LABEL') lab++;
+    if(lab===kids.length && minW<170) return 'mb-1col';
     if(W>=280 && maxT>80 && minW<220) return 'mb-1col';
     return '';
   }
@@ -80,7 +85,7 @@
     for(i=0;i<els.length;i++){
       var el=els[i];
       if(el.getAttribute('data-mbfs')) continue;
-      if(inMockup(el)){ el.setAttribute('data-mbfs','-'); continue; }
+      if(inScreen(el)){ el.setAttribute('data-mbfs','-'); continue; }
       var own='', cn=el.childNodes;
       for(c=0;c<cn.length;c++) if(cn[c].nodeType===3) own+=cn[c].textContent;
       if(own.replace(/\s+/g,' ').trim().length<6){ el.setAttribute('data-mbfs','-'); continue; }
@@ -110,7 +115,7 @@
         }
         continue;
       }
-      if(inMockup(el) || (el.closest && el.closest('#mbf-footer,#mbm-header,header'))){ el.setAttribute('data-mbtap','x'); continue; }
+      if(inScreen(el) || (el.closest && el.closest('#mbf-footer,#mbm-header,header'))){ el.setAttribute('data-mbtap','x'); continue; }
       var txt=(el.textContent||'').replace(/\s+/g,' ').trim();
       if(!txt || txt.length>40){ el.setAttribute('data-mbtap','x'); continue; }
       if(textSibling(el)){ el.setAttribute('data-mbtap','x'); continue; }
