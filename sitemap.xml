@@ -109,6 +109,42 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://makebiztechnologies.com/bitrix-telephony</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-telephony"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-telephony"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-telephony"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/bitrix-telephony</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-telephony"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-telephony"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-telephony"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/bitrix-vs-zoho</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-vs-zoho"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-vs-zoho"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-vs-zoho"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://makebiztechnologies.com/en/bitrix-vs-zoho</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/bitrix-vs-zoho"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/bitrix-vs-zoho"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/bitrix-vs-zoho"/>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://makebiztechnologies.com/ai-agents</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/ai-agents"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/ai-agents"/>

@@ -117,6 +117,26 @@ FAQ = {
  ('Можно ли вести сделки в разных валютах?',
   'Да. Базовая валюта AED, сделки можно вести в USD, EUR или рублях, отчёты сводятся в дирхамах по заданному курсу.'),
 ],
+'bitrix-telephony.html': [
+ ('Законна ли IP-телефония для бизнеса в ОАЭ?',
+  'Да, если она идёт через лицензированного оператора: интернет-телефонию в ОАЭ регулирует TDRA, основные операторы du и e&. Подключаем Битрикс24 к АТС с линией такого оператора.'),
+ ('Можно ли звонить из Битрикс24 прямо из браузера?',
+  'Да, при подключении АТС через встроенный SIP-коннектор звонить можно из браузера, приложения Битрикс24 и с SIP-телефона. При подключении через приложение из Маркета звонки идут с софтфона или SIP-телефона.'),
+ ('Записываются ли разговоры?',
+  'Да, запись каждого звонка сохраняется в карточке клиента. Клиента предупреждаем о записи в приветствии, а записи можно разбирать речевой аналитикой Vector.'),
+ ('Что происходит с пропущенными звонками?',
+  'Пропущенный звонок сразу становится задачей с дедлайном на ответственного менеджера, руководитель видит, кто и когда перезвонил.'),
+],
+'bitrix-vs-zoho.html': [
+ ('Что дешевле: Битрикс24 или Zoho CRM?',
+  'Зависит от размера команды. Облачный Битрикс24 стоит фиксированно за компанию в пределах лимита пользователей тарифа, Zoho CRM считается за каждого пользователя. Для команды от 10-15 человек разница заметная.'),
+ ('Можно ли поставить CRM на свой сервер?',
+  'У Битрикс24 есть коробочная версия на ваш сервер с доступом к исходному коду. Zoho CRM работает только в облаке Zoho.'),
+ ('Что если бухгалтерия уже в Zoho Books?',
+  'Тогда связка Zoho CRM и Zoho Books работает без доработок, это сильная сторона Zoho. Битрикс24 с Zoho Books или другой учётной системой связываем интеграцией по API.'),
+ ('Вы нейтральны в сравнении?',
+  'Мы интегратор Битрикс24 и говорим об этом прямо. Если по разбору процессов лучше подходит другая система, так и скажем.'),
+],
 }
 
 FAQ_EN = {
@@ -235,5 +255,25 @@ FAQ_EN = {
   'The rate is set in the product catalogue, prices can include or exclude tax, and the VAT amount appears as a separate line in the deal and the invoice.'),
  ('Can deals be run in different currencies?',
   'Yes. AED is the base currency, deals can be in USD, EUR or roubles, and reports roll up in dirhams at the rate you set.'),
+],
+'en/bitrix-telephony.html': [
+ ('Is VoIP legal for businesses in the UAE?',
+  'Yes, when it runs through a licensed operator: internet telephony in the UAE is regulated by the TDRA, and the main operators are du and e&. We connect Bitrix24 to a PBX with a line from such an operator.'),
+ ('Can I call from Bitrix24 in the browser?',
+  'Yes, with the PBX connected through the built-in SIP connector you can call from the browser, the Bitrix24 app or a SIP phone. With a Market app connection, calls go through a softphone or SIP phone.'),
+ ('Are calls recorded?',
+  'Yes, every call recording is saved in the client record. Clients are told about the recording in the greeting, and recordings can be analysed with Vector speech analytics.'),
+ ('What happens to missed calls?',
+  'A missed call immediately becomes a task with a deadline for the responsible manager, and management sees who called back and when.'),
+],
+'en/bitrix-vs-zoho.html': [
+ ('Which is cheaper, Bitrix24 or Zoho CRM?',
+  'It depends on team size. Bitrix24 cloud is a flat price per company within the plan user limit, while Zoho CRM is priced per user. For a team of 10-15 people or more the difference is noticeable.'),
+ ('Can the CRM run on our own server?',
+  'Bitrix24 has an on-premise edition for your own server with source code access. Zoho CRM runs only in the Zoho cloud.'),
+ ('What if our accounting is already in Zoho Books?',
+  'Then Zoho CRM and Zoho Books work together out of the box, which is a strong point for Zoho. We connect Bitrix24 to Zoho Books or another accounting system through an API integration.'),
+ ('Is your comparison neutral?',
+  'We are a Bitrix24 integrator and say so openly. If the process review shows another system fits better, we will tell you.'),
 ],
 }

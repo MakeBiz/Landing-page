@@ -14,16 +14,21 @@ T = {
  'ru': ('Решения для ОАЭ', 'Битрикс24 под задачи бизнеса в Дубае', 'Подробнее →', '', [
    ('Недвижимость', 'Агентство недвижимости в Дубае', 'Property Finder, Bayut и Dubizzle в CRM, разрешения Trakheesi, формы RERA и комиссии в AED', '/bitrix-real-estate'),
    ('Мессенджеры', 'WhatsApp в Битрикс24', 'Один номер на команду через официальный API, диалоги в карточке клиента, контроль времени ответа', '/bitrix-whatsapp'),
-   ('Налоги', 'VAT, дирхамы и e-invoicing', 'VAT 5%, TRN и валюты в CRM, подготовка к электронным счетам с 2027 года', '/bitrix-vat-einvoicing')]),
+   ('Налоги', 'VAT, дирхамы и e-invoicing', 'VAT 5%, TRN и валюты в CRM, подготовка к электронным счетам с 2027 года', '/bitrix-vat-einvoicing'),
+   ('Звонки', 'Телефония в ОАЭ', 'Через лицензированного оператора du или e&: звонки из CRM, записи разговоров, задачи на пропущенные', '/bitrix-telephony'),
+   ('Выбор CRM', 'Битрикс24 или Zoho CRM', 'Честное сравнение: цена за компанию или за пользователя, свой сервер, учёт в Zoho Books', '/bitrix-vs-zoho')]),
  'en': ('Solutions for the UAE', 'Bitrix24 for the way business runs in Dubai', 'Learn more →', '/en', [
    ('Real estate', 'Real estate agency in Dubai', 'Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED', '/bitrix-real-estate'),
    ('Messaging', 'WhatsApp in Bitrix24', 'One number for the team through the official API, chats in the client record, response-time control', '/bitrix-whatsapp'),
-   ('Tax', 'VAT, dirhams and e-invoicing', '5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027', '/bitrix-vat-einvoicing')]),
+   ('Tax', 'VAT, dirhams and e-invoicing', '5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027', '/bitrix-vat-einvoicing'),
+   ('Calls', 'Telephony in the UAE', 'Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls', '/bitrix-telephony'),
+   ('Choosing a CRM', 'Bitrix24 or Zoho CRM', 'An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting', '/bitrix-vs-zoho')]),
 }
 for path, lang in (('bitrix.html', 'ru'), ('en/bitrix.html', 'en')):
     h = open(path, encoding='utf-8').read()
     if '<!--mb-solutions-->' in h:
-        print(path, 'уже есть'); continue
+        a = h.index('  <!--mb-solutions-->'); b = h.index('<!--/mb-solutions-->') + len('<!--/mb-solutions-->\n\n')
+        h = h[:a] + h[b:]
     eyebrow, h2, more, pre, cards = T[lang]
     block = ('  <!--mb-solutions--><section style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,80px) clamp(18px,4vw,40px);border-top:1px solid transparent">\n'
              '    <div style="max-width:56ch;margin-bottom:32px"><span style="font:700 12px Oxygen;letter-spacing:.16em;text-transform:uppercase;color:#16C15A">%s</span>'

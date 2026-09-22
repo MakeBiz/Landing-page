@@ -25,6 +25,8 @@ Key facts:
 - [Bitrix24 for real estate agencies in Dubai](https://makebiztechnologies.com/en/bitrix-real-estate): Property Finder, Bayut and Dubizzle leads in the CRM, WhatsApp in the client record, Trakheesi permit numbers and expiry, RERA forms A, B, F and I by deal stage, commissions in AED
 - [WhatsApp in Bitrix24](https://makebiztechnologies.com/en/bitrix-whatsapp): official WhatsApp Business Platform through the Contact Center (Twilio, Edna or a Bitrix24 Market app), one company number for the team, the 24-hour rule and approved templates
 - [VAT, dirhams and e-invoicing in Bitrix24](https://makebiztechnologies.com/en/bitrix-vat-einvoicing): 5% VAT, client TRN and currencies in the CRM; readiness for UAE e-invoicing (mandatory from 1 January 2027 for revenue of AED 50M+, from 1 July 2027 for others) and integration with the accounting system
+- [Telephony in Bitrix24 in the UAE](https://makebiztechnologies.com/en/bitrix-telephony): VoIP only through licensed operators (du, e&) regulated by the TDRA; PBX via the Bitrix24 SIP connector or a Market app; call recording in the CRM, tasks for missed calls, Vector speech analytics
+- [Bitrix24 vs Zoho CRM](https://makebiztechnologies.com/en/bitrix-vs-zoho): per-company vs per-user pricing, on-premise option only in Bitrix24, Zoho Books integration as Zoho strength; written by a Bitrix24 integrator
 
 ## Case studies
 
@@ -61,6 +63,8 @@ Key facts:
 - [Битрикс24 для агентства недвижимости в Дубае](https://makebiztechnologies.com/bitrix-real-estate): CRM для брокеров в Дубае: заявки с Property Finder, Bayut и Dubizzle, WhatsApp в карточке, разрешения Trakheesi, формы RERA и комиссии в AED. Настройка от 10 000 AED.
 - [WhatsApp в Битрикс24 для бизнеса в ОАЭ](https://makebiztechnologies.com/bitrix-whatsapp): Подключаем WhatsApp к Битрикс24 через официальный API: один номер на команду, диалоги в карточке CRM, контроль времени ответа, шаблоны и правило 24 часов.
 - [VAT, дирхамы и e-invoicing в Битрикс24 для ОАЭ](https://makebiztechnologies.com/bitrix-vat-einvoicing): Настройка Битрикс24 под VAT 5%, TRN клиента и валюты. Готовим CRM к e-invoicing в ОАЭ: 1 января 2027 для выручки от 50 млн AED, 1 июля 2027 для остальных.
+- [Телефония в Битрикс24 для компании в ОАЭ](https://makebiztechnologies.com/bitrix-telephony): Подключаем телефонию к Битрикс24 в ОАЭ через лицензированного оператора (du, e&) и вашу АТС: звонки из CRM, запись разговоров, задачи на пропущенные.
+- [Битрикс24 или Zoho CRM: что выбрать в ОАЭ](https://makebiztechnologies.com/bitrix-vs-zoho): Сравнение Битрикс24 и Zoho CRM для компании в ОАЭ: цена за компанию или за пользователя, свой сервер, WhatsApp и телефония, учёт в Zoho Books. Когда лучше каждая система.
 - [AI-агенты для бизнеса в Дубае и ОАЭ под ключ](https://makebiztechnologies.com/ai-agents): ИИ-агенты под ключ: команда AI-сотрудников ведёт продажи, документы, звонки и отчёты в Telegram и вашей CRM. Покажем систему на вашем процессе. От 6 000 AED.
 - [Калькулятор стоимости AI-агентов для бизнеса](https://makebiztechnologies.com/calculator-agents): Соберите команду AI-агентов из каталога и сразу увидите цену внедрения и обслуживания в AED. Тарифы Старт, Бизнес и Холдинг, внедрение от 6 000 AED.
 - [Vector: речевая аналитика звонков на базе AI](https://makebiztechnologies.com/vector): Vector слушает 100% звонков, оценивает 10 этапов разговора и показывает, где отдел продаж теряет клиентов. Тарифы от 1 000 AED в месяц, без смены телефонии.

@@ -40,6 +40,24 @@ PAGES = {
          'Bitrix24 set up for 5% VAT, client TRN and currencies. We prepare the CRM for UAE e-invoicing: 1 January 2027 for revenue of AED 50M+, 1 July 2027 for the rest.',
          'VAT setup and CRM readiness for e-invoicing', 'UAE VAT CRM setup'),
   'offer': False},
+ 'telephony': {
+  'slug': 'bitrix-telephony',
+  'ru': ('Телефония в Битрикс24 для компании в ОАЭ',
+         'Подключаем телефонию к Битрикс24 в ОАЭ через лицензированного оператора (du, e&) и вашу АТС: звонки из CRM, запись разговоров, задачи на пропущенные.',
+         'Подключение телефонии к Битрикс24', 'Интеграция телефонии и CRM'),
+  'en': ('Telephony in Bitrix24 for UAE companies',
+         'We connect telephony to Bitrix24 in the UAE through a licensed operator (du, e&) and your PBX: calls from the CRM, call recording, tasks for missed calls.',
+         'Bitrix24 telephony setup', 'CRM telephony integration'),
+  'offer': True},
+ 'zoho': {
+  'slug': 'bitrix-vs-zoho',
+  'ru': ('Битрикс24 или Zoho CRM: что выбрать в ОАЭ',
+         'Сравнение Битрикс24 и Zoho CRM для компании в ОАЭ: цена за компанию или за пользователя, свой сервер, WhatsApp и телефония, учёт в Zoho Books. Когда лучше каждая система.',
+         'Помощь в выборе CRM и внедрение Битрикс24', 'Выбор CRM'),
+  'en': ('Bitrix24 vs Zoho CRM: which to choose in the UAE',
+         'Bitrix24 vs Zoho CRM for a UAE company: per-company or per-user pricing, own server, WhatsApp and telephony, Zoho Books accounting. When each system fits better.',
+         'CRM selection and Bitrix24 implementation', 'CRM selection'),
+  'offer': False},
 }
 
 def build(key, lang):
