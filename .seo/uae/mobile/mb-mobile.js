@@ -178,3 +178,22 @@
     },200);
   });
 })();
+
+/* MakeBiz UAE: на английских страницах форма по умолчанию предлагает WhatsApp.
+   Англоязычная аудитория в ОАЭ живёт в WhatsApp, а форма по умолчанию требовала ник в Telegram:
+   лишнее обязательное поле перед заявкой. На русских страницах Telegram остаётся по умолчанию.
+   Переключаем один раз и только если посетитель сам ещё не выбирал способ связи */
+(function(){
+  if(window.__mbWaDefault) return; window.__mbWaDefault=1;
+  if(!/^\/en(\/|$)/.test(location.pathname)) return;
+  var touched=false, n=0;
+  document.addEventListener('click',function(e){ if(e.target&&e.target.closest&&e.target.closest('#mbcf-seg')) touched=true; },true);
+  var iv=setInterval(function(){
+    if(++n>60) return clearInterval(iv);
+    var seg=document.getElementById('mbcf-seg'); if(!seg||touched) return;
+    if(seg.getAttribute('data-mbwa')) return;
+    var wa=seg.querySelector('button[data-m="wa"]'); if(!wa) return;
+    if(!wa.classList.contains('mbcf-on')){ wa.click(); touched=false; }
+    if(wa.classList.contains('mbcf-on')) seg.setAttribute('data-mbwa','1');
+  },250);
+})();
