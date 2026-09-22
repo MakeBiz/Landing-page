@@ -126,14 +126,22 @@ SSR['contacts.html'] = '''<h1>Мы всегда готовы обсудить в
 <ul><li>Telegram: <a href="https://t.me/Anton_MakeBiz">@Anton_MakeBiz</a>, быстрый ответ</li><li>WhatsApp: <a href="https://wa.me/971502620927">+971 50 262 0927</a></li><li>Почта: <a href="mailto:info@makebiztechnologies.com">info@makebiztechnologies.com</a></li></ul>
 <ul><li>8 лет на рынке IT и AI</li><li>150+ проектов внедрения</li><li>Поддержка и сопровождение 24/7</li></ul>
 <h2>Оставьте заявку</h2>
-<p>Ответим в Telegram или WhatsApp. Что важно обсудить, коротко напишите в комментарии. Покажем продукты в Zoom или лично в Дубае.</p>'''
+<p>Ответим в Telegram или WhatsApp. Что важно обсудить, коротко напишите в комментарии. Покажем продукты в Zoom или лично в Дубае.</p>
+<h2>С чем можно обратиться</h2>
+<ul><li><a href="/bitrix">Внедрение Битрикс24</a>: стандартная настройка CRM от 10 000 AED</li><li><a href="/bitrix-support">Техподдержка Битрикс24</a>: пакеты 5, 10 и 20 часов в месяц за 1 250, 2 300 и 4 200 AED</li><li><a href="/ai-agents">AI-агенты для бизнеса</a>: от 6 000 AED</li><li><a href="/vector">Vector, речевая аналитика звонков</a>: от 1 000 AED в месяц</li><li><a href="/intdoc">IntDoc, AI-сравнение поставщиков по документам</a></li><li><a href="/vps">Серверы и VPS</a>: подбор, развёртывание и обслуживание</li></ul>
+<h2>Реквизиты</h2>
+<p>MakeBiz Technologies FZE LLC, компания свободной экономической зоны Ajman NuVentures Centre, регистрационный номер 2624215090888. Адрес: Amber Gem Tower, 26 этаж, офис CWS-1V-226413, улица Шейха Халифы, Аджман, Объединённые Арабские Эмираты.</p>'''
 
 SSR['en/contacts.html'] = '''<h1>We are always ready to discuss your project</h1>
 <p>Contact MakeBiz Group, an IT company in the UAE. Leave a request or message us directly on Telegram or WhatsApp. We reply fast, dig into your task and propose a solution.</p>
 <ul><li>Telegram: <a href="https://t.me/Anton_MakeBiz">@Anton_MakeBiz</a>, quick reply</li><li>WhatsApp: <a href="https://wa.me/971502620927">+971 50 262 0927</a></li><li>Email: <a href="mailto:info@makebiztechnologies.com">info@makebiztechnologies.com</a></li></ul>
 <ul><li>8 years in the IT and AI market</li><li>150+ implementation projects</li><li>24/7 support and maintenance</li></ul>
 <h2>Leave a request</h2>
-<p>We will reply on Telegram or WhatsApp. Add anything important in the comment. We can demo the products over Zoom or in person in Dubai.</p>'''
+<p>We will reply on Telegram or WhatsApp. Add anything important in the comment. We can demo the products over Zoom or in person in Dubai.</p>
+<h2>What you can come to us with</h2>
+<ul><li><a href="/en/bitrix">Bitrix24 implementation</a>: standard CRM setup from AED 10,000</li><li><a href="/en/bitrix-support">Bitrix24 support</a>: packages of 5, 10 and 20 hours a month for AED 1,250, 2,300 and 4,200</li><li><a href="/en/ai-agents">AI agents for business</a>: from AED 6,000</li><li><a href="/en/vector">Vector call speech analytics</a>: from AED 1,000 a month</li><li><a href="/en/intdoc">IntDoc, AI supplier comparison from documents</a></li><li><a href="/en/vps">Servers and VPS</a>: selection, deployment and maintenance</li></ul>
+<h2>Company details</h2>
+<p>MakeBiz Technologies FZE LLC, a free zone company of Ajman NuVentures Centre, registration number 2624215090888. Address: Amber Gem Tower, 26th Floor, Office CWS-1V-226413, Sheikh Khalifa Street, Ajman, United Arab Emirates.</p>'''
 
 SSR['calculator-agents.html'] = '''<h1>Калькулятор стоимости AI-агентов</h1>
 <p>Соберите свою команду агентов: каталог из 77 агентов по девяти направлениям. Отмечайте тех, кто нужен вашему бизнесу, и расчёт внедрения и обслуживания меняется сам.</p>
