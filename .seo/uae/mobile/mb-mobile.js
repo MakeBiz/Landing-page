@@ -197,3 +197,36 @@
     if(wa.classList.contains('mbcf-on')) seg.setAttribute('data-mbwa','1');
   },250);
 })();
+
+/* MakeBiz UAE: по одной форме заявки на главной и в контактах.
+   Главная: форма бандла «Станьте клиентом» никуда не отправляла заявку, а общий блок
+   #mbcf-contact должен был её убрать, но с 12 сентября между ними встаёт блок вопросов
+   и проверка «предыдущий элемент перед подвалом» промахивалась. Убираем секцию бандла с полями ввода.
+   Контакты: главная форма страницы остаётся в первом экране, в нижнем блоке остаётся только чат */
+(function(){
+  if(window.__mbOneForm) return; window.__mbOneForm=1;
+  var p=location.pathname.replace(/\/+$/,'');
+  var HOME=(p===''||p==='/en'||p==='/index.html'||p==='/en/index.html');
+  var CONTACTS=/^(\/en)?\/contacts(\.html)?$/.test(p);
+  if(!HOME && !CONTACTS) return;
+  if(CONTACTS){
+    var st=document.createElement('style'); st.id='mb-oneform-css';
+    st.textContent='#mbcf-contact .mbcf-cgrid>.mbcf-col:first-child{display:none!important}'
+      +'#mbcf-contact .mbcf-cgrid{grid-template-columns:minmax(0,1fr)!important;max-width:760px;margin-left:auto;margin-right:auto}';
+    var put=function(){ if(!document.getElementById('mb-oneform-css')) (document.head||document.documentElement).appendChild(st); };
+    put(); var k=0, iv2=setInterval(function(){ put(); if(++k>60) clearInterval(iv2); },250);
+    return;
+  }
+  var n=0;
+  var iv=setInterval(function(){
+    if(++n>80) return clearInterval(iv);
+    if(!document.getElementById('mbcf-contact')) return;
+    var ins=document.querySelectorAll('input:not([type=hidden]),textarea'), i;
+    for(i=0;i<ins.length;i++){
+      var el=ins[i];
+      if(el.closest('#mbcf-contact,#mb-faq,#mbCk,#mbm-header,header,footer,#mbf-footer,#mb-ssr')) continue;
+      var sec=el.closest('section');
+      if(sec && sec.parentNode && !sec.querySelector('#mbcf-contact')) sec.parentNode.removeChild(sec);
+    }
+  },250);
+})();
