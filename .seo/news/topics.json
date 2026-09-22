@@ -30,9 +30,11 @@
     {
       "key": "crm-cost-breakdown",
       "cat": "crm",
-      "status": "planned",
+      "status": "used",
       "angle": "Из чего складывается смета внедрения CRM и почему час стоит по-разному",
-      "query": "сколько стоит внедрение crm"
+      "query": "сколько стоит внедрение crm",
+      "used_slug": "iz-chego-skladyvaetsya-smeta-vnedreniya-crm",
+      "used_date": "2026-09-21"
     },
     {
       "key": "speech-analytics-blindspot",

@@ -22,7 +22,7 @@
 
 <meta charset="utf-8">
 <!--mb-ld--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://makebiztechnologies.com/#organization","name":"MakeBiz Group","url":"https://makebiztechnologies.com/","logo":{"@type":"ImageObject","url":"https://makebiztechnologies.com/favicon.png","width":310,"height":310}},{"@type":"WebPage","@id":"https://makebiztechnologies.com/en/calculator-agents#webpage","url":"https://makebiztechnologies.com/en/calculator-agents","name":"AI agents cost calculator for business | MakeBiz","inLanguage":"en","isPartOf":{"@id":"https://makebiztechnologies.com/#website"},"about":{"@id":"https://makebiztechnologies.com/#organization"},"description":"Build your team of AI agents from the catalogue and see the implementation and support price in AED at once. Start, Business and Holding plans, from AED 6,000.","breadcrumb":{"@id":"https://makebiztechnologies.com/en/calculator-agents#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://makebiztechnologies.com/en/calculator-agents#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://makebiztechnologies.com/en"},{"@type":"ListItem","position":2,"name":"AI agents","item":"https://makebiztechnologies.com/en/ai-agents"},{"@type":"ListItem","position":3,"name":"AI agents cost calculator","item":"https://makebiztechnologies.com/en/calculator-agents"}]},{"@type":"WebApplication","@id":"https://makebiztechnologies.com/en/calculator-agents#app","name":"AI agents cost calculator","url":"https://makebiztechnologies.com/en/calculator-agents","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"en","provider":{"@id":"https://makebiztechnologies.com/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"AED","lowPrice":6000,"highPrice":25000,"offerCount":3,"description":"Start, Business and Holding implementation plans"}}]}</script><!--/mb-ld-->
-<!--mb-attr--><script src="/mb-attr.js"></script><!--/mb-attr--><!--mb-px--><script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script><!--/mb-px-->
+<!--mb-attr--><script src="/mb-attr.js?v=40febfca6a"></script><!--/mb-attr--><!--mb-px--><script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script><!--/mb-px-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI agents cost calculator for business | MakeBiz</title>
 <meta name="description" content="Build your team of AI agents from the catalogue and see the implementation and support price in AED at once. Start, Business and Holding plans, from AED 6,000.">
@@ -95,6 +95,7 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <style>
 .calcwrap{position:relative;overflow:hidden;width:100%;background:#07090D;border-top:1px solid rgba(255,255,255,.06);min-height:640px}
 .calcwrap iframe{display:block;width:100%;border:0;margin-top:-63px;height:1400px;background:#07090D}
+@media(max-width:760px){.calcwrap{min-height:0}#mbTop,#mbCkT{bottom:96px!important}}
 .calcback{display:flex;justify-content:center;padding:20px 24px 6px}
 .calcback a{font:400 14px Oxygen;color:#8FA096;text-decoration:none;border:1px solid rgba(255,255,255,.12);padding:9px 18px;border-radius:100px;transition:.15s}
 .calcback a:hover{color:#EAF2EC;border-color:rgba(255,255,255,.25)}
@@ -118,13 +119,22 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
     <a href="/en">Home</a><a href="/en/bitrix">Bitrix24</a><a href="/en/ai-agents">AI Agents</a><a href="/en/vector">AI Sales</a><a href="/en/vps">Servers</a><a href="/en/keysy">Cases</a><a href="/en/news">News</a><a href="/en/partners">Partners</a><a href="/en/contacts">Contacts</a>
   </nav></div>
 </header>
-<div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" src="/calculator-agents-app?lang=en" title="AI agents cost calculator" scrolling="no"></iframe></div>
+<div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" title="AI agents cost calculator" scrolling="no"></iframe></div>
 <div class="calcback"><a href="/en/ai-agents">← Back to AI agents</a></div>
 <script>
 (function(){
   var wrap=document.getElementById('mbcalcwrap'), fr=document.getElementById('mbcalcframe'), BAR=63;
+  /* На телефоне iframe высотой в экран со своей прокруткой: иначе он растягивался на всю длину
+     каталога, и панель итога с окном расчёта (position:fixed внутри приложения) уезжали вниз */
+  var MOB=window.matchMedia&&matchMedia('(max-width:760px)').matches;
+  if(MOB) fr.setAttribute('scrolling','yes');
+  if(!fr.getAttribute('src')) fr.setAttribute('src','/calculator-agents-app?lang=en');
+  function fitMob(){ var hd=document.querySelector('header'), top=hd?hd.getBoundingClientRect().height:0;
+    var h=Math.max(460,window.innerHeight-top); wrap.style.height=h+'px'; fr.style.height=(h+BAR)+'px'; }
+  if(MOB){ fitMob(); window.addEventListener('resize',fitMob); }
   window.addEventListener('message',function(e){
     var d=e&&e.data; if(d&&typeof d.mbCalcHeight==='number'){
+      if(MOB){ fitMob(); return; }
       var h=Math.max(600,d.mbCalcHeight); fr.style.height=h+'px'; wrap.style.height=(h-BAR)+'px';
     }
   });

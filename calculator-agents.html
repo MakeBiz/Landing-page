@@ -22,7 +22,7 @@
 
 <meta charset="utf-8">
 <!--mb-ld--><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://makebiztechnologies.com/#organization","name":"MakeBiz Group","url":"https://makebiztechnologies.com/","logo":{"@type":"ImageObject","url":"https://makebiztechnologies.com/favicon.png","width":310,"height":310}},{"@type":"WebPage","@id":"https://makebiztechnologies.com/calculator-agents#webpage","url":"https://makebiztechnologies.com/calculator-agents","name":"Калькулятор стоимости AI-агентов для бизнеса | MakeBiz","inLanguage":"ru","isPartOf":{"@id":"https://makebiztechnologies.com/#website"},"about":{"@id":"https://makebiztechnologies.com/#organization"},"description":"Соберите команду AI-агентов из каталога и сразу увидите цену внедрения и обслуживания в AED. Тарифы Старт, Бизнес и Холдинг, внедрение от 6 000 AED.","breadcrumb":{"@id":"https://makebiztechnologies.com/calculator-agents#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://makebiztechnologies.com/calculator-agents#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Главная","item":"https://makebiztechnologies.com/"},{"@type":"ListItem","position":2,"name":"AI-агенты","item":"https://makebiztechnologies.com/ai-agents"},{"@type":"ListItem","position":3,"name":"Калькулятор стоимости AI-агентов","item":"https://makebiztechnologies.com/calculator-agents"}]},{"@type":"WebApplication","@id":"https://makebiztechnologies.com/calculator-agents#app","name":"Калькулятор стоимости AI-агентов","url":"https://makebiztechnologies.com/calculator-agents","applicationCategory":"BusinessApplication","operatingSystem":"Any","inLanguage":"ru","provider":{"@id":"https://makebiztechnologies.com/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"AED","lowPrice":6000,"highPrice":25000,"offerCount":3,"description":"Тарифы внедрения Старт, Бизнес и Холдинг"}}]}</script><!--/mb-ld-->
-<!--mb-attr--><script src="/mb-attr.js"></script><!--/mb-attr--><!--mb-px--><script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script><!--/mb-px-->
+<!--mb-attr--><script src="/mb-attr.js?v=40febfca6a"></script><!--/mb-attr--><!--mb-px--><script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script><!--/mb-px-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькулятор стоимости AI-агентов для бизнеса | MakeBiz</title>
 <meta name="description" content="Соберите команду AI-агентов из каталога и сразу увидите цену внедрения и обслуживания в AED. Тарифы Старт, Бизнес и Холдинг, внедрение от 6 000 AED.">
@@ -95,6 +95,7 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
 <style>
 .calcwrap{position:relative;overflow:hidden;width:100%;background:#07090D;border-top:1px solid rgba(255,255,255,.06);min-height:640px}
 .calcwrap iframe{display:block;width:100%;border:0;margin-top:-63px;height:1400px;background:#07090D}
+@media(max-width:760px){.calcwrap{min-height:0}#mbTop,#mbCkT{bottom:96px!important}}
 .calcback{display:flex;justify-content:center;padding:20px 24px 6px}
 .calcback a{font:400 14px Oxygen;color:#8FA096;text-decoration:none;border:1px solid rgba(255,255,255,.12);padding:9px 18px;border-radius:100px;transition:.15s}
 .calcback a:hover{color:#EAF2EC;border-color:rgba(255,255,255,.25)}
@@ -118,13 +119,22 @@ footer{background:#05070A;border-top:1px solid rgba(255,255,255,.08);color:var(-
     <a href="/">Главная</a><a href="/bitrix">Битрикс24</a><a href="/ai-agents">AI-агенты</a><a href="/vector">AI-продажи</a><a href="/vps">Сервера</a><a href="/keysy">Кейсы</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a>
   </nav></div>
 </header>
-<div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" src="/calculator-agents-app" title="Калькулятор стоимости AI-агентов" scrolling="no"></iframe></div>
+<div class="calcwrap" id="mbcalcwrap"><iframe id="mbcalcframe" title="Калькулятор стоимости AI-агентов" scrolling="no"></iframe></div>
 <div class="calcback"><a href="/ai-agents">← Вернуться к AI-агентам</a></div>
 <script>
 (function(){
   var wrap=document.getElementById('mbcalcwrap'), fr=document.getElementById('mbcalcframe'), BAR=63;
+  /* На телефоне iframe высотой в экран со своей прокруткой: иначе он растягивался на всю длину
+     каталога, и панель итога с окном расчёта (position:fixed внутри приложения) уезжали вниз */
+  var MOB=window.matchMedia&&matchMedia('(max-width:760px)').matches;
+  if(MOB) fr.setAttribute('scrolling','yes');
+  if(!fr.getAttribute('src')) fr.setAttribute('src','/calculator-agents-app');
+  function fitMob(){ var hd=document.querySelector('header'), top=hd?hd.getBoundingClientRect().height:0;
+    var h=Math.max(460,window.innerHeight-top); wrap.style.height=h+'px'; fr.style.height=(h+BAR)+'px'; }
+  if(MOB){ fitMob(); window.addEventListener('resize',fitMob); }
   window.addEventListener('message',function(e){
     var d=e&&e.data; if(d&&typeof d.mbCalcHeight==='number'){
+      if(MOB){ fitMob(); return; }
       var h=Math.max(600,d.mbCalcHeight); fr.style.height=h+'px'; wrap.style.height=(h-BAR)+'px';
     }
   });
