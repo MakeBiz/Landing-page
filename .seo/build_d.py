@@ -74,7 +74,8 @@ L.append('- [Bitrix24 for real estate agencies in Dubai](%s/en/bitrix-real-estat
 L.append('- [WhatsApp in Bitrix24](%s/en/bitrix-whatsapp): official WhatsApp Business Platform through the Contact Center (Twilio, Edna or a Bitrix24 Market app), one company number for the team, the 24-hour rule and approved templates' % BASE)
 L.append('- [VAT, dirhams and e-invoicing in Bitrix24](%s/en/bitrix-vat-einvoicing): 5%% VAT, client TRN and currencies in the CRM; readiness for UAE e-invoicing (mandatory from 1 January 2027 for revenue of AED 50M+, from 1 July 2027 for others) and integration with the accounting system' % BASE)
 L.append('- [Telephony in Bitrix24 in the UAE](%s/en/bitrix-telephony): VoIP only through licensed operators (du, e&) regulated by the TDRA; PBX via the Bitrix24 SIP connector or a Market app; call recording in the CRM, tasks for missed calls, Vector speech analytics' % BASE)
-L.append('- [Bitrix24 vs Zoho CRM](%s/en/bitrix-vs-zoho): per-company vs per-user pricing, on-premise option only in Bitrix24, Zoho Books integration as Zoho strength; written by a Bitrix24 integrator\n' % BASE)
+L.append('- [Bitrix24 vs Zoho CRM](%s/en/bitrix-vs-zoho): per-company vs per-user pricing, on-premise option only in Bitrix24, Zoho Books integration as Zoho strength; written by a Bitrix24 integrator' % BASE)
+L.append('- [Bitrix24 for distribution and wholesale in the UAE](%s/en/bitrix-distribution): warehouses and stock reservation in deals, price types for retail, wholesale and dealer tiers, AED and USD price lists (the dirham is pegged at 3.6725 per US dollar), dealer credit limits and a post-dated cheque register, tax invoices in USD with VAT shown in AED, zero-rated exports outside the GCC, free zone stock; IntDoc compares supplier quotes\n' % BASE)
 L.append('## Case studies\n')
 for c in cases('en'):
     L.append('- [%s](%s/en/keysy/%s): %s' % (plain(c['title']), BASE, c['slug'], cut(plain(c['lead']))))
@@ -90,7 +91,7 @@ L.append('- [Partner programme](%s/en/partners): 20%% of the first client paymen
 L.append('- [Privacy policy](%s/en/privacy)' % BASE)
 L.append('- [Terms of use](%s/en/terms)\n' % BASE)
 L.append('## Русская версия\n')
-for f, u in [('index.html', '/'), ('bitrix.html', '/bitrix'), ('bitrix-support.html', '/bitrix-support'), ('bitrix-real-estate.html', '/bitrix-real-estate'), ('bitrix-whatsapp.html', '/bitrix-whatsapp'), ('bitrix-vat-einvoicing.html', '/bitrix-vat-einvoicing'), ('bitrix-telephony.html', '/bitrix-telephony'), ('bitrix-vs-zoho.html', '/bitrix-vs-zoho'), ('ai-agents.html', '/ai-agents'), ('calculator-agents.html', '/calculator-agents'), ('vector.html', '/vector'),
+for f, u in [('index.html', '/'), ('bitrix.html', '/bitrix'), ('bitrix-support.html', '/bitrix-support'), ('bitrix-real-estate.html', '/bitrix-real-estate'), ('bitrix-whatsapp.html', '/bitrix-whatsapp'), ('bitrix-vat-einvoicing.html', '/bitrix-vat-einvoicing'), ('bitrix-telephony.html', '/bitrix-telephony'), ('bitrix-vs-zoho.html', '/bitrix-vs-zoho'), ('bitrix-distribution.html', '/bitrix-distribution'), ('ai-agents.html', '/ai-agents'), ('calculator-agents.html', '/calculator-agents'), ('vector.html', '/vector'),
              ('intdoc.html', '/intdoc'), ('vps.html', '/vps'), ('keysy.html', '/keysy'), ('news.html', '/news'), ('partners.html', '/partners'), ('contacts.html', '/contacts')]:
     L.append('- [%s](%s%s): %s' % (title_of(f).split(' | ')[0], BASE, u, desc_of(f)))
 for f in news_ru:
@@ -110,7 +111,7 @@ def lastmod(paths):
     return time.strftime('%Y-%m-%d', time.localtime(best))
 pages = []   # (ru_url, en_url or None, priority, changefreq, files)
 pairs = [('/', '/en', 'index.html', 'en/index.html', '1.0', 'weekly')]
-for k, pr in [('bitrix', '0.9'), ('bitrix-support', '0.8'), ('bitrix-real-estate', '0.8'), ('bitrix-whatsapp', '0.8'), ('bitrix-vat-einvoicing', '0.8'), ('bitrix-telephony', '0.8'), ('bitrix-vs-zoho', '0.7'), ('ai-agents', '0.9'), ('vector', '0.9'), ('intdoc', '0.8'),
+for k, pr in [('bitrix', '0.9'), ('bitrix-support', '0.8'), ('bitrix-real-estate', '0.8'), ('bitrix-whatsapp', '0.8'), ('bitrix-vat-einvoicing', '0.8'), ('bitrix-telephony', '0.8'), ('bitrix-vs-zoho', '0.7'), ('bitrix-distribution', '0.8'), ('ai-agents', '0.9'), ('vector', '0.9'), ('intdoc', '0.8'),
               ('vps', '0.6'), ('company', '0.7'), ('keysy', '0.7'), ('news', '0.7'),
               ('partners', '0.6'), ('contacts', '0.7'), ('privacy', '0.2'), ('terms', '0.2')]:
     pairs.append(('/' + k, '/en/' + k, k + '.html', 'en/' + k + '.html', pr, 'weekly' if k == 'news' else 'monthly'))

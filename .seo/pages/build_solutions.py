@@ -58,6 +58,15 @@ PAGES = {
          'Bitrix24 vs Zoho CRM for a UAE company: per-company or per-user pricing, own server, WhatsApp and telephony, Zoho Books accounting. When each system fits better.',
          'CRM selection and Bitrix24 implementation', 'CRM selection'),
   'offer': False},
+ 'distribution': {
+  'slug': 'bitrix-distribution',
+  'ru': ('Битрикс24 для дистрибуции и оптовой торговли в ОАЭ',
+         'CRM для дистрибьютора в ОАЭ: склады и резервы в сделке, цены для дилеров и опта, прайсы в AED и USD, кредитные лимиты и PDC, VAT и экспорт. Настройка от 10 000 AED.',
+         'Битрикс24 для дистрибуции и оптовой торговли', 'CRM для дистрибуции и опта'),
+  'en': ('Bitrix24 for distribution and wholesale in the UAE',
+         'CRM for UAE distributors: stock and reservations, dealer and wholesale prices, AED and USD price lists, credit limits and PDCs, VAT and exports. Setup from AED 10,000.',
+         'Bitrix24 for distribution and wholesale', 'Distribution CRM'),
+  'offer': True},
 }
 
 def build(key, lang):

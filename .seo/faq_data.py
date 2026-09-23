@@ -137,6 +137,16 @@ FAQ = {
  ('Вы нейтральны в сравнении?',
   'Мы интегратор Битрикс24 и говорим об этом прямо. Если по разбору процессов лучше подходит другая система, так и скажем.'),
 ],
+'bitrix-distribution.html': [
+ ('Можно ли вести в Битрикс24 склад и остатки?',
+  'Да. В Битрикс24 есть складской учёт: несколько складов, приход, перемещение и списание, резерв товара в сделке и списание со склада при закрытии сделки. Если склад уже ведётся в учётной системе, остатки передаём в Битрикс24 интеграцией.'),
+ ('Как вести цены в дирхамах и долларах?',
+  'Цена товара хранится в своей валюте и пересчитывается в валюту сделки по курсу из настроек CRM. Дирхам привязан к доллару по курсу 3,6725, поэтому этот курс задаётся один раз. В налоговом счёте в долларах итог и VAT указываются и в дирхамах, по курсу ЦБ ОАЭ на дату поставки.'),
+ ('Можно ли дать дилерам свои цены и кредитные лимиты?',
+  'Да. У каждого уровня клиентов свой тип цены в каталоге, и в сделку подставляется цена уровня клиента. Кредитный лимит и отсрочка хранятся в карточке дилера, заказ сверх лимита уходит на согласование руководителю.'),
+ ('Сколько стоит CRM для дистрибьютора?',
+  'Стандартная настройка Битрикс24 от 10 000 AED. Точная смета зависит от числа складов, типов цен и интеграций, фиксируем её в дирхамах до начала работ.'),
+],
 }
 
 FAQ_EN = {
@@ -275,5 +285,15 @@ FAQ_EN = {
   'Then Zoho CRM and Zoho Books work together out of the box, which is a strong point for Zoho. We connect Bitrix24 to Zoho Books or another accounting system through an API integration.'),
  ('Is your comparison neutral?',
   'We are a Bitrix24 integrator and say so openly. If the process review shows another system fits better, we will tell you.'),
+],
+'en/bitrix-distribution.html': [
+ ('Can Bitrix24 handle warehouses and stock?',
+  'Yes. Bitrix24 has inventory management: several warehouses, receipts, transfers and write-offs, product reservation in a deal and a stock write-off when the deal closes. If stock is already kept in an accounting system, we bring stock levels into Bitrix24 through an integration.'),
+ ('How do prices in dirhams and dollars work?',
+  'Each product price is stored in its own currency and converted into the deal currency at the rate set in the CRM. The dirham is pegged to the dollar at 3.6725, so that rate is set once. On a tax invoice in dollars the total and the VAT are also shown in dirhams at the UAE Central Bank rate on the date of supply.'),
+ ('Can dealers have their own prices and credit limits?',
+  "Yes. Each customer tier has its own price type in the catalog, and the deal picks up the price for the client's tier. The credit limit and payment terms sit in the dealer record, and an order over the limit goes to management for approval."),
+ ('How much does a CRM for a distributor cost?',
+  'Standard Bitrix24 setup starts from AED 10,000. The exact quote depends on the number of warehouses, price types and integrations and is fixed in dirhams before the work starts.'),
 ],
 }
