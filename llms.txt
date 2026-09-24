@@ -41,6 +41,7 @@ Key facts:
 
 - [The AI you don't notice](https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete): About 79% of people use AI every day, while only 27% realize it. Email, maps, watches, cameras, everything got a little smarter with no neural-network button.
 - [What Is an AI Agent, and How Is It Different From a Chatbot](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota): A chatbot answers a question and forgets it. An agent has a role, memory, and access to your systems: it runs the process itself, sees it through to a result…
+- [What the call knows and the CRM record does not](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki): The deal record keeps the outcome, the call keeps the reasons. What belongs in the CRM after every conversation, and how to capture it.
 - [Where the Sales Team Loses a Client During a Call](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka): The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down.
 - [CRM implementation cost in the UAE: what you pay for](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm): Starter setup from 10 000 AED, licence and migration quoted separately, and a support hour at 250, 230 or 210 dirhams.
 - [Why AI Forgets Everything, and How Memory Fixes It](https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu): A regular assistant remembers only the conversation window. If you move memory into a database and return facts to the context, an agreement from a month ago…
@@ -78,6 +79,7 @@ Key facts:
 - [Контакты MakeBiz Group в Дубае: Telegram, WhatsApp, заявка](https://makebiztechnologies.com/contacts): Свяжитесь с MakeBiz Group: Telegram @Anton_MakeBiz, WhatsApp +971 50 262 0927. Обсудим проект, покажем продукты в Zoom или лично в Дубае.
 - [AI, которого вы не замечаете](https://makebiztechnologies.com/news/ai-kotorogo-vy-ne-zamechaete)
 - [Что такое AI-агент и чем он отличается от чат-бота](https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
+- [Что слышно в звонке и чего нет в карточке сделки](https://makebiztechnologies.com/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
 - [Где отдел продаж теряет клиента внутри звонка](https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Смета внедрения CRM в ОАЭ: из чего складывается цена](https://makebiztechnologies.com/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
 - [Почему AI забывает всё, и как это чинится памятью](https://makebiztechnologies.com/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu)
