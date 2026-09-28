@@ -39,9 +39,11 @@
     {
       "key": "speech-analytics-blindspot",
       "cat": "auto",
-      "status": "planned",
+      "status": "used",
       "angle": "Что слышно в звонках и чего не видно в карточке сделки",
-      "query": "речевая аналитика звонков"
+      "query": "речевая аналитика звонков",
+      "used_slug": "chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki",
+      "used_date": "2026-09-24"
     },
     {
       "key": "agent-vs-robot",
