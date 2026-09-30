@@ -147,6 +147,16 @@ FAQ = {
  ('Сколько стоит CRM для дистрибьютора?',
   'Стандартная настройка Битрикс24 от 10 000 AED. Точная смета зависит от числа складов, типов цен и интеграций, фиксируем её в дирхамах до начала работ.'),
 ],
+'bitrix-accounting.html': [
+ ('Можно ли выставлять счета прямо в Битрикс24, без учётной системы?',
+  'Можно: в Битрикс24 есть счета и шаблоны с TRN и VAT. Но если бухгалтерия ведётся в Zoho Books, QuickBooks, Odoo или 1С, налоговый счёт лучше выставлять там, а в сделку возвращать номер, ссылку и статус оплаты. Так нумерация счетов одна, декларация VAT сходится с продажами, а с 2027 года электронный счёт уходит через провайдера прямо из учётной системы.'),
+ ('Что передаётся между Битрикс24 и учётной системой?',
+  'Из Битрикс24 в учёт уходят клиенты с реквизитами и сделки, из которых создаются счета. Из учёта в Битрикс24 приходят товары и цены, оплаты и статусы счетов, долги и кредитные лимиты клиентов, а если склад ведётся в учёте, то и остатки.'),
+ ('Хватит ли готового приложения из Маркета Битрикс24?',
+  'Для простых задач хватит. Например, приложение QuickBooks из Маркета синхронизирует клиентов и статусы счетов, но не переносит товары. Если нужен счёт прямо из сделки, валюты, частичные оплаты или проверка дублей по TRN, делаем интеграцию по API.'),
+ ('Сколько стоит интеграция с учётной системой?',
+  'Зависит от системы, объёма данных и того, что передаётся в обе стороны. Смету фиксируем в дирхамах после разбора, до начала работ. Настройка CRM Битрикс24 от 10 000 AED, а сопровождать обмен можно в пакете поддержки от 1 250 AED в месяц.'),
+],
 }
 
 FAQ_EN = {
@@ -295,5 +305,15 @@ FAQ_EN = {
   "Yes. Each customer tier has its own price type in the catalog, and the deal picks up the price for the client's tier. The credit limit and payment terms sit in the dealer record, and an order over the limit goes to management for approval."),
  ('How much does a CRM for a distributor cost?',
   'Standard Bitrix24 setup starts from AED 10,000. The exact quote depends on the number of warehouses, price types and integrations and is fixed in dirhams before the work starts.'),
+],
+'en/bitrix-accounting.html': [
+ ('Can invoices be issued directly in Bitrix24 without an accounting system?',
+  'Yes, Bitrix24 has invoices and templates with TRN and VAT. But if the books are kept in Zoho Books, QuickBooks, Odoo or 1C, the tax invoice is better issued there, with the number, a link and the payment status returned to the deal. That keeps one invoice numbering, the VAT return matches sales, and from 2027 the e-invoice goes through the provider straight from the accounting system.'),
+ ('What is exchanged between Bitrix24 and the accounting system?',
+  'Clients with their company details and the deals that become invoices go from Bitrix24 to accounting. Products and prices, payments and invoice statuses, client balances and credit limits, and stock if it is kept in accounting come back to Bitrix24.'),
+ ('Is a ready-made app from the Bitrix24 Market enough?',
+  'For simple needs, yes. For example, the QuickBooks app in the Market syncs clients and invoice statuses but not products. If you need an invoice straight from the deal, currencies, partial payments or duplicate checks by TRN, we build the integration on the API.'),
+ ('How much does an accounting integration cost?',
+  'It depends on the system, the data volume and what goes in each direction. The quote is fixed in dirhams after the review, before the work starts. Bitrix24 CRM setup starts from AED 10,000, and the sync can be maintained under a support package from AED 1,250 a month.'),
 ],
 }

@@ -67,6 +67,15 @@ PAGES = {
          'CRM for UAE distributors: stock and reservations, dealer and wholesale prices, AED and USD price lists, credit limits and PDCs, VAT and exports. Setup from AED 10,000.',
          'Bitrix24 for distribution and wholesale', 'Distribution CRM'),
   'offer': True},
+ 'accounting': {
+  'slug': 'bitrix-accounting',
+  'ru': ('Интеграция Битрикс24 с учётной системой в ОАЭ',
+         'Связываем Битрикс24 с Zoho Books, QuickBooks, Odoo или 1С: счёт из сделки без перенабора, оплаты и долги клиентов в CRM, чистые реквизиты для e-invoicing в ОАЭ.',
+         'Интеграция Битрикс24 с учётной системой', 'Интеграция CRM и учётной системы'),
+  'en': ('Bitrix24 accounting integration in the UAE',
+         'We connect Bitrix24 to Zoho Books, QuickBooks, Odoo or 1C: invoices from deals without retyping, payments and client balances in the CRM, clean data for UAE e-invoicing.',
+         'Bitrix24 accounting integration', 'CRM and accounting integration'),
+  'offer': False},
 }
 
 def build(key, lang):

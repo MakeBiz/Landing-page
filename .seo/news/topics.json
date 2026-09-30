@@ -48,9 +48,11 @@
     {
       "key": "agent-vs-robot",
       "cat": "ai",
-      "status": "planned",
+      "status": "used",
       "angle": "Чем ИИ-агент отличается от робота и бизнес-процесса в CRM",
-      "query": "ии агент или робот crm"
+      "query": "ии агент или робот crm",
+      "used_slug": "chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+      "used_date": "2026-09-28"
     },
     {
       "key": "ai-rollout-mistakes",

@@ -1,0 +1,80 @@
+<main id="mbabout">
+<span class="mba-eyebrow"><i></i>Bitrix24 · accounting integration in the UAE</span>
+<h1>Bitrix24 integration with <span>Zoho Books, QuickBooks, Odoo and 1C</span></h1>
+<p class="mba-lead">Sales run in the CRM, while invoices, payments and VAT live in the accounting system. Until the two are connected, accounting retypes deals into invoices and the sales manager does not know whether the client has paid. We connect Bitrix24 to your accounting so that every figure has one master system and the other one receives it automatically</p>
+<div class="mba-stats">
+<div class="mba-stat"><b>4 systems</b><span>Zoho Books, QuickBooks, Odoo and 1C</span></div>
+<div class="mba-stat"><b>51 fields</b><span>mandatory in a UAE electronic tax invoice</span></div>
+<div class="mba-stat"><b>15 digits</b><span>in the client TRN, identical in the CRM and in accounting</span></div>
+<div class="mba-stat"><b>30.10.2026</b><span>deadline to appoint an e-invoicing provider for revenue of AED 50M+</span></div>
+</div>
+
+<h2>What breaks while the CRM and accounting are apart</h2>
+<p class="mba-sub">Four typical losses while sales and accounting work in separate systems</p>
+<div class="mba-grid two">
+<div class="mba-card"><h3>Every invoice is typed twice</h3><p>A manager closes the deal in the CRM, and accounting types the client, the lines and the amounts into the accounting system again. A typo in the TRN or the company name shows up when the client sends the invoice back for correction</p></div>
+<div class="mba-card"><h3>Sales cannot see payments</h3><p>The money has arrived and is recorded in accounting, but the deal in the CRM is still stuck at "Invoice sent". The manager chases a client who has already paid, or ships to one who has not</p></div>
+<div class="mba-card"><h3>Two client lists</h3><p>The CRM has "ABC Trading", accounting has "A.B.C. General Trading LLC", one record has a TRN and the other does not. Client reports do not match, and duplicates appear on both sides</p></div>
+<div class="mba-card"><h3>Old prices in the CRM</h3><p>Prices and VAT rates were updated in the accounting system, but the CRM catalog still has the old ones. A quote goes out with a price that later has to be recalculated</p></div>
+</div>
+
+<h2>What goes where</h2>
+<p class="mba-sub">One rule: every data set has one master system. The other system reads it but does not edit it, otherwise within a month the data in the two places drifts apart</p>
+<div class="mba-grid">
+<div class="mba-card"><h3>Clients and company details</h3><p>Legal name as on the licence, TRN, address, emirate, mainland or free zone. A client is created in accounting not at the lead stage but when the deal reaches invoicing, and it is matched by TRN so no duplicates appear</p><span class="mba-price">CRM → accounting</span></div>
+<div class="mba-card"><h3>Products and prices</h3><p>Items, codes, units of measure, prices and VAT rates are kept in the accounting system and flow into the Bitrix24 catalog. Managers build quotes from the current price list</p><span class="mba-price">accounting → CRM</span></div>
+<div class="mba-card"><h3>Invoice from the deal</h3><p>At the "Issue invoice" stage an automation rule sends the deal to accounting: client, lines, currency and discounts. The accounting system assigns the invoice number so numbering stays in one place, and a link to the invoice comes back to the deal</p><span class="mba-price">CRM → accounting</span></div>
+<div class="mba-card"><h3>Payments and invoice status</h3><p>Paid, partly paid, overdue. The deal moves to "Paid" by itself, the manager gets a notification, and management sees money rather than promises</p><span class="mba-price">accounting → CRM</span></div>
+<div class="mba-card"><h3>Balances and credit limits</h3><p>Receivables, overdue invoices and the credit limit are visible in the company record. A new order over the limit goes to management for approval</p><span class="mba-price">accounting → CRM</span></div>
+<div class="mba-card"><h3>Stock</h3><p>If stock is kept in the accounting system, stock levels by warehouse flow into the CRM catalog, so managers do not promise goods that are not there</p><span class="mba-price">accounting → CRM</span></div>
+</div>
+<p class="mba-sub">Leads, tasks, chats and calls do not go to accounting: the finance team does not need them, and extra sync only adds errors</p>
+
+<h2>What is specific to each system</h2>
+<div class="mba-grid two">
+<div class="mba-card"><h3>Zoho Books</h3><p>Has a UAE edition with VAT. We connect through the Zoho Books API with OAuth. The limit is 1,000 to 10,000 API calls a day depending on the plan, so the sync is event-driven rather than polling every minute. Zoho is on the UAE Ministry of Finance list of accredited e-invoicing providers, so Zoho Books sends e-invoices itself</p></div>
+<div class="mba-card"><h3>QuickBooks Online</h3><p>Sold in the UAE, handles VAT and invoices in several currencies. The ready-made QuickBooks app in the Bitrix24 Market syncs clients and three invoice statuses (new, sent, paid) but not products: invoice lines are picked in QuickBooks. If a deal has to become an invoice with lines and partial payments by itself, we build the integration on the QuickBooks API</p></div>
+<div class="mba-card"><h3>Odoo</h3><p>UAE localization out of the box: 5% VAT, the VAT201 return and a corporate tax report. On Odoo Online the external API is available only on the Custom plan, so on the Standard or free plan Odoo cannot be connected to Bitrix24 through the API. We check the Odoo plan before the work starts</p></div>
+<div class="mba-card"><h3>1C</h3><p>For the Russian, Belarusian and Kazakh editions of 1C (Accounting, Trade Management, ERP and other standard configurations) Bitrix24 has a built-in exchange: clients, deals, invoices, products, payments and shipments both ways, prices and stock from 1C. It works with cloud and on-premise Bitrix24. If 1C is customized or adapted for the UAE, we build the exchange through 1C HTTP services</p></div>
+</div>
+<p class="mba-sub">If your books are kept in another system with an open API, the approach is the same: a data map, one master system for every data set and a sync log</p>
+
+<h2>Electronic invoices from 2027</h2>
+<p class="mba-sub">From 1 January 2027 for companies with revenue of AED 50M or more, and from 1 July 2027 for the rest, a B2B invoice in the UAE becomes a PINT AE file sent through an accredited service provider (ASP). The first group has to appoint a provider by 30 October 2026. The e-invoice is produced by the accounting system, not the CRM, but its data starts in the CRM</p>
+<ul class="mba-list">
+<li>A UAE electronic tax invoice has 51 mandatory fields under the Ministry of Finance specification. Nine of them describe the buyer, including the name, TRN, address, city, emirate and country</li>
+<li>These fields are filled in the client record in Bitrix24 and go to accounting with the deal. Required fields do not let a deal move to invoicing until the details are complete</li>
+<li>Zoho itself is on the Ministry of Finance list of accredited providers. Intuit, Odoo and 1C are not on it as of 28 September 2026, so for QuickBooks, Odoo and 1C a provider is connected separately</li>
+<li>The e-invoice status (sent, accepted, rejected) comes back to the deal if the accounting system exposes it</li>
+<li>Deadlines, penalties and client data clean-up are covered on the <a href="/en/bitrix-vat-einvoicing">VAT and e-invoicing</a> page</li>
+</ul>
+
+<h2>Ready-made app or custom integration</h2>
+<ul class="mba-list">
+<li>A ready-made app from the Bitrix24 Market fits when the process is standard and what the app does is enough. It is quick to install, but its logic cannot be changed</li>
+<li>Make or Zapier handle simple chains, such as a new company in the CRM creating a customer in accounting. The more conditions there are, the harder such a setup is to maintain</li>
+<li>A custom integration on the Bitrix24 REST API and the accounting API is needed when there are currencies, partial payments, credit limits, duplicate checks by TRN and several legal entities</li>
+<li>Whichever option is used, we keep a sync log: if an invoice was not created, the responsible person gets a notification with the reason instead of hearing about it from the client</li>
+</ul>
+
+<h2>How the work goes</h2>
+<div class="mba-steps">
+<div class="mba-step"><b>1</b><h3>Review</h3><p>We look at where clients, products, invoices and payments live today and what is retyped by hand</p></div>
+<div class="mba-step"><b>2</b><h3>Data map</h3><p>For every data set we decide which system is the master, what is sent, in which direction and at which deal stage</p></div>
+<div class="mba-step"><b>3</b><h3>Integration and testing</h3><p>We set up the sync and test it on a test organization in accounting before switching it on for live data</p></div>
+<div class="mba-step"><b>4</b><h3>Launch</h3><p>We clean up duplicates, fill in missing TRNs, switch the sync on and stay on support</p></div>
+</div>
+
+<h2>Experience: 1C and ERP in one loop with Bitrix24</h2>
+<p class="mba-sub">For Unilin, a flooring manufacturer, we have run an on-premise Bitrix24 on their own server for the third year. We built end-to-end integrations with 1C and the ERP, so product data, shipments and other records move between systems without manual transfer, and management sees BI on the market, retail points, products and the company. The project runs in Russia; for a company in the UAE the exchange logic is the same. <a href="/en/keysy/unilin-crm">Read the case</a></p>
+
+<p class="mba-sub">This is not tax advice. E-invoice requirements come from the UAE Ministry of Finance mandatory fields specification (version 1.0, 23 February 2026), deadlines from Ministerial Decision No. 244 of 2025 as amended in 2026, and the provider list from the Ministry of Finance page as of 28 September 2026. System capabilities are described from Zoho, Intuit, Odoo and Bitrix24 documentation as of September 2026. Discuss the choice of provider and tax questions with your accountant</p>
+
+<h2>See also</h2>
+<ul class="mba-list">
+<li><a href="/en/bitrix-vat-einvoicing">VAT, dirhams and e-invoicing in Bitrix24</a></li>
+<li><a href="/en/bitrix-distribution">Bitrix24 for distribution and wholesale in the UAE</a></li>
+<li><a href="/en/bitrix-vs-zoho">Bitrix24 vs Zoho CRM: which to choose in the UAE</a></li>
+<li><a href="/en/bitrix">Bitrix24 implementation in Dubai and the UAE</a></li>
+</ul>
+</main>
