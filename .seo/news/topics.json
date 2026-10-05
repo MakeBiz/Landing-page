@@ -66,9 +66,11 @@
     {
       "key": "supplier-docs-money",
       "cat": "auto",
-      "status": "planned",
+      "status": "used",
       "angle": "Где в закупках теряются деньги на сравнении поставщиков",
-      "query": "сравнение поставщиков автоматизация"
+      "query": "сравнение поставщиков автоматизация",
+      "used_slug": "gde-v-zakupkah-teryayutsya-dengi",
+      "used_date": "2026-10-05"
     },
     {
       "key": "migration-to-bitrix",
