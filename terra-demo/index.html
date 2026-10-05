@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Terra Demo</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5FA;--card:#fff;--ink:#0E1B3D;--mut:#55617F;--line:#E3E8F2;--acc:#2450D8;--accd:#1A3CA8;--tint:#E4EAFB;--ok:#0F5C36;--okbg:#DDF3E8;--warn:#8A4B00;--warnbg:#FFF0DC}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:Manrope,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+button{font:inherit;color:inherit;border:none;background:none;cursor:pointer;padding:0}
+#app{max-width:480px;margin:0 auto;height:100%;display:flex;flex-direction:column;position:relative;background:var(--bg)}
+#view{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 16px 20px}
+h1{margin:0;font-size:27px;font-weight:800;letter-spacing:-.01em}
+.hd{display:flex;align-items:center;justify-content:space-between;padding:16px 0 12px;gap:10px}
+.rb{width:44px;height:44px;border-radius:22px;background:#fff;border:1px solid #DDE3F0;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.rb.dark{background:var(--ink);color:#fff;border:none;font-weight:700;font-size:14px}
+.pill{height:44px;padding:0 14px;border-radius:22px;background:#fff;border:1px solid #DDE3F0;font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;margin:0 -16px;padding-left:16px;padding-right:16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;height:40px;padding:0 14px;border-radius:20px;background:#fff;border:1px solid #DDE3F0;font-weight:600;font-size:13px;white-space:nowrap}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink);font-weight:700}
+.seg{display:flex;background:#E6EAF4;border-radius:14px;padding:3px}
+.seg button{flex:1;height:40px;border-radius:11px;font-weight:600;font-size:13px;color:var(--mut)}
+.seg button.on{background:#fff;color:var(--ink);font-weight:700}
+.card{background:var(--card);border-radius:22px;padding:16px}
+.stack{display:flex;flex-direction:column;gap:12px}
+.row{display:flex;align-items:center;gap:12px}
+.av{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}
+.t-mut{color:var(--mut);font-size:13px}
+.eb{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.btn{height:46px;border-radius:14px;font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;padding:0 18px;transition:transform .08s}
+.btn:active,.chip:active,.rb:active{transform:scale(.97)}
+.btn.p{background:var(--acc);color:#fff}.btn.s{background:var(--tint);color:var(--accd)}.btn.o{background:#fff;border:1px solid #DDE3F0}.btn.ok{background:var(--okbg);color:var(--ok)}.btn.d{background:var(--ink);color:#fff}
+.tag{padding:5px 10px;border-radius:10px;font-size:12px;font-weight:800;white-space:nowrap}
+.tag.req{background:var(--warnbg);color:var(--warn)}.tag.off{background:var(--okbg);color:var(--ok)}.tag.an{background:var(--tint);color:var(--accd)}.tag.cs{background:#EFE6FB;color:#4B2A8A}
+nav{display:flex;background:#fff;border-top:1px solid var(--line);padding:6px 6px calc(8px + env(safe-area-inset-bottom))}
+nav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;font-size:11px;font-weight:600;color:var(--mut)}
+nav button.on{color:var(--acc);font-weight:800}
+.hero{background:var(--acc);color:#fff;border-radius:24px;padding:18px}
+.datebox{width:56px;height:64px;border-radius:14px;background:var(--tint);color:var(--accd);display:flex;flex-direction:column;align-items:center;justify-content:center;flex:0 0 auto}
+.datebox b{font-size:20px;line-height:1}.datebox span{font-size:11px;font-weight:700}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;background:#fff;border-radius:18px;padding:8px}
+.week button{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0;border-radius:12px}
+.week button.on{background:var(--acc);color:#fff}
+.week i{width:5px;height:5px;border-radius:3px;display:block}
+.inp{display:flex;align-items:center;gap:10px;height:48px;padding:0 16px;background:#fff;border:1px solid #DDE3F0;border-radius:16px}
+.inp input{flex:1;border:none;outline:none;background:transparent;font:500 15px Manrope,sans-serif;color:var(--ink);min-width:0}
+.li{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid #E9EDF5}.li:last-child{border-bottom:none}
+.foot{display:flex;gap:10px;padding:12px 16px calc(14px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line)}
+.back{position:sticky;top:0;z-index:5;padding:12px 0 8px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(var(--bg) 70%,transparent)}
+#toast{position:absolute;left:16px;right:16px;bottom:96px;background:var(--ink);color:#fff;border-radius:16px;padding:14px 16px;font-size:14px;font-weight:600;line-height:1.4;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none;z-index:50;text-align:center}
+#toast.on{opacity:1;transform:none}
+#sheet{position:absolute;inset:0;background:rgba(14,27,61,.45);display:none;align-items:flex-end;z-index:40}
+#sheet.on{display:flex}
+#sheet>div{background:#fff;border-radius:26px 26px 0 0;padding:20px 20px calc(24px + env(safe-area-inset-bottom));width:100%;max-height:86%;overflow-y:auto}
+.demo{font-size:11px;font-weight:800;letter-spacing:.08em;background:var(--warnbg);color:var(--warn);padding:4px 8px;border-radius:8px}
+.qr{width:220px;height:220px;margin:8px auto;display:grid;grid-template-columns:repeat(21,1fr);gap:0;border:10px solid #fff;outline:1px solid var(--line);border-radius:12px}
+.qr i{display:block;aspect-ratio:1}
+.bar{height:6px;border-radius:3px;background:#2B3A63}.bar i{display:block;height:6px;border-radius:3px;background:#7FA0FF}
+.stat{background:#fff;border-radius:16px;padding:12px}.stat b{font-size:17px;display:block}.stat span{font-size:12px;color:var(--mut);font-weight:600}
+.empty{text-align:center;color:var(--mut);font-size:14px;padding:30px 20px;line-height:1.5}
+</style>
+</head>
+<body>
+<div id="app"><div id="view"></div><div id="footer"></div><nav id="nav"></nav><div id="toast"></div><div id="sheet"><div id="sheetIn"></div></div></div>
+<script>
+(function(){
+var tg=window.Telegram&&window.Telegram.WebApp;try{if(tg){tg.ready();tg.expand();if(tg.setHeaderColor)tg.setHeaderColor('#F3F5FA');if(tg.setBackgroundColor)tg.setBackgroundColor('#F3F5FA');}}catch(e){}
+var tgUser=(tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user)||null;
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var ME={name:tgUser?(tgUser.first_name||'Гость'):'Гость'};ME.ini=(ME.name[0]||'Г').toUpperCase()+((tgUser&&tgUser.last_name)?tgUser.last_name[0].toUpperCase():'');
+var KEY='terra-demo-v2',S={ob:false,city:'Дубай',going:{},like:{},joined:{c1:true,c2:true},saved:{},seen:{m2:true},help:{}};
+try{var raw=localStorage.getItem(KEY);if(raw){var o=JSON.parse(raw);for(var k in o)S[k]=o[k];}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+var CITIES=['Дубай','Москва','Санкт-Петербург','Казань','Екатеринбург'];
+var COL=[['#E4EAFB','#1A3CA8'],['#FFF0DC','#8A4B00'],['#DDF3E8','#0F5C36'],['#EFE6FB','#4B2A8A'],['#FDE4EA','#8A1C3A']];
+var P=[
+{id:'p1',n:'Марина К.',role:'Основатель',co:'логистика и ВЭД',city:'Дубай',sph:'Логистика',flow:'7 поток',school:'Школа продаж',exp:'9 лет',rev:'50-100 млн',team:'24',focus:'Запуск склада в Джебель-Али и новая линия поставок электроники из Китая',seek:'Подрядчика по таможенному оформлению и партнёра по продажам в Саудовской Аравии',give:'Расчёт логистики из Китая в ОАЭ, контакты проверенных перевозчиков',th:6},
+{id:'p2',n:'Дмитрий Р.',role:'CEO',co:'производство мебели',city:'Дубай',sph:'Производство',flow:'6 поток',school:'Школа продаж',exp:'12 лет',rev:'100-300 млн',team:'60',focus:'Выход на рынок ОАЭ с корпусной мебелью для отелей',seek:'Внедрение CRM и аналитику звонков для отдела продаж',give:'Опыт запуска производства с нуля, контакты поставщиков фурнитуры',th:4},
+{id:'p3',n:'Елена В.',role:'Партнёр',co:'бухгалтерия и налоги ОАЭ',city:'Дубай',sph:'Финансы',flow:'5 поток',school:'Школа финансов',exp:'7 лет',rev:'10-50 млн',team:'11',focus:'Новый продукт: сопровождение корпоративного налога для малого бизнеса',seek:'Партнёров, которые открывают компании клиентам в ОАЭ',give:'Открытие компании и счёта, разбор налоговой модели за одну встречу',th:11},
+{id:'p4',n:'Илья С.',role:'Основатель',co:'маркетинговое агентство',city:'Дубай',sph:'Маркетинг',flow:'7 поток',school:'Школа маркетинга',exp:'6 лет',rev:'10-50 млн',team:'14',focus:'Собираю отдел перформанса под рынок Персидского залива',seek:'Сильного руководителя проектов и двух клиентов в e-commerce',give:'Трафик и упаковка продукта, аудит рекламного кабинета',th:3},
+{id:'p5',n:'Артём Н.',role:'Сооснователь',co:'разработка и автоматизация',city:'Дубай',sph:'IT',flow:'7 поток',school:'Школа продаж',exp:'8 лет',rev:'50-100 млн',team:'32',focus:'Продукт для автоматизации заявок в сервисных компаниях',seek:'Пилотных клиентов с отделом продаж от 10 человек',give:'Аудит процессов и подбор инструментов автоматизации',th:5},
+{id:'p6',n:'Ольга Т.',role:'Собственник',co:'сеть стоматологий',city:'Москва',sph:'Медицина',flow:'4 поток',school:'Школа управления',exp:'15 лет',rev:'300+ млн',team:'140',focus:'Открытие шестой клиники и единый контакт-центр',seek:'Операционного директора и подрядчика по HR-бренду',give:'Опыт масштабирования клиник, стандарты сервиса',th:9},
+{id:'p7',n:'Руслан Г.',role:'Основатель',co:'строительство и отделка',city:'Москва',sph:'Строительство',flow:'6 поток',school:'Школа управления',exp:'10 лет',rev:'100-300 млн',team:'85',focus:'Перевод объектов на единый контроль сроков и смет',seek:'Поставщиков инженерного оборудования напрямую',give:'Проверка сметы и подрядчика перед стартом ремонта',th:2},
+{id:'p8',n:'Анна Л.',role:'CEO',co:'онлайн-школа английского',city:'Санкт-Петербург',sph:'Образование',flow:'5 поток',school:'Школа маркетинга',exp:'5 лет',rev:'10-50 млн',team:'40',focus:'Запуск корпоративного направления для IT-компаний',seek:'Выход на HR-директоров компаний от 200 человек',give:'Как собрать методический отдел и удержать преподавателей',th:7},
+{id:'p9',n:'Тимур А.',role:'Собственник',co:'дистрибуция продуктов питания',city:'Казань',sph:'Торговля',flow:'6 поток',school:'Школа финансов',exp:'14 лет',rev:'300+ млн',team:'120',focus:'Собственная торговая марка и вход в федеральные сети',seek:'Категорийного менеджера с опытом в сетях',give:'Переговоры с сетями, логистика по Поволжью',th:8},
+{id:'p10',n:'Виктория М.',role:'Основатель',co:'студия интерьеров',city:'Дубай',sph:'Дизайн',flow:'7 поток',school:'Школа продаж',exp:'6 лет',rev:'10-50 млн',team:'9',focus:'Комплектация вилл под ключ для русскоязычных клиентов',seek:'Надёжного подрядчика по отделке и мебельное производство',give:'Подбор материалов и поставщиков в ОАЭ',th:5}];
+var E=[
+{id:'e1',d:8,dw:'чт',t:'Нетворкинг-ужин резидентов',tm:'19:30 - 22:30',city:'Дубай',fmt:'Офлайн',school:'Клуб',place:'[название ресторана]',addr:'[адрес], Dubai Marina',sp:'[ведущий встречи]',spr:'Команда клуба',desc:'Вечер знакомств для резидентов города. Короткий круг представлений, затем свободное общение по столам, собранным по сферам',n:22,who:['p1','p3','p4','p10']},
+{id:'e2',d:14,dw:'ср',t:'Школа продаж: разбор кейсов',tm:'18:00 - 19:30',city:'Онлайн',fmt:'Онлайн',school:'Школа продаж',place:'Онлайн-эфир',addr:'ссылка придёт за час до начала',sp:'[имя наставника]',spr:'Наставник школы',desc:'Три участника школы показывают свою воронку, группа разбирает узкие места. Запись будет доступна в разделе «Знания»',n:48,who:['p2','p5','p1']},
+{id:'e3',d:16,dw:'пт',t:'Бизнес-завтрак: найм первых руководителей',tm:'09:00 - 11:00',city:'Дубай',fmt:'Офлайн',school:'Школа управления',place:'[название площадки]',addr:'[адрес], Business Bay',sp:'[имя спикера]',spr:'Приглашённый эксперт',desc:'Как понять, что пора нанимать руководителя, где искать и как проверить на тестовом периоде. Формат: выступление 40 минут и вопросы',n:9,who:['p4','p5','p10']},
+{id:'e4',d:18,dw:'вс',t:'7 поток: первая встреча',tm:'19:00 - 22:00',city:'Дубай',fmt:'Офлайн',school:'7 поток',live:true,place:'[название площадки]',addr:'[адрес], Дубай',sp:'[имя спикера]',spr:'Наставник потока',desc:'Знакомство участников потока, разбор запросов в малых группах и распределение по наставникам. С собой: запрос на ближайшие три месяца',n:14,who:['p1','p4','p5','p10']},
+{id:'e5',d:17,dw:'сб',t:'Форум резидентов: итоги квартала',tm:'12:00 - 18:00',city:'Москва',fmt:'Офлайн',school:'Клуб',live:true,place:'[название площадки]',addr:'[адрес], Москва',sp:'[спикеры форума]',spr:'Резиденты и наставники',desc:'Большая встреча клуба: шесть выступлений резидентов, круглые столы по сферам и вечерний нетворкинг',n:180,who:['p6','p7']},
+{id:'e6',d:22,dw:'чт',t:'Мастер-класс: финансовая модель за вечер',tm:'19:00 - 21:30',city:'Санкт-Петербург',fmt:'Офлайн',school:'Школа финансов',place:'[название площадки]',addr:'[адрес], Санкт-Петербург',sp:'[имя спикера]',spr:'Наставник школы',desc:'Собираем модель на своих цифрах: выручка, маржа, точка безубыточности. Нужен ноутбук',n:26,who:['p8']},
+{id:'e7',d:25,dw:'вс',t:'Встреча резидентов Казани',tm:'17:00 - 20:00',city:'Казань',fmt:'Офлайн',school:'Клуб',place:'[название площадки]',addr:'[адрес], Казань',sp:'[ведущий встречи]',spr:'Команда клуба',desc:'Ежемесячная встреча города: новости клуба, три запроса от резидентов и общение',n:31,who:['p9']}];
+var F=[
+{id:'f1',k:'req',who:'p1',ago:'2 ч назад',t:'Ищу подрядчика по таможенному оформлению в ОАЭ, нужен опыт с электроникой',resp:3,left:'ещё 5 дней'},
+{id:'f2',k:'an',src:'Terra · Школа продаж',t:'Открыта запись в новый набор. Старт [дата], наставник [имя]',go:'know'},
+{id:'f3',k:'off',who:'p3',ago:'вчера',t:'Разберу налоговую модель вашей компании в ОАЭ за одну встречу. Для резидентов клуба бесплатно, три места на этой неделе',resp:5,left:'ещё 3 дня'},
+{id:'f4',k:'cs',who:'p2',ago:'2 дня назад',t:'Через клуб нашли подрядчика на внедрение CRM. За месяц отдел продаж перестал терять заявки, рассказываю, как выбирали',resp:12},
+{id:'f5',k:'req',who:'p6',ago:'3 дня назад',t:'Нужен операционный директор в сеть клиник в Москве. Буду благодарна за рекомендации',resp:7,left:'ещё 9 дней'},
+{id:'f6',k:'req',who:'p8',ago:'3 дня назад',t:'Ищу выход на HR-директоров IT-компаний от 200 человек, запускаем корпоративное обучение',resp:2,left:'ещё 11 дней'}];
+var M=[
+{id:'m1',ty:'Эфир',dur:'54 мин',sch:'Школа продаж',tag:'Продажи',t:'Как поднять конверсию из заявки в сделку',in:['Где теряются заявки между рекламой и менеджером','Три вопроса, которые квалифицируют клиента за две минуты','Разбор воронки участника школы']},
+{id:'m2',ty:'Статья',dur:'7 мин',sch:'Школа продаж',tag:'Продажи',t:'Скрипт первого звонка: разбор по шагам',in:['Структура первых 30 секунд','Как перейти от вопросов к предложению','Шаблон скрипта']},
+{id:'m3',ty:'Эфир',dur:'1 ч 12 мин',sch:'Школа управления',tag:'Команда',t:'Первый руководитель в компании: когда и кого нанимать',in:['Признаки, что собственник стал узким местом','Профиль кандидата и тестовый период','Ошибки передачи полномочий']},
+{id:'m4',ty:'Разбор',dur:'38 мин',sch:'Школа финансов',tag:'Финансы',t:'Финансовая модель на одном листе',in:['Какие пять цифр смотреть каждую неделю','Точка безубыточности на примере','Шаблон таблицы']},
+{id:'m5',ty:'Статья',dur:'9 мин',sch:'Школа маркетинга',tag:'Запуск',t:'Запуск нового продукта: чек-лист первых 30 дней',in:['Проверка спроса до разработки','Первые десять клиентов','Что считать успехом запуска']},
+{id:'m6',ty:'Эфир',dur:'47 мин',sch:'Школа маркетинга',tag:'Продажи',t:'Упаковка предложения для B2B-клиента',in:['Как описать результат, а не процесс','Структура коммерческого предложения','Разбор двух предложений участников']}];
+var C=[
+{id:'c1',n:'Terra · Дубай',ty:'город',m:128,ic:'Д',g:'city',city:'Дубай'},{id:'c2',n:'7 поток · Дубай',ty:'поток',m:34,ic:'7',g:'flow'},
+{id:'c3',n:'IT и автоматизация',ty:'сфера',m:212,ic:'IT',g:'sph'},{id:'c4',n:'Школа продаж',ty:'школа',m:96,ic:'ШП',g:'school'},{id:'c5',n:'Логистика и ВЭД',ty:'сфера',m:74,ic:'ВЭД',g:'sph'},
+{id:'c6',n:'Маркетинг и продажи',ty:'сфера',m:305,ic:'МП',g:'sph'},{id:'c7',n:'Школа финансов',ty:'школа',m:81,ic:'ШФ',g:'school'},
+{id:'c8',n:'Terra · Москва',ty:'город',m:540,ic:'М',g:'city'},{id:'c9',n:'Terra · Санкт-Петербург',ty:'город',m:260,ic:'С',g:'city'},{id:'c10',n:'Terra · Казань',ty:'город',m:118,ic:'К',g:'city'}];
+function person(id){for(var i=0;i<P.length;i++)if(P[i].id===id)return P[i]}
+function ev(id){for(var i=0;i<E.length;i++)if(E[i].id===id)return E[i]}
+function ini(n){var a=n.split(' ');return(a[0][0]+(a[1]?a[1][0]:'')).toUpperCase()}
+function av(p,sz){var i=P.indexOf(p)%COL.length,c=COL[i<0?0:i];return '<div class="av" style="width:'+sz+'px;height:'+sz+'px;background:'+c[0]+';color:'+c[1]+';font-size:'+Math.round(sz*.32)+'px">'+ini(p.n)+'</div>'}
+function plural(n,a,b,c){var m=n%100,k=n%10;return(m>10&&m<20)?c:(k===1?a:(k>1&&k<5?b:c))}
+var I={
+feed:'<path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/>',ev:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>',
+ppl:'<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.500s5.900 1.900 6.500 5.500M16 4.800a3.500 3.500 0 0 1 0 6.400M18.500 14.900c1.700.800 2.700 2.500 3 5.100"/>',
+know:'<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/>',chat:'<path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-5 4v-4H6a2 2 0 0 1-2-2z"/>',
+pin:'<path d="M12 21s7-6.200 7-11.500a7 7 0 0 0-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/>',down:'<path d="M6 9l6 6 6-6"/>',back:'<path d="M15 5l-7 7 7 7"/>',
+qr:'<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM18 14h2M14 18v2"/>',
+bell:'<path d="M6 16V11a6 6 0 0 1 12 0v5l1.500 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/>',srch:'<circle cx="11" cy="11" r="6.500"/><path d="M16 16l4 4"/>',plane:'<path d="M3 13l18-8-6 16-3-7z"/>',
+star:'<path d="M12 4l2.400 5 5.600.800-4 3.900.900 5.500-4.900-2.600-4.900 2.600.900-5.500-4-3.900 5.600-.800z"/>',lock:'<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',play:'<path d="M8 5.500v13l11-6.500z" fill="currentColor" stroke="none"/>',doc:'<path d="M7 3h8l4 4v14H7z"/><path d="M10 12h6M10 16h6"/>'};
+function ic(n,sz,col){return '<svg width="'+(sz||22)+'" height="'+(sz||22)+'" viewBox="0 0 24 24" fill="none" stroke="'+(col||'currentColor')+'" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+I[n]+'</svg>'}
+var R={tab:'feed',sub:null,id:null,ptab:'cat',q:'',ktag:'Все',cg:'my',fk:'all',ecity:null,trip:null};
+var view=document.getElementById('view'),nav=document.getElementById('nav'),footer=document.getElementById('footer'),toastEl=document.getElementById('toast'),sheet=document.getElementById('sheet'),sheetIn=document.getElementById('sheetIn'),tt;
+function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove('on')},2600)}
+function hap(){try{tg&&tg.HapticFeedback&&tg.HapticFeedback.impactOccurred('light')}catch(e){}}
+function openSheet(h){sheetIn.innerHTML=h;sheet.classList.add('on')}
+function closeSheet(){sheet.classList.remove('on')}
+function cnt(e){return e.n+(S.going[e.id]?1:0)}
+function header(title,extra){return '<div class="hd"><h1>'+title+'</h1>'+(extra||'<span class="demo">ДЕМО</span>')+'</div>'}
+function evCard(e){var g=S.going[e.id];return '<div class="card" data-a="event" data-id="'+e.id+'" style="display:flex;gap:14px;padding:14px"><div class="datebox"><b>'+e.d+'</b><span>окт, '+e.dw+'</span></div><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px"><div style="font-size:16px;font-weight:800;line-height:1.25">'+e.t+'</div><div class="t-mut">'+e.tm.split(' - ')[0]+' · '+e.fmt.toLowerCase()+' · '+e.city+'</div><div class="row" style="justify-content:space-between;margin-top:2px"><span style="font-size:13px;font-weight:700;color:'+(g?'var(--ok)':'var(--mut)')+'">'+(g?'Ты идёшь · ':'Идут ')+cnt(e)+'</span><button class="btn '+(g?'ok':'p')+'" style="height:42px;font-size:14px" data-a="go" data-id="'+e.id+'">'+(g?'Записан':'Пойду')+'</button></div></div></div>'}
+function feedItem(f){var lab={req:'Запрос',off:'Предложение',an:'Анонс',cs:'Кейс'}[f.k],h='<div class="card stack">';
+if(f.who){var p=person(f.who);h+='<div class="row" data-a="person" data-id="'+p.id+'">'+av(p,44)+'<div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:700">'+p.n+'</div><div class="t-mut">'+p.sph+' · '+p.city+' · '+f.ago+'</div></div><span class="tag '+f.k+'">'+lab+'</span></div>'}
+else h+='<div class="row" style="justify-content:space-between"><div style="font-size:15px;font-weight:700">'+f.src+'</div><span class="tag an">'+lab+'</span></div>';
+h+='<div style="font-size:15px;line-height:1.45;font-weight:500">'+f.t+'</div>';
+if(f.k==='req'){var d=S.help[f.id];h+='<div class="row" style="gap:8px"><button class="btn '+(d?'ok':'s')+'" style="flex:1;font-size:14px" data-a="help" data-id="'+f.id+'">'+(d?'Отклик отправлен':'Могу помочь')+'</button><button class="btn o" style="flex:1;font-size:14px" data-a="refer">Знаю, кто поможет</button></div>'}
+if(f.k==='off'){var d2=S.help[f.id];h+='<button class="btn '+(d2?'ok':'s')+'" style="font-size:14px" data-a="help" data-id="'+f.id+'">'+(d2?'Заявка отправлена':'Хочу разбор')+'</button>'}
+if(f.k==='an')h+='<button class="btn s" style="font-size:14px" data-a="tab" data-id="know">Подробнее о школе</button>';
+if(f.resp)h+='<div class="t-mut">'+(f.resp+(S.help[f.id]?1:0))+' '+plural(f.resp,'отклик','отклика','откликов')+(f.left?' · активен '+f.left:'')+'</div>';
+return h+'</div>'}
+function vFeed(){var up=E.filter(function(e){return e.city===S.city||e.city==='Онлайн'}).sort(function(a,b){return a.d-b.d}),e=up.filter(function(x){return x.city===S.city})[0]||up[0];
+var h='<div class="hd"><button class="pill" data-a="city">'+ic('pin',18,'#2450D8')+esc(S.city)+ic('down',14)+'</button><div class="row" style="gap:8px"><button class="rb" data-a="qr" aria-label="QR на вход">'+ic('qr',20)+'</button><button class="rb" data-a="notif" aria-label="Уведомления">'+ic('bell',20)+'</button><button class="rb dark" data-a="me" aria-label="Профиль">'+esc(ME.ini)+'</button></div></div><div class="stack">';
+if(e){var g=S.going[e.id];h+='<div class="hero stack" style="gap:10px" data-a="event" data-id="'+e.id+'"><div class="eb" style="color:#D5E0FF">Ближайшее событие · '+(e.city==='Онлайн'?'онлайн':'твой город')+'</div><div style="font-size:20px;font-weight:800;line-height:1.2">'+e.t+'</div><div style="font-size:14px;font-weight:500;color:#EAF0FF">'+e.d+' октября, '+e.dw+' · '+e.tm.split(' - ')[0]+'</div><div class="row" style="justify-content:space-between;margin-top:4px"><div style="font-size:13px;font-weight:600;color:#EAF0FF">Идут '+cnt(e)+' '+plural(cnt(e),'человек','человека','человек')+'</div><button class="btn" style="background:#fff;color:#1A3CA8;height:44px" data-a="go" data-id="'+e.id+'">'+(g?'Ты идёшь':'Пойду')+'</button></div></div>'}
+var fl=[['all','Все'],['req','Запросы'],['off','Предложения'],['cs','Кейсы'],['an','Анонсы']];
+h+='<div class="chips">'+fl.map(function(x){return '<button class="chip'+(R.fk===x[0]?' on':'')+'" data-a="fk" data-id="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>';
+h+=F.filter(function(f){return R.fk==='all'||f.k===R.fk}).map(feedItem).join('');
+return h+'</div>'}
+function vEvents(){var city=R.ecity||S.city,list=E.filter(function(e){return city==='Все города'||e.city===city||e.city==='Онлайн'}).sort(function(a,b){return a.d-b.d});
+var h=header('События')+'<div class="stack"><div class="chips">'+[S.city,'Все города'].concat(CITIES.filter(function(c){return c!==S.city})).map(function(c){return '<button class="chip'+(city===c?' on':'')+'" data-a="ecity" data-id="'+c+'">'+c+'</button>'}).join('')+'</div>';
+var dn=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];h+='<div class="week">';for(var i=0;i<7;i++){var d=12+i,has=list.some(function(e){return e.d===d});h+='<button class="'+(d===18?'on':'')+'" data-a="day"><span style="font-size:11px;font-weight:600;opacity:.75">'+dn[i]+'</span><span style="font-size:15px;font-weight:700">'+d+'</span><i style="background:'+(has?(d===18?'#fff':'var(--acc)'):'transparent')+'"></i></button>'}h+='</div>';
+h+=list.length?list.map(evCard).join(''):'<div class="empty">В этом городе пока нет событий. Посмотри онлайн-встречи или другой город</div>';return h+'</div>'}
+function vEvent(){var e=ev(R.id),g=S.going[e.id],n=cnt(e);
+var h='<div style="margin:0 -16px;background:var(--acc);color:#fff;padding:14px 16px 18px;min-height:170px;display:flex;flex-direction:column;justify-content:space-between"><button class="rb" data-a="close" aria-label="Назад" style="color:var(--ink)">'+ic('back',20)+'</button><div class="row" style="gap:8px;flex-wrap:wrap;margin-top:40px"><span class="tag" style="background:#fff;color:#1A3CA8">'+e.fmt+'</span>'+(e.live?'<span class="tag" style="background:#1A3CA8;color:#fff">Будет трансляция</span>':'')+'<span class="tag" style="background:#1A3CA8;color:#fff">'+e.school+'</span></div></div><div class="stack" style="margin-top:16px"><h1 style="font-size:25px;line-height:1.15">'+e.t+'</h1>';
+h+='<div class="card" style="padding:4px 16px"><div class="li">'+ic('ev',22,'#2450D8')+'<div style="flex:1"><div style="font-size:15px;font-weight:700">'+e.d+' октября, '+e.dw+'</div><div class="t-mut">'+e.tm+'</div></div><button style="color:var(--acc);font-weight:700;font-size:13px;height:44px" data-a="cal">В календарь</button></div><div class="li">'+ic('pin',22,'#2450D8')+'<div style="flex:1"><div style="font-size:15px;font-weight:700">'+e.place+'</div><div class="t-mut">'+e.addr+'</div></div>'+(e.fmt==='Офлайн'?'<button style="color:var(--acc);font-weight:700;font-size:13px;height:44px" data-a="map">Карта</button>':'')+'</div><div class="li"><div class="av" style="width:40px;height:40px;background:var(--tint);color:var(--accd);font-size:13px">СП</div><div style="flex:1"><div style="font-size:15px;font-weight:700">'+e.sp+'</div><div class="t-mut">'+e.spr+'</div></div></div></div>';
+h+='<div style="font-size:15px;line-height:1.5;font-weight:500">'+e.desc+'</div>';
+h+='<div class="card stack" style="gap:10px"><div style="font-size:16px;font-weight:800">Кто идёт · '+n+'</div>'+e.who.map(function(id){var p=person(id);return '<div class="row" data-a="person" data-id="'+p.id+'">'+av(p,40)+'<div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:700">'+p.n+'</div><div class="t-mut">'+p.role+' · '+p.co+'</div></div></div>'}).join('')+(n>e.who.length?'<div class="t-mut">и ещё '+(n-e.who.length-(g?1:0))+' '+plural(n-e.who.length,'участник','участника','участников')+'</div>':'')+'</div></div>';
+footer.innerHTML='<div class="foot">'+(g?'<button class="btn o" style="flex:1;height:52px" data-a="go" data-id="'+e.id+'">Не пойду</button><button class="btn ok" style="flex:2;height:52px" data-a="qr">Ты идёшь · показать QR</button>':'<button class="btn p" style="flex:1;height:52px;font-size:16px" data-a="go" data-id="'+e.id+'">Пойду</button>')+'</div>';return h}
+function pRow(p){return '<div class="card row" style="padding:14px;align-items:flex-start" data-a="person" data-id="'+p.id+'">'+av(p,52)+'<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px"><div class="row" style="justify-content:space-between"><div style="font-size:16px;font-weight:800">'+p.n+'</div>'+(S.like[p.id]==='open'?'<span class="tag off">Контакт открыт</span>':(S.like[p.id]?'<span class="tag an">Запрос отправлен</span>':''))+'</div><div class="t-mut">'+p.role+' · '+p.co+' · '+p.city+'</div><div style="font-size:13px;font-weight:600;line-height:1.4"><span style="color:var(--warn)">Ищет:</span> '+p.seek.charAt(0).toLowerCase()+p.seek.slice(1)+'</div></div></div>'}
+function vPeople(){var h=header('Люди')+'<div class="stack"><label class="inp">'+ic('srch',20,'#55617F')+'<input id="q" type="search" placeholder="Имя, сфера или запрос" value="'+esc(R.q)+'" aria-label="Поиск участников"></label><div class="seg">'+[['cat','Каталог'],['req','Запросы'],['my','Мои контакты']].map(function(x){return '<button class="'+(R.ptab===x[0]?'on':'')+'" data-a="ptab" data-id="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>';
+if(R.ptab==='cat'){var city=R.trip||S.city;h+='<button class="row" style="padding:12px 14px;border:1px dashed #9DB2EE;border-radius:16px;background:#EAF0FF;color:var(--accd);text-align:left;font-weight:700;font-size:14px" data-a="trip">'+ic('plane',22)+'<span style="flex:1">'+(R.trip?'Режим поездки: '+R.trip+'. Нажми, чтобы вернуться':'Режим поездки: показать резидентов в другом городе')+'</span></button><div id="plist" class="stack">'+pList()+'</div>'}
+else if(R.ptab==='req'){h+=F.filter(function(f){return f.k==='req'||f.k==='off'}).map(feedItem).join('')}
+else{var mine=P.filter(function(p){return S.like[p.id]||S.saved[p.id]});h+=mine.length?mine.map(pRow).join(''):'<div class="empty">Пока пусто. Открой профиль в каталоге и нажми «Интересно», контакт появится здесь после подтверждения</div>'}
+return h+'</div>'}
+function pList(){var city=R.trip||S.city,q=R.q.trim().toLowerCase();var l=P.filter(function(p){if(q)return(p.n+p.co+p.sph+p.seek+p.give+p.city).toLowerCase().indexOf(q)>=0;return p.city===city});return l.length?('<div class="t-mut" style="font-weight:700">'+(q?'Найдено по всему клубу':city)+' · '+l.length+'</div>'+l.map(pRow).join('')):'<div class="empty">Никого не нашлось. Попробуй другой запрос</div>'}
+function vPerson(){var p=person(R.id),st=S.like[p.id];
+var h='<div class="back"><button class="rb" data-a="close" aria-label="Назад">'+ic('back',20)+'</button><span class="tag off" style="padding:8px 14px;font-size:13px">'+p.th+' '+plural(p.th,'благодарность','благодарности','благодарностей')+'</span></div><div class="stack"><div class="row" style="gap:14px">'+av(p,72)+'<div style="flex:1"><h1 style="font-size:24px">'+p.n+'</h1><div class="t-mut" style="font-size:14px;line-height:1.35;margin-top:4px">'+p.role+', [компания]<br>'+p.co.charAt(0).toUpperCase()+p.co.slice(1)+'</div></div></div>';
+h+='<div class="row" style="gap:8px;flex-wrap:wrap">'+[p.city,p.flow,p.school].map(function(x){return '<span class="tag" style="background:#fff;font-size:13px;font-weight:700;padding:7px 12px">'+x+'</span>'}).join('')+'</div>';
+h+='<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px"><div class="stat"><b>'+p.exp+'</b><span>стаж</span></div><div class="stat"><b>'+p.rev+'</b><span>оборот в год</span></div><div class="stat"><b>'+p.team+'</b><span>в команде</span></div></div>';
+h+='<div class="card stack" style="gap:14px"><div><div class="eb" style="color:var(--acc)">Сейчас в фокусе</div><div style="font-size:15px;line-height:1.45;font-weight:500;margin-top:4px">'+p.focus+'</div></div><div style="height:1px;background:#E9EDF5"></div><div><div class="eb" style="color:var(--warn)">Что ищу</div><div style="font-size:15px;line-height:1.45;font-weight:500;margin-top:4px">'+p.seek+'</div></div><div style="height:1px;background:#E9EDF5"></div><div><div class="eb" style="color:var(--ok)">Чем могу помочь</div><div style="font-size:15px;line-height:1.45;font-weight:500;margin-top:4px">'+p.give+'</div></div></div>';
+var note=st==='open'?'Контакт открыт. В рабочей версии здесь будет переход в личный чат Telegram':(st?'Запрос отправлен. В демо '+p.n.split(' ')[0]+' подтвердит через пару секунд':'Контакт откроется в Telegram после взаимного согласия. Лимит: три запроса в ожидании');
+h+='<div class="row" style="padding:12px 14px;background:'+(st==='open'?'var(--okbg)':'#EAF0FF')+';border-radius:16px;font-size:13px;line-height:1.4;font-weight:600;color:'+(st==='open'?'var(--ok)':'var(--accd)')+'">'+ic('lock',20)+'<span style="flex:1">'+note+'</span></div></div>';
+footer.innerHTML='<div class="foot"><button class="btn o" style="width:52px;height:52px;padding:0;'+(S.saved[p.id]?'background:var(--warnbg);color:var(--warn);border:none':'')+'" data-a="save" data-id="'+p.id+'" aria-label="В избранное">'+ic('star',22)+'</button>'+(st==='open'?'<button class="btn p" style="flex:1;height:52px" data-a="write">Написать в Telegram</button>':(st?'<button class="btn s" style="flex:1;height:52px">Ждём подтверждения</button>':'<button class="btn p" style="flex:1;height:52px;font-size:16px" data-a="like" data-id="'+p.id+'">Интересно</button>'))+'</div>';return h}
+function vKnow(){var tags=['Все','Продажи','Команда','Финансы','Запуск'];
+var h=header('Знания')+'<div class="stack"><div class="card stack" style="background:var(--ink);color:#fff;gap:10px"><div class="eb" style="color:#C9D6FF">Продолжить с места</div><div style="font-size:17px;font-weight:800;line-height:1.25">Школа продаж: воронка от заявки до оплаты</div><div class="bar"><i style="width:62%"></i></div><div class="row" style="justify-content:space-between"><span style="font-size:13px;color:#C9D6FF;font-weight:600">Осталось 18 минут</span><button class="btn" style="background:#fff;color:var(--ink);height:44px;font-size:14px" data-a="watch">Смотреть</button></div></div>';
+h+='<div class="card row" style="padding:14px 16px" data-a="group"><div class="av" style="width:44px;height:44px;border-radius:14px;background:var(--tint);color:var(--accd)">'+ic('ppl',22)+'</div><div style="flex:1"><div style="font-size:15px;font-weight:800">Моя группа · наставник [имя]</div><div class="t-mut">Встреча в четверг, 19:00 · 8 человек</div></div><span class="btn s" style="height:40px;font-size:13px;padding:0 14px">Открыть</span></div>';
+h+='<div class="chips">'+tags.map(function(t){return '<button class="chip'+(R.ktag===t?' on':'')+'" data-a="ktag" data-id="'+t+'">'+t+'</button>'}).join('')+'</div>';
+h+=M.filter(function(m){return R.ktag==='Все'||m.tag===R.ktag}).map(function(m){var v=m.ty==='Статья';return '<div class="card row" style="padding:12px;align-items:flex-start" data-a="mat" data-id="'+m.id+'"><div style="width:92px;height:70px;border-radius:14px;background:'+(v?'#FFE2BD':'#C9D6FF')+';color:'+(v?'var(--warn)':'var(--accd)')+';display:flex;align-items:center;justify-content:center;flex:0 0 auto">'+ic(v?'doc':'play',26)+'</div><div style="flex:1;min-width:0"><div style="font-size:12px;font-weight:700;color:var(--mut)">'+m.ty+' · '+m.dur+(S.seen[m.id]?' · просмотрено':'')+'</div><div style="font-size:15px;font-weight:800;line-height:1.25;margin:4px 0 6px">'+m.t+'</div><div style="font-size:13px;font-weight:700;color:var(--acc)">Что внутри</div></div></div>'}).join('');return h+'</div>'}
+function cRow(c){var j=S.joined[c.id],i=C.indexOf(c)%COL.length;return '<div class="li"><div class="av" style="width:46px;height:46px;background:'+COL[i][0]+';color:'+COL[i][1]+';font-size:13px">'+c.ic+'</div><div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:800">'+c.n+'</div><div class="t-mut">'+(c.m+(j&&c.id!=='c1'&&c.id!=='c2'?1:0))+' '+plural(c.m,'участник','участника','участников')+' · '+c.ty+'</div></div><button class="btn '+(j?'s':'p')+'" style="height:42px;font-size:13px;padding:0 14px" data-a="'+(j?'openchat':'join')+'" data-id="'+c.id+'">'+(j?'Открыть':'Вступить')+'</button></div>'}
+function vChats(){var g=[['my','Мои'],['city','Города'],['sph','Сферы'],['school','Школы']];
+var h=header('Чаты')+'<div class="stack"><div class="t-mut" style="font-size:14px;margin-top:-6px">Все чаты клуба в одном месте. Открываются в Telegram</div><div class="chips">'+g.map(function(x){return '<button class="chip'+(R.cg===x[0]?' on':'')+'" data-a="cg" data-id="'+x[0]+'">'+x[1]+'</button>'}).join('')+'</div>';
+if(R.cg==='my'){var mine=C.filter(function(c){return S.joined[c.id]}),rec=C.filter(function(c){return !S.joined[c.id]&&(c.g==='sph'||c.g==='school')}).slice(0,3);
+h+='<div class="eb" style="color:var(--mut);margin-top:4px">Ты участник</div><div class="card" style="padding:4px 14px">'+mine.map(cRow).join('')+'</div>';if(rec.length)h+='<div class="eb" style="color:var(--mut);margin-top:4px">Подходят тебе</div><div class="card" style="padding:4px 14px">'+rec.map(cRow).join('')+'</div>'}
+else h+='<div class="card" style="padding:4px 14px">'+C.filter(function(c){return c.g===R.cg}).map(cRow).join('')+'</div>';return h+'</div>'}
+function vOnb(){var e=ev('e4');nav.style.display='none';
+return '<div class="stack" style="padding-top:22px;gap:16px;min-height:100%"><div class="row" style="gap:6px"><div style="flex:1;height:4px;border-radius:2px;background:var(--acc)"></div><div style="flex:1;height:4px;border-radius:2px;background:var(--acc)"></div><div style="flex:1;height:4px;border-radius:2px;background:var(--acc)"></div></div><div><div class="eb" style="color:var(--acc)">Демо-версия · профиль заполнен</div><h1 style="font-size:29px;line-height:1.15;margin-top:8px">'+esc(ME.name)+', ты в клубе.<br>С чего начать</h1><div class="t-mut" style="font-size:15px;line-height:1.45;margin-top:8px">Три шага, которые сразу дают пользу. Все данные в демо условные</div></div>'+
+'<div class="card stack" style="gap:10px"><div class="row" style="gap:10px"><div class="av" style="width:32px;height:32px;background:var(--acc);color:#fff;font-size:14px">1</div><div class="t-mut" style="font-weight:700">Ближайшее событие в твоём городе</div></div><div style="font-size:17px;font-weight:800">'+e.t+'</div><div class="t-mut" style="font-size:14px">18 октября, вс · 19:00 · идут '+cnt(e)+' человек</div><button class="btn p" data-a="obgo" data-id="event">Посмотреть событие</button></div>'+
+'<div class="card stack"><div class="row" style="gap:10px"><div class="av" style="width:32px;height:32px;background:var(--acc);color:#fff;font-size:14px">2</div><div class="t-mut" style="font-weight:700">Три человека из твоей сферы</div></div><div class="row"><div class="row" style="gap:0">'+[P[4],P[1],P[3]].map(function(p,i){return '<div style="margin-left:'+(i?-10:0)+'px;border:2px solid #fff;border-radius:50%">'+av(p,42)+'</div>'}).join('')+'</div><div style="flex:1;font-size:14px;line-height:1.4;font-weight:500">Двое ищут подрядчика по CRM и автоматизации</div></div><button class="btn s" data-a="obgo" data-id="ppl">Посмотреть профили</button></div>'+
+'<div class="card row"><div class="av" style="width:32px;height:32px;background:var(--acc);color:#fff;font-size:14px">3</div><div style="flex:1"><div style="font-size:16px;font-weight:800">Чат Terra · Дубай</div><div class="t-mut">128 участников</div></div><button class="btn s" style="height:44px;font-size:14px" data-a="obgo" data-id="chat">Открыть</button></div>'+
+'<button class="btn d" style="height:52px;font-size:16px;margin-top:auto" data-a="obgo" data-id="feed">Перейти в ленту</button></div>'}
+function qrHtml(){var h='<div class="qr">',s=7;for(var i=0;i<441;i++){var r=Math.floor(i/21),c=i%21,f=(r<7&&c<7)||(r<7&&c>13)||(r>13&&c<7),on;if(f){var rr=r>13?r-14:r,cc=c>13?c-14:c;on=rr===0||rr===6||cc===0||cc===6||(rr>1&&rr<5&&cc>1&&cc<5)}else{s=(s*73+r*31+c*17)%101;on=s%2===0}h+='<i style="background:'+(on?'#0E1B3D':'#fff')+'"></i>'}return h+'</div>'}
+var TABS=[['feed','Лента','feed'],['ev','События','ev'],['ppl','Люди','ppl'],['know','Знания','know'],['chat','Чаты','chat']];
+function render(keep){var top=keep?view.scrollTop:0;footer.innerHTML='';nav.style.display='flex';var h;
+if(!S.ob&&!R.sub)h=vOnb();else if(R.sub==='event'){h=vEvent();nav.style.display='none'}else if(R.sub==='person'){h=vPerson();nav.style.display='none'}
+else h={feed:vFeed,ev:vEvents,ppl:vPeople,know:vKnow,chat:vChats}[R.tab]();
+view.innerHTML=h;view.scrollTop=top;
+nav.innerHTML=TABS.map(function(t){return '<button class="'+(R.tab===t[0]?'on':'')+'" data-a="tab" data-id="'+t[0]+'">'+ic(t[2],24)+t[1]+'</button>'}).join('');
+try{if(tg&&tg.BackButton){if(R.sub){tg.BackButton.show()}else tg.BackButton.hide()}}catch(e){}
+var q=document.getElementById('q');if(q)q.oninput=function(){R.q=q.value;var pl=document.getElementById('plist');if(pl)pl.innerHTML=pList()}}
+function back(){R.sub=null;R.id=null;render()}
+try{tg&&tg.BackButton&&tg.BackButton.onClick(back)}catch(e){}
+var A={
+tab:function(id){R.tab=id;R.sub=null;render()},close:back,
+event:function(id){R.sub='event';R.id=id;render()},person:function(id){closeSheet();R.sub='person';R.id=id;render()},
+go:function(id){S.going[id]=!S.going[id];save();hap();toast(S.going[id]?'Ты записан. Напомним за сутки и за два часа':'Запись отменена');render(true)},
+fk:function(id){R.fk=id;render(true)},ecity:function(id){R.ecity=id;render()},ptab:function(id){R.ptab=id;render()},ktag:function(id){R.ktag=id;render(true)},cg:function(id){R.cg=id;render()},
+day:function(){toast('В рабочей версии день фильтрует список событий')},
+help:function(id){S.help[id]=!S.help[id];save();hap();toast(S.help[id]?'Отклик отправлен автору':'Отклик отозван');render(true)},
+refer:function(){toast('В рабочей версии здесь выбор участника, которого ты рекомендуешь')},
+like:function(id){S.like[id]='wait';save();hap();render(true);setTimeout(function(){S.like[id]='open';save();toast('Знакомство подтверждено: '+person(id).n+'. Контакт открыт');if(R.sub==='person'&&R.id===id)render(true)},2200)},
+save:function(id){S.saved[id]=!S.saved[id];save();hap();toast(S.saved[id]?'Сохранено в «Мои контакты»':'Убрано из избранного');render(true)},
+write:function(){toast('Демо: в рабочей версии откроется личный чат в Telegram')},
+join:function(id){S.joined[id]=true;save();hap();toast('Ты в чате. В рабочей версии он откроется в Telegram');render(true)},
+openchat:function(){toast('Демо: в рабочей версии чат откроется в Telegram')},
+cal:function(){toast('Демо: событие добавится в календарь телефона')},map:function(){toast('Демо: откроется карта с адресом площадки')},
+watch:function(){toast('Демо: здесь откроется плеер с места остановки')},
+group:function(){openSheet('<div class="stack"><div class="eb" style="color:var(--acc)">Моя группа</div><h1 style="font-size:22px">Школа продаж · группа 3</h1><div class="t-mut" style="font-size:14px">Наставник [имя] · встречи по четвергам в 19:00</div><div class="card" style="background:var(--bg);padding:4px 14px">'+[P[0],P[1],P[4],P[9]].map(function(p){return '<div class="li" data-a="person" data-id="'+p.id+'">'+av(p,40)+'<div style="flex:1"><div style="font-size:14px;font-weight:700">'+p.n+'</div><div class="t-mut">'+p.co+'</div></div></div>'}).join('')+'</div><button class="btn s" data-a="slot">Записаться к наставнику</button><button class="btn o" data-a="sheetclose">Закрыть</button></div>')},
+slot:function(){toast('Демо: здесь выбор свободного слота у наставника')},
+mat:function(id){var m;M.forEach(function(x){if(x.id===id)m=x});openSheet('<div class="stack"><div class="eb" style="color:var(--acc)">'+m.ty+' · '+m.dur+' · '+m.sch+'</div><h1 style="font-size:22px;line-height:1.2">'+m.t+'</h1><div style="font-size:15px;font-weight:800;margin-top:4px">Что внутри</div>'+m.in.map(function(x,i){return '<div class="row" style="align-items:flex-start"><div class="av" style="width:26px;height:26px;background:var(--tint);color:var(--accd);font-size:12px">'+(i+1)+'</div><div style="flex:1;font-size:15px;line-height:1.4;font-weight:500">'+x+'</div></div>'}).join('')+'<button class="btn p" style="margin-top:6px" data-a="seen" data-id="'+m.id+'">'+(S.seen[m.id]?'Смотреть ещё раз':(m.ty==='Статья'?'Читать':'Смотреть'))+'</button><button class="btn o" data-a="sheetclose">Закрыть</button></div>')},
+seen:function(id){S.seen[id]=true;save();closeSheet();toast('Демо: материал отмечен как просмотренный');render(true)},
+sheetclose:closeSheet,
+city:function(){openSheet('<div class="stack"><h1 style="font-size:22px">Твой город</h1>'+CITIES.map(function(c){return '<button class="btn '+(S.city===c?'p':'o')+'" data-a="setcity" data-id="'+c+'">'+c+'</button>'}).join('')+'</div>')},
+setcity:function(id){S.city=id;R.ecity=null;R.trip=null;save();closeSheet();render()},
+trip:function(){if(R.trip){R.trip=null;render();return}openSheet('<div class="stack"><div class="eb" style="color:var(--acc)">Режим поездки</div><h1 style="font-size:22px">Куда летишь?</h1><div class="t-mut" style="font-size:14px">Покажем резидентов и события в этом городе</div>'+CITIES.filter(function(c){return c!==S.city}).map(function(c){return '<button class="btn o" data-a="settrip" data-id="'+c+'">'+c+'</button>'}).join('')+'</div>')},
+settrip:function(id){R.trip=id;closeSheet();render()},
+qr:function(){openSheet('<div class="stack" style="align-items:stretch;text-align:center"><div class="eb" style="color:var(--acc)">QR на вход</div><h1 style="font-size:22px">'+esc(ME.name)+'</h1><div class="t-mut" style="font-size:14px">Покажи волонтёру на входе. Этим же кодом можно обменяться контактами на встрече</div>'+qrHtml()+'<div class="t-mut">Демо-код, не настоящий</div><button class="btn o" data-a="sheetclose">Закрыть</button></div>')},
+notif:function(){openSheet('<div class="stack"><h1 style="font-size:22px">Уведомления</h1><div class="card" style="background:var(--bg);padding:4px 14px"><div class="li"><div style="flex:1"><div style="font-size:14px;font-weight:700">Напоминание: 7 поток, первая встреча</div><div class="t-mut">18 октября, 19:00 · за сутки и за два часа</div></div></div><div class="li"><div style="flex:1"><div style="font-size:14px;font-weight:700">Новый запрос в твоей сфере</div><div class="t-mut">Дмитрий Р. ищет внедрение CRM</div></div></div><div class="li"><div style="flex:1"><div style="font-size:14px;font-weight:700">Новое событие в Дубае</div><div class="t-mut">Бизнес-завтрак, 16 октября</div></div></div></div><button class="btn o" data-a="sheetclose">Закрыть</button></div>')},
+me:function(){openSheet('<div class="stack"><div class="row" style="gap:14px"><div class="av" style="width:64px;height:64px;background:var(--ink);color:#fff;font-size:22px">'+esc(ME.ini)+'</div><div><h1 style="font-size:22px">'+esc(ME.name)+'</h1><div class="t-mut" style="font-size:14px">'+esc(S.city)+' · 7 поток · демо-профиль</div></div></div><div class="row" style="padding:12px 14px;background:#EAF0FF;border-radius:16px;font-size:13px;font-weight:600;color:var(--accd);line-height:1.4">Это демо с условными данными. Имя взято из твоего Telegram, больше ничего не сохраняется</div><button class="btn s" data-a="howsee">Как меня видят</button><button class="btn o" data-a="reset">Пройти демо заново</button><button class="btn o" data-a="sheetclose">Закрыть</button></div>')},
+howsee:function(){toast('Демо: здесь предпросмотр твоего профиля глазами других')},
+reset:function(){try{localStorage.removeItem(KEY)}catch(e){}location.reload()},
+obgo:function(id){S.ob=true;save();if(id==='event'){R.tab='ev';R.sub='event';R.id='e4'}else R.tab=id;render()}};
+document.getElementById('app').addEventListener('click',function(ev2){var el=ev2.target;if(el===sheet){closeSheet();return}while(el&&el!==this){if(el.dataset&&el.dataset.a){var f=A[el.dataset.a];if(f){f(el.dataset.id);ev2.stopPropagation&&ev2.stopPropagation()}return}el=el.parentNode}});
+render();
+})();
+</script>
+</body>
+</html>
