@@ -23,7 +23,19 @@ export default async function handler(req, res) {
     const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
     const CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
+    // Пока переменные Telegram в этом приложении не заданы, заявка не теряется: пересылаем её
+    // на сервер makebiz.life, он создаёт сделку в Битрикс24 и шлёт уведомление в Telegram.
     if (!TOKEN || !CHAT_ID) {
+      try {
+        const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 20000);
+        const fr = await fetch('https://makebiz.life/api/lead', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' }, signal: ctl.signal,
+          body: JSON.stringify({ ...data, _site: 'uae', _ref: String(req.headers.referer || req.headers.referrer || '') }),
+        });
+        clearTimeout(timer);
+        const fj = await fr.json().catch(() => ({}));
+        if (fj && fj.ok) return res.status(200).json({ ok: true, via: 'makebiz.life' });
+      } catch (e) { /* падаем в исходный ответ ниже */ }
       return res.status(500).json({
         ok: false,
         error: 'Не заданы переменные окружения TELEGRAM_BOT_TOKEN и/или TELEGRAM_CHAT_ID в настройках приложения Timeweb.',
