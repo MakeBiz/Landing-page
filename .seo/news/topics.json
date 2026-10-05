@@ -57,9 +57,11 @@
     {
       "key": "ai-rollout-mistakes",
       "cat": "agents",
-      "status": "planned",
+      "status": "used",
       "angle": "Пять ошибок, из-за которых внедрение ИИ-агентов буксует",
-      "query": "внедрение ии в бизнес ошибки"
+      "query": "внедрение ии в бизнес ошибки",
+      "used_slug": "pochemu-vnedrenie-ai-agentov-buksuet",
+      "used_date": "2026-10-01"
     },
     {
       "key": "supplier-docs-money",
