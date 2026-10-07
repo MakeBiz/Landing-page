@@ -76,6 +76,15 @@ PAGES = {
          'We connect Bitrix24 to Zoho Books, QuickBooks, Odoo or 1C: invoices from deals without retyping, payments and client balances in the CRM, clean data for UAE e-invoicing.',
          'Bitrix24 accounting integration', 'CRM and accounting integration'),
   'offer': False},
+ 'migration': {
+  'slug': 'bitrix-migration',
+  'ru': ('Переезд на Битрикс24 с amoCRM, HubSpot и таблиц в ОАЭ',
+         'Переносим клиентов, сделки и историю из amoCRM (Kommo), HubSpot, Excel и Google Таблиц в Битрикс24 без остановки продаж: тестовый перенос, переключение в выходные.',
+         'Переезд на Битрикс24 с другой CRM', 'Миграция CRM'),
+  'en': ('Bitrix24 migration from Kommo and HubSpot in the UAE',
+         'We move clients, deals and history from Kommo (amoCRM), HubSpot, Excel and Google Sheets to Bitrix24 without stopping sales: a test run first, then a weekend switch.',
+         'Bitrix24 migration from another CRM', 'CRM migration'),
+  'offer': False},
 }
 
 def build(key, lang):

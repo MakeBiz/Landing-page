@@ -18,7 +18,8 @@ T = {
    ('Звонки', 'Телефония в ОАЭ', 'Через лицензированного оператора du или e&: звонки из CRM, записи разговоров, задачи на пропущенные', '/bitrix-telephony'),
    ('Выбор CRM', 'Битрикс24 или Zoho CRM', 'Честное сравнение: цена за компанию или за пользователя, свой сервер, учёт в Zoho Books', '/bitrix-vs-zoho'),
    ('Дистрибуция', 'Дистрибуция и опт', 'Склады и резервы, прайсы в AED и USD, дилеры с лимитами и PDC, закупка через IntDoc', '/bitrix-distribution'),
-   ('Учёт', 'Интеграция с учётом', 'Zoho Books, QuickBooks, Odoo и 1С: счёт из сделки, оплаты и долги клиентов в CRM', '/bitrix-accounting')]),
+   ('Учёт', 'Интеграция с учётом', 'Zoho Books, QuickBooks, Odoo и 1С: счёт из сделки, оплаты и долги клиентов в CRM', '/bitrix-accounting'),
+   ('Переезд', 'Переезд с другой CRM', 'amoCRM, HubSpot и таблицы: клиенты, сделки и история переезжают без остановки продаж', '/bitrix-migration')]),
  'en': ('Solutions for the UAE', 'Bitrix24 for the way business runs in Dubai', 'Learn more →', '/en', [
    ('Real estate', 'Real estate agency in Dubai', 'Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED', '/bitrix-real-estate'),
    ('Messaging', 'WhatsApp in Bitrix24', 'One number for the team through the official API, chats in the client record, response-time control', '/bitrix-whatsapp'),
@@ -26,7 +27,8 @@ T = {
    ('Calls', 'Telephony in the UAE', 'Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls', '/bitrix-telephony'),
    ('Choosing a CRM', 'Bitrix24 or Zoho CRM', 'An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting', '/bitrix-vs-zoho'),
    ('Distribution', 'Distribution and wholesale', 'Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc', '/bitrix-distribution'),
-   ('Accounting', 'Accounting integration', 'Zoho Books, QuickBooks, Odoo and 1C: invoices from deals, payments and client balances in the CRM', '/bitrix-accounting')]),
+   ('Accounting', 'Accounting integration', 'Zoho Books, QuickBooks, Odoo and 1C: invoices from deals, payments and client balances in the CRM', '/bitrix-accounting'),
+   ('Migration', 'Moving from another CRM', 'Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales', '/bitrix-migration')]),
 }
 for path, lang in (('bitrix.html', 'ru'), ('en/bitrix.html', 'en')):
     h = open(path, encoding='utf-8').read()
