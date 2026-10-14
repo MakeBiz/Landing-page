@@ -167,6 +167,16 @@ FAQ = {
  ('Сколько стоит переезд на Битрикс24?',
   'Зависит от объёма базы, числа источников и того, сколько истории переносим. Смету фиксируем в дирхамах после разбора, до начала работ. Стандартная настройка CRM Битрикс24 от 10 000 AED, сопровождение после запуска по пакетам поддержки от 1 250 AED в месяц.'),
 ],
+'bitrix-clinics.html': [
+ ('Можно ли хранить данные пациентов в облачном Битрикс24?',
+  'Медицинские данные в карточках облачного Битрикс24 не ведём. По статье 13 Федерального закона № 2 от 2019 года медицинскую информацию и данные, связанные с медицинскими услугами в ОАЭ, нельзя хранить и обрабатывать за пределами страны, кроме случаев, которые орган здравоохранения определяет по согласованию с министерством, а облачные порталы bitrix24.ae, по данным Bitrix24, размещены во Франкфурте. Поэтому диагнозы, анализы и фото остаются в медицинской системе клиники. Закон не делит данные на административные и медицинские, так что можно ли вести в облаке хотя бы запись и оплаты, решает юрист клиники. Если нельзя или медицинская часть нужна в CRM, ставим коробочный Битрикс24 на сервер в ОАЭ.'),
+ ('Как Битрикс24 помогает справиться с неявками?',
+  'Онлайн-запись Битрикс24 отправляет клиенту в WhatsApp сообщение о записи, просьбу подтвердить визит по ссылке (по умолчанию за день), напоминание в день визита и сообщение, если клиент опаздывает. Неподтверждённые записи подсвечиваются, у администратора появляется дело, и освободившееся время можно отдать клиенту из листа ожидания. Для услуг с повторным циклом роботы напоминают о следующем визите тем, кто согласился на такие сообщения.'),
+ ('Можно ли делать рассылки пациентам в WhatsApp?',
+  'Можно тем, кто дал номер и согласился получать сообщения, а просьбу больше не писать нужно выполнять: так требуют правила WhatsApp. Клиники с лицензией DHA должны писать тексты по стандартам DHA для медицинской рекламы в соцсетях, где WhatsApp тоже считается соцсетью: без слов «лучший», «100%», «без побочных эффектов» и «мгновенный результат», а публикации с упоминанием клиники согласует медицинский директор. Рекламные SMS и рекламные сообщения в приложениях соцсетей постановление Кабмина № 56 от 2024 года (статья 1) относит к телемаркетингу наравне со звонками.'),
+ ('Сколько стоит Битрикс24 для клиники или салона?',
+  'Стандартная настройка CRM Битрикс24 от 10 000 AED, смету фиксируем в дирхамах после разбора, до начала работ. Онлайн-запись в облачном Битрикс24 входит в тариф Professional и выше, лицензия Битрикс24 и сообщения WhatsApp оплачиваются отдельно. Связку с медицинской системой оцениваем после разбора, а после запуска сопровождаем по пакетам поддержки от 1 250 AED в месяц.'),
+],
 }
 
 FAQ_EN = {
@@ -335,5 +345,15 @@ FAQ_EN = {
   'According to Meta documentation, a number connected through the official WhatsApp Business Platform moves to a new provider with no break in messaging: it keeps its display name, quality rating and messaging limit, and templates become usable once they have been copied. Chat history does not move with the number. Whatever the old CRM gives through export or the API goes into client records; the rest stays in the archive.'),
  ('How much does a migration to Bitrix24 cost?',
   'It depends on the size of the database, the number of sources and how much history is moved. The quote is fixed in dirhams after the review, before the work starts. Standard Bitrix24 CRM setup starts from AED 10,000, and after launch the system is maintained under support packages from AED 1,250 a month.'),
+],
+'en/bitrix-clinics.html': [
+ ('Can patient data be stored in the Bitrix24 cloud?',
+  "We do not keep health data in cloud Bitrix24 records. Under Article 13 of UAE Federal Law No. 2 of 2019, health information and data related to health services provided in the UAE may not be stored or processed outside the country except in cases set by the health authority in coordination with the ministry, and according to Bitrix24, bitrix24.ae cloud accounts are hosted in Frankfurt. So diagnoses, test results and photos stay in the clinic's medical system. The law does not split data into admin and clinical, so whether even bookings and payments can be kept in the cloud is for the clinic's lawyer to decide. If not, or if the clinical side is needed in the CRM, we install on-premise Bitrix24 on a server in the UAE."),
+ ('How does Bitrix24 help with no-shows?',
+  'Bitrix24 Booking sends the client WhatsApp messages: the booking details, a request to confirm the visit via a link (one day ahead by default), a reminder on the day and a message if the client is running late. Unconfirmed bookings are highlighted, the receptionist gets an activity, and a freed slot can go to a client on the waitlist. For services with a repeat cycle, automation rules remind clients about the next visit if they agreed to such messages.'),
+ ('Can we send WhatsApp broadcasts to patients?',
+  'Yes, to people who gave you their number and agreed to receive messages, and a request to stop must be honoured: that is what WhatsApp rules require. DHA-licensed clinics must write the texts under the DHA standards for medical advertising on social media, where WhatsApp counts as social media too: no "the best", "100%", "no side effects" or "immediate results", and posts that name the clinic are approved by the medical director. Cabinet Resolution No. 56 of 2024 (Article 1) treats marketing text messages and marketing messages through social media apps as telemarketing, just like calls.'),
+ ('How much does Bitrix24 cost for a clinic or salon?',
+  'Standard Bitrix24 CRM setup starts from AED 10,000, and the quote is fixed in dirhams after the review, before the work starts. In the Bitrix24 cloud, Booking is part of the Professional plan and above; the Bitrix24 licence and WhatsApp messages are paid separately. Integration with the medical system is quoted after the review, and after launch the system is maintained under support packages from AED 1,250 a month.'),
 ],
 }

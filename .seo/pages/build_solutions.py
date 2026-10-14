@@ -85,6 +85,15 @@ PAGES = {
          'We move clients, deals and history from Kommo (amoCRM), HubSpot, Excel and Google Sheets to Bitrix24 without stopping sales: a test run first, then a weekend switch.',
          'Bitrix24 migration from another CRM', 'CRM migration'),
   'offer': False},
+ 'clinics': {
+  'slug': 'bitrix-clinics',
+  'ru': ('Битрикс24 для клиник и салонов красоты в Дубае',
+         'CRM для клиники и салона в Дубае: онлайн-запись к врачам и мастерам, напоминания в WhatsApp, согласия клиентов, медданные по закону ОАЭ. Настройка от 10 000 AED.',
+         'Битрикс24 для клиник и салонов красоты', 'CRM для клиник и салонов'),
+  'en': ('Bitrix24 for clinics and beauty salons in Dubai',
+         'CRM for clinics and salons in Dubai: online booking with doctors and stylists, WhatsApp reminders, client consents, health data under UAE law. Setup from AED 10,000.',
+         'Bitrix24 for clinics and beauty salons', 'Clinic and salon CRM'),
+  'offer': True},
 }
 
 def build(key, lang):
