@@ -93,9 +93,11 @@
     {
       "key": "ai-savings-honestly",
       "cat": "ai",
-      "status": "planned",
+      "status": "used",
       "angle": "Честный счёт: на чём ИИ в продажах экономит, а на чём нет",
-      "query": "ии в продажах экономия"
+      "query": "ии в продажах экономия",
+      "used_slug": "na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net",
+      "used_date": "2026-10-19"
     },
     {
       "key": "crm-access-rights",
