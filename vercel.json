@@ -3,6 +3,39 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "makebiztehnologies.com"
+        }
+      ],
+      "destination": "https://makebiztechnologies.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.makebiztehnologies.com"
+        }
+      ],
+      "destination": "https://makebiztechnologies.com/",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.makebiztechnologies.com"
+        }
+      ],
+      "destination": "https://makebiztechnologies.com/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
