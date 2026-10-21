@@ -147,6 +147,26 @@ app.use((req, res, next) => {
   next();
 });
 
+// Роботы нейросетей: скрипты не выполняют, счётчик их не видит. Пишем заходы в лог приложения
+// и держим последние 500 в памяти, отдаём сводкой на /api/ai-bots (без IP и личных данных)
+const MB_AI_BOTS = /(ChatGPT-User|OAI-SearchBot|GPTBot|Claude-User|Claude-SearchBot|ClaudeBot|Perplexity-User|PerplexityBot|Google-Extended|GoogleOther|Gemini|YandexGPT|YandexAdditional|Applebot-Extended|Amazonbot|meta-externalagent|DuckAssistBot|MistralAI-User|cohere-ai|Bytespider|GigaChat)/i;
+const MB_AI_HITS = [];
+app.use((req, res, next) => {
+  const m = String(req.headers['user-agent'] || '').match(MB_AI_BOTS);
+  if (m) {
+    const hit = { t: new Date().toISOString(), bot: m[1], host: String(req.headers.host || '').toLowerCase(), path: String(req.originalUrl || '').split('?')[0].slice(0, 200) };
+    MB_AI_HITS.push(hit); if (MB_AI_HITS.length > 500) MB_AI_HITS.shift();
+    console.log('[ai-bot] ' + JSON.stringify(hit));
+  }
+  next();
+});
+app.get('/api/ai-bots', (req, res) => {
+  const by = {};
+  for (const h of MB_AI_HITS) by[h.bot] = (by[h.bot] || 0) + 1;
+  res.set('Cache-Control', 'no-store');
+  res.json({ since: MB_AI_HITS[0] ? MB_AI_HITS[0].t : null, total: MB_AI_HITS.length, byBot: by, last: MB_AI_HITS.slice(-100).reverse() });
+});
+
 // www и зеркала -> основной домен
 app.use((req, res, next) => {
   const host = String(req.headers.host || '').toLowerCase().replace(/:\d+$/, '');
