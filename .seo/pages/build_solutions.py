@@ -94,6 +94,15 @@ PAGES = {
          'CRM for clinics and salons in Dubai: online booking with doctors and stylists, WhatsApp reminders, client consents, health data under UAE law. Setup from AED 10,000.',
          'Bitrix24 for clinics and beauty salons', 'Clinic and salon CRM'),
   'offer': True},
+ 'business-setup': {
+  'slug': 'bitrix-business-setup',
+  'ru': ('Битрикс24 для компаний по регистрации бизнеса в ОАЭ',
+         'CRM для компаний по регистрации бизнеса в ОАЭ: долгий цикл продаж, документы клиентов, сроки лицензий и виз, бенефициары и проверка клиентов. Настройка от 10 000 AED.',
+         'Битрикс24 для компаний по регистрации бизнеса и консалтинговых фирм', 'CRM для компаний по регистрации бизнеса'),
+  'en': ('Bitrix24 for business setup firms in the UAE',
+         'CRM for business setup and consulting firms in the UAE: long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC. Setup from AED 10,000.',
+         'Bitrix24 for business setup and consulting firms', 'Business setup CRM'),
+  'offer': True},
 }
 
 def build(key, lang):
@@ -133,7 +142,7 @@ def build(key, lang):
         '<!DOCTYPE html>', '<html lang="%s">' % lang, '<head>', icons,
         '<meta charset="utf-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
         '<meta name="color-scheme" content="dark"><meta name="theme-color" content="#07090D">',
-        '<!--mb-attr--><script src="/mb-attr.js"></script><!--/mb-attr-->',
+        '<!--mb-attr--><script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script>\n<script src="/mb-attr.js"></script><!--/mb-attr-->',
         '<title>%s</title>' % full_title, '<meta name="description" content="%s">' % desc,
         '<link rel="canonical" href="%s">' % url,
         '<link rel="alternate" hreflang="ru" href="%s/%s">' % (SITE, slug),

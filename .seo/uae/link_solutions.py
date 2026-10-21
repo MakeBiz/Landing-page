@@ -20,7 +20,8 @@ T = {
    ('Дистрибуция', 'Дистрибуция и опт', 'Склады и резервы, прайсы в AED и USD, дилеры с лимитами и PDC, закупка через IntDoc', '/bitrix-distribution'),
    ('Учёт', 'Интеграция с учётом', 'Zoho Books, QuickBooks, Odoo и 1С: счёт из сделки, оплаты и долги клиентов в CRM', '/bitrix-accounting'),
    ('Переезд', 'Переезд с другой CRM', 'amoCRM, HubSpot и таблицы: клиенты, сделки и история переезжают без остановки продаж', '/bitrix-migration'),
-   ('Медицина и красота', 'Клиники и салоны', 'Онлайн-запись, напоминания в WhatsApp, согласия клиентов и медданные по закону ОАЭ', '/bitrix-clinics')]),
+   ('Медицина и красота', 'Клиники и салоны', 'Онлайн-запись, напоминания в WhatsApp, согласия клиентов и медданные по закону ОАЭ', '/bitrix-clinics'),
+   ('Корпоративные услуги', 'Регистрация бизнеса и консалтинг', 'Долгий цикл продаж, документы клиентов, сроки лицензий и виз, бенефициары и проверка клиентов', '/bitrix-business-setup')]),
  'en': ('Solutions for the UAE', 'Bitrix24 for the way business runs in Dubai', 'Learn more →', '/en', [
    ('Real estate', 'Real estate agency in Dubai', 'Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED', '/bitrix-real-estate'),
    ('Messaging', 'WhatsApp in Bitrix24', 'One number for the team through the official API, chats in the client record, response-time control', '/bitrix-whatsapp'),
@@ -30,7 +31,8 @@ T = {
    ('Distribution', 'Distribution and wholesale', 'Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc', '/bitrix-distribution'),
    ('Accounting', 'Accounting integration', 'Zoho Books, QuickBooks, Odoo and 1C: invoices from deals, payments and client balances in the CRM', '/bitrix-accounting'),
    ('Migration', 'Moving from another CRM', 'Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales', '/bitrix-migration'),
-   ('Health and beauty', 'Clinics and salons', 'Online booking, WhatsApp reminders, client consents and health data under UAE law', '/bitrix-clinics')]),
+   ('Health and beauty', 'Clinics and salons', 'Online booking, WhatsApp reminders, client consents and health data under UAE law', '/bitrix-clinics'),
+   ('Corporate services', 'Business setup and consulting', 'Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC', '/bitrix-business-setup')]),
 }
 for path, lang in (('bitrix.html', 'ru'), ('en/bitrix.html', 'en')):
     h = open(path, encoding='utf-8').read()

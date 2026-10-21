@@ -177,6 +177,16 @@ FAQ = {
  ('Сколько стоит Битрикс24 для клиники или салона?',
   'Стандартная настройка CRM Битрикс24 от 10 000 AED, смету фиксируем в дирхамах после разбора, до начала работ. Онлайн-запись в облачном Битрикс24 входит в тариф Professional и выше, лицензия Битрикс24 и сообщения WhatsApp оплачиваются отдельно. Связку с медицинской системой оцениваем после разбора, а после запуска сопровождаем по пакетам поддержки от 1 250 AED в месяц.'),
 ],
+'bitrix-business-setup.html': [
+ ('Можно ли вести проверку клиентов (KYC) в Битрикс24?',
+  'В Битрикс24 можно вести всю историю проверки, но клиентов по санкционным спискам он не проверяет, это делают отдельно. В карточке клиента хранятся анкета, копии документов, данные бенефициаров, уровень риска, кто и когда проверял и дата следующей проверки, а сделку нельзя передать в оформление, пока проверка не отмечена пройденной. Компании, которые выступают агентом при создании юрлиц или предоставляют юридический адрес, по статье 3 постановления Кабинета министров № 134 от 2025 года относятся к DNFBP и хранят документы проверки не меньше 5 лет после окончания отношений с клиентом (статья 25). Сообщения о подозрительных операциях в CRM не ведём.'),
+ ('Как не пропустить продление лицензий и виз клиентов?',
+  'Даты окончания лицензии, иммиграционной карты, виз, Emirates ID и аренды офиса заводим в смарт-процесс «Продления», связанный с компанией клиента и её людьми. Заранее, например за 60 и за 30 дней, робот ставит консультанту задачу на продление и отправляет клиенту напоминание в WhatsApp, если клиент согласился на такие сообщения. Для новой компании CRM считает и срок подачи заявки на регистрацию по корпоративному налогу: 3 месяца с даты создания по решению FTA № 3 от 2024 года, за опоздание штраф 10 000 AED.'),
+ ('Как собирать документы клиентов без переписки в WhatsApp и почте?',
+  'Клиент загружает паспорт, фото и другие документы через CRM-форму с полями для файлов, и они сразу попадают в карточку. Нужные поля делаем обязательными на стадии, поэтому без документов сделку не передать в оформление. Поля с паспортными данными видят только выбранные сотрудники и отделы. Облачные порталы bitrix24.ae, по данным Bitrix24, размещены во Франкфурте, а если документы нужно хранить в ОАЭ, ставим коробочный Битрикс24 на ваш сервер в ОАЭ.'),
+ ('Сколько стоит Битрикс24 для компании по регистрации бизнеса?',
+  'Стандартная настройка CRM Битрикс24 от 10 000 AED, смету фиксируем в дирхамах после разбора, до начала работ. Лицензия Битрикс24 и платные сторонние сервисы, например отправка сообщений WhatsApp, оплачиваются отдельно, как и перенос данных из старых систем и сложные интеграции. После запуска сопровождаем по пакетам поддержки от 1 250 AED в месяц.'),
+],
 }
 
 FAQ_EN = {
@@ -355,5 +365,15 @@ FAQ_EN = {
   'Yes, to people who gave you their number and agreed to receive messages, and a request to stop must be honoured: that is what WhatsApp rules require. DHA-licensed clinics must write the texts under the DHA standards for medical advertising on social media, where WhatsApp counts as social media too: no "the best", "100%", "no side effects" or "immediate results", and posts that name the clinic are approved by the medical director. Cabinet Resolution No. 56 of 2024 (Article 1) treats marketing text messages and marketing messages through social media apps as telemarketing, just like calls.'),
  ('How much does Bitrix24 cost for a clinic or salon?',
   'Standard Bitrix24 CRM setup starts from AED 10,000, and the quote is fixed in dirhams after the review, before the work starts. In the Bitrix24 cloud, Booking is part of the Professional plan and above; the Bitrix24 licence and WhatsApp messages are paid separately. Integration with the medical system is quoted after the review, and after launch the system is maintained under support packages from AED 1,250 a month.'),
+],
+'en/bitrix-business-setup.html': [
+ ('Can client due diligence (KYC) be run in Bitrix24?',
+  'Bitrix24 can hold the whole history of the check, but it does not screen clients against sanctions lists; that is done separately. The client record holds the questionnaire, document copies, beneficial owner data, the risk level, who checked the client and when, and the date of the next review, and the deal cannot be handed over for formation until the check is marked as passed. Firms that act as an agent in setting up legal persons or provide a registered office count as DNFBPs under Article 3 of Cabinet Resolution No. 134 of 2025 and keep due diligence records for at least 5 years after the relationship ends (Article 25). We do not keep suspicious transaction reports in the CRM.'),
+ ('How do we avoid missing client licence and visa renewals?',
+  'Expiry dates for the licence, establishment card, visas, Emirates IDs and office lease go into a Renewals smart process linked to the client company and its people. Ahead of time, for example 60 and 30 days before, an automation rule gives the consultant a renewal task and sends the client a WhatsApp reminder if they have agreed to such messages. For a new company the CRM also tracks the deadline to apply for corporate tax registration: 3 months from incorporation under FTA Decision No. 3 of 2024, with an AED 10,000 penalty for late registration.'),
+ ('How can we collect client documents without WhatsApp and email threads?',
+  'The client uploads their passport, photo and other documents through a CRM form with file fields, and the files land in the record straight away. The key fields are required by stage, so a deal cannot be handed over for formation without the documents. Fields with passport data are visible only to selected employees and departments. According to Bitrix24, bitrix24.ae cloud accounts are hosted in Frankfurt; if documents must stay in the UAE, we install on-premise Bitrix24 on your server in the UAE.'),
+ ('How much does Bitrix24 cost for a business setup firm?',
+  'Standard Bitrix24 CRM setup starts from AED 10,000, and the quote is fixed in dirhams after the review, before the work starts. The Bitrix24 licence and paid third-party services such as WhatsApp messaging are paid separately, as are data migration from old systems and complex integrations. After launch the system is maintained under support packages from AED 1,250 a month.'),
 ],
 }
