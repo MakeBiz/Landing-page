@@ -102,16 +102,20 @@
     {
       "key": "crm-access-rights",
       "cat": "crm",
-      "status": "planned",
+      "status": "used",
       "angle": "Права доступа в CRM: кто что видит и почему в ОАЭ это не формальность",
-      "query": "права доступа битрикс24"
+      "query": "права доступа битрикс24",
+      "used_slug": "prava-dostupa-v-crm-kto-chto-vidit",
+      "used_date": "2026-10-22"
     },
     {
       "key": "whatsapp-agent",
       "cat": "agents",
-      "status": "planned",
+      "status": "used",
       "angle": "ИИ-агент в WhatsApp: как устроена работа с входящими заявками",
-      "query": "чат бот whatsapp для бизнеса"
+      "query": "чат бот whatsapp для бизнеса",
+      "used_slug": "ai-agent-v-whatsapp-vhodyashchie-zayavki",
+      "used_date": "2026-10-23"
     },
     {
       "key": "bi-dashboards-sales",
@@ -119,6 +123,34 @@
       "status": "planned",
       "angle": "Какие три дашборда реально смотрит руководитель отдела продаж",
       "query": "bi аналитика продаж"
+    },
+    {
+      "key": "crm-server-or-cloud",
+      "cat": "it",
+      "status": "planned",
+      "angle": "Облако или свой сервер под CRM: что выбирают компании в ОАЭ и почему",
+      "query": "битрикс24 облако или коробка"
+    },
+    {
+      "key": "crm-timeline",
+      "cat": "biz",
+      "status": "planned",
+      "angle": "Сколько длится внедрение CRM и от чего реально зависит срок",
+      "query": "сроки внедрения crm"
+    },
+    {
+      "key": "telephony-before-crm",
+      "cat": "crm",
+      "status": "planned",
+      "angle": "Телефония в ОАЭ: что выяснить до подключения номера к CRM",
+      "query": "ip телефония оаэ для crm"
+    },
+    {
+      "key": "ai-vendor-questions",
+      "cat": "ai",
+      "status": "planned",
+      "angle": "Какие семь вопросов задать подрядчику по ИИ до подписания договора",
+      "query": "как выбрать подрядчика по внедрению ии"
     }
   ]
 }
