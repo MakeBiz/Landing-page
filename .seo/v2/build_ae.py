@@ -101,6 +101,7 @@ def header(active):
   </div>
 </header>'''
 
+from landings_ae_list import LANDINGS_AE
 def footer():
     return f'''<footer class="ftr">
   <div class="wrap ftr-grid">
@@ -113,6 +114,7 @@ def footer():
     <div><div class="ftr-t">ИИ-агенты</div><a href="{U('/ai-agents')}">Внедрение ИИ-агентов</a><a href="{U('/ai-agents/rop')}">ИИ-РОП</a><a href="{U('/ai-agents/zvonki')}">Речевая аналитика</a><a href="{U('/ai-agents/hr')}">HR-агент</a><a href="{U('/ai-agents/marketing')}">Маркетолог</a></div>
     <div><div class="ftr-t">Компания</div><a href="{U('/o-kompanii')}">О компании</a><a href="{U('/ceny')}">Цены</a><a href="{U('/keysy')}">Кейсы</a><a href="{U('/vps')}">Серверы и VPS</a><a href="{U('/news')}">Новости</a><a href="{U('/partners')}">Партнёрам</a><a href="https://t.me/makebizchannel">Telegram-канал</a><a href="{U('/contacts')}">Контакты</a><a href="{BASE}/en">English version</a></div>
   </div>
+  <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">Под задачу</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,t,_,_,_ in LANDINGS_AE)}</div>
   <div class="wrap ftr-legal">
     <span>{LEGAL}</span>
     <span><a href="/privacy">Политика конфиденциальности</a> · <a href="/terms">Пользовательское соглашение</a> · © 2026 MakeBiz</span>
@@ -540,6 +542,8 @@ SOL = solutions('ru')
 if SOL:
     bx_body += section('Решения для ОАЭ', 'Битрикс24 под задачи бизнеса в Дубае: отрасли, налоги, звонки, переезд', '<div class="grid g3 links">' + ''.join(
         f'<a class="lcard tilt" href="{U(u)}"><small>{esc(e)}</small><b>{esc(t)}</b><span>{esc(d)}</span></a>' for e, t, d, u in SOL) + '</div>', id_='solutions')
+bx_body += section('Под задачу и отрасль', 'Отдельные страницы с составом работ и ценами в AED', '<div class="grid g3 links">' + ''.join(
+    f'<a class="lcard tilt" href="{U(p)}"><b>{esc(t)}</b><span>{esc(s_)}</span></a>' for p, t, s_, _, _ in LANDINGS_AE) + '</div>')
 bx_body += section('Кейсы', '', case_cards(['cdek-b2b', 'unilin-crm', 'performia-crm']), tone='tint')
 bx_body += contract_block() + faq(bx_faq) + form_block('bitrix', 'Обсудим внедрение Битрикс24') + crosslink('ai')
 built.append(page('/bitrix', 'bitrix', 'Официальный партнёр Битрикс24 в Дубае: внедрение под ключ | MakeBiz',
@@ -1333,6 +1337,8 @@ ct_body = f'''<section class="hero hero-small"><div class="wrap"><div class="eye
 built.append(page('/contacts', 'contacts', 'Контакты MakeBiz Technologies: WhatsApp, телефон, Telegram',
     f'Контакты MakeBiz Technologies в Дубае: WhatsApp и телефон {PHONE}, Telegram @{TG}, почта {EMAIL}. Битрикс24 и ИИ-агенты.',
     'contacts', ct_body, [{"@type": "ContactPage", "url": SITE + "/contacts"}], [('/', 'Главная'), ('/contacts', 'Контакты')], ct_faq))
+
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landings_ae.py'), encoding='utf-8').read())
 
 # обвязка для журнала и новостей (server.js оборачивает их в новый дизайн)
 os.makedirs(os.path.join(OUT, '_chrome'), exist_ok=True)

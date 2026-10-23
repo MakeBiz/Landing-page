@@ -29,6 +29,16 @@ Key facts:
 - [Call speech analytics](https://makebiztechnologies.com/en/ai-agents/zvonki): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes
 - [HR agent](https://makebiztechnologies.com/en/ai-agents/hr), [procurement agent](https://makebiztechnologies.com/en/ai-agents/zakupki), [marketing agent](https://makebiztechnologies.com/en/ai-agents/marketing), [finance agent](https://makebiztechnologies.com/en/ai-agents/finansy), [liaison agent](https://makebiztechnologies.com/en/ai-agents/svyaznoy)
 
+## Bitrix24 by task and industry
+
+- [Bitrix24 vs HubSpot](https://makebiztechnologies.com/en/bitrix-vs-hubspot): Comparison for a UAE company
+- [Bitrix24 audit](https://makebiztechnologies.com/en/bitrix-audit): Portal review and fix plan
+- [Team training](https://makebiztechnologies.com/en/bitrix-training): Bitrix24 by role, EN and RU
+- [CRM for car rental](https://makebiztechnologies.com/en/bitrix-car-rental): Bookings, deposits, WhatsApp
+- [CRM for logistics](https://makebiztechnologies.com/en/bitrix-logistics): Quotes, shipments, B2B clients
+- [CRM for training centres](https://makebiztechnologies.com/en/bitrix-education): Enrolment, payments, groups
+- [CRM for recruitment](https://makebiztechnologies.com/en/bitrix-recruitment): Candidates, jobs, clients
+
 ## Bitrix24 solutions for the UAE
 
 - [Real estate agency in Dubai](https://makebiztechnologies.com/en/bitrix-real-estate): Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED

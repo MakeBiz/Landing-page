@@ -94,6 +94,7 @@ def header(active):
   </div>
 </header>'''
 
+from landings_ae_list import LANDINGS_AE
 def footer():
     return f'''<footer class="ftr">
   <div class="wrap ftr-grid">
@@ -106,6 +107,7 @@ def footer():
     <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI sales head</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
     <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
   </div>
+  <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">By task and industry</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,_,_,t,_ in LANDINGS_AE)}</div>
   <div class="wrap ftr-legal">
     <span>{LEGAL}</span>
     <span><a href="/en/privacy">Privacy policy</a> · <a href="/en/terms">Terms of use</a> · © 2026 MakeBiz</span>
@@ -512,6 +514,8 @@ SOL = solutions('en')
 if SOL:
     bx_body += section('Solutions for the UAE', 'Bitrix24 for the way business runs in Dubai: industries, tax, calls, migration', '<div class="grid g3 links">' + ''.join(
         f'<a class="lcard tilt" href="{U(u)}"><small>{esc(e)}</small><b>{esc(t)}</b><span>{esc(d)}</span></a>' for e, t, d, u in SOL) + '</div>', id_='solutions')
+bx_body += section('By task and industry', 'Dedicated pages with scope and prices in AED', '<div class="grid g3 links">' + ''.join(
+    f'<a class="lcard tilt" href="{U(p)}"><b>{esc(t)}</b><span>{esc(s_)}</span></a>' for p, _, _, t, s_ in LANDINGS_AE) + '</div>')
 bx_body += section('Cases', '', case_cards(['cdek-b2b', 'unilin-crm', 'performia-crm']), tone='tint')
 bx_body += contract_block() + faq(bx_faq) + form_block('bitrix', 'Let us discuss Bitrix24 implementation') + crosslink('ai')
 page('/bitrix', 'bitrix', 'Official Bitrix24 partner in Dubai: implementation | MakeBiz',
@@ -1234,6 +1238,8 @@ ct_body = f'''<section class="hero hero-small"><div class="wrap"><div class="eye
 page('/contacts', 'contacts', 'MakeBiz Technologies contacts: WhatsApp, phone, Telegram',
     f'MakeBiz Technologies contacts in Dubai: WhatsApp and phone {PHONE}, Telegram @{TG}, email {EMAIL}. Bitrix24 and AI agents.',
     'contacts', ct_body, [{"@type": "ContactPage", "url": SITE + en_path("/contacts")}], [('/', 'Home'), ('/contacts', 'Contacts')], ct_faq)
+
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landings_ae_en.py'), encoding='utf-8').read())
 
 # ---------- chrome for the English blog (/en/news), the server wraps it like the Russian journal
 CH = os.path.join(ROOT, os.environ.get('MB_OUT', '.'), '_chrome')

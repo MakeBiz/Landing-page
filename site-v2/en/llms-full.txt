@@ -177,6 +177,9 @@ Support Hour packages, administration WhatsApp and messengers WhatsApp, Telegram
 ## Solutions for the UAE
 Bitrix24 for the way business runs in Dubai: industries, tax, calls, migration
 Real estate Real estate agency in Dubai Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED Tax VAT, dirhams and e-invoicing 5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027 Calls Telephony in the UAE Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls Choosing a CRM Bitrix24 or Zoho CRM An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting Distribution Distribution and wholesale Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc Migration Moving from another CRM Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales Health and beauty Clinics and salons Online booking, WhatsApp reminders, client consents and health data under UAE law Corporate services Business setup and consulting Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC
+## By task and industry
+Dedicated pages with scope and prices in AED
+Bitrix24 vs HubSpot Comparison for a UAE company Bitrix24 audit Portal review and fix plan Team training Bitrix24 by role, EN and RU CRM for car rental Bookings, deposits, WhatsApp CRM for logistics Quotes, shipments, B2B clients CRM for training centres Enrolment, payments, groups CRM for recruitment Candidates, jobs, clients
 ## Cases
 CDEK
 5 AI agents at work
@@ -2038,3 +2041,647 @@ Phone and WhatsApp +971 50 262 0927, Telegram @Anton_MakeBiz, email info@makebiz
 In Dubai by arrangement or by video call. We work with companies across all Emirates.
 **How fast do you reply?**
 During business hours within an hour on WhatsApp and Telegram, to a website request within a business day.
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-vs-hubspot
+Title: Bitrix24 vs HubSpot for a UAE company | MakeBiz
+
+CRM comparison · UAE
+# Bitrix24 vs HubSpot
+Both are good systems. The difference is the pricing model, what is included and how many extra tools you end up buying around the CRM
+The main difference for a UAE company: Bitrix24 is priced per company (Standard for up to 50 users is AED 364 a month billed annually, bitrix24.ae price), while HubSpot Sales Hub is priced per seat (Professional from $90 per seat a month plus a required $1,500 onboarding, hubspot.com prices as of October 23, 2026). The bigger the team, the bigger the gap. MakeBiz Technologies implements Bitrix24, setup from AED 10,000.
+## When to choose which
+Honestly, each system has its strength
+### Bitrix24 fits
+A team of 10 or more, you need tasks, documents, telephony and chats in one system, a predictable company-wide price and an on-premise option
+### HubSpot fits
+Marketing and content come first, the sales team is small, you rely on English-language marketing integrations and per-seat pricing is not a concern
+## Side by side
+Vendor data as of October 23, 2026. Features depend on the plan
+| Point | Bitrix24 | HubSpot Sales Hub
+| Pricing model | per company, plan by number of users | per seat
+| Example price | Standard up to 50 users: AED 364 a month billed annually | Professional: from $90 per seat a month
+| Required onboarding | none | $1,500 (Professional), $3,500 (Enterprise)
+| Tasks, documents, chats | in one system | focus on CRM and marketing
+| On-premise version | yes, from AED 13,184 a year | no, cloud only
+| WhatsApp | via connectors, our setup AED 500 | via integrations
+Bitrix24: bitrix24.ae, HubSpot: hubspot.com/pricing/sales, checked October 23, 2026. USD/AED 3.6725
+### We will calculate the total cost for your team
+Tell us the number of users and the features you need, we compare both systems over three years in AED
+Get the comparison
+## Example for 25 sales reps
+Illustrative figures from vendor price lists as of October 23, 2026. Rate 3.6725
+Bitrix24 Standard covers up to 50 users: AED 364 a month billed annually, about AED 4,370 a year for the whole company. HubSpot Sales Hub Professional: from $90 per seat a month, for 25 seats that is from $2,250 a month, about AED 8,260, plus a one-time $1,500 onboarding. Our Bitrix24 setup starts at AED 10,000. We will run the exact comparison for your team on a call
+## How we move you off HubSpot
+- 1
+### Export
+Companies, contacts, deals and history from HubSpot
+- 2
+### Field mapping
+We map fields and stages and leave clutter behind
+- 3
+### Migration and check
+We migrate and reconcile counts and amounts
+- 4
+### Training
+We switch the team over and stay on support for the first weeks
+## More on switching
+The migration steps are on the switching to Bitrix24 page. For another popular CRM, see Bitrix24 vs Zoho . License prices in AED with the check date are on the Bitrix24 pricing page
+## Cases
+Real MakeBiz projects
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+Unilin
+4 BI analytics views
+### Bitrix24 for field managers and market analytics
+Before field managers and regions outside a single system
+After the whole region in CRM from a phone, analytics on every cut
+Manufacturing and wholesale · Sales and B2B · Bitrix24 and CRM · BI and analytics
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**Which is cheaper for a UAE company, Bitrix24 or HubSpot?**
+For a team of 10 or more it is usually Bitrix24: it is priced per company, while HubSpot charges per seat plus a required onboarding on Professional and Enterprise. For a small marketing team the gap is smaller.
+**Can you move data from HubSpot to Bitrix24?**
+Yes: companies, contacts, deals and history. We estimate scope after the export, the work is AED 200 per hour.
+**Does Bitrix24 support 5% VAT invoices?**
+Yes, products with tax and the invoice template are part of the standard setup. For accounting we connect your accounting system.
+**Who helps with the license?**
+We are an official Bitrix24 partner in the UAE: we pick the plan and handle the purchase.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-audit
+Title: Bitrix24 portal audit in Dubai and the UAE | MakeBiz
+
+Bitrix24 · portal audit
+# Bitrix24 portal audit
+We find out why the CRM does not work as intended: where leads get lost, who sees what they should not and which reports are wrong
+MakeBiz Technologies, an official Bitrix24 partner in the UAE, audits live portals: permissions, pipelines and fields, automation rules, WhatsApp and telephony, reports. The first 30-60 minute review is free, an in-depth audit is AED 200 per hour, and fixes can run inside a support package from AED 1,250 a month. Prices as of October 23, 2026.
+## What we check
+### Permissions
+Who sees the client base, who can export or delete. More in our news on CRM access rights
+### Pipelines and fields
+Do the stages match the real customer path, are there dead fields
+### Lead sources
+WhatsApp, website, calls: do they all land in the CRM with a source
+### Automation
+What fires, what broke long ago or runs twice
+### Invoices and VAT
+Templates, products, tax, the link to accounting
+### Reports
+Do reports count what management thinks they count
+## What the audit costs
+You pay for hours, not a template
+| Format | Price | Terms
+| First portal review | free | 30-60 minutes on a video call
+| In-depth audit | AED 200 per hour | scope named after the review
+| Fixes in a support package | from AED 1,250 | a month, 5 hours; 10 hours AED 2,300, 20 hours AED 4,200
+| Hour beyond the package | AED 250 | as used
+Prices as of October 23, 2026, excluding VAT. Packages in detail on the support page
+### We will find where your portal loses leads
+Free 30-60 minute review, no data access needed at the first step
+Book a review
+## How the audit works
+- 1
+### Free review
+30-60 minutes on a video call, we spot the main issues
+- 2
+### Access and checks
+A separate user account, we review settings and data
+- 3
+### Report
+Issues by priority, what to fix and how many hours
+- 4
+### Fixes
+On your own or with us, by the hour or in a support package
+## Signs it is time for an audit
+### Reps work outside the CRM
+Deals live in spreadsheets and personal WhatsApp
+### Management does not trust reports
+CRM numbers do not match accounting
+### Your admin has left
+Nobody knows how or why the automation was set up
+### Before the team grows
+New hires will inherit today’s mistakes
+## Cases
+Real MakeBiz projects
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+Unilin
+4 BI analytics views
+### Bitrix24 for field managers and market analytics
+Before field managers and regions outside a single system
+After the whole region in CRM from a phone, analytics on every cut
+Manufacturing and wholesale · Sales and B2B · Bitrix24 and CRM · BI and analytics
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**How much does a Bitrix24 audit cost?**
+The first review is free. An in-depth audit is AED 200 per hour, scope named after the review. Fixes can run inside a support package from AED 1,250 a month.
+**Do you need access to the portal?**
+Not for the first review, screen sharing is enough. For the in-depth audit we use a separate account and remove access afterwards.
+**Can you audit a portal set up by another partner?**
+Yes, that is common. We do not rebuild from scratch, we fix what gets in the way.
+**What do we get?**
+A prioritised list of issues, how to fix each one, and an estimate in hours and AED.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-training
+Title: Bitrix24 team training in Dubai, EN and RU | MakeBiz
+
+Bitrix24 · training
+# Bitrix24 team training
+We train on your portal and your deals, in English or Russian, with separate sessions for reps, managers and the admin
+MakeBiz Technologies trains UAE teams to work in Bitrix24 online or in Dubai: deals, WhatsApp and tasks for reps, reports and control for managers, permissions and automation for the admin. Training is AED 200 per hour or part of a support package from AED 1,250 a month, and intro training is included in the standard setup from AED 10,000.
+## Who we train and on what
+### Sales reps
+Deals, tasks, WhatsApp and calls from the CRM, VAT invoices from the record
+### Managers
+Pipeline, reports, targets, running a weekly meeting from the CRM
+### Admin
+Users and permissions, fields, stages, automation
+### New hires
+A short onboarding course with recorded sessions
+## What training costs
+You pay for hours
+| Format | Price | Terms
+| Intro training at launch | included | in the standard setup from AED 10,000
+| Corporate training | AED 200 per hour | programme by role, EN or RU
+| Training in a support package | from AED 1,250 | a month, 5 hours for training and improvements
+Prices as of October 23, 2026, excluding VAT
+### We will build a programme for your team
+Team size, roles and languages, and we propose a programme and count the hours
+Get a programme
+## How training works
+- 1
+### Review
+We look at the portal and where the team slips
+- 2
+### Programme
+Sessions by role and language
+- 3
+### Sessions
+Online or in Dubai, on your portal
+- 4
+### Follow-up
+Two weeks later we check the work and close gaps
+## Why mixed teams learn separately
+Many Dubai teams work in several languages. Training everyone together means half the room listens to a translation. We split groups by role and language and give a CRM working guide in English and Russian. Role-based access is covered in our news on who sees what in the CRM
+## Cases
+Real MakeBiz projects
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+Unilin
+4 BI analytics views
+### Bitrix24 for field managers and market analytics
+Before field managers and regions outside a single system
+After the whole region in CRM from a phone, analytics on every cut
+Manufacturing and wholesale · Sales and B2B · Bitrix24 and CRM · BI and analytics
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**How much does Bitrix24 training cost in the UAE?**
+Corporate training is AED 200 per hour or part of a support package from AED 1,250 a month. Intro training is included in the standard setup.
+**What language are sessions in?**
+English or Russian, groups are split by language.
+**Can you train in our Dubai office?**
+Yes, we meet in Dubai or run sessions online.
+**Will you train our admin?**
+Yes: permissions, fields, stages and automation. Complex changes stay with us in the support package.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-car-rental
+Title: CRM for a car rental company in Dubai | MakeBiz
+
+CRM · car rental
+# CRM for car rental
+Leads from WhatsApp and the website, bookings by date, deposits, handover and return in one system instead of reps’ chats
+MakeBiz Technologies sets up CRM for car rental companies in Dubai on Bitrix24: leads from WhatsApp, the website and aggregators, bookings by date and car class, deposit and payment, handover and return with photos, repeat rentals. Standard setup from AED 10,000, WhatsApp connection AED 500, rental-specific work AED 200 per hour. Prices as of October 23, 2026.
+## What we set up for rental
+### One lead pipeline
+WhatsApp, website, calls and aggregators with source and owner
+### Bookings by date
+Car class, dates, pick-up point, reminders to the client
+### Deposit and payment
+Payment stages, invoice with 5% VAT, deposit refund
+### Handover and return
+Checklist and photos in the record, fines and extra charges
+### Repeat clients
+Rental history and an offer for the next visit
+### Reports
+Utilisation, revenue by car class and lead source
+## What a rental CRM costs
+Our work, the Bitrix24 license is separate
+| Work | Price | Terms
+| Bookings, deposits, handover and return | AED 200 per hour | scope after the survey, estimate before start
+| Standard CRM setup | from AED 10,000 | up to 20 users, launch from 14 days
+| Work beyond the standard | AED 200 per hour | estimate in AED fixed before start
+| WhatsApp or another messenger | AED 500 | provider subscription separate
+| Support after launch | from AED 1,250 | a month, 5-hour package
+| Bitrix24 license | from AED 180 | a month, cloud Basic billed annually, bitrix24.ae price
+Prices as of October 23, 2026, excluding VAT. All prices on the pricing page
+### We will show a rental pipeline in a demo
+Fleet size and lead sources, we show how it looks in the CRM and give a price
+Book a demo
+## Where rental companies lose money
+### Slow WhatsApp replies
+The client messages three companies and books with whoever answers first
+### Bookings in a chat
+Two bookings for one car and an awkward call
+### Deposits in a spreadsheet
+Nobody sees what to refund and what to hold
+### No repeat sales
+The tourist left, the resident is forgotten
+## Answer first on WhatsApp
+If lead volume is high, an AI agent (from AED 5,000) can send the first reply and confirm dates, and the rep takes over a ready lead. How it works is in our news on an AI agent on WhatsApp . Channel setup is on the WhatsApp in Bitrix24 page
+## Cases
+Real MakeBiz projects
+Apartico
+1,000+ properties in one CRM
+### property rental across Russia in one CRM
+Before listings, portals and enquiries handled by hand and apart
+After posting, enquiries, bookings and analytics in one CRM
+Real estate · Services · Bitrix24 and CRM · AI agents · BI and analytics
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**Does Bitrix24 work for car rental?**
+Yes. Leads, bookings, payments and returns are set up as a pipeline and separate processes with car and date fields.
+**How much does a rental CRM cost in Dubai?**
+Standard setup from AED 10,000, WhatsApp AED 500, rental-specific work AED 200 per hour after a survey. The Bitrix24 license is separate, from AED 180 a month.
+**Can deposits be tracked in the CRM?**
+Yes, as a separate stage and fields in the deal, with a refund reminder.
+**Can you connect several WhatsApp numbers?**
+Yes, each number is connected to the CRM and the chat stays in the client record.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-logistics
+Title: CRM for a logistics company in the UAE | MakeBiz
+
+CRM · logistics
+# CRM for a logistics company
+Rate requests, quotes, shipments and corporate clients in one system instead of email threads and spreadsheets
+MakeBiz Technologies implements CRM for logistics and freight forwarding companies in the UAE on Bitrix24: rate requests from email and WhatsApp, quotes from a template, shipments by stage, contracts with B2B clients and a link to your accounting system. Standard setup from AED 10,000, integration with Zoho Books, QuickBooks or Odoo from AED 10,000. Our cases include CDEK: corporate B2B on Bitrix24.
+## What we set up for logistics
+### Rate requests
+Emails and messages become a request with route and cargo
+### Quotes from a template
+Rate, terms and timing from the record, in English and Russian
+### Shipments by stage
+A separate shipment process with statuses and owners
+### Corporate clients
+Contracts, several contacts, shipment history
+### Accounting link
+VAT invoices and payments, see accounting integrations
+### Reports
+Request to shipment conversion, margin by client
+## What a logistics CRM costs
+Our work, the Bitrix24 license is separate
+| Work | Price | Terms
+| Standard CRM setup | from AED 10,000 | up to 20 users, launch from 14 days
+| Work beyond the standard | AED 200 per hour | estimate in AED fixed before start
+| Accounting integration | from AED 10,000 | Zoho Books, QuickBooks, Odoo
+| BI analytics | from AED 1,000 | after the list of metrics
+| Support after launch | from AED 1,250 | a month, 5-hour package
+| Bitrix24 license | from AED 180 | a month, cloud Basic billed annually, bitrix24.ae price
+Prices as of October 23, 2026, excluding VAT. All prices on the pricing page
+### We will map the path from request to shipment
+Tell us how rate requests and shipments run today, we return a CRM map and an estimate in AED
+Get a map
+## Where logistics loses money
+### Unanswered rate request
+The client waits a day for a quote and goes to whoever replied in an hour
+### Rates buried in email
+Nobody knows what price the client got last time
+### Shipment without an owner
+The client hears about a delay before the rep does
+### No view of margin
+Revenue is there, profitable clients are not visible
+## More
+How to link sales and money is on the CRM for trading and distribution page. A single view of clients and margin comes from BI analytics from AED 1,000. What calls reveal that never reaches the CRM is in our news on calls and the CRM record
+## Cases
+Real MakeBiz projects
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+Unilin
+4 BI analytics views
+### Bitrix24 for field managers and market analytics
+Before field managers and regions outside a single system
+After the whole region in CRM from a phone, analytics on every cut
+Manufacturing and wholesale · Sales and B2B · Bitrix24 and CRM · BI and analytics
+HAVAL
+300,000+ call minutes a month
+### speech analytics for a dealer network
+Before hundreds of thousands of call minutes went unchecked
+After 40+ criteria on every call and escalation on risk
+Automotive · Sales and B2B · BI and analytics · AI agents
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**Does Bitrix24 work for a logistics company?**
+Yes. Requests and quotes run in the sales pipeline, shipments in a separate process with their own statuses, and invoices and payments come from accounting.
+**How much does a logistics CRM cost in the UAE?**
+Standard setup from AED 10,000, accounting integration from AED 10,000, BI from AED 1,000. The exact estimate is fixed after a survey.
+**Can rate requests come from email?**
+Yes, the mailbox is connected to the CRM and an email creates a request with an owner.
+**Do you work with our TMS or WMS?**
+If the system has an API, we scope the data exchange in the survey at AED 200 per hour.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-education
+Title: CRM for a training centre or school in the UAE | MakeBiz
+
+CRM · education
+# CRM for a training centre
+Enquiries, trial lessons, payments and groups in one system: the admin sees whom to call back, the owner sees enrolment and money
+MakeBiz Technologies sets up CRM for training centres, courses and private schools in the UAE on Bitrix24: enquiries from WhatsApp and the website, booking a trial lesson, contract and instalment payments, groups and timetable, course renewals. Standard setup from AED 10,000, WhatsApp AED 500. Our cases include Performia: sales, training and finance in one system.
+## What we set up for education
+### Enrolment
+Enquiries from WhatsApp, the website and social media with a source
+### Trial lesson
+Booking, reminder, attendance mark
+### Contract and payment
+Instalments, payment reminders, VAT invoice
+### Groups
+Group lists and timetable as a separate process
+### Renewals
+Automation reminds about the course end and offers the next one
+### Reports
+Enrolment by source, trial to contract conversion, revenue
+## What a school CRM costs
+Our work, the Bitrix24 license is separate
+| Work | Price | Terms
+| Groups, timetable, instalments | AED 200 per hour | scope after the survey, estimate before start
+| Standard CRM setup | from AED 10,000 | up to 20 users, launch from 14 days
+| Work beyond the standard | AED 200 per hour | estimate in AED fixed before start
+| WhatsApp or another messenger | AED 500 | provider subscription separate
+| BI analytics | from AED 1,000 | after the list of metrics
+| Support after launch | from AED 1,250 | a month, 5-hour package
+| Bitrix24 license | from AED 180 | a month, cloud Basic billed annually, bitrix24.ae price
+Prices as of October 23, 2026, excluding VAT. All prices on the pricing page
+### We will show an enrolment pipeline in a demo
+Number of students and courses, we show how it looks and give a price
+Book a demo
+## Where schools lose students
+### Enquiry without a call
+A parent left a number in the evening, by morning it is forgotten
+### Trial without a next step
+They came, liked it, nobody offered a contract
+### Payments in a spreadsheet
+Arrears show up only at month end
+### No renewals
+The course ended and the student moved to a competitor
+## More
+Evening and weekend replies to parents on WhatsApp can come from an AI agent , and the admin gets ready bookings in the morning. Channel setup is on the WhatsApp in Bitrix24 page. See how a training and finance project works in the Performia case
+## Cases
+Real MakeBiz projects
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+Apartico
+1,000+ properties in one CRM
+### property rental across Russia in one CRM
+Before listings, portals and enquiries handled by hand and apart
+After posting, enquiries, bookings and analytics in one CRM
+Real estate · Services · Bitrix24 and CRM · AI agents · BI and analytics
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**Does Bitrix24 work for a training centre?**
+Yes. Enrolment runs in a pipeline, groups and timetable in a separate process, instalments with their own stages and reminders.
+**How much does a school CRM cost in the UAE?**
+Standard setup from AED 10,000, WhatsApp AED 500, custom work AED 200 per hour after a survey. The Bitrix24 license is separate.
+**Can payment reminders be automatic?**
+Yes, automation messages the parent or sets a task for the admin before the due date.
+**Do you have an example project?**
+Yes, the Performia case: sales, training, finance and end-to-end analytics in one system.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/bitrix-recruitment
+Title: CRM for a recruitment agency in the UAE | MakeBiz
+
+CRM · recruitment
+# CRM for a recruitment agency
+Clients, jobs and candidates are linked: recruiters see the selection stage, the owner sees filled positions and revenue
+MakeBiz Technologies sets up CRM for recruitment agencies and in-house HR teams in the UAE on Bitrix24: clients and contracts, jobs as a separate process, candidates by selection stage, interviews and offers, invoices to clients. Standard setup from AED 10,000, and an HR agent from AED 5,000 can run first-round screening. Prices as of October 23, 2026.
+## What we set up for recruitment
+### Clients and contracts
+Hiring companies, terms, contacts
+### Jobs
+A separate process with statuses from open to filled
+### Candidates
+Selection stages, CV, interviews, offer
+### Job to candidate link
+Every job shows all candidates and their stage
+### Client invoices
+A VAT invoice when a position is filled
+### Reports
+Time to fill, stage conversion, revenue by client
+## What a recruitment CRM costs
+Our work, the Bitrix24 license is separate
+| Work | Price | Terms
+| Jobs and candidates, links and stages | AED 200 per hour | scope after the survey
+| HR agent for screening | from AED 5,000 | maintenance 10% of the cost a month
+| Standard CRM setup | from AED 10,000 | up to 20 users, launch from 14 days
+| Work beyond the standard | AED 200 per hour | estimate in AED fixed before start
+| Support after launch | from AED 1,250 | a month, 5-hour package
+| Bitrix24 license | from AED 180 | a month, cloud Basic billed annually, bitrix24.ae price
+Prices as of October 23, 2026, excluding VAT. All prices on the pricing page
+### We will show the HR agent on your jobs
+A free 30-40 minute demo, then we price the CRM and the agent in AED
+Book a demo
+## Where an AI agent saves recruiter time
+The HR agent runs a first interview in a Telegram bot, scores the answers and hands the recruiter a shortlist. Recruiters spend time on strong candidates, not on a first call to everyone. Why such projects sometimes stall and how to avoid it is in our news on AI agent rollout mistakes
+## Typical mistakes
+### Candidates in email
+CVs get lost, one candidate lands with two recruiters
+### Jobs without a status
+The client asks for an update and the recruiter digs through chats
+### No history
+A strong candidate from a past job is forgotten
+### Open access
+Everyone sees candidates’ personal data, more in our news on access rights
+## Cases
+Real MakeBiz projects
+Performia
+110 working days to launch
+### sales, training, finance and end to end analytics
+Before sales, courses and finance lived apart
+After the whole cycle and end to end analytics in one window
+Education · Services · Bitrix24 and CRM · BI and analytics
+CDEK
+5 AI agents at work
+### corporate B2B on Bitrix24 with agents and analytics
+Before corporate clients spread across systems and handled by hand
+After management, support and analytics in one loop
+Sales and B2B · Logistics · Bitrix24 and CRM · AI agents · BI and analytics
+Unilin
+4 BI analytics views
+### Bitrix24 for field managers and market analytics
+Before field managers and regions outside a single system
+After the whole region in CRM from a phone, analytics on every cut
+Manufacturing and wholesale · Sales and B2B · Bitrix24 and CRM · BI and analytics
+## Contract and guarantees
+What you get besides the work itself
+### Under contract
+Contract with MakeBiz Technologies FZE LLC, invoices in dirhams, payment to a UAE company account. We can send the draft contract before the call
+### Fixed estimate
+Standard work at list price, complex work after a short survey: you see the scope and price before we start
+### Access and data stay yours
+Portal, server and accounts belong to your company. We work under a separate account and close access at the end
+### One team
+Implementation, support, integrations and AI agents by one team, no need to gather contractors
+## Questions and answers
+**Does Bitrix24 work for a recruitment agency?**
+Yes. Clients and deals live in the CRM, jobs and candidates in separate linked processes.
+**How much does a recruitment CRM cost in the UAE?**
+Standard setup from AED 10,000, custom work AED 200 per hour, HR agent from AED 5,000. The Bitrix24 license is separate.
+**How is candidate data protected?**
+Access is set by role: a recruiter sees their own candidates, the manager sees everyone.
+**What does the HR agent do?**
+It runs a first interview in a Telegram bot, scores the answers and passes a shortlist to the recruiter.
+## Second direction: AI agents
+Once the CRM is set up, the next step is removing routine. Agents work inside Bitrix24, WhatsApp and Telegram
+### AI agents for sales, finance and procurement
+They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
+See AI agents
