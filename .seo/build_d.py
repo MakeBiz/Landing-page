@@ -11,11 +11,15 @@ ROBOTS = '''# Сайт открыт для поисковиков и AI-асси
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /v2/
+Disallow: /v2b/
 
 # Яндекс: рекламные метки не создают дубли страниц
 User-agent: Yandex
 Allow: /
 Disallow: /api/
+Disallow: /v2/
+Disallow: /v2b/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&ymclid&gclid&gbraid&wbraid&fbclid&ttclid&msclkid&_openstat&from
 
 # AI-поиск и ассистенты (ChatGPT, Perplexity, Claude, Gemini, Apple, Яндекс Нейро): доступ открыт
@@ -33,6 +37,8 @@ User-agent: YandexAdditional
 User-agent: YandexAdditionalBot
 Allow: /
 Disallow: /api/
+Disallow: /v2/
+Disallow: /v2b/
 
 Sitemap: https://makebiztechnologies.com/sitemap.xml
 '''
