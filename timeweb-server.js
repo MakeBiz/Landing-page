@@ -222,6 +222,8 @@ function mbReskin(h, chromeDir, en, page, base, rel) {
   const form = part('form.html').replace(/data-page="([^"]*)"/, 'data-page="$1' + page + '"');
   btag = /class="/.test(btag) ? btag.replace(/class="/, 'class="mbskin ') : btag.replace(/<body/i, '<body class="mbskin"');
   let top = part('top.html');
+  if (!/(^|\/)news/.test(rel)) top = top.replace('nav-link is-active', 'nav-link');
+  if (/(^|\/)bitrix-/.test(rel)) top = top.replace('<div class="nav-dd">', '<div class="nav-dd is-active">');
   const pairRel = en ? rel.slice(3) : 'en/' + rel;
   const pairUrl = files.has(pairRel) ? '/' + pairRel.replace(/\.html$/, '') : (en ? '/' : '/en');
   top = en ? top.replace(/<a href="[^"]*" hreflang="ru"/, '<a href="' + base + pairUrl + '" hreflang="ru"')
