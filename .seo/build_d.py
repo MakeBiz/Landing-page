@@ -33,6 +33,14 @@ User-agent: Google-Extended
 User-agent: Applebot-Extended
 User-agent: YandexAdditional
 User-agent: YandexAdditionalBot
+User-agent: anthropic-ai
+User-agent: GoogleOther
+User-agent: Bingbot
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: meta-externalagent
 Allow: /
 Disallow: /api/
 Disallow: /v2/

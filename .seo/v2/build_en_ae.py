@@ -513,7 +513,7 @@ if SOL:
 bx_body += section('Cases', '', case_cards(['cdek-b2b', 'unilin-crm', 'performia-crm']), tone='tint')
 bx_body += contract_block() + faq(bx_faq) + form_block('bitrix', 'Let us discuss Bitrix24 implementation') + crosslink('ai')
 page('/bitrix', 'bitrix', 'Bitrix24 implementation in Dubai and the UAE | MakeBiz',
-    'Turnkey Bitrix24 implementation in Dubai and the UAE: CRM, pipelines, WhatsApp, 5% VAT, accounting integrations, training. Standard setup from AED 10,000, launch from 14 days.',
+    'Turnkey Bitrix24 implementation in Dubai and the UAE: CRM, pipelines, WhatsApp, 5% VAT, accounting integrations. Setup from AED 10,000, launch from 14 days.',
     'bitrix', bx_body, [service_ld('Bitrix24 implementation', 'Turnkey Bitrix24 CRM implementation in the UAE', '/bitrix', 10000)],
     [('/', 'Home'), ('/bitrix', 'Bitrix24 implementation')], bx_faq)
 
@@ -680,7 +680,7 @@ lc_body += section('What we do', '', cards([
 ], 3), tone='tint')
 lc_body += contract_block() + faq(lc_faq) + form_block('bitrix-licenses', 'We will pick a Bitrix24 plan', 'Tell us how many employees will use the portal and what you need, we send a plan suggestion') + crosslink('ai')
 page('/bitrix-licenses', 'bitrix-licenses', 'Bitrix24 prices in the UAE 2026: plans in AED | MakeBiz',
-    f'Bitrix24 prices in the UAE: cloud from {lic(49)} a month, Enterprise from {lic(399)}, on-premise from {lic(3590)} a year. bitrix24.ae prices in AED and USD, plan selection and renewal.',
+    f'Bitrix24 prices in the UAE: cloud from {lic(49)} a month, Enterprise from {lic(399)}, on-premise from {lic(3590)} a year. bitrix24.ae prices in AED and USD.',
     'bitrix', lc_body, [service_ld('Bitrix24 licenses', 'Selection, purchase and renewal of Bitrix24 licenses in the UAE', '/bitrix-licenses', 180),
         {"@type": "OfferCatalog", "name": "Bitrix24 plans in the UAE", "itemListElement": [
             {"@type": "Offer", "name": 'Bitrix24 ' + n, "price": str(round(u * USD_AED)), "priceCurrency": "AED", "seller": {"@id": SITE + "/#organization"}} for n, u in [('Basic', 49), ('Standard', 99), ('Professional', 199), ('Enterprise 250', 399), ('Business (on-premise, year)', 3590), ('Enterprise (on-premise, year)', 24990)]]}],
@@ -726,8 +726,8 @@ kb_body += section('How we implement', '', steps([
 ]))
 kb_body += section('On-premise cases', '', case_cards(['cdek-b2b', 'unilin-crm']))
 kb_body += contract_block() + faq(kb_faq) + form_block('bitrix-korobka', 'Let us discuss on-premise Bitrix24', 'Tell us how many users and which systems to connect, we propose the edition, server and estimate') + crosslink('ai')
-page('/bitrix-korobka', 'bitrix-korobka', 'On-premise Bitrix24 in the UAE: implementation on your server | MakeBiz',
-    f'On-premise Bitrix24 on a company server in the UAE: edition selection, installation, cloud migration, customization, integrations and support. License from {lic(3590)} a year.',
+page('/bitrix-korobka', 'bitrix-korobka', 'On-premise Bitrix24 in the UAE: setup on your server | MakeBiz',
+    f'On-premise Bitrix24 on your server in the UAE: edition choice, installation, cloud migration, customization and support. License from {lic(3590)} a year.',
     'bitrix', kb_body, [service_ld('On-premise Bitrix24 implementation', 'Installation, customization and support of Bitrix24 on the client server', '/bitrix-korobka', 13184)],
     [('/', 'Home'), ('/bitrix', 'Bitrix24'), ('/bitrix-korobka', 'On-premise Bitrix24')], kb_faq)
 
@@ -816,8 +816,8 @@ AGENTS = [
        ('What language does the agent reply in?', 'In the client language: English, Russian and Arabic where needed. Tone and reply rules are set for your company.'),
        ('Does the agent write to clients by itself?', 'Only by the rules you set: for example, if a manager is silent for 15 minutes. Everything the agent wrote is visible in the deal.')]),
  dict(slug='svyaznoy', name='Liaison agent', short='Contacts and relationships', sub='Who waits for a reply, who to contact, the full contact picture',
-  title='Liaison AI agent: contacts, reminders and client relationships | MakeBiz',
-  desc='The liaison AI agent watches all contacts: who is waiting for a reply, who to get in touch with, who is hot and who is cooling down. Network map and warmth of each contact.',
+  title='Liaison AI agent: contacts, reminders, relationships | MakeBiz',
+  desc='The liaison AI agent watches all contacts: who is waiting for a reply, who to get in touch with, who is hot and who is cooling down.',
   h1='Liaison: an agent that <span>remembers every person</span>',
   lead='The agent keeps all your contacts in mind: clients, partners, contractors. It reminds you who to answer and who to contact, and shows which relationships are cooling down',
   answer='The MakeBiz liaison agent collects contacts from WhatsApp, Telegram, CRM and email, shows who is waiting for a reply and which steps are planned for today, and rates the warmth of each contact so relationships are not lost.',
@@ -834,7 +834,7 @@ AGENTS = [
        ('Where does the agent get contacts?', 'From WhatsApp, Telegram, Bitrix24 and email. The source set is defined at the start.'),
        ('Who is it for?', 'Owners, managers and salespeople with hundreds of contacts and agreements that must not be lost.')]),
  dict(slug='zvonki', name='Speech analytics', short='Call analytics', sub='Every conversation scored, objections, recommendations',
-  title='AI speech analytics for calls: conversation and script scoring | MakeBiz',
+  title='AI speech analytics: every sales call scored | MakeBiz',
   desc='An AI agent listens to every sales call: transcript, conversation score, script stages, top questions and objections, recommendations for each manager.',
   h1='Speech analytics: <span>every call scored</span>',
   lead='The system listens to every call and shows where managers lose clients, which objections repeat and which scripts do not work',
@@ -855,7 +855,7 @@ AGENTS = [
        ('Is there an implementation example?', 'Yes, the HAVAL dealer network: over 300,000 call minutes a month against 40+ criteria. The case is in the cases section.')]),
  dict(slug='hr', name='HR agent', short='Hiring and interviews', sub='A bot interviews, scores and runs the funnel',
   title='AI agent for hiring: candidate screening and bot interviews | MakeBiz',
-  desc='HR agent: responses from job boards and your site, the first interview in a Telegram or WhatsApp bot, candidate scoring, motivation types, talent pool and a funnel from response to first day.',
+  desc='HR agent: responses from job boards and your site, a first interview by bot in Telegram or WhatsApp, candidate scoring and a funnel to the first day.',
   h1='Hiring with an AI agent: <span>from response to first day</span>',
   lead='Every candidate gets a link to the bot, the bot runs the first interview and gives a score, and the manager sees every step in numbers',
   answer='The MakeBiz HR agent collects responses from job boards and your site, runs the first interview and tests in a bot in English or Russian, scores the candidate and proposes a decision: invite, reserve or reject. The manager only does the final meeting.',
@@ -890,8 +890,8 @@ AGENTS = [
        ('What format do quotes need to be in?', 'Any: PDF, Excel, an email or a photo. The agent parses items and prices.'),
        ('Who makes the decision?', 'You do. The agent prepares the comparison and a recommendation, the choice stays with the buyer.')]),
  dict(slug='marketing', name='Marketing agent', short='Content and AI visibility', sub='Articles, publishing and visibility in search and AI assistants',
-  title='AI marketing agent: content and visibility in search and ChatGPT | MakeBiz',
-  desc='AI marketing agent: a content plan from real customer questions, articles and news in English and Russian, publishing, GEO visibility in ChatGPT, Claude and Perplexity, dashboards.',
+  title='AI marketing agent: content and visibility in ChatGPT | MakeBiz',
+  desc='AI marketing agent: topics from customer questions, articles and news in English and Russian, publishing and visibility in ChatGPT, Claude and Perplexity.',
   h1='AI marketing agent: <span>content and visibility on autopilot</span>',
   lead='The agent plans, writes and publishes expert content for your company every week, then tracks how it performs in search and in AI assistants such as ChatGPT, Claude and Perplexity',
   answer='The MakeBiz marketing agent finds the questions your customers ask in search and in AI chats, drafts articles and news in English and Russian, publishes them on your site with structured data and checks whether ChatGPT, Claude and Perplexity name your brand for your key queries.',
@@ -966,8 +966,8 @@ ai_body += section('How we implement', '', steps([
 ]), tone='tint')
 ai_body += section('Cases', '', case_cards(['haval-vector', 'apartika-crm', 'cdek-b2b']))
 ai_body += contract_block() + faq(ai_faq) + form_block('ai-agents', 'We will show agents on your process') + crosslink('bitrix')
-page('/ai-agents', 'ai-agents', 'AI agents for business in Dubai and the UAE: sales, calls, HR | MakeBiz',
-    'AI agents for business in Dubai and the UAE: sales head on WhatsApp, liaison, call speech analytics, HR, procurement, marketing and finance in Bitrix24. One agent from AED 5,000.',
+page('/ai-agents', 'ai-agents', 'AI agents for business in Dubai and the UAE | MakeBiz',
+    'AI agents for business in Dubai and the UAE: sales head on WhatsApp, call analytics, HR, procurement, marketing and finance in Bitrix24. From AED 5,000.',
     'ai', ai_body, [service_ld('AI agent implementation', 'Development and implementation of AI agents for business in the UAE', '/ai-agents', 5000), VIDEO_LD,
                     {"@type": "ItemList", "name": "MakeBiz AI agents", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": a['name'], "url": SITE + en_path(agent_url(a['slug']))} for i, a in enumerate(AGENTS)]}],
     [('/', 'Home'), ('/ai-agents', 'AI agents')], ai_faq)
@@ -1028,7 +1028,7 @@ for c in CASEJ:
     tt = f'{org} case: {notag(c["title"]).split(":", 1)[-1].strip()}'
     lead = notag(c['lead']).strip()
     if len(lead) > 165: lead = lead[:165].rsplit(' ', 1)[0].rstrip(',:;') + '.'
-    page('/keysy/' + s, 'case-' + s, tt + ' | MakeBiz' if len(tt) <= 62 else tt, lead, 'keysy', body,
+    page('/keysy/' + s, 'case-' + s, tt + ' | MakeBiz' if len(tt) <= 60 else tt, lead, 'keysy', body,
         [{"@type": "Article", "headline": notag(c['title']), "description": notag(c['lead']), "datePublished": c['date'] + '-01', "dateModified": UPDATED_ISO,
           "author": {"@id": SITE + "/#organization"}, "publisher": {"@id": SITE + "/#organization"}, "about": {"@type": "Organization", "name": org},
           "mainEntityOfPage": SITE + en_path('/keysy/' + s), "inLanguage": "en"}],
@@ -1118,7 +1118,7 @@ ce_body = f'''<section class="hero hero-small"><div class="wrap"><div class="eye
 <section class="sec" style="padding-top:20px"><div class="wrap">{ce_table()}<p class="note">Service prices exclude licenses and VAT unless stated otherwise. Licenses at vendor prices from bitrix24.ae in US dollars, in dirhams at 3.6725</p></div></section>'''
 ce_body += contract_block() + faq(ce_faq) + form_block('ceny', 'We will estimate your project', 'Describe the task, we send an estimate in dirhams with price and timeline')
 page('/ceny', 'ceny', 'MakeBiz prices in the UAE: Bitrix24, support and AI agents in AED',
-    f'MakeBiz prices in AED as of {PRICE_DATE}: Bitrix24 CRM setup from AED 10,000, support from AED 1,250 a month, AED 200 an hour, AI agent from AED 5,000, licenses from {lic(49)}.',
+    f'MakeBiz prices in AED: Bitrix24 CRM setup from AED 10,000, support from AED 1,250 a month, AED 200 an hour, AI agent from AED 5,000, licenses from {lic(49)}.',
     'ceny', ce_body, [{"@type": "OfferCatalog", "name": "MakeBiz services in the UAE", "itemListElement": [
         {"@type": "Offer", "name": n, "price": re.sub(r'\D', '', v), "priceCurrency": "AED", "url": SITE + en_path(u), "seller": {"@id": SITE + "/#organization"}}
         for g, rows in CE_ROWS for n, v, c, u in rows if 'AED' in v and re.sub(r'\D', '', v)]}],
@@ -1183,7 +1183,7 @@ ct_body = f'''<section class="hero hero-small"><div class="wrap"><div class="eye
 {faq(ct_faq)}
 {form_block('contacts', 'Leave a request')}'''
 page('/contacts', 'contacts', 'MakeBiz Technologies contacts: WhatsApp, phone, Telegram',
-    f'MakeBiz Technologies contacts in the UAE: WhatsApp and phone {PHONE}, Telegram @{TG}, email {EMAIL}. Bitrix24 and AI agent implementation in Dubai.',
+    f'MakeBiz Technologies contacts in Dubai: WhatsApp and phone {PHONE}, Telegram @{TG}, email {EMAIL}. Bitrix24 and AI agents.',
     'contacts', ct_body, [{"@type": "ContactPage", "url": SITE + en_path("/contacts")}], [('/', 'Home'), ('/contacts', 'Contacts')], ct_faq)
 
 # ---------- chrome for the English blog (/en/news), the server wraps it like the Russian journal
