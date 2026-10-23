@@ -12,14 +12,12 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /v2/
-Disallow: /v2b/
 
 # Яндекс: рекламные метки не создают дубли страниц
 User-agent: Yandex
 Allow: /
 Disallow: /api/
 Disallow: /v2/
-Disallow: /v2b/
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&yclid&ymclid&gclid&gbraid&wbraid&fbclid&ttclid&msclkid&_openstat&from
 
 # AI-поиск и ассистенты (ChatGPT, Perplexity, Claude, Gemini, Apple, Яндекс Нейро): доступ открыт
@@ -38,7 +36,6 @@ User-agent: YandexAdditionalBot
 Allow: /
 Disallow: /api/
 Disallow: /v2/
-Disallow: /v2b/
 
 Sitemap: https://makebiztechnologies.com/sitemap.xml
 '''
@@ -150,3 +147,10 @@ for ru, en, fr, fe, pr, cf in pairs:
 X.append('</urlset>')
 wr('sitemap.xml', '\n'.join(X) + '\n')
 print('robots.txt, llms.txt (%d lines), sitemap.xml (%d urls)' % (len(L), n))
+
+# Новый сайт (site-v2): после старых сборщиков пересобираем его, чтобы блок решений на /bitrix,
+# sitemap.xml и llms.txt нового сайта знали о новой странице-решении или новости. Работает только после переноса (.v2-live)
+_site = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if os.path.exists(os.path.join(_site, '.v2-live')):
+    import subprocess
+    subprocess.run(['bash', os.path.join(_site, '.seo', 'v2', 'build_all.sh'), 'live'], check=True)

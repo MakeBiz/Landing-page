@@ -60,7 +60,7 @@ const CASE_RE = /^\/((?:en\/|ru\/)?keysy)\/([^/.]+)$/;
 // telegram-posts/*.json остаются публичными: их читает api/post-to-channel.js.
 function isPrivate(rel) {
   return /(^|\/)\./.test(rel) ||
-    /^(node_modules|api|_to_delete)(\/|$)/.test(rel) ||
+    /^(node_modules|api|_to_delete|site-v2)(\/|$)/.test(rel) ||
     /^(timeweb-server\.js|package\.json|package-lock\.json|vercel\.json|lead\.js)$/.test(rel) ||
     /\.(command|md)$/i.test(rel);
 }
@@ -129,6 +129,120 @@ function cacheControlFor(rel, versioned) {
 
 const files = indexFiles(ROOT);
 const route = createRouter(files);
+
+// ==== НОВЫЙ САЙТ (v2, дизайн в цветах флага ОАЭ) ====
+// Пока в корне нет файла .v2-live, новый сайт живёт только на превью /v2/ и /v2/en.
+// Перенос на боевой домен (только по команде Антона) кладёт новые страницы в корень и создаёт .v2-live:
+// тогда включаются 301 со старых адресов и обёртка старых страниц в новый дизайн.
+const V2_LIVE = fs.existsSync(path.join(ROOT, '.v2-live'));
+// Новый сайт лежит отдельно, в папке site-v2: старые сборщики (.seo/build_*.py, конвейеры новостей и решений)
+// пишут в корень и не могут его испортить. После переноса site-v2 главнее корня
+const V2_DIR = path.join(ROOT, 'site-v2');
+const v2Files = V2_LIVE && fs.existsSync(V2_DIR) ? indexFiles(V2_DIR) : new Set();
+function v2Route(rawPath) {
+  if (!v2Files.size) return null;
+  let d;
+  try { d = decodeURIComponent(rawPath); } catch (e) { return null; }
+  if (d.includes('\0') || /(^|\/)\.\.?(\/|$)/.test(d) || d.includes('\\')) return null;
+  if (d !== '/' && (d.endsWith('/') || d.endsWith('.html'))) return null;  // канонизацию делает route()
+  const rel = d === '/' ? 'index.html' : d.slice(1);
+  if (v2Files.has(rel)) return rel;
+  if (v2Files.has(rel + '.html')) return rel + '.html';
+  if (v2Files.has(rel + '/index.html')) return rel + '/index.html';
+  return null;
+}
+const V2_REDIRECTS = {
+  '/vector': '/ai-agents/zvonki', '/en/vector': '/en/ai-agents/zvonki',
+  '/intdoc': '/ai-agents/zakupki', '/en/intdoc': '/en/ai-agents/zakupki',
+  '/calculator-agents': '/ai-agents', '/en/calculator-agents': '/en/ai-agents',
+  '/calculator-agents-app': '/ai-agents', '/en/calculator-agents-app': '/en/ai-agents', '/calculator': '/ai-agents',
+  '/company': '/o-kompanii', '/en/company': '/en/about',
+  '/bitrix-whatsapp': '/bitrix-messengers', '/en/bitrix-whatsapp': '/en/bitrix-messengers',
+  '/bitrix-accounting': '/bitrix-integrations', '/en/bitrix-accounting': '/en/bitrix-integrations',
+  '/bitrix-1c': '/bitrix-integrations', '/en/bitrix-1c': '/en/bitrix-integrations',
+  '/en/keysy': '/en/cases', '/en/o-kompanii': '/en/about', '/en/ceny': '/en/pricing',
+  '/en/bi-analitika': '/en/bi-analytics', '/en/bitrix-korobka': '/en/bitrix-on-premise',
+  '/pricing': '/ceny', '/prices': '/ceny', '/about': '/o-kompanii',
+};
+function v2Redirect(p) {
+  let c = p.replace(/\/{2,}/g, '/');
+  if (c.length > 1) c = c.replace(/\/+$/, '');
+  if (c.endsWith('.html')) c = c.slice(0, -5);
+  if (V2_REDIRECTS[c]) return V2_REDIRECTS[c];
+  const m = /^\/en\/keysy\/([^/.]+)$/.exec(c);
+  if (m) return '/en/cases/' + m[1];
+  return null;
+}
+// Старые страницы, которые генерируют конвейеры (новости, страницы-решения) и юр. страницы:
+// файлы не меняем, при отдаче оборачиваем в шапку и подвал нового сайта
+const SKIN_RE = /^(en\/)?(news(\/[a-z0-9-]+)?|bitrix-(?!support|messengers|integrations|licenses|korobka|on-premise)[a-z0-9-]+|privacy|terms)\.html$/;
+function mbScopeCss(css, sc) {
+  css = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  let out = '', i = 0;
+  while (i < css.length) {
+    const j = css.indexOf('{', i);
+    if (j < 0) break;
+    const head = css.slice(i, j).trim();
+    let d = 1, k = j + 1;
+    while (k < css.length && d) { if (css[k] === '{') d++; else if (css[k] === '}') d--; k++; }
+    const body = css.slice(j + 1, k - 1);
+    if (/^@(media|supports)/i.test(head)) out += head + '{' + mbScopeCss(body, sc) + '}';
+    else if (/^@/.test(head)) out += head + '{' + body + '}';
+    else out += head.split(',').map((x) => x.trim()).filter(Boolean).map((x) => {
+      if (/^:root\b/.test(x)) return sc + x.slice(5);
+      if (/^(html|body)\b/.test(x)) { x = x.replace(/^(html|body)\b\s*/, '').replace(/^(html|body)\b\s*/, ''); return x ? sc + ' ' + x : sc; }
+      return sc + ' ' + x;
+    }).join(',') + '{' + body + '}';
+    i = k;
+  }
+  return out;
+}
+const CHROME_JS = /mbm-|__mbm|__MBM|mbcf|__MBCF|mbf-|mb-attr\.js|__mbOneForm|__mbMobile|__mbWaDefault|#mb-bg|__mbClean|навигация по языку/;
+function mbReskin(h, chromeDir, en, page, base, rel) {
+  const part = (n) => { try { return fs.readFileSync(path.join(ROOT, chromeDir, en ? n.replace('.html', '-en.html') : n), 'utf8'); } catch (e) { return ''; } };
+  const hi = h.search(/<\/head>/i), bi = h.search(/<body[^>]*>/i);
+  if (hi < 0 || bi < 0) return h;
+  let head = h.slice(0, hi), btag = h.slice(bi).match(/<body[^>]*>/i)[0];
+  let body = h.slice(bi + btag.length).replace(/<\/body>[\s\S]*$/i, '');
+  head = head.replace(/<link[^>]*fonts\.(?:googleapis|gstatic)\.com[^>]*>/g, '')
+    .replace(/<script\b[^>]*src="\/mb-attr\.js[^"]*"[^>]*><\/script>/g, '')
+    .replace(/<style([^>]*)>([\s\S]*?)<\/style>/g, (m, a, c) => '<style' + a + '>' + mbScopeCss(c, '.mbold') + '</style>')
+    .replace(/<meta name="theme-color"[^>]*>/g, '');
+  body = body.replace(/<div class="pagebg"[\s\S]*?<\/div>/g, '')
+    .replace(/<header id="mbm-header"[\s\S]*?<\/header>/g, '').replace(/<header[\s>][\s\S]*?<\/header>/g, '')
+    .replace(/<footer id="mbf-footer"[\s\S]*?<\/footer>/g, '').replace(/<footer[\s>][\s\S]*?<\/footer>/g, '')
+    .replace(/<section class="mbcf-sec"[\s\S]*?<\/section>/g, '')
+    .replace(/<nav id="mb-seo-nav"[\s\S]*?<\/nav>/g, '')
+    .replace(/<script\b([^>]*)>([\s\S]*?)<\/script>/g, (m, a, c) => (/type="application\/ld\+json"/.test(a) || !CHROME_JS.test(a + c)) ? m : '')
+    .replace(/<style([^>]*)>([\s\S]*?)<\/style>/g, (m, a, c) => '<style' + a + '>' + mbScopeCss(c, '.mbold') + '</style>');
+  if (base) body = body.replace(/(href|src)="\/(?!\/)([^"#?]*)/g, (m, at, p) => {
+    const tp = base + '/' + p;
+    return (route(tp).file || skinFor(tp)) ? at + '="' + tp : m;
+  });
+  const form = part('form.html').replace(/data-page="([^"]*)"/, 'data-page="$1' + page + '"');
+  btag = /class="/.test(btag) ? btag.replace(/class="/, 'class="mbskin ') : btag.replace(/<body/i, '<body class="mbskin"');
+  let top = part('top.html');
+  const pairRel = en ? rel.slice(3) : 'en/' + rel;
+  const pairUrl = files.has(pairRel) ? '/' + pairRel.replace(/\.html$/, '') : (en ? '/' : '/en');
+  top = en ? top.replace(/<a href="[^"]*" hreflang="ru"/, '<a href="' + base + pairUrl + '" hreflang="ru"')
+           : top.replace(/<a href="[^"]*" hreflang="en"/, '<a href="' + base + pairUrl + '" hreflang="en"');
+  return head + part('head.html') + '<meta name="theme-color" content="#04050A"></head>\n' + btag + top +
+    '<main class="mbold">' + body + '</main>' + form + part('bottom.html') + '</body></html>';
+}
+function skinFor(reqPath) {
+  // превью: /v2/<старая страница> -> старая страница в обвязке превью
+  if (reqPath.startsWith('/v2/')) {
+    const r0 = route(reqPath);
+    if (r0.file || r0.redirect) return null;
+    const r = route(reqPath.slice(3));
+    if (r.file && SKIN_RE.test(r.file) && files.has('v2/_chrome/top.html')) return { file: r.file, chrome: 'v2/_chrome', base: '/v2' };
+    return null;
+  }
+  if (!V2_LIVE) return null;
+  const r = route(reqPath);
+  if (r.file && SKIN_RE.test(r.file) && v2Files.has('_chrome/top.html')) return { file: r.file, chrome: 'site-v2/_chrome', base: '' };
+  return null;
+}
 
 const app = express();
 app.disable('x-powered-by');
@@ -207,6 +321,24 @@ function sendPage(res, rel, status, next, versioned) {
 // страницы, файлы, редиректы
 app.use((req, res, next) => {
   if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  if (V2_LIVE) {
+    const to = v2Redirect(req.path);
+    if (to) { const q = req.originalUrl.indexOf('?'); return res.redirect(301, to + (q === -1 ? '' : req.originalUrl.slice(q))); }
+  }
+  const nv = V2_LIVE ? v2Route(req.path) : null;
+  if (nv) {
+    res.setHeader('Cache-Control', cacheControlFor(nv, Object.prototype.hasOwnProperty.call(req.query || {}, 'v')));
+    return res.sendFile(nv, { root: V2_DIR }, (err) => { if (err && !res.headersSent) next(err); });
+  }
+  const sk = skinFor(req.path);
+  if (sk) {
+    try {
+      const page = sk.file.replace(/^en\//, '').replace(/\.html$/, '').replace(/\//g, '-');
+      const html = mbReskin(fs.readFileSync(path.join(ROOT, sk.file), 'utf8'), sk.chrome, sk.file.startsWith('en/'), page, sk.base, sk.file);
+      res.setHeader('Cache-Control', 'public, max-age=120, stale-while-revalidate=600');
+      return res.type('html').send(html);
+    } catch (e) { return next(e); }
+  }
   const r = route(req.path);
   if (r.redirect) {
     const q = req.originalUrl.indexOf('?');
@@ -240,7 +372,7 @@ async function pingIndexNow() {
     const keyFile = [...files].find((f) => /^[a-f0-9]{16,64}\.txt$/.test(f));
     if (!keyFile) return;
     const key = fs.readFileSync(path.join(ROOT, keyFile), 'utf8').trim();
-    const sm = fs.readFileSync(path.join(ROOT, 'sitemap.xml'), 'utf8');
+    const sm = fs.readFileSync(path.join(v2Files.has('sitemap.xml') ? V2_DIR : ROOT, 'sitemap.xml'), 'utf8');
     const urlList = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     if (!urlList.length) return;
     const stamp = crypto.createHash('sha1').update(sm).digest('hex').slice(0, 12);

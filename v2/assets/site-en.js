@@ -47,7 +47,8 @@
     return s;
   };
 
-  function goal(name) { try { if (window.ym) window.ym(112503709, 'reachGoal', name); } catch (e) {} try { if (window.gtag) window.gtag('event', name); } catch (e) {} }
+  var CONTACTS = { call: 1, telegram: 1, whatsapp: 1, max: 1, email: 1, tg_channel: 1 };
+  function goal(name) { try { if (window.ym) window.ym(112503709, 'reachGoal', name); } catch (e) {} try { if (window.gtag) { if (name === 'lead') window.gtag('event', 'generate_lead'); else if (CONTACTS[name]) window.gtag('event', 'contact_click', { method: name }); else window.gtag('event', name); } } catch (e) {} }
   // клики по телефону и мессенджерам: цель в Метрике + источник менеджерам в Telegram (/api/click, не чаще раза в 30 минут)
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a'); if (!a) return;
@@ -57,6 +58,7 @@
     else if (/t\.me\//i.test(h)) g = 'telegram';
     else if (/max\.ru\//i.test(h)) g = 'max';
     else if (/wa\.me\//i.test(h)) g = 'whatsapp';
+    else if (/^mailto:/i.test(h)) g = 'email';
     else if (/#form$/.test(h)) g = 'cta_form';
     if (!g) return;
     goal(g);
@@ -120,7 +122,7 @@
   function money() { return 'AED ' + Math.round(Math.random() * 45 + 5) + 'K'; }
   var A = {
     board: function (v) {
-      var N = ['Al Noor', 'Gulf Logistics', 'Marina Realty', 'Emirates Build', 'Desert Foods', 'Smart Clinic', 'AutoHouse', 'Palm Supply', 'Creek Decor', 'Falcon Tech'], S = ['WhatsApp', 'Website', 'Call', 'Instagram', 'Bayut'];
+      var N = ['Al Noor', 'Gulf Logistics', 'Marina Realty', 'Emirates Build', 'Desert Foods', 'Smart Clinic', 'AutoHouse', 'Palm Supply', 'Creek Decor', 'Falcon Tech'], S = ['WhatsApp', 'Website', 'Call', 'Social', 'Bayut'];
       var cols = v.querySelectorAll('.col'), cnt = v.querySelector('[data-cnt]'), c = 24, k = 0;
       function card() { var d = document.createElement('div'); d.className = 'dl' + (Math.random() < .25 ? ' hot' : ''); d.innerHTML = '<b>' + N[k % N.length] + '</b><small>' + S[k % S.length] + ' · ' + money() + '</small>'; k++; return d; }
       for (var s = 0; s < 4; s++) for (var j = 0; j < 3 - Math.floor(s / 2); j++) cols[s].appendChild(card());
@@ -138,7 +140,7 @@
         box.insertBefore(row('New'), box.firstChild); var all = box.querySelectorAll('.rw'); if (all.length > 5) all[all.length - 1].remove(); }, 2000);
     },
     chat: function (v) {
-      var box = v.querySelector('.msgs'), seq = [['in', 'ch-wa', 'WhatsApp', 'Hello, how much is a CRM setup?'], ['out', '', 'Manager, from Bitrix24', 'Good afternoon! CRM setup starts from AED 10,000, could you tell us about the company?'], ['in', 'ch-tg', 'Telegram', 'Please send a quote'], ['ai', '', 'AI agent', 'Quote sent, deal moved to the Quote stage'], ['in', 'ch-av', 'Instagram', 'Is the Marina apartment still available?'], ['in', 'ch-wa', 'WhatsApp', 'Can we call tomorrow?']], i = 0;
+      var box = v.querySelector('.msgs'), seq = [['in', 'ch-wa', 'WhatsApp', 'Hello, how much is a CRM setup?'], ['out', '', 'Manager, from Bitrix24', 'Good afternoon! CRM setup starts from AED 10,000, could you tell us about the company?'], ['in', 'ch-tg', 'Telegram', 'Please send a quote'], ['ai', '', 'AI agent', 'Quote sent, deal moved to the Quote stage'], ['in', 'ch-av', 'Social', 'Is the Marina apartment still available?'], ['in', 'ch-wa', 'WhatsApp', 'Can we call tomorrow?']], i = 0;
       function add() { var m = seq[i++ % seq.length], d = document.createElement('div'); d.className = 'msg ' + m[0]; d.innerHTML = '<small class="' + m[1] + '">' + m[2] + '</small>' + m[3]; box.appendChild(d); var all = box.querySelectorAll('.msg'); if (all.length > 4) all[0].remove(); }
       add(); add(); setInterval(add, 2200);
     },

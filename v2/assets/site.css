@@ -498,3 +498,14 @@ h1 span,h2 span{background:linear-gradient(95deg,#4FE07F,#16C15A 60%,#B9F5CF);-w
 .mbar a{background:rgba(255,255,255,.07);color:var(--ink)}
 .mbar .mbar-cta{background:linear-gradient(180deg,#E4384D,#B30E28);color:#fff}
 .logo img{filter:none}
+
+/* карточки решений на /bitrix */
+.lcard small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#4FE07F;margin-bottom:8px}
+/* старые страницы (новости, страницы-решения, юр. страницы) в обвязке нового сайта, server: mbReskin */
+body.mbskin{background:transparent}
+.mbold{display:block;background:transparent!important;position:relative;z-index:1;color:var(--ink)}
+.mbold,.mbold *{font-family:Onest,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif!important}
+.mbold #mbabout{padding-top:clamp(28px,4vw,56px)!important}
+.mbold>article.wrap,.mbold>section:first-child{padding-top:clamp(16px,3vw,36px)}
+.mbold h1,.mbold .art-title{color:#fff}
+#mb-faq,#mb-faq *{font-family:Onest,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif!important}
