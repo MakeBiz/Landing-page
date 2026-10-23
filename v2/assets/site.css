@@ -409,3 +409,92 @@ h1 span,h2 span{background:linear-gradient(95deg,#0B7F58,#0EA5A4);-webkit-backgr
 .vis{background:radial-gradient(120% 90% at 85% 0,#10B981 0,#0B3B30 45%,#062A22 100%)}
 .aiblk{background:radial-gradient(120% 120% at 100% 0,#0E9F6E 0,#0B3B30 55%,#062A22 100%)}
 .answer{border-left-color:#0E9F6E}
+/* ===== makebiztechnologies.com: тёмная тема в цветах флага ОАЭ (зелёный, белый, чёрный, красный) поверх site.css makebiz.life */
+:root{--ink:#EAF1FF;--ink2:#C3CEDD;--mut:#93A4B8;--blue:#4FE07F;--blue2:#16C15A;--red:#E4384D;--line:rgba(255,255,255,.12);--navy:#04050A;--g:#16C15A;--g2:#0C7A33;--r1:#C8102E}
+html{background:#04050A}
+body{background:transparent;color:var(--ink)}
+.flag{display:none}
+#mb-bg{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block}
+a{color:var(--blue)}a:hover{color:#8FF0B0}
+h1 span,h2 span{background:linear-gradient(95deg,#4FE07F,#16C15A 60%,#B9F5CF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pv{background:#1A1405;color:#F5C451}.pv a{color:#F5C451}
+/* стекло */
+.gl,.card,.case,.price,.steps li,.lcard,.dept,.vs-col,.faq details,.lead-form,.chips li,.dir{background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.11);box-shadow:0 30px 60px -30px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.06)}
+.card,.case,.md,.lcard,.rel-a,a.card:hover,.md:hover,.case:hover,.lcard:hover,.rel-a:hover{color:var(--ink)}
+.card p,.case p,.md p,.lcard p,.steps p,.sec-sub,.lead,.answer{color:var(--mut)}
+.answer{border-left-color:var(--g)}
+/* шапка */
+.hdr.is-scrolled{background:rgba(4,5,10,.78);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav-link{color:var(--ink)}
+.nav-link:hover,.nav-dd.open>.nav-link,.nav-dd:hover>.nav-link{background:rgba(255,255,255,.07);color:#fff}
+.nav-dd:first-child>.nav-link{color:#4FE07F;background:rgba(22,193,90,.10);box-shadow:inset 0 0 0 1px rgba(22,193,90,.28)}
+.nav-link.is-active,.nav-dd.is-active>.nav-link{color:#4FE07F}
+.dd-panel{background:rgba(10,13,20,.97);border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+.dd-item{color:var(--ink)}.dd-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.hdr-phone{color:var(--ink)}
+.burger{background:rgba(255,255,255,.08)}.burger span{background:#EAF1FF}
+.mnav{background:rgba(6,8,13,.98);border-top:1px solid rgba(255,255,255,.08)}.mnav a{color:var(--ink)}
+.mnav-t{color:#4FE07F}
+.lang{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.16);color:var(--ink)}
+.lang a{color:var(--ink)}.lang a:hover{background:rgba(255,255,255,.08);color:#fff}
+.lang .on{background:linear-gradient(135deg,#16C15A,#0C7A33);color:#fff;box-shadow:0 4px 12px rgba(22,193,90,.35)}
+/* кнопки: красный флага на главном действии */
+.btn{color:#fff;background:linear-gradient(180deg,#E4384D,#B30E28);box-shadow:0 14px 30px -8px rgba(200,16,46,.55),inset 0 1px 0 rgba(255,255,255,.22)}
+.btn:hover{color:#fff;box-shadow:0 18px 36px -8px rgba(200,16,46,.65),inset 0 1px 0 rgba(255,255,255,.22)}
+.btn-ghost{color:var(--ink);background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.btn-ghost:hover{color:#fff;background:rgba(255,255,255,.12)}
+.eyebrow{color:#4FE07F;background:rgba(22,193,90,.10);border-color:rgba(22,193,90,.32)}.eyebrow::before{background:#16C15A}
+/* панели героя */
+.vis{background:radial-gradient(120% 90% at 85% 0,#16C15A 0,#0B3B24 45%,#05140C 100%);box-shadow:0 60px 90px -30px rgba(0,0,0,.85),inset 0 1px 0 rgba(255,255,255,.18)}
+.flt{background:rgba(12,16,24,.92);color:var(--ink);border:1px solid rgba(255,255,255,.12)}
+.flt small{color:var(--mut)}
+.dl{color:#0A1A12}
+.deal{background:rgba(255,255,255,.07);color:var(--ink)}.deal-h b{color:#fff}
+.msg.in{background:rgba(255,255,255,.1);color:var(--ink)}.msg.out{background:#0C7A33;color:#fff}.msg.ai{background:linear-gradient(135deg,#16C15A,#0C7A33);color:#fff}
+.tier.on{color:#0A1A12}
+.pipe::before{background:linear-gradient(#16C15A,#E4384D)}.pk.b{background:#E4384D}
+.core{background:radial-gradient(circle at 35% 30%,#fff,#B9F5CF 30%,#16C15A 65%,#0C7A33)}
+/* цифры, иконки, шаги */
+.n3 b{color:#fff;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03));box-shadow:0 14px 26px -12px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.12)}
+.mq div{color:var(--mut)}.mq span::after{color:#E4384D}
+.ic{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));box-shadow:0 12px 24px -10px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.12)}
+.num,.step-n,.dept-n{background:radial-gradient(circle at 35% 30%,#4FE07F,#16C15A 55%,#0C7A33)}
+.track i{background:linear-gradient(90deg,#16C15A,#EAF1FF,#E4384D)}
+/* тёмные блоки */
+.aiblk{background:radial-gradient(120% 120% at 100% 0,rgba(22,193,90,.55) 0,#0B2416 55%,#06100A 100%);border:1px solid rgba(255,255,255,.1)}
+.aiblk .eyebrow{color:#F0A6B0;background:rgba(228,56,77,.12);border-color:rgba(228,56,77,.35)}
+.cross{background:radial-gradient(120% 120% at 100% 0,rgba(22,193,90,.45) 0,#0B2416 60%,#06100A 100%)}
+.vs-good{background:radial-gradient(120% 120% at 100% 0,#16C15A 0,#0B2416 60%)}
+.sec.dark h2{color:#fff}
+/* кейсы и метки */
+.case-tags,.rel-a small,.agc-tx small{color:#F0A6B0}.case-more{color:#4FE07F}
+.faq summary{color:var(--ink)}.faq summary::after{color:#E4384D}.faq details p{color:var(--mut)}
+.price.is-hot::before{background:linear-gradient(180deg,#E4384D,#B30E28)}
+.ktag,.fchip{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);color:var(--ink2)}
+.fchip.on,.sh-t.on{background:#16C15A;border-color:#16C15A;color:#04120A}
+.ktag-p{background:rgba(22,193,90,.12);color:#4FE07F}
+.kfact,.kba,.vid-links a{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+/* форма */
+.form-grid{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.1)}
+.lead-form{background:rgba(255,255,255,.04)}
+.lead-form label{color:var(--ink2)}
+.lead-form input,.lead-form textarea{color:var(--ink);background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14)}
+.lead-form input::placeholder,.lead-form textarea::placeholder{color:#6F7F93}
+.lead-form input:focus,.lead-form textarea:focus{border-color:#16C15A;background:rgba(0,0,0,.5);box-shadow:0 0 0 3px rgba(22,193,90,.2)}
+.lead-form .invalid{border-color:#E4384D}.form-ok{color:#4FE07F}.form-err{color:#F0A6B0}.form-note{color:var(--mut)}
+/* скриншоты, таблицы, агенты, калькулятор */
+.shot,.agc{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+.shot-bar,.sh-tabs{background:#0D1118;border-color:rgba(255,255,255,.08)}.shot-bar span{color:var(--ink)}
+.sh-t{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:var(--ink2)}
+.shot img,.agc img{background:#0D1118;border-color:rgba(255,255,255,.08)}
+.ptab th{color:var(--mut);border-color:rgba(255,255,255,.1)}.ptab td{border-color:rgba(255,255,255,.07)}
+.ptab td b,.ptab .pt-p,.ptab a,.pcalc label b{color:#fff}
+.pc-tot{background:linear-gradient(135deg,#16C15A,#0C7A33)}
+.yt button{background:#C8102E}
+/* подвал и мобильная панель */
+.ftr{background:linear-gradient(180deg,rgba(4,5,10,.2),rgba(4,5,10,.85));border-top:1px solid rgba(255,255,255,.07);color:var(--mut)}
+.ftr-t{color:#fff}.ftr a{color:var(--ink2)}.ftr a:hover{color:#4FE07F}
+.mbar{background:rgba(6,8,13,.96);border-top:1px solid rgba(255,255,255,.08)}
+.mbar a{background:rgba(255,255,255,.07);color:var(--ink)}
+.mbar .mbar-cta{background:linear-gradient(180deg,#E4384D,#B30E28);color:#fff}
+.logo img{filter:none}
