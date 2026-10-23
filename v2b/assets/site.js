@@ -117,10 +117,10 @@
   document.querySelectorAll('.steps,.track').forEach(function (el) { obs ? obs.observe(el) : el.classList.add('on'); });
 
   function rnd(a) { return a[Math.floor(Math.random() * a.length)]; }
-  function money() { return (Math.round(Math.random() * 90 + 10) * 500).toLocaleString('ru-RU') + ' AED'; }
+  function money() { return 'AED ' + Math.round(Math.random() * 45 + 5) + 'K'; }
   var A = {
     board: function (v) {
-      var N = ['Al Noor Trading', 'Gulf Logistics', 'Marina Realty', 'Emirates Build', 'Desert Foods', 'Smart Clinic', 'Auto House DXB', 'Palm Supply', 'Creek Interiors', 'Falcon Tech'], S = ['WhatsApp', 'Сайт', 'Звонок', 'Instagram', 'Property Finder'];
+      var N = ['Al Noor', 'Gulf Logistics', 'Marina Realty', 'Emirates Build', 'Desert Foods', 'Smart Clinic', 'AutoHouse', 'Palm Supply', 'Creek Decor', 'Falcon Tech'], S = ['WhatsApp', 'Сайт', 'Звонок', 'Instagram', 'Bayut'];
       var cols = v.querySelectorAll('.col'), cnt = v.querySelector('[data-cnt]'), c = 24, k = 0;
       function card() { var d = document.createElement('div'); d.className = 'dl' + (Math.random() < .25 ? ' hot' : ''); d.innerHTML = '<b>' + N[k % N.length] + '</b><small>' + S[k % S.length] + ' · ' + money() + '</small>'; k++; return d; }
       for (var s = 0; s < 4; s++) for (var j = 0; j < 3 - Math.floor(s / 2); j++) cols[s].appendChild(card());
