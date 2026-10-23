@@ -1,0 +1,1585 @@
+[
+  {
+    "slug": "timeweb",
+    "name": "Timeweb Cloud",
+    "color": "#1a5fd0",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://timeweb.cloud/?i=143675",
+    "site": "https://timeweb.cloud",
+    "geos": [
+      "ru",
+      "eu"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "telegram-bot",
+      "database",
+      "development",
+      "n8n",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": false
+    },
+    "description": "Российское облако с дата-центрами в Москве и Петербурге. Понятная панель, почасовая тарификация, снапшоты и приватные сети. Один из самых предсказуемых вариантов под сайты, 1С и Битрикс",
+    "pros": [
+      "Дата-центры в России, низкий пинг из Москвы и Петербурга",
+      "Закрывающие документы и договор для юрлиц",
+      "Почасовая тарификация, снапшоты и бэкапы из коробки"
+    ],
+    "prosEn": [
+      "Data centers in Russia, low latency from Moscow and St. Petersburg",
+      "Proper invoicing and a contract for legal entities",
+      "Hourly billing, snapshots and backups out of the box"
+    ],
+    "cons": [
+      "Зарубежных локаций мало",
+      "Цена выше самых бюджетных российских провайдеров"
+    ],
+    "consEn": [
+      "Few international locations",
+      "Pricier than the most budget Russian providers"
+    ],
+    "affiliate": {
+      "rate": "20% на облако, до 40% на хостинг",
+      "term": "recurring со всех платежей",
+      "cookie": "не раскрыт",
+      "note": "Запрещена контекстная реклама по бренду (п. 3.7 регламента)",
+      "payoutInternal": "от 390 ₽, банк или ЮMoney"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A Russian cloud with data centers in Moscow and St. Petersburg. Clear panel, hourly billing, snapshots and private networks. One of the most predictable options for websites, 1C and Bitrix",
+    "enHidden": true
+  },
+  {
+    "slug": "adminvps",
+    "name": "AdminVPS",
+    "color": "#0e7490",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://my.adminvps.ru/aff.php?aff=29622",
+    "site": "https://adminvps.ru",
+    "geos": [
+      "ru",
+      "eu",
+      "kz"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "telegram-bot",
+      "database",
+      "development",
+      "n8n",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": true
+    },
+    "description": "Бюджетный VPS с быстрым стартом и локациями в России, Европе и Казахстане. Один из самых низких порогов входа среди российских провайдеров",
+    "pros": [
+      "Очень низкая стартовая цена",
+      "Локации в России и Европе в одном кабинете",
+      "Круглосуточная поддержка на русском"
+    ],
+    "prosEn": [
+      "Very low starting price",
+      "Locations in Russia and Europe in one account",
+      "24/7 support in Russian"
+    ],
+    "cons": [
+      "Интерфейс проще, чем у крупных облаков",
+      "Ресурсы младших тарифов ограничены"
+    ],
+    "consEn": [
+      "A simpler interface than the big clouds",
+      "Entry-level plans have limited resources"
+    ],
+    "affiliate": {
+      "rate": "30% на VPS и хостинг, выделенные 500 ₽ фикс",
+      "term": "все платежи, холд 40 дней",
+      "cookie": "120 дней",
+      "note": "Самозанятым не платят, нужен ИП, юрлицо или договор ГПХ",
+      "payoutInternal": "от 5 000 ₽"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A budget VPS with a fast start and locations in Russia, Europe and Kazakhstan. One of the lowest entry points among Russian providers",
+    "enHidden": true
+  },
+  {
+    "slug": "hostman",
+    "name": "Hostman",
+    "color": "#074EE8",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://hostman.com/r/pb752795",
+    "site": "https://hostman.com",
+    "geos": [
+      "eu",
+      "us",
+      "global",
+      "uae",
+      "asia"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "telegram-bot",
+      "database",
+      "ai",
+      "game-server",
+      "development",
+      "mail-server",
+      "n8n",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": false
+    },
+    "description": "Управляемое облако с деплоем приложений из репозитория в несколько кликов. Подходит командам без выделенного DevOps: обновления, мониторинг и балансировка берутся на себя платформой.",
+    "pros": [
+      "Деплой приложений прямо из GitHub",
+      "Управляемые базы данных и Kubernetes",
+      "Хорошая документация"
+    ],
+    "prosEn": [
+      "Deploy apps straight from GitHub",
+      "Managed databases and Kubernetes",
+      "Good documentation"
+    ],
+    "cons": [
+      "Дороже чистого unmanaged VPS при тех же ресурсах",
+      "Меньше контроля над окружением, часть настроек скрыта платформой"
+    ],
+    "consEn": [
+      "Pricier than a plain unmanaged VPS for the same resources",
+      "Less control over the environment, some settings are hidden by the platform"
+    ],
+    "affiliate": {
+      "rate": "по договору",
+      "term": "уточняется",
+      "cookie": "уточняется",
+      "note": "Условия сверить в кабинете партнёра",
+      "payoutInternal": "уточняется"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A managed cloud that deploys apps from your repository in a few clicks. A fit for teams without dedicated DevOps: updates, monitoring and load balancing are handled by the platform."
+  },
+  {
+    "slug": "ishosting",
+    "name": "is*hosting",
+    "color": "#5b3fd0",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://ishosting.io/affiliate/NzI2MSM4",
+    "site": "https://ishosting.com",
+    "geos": [
+      "eu",
+      "us",
+      "global",
+      "uae",
+      "asia"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "telegram-bot",
+      "database",
+      "ai",
+      "game-server",
+      "development",
+      "mail-server",
+      "n8n",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Очень широкая география: более сорока локаций для VPS и отдельная линейка выделенных серверов. Удобен, когда нужна конкретная страна размещения, а не абстрактная «Европа»",
+    "pros": [
+      "Более сорока локаций по миру",
+      "Есть выделенные серверы и storage-линейка",
+      "Гибкий выбор страны под требования проекта"
+    ],
+    "prosEn": [
+      "More than forty locations worldwide",
+      "Dedicated servers and a storage line are available",
+      "Flexible choice of country to match project requirements"
+    ],
+    "cons": [
+      "Российских локаций нет",
+      "Поддержка отвечает не мгновенно"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "Support does not respond instantly"
+    ],
+    "affiliate": {
+      "rate": "до 50% с первой покупки, затем 3-20% lifetime",
+      "term": "lifetime",
+      "cookie": "не раскрыт",
+      "note": "Ставка зависит от объёма",
+      "payoutInternal": "от $20, крипта или карта"
+    },
+    "verifiedAt": "2026-08-02",
+    "noUtm": true,
+    "descriptionEn": "Very broad geography: more than forty VPS locations plus a separate dedicated-server line. Handy when you need a specific host country rather than an abstract “Europe”"
+  },
+  {
+    "slug": "aeserver",
+    "name": "AEserver",
+    "color": "#0a7d52",
+    "country": "AE",
+    "affiliateStatus": "active",
+    "url": "https://my.aeserver.com/aff.php?aff=1245",
+    "site": "https://www.aeserver.com",
+    "geos": [
+      "uae"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "telegram-bot",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Локальный эмиратский провайдер с дата-центром в Дубае. Основной сценарий: проект с аудиторией в ОАЭ и странах Персидского залива, где важен минимальный пинг и местное присутствие",
+    "pros": [
+      "Реальная локация в ОАЭ",
+      "Местное юрлицо и поддержка в регионе",
+      "Низкий пинг по Ближнему Востоку"
+    ],
+    "prosEn": [
+      "A real location in the UAE",
+      "A local legal entity and in-region support",
+      "Low latency across the Middle East"
+    ],
+    "cons": [
+      "Только одна география",
+      "Цены выше европейских при тех же ресурсах"
+    ],
+    "consEn": [
+      "A single geography only",
+      "Prices higher than European ones for the same resources"
+    ],
+    "affiliate": {
+      "rate": "10-70% от инвойса",
+      "term": "lifetime заявлен",
+      "cookie": "90 дней",
+      "note": "Публичный FAQ описывает shared hosting, серверные условия сверить с менеджером",
+      "payoutInternal": "уточняется"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A local Emirati provider with a data center in Dubai. Best for projects with an audience in the UAE and the Gulf, where low latency and a local presence matter",
+    "enHidden": true
+  },
+  {
+    "slug": "datapacket",
+    "name": "DataPacket",
+    "color": "#03235F",
+    "country": "US",
+    "affiliateStatus": "active",
+    "url": "https://portal.datapacket.net/aff.php?aff=189",
+    "site": "https://datapacket.net",
+    "geos": [
+      "us",
+      "global",
+      "asia"
+    ],
+    "tasks": [
+      "database",
+      "ai",
+      "game-server",
+      "development",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": false,
+      "ddos": true,
+      "backup": false,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Акцент на производительности и выделенных серверах для продакшна. Вариант под тяжёлые нагрузки, когда важнее стабильный ресурс, а не низкая цена.",
+    "pros": [
+      "Сильное железо и сеть",
+      "Есть выделенные серверы",
+      "Долгая история на рынке"
+    ],
+    "prosEn": [
+      "Strong hardware and network",
+      "Dedicated servers available",
+      "A long track record on the market"
+    ],
+    "cons": [
+      "Нет российских локаций",
+      "Интерфейс рассчитан на технического пользователя"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "The interface is aimed at a technical user"
+    ],
+    "affiliate": {
+      "rate": "30% recurring",
+      "term": "recurring",
+      "cookie": "не раскрыт",
+      "note": "Не путать с DataPacket.com, это разные компании",
+      "payoutInternal": "от $5, холд 30 дней"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "Focused on performance and dedicated servers for production. A choice for heavy workloads where stable capacity matters more than a low price."
+  },
+  {
+    "slug": "truehost",
+    "name": "Truehost",
+    "color": "#c47f0a",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://truehost.cloud/cloud/aff.php?aff=225",
+    "site": "https://truehost.cloud",
+    "geos": [
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "telegram-bot",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": false,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Недорогое облако с простым входом и глобальным присутствием. Разумный вариант для старта небольшого проекта, когда нужен дешёвый сервер без изысков.",
+    "pros": [
+      "Низкая цена входа",
+      "Простая панель",
+      "Несколько регионов на выбор"
+    ],
+    "prosEn": [
+      "Low entry price",
+      "A simple panel",
+      "Several regions to choose from"
+    ],
+    "cons": [
+      "Скромные ресурсы на младших тарифах",
+      "Нет российских локаций"
+    ],
+    "consEn": [
+      "Modest resources on entry-level plans",
+      "No Russian locations"
+    ],
+    "affiliate": {
+      "rate": "25% на VPS",
+      "term": "recurring, срок уточняется",
+      "cookie": "90 дней",
+      "note": "Выплаты в местной валюте, сверить метод",
+      "payoutInternal": "около $30"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "An inexpensive cloud with an easy start and global presence. A reasonable pick to launch a small project when you just need a cheap, no-frills server."
+  },
+  {
+    "slug": "ultahost",
+    "name": "UltaHost",
+    "color": "#7a1fb8",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://ultahost.com/#MakeBiz",
+    "site": "https://ultahost.com",
+    "geos": [
+      "us",
+      "eu",
+      "global",
+      "asia"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "telegram-bot",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Управляемый хостинг на NVMe с упором на скорость сайтов и WordPress. Берут на себя часть администрирования, что удобно, если нет своего системного администратора.",
+    "pros": [
+      "NVMe во всех тарифах",
+      "Управляемые опции и миграция сайта",
+      "Много локаций"
+    ],
+    "prosEn": [
+      "NVMe on every plan",
+      "Managed options and site migration",
+      "Many locations"
+    ],
+    "cons": [
+      "Агрессивная подача цен, обязательно смотреть цену продления",
+      "Российских локаций нет"
+    ],
+    "consEn": [
+      "Aggressive price presentation, always check the renewal price",
+      "No Russian locations"
+    ],
+    "affiliate": {
+      "rate": "высокий процент с первой продажи",
+      "term": "по договору",
+      "cookie": "уточняется",
+      "note": "Публичная модель не recurring, для revshare нужен индивидуальный договор",
+      "payoutInternal": "уточняется"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "Managed NVMe hosting focused on site speed and WordPress. They take on part of the administration, which helps if you have no sysadmin of your own.",
+    "enHidden": true
+  },
+  {
+    "slug": "vpsorg",
+    "name": "VPS.org",
+    "color": "#b8341f",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://vps.org/?ref=G2EMGEI2",
+    "site": "https://vps.org",
+    "geos": [
+      "us",
+      "eu",
+      "global",
+      "asia"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "game-server",
+      "development",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Универсальный провайдер среднего сегмента с гибкими конфигурациями. Подходит, когда нужен предсказуемый сервер под типовые задачи без привязки к конкретной стране.",
+    "pros": [
+      "Гибкая настройка конфигурации",
+      "Понятные тарифы",
+      "Быстрая выдача сервера"
+    ],
+    "prosEn": [
+      "Flexible configuration",
+      "Clear plans",
+      "Fast server provisioning"
+    ],
+    "cons": [
+      "Бренд менее известен",
+      "Нет российских локаций"
+    ],
+    "consEn": [
+      "A less well-known brand",
+      "No Russian locations"
+    ],
+    "affiliate": {
+      "rate": "20% lifetime плюс бонусы",
+      "term": "lifetime",
+      "cookie": "90 дней",
+      "note": "Щедрые условия, обязательна тестовая покупка и первая выплата",
+      "payoutInternal": "от $10, Stripe или PayPal"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A general-purpose mid-range provider with flexible configurations. A fit when you need a predictable server for typical workloads without tying to a specific country."
+  },
+  {
+    "slug": "regru",
+    "name": "Reg.ru",
+    "color": "#1f6fb2",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://www.reg.ru/?rlink=reflink-31242589",
+    "site": "https://www.reg.ru",
+    "geos": [
+      "ru"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Крупный российский регистратор и хостер. Удобен, когда домен, хостинг и сервер нужны в одном кабинете, с закрывающими документами",
+    "pros": [
+      "Домены, хостинг и серверы в одном кабинете",
+      "Документы и договор для юрлиц",
+      "Известный бренд с долгой историей"
+    ],
+    "prosEn": [
+      "Domains, hosting and servers in one account",
+      "Invoicing and a contract for legal entities",
+      "A well-known brand with a long history"
+    ],
+    "cons": [
+      "Цены выше нишевых провайдеров",
+      "Интерфейс перегружен"
+    ],
+    "consEn": [
+      "Prices higher than niche providers",
+      "A cluttered interface"
+    ],
+    "affiliate": {
+      "rate": "40% хостинг, 15% облако, 3,5% домены",
+      "term": "recurring на продления",
+      "cookie": "14 дней",
+      "note": "Партнёрка подтверждена, ссылка из выгрузки владельца",
+      "payoutInternal": "от 200 ₽, только рублёвый счёт банка РФ"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A large Russian registrar and host. Convenient when you want domain, hosting and server in one account, with proper invoicing",
+    "enHidden": true
+  },
+  {
+    "slug": "fornex",
+    "name": "Fornex",
+    "color": "#2b7a78",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://fornex.com/code/g6j9tn/",
+    "site": "https://ru.fornex.com",
+    "geos": [
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Провайдер с русскоязычной поддержкой и европейскими локациями. Линейка от простого VPS до выделенных серверов.",
+    "pros": [
+      "Русскоязычная поддержка при зарубежных локациях",
+      "Широкая линейка услуг"
+    ],
+    "prosEn": [
+      "Russian-speaking support with international locations",
+      "A broad range of services"
+    ],
+    "cons": [
+      "Расчёты в валюте, курсовой риск",
+      "Российских локаций нет"
+    ],
+    "consEn": [
+      "Billing in foreign currency, exchange-rate risk",
+      "No Russian locations"
+    ],
+    "affiliate": {
+      "rate": "15-25% на VPS",
+      "term": "lifetime",
+      "cookie": "60 дней",
+      "note": "Партнёрка подтверждена, по ссылке применяется скидка 15% на VPS",
+      "payoutInternal": "баланс или USDT"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A provider with Russian-speaking support and European locations. A range from a simple VPS to dedicated servers."
+  },
+  {
+    "slug": "vdsina",
+    "name": "VDSina",
+    "color": "#3b5bdb",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://vdsina.ru/?partner=5xwp7v2732dp",
+    "site": "https://vdsina.ru",
+    "geos": [
+      "ru",
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "development",
+      "game-server",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": false
+    },
+    "description": "Недорогой провайдер с почасовой оплатой и понятной линейкой тарифов. Часто выбирают под небольшие сервисы и тестовые стенды.",
+    "pros": [
+      "Почасовая оплата",
+      "Низкая цена входа",
+      "Несколько стран на выбор"
+    ],
+    "prosEn": [
+      "Hourly billing",
+      "Low entry price",
+      "Several countries to choose from"
+    ],
+    "cons": [
+      "Поддержка только тикетами"
+    ],
+    "consEn": [
+      "Support by tickets only"
+    ],
+    "affiliate": {
+      "rate": "20%, шкала до 50%",
+      "term": "lifetime",
+      "cookie": "не раскрыт",
+      "note": "Подать заявку в первой волне",
+      "payoutInternal": "USDT от 5 000 ₽, нужно 5 активных клиентов за год"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "An inexpensive provider with hourly billing and a clear plan line-up. Often chosen for small services and test stands."
+  },
+  {
+    "slug": "ruvds",
+    "name": "RUVDS",
+    "color": "#c2410c",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://ruvds.com/pr105060",
+    "site": "https://ruvds.com",
+    "geos": [
+      "ru",
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "1c-bitrix",
+      "database",
+      "ai",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": false
+    },
+    "description": "Провайдер с большим числом дата-центров и отдельными продуктами под 1С, трейдинг и GPU. Заметен в корпоративном сегменте.",
+    "pros": [
+      "Много дата-центров",
+      "Готовые решения под 1С и трейдинг",
+      "Есть GPU"
+    ],
+    "prosEn": [
+      "Many data centers",
+      "Ready-made solutions for 1C and trading",
+      "GPU available"
+    ],
+    "cons": [
+      "Цены выше бюджетного сегмента"
+    ],
+    "consEn": [
+      "Prices above the budget segment"
+    ],
+    "affiliate": {
+      "rate": "15% с ростом до 25%",
+      "term": "recurring",
+      "cookie": "не опубликован",
+      "note": "Партнёрка подтверждена, ссылка из выгрузки владельца",
+      "payoutInternal": "условия не опубликованы"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "A provider with many data centers and dedicated products for 1C, trading and GPU. Notable in the corporate segment."
+  },
+  {
+    "slug": "firstvds",
+    "name": "FirstVDS",
+    "color": "#0f766e",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://firstvds.ru/?from=1218803",
+    "site": "https://firstvds.ru",
+    "geos": [
+      "ru",
+      "eu",
+      "kz"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "1c-bitrix",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Один из старых российских провайдеров VDS с линейкой от бюджетных серверов до GPU и storage.",
+    "pros": [
+      "Долгая история на рынке",
+      "Есть GPU и storage-серверы",
+      "Локации в РФ, Нидерландах и Казахстане"
+    ],
+    "prosEn": [
+      "A long track record on the market",
+      "GPU and storage servers available",
+      "Locations in Russia, the Netherlands and Kazakhstan"
+    ],
+    "cons": [
+      "Базовая ставка партнёрки низкая"
+    ],
+    "consEn": [
+      "The base affiliate rate is low"
+    ],
+    "affiliate": {
+      "rate": "10% всех расходов реферала",
+      "term": "recurring, last click",
+      "cookie": "без ограничения времени",
+      "note": "Партнёрка подтверждена, ссылка из выгрузки владельца",
+      "payoutInternal": "только ИП или юрлицо по договору"
+    },
+    "verifiedAt": "2026-08-02",
+    "descriptionEn": "One of the older Russian VDS providers, with a range from budget servers to GPU and storage.",
+    "enHidden": true
+  },
+  {
+    "slug": "cloud4box",
+    "name": "Cloud4Box",
+    "color": "#0e7490",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://cloud4box.com/?from=99102",
+    "site": "https://cloud4box.com",
+    "geos": [
+      "ru",
+      "eu"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "telegram-bot",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Российский провайдер со своим дата-центром в Москве и гибким конфигуратором: ресурсы собираются под задачу, а не выбираются из фиксированной сетки тарифов",
+    "pros": [
+      "Свой дата-центр в Москве",
+      "Гибкий конфигуратор вместо жёсткой тарифной сетки",
+      "Есть и зарубежные площадки под проекты на Европу"
+    ],
+    "prosEn": [
+      "Its own data center in Moscow",
+      "A flexible configurator instead of a rigid plan grid",
+      "International sites too, for Europe-facing projects"
+    ],
+    "cons": [
+      "Бренд менее известен, чем у крупных игроков",
+      "Цены сверяются, в каталоге их пока нет"
+    ],
+    "consEn": [
+      "A less well-known brand than the big players",
+      "Prices are being verified, not in the catalog yet"
+    ],
+    "affiliate": {
+      "rate": "по программе cloud4box",
+      "term": "уточняется",
+      "cookie": "не опубликован",
+      "note": "Партнёрка подтверждена, ссылка из выгрузки владельца",
+      "payoutInternal": "условия в кабинете"
+    },
+    "descriptionEn": "A Russian provider with its own data center in Moscow and a flexible configurator: resources are assembled for the task rather than picked from a fixed grid",
+    "enHidden": true
+  },
+  {
+    "slug": "cherry",
+    "name": "Cherry Servers",
+    "color": "#d6336c",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://www.cherryservers.com/?affiliate=9U0AA107",
+    "site": "https://www.cherryservers.com",
+    "geos": [
+      "eu",
+      "us",
+      "asia",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "development",
+      "game-server",
+      "ai",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": false
+    },
+    "description": "Облачные VPS с почасовой оплатой и широкой географией: Европа, США, Азия. Удобен, когда нужна конкретная страна размещения и гибкий счёт за часы",
+    "pros": [
+      "Почасовая оплата",
+      "Дата-центры в Европе, США и Азии",
+      "Диск и ресурсы расширяются под задачу"
+    ],
+    "prosEn": [
+      "Hourly billing",
+      "Data centers in Europe, the US and Asia",
+      "Disk and resources scale to the task"
+    ],
+    "cons": [
+      "Российских локаций нет",
+      "Бренд менее известен на рынке СНГ"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "A less familiar brand in the CIS market"
+    ],
+    "affiliate": {
+      "rate": "по программе Cherry Servers",
+      "term": "пока клиент активен",
+      "cookie": "не раскрыт",
+      "note": "Удобный для ОАЭ вывод: SEPA и крипта, холд 30 дней",
+      "payoutInternal": "выплаты 20-25 числа"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "Cloud VPS with hourly billing and broad geography: Europe, the US and Asia. Handy when you need a specific host country and flexible pay-by-the-hour billing"
+  },
+  {
+    "slug": "massivegrid",
+    "name": "MassiveGRID",
+    "color": "#2f6fed",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://portal.massivegrid.com/aff.php?aff=770",
+    "site": "https://massivegrid.com",
+    "geos": [
+      "us",
+      "eu",
+      "asia",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "database",
+      "development",
+      "game-server",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": false,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Облако с NVMe-дисками и площадками в Нью-Йорке, Лондоне, Франкфурте и Сингапуре. Заявлен аплинк 2 Гбит и SLA на аптайм",
+    "pros": [
+      "NVMe во всех тарифах",
+      "Площадки в США, Европе и Азии",
+      "Заявленный аплинк 2 Гбит"
+    ],
+    "prosEn": [
+      "NVMe on every plan",
+      "Sites in the US, Europe and Asia",
+      "An advertised 2 Gbps uplink"
+    ],
+    "cons": [
+      "Российских локаций нет",
+      "Штатные бэкапы не во всех тарифах"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "Built-in backups are not on every plan"
+    ],
+    "affiliate": {
+      "rate": "20% recurring",
+      "term": "recurring",
+      "cookie": "90 дней",
+      "note": "Порог вывода $0",
+      "payoutInternal": "уточнить формулировку cash withdrawal"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A cloud with NVMe storage and sites in New York, London, Frankfurt and Singapore. A 2 Gbps uplink and an uptime SLA are advertised"
+  },
+  {
+    "slug": "racknerd",
+    "name": "RackNerd",
+    "color": "#e8590c",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://my.racknerd.com/aff.php?aff=20937",
+    "site": "https://www.racknerd.com",
+    "geos": [
+      "us",
+      "eu",
+      "asia",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "development",
+      "game-server",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": false,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Очень дешёвый KVM VPS с большим числом площадок в США и точками в Европе и Азии. Оплата за год вперёд, отсюда низкая эффективная цена",
+    "pros": [
+      "Очень низкая цена в пересчёте на месяц",
+      "Много дата-центров в США",
+      "Есть Европа и Сингапур"
+    ],
+    "prosEn": [
+      "A very low monthly-equivalent price",
+      "Many US data centers",
+      "Europe and Singapore available"
+    ],
+    "cons": [
+      "Оплата только за год вперёд",
+      "Вывод партнёрских выплат только через PayPal"
+    ],
+    "consEn": [
+      "Billed a year in advance only",
+      "Affiliate payouts via PayPal only"
+    ],
+    "affiliate": {
+      "rate": "15% recurring",
+      "term": "recurring",
+      "cookie": "не раскрыт",
+      "note": "Очень дешёвый вход, хорош для контента и калькулятора",
+      "payoutInternal": "только PayPal"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A very cheap KVM VPS with many US locations plus points in Europe and Asia. Billed a year upfront, hence the low effective price"
+  },
+  {
+    "slug": "ethernetservers",
+    "name": "Ethernet Servers",
+    "color": "#1098ad",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://www.ethernetservers.com/aff.php?aff=3108",
+    "site": "https://www.ethernetservers.com",
+    "geos": [
+      "us",
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "development",
+      "game-server",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Недорогой VPS с площадками в США, Германии и Великобритании, ежедневными бэкапами и портом 10 Гбит",
+    "pros": [
+      "Ежедневные бэкапы в комплекте",
+      "Порт 10 Гбит",
+      "Щедрый трафик"
+    ],
+    "prosEn": [
+      "Daily backups included",
+      "A 10 Gbps port",
+      "Generous bandwidth"
+    ],
+    "cons": [
+      "Российских локаций нет",
+      "Вывод партнёрских выплат через PayPal"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "Affiliate payouts via PayPal"
+    ],
+    "affiliate": {
+      "rate": "20% пожизненно",
+      "term": "lifetime",
+      "cookie": "не раскрыт",
+      "note": "Комиссия доступна при пороге от $25",
+      "payoutInternal": "от $25, PayPal"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "An inexpensive VPS with sites in the US, Germany and the UK, daily backups and a 10 Gbps port"
+  },
+  {
+    "slug": "rosehosting",
+    "name": "RoseHosting",
+    "color": "#c2255c",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://secure.rosehosting.com/clientarea/?affid=2795",
+    "site": "https://www.rosehosting.com",
+    "geos": [
+      "us"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Управляемый VPS на NVMe с администрированием на стороне провайдера. Один дата-центр в США, зато берут на себя настройку и поддержку сервера",
+    "pros": [
+      "Полностью управляемый сервер",
+      "NVMe и ECC-память",
+      "Безлимитный трафик"
+    ],
+    "prosEn": [
+      "A fully managed server",
+      "NVMe and ECC memory",
+      "Unmetered bandwidth"
+    ],
+    "cons": [
+      "Дороже неуправляемых VPS",
+      "Один дата-центр в США",
+      "Вывод только PayPal, холд 65 дней"
+    ],
+    "consEn": [
+      "Pricier than unmanaged VPS",
+      "A single US data center",
+      "PayPal-only payouts, 65-day hold"
+    ],
+    "affiliate": {
+      "rate": "разовая выплата плюс 10% пожизненно",
+      "term": "разово + recurring",
+      "cookie": "не раскрыт",
+      "note": "Управляемый хостинг, высокий чек",
+      "payoutInternal": "PayPal, холд 65 дней"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A managed NVMe VPS with server administration handled by the provider. A single US data center, but they take on setup and server support"
+  },
+  {
+    "slug": "vpsdime",
+    "name": "VPSDime",
+    "color": "#0ca678",
+    "country": "INT",
+    "affiliateStatus": "active",
+    "url": "https://vpsdime.com/a/4794",
+    "site": "https://vpsdime.com",
+    "geos": [
+      "us",
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "database",
+      "development",
+      "game-server",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": false,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "VPS с большим объёмом памяти за небольшие деньги и площадками в США, Великобритании и Нидерландах. Известен щедрыми конфигурациями",
+    "pros": [
+      "Много памяти за небольшую цену",
+      "NVMe-диск",
+      "Площадки в США и Европе"
+    ],
+    "prosEn": [
+      "Plenty of RAM for the price",
+      "NVMe storage",
+      "US and Europe locations"
+    ],
+    "cons": [
+      "Российских локаций нет",
+      "Партнёрскую программу нужно активировать в кабинете"
+    ],
+    "consEn": [
+      "No Russian locations",
+      "The affiliate program must be activated in the account"
+    ],
+    "affiliate": {
+      "rate": "по программе VPSDime",
+      "term": "пока клиент активен",
+      "cookie": "не раскрыт",
+      "note": "Payoneer работает в ОАЭ. Партнёрку активировать в кабинете",
+      "payoutInternal": "Payoneer"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A VPS with a lot of RAM for the money and sites in the US, the UK and the Netherlands. Known for generous configurations"
+  },
+  {
+    "slug": "profitserver",
+    "name": "ProfitServer",
+    "color": "#f59f00",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://profitserver.ru/?partner_id=3415425",
+    "site": "https://profitserver.ru",
+    "geos": [
+      "ru",
+      "eu",
+      "global"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "database",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Провайдер с русскоязычной поддержкой и широкой географией: Россия и более 20 стран. Линейка от лёгких тарифов до мощных конфигураций",
+    "pros": [
+      "Русскоязычная поддержка",
+      "Россия и 20+ стран на выбор",
+      "Есть очень дешёвые стартовые тарифы"
+    ],
+    "prosEn": [
+      "Russian-speaking support",
+      "Russia and 20+ countries to choose from",
+      "Very cheap entry plans available"
+    ],
+    "cons": [
+      "Условия вывода и KYC для резидента ОАЭ неясны",
+      "Младшие тарифы с малой памятью"
+    ],
+    "consEn": [
+      "Payout terms and KYC for a UAE resident are unclear",
+      "Entry plans have little memory"
+    ],
+    "affiliate": {
+      "rate": "по программе ProfitServer",
+      "term": "пожизненно",
+      "cookie": "не раскрыт",
+      "note": "Широкая гео, вывод и KYC для ОАЭ уточнить",
+      "payoutInternal": "условия в кабинете"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A provider with Russian-speaking support and broad geography: Russia and 20+ countries. A range from light plans to powerful configurations"
+  },
+  {
+    "slug": "beget",
+    "name": "Beget",
+    "color": "#f76707",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://beget.com/p2667489",
+    "site": "https://beget.com",
+    "geos": [
+      "ru",
+      "kz"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "telegram-bot",
+      "database",
+      "development",
+      "n8n",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": true
+    },
+    "description": "Известный российский хостер с удобной панелью, NVMe-дисками и почасовой тарификацией. Площадки в России и Казахстане",
+    "pros": [
+      "Удобная панель и быстрый старт",
+      "NVMe и посуточная тарификация",
+      "Есть площадка в Казахстане"
+    ],
+    "prosEn": [
+      "A convenient panel and fast start",
+      "NVMe and daily billing",
+      "A Kazakhstan location is available"
+    ],
+    "cons": [
+      "Полный запрет поискового контекста по бренду",
+      "Зарубежных локаций мало"
+    ],
+    "consEn": [
+      "A full ban on brand search advertising",
+      "Few international locations"
+    ],
+    "affiliate": {
+      "rate": "по программе Beget",
+      "term": "пожизненно",
+      "cookie": "не раскрыт",
+      "note": "Полный запрет поискового контекста по бренду",
+      "payoutInternal": "условия в кабинете"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A well-known Russian host with a convenient panel, NVMe storage and hourly billing. Sites in Russia and Kazakhstan"
+  },
+  {
+    "slug": "vpshouse",
+    "name": "VPS.house",
+    "color": "#4263eb",
+    "country": "RU",
+    "affiliateStatus": "active",
+    "url": "https://vps.house/p357",
+    "site": "https://vps.house",
+    "geos": [
+      "ru",
+      "eu"
+    ],
+    "tasks": [
+      "website",
+      "telegram-bot",
+      "development",
+      "docker"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Небольшой российский провайдер с гибким конфигуратором сервера и дата-центром в Москве. Есть и зарубежная площадка в Нидерландах",
+    "pros": [
+      "Гибкий конфигуратор ресурсов",
+      "NVMe-диск",
+      "Свой дата-центр в Москве"
+    ],
+    "prosEn": [
+      "A flexible resource configurator",
+      "NVMe storage",
+      "Its own Moscow data center"
+    ],
+    "cons": [
+      "Небольшой игрок, условия уточнять",
+      "Сайт только на русском"
+    ],
+    "consEn": [
+      "A small player, terms to be clarified",
+      "The site is in Russian only"
+    ],
+    "affiliate": {
+      "rate": "по оплачиваемым периодам",
+      "term": "по оплачиваемым периодам",
+      "cookie": "не раскрыт",
+      "note": "Небольшой игрок, условия уточнять",
+      "payoutInternal": "условия в кабинете"
+    },
+    "verifiedAt": "2026-08-16",
+    "descriptionEn": "A small Russian provider with a flexible server configurator and a Moscow data center. A Netherlands site is available too",
+    "enHidden": true
+  },
+  {
+    "slug": "cloudways",
+    "name": "Cloudways",
+    "color": "#2e3192",
+    "country": "MT",
+    "affiliateStatus": "active",
+    "url": "https://www.cloudways.com/en/?id=2184024",
+    "site": "https://www.cloudways.com",
+    "geos": [
+      "eu",
+      "us",
+      "global",
+      "asia"
+    ],
+    "tasks": [
+      "website",
+      "online-store",
+      "development",
+      "n8n",
+      "docker"
+    ],
+    "virtualization": [
+      "Cloud"
+    ],
+    "features": {
+      "panel": true,
+      "ddos": true,
+      "backup": true,
+      "hourly": true,
+      "testPeriod": true
+    },
+    "description": "Управляемый облачный хостинг поверх DigitalOcean, AWS, Google Cloud, Vultr и Linode. Платформа берёт на себя настройку сервера, кэш и обновления, вы платите за управляемость, а не за голый VPS.",
+    "descriptionEn": "Managed cloud hosting on top of DigitalOcean, AWS, Google Cloud, Vultr and Linode. The platform handles server setup, caching and updates, so you pay for managed convenience rather than a bare VPS.",
+    "pros": [
+      "Управление сервером, кэш и стек берёт на себя платформа",
+      "Выбор облака и дата-центра: DO, AWS, GCP, Vultr, Linode",
+      "Почасовая оплата и бесплатный пробный период"
+    ],
+    "prosEn": [
+      "The platform manages the server, caching and stack",
+      "Choice of cloud and data center: DO, AWS, GCP, Vultr, Linode",
+      "Hourly billing and a free trial"
+    ],
+    "cons": [
+      "Это управляемый хостинг, дороже обычного VPS",
+      "Оплата в валюте, нет российских локаций",
+      "Пожизненная комиссия партнёрки только на hybrid-плане"
+    ],
+    "consEn": [
+      "It is managed hosting, pricier than a bare VPS",
+      "Billing in foreign currency, no Russian locations",
+      "Lifetime affiliate commission only on the hybrid plan"
+    ],
+    "affiliate": {
+      "rate": "До $350 CPA или $30 за продажу + 7-12% recurring",
+      "term": "Пожизненно на hybrid-плане",
+      "cookie": "90 дней",
+      "note": "Управляемый хостинг поверх DO/AWS/GCP; для пожизненной комиссии нужен hybrid-план",
+      "payoutInternal": "через партнёрскую платформу"
+    },
+    "enHidden": false,
+    "noUtm": false,
+    "verifiedAt": "2026-08-17"
+  },
+  {
+    "slug": "firevps",
+    "name": "FireVPS",
+    "color": "#e8552d",
+    "country": "US",
+    "affiliateStatus": "active",
+    "url": "https://clients.firevps.net/aff.php?aff=104",
+    "site": "https://firevps.net",
+    "geos": [
+      "us",
+      "eu",
+      "asia",
+      "global"
+    ],
+    "tasks": [
+      "development",
+      "game-server",
+      "n8n",
+      "website",
+      "docker",
+      "minecraft"
+    ],
+    "virtualization": [
+      "KVM"
+    ],
+    "features": {
+      "panel": false,
+      "ddos": true,
+      "backup": false,
+      "hourly": false,
+      "testPeriod": false
+    },
+    "description": "Windows RDP и Linux VPS на AMD Ryzen с дата-центрами в 16 локациях по 10 странам. Уклон в RDP-доступ и быстрые SSD/NVMe-конфигурации.",
+    "descriptionEn": "Windows RDP and Linux VPS on AMD Ryzen with data centers in 16 locations across 10 countries. Focused on RDP access and fast SSD/NVMe configurations.",
+    "pros": [
+      "Много локаций: США, Европа, Азия",
+      "Есть и Windows RDP, и Linux VPS на Ryzen",
+      "Тарифы с каналом до 10 Гбит/с"
+    ],
+    "prosEn": [
+      "Many locations: USA, Europe, Asia",
+      "Both Windows RDP and Linux VPS on Ryzen",
+      "Plans with up to 10 Gbps network"
+    ],
+    "cons": [
+      "Лучшая цена только на длинной подписке (1-2 года)",
+      "Нет российских локаций",
+      "Базовая панель управления"
+    ],
+    "consEn": [
+      "Best price only on a long 1-2 year term",
+      "No Russian locations",
+      "A basic control panel"
+    ],
+    "affiliate": {
+      "rate": "20% recurring",
+      "term": "Пока клиент активен",
+      "cookie": "не раскрыт",
+      "note": "Линейки Windows RDP и Linux VPS (Ryzen); партнёрка на WHMCS",
+      "payoutInternal": "через партнёрскую платформу"
+    },
+    "enHidden": false,
+    "noUtm": false,
+    "verifiedAt": "2026-08-17"
+  }
+]

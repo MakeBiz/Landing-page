@@ -528,3 +528,7 @@ body.mbskin{background:transparent}
 }
 @media (max-width:640px){#mbCkT{bottom:calc(76px + env(safe-area-inset-bottom,0px))!important;width:38px!important;height:38px!important}#mbCk{bottom:calc(76px + env(safe-area-inset-bottom,0px))!important}}
 @media (min-width:641px) and (max-width:1100px){.hdr-right .btn{display:inline-flex;width:auto;padding:10px 16px;font-size:14px}}
+/* страница /vps: карточки провайдеров */
+.vps-grid .price{display:flex;flex-direction:column}.vps-grid .price ul{flex:1}
+.vps-geo{margin:10px 0 0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4FE07F}
+.vps-desc{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--mut)}

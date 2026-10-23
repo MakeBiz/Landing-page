@@ -1,0 +1,77 @@
+# MakeBiz Technologies
+
+> MakeBiz Technologies (legal entity MakeBiz Technologies FZE LLC) is an IT integrator in the UAE: Bitrix24 CRM implementation and support, AI agents and BI analytics for companies in Dubai and across the Emirates. The website is available in Russian (main version) and English, all prices are in UAE dirhams (AED).
+
+Key facts:
+
+- Legal entity: MakeBiz Technologies FZE LLC, a free zone company of Ajman NuVentures Centre (UAE), registration number 2624215090888, Amber Gem Tower, Ajman
+- Official Bitrix24 partner in the UAE
+- Founder: Anton Chernobaev. 8 years in IT and CRM, 150+ implementation projects
+- Contacts: WhatsApp and phone +971 50 262 0927, Telegram @Anton_MakeBiz (https://t.me/Anton_MakeBiz), email info@makebiztechnologies.com
+- Meetings in Dubai or by video call; languages: English and Russian
+- MakeBiz does not provide company formation, visas or trade licenses
+
+## Bitrix24
+
+- [Bitrix24 implementation in Dubai and the UAE](https://makebiztechnologies.com/en/bitrix): turnkey CRM setup, pipelines, WhatsApp, 5% VAT invoices, training. Standard CRM setup from AED 10,000, work beyond the standard AED 200 per hour, basic launch from 14 days
+- [Bitrix24 support](https://makebiztechnologies.com/en/bitrix-support): monthly packages of 5, 10 or 20 hours for AED 1,250, 2,300 or 4,200; an hour beyond the package AED 250
+- [WhatsApp and messengers in Bitrix24](https://makebiztechnologies.com/en/bitrix-messengers): official WhatsApp Business Platform, Telegram, social media and website chat; connection AED 500, provider subscription separate
+- [Accounting integrations](https://makebiztechnologies.com/en/bitrix-integrations): Bitrix24 with Zoho Books, QuickBooks, Odoo and 1C, invoices with 5% VAT, payments and stock; from AED 10,000
+- [Bitrix24 prices in the UAE](https://makebiztechnologies.com/en/bitrix-licenses): vendor prices from bitrix24.ae in USD, shown in AED at 3.6725. Cloud billed annually: Basic AED 180 ($49), Standard AED 364 ($99), Professional AED 731 ($199) a month, Enterprise from AED 1,465 ($399). On-premise per year: Business AED 13,184 ($3,590), Enterprise AED 91,776 ($24,990)
+- [On-premise Bitrix24](https://makebiztechnologies.com/en/bitrix-on-premise): installation on the client server or in a UAE data center, migration from cloud, customization, support
+- [BI analytics](https://makebiztechnologies.com/en/bi-analytics): management dashboards on CRM, accounting, telephony and ad data; from AED 1,000
+- [Servers and VPS](https://makebiztechnologies.com/en/vps): VPS selection from vetted providers (same list as servercalc.com, including UAE locations), deployment of on-premise Bitrix24 and AI agents, setup AED 200 per hour
+
+## AI agents
+
+- [AI agents for business](https://makebiztechnologies.com/en/ai-agents): one agent from AED 5,000; packages Start AED 5,000, Business AED 10,000, Holding priced individually; maintenance 10% of the implementation cost per month; demo free
+- [AI sales head](https://makebiztechnologies.com/en/ai-agents/rop): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan
+- [Call speech analytics](https://makebiztechnologies.com/en/ai-agents/zvonki): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes
+- [HR agent](https://makebiztechnologies.com/en/ai-agents/hr), [procurement agent](https://makebiztechnologies.com/en/ai-agents/zakupki), [marketing agent](https://makebiztechnologies.com/en/ai-agents/marketing), [finance agent](https://makebiztechnologies.com/en/ai-agents/finansy), [liaison agent](https://makebiztechnologies.com/en/ai-agents/svyaznoy)
+
+## Bitrix24 solutions for the UAE
+
+- [Real estate agency in Dubai](https://makebiztechnologies.com/en/bitrix-real-estate): Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED
+- [VAT, dirhams and e-invoicing](https://makebiztechnologies.com/en/bitrix-vat-einvoicing): 5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027
+- [Telephony in the UAE](https://makebiztechnologies.com/en/bitrix-telephony): Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls
+- [Bitrix24 or Zoho CRM](https://makebiztechnologies.com/en/bitrix-vs-zoho): An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting
+- [Distribution and wholesale](https://makebiztechnologies.com/en/bitrix-distribution): Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc
+- [Moving from another CRM](https://makebiztechnologies.com/en/bitrix-migration): Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales
+- [Clinics and salons](https://makebiztechnologies.com/en/bitrix-clinics): Online booking, WhatsApp reminders, client consents and health data under UAE law
+- [Business setup and consulting](https://makebiztechnologies.com/en/bitrix-business-setup): Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC
+
+## Company
+
+- [Pricing in AED](https://makebiztechnologies.com/en/pricing)
+- [Cases](https://makebiztechnologies.com/en/cases): CDEK, Unilin, HAVAL, Performia, Apartico
+- [Partner program](https://makebiztechnologies.com/en/partners): 20% of the first payment and 10% of payments for 12 months
+- [About](https://makebiztechnologies.com/en/about)
+- [Contacts](https://makebiztechnologies.com/en/contacts)
+- [News](https://makebiztechnologies.com/en/news)
+
+## Russian version
+
+- Main page in Russian: https://makebiztechnologies.com/
+- Full text of the Russian site: https://makebiztechnologies.com/llms-full.txt
+- Full text of the English site: https://makebiztechnologies.com/en/llms-full.txt
+
+## Latest news
+
+- [An AI agent on WhatsApp: handling inbound leads · MakeBiz](https://makebiztechnologies.com/en/news/ai-agent-v-whatsapp-vhodyashchie-zayavki)
+- [The AI you don't notice · MakeBiz](https://makebiztechnologies.com/en/news/ai-kotorogo-vy-ne-zamechaete)
+- [AI agent or automation rule: the difference · MakeBiz](https://makebiztechnologies.com/en/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm)
+- [Which processes Dubai companies automate first · MakeBiz](https://makebiztechnologies.com/en/news/chto-avtomatiziruyut-pervym-v-dubae)
+- [What to migrate when you switch CRM, and what to leave · MakeBiz](https://makebiztechnologies.com/en/news/chto-perenosit-pri-smene-crm)
+- [What Is an AI Agent, and How Is It Different From a Chatbot · MakeBiz](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
+- [What the call knows and the CRM record does not · MakeBiz](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
+- [Where the Sales Team Loses a Client During a Call · MakeBiz](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
+- [Where procurement loses money comparing suppliers · MakeBiz](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi)
+- [CRM implementation cost in the UAE: what you pay for · MakeBiz](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
+- [What AI actually saves in sales, and what it does not · MakeBiz](https://makebiztechnologies.com/en/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net)
+- [Why AI Forgets Everything, and How Memory Fixes It · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu)
+- [Why One Agent Stalls, and a Team of Agents Gets the Job Done · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo)
+- [Five reasons AI agent rollouts stall · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-vnedrenie-ai-agentov-buksuet)
+- [CRM access rights in the UAE: who should see what · MakeBiz](https://makebiztechnologies.com/en/news/prava-dostupa-v-crm-kto-chto-vidit)
+- [Which AI agent to start with in a sales team · MakeBiz](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
+- [98% accuracy, and the invoices are still wrong · MakeBiz](https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami)
+- [Bitrix24 in the UAE: how the project differs from a Russian one · MakeBiz](https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya)

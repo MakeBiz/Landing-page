@@ -14,7 +14,7 @@ SITE = 'https://makebiztechnologies.com'
 AG = ['rop', 'svyaznoy', 'zvonki', 'hr', 'zakupki', 'marketing', 'finansy']
 CASES = ['cdek-b2b', 'unilin-crm', 'haval-vector', 'performia-crm', 'apartika-crm']
 NEW = ['/', '/bitrix', '/bitrix-support', '/bitrix-messengers', '/bitrix-integrations', '/bitrix-licenses', '/bitrix-korobka', '/bi-analitika', '/ceny',
-       '/ai-agents'] + ['/ai-agents/' + a for a in AG] + ['/keysy'] + ['/keysy/' + c for c in CASES] + ['/o-kompanii', '/partners', '/contacts']
+       '/ai-agents'] + ['/ai-agents/' + a for a in AG] + ['/keysy'] + ['/keysy/' + c for c in CASES] + ['/vps', '/o-kompanii', '/partners', '/contacts']
 PRIO = {'/': '1.0', '/bitrix': '0.9', '/ai-agents': '0.9', '/bitrix-licenses': '0.9', '/bitrix-korobka': '0.8', '/ceny': '0.8'}
 
 def ru_file(p, base=None): return os.path.join(base or NEWD, 'index.html' if p == '/' else p.strip('/') + '.html')
@@ -69,6 +69,7 @@ L = ['# MakeBiz Technologies', '',
      '> MakeBiz Technologies (legal entity MakeBiz Technologies FZE LLC) is an IT integrator in the UAE: Bitrix24 CRM implementation and support, AI agents and BI analytics for companies in Dubai and across the Emirates. The website is available in Russian (main version) and English, all prices are in UAE dirhams (AED).', '',
      'Key facts:', '',
      '- Legal entity: MakeBiz Technologies FZE LLC, a free zone company of Ajman NuVentures Centre (UAE), registration number 2624215090888, Amber Gem Tower, Ajman',
+     '- Official Bitrix24 partner in the UAE',
      '- Founder: Anton Chernobaev. 8 years in IT and CRM, 150+ implementation projects',
      '- Contacts: WhatsApp and phone +971 50 262 0927, Telegram @Anton_MakeBiz (https://t.me/Anton_MakeBiz), email info@makebiztechnologies.com',
      '- Meetings in Dubai or by video call; languages: English and Russian',
@@ -80,7 +81,8 @@ L = ['# MakeBiz Technologies', '',
      f'- [Accounting integrations]({U("/bitrix-integrations")}): Bitrix24 with Zoho Books, QuickBooks, Odoo and 1C, invoices with 5% VAT, payments and stock; from AED 10,000',
      f'- [Bitrix24 prices in the UAE]({U("/bitrix-licenses")}): vendor prices from bitrix24.ae in USD, shown in AED at 3.6725. Cloud billed annually: Basic AED 180 ($49), Standard AED 364 ($99), Professional AED 731 ($199) a month, Enterprise from AED 1,465 ($399). On-premise per year: Business AED 13,184 ($3,590), Enterprise AED 91,776 ($24,990)',
      f'- [On-premise Bitrix24]({U("/bitrix-korobka")}): installation on the client server or in a UAE data center, migration from cloud, customization, support',
-     f'- [BI analytics]({U("/bi-analitika")}): management dashboards on CRM, accounting, telephony and ad data; from AED 1,000', '',
+     f'- [BI analytics]({U("/bi-analitika")}): management dashboards on CRM, accounting, telephony and ad data; from AED 1,000',
+     f'- [Servers and VPS]({U("/vps")}): VPS selection from vetted providers (same list as servercalc.com, including UAE locations), deployment of on-premise Bitrix24 and AI agents, setup AED 200 per hour', '',
      '## AI agents', '',
      f'- [AI agents for business]({U("/ai-agents")}): one agent from AED 5,000; packages Start AED 5,000, Business AED 10,000, Holding priced individually; maintenance 10% of the implementation cost per month; demo free',
      f'- [AI sales head]({U("/ai-agents/rop")}): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan',

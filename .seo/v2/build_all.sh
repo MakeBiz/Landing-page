@@ -11,6 +11,8 @@ MODE=${1:-live}
 if [ "$MODE" = preview ]; then OUTD=v2; B=/v2; PV=1; else OUTD=site-v2; B=; PV=0; fi
 VER=${MB_V:-$(cat "$V2/site-base.css" "$V2/dark_uae.css" "$V2/site-src.js" "$V2/bg_beams.js" "$V2/make_site_ae.py" "$V2/make_site_en_ae.py" | cksum | cut -c1-8)}
 export MB_V=$VER MB_BASE=$B MB_OUT=$OUTD MB_PREVIEW=$PV MB_SITE="$SITE"
+# каталог провайдеров VPS из кабинета MakeBiz (как у servercalc.com): кабинет не ответил, остаётся прошлый файл
+if curl -s -m 15 -f "https://makebiz-makebiz-platform-3628.twc1.net/catalog/servercalc-com.json" -o "$V2/data/.vps-catalog.tmp" && grep -q '"hidden"' "$V2/data/.vps-catalog.tmp"; then cat "$V2/data/.vps-catalog.tmp" > "$V2/data/vps-catalog.json"; fi
 python3 "$V2/build_ae.py" "$SITE" >/dev/null
 python3 "$V2/build_en_ae.py" "$SITE" >/dev/null
 D="$SITE/$OUTD"; mkdir -p "$D/assets"

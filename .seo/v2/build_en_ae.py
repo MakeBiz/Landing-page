@@ -90,7 +90,7 @@ def header(active):
   <div class="mnav" hidden>
     <div class="mnav-group"><div class="mnav-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div class="mnav-group"><div class="mnav-t">AI agents</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in AI_MENU)}</div>
-    <div class="mnav-group"><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="{U('/o-kompanii')}">About</a><a href="{U('/contacts')}">Contacts</a><a href="https://wa.me/{WA}">WhatsApp</a><a href="{RU('/')}" lang="ru">Русская версия</a><a href="tel:{PHONE_TEL}">{PHONE}</a></div>
+    <div class="mnav-group"><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="{U('/o-kompanii')}">About</a><a href="{U('/contacts')}">Contacts</a><a href="https://wa.me/{WA}">WhatsApp</a><a href="{RU('/')}" lang="ru">Русская версия</a><a href="tel:{PHONE_TEL}">{PHONE}</a></div>
   </div>
 </header>'''
 
@@ -99,12 +99,12 @@ def footer():
   <div class="wrap ftr-grid">
     <div class="ftr-brand">
       <a class="logo" href="{U('/')}"><img src="{U('/img/logo.png')}" width="234" height="80" alt="MakeBiz"></a>
-      <p>We implement Bitrix24 and AI agents for companies in Dubai and across the Emirates. 8 years in IT, we work in English and Russian</p>
+      <p>Official Bitrix24 partner in the UAE. We implement Bitrix24 and AI agents for companies in Dubai and across the Emirates. 8 years in IT, we work in English and Russian</p>
       <p class="ftr-contacts"><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{WA}">WhatsApp</a> · <a href="https://t.me/{TG}">Telegram @{TG}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
     <div><div class="ftr-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI sales head</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
-    <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
+    <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
   </div>
   <div class="wrap ftr-legal">
     <span>{LEGAL}</span>
@@ -236,7 +236,8 @@ ORG = {
     "knowsLanguage": ["en", "ru"],
     "founder": {"@type": "Person", "@id": SITE + "/#founder", "name": "Anton Chernobaev"},
     "knowsAbout": ["Bitrix24", "CRM implementation in the UAE", "on-premise Bitrix24", "Bitrix24 and Zoho Books integration", "WhatsApp in CRM", "VAT in CRM", "BI analytics", "AI agents", "call speech analytics"],
-    "disambiguatingDescription": "IT integrator: Bitrix24, AI agents and BI. Does not provide company formation, visas or trade licenses",
+    "disambiguatingDescription": "Official Bitrix24 partner and integrator in the UAE: Bitrix24, AI agents and BI. Does not provide company formation, visas or trade licenses",
+    "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Official Bitrix24 partner", "credentialCategory": "partner"},
     "sameAs": ["https://t.me/makebizchannel", "https://makebiz.life/"],
 }
 
@@ -418,6 +419,7 @@ built = []
 # ---------- HOME
 home_faq = [
     ('What does MakeBiz do in the UAE?', 'Two directions. First: Bitrix24 implementation and support for companies in Dubai and across the Emirates, including WhatsApp, accounting integrations, licenses and BI analytics. Second: AI agents that take over routine in sales, finance, procurement and hiring.'),
+    ('Are you an official Bitrix24 partner?', 'Yes, MakeBiz Technologies is an official Bitrix24 partner in the UAE: we implement and support portals and help with cloud and on-premise Bitrix24 licenses.'),
     ('How much does Bitrix24 implementation cost?', 'Standard Bitrix24 CRM setup starts from AED 10,000. Work beyond the standard is charged at AED 200 per hour, with a fixed estimate after a short survey. The Bitrix24 license is paid separately.'),
     ('How much do AI agents cost?', 'One agent on your process starts from AED 5,000, maintenance is 10% of the implementation cost per month. A demo on your process is free.'),
     ('Can you connect WhatsApp to Bitrix24?', 'Yes. Connecting WhatsApp or another messenger costs AED 500, the provider subscription is paid separately. Every message creates a deal and lands in the client card.'),
@@ -428,10 +430,10 @@ home_body = f'''
 <section class="hero hero-home">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Bitrix24 in Dubai and the UAE</span>
+      <span class="eyebrow">Official Bitrix24 partner in the UAE</span>
       <h1>Bitrix24 that <span>sells for you</span></h1>
       <p class="lead">We implement and support Bitrix24 for companies in the UAE: deals, calls, WhatsApp, invoices in dirhams and analytics in one system. And AI agents take over the routine</p>
-      <p class="answer">MakeBiz Technologies implements and supports Bitrix24 for companies in Dubai and across the Emirates and builds AI agents for business. Standard CRM setup from AED 10,000, one AI agent from AED 5,000, we work in English and Russian.</p>
+      <p class="answer">MakeBiz Technologies, an official Bitrix24 partner, implements and supports Bitrix24 for companies in Dubai and across the Emirates and builds AI agents for business. Standard CRM setup from AED 10,000, one AI agent from AED 5,000, we work in English and Russian.</p>
       <div class="cta-row"><a class="btn" href="#form">Book a diagnostic →</a><a class="btn btn-ghost" href="#bitrix24">What we implement</a></div>
     </div>
     {V_BOARD}
@@ -475,9 +477,9 @@ bx_faq = [
 ]
 bx_body = hero('Bitrix24 · implementation in the UAE', 'Turnkey Bitrix24 <span>implementation in Dubai</span>',
     'We set up Bitrix24 as a working system: deals, WhatsApp, calls, VAT invoices and reports in one place, with a clear role for every employee',
-    'MakeBiz Technologies implements Bitrix24 turnkey for companies in Dubai and across the Emirates: pipelines, business processes, WhatsApp and telephony, Zoho Books, QuickBooks and Odoo integration, BI analytics and team training. Standard setup from AED 10,000, basic launch from 14 days.',
+    'MakeBiz Technologies, an official Bitrix24 partner in the UAE, implements Bitrix24 turnkey for companies in Dubai and across the Emirates: pipelines, business processes, WhatsApp and telephony, Zoho Books, QuickBooks and Odoo integration, BI analytics and team training. Standard setup from AED 10,000, basic launch from 14 days.',
     ('#form', 'Discuss implementation'), ('#price', 'Prices'), V_BOARD,
-    [('from AED 10,000', 'standard setup'), ('from 14 days', 'basic launch'), ('AED 200/h', 'work beyond standard'), ('EN · RU', 'working language')],
+    [('from AED 10,000', 'standard setup'), ('from 14 days', 'basic launch'), ('AED 200/h', 'work beyond standard'), ('Partner', 'Bitrix24')],
     'Bitrix24 workspace: sales pipeline, chats and analytics')
 bx_body += section('Sound familiar?', 'What people come to us with most often', cards([
     ('Requests get lost in WhatsApp', 'Clients write to managers on personal numbers, part of the requests is never handled, history leaves with the employee'),
@@ -512,7 +514,7 @@ if SOL:
         f'<a class="lcard tilt" href="{U(u)}"><small>{esc(e)}</small><b>{esc(t)}</b><span>{esc(d)}</span></a>' for e, t, d, u in SOL) + '</div>', id_='solutions')
 bx_body += section('Cases', '', case_cards(['cdek-b2b', 'unilin-crm', 'performia-crm']), tone='tint')
 bx_body += contract_block() + faq(bx_faq) + form_block('bitrix', 'Let us discuss Bitrix24 implementation') + crosslink('ai')
-page('/bitrix', 'bitrix', 'Bitrix24 implementation in Dubai and the UAE | MakeBiz',
+page('/bitrix', 'bitrix', 'Official Bitrix24 partner in Dubai: implementation | MakeBiz',
     'Turnkey Bitrix24 implementation in Dubai and the UAE: CRM, pipelines, WhatsApp, 5% VAT, accounting integrations. Setup from AED 10,000, launch from 14 days.',
     'bitrix', bx_body, [service_ld('Bitrix24 implementation', 'Turnkey Bitrix24 CRM implementation in the UAE', '/bitrix', 10000)],
     [('/', 'Home'), ('/bitrix', 'Bitrix24 implementation')], bx_faq)
@@ -663,7 +665,7 @@ lc_faq = [
 ]
 lc_body = hero('Bitrix24 · licenses and prices', f'Bitrix24 prices in the UAE <span>from {lic(49)} a&nbsp;month</span>',
     'We pick the plan for your tasks, help with the purchase and renew on time so the portal never stops',
-    f'Cloud Bitrix24 prices for the UAE from bitrix24.ae as of {PRICE_DATE}: Basic {lic(49)}, Standard {lic(99)}, Professional {lic(199)} a month billed annually, Enterprise from {lic(399)}. On-premise from {lic(3590)} a year. MakeBiz Technologies helps pick, purchase and renew the license.',
+    f'Cloud Bitrix24 prices for the UAE from bitrix24.ae as of {PRICE_DATE}: Basic {lic(49)}, Standard {lic(99)}, Professional {lic(199)} a month billed annually, Enterprise from {lic(399)}. On-premise from {lic(3590)} a year. As an official Bitrix24 partner, MakeBiz Technologies helps pick, purchase and renew the license.',
     ('#form', 'Pick a plan'), ('#ceny', 'See prices'), V_LIC,
     [(lic(49), 'cloud a month'), ('−30%', 'with annual billing'), (lic(3590), 'on-premise a year'), ('USD → AED', 'rate 3.6725')], 'Bitrix24 license')
 lc_body += section('Cloud Bitrix24 prices', f'Vendor prices as of {PRICE_DATE}, for all users of the plan. There is a Free plan for 1-2 users', prices(CLOUD, 'Prices from bitrix24.ae in US dollars, in dirhams at 3.6725. The exact amount and current promotions are fixed in the invoice'), id_='ceny')
@@ -1124,6 +1126,52 @@ page('/ceny', 'ceny', 'MakeBiz prices in the UAE: Bitrix24, support and AI agent
         for g, rows in CE_ROWS for n, v, c, u in rows if 'AED' in v and re.sub(r'\D', '', v)]}],
     [('/', 'Home'), ('/ceny', 'Pricing')], ce_faq)
 
+# ---------- VPS AND SERVERS (providers as on servercalc.com, visibility and order from the MakeBiz cabinet)
+from vps_src import providers as vps_providers, price_text as vps_price
+VPS = vps_providers('en')
+def vps_cards(items):
+    out = ''
+    for d in items:
+        pt = vps_price(d['plan'], 'en')
+        pr = f'<div class="price-val" style="font-size:22px">{esc(pt[0])}</div><div class="price-unit">{esc(pt[1])}</div>' if pt else '<div class="price-unit">price on the provider site</div>'
+        tags = ' · '.join(d['geos'])
+        fe = ''.join(f'<li>{esc(a)}</li>' for a in (d['pros'][:2] + [f[1] for f in d['feats'][:2]]))
+        out += (f'<div class="price{" is-hot" if d["pinned"] and d["rank"] == 1 else ""}"><div class="price-name">{esc(d["name"])}</div>{pr}'
+                f'<p class="vps-geo">{esc(tags)}</p><p class="vps-desc">{esc(d["desc"])}</p><ul>{fe}</ul>'
+                f'<a class="btn {"" if d["pinned"] else "btn-ghost"}" href="{esc(d["href"])}" rel="{d["rel"]}" target="_blank">Visit {esc(d["name"])} →</a></div>')
+    return f'<div class="grid g3 prices vps-grid">{out}</div>'
+VPS_N = len(VPS)
+VPS_MIN = min([d['plan'] for d in VPS if d['plan'] and d['plan']['currency'] == 'USD'], key=lambda x: x['price'], default=None)
+VPS_FROM = (f'${int(VPS_MIN["price"]) if float(VPS_MIN["price"]).is_integer() else VPS_MIN["price"]}' if VPS_MIN else '')
+VPS_DATE = max([d['verified'] for d in VPS if d['verified']], default='')
+vps_faq = [
+    ('Which VPS do we need for Bitrix24?', 'Cloud Bitrix24 needs no server. For on-premise Bitrix24 with 50 users a server with 4 vCPU, 8 GB RAM and an NVMe disk is usually enough, for hundreds of users more. We size the configuration for your users and load.'),
+    ('Are there servers in the UAE?', 'Yes, some providers on the list offer UAE locations, marked UAE in the card. If data must stay in the country, we start with them.'),
+    ('Do you resell servers?', 'No. You buy the server from the provider directly, on your own account, and pay them. We help you choose, deploy and configure the system and can take the server on support.'),
+    ('How much does server setup cost?', 'Work is AED 200 per hour or within a support package from AED 1,250 a month. We give an estimate in hours before we start.'),
+    ('Why are the links affiliate links?', 'MakeBiz may receive a reward from the provider, your price does not change. The list and order are the same as in our catalogue servercalc.com.'),
+]
+vps_body = hero('Servers and VPS', 'VPS and servers <span>for business in the UAE</span>',
+    'We pick a server for the job: on-premise Bitrix24, a website, AI agents, databases. We deploy, configure and support it',
+    f'MakeBiz Technologies helps UAE companies choose a VPS from vetted providers ({VPS_N} on the list, with locations in the UAE, Europe, the US and Asia), deploys on-premise Bitrix24, websites and AI agents on it and supports the server. Plans{(" from " + VPS_FROM + " a month") if VPS_FROM else ""} per the servercalc.com catalogue, setup work AED 200 per hour.',
+    ('#form', 'Pick a server'), ('#providers', 'Providers'), V_BOX,
+    [(f'{VPS_N}', 'providers'), ((f'from {VPS_FROM}' if VPS_FROM else 'UAE'), 'a month' if VPS_FROM else 'and other countries'), ('AED 200/h', 'setup'), ('servercalc.com', 'our catalogue')], 'Servers for Bitrix24 and AI agents')
+vps_body += section('Providers', f'The same list and order as in our catalogue <a href="https://servercalc.com/" target="_blank" rel="noopener">servercalc.com</a>. Price of the most affordable plan{(", checked " + VPS_DATE) if VPS_DATE else ""}. Affiliate links, your price does not change', vps_cards(VPS), id_='providers')
+vps_body += section('What we do', 'Buying a server is easy, setting it up right and keeping data safe is the hard part', cards([
+    ('Selection', 'We count users and load, choose the provider, country and plan without overpaying'),
+    ('Deployment', 'We install on-premise Bitrix24, a website, databases or AI agents and set up SSL and email'),
+    ('Security', 'Access, firewall, updates and scheduled backups'),
+    ('Migration', 'We move a portal or website from an old server or the cloud without stopping work'),
+    ('Monitoring', 'We watch load, disk space and availability'),
+    ('Support', 'The server goes into a support package together with Bitrix24: from AED 1,250 a month'),
+], 3), tone='tint')
+vps_body += contract_block() + faq(vps_faq) + form_block('vps', 'We will pick a server for your task', 'Tell us what will run on the server and how many users, we propose a provider, plan and setup estimate') + crosslink('ai')
+page('/vps', 'vps', 'VPS and servers for business in the UAE: selection and setup | MakeBiz',
+    f'VPS for business in the UAE: {VPS_N} vetted providers, locations in the UAE, Europe and the US. Selection, Bitrix24 and AI agent deployment, setup AED 200 an hour.',
+    'vps', vps_body, [service_ld('VPS selection and setup', 'VPS selection, Bitrix24 and AI agent deployment, server support', '/vps', 200),
+        {"@type": "ItemList", "name": "VPS providers", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": d['name'], "url": d['href']} for i, d in enumerate(VPS)]}],
+    [('/', 'Home'), ('/vps', 'Servers and VPS')], vps_faq)
+
 # ---------- ABOUT
 ab_faq = [
     ('Who is behind MakeBiz Technologies?', 'The company was founded by Anton Chernobaev. The team has 8 years in IT and CRM and more than 150 implementation projects. Legal entity: MakeBiz Technologies FZE LLC, Ajman NuVentures Centre free zone, registration number 2624215090888.'),
@@ -1134,20 +1182,21 @@ ab_faq = [
 ]
 ab_body = hero('About', 'MakeBiz Technologies: <span>Bitrix24 and AI agents in the UAE</span>',
     'We implement Bitrix24 and AI agents so businesses lose less and grow faster. We run on the same agents and dashboards we set up for clients',
-    'MakeBiz Technologies FZE LLC (Ajman NuVentures Centre, UAE) was founded by Anton Chernobaev: 8 years in IT and CRM, more than 150 Bitrix24, AI agent and BI analytics projects. We work with companies in Dubai and across the Emirates in English and Russian, MakeBiz clients include CDEK, Unilin and HAVAL.',
+    'MakeBiz Technologies FZE LLC (Ajman NuVentures Centre, UAE), an official Bitrix24 partner, was founded by Anton Chernobaev: 8 years in IT and CRM, more than 150 Bitrix24, AI agent and BI analytics projects. We work with companies in Dubai and across the Emirates in English and Russian, MakeBiz clients include CDEK, Unilin and HAVAL.',
     ('#form', 'Discuss a project'), (U('/keysy'), 'Cases'), V_AGENTS,
     [('8 years', 'in IT and CRM'), ('150+', 'projects'), ('FZE LLC', 'UAE company'), ('EN · RU', 'working language')], 'MakeBiz team')
 ab_body += section('What we do', '', cards([
     ('Turnkey Bitrix24', f'Cloud and <a href="{U("/bitrix-korobka")}">on-premise</a> Bitrix24 implementation, support, WhatsApp, accounting integrations, licenses and BI'),
     ('AI agents', f'<a href="{U("/ai-agents")}">A team of agents</a>: sales head, liaison, speech analytics, HR, procurement, marketing, finance'),
     ('Analytics', 'BI dashboards on CRM, accounting, bank, telephony and ad data'),
-], 3))
+    ('Servers and VPS', f'<a href="{U("/vps")}">Server selection and setup</a> with vetted providers, including UAE locations'),
+], 4))
 ab_body += section('Founder', '', '''<div class="founder gl"><div><h3>Anton Chernobaev</h3><p class="f-role">Founder of MakeBiz, Dubai</p>
 <p>Builds the company around two directions: Bitrix24 and AI agents. Personally reviews client processes at the start of projects and shows how MakeBiz itself runs on agents and BI</p>
 <p class="f-links"><a href="https://t.me/Anton_MakeBiz" rel="noopener">Telegram</a> · <a href="https://www.youtube.com/channel/UCyXI8U1O215HBGvOwqVjq2Q" rel="noopener">YouTube</a></p></div></div>''', tone='tint')
 ab_body += section('Why clients trust us', '', cards([
     ('A UAE company', 'MakeBiz Technologies FZE LLC, Ajman NuVentures Centre, registration no. 2624215090888'),
-    ('Under contract', 'Contract, invoices in dirhams, the estimate is fixed before start'),
+    ('Official Bitrix24 partner', 'We implement, support and help with Bitrix24 licenses in the UAE. Contract and invoices in dirhams'),
     ('Projects for years', 'CDEK for the second year, Unilin for the third: we stay on support after launch'),
     ('We run on our own agents', 'MakeBiz finance, sales, hiring, procurement and marketing are run by AI agents'),
 ], 4))
