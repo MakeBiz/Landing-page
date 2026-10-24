@@ -532,3 +532,6 @@ body.mbskin{background:transparent}
 .vps-grid .price{display:flex;flex-direction:column}.vps-grid .price ul{flex:1}
 .vps-geo{margin:10px 0 0;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4FE07F}
 .vps-desc{margin:8px 0 0;font-size:14px;line-height:1.55;color:var(--mut)}
+/* perf 24.10 */
+.is-off,.is-off *{animation-play-state:paused!important}
+@media (max-width:960px),(pointer:coarse),(prefers-reduced-transparency:reduce){*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.hdr.is-scrolled{background:rgba(4,5,10,.97)}}

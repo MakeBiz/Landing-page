@@ -118,13 +118,16 @@
 
   function rnd(a) { return a[Math.floor(Math.random() * a.length)]; }
   function money() { return (Math.round(Math.random() * 90 + 10) * 1000).toLocaleString('ru-RU') + ' ₽'; }
+  // анимации панелей работают только на экране и в активной вкладке
+  function every(v, fn, ms) { setInterval(function () { if (document.hidden || v.__off) return; fn(); }, ms); }
+  var vio = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) { es.forEach(function (x) { x.target.__off = !x.isIntersecting; x.target.classList.toggle('is-off', !x.isIntersecting); }); }, { rootMargin: '120px' }) : null;
   var A = {
     board: function (v) {
       var N = ['ООО «Вектор»', 'ТД «Север»', 'Логистик Плюс', 'СтройМаркет', 'Альфа Опт', 'ИП Смирнов', 'МедЦентр', 'АвтоДом', 'ФудТрейд', 'ПромСнаб'], S = ['WhatsApp', 'Сайт', 'Звонок', 'Telegram', 'Авито'];
       var cols = v.querySelectorAll('.col'), cnt = v.querySelector('[data-cnt]'), c = 24, k = 0;
       function card() { var d = document.createElement('div'); d.className = 'dl' + (Math.random() < .25 ? ' hot' : ''); d.innerHTML = '<b>' + N[k % N.length] + '</b><small>' + S[k % S.length] + ' · ' + money() + '</small>'; k++; return d; }
       for (var s = 0; s < 4; s++) for (var j = 0; j < 3 - Math.floor(s / 2); j++) cols[s].appendChild(card());
-      setInterval(function () {
+      every(v, function () {
         for (var s = 3; s >= 0; s--) { var cs = cols[s].querySelectorAll('.dl'); if (s === 3) { if (cs.length > 2) cs[cs.length - 1].remove(); continue; } if (cs.length && Math.random() < .55) { var d = cs[cs.length - 1]; d.remove(); d.style.animation = 'none'; void d.offsetWidth; d.style.animation = ''; cols[s + 1].insertBefore(d, cols[s + 1].children[1]); var nx = cols[s + 1].querySelectorAll('.dl'); for (var q = nx.length - 1; q >= 3; q--) nx[q].remove(); } }
         if (cols[0].querySelectorAll('.dl').length < 3) cols[0].insertBefore(card(), cols[0].children[1]); if (Math.random() < .5) c++; if (cnt) cnt.textContent = c;
       }, 1600);
@@ -133,22 +136,22 @@
       var box = v.querySelector('.rows'), T = ['Не создаются сделки из формы', 'Настроить обмен с 1С', 'Обучить новый отдел', 'Доработать воронку', 'Права доступа для склада', 'Робот не ставит задачу', 'Подключить телефонию', 'Новые поля в карточке'], k = 0, cnt = v.querySelector('[data-cnt]'), done = 128;
       function row(st) { var d = document.createElement('div'); d.className = 'rw'; d.innerHTML = '<span class="ico">Б24</span><span class="tx"><b>' + T[k++ % T.length] + '</b><small>заявка №' + (2400 + k) + '</small></span><span class="st ' + (st === 'Новая' ? 'new' : st === 'Решено' ? 'ok' : '') + '">' + st + '</span>'; return d; }
       ['Новая', 'В работе', 'В работе', 'Решено', 'Решено'].forEach(function (s) { box.appendChild(row(s)); });
-      setInterval(function () { var rs = box.querySelectorAll('.rw'); var w = [].filter.call(rs, function (r) { return r.querySelector('.st').textContent === 'В работе'; }); if (w.length) { var st = w[w.length - 1].querySelector('.st'); st.textContent = 'Решено'; st.className = 'st ok'; done++; if (cnt) cnt.textContent = done; }
+      every(v, function () { var rs = box.querySelectorAll('.rw'); var w = [].filter.call(rs, function (r) { return r.querySelector('.st').textContent === 'В работе'; }); if (w.length) { var st = w[w.length - 1].querySelector('.st'); st.textContent = 'Решено'; st.className = 'st ok'; done++; if (cnt) cnt.textContent = done; }
         var n = [].filter.call(rs, function (r) { return r.querySelector('.st').textContent === 'Новая'; }); n.forEach(function (r) { var st = r.querySelector('.st'); st.textContent = 'В работе'; st.className = 'st'; });
         box.insertBefore(row('Новая'), box.firstChild); var all = box.querySelectorAll('.rw'); if (all.length > 5) all[all.length - 1].remove(); }, 2000);
     },
     chat: function (v) {
       var box = v.querySelector('.msgs'), seq = [['in', 'ch-wa', 'WhatsApp', 'Здравствуйте, сколько стоит настройка CRM?'], ['out', '', 'Менеджер, из Битрикс24', 'Добрый день! Стандартная настройка 97 500 ₽, расскажете о компании?'], ['in', 'ch-tg', 'Telegram', 'Пришлите КП, пожалуйста'], ['ai', '', 'ИИ-агент', 'КП отправлено, сделка переведена на этап «КП»'], ['in', 'ch-av', 'Авито', 'Объявление ещё актуально?'], ['in', 'ch-max', 'MAX', 'Можно созвониться завтра?']], i = 0;
       function add() { var m = seq[i++ % seq.length], d = document.createElement('div'); d.className = 'msg ' + m[0]; d.innerHTML = '<small class="' + m[1] + '">' + m[2] + '</small>' + m[3]; box.appendChild(d); var all = box.querySelectorAll('.msg'); if (all.length > 4) all[0].remove(); }
-      add(); add(); setInterval(add, 2200);
+      add(); add(); every(v, add, 2200);
     },
     sync: function (v) {
       var its = v.querySelectorAll('.it'), cnt = v.querySelector('[data-cnt]'), n = 1240, i = 0;
-      setInterval(function () { var a = its[i % its.length]; a.classList.add('flash'); setTimeout(function () { a.classList.remove('flash'); }, 900); i++; n += 1; if (cnt) cnt.textContent = n.toLocaleString('ru-RU'); }, 700);
+      every(v, function () { var a = its[i % its.length]; a.classList.add('flash'); setTimeout(function () { a.classList.remove('flash'); }, 900); i++; n += 1; if (cnt) cnt.textContent = n.toLocaleString('ru-RU'); }, 700);
     },
     license: function (v) {
       var ts = v.querySelectorAll('.tier'), i = 0;
-      setInterval(function () { ts.forEach(function (t) { t.classList.remove('on'); }); ts[i++ % ts.length].classList.add('on'); }, 2200);
+      every(v, function () { ts.forEach(function (t) { t.classList.remove('on'); }); ts[i++ % ts.length].classList.add('on'); }, 2200);
       ts[0].classList.add('on');
     },
     bi: function (v) {
@@ -157,10 +160,11 @@
     agents: function (v) {
       var box = v.querySelector('.rows'), E = [['С', 'Связной', 'Ответил клиенту в WhatsApp за 12 сек'], ['Ф', 'Финансист', 'Остатки по счетам обновлены'], ['А', 'Аналитик', 'Разобрал 48 звонков, 3 требуют внимания'], ['З', 'Закупщик', 'Собрал 6 прайсов, лучший на 8% дешевле'], ['К', 'Квалификатор', 'Горячий лид передан менеджеру'], ['Н', 'Наймщик', 'Кандидат прошёл тест, приглашение отправлено']], i = 0;
       function add() { var e = E[i++ % E.length], d = document.createElement('div'); d.className = 'rw'; d.innerHTML = '<span class="ico">' + e[0] + '</span><span class="tx"><b>' + e[1] + '</b><small>' + e[2] + '</small></span><span class="st ok">готово</span>'; box.insertBefore(d, box.firstChild); var all = box.querySelectorAll('.rw'); if (all.length > 5) all[all.length - 1].remove(); }
-      for (var k = 0; k < 4; k++) add(); setInterval(add, 2000);
+      for (var k = 0; k < 4; k++) add(); every(v, add, 2000);
     }
   };
-  document.querySelectorAll('[data-vis]').forEach(function (v) { var f = A[v.dataset.vis]; if (f) f(v); });
+  document.querySelectorAll('[data-vis]').forEach(function (v) { var f = A[v.dataset.vis]; if (f) f(v); if (vio) vio.observe(v); });
+  if (vio) document.querySelectorAll('.mq,.aiblk').forEach(function (m) { vio.observe(m); });
 })();
 ;document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.sh-t');if(!b)return;var f=b.closest('.shot'),im=f.querySelector('img');f.querySelectorAll('.sh-t').forEach(function(x){x.classList.toggle('on',x===b)});im.style.opacity=.2;var n=new Image();n.onload=function(){im.src=b.dataset.src;im.alt=b.dataset.alt;im.style.opacity=1};n.src=b.dataset.src;var s=f.querySelector('.shot-bar span');if(s)s.textContent=b.textContent});
 ;(function(){var f=document.querySelector('.kfilter');if(!f)return;var st={ind:'',prod:''},box=document.querySelector(f.dataset.target),em=document.querySelector('.kf-empty');
@@ -173,3 +177,4 @@ function up(){var n=+c.querySelector('[data-i=n]').value,k=+c.querySelector('[da
 c.querySelector('[data-o=n]').textContent=n;c.querySelector('[data-o=c]').textContent=fm(k);c.querySelector('[data-o=first]').textContent=fm(first);c.querySelector('[data-o=rep]').textContent=fm(rep);c.querySelector('[data-o=tot]').textContent=fm(first+rep)}
 c.addEventListener('input',up);up()})();
 ;document.addEventListener('click',function(e){var y=e.target.closest&&e.target.closest('.yt');if(!y||y.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+y.dataset.id+'?autoplay=1';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='Видео MakeBiz';y.appendChild(f);try{if(window.ym)ym(112151442,'reachGoal','video_play')}catch(x){}});
+;(function(){var c=navigator.connection;if(c&&(c.saveData||/2g/.test(c.effectiveType||'')))return;var done={},tm;function ok(a){if(!a||!a.href||a.target==='_blank'||a.hasAttribute('download'))return false;var u;try{u=new URL(a.href)}catch(e){return false}if(u.origin!==location.origin||u.search||/^\/api\/|\.(xml|txt|pdf|zip|png|jpe?g|webp|svg)$/i.test(u.pathname))return false;if(u.pathname===location.pathname)return false;return u.pathname}function go(p){if(done[p])return;done[p]=1;var l=document.createElement('link');l.rel='prefetch';l.href=p;document.head.appendChild(l)}document.addEventListener('mouseover',function(e){var a=e.target.closest&&e.target.closest('a');var p=ok(a);if(!p)return;clearTimeout(tm);tm=setTimeout(function(){go(p)},65)},{passive:true});document.addEventListener('mouseout',function(){clearTimeout(tm)},{passive:true});document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a');var p=ok(a);if(p)go(p)},{passive:true});})();

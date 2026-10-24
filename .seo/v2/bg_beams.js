@@ -8,8 +8,9 @@
   var ctx = c.getContext('2d'), b = {W:1,H:1,mx:.5,my:.4,tx:.5,ty:.4,active:false,af:0,t:0};
   var reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches; if (reduced) b.t = 4.2;
   function rgba(h, a){ var n = parseInt(h.slice(1), 16); return 'rgba(' + ((n>>16)&255) + ',' + ((n>>8)&255) + ',' + (n&255) + ',' + a + ')'; }
-  function resize(){ b.W = innerWidth; b.H = innerHeight; var d = Math.min(devicePixelRatio || 1, 1.6); c.width = Math.round(b.W*d); c.height = Math.round(b.H*d); ctx.setTransform(d,0,0,d,0,0); }
-  resize(); addEventListener('resize', resize);
+  function resize(){ b.W = innerWidth; b.H = innerHeight; var d = 1; c.width = Math.round(b.W*d); c.height = Math.round(b.H*d); ctx.setTransform(d,0,0,d,0,0); }
+  var still = (window.matchMedia && matchMedia('(pointer: coarse)').matches) || innerWidth < 960;
+  resize(); addEventListener('resize', function(){ resize(); if (still) draw(); });
   addEventListener('pointermove', function(e){ b.tx = e.clientX / b.W; b.ty = e.clientY / b.H; b.active = true; }, {passive:true});
   document.documentElement.addEventListener('pointerleave', function(){ b.active = false; });
   function draw(){
@@ -25,6 +26,7 @@
     var vg = ctx.createLinearGradient(0,H*.55,0,H); vg.addColorStop(0,'rgba(0,0,0,0)'); vg.addColorStop(1,'rgba(2,3,5,.55)'); ctx.fillStyle = vg; ctx.fillRect(0,H*.55,W,H*.45);
   }
   var last = null;
-  function frame(now){ if (last == null) last = now; var dt = Math.min((now-last)/1000,.05); last = now; if (!reduced) b.t += dt*.72; b.mx += (b.tx-b.mx)*.07; b.my += (b.ty-b.my)*.07; b.af += ((b.active?1:0)-b.af)*.06; draw(); requestAnimationFrame(frame); }
+  if (still || reduced) { draw(); return; }
+  function frame(now){ if (last != null && now - last < 32) { requestAnimationFrame(frame); return; } if (last == null) last = now; var dt = Math.min((now-last)/1000,.05); last = now; if (!reduced) b.t += dt*.72; b.mx += (b.tx-b.mx)*.14; b.my += (b.ty-b.my)*.14; b.af += ((b.active?1:0)-b.af)*.12; draw(); requestAnimationFrame(frame); }
   requestAnimationFrame(frame);
 })();
