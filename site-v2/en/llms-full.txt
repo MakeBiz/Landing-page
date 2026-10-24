@@ -680,7 +680,56 @@ Title: BI analytics for Bitrix24 in the UAE: management dashboards | MakeBiz
 Bitrix24 · BI analytics
 # BI analytics for management
 Sales, pipeline, managers and money on one screen. Numbers from the CRM and accounting, not from manual spreadsheets
-MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 1,000, estimate after the metric list is agreed.
+MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on Standard.
+## MakeBiz BI plans
+A cabinet with ready-made dashboards on your Bitrix24 data: we connect the portal, you work with the numbers
+Prices are valid until 31 December 2026 and will rise from 1 January. Pay for a year by 31 December and lock the price for 12 months with a 20% discount
+Basic · I see the key numbers
+AED 300
+a month, price valid until 31 December 2026
+- For small businesses and a first step
+- Business pulse: revenue, enquiries, deals and calls vs last year, quarter and month
+- Leads and deals: sources, pipelines, reasons for lost deals
+- Calls from Bitrix24 telephony: how many, who, missed
+- Up to 3 users, 1 year of history
+- Nightly updates, morning summary in Telegram
+Standard · I run a sales team
+AED 700
+a month, most popular, 14 days free
+- For sales teams of 3 people or more
+- Everything in Basic
+- People: deals, leads, tasks, activities and what is urgent now
+- Stuck deals, month and quarter forecast
+- ABC analysis of clients and products, who grew and who left
+- Up to 10 users, 3 years of history, Excel export, Telegram alerts
+Pro · Analytics built for my company
+AED 1,000
+a month, price valid until 31 December 2026
+- For marketing to revenue, plans and a custom cabinet
+- Everything in Standard
+- End-to-end analytics: from ads to payment, UTM, ad accounts, spend
+- Sales plans, repeat clients, LTV, attribution, XYZ, RFM
+- An AI analyst answers questions about your numbers
+- Your logo and Bitrix24 fields, 2 hours of custom work a month, unlimited users, hourly updates
+### Paying for 6 months or a year
+| Term | Discount | Basic | Standard | Pro
+| Monthly | no discount | AED 300 AED 300 a month | AED 700 AED 700 a month | AED 1,000 AED 1,000 a month
+| 6 months | 10% off | AED 1,620 AED 270 a month | AED 3,780 AED 630 a month | AED 5,400 AED 900 a month
+| 1 year | 20% off | AED 2,880 AED 240 a month | AED 6,720 AED 560 a month | AED 9,600 AED 800 a month
+### Compare plans
+| What is included | Basic | Standard | Pro
+| Tabs in the cabinet | 12 | 28 | 52
+| Users | up to 3 | up to 10 | unlimited
+| Data updates | nightly | nightly and on demand | hourly and on demand
+| Data history | 1 year | 3 years | all
+| Excel (CSV) export | no | ✓ | ✓
+| Telegram | morning summary | summary and alerts: overdue, lost deals, drop in enquiries | + your own alert rules
+| End-to-end analytics and ad spend | no | no | ✓
+| AI analyst | no | no | ✓
+| Logo, custom tabs and Bitrix24 fields | no | no | ✓, 2 hours of work a month
+| Integrations | Bitrix24: CRM and telephony | Bitrix24: CRM and telephony | + ad accounts and web analytics; 1C and external telephony on request
+| Free trial | no | 14 days | no
+The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. You can switch plans at any time with the Plan button in the cabinet. Higher-plan tabs are visible in the menu and open on demo data. Prices exclude VAT
 ## What dashboards show
 ### Sales and plan
 Revenue, plan and actuals by department and manager
@@ -750,7 +799,13 @@ Management dashboards on data from the CRM and other systems: sales, pipeline, m
 **Which sources can be connected?**
 Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions.
 **How much does BI analytics cost?**
-BI analytics starts from AED 1,000. The final price depends on the number of sources and metrics, the estimate is fixed after we agree on the metric list.
+A MakeBiz BI cabinet subscription: Basic AED 300, Standard AED 700, Pro AED 1,000 a month. Paying for 6 months gives 10% off, for a year 20% off. Prices are valid until 31 December 2026 and will rise from 1 January.
+**Which plan should we choose?**
+If you just need to see sales and enquiries, Basic. If you have a sales team and manage people, Standard. If you track ads to revenue, set plans or want a custom cabinet, Pro.
+**Can we try it?**
+Yes, 14 days free on the Standard plan, on your own Bitrix24 data. Then you choose a plan.
+**What happens to the price after 31 December?**
+Prices will rise. To keep the current one, pay for a year by 31 December: 12 months with a 20% discount.
 **Will the numbers be right?**
 We start by checking CRM data: a dashboard tells the truth only if the system has no garbage. If needed, we first clean up cards and stages.
 ## Second direction: AI agents
@@ -767,7 +822,7 @@ Title: MakeBiz prices in the UAE: Bitrix24, support and AI agents in AED
 Prices in AED
 # MakeBiz prices in the UAE
 Bitrix24 implementation and support, licenses, AI agents and speech analytics: all prices in dirhams on one page. We work under contract and fix the estimate before start
-At MakeBiz Technologies standard Bitrix24 CRM setup starts from AED 10,000, an hour of work is AED 200, support from AED 1,250 a month for 5 hours, accounting integration from AED 10,000, WhatsApp AED 500, BI analytics from AED 1,000, one AI agent from AED 5,000. Bitrix24 licenses: cloud from AED 180 a month, on-premise from AED 13,184 a year. Prices as of October 23, 2026.
+At MakeBiz Technologies standard Bitrix24 CRM setup starts from AED 10,000, an hour of work is AED 200, support from AED 1,250 a month for 5 hours, accounting integration from AED 10,000, WhatsApp AED 500, BI analytics from AED 300 a month, one AI agent from AED 5,000. Bitrix24 licenses: cloud from AED 180 a month, on-premise from AED 13,184 a year. Prices as of October 23, 2026.
 ### Bitrix24
 | Service | Price | Terms
 | Standard CRM setup | from AED 10,000 | launch from 14 days
@@ -775,7 +830,9 @@ At MakeBiz Technologies standard Bitrix24 CRM setup starts from AED 10,000, an h
 | On-premise Bitrix24 implementation | by estimate | rate AED 200/h
 | WhatsApp or messenger connection | AED 500 | provider subscription separate
 | Accounting integration | from AED 10,000 | Zoho Books, QuickBooks, Odoo, 1C
-| BI analytics | from AED 1,000 | estimate after the metric list
+| BI analytics, Basic plan | AED 300 | a month, up to 3 users
+| BI analytics, Standard plan | AED 700 | a month, 14 days free
+| BI analytics, Pro plan | AED 1,000 | a month; 10% off for 6 months, 20% off for a year
 ### Bitrix24 support
 | Service | Price | Terms
 | 5 hours | AED 1,250 | a month
@@ -821,7 +878,7 @@ Monthly hour packages: 5 hours for AED 1,250, 10 hours for AED 2,300, 20 hours f
 **How much do AI agents cost?**
 One agent from AED 5,000. Packages: Start AED 5,000, Business AED 10,000, Holding priced individually. Maintenance is 10% of the implementation cost per month, the demo is free.
 **How much do integrations, WhatsApp and BI cost?**
-Accounting integration (Zoho Books, QuickBooks, Odoo, 1C) from AED 10,000, WhatsApp or another messenger connection AED 500, BI analytics from AED 1,000. The estimate is fixed before start.
+Accounting integration (Zoho Books, QuickBooks, Odoo, 1C) from AED 10,000, WhatsApp or another messenger connection AED 500, BI analytics from AED 300 a month. The estimate is fixed before start.
 **How much does call speech analytics cost?**
 AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000 minutes and more.
 **How do we pay?**
@@ -2457,7 +2514,7 @@ The client hears about a delay before the rep does
 ### No view of margin
 Revenue is there, profitable clients are not visible
 ## More
-How to link sales and money is on the CRM for trading and distribution page. A single view of clients and margin comes from BI analytics from AED 1,000. What calls reveal that never reaches the CRM is in our news on calls and the CRM record
+How to link sales and money is on the CRM for trading and distribution page. A single view of clients and margin comes from BI analytics from AED 300 a month. What calls reveal that never reaches the CRM is in our news on calls and the CRM record
 ## Cases
 Real MakeBiz projects
 CDEK
@@ -2492,7 +2549,7 @@ Implementation, support, integrations and AI agents by one team, no need to gath
 **Does Bitrix24 work for a logistics company?**
 Yes. Requests and quotes run in the sales pipeline, shipments in a separate process with their own statuses, and invoices and payments come from accounting.
 **How much does a logistics CRM cost in the UAE?**
-Standard setup from AED 10,000, accounting integration from AED 10,000, BI from AED 1,000. The exact estimate is fixed after a survey.
+Standard setup from AED 10,000, accounting integration from AED 10,000, BI from AED 300 a month. The exact estimate is fixed after a survey.
 **Can rate requests come from email?**
 Yes, the mailbox is connected to the CRM and an email creates a request with an owner.
 **Do you work with our TMS or WMS?**

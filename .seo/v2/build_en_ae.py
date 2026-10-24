@@ -738,17 +738,43 @@ page('/bitrix-korobka', 'bitrix-korobka', 'On-premise Bitrix24 in the UAE: setup
     [('/', 'Home'), ('/bitrix', 'Bitrix24'), ('/bitrix-korobka', 'On-premise Bitrix24')], kb_faq)
 
 # ---------- BI
+# ---------- MakeBiz BI plans (a subscription cabinet on Bitrix24 data)
+BI_T = [('Basic', 'I see the key numbers', 300), ('Standard', 'I run a sales team', 700), ('Pro', 'Analytics built for my company', 1000)]
+def bi_aed(v): return 'AED ' + f'{v:,}'
+BI_NOTE = 'Prices are valid until 31 December 2026 and will rise from 1 January. Pay for a year by 31 December and lock the price for 12 months with a 20% discount'
+def bi_tariffs():
+    cards = prices([
+        ('Basic · I see the key numbers', bi_aed(300), 'a month, price valid until 31 December 2026', ['For small businesses and a first step', 'Business pulse: revenue, enquiries, deals and calls vs last year, quarter and month', 'Leads and deals: sources, pipelines, reasons for lost deals', 'Calls from Bitrix24 telephony: how many, who, missed', 'Up to 3 users, 1 year of history', 'Nightly updates, morning summary in Telegram'], False),
+        ('Standard · I run a sales team', bi_aed(700), 'a month, most popular, 14 days free', ['For sales teams of 3 people or more', 'Everything in Basic', 'People: deals, leads, tasks, activities and what is urgent now', 'Stuck deals, month and quarter forecast', 'ABC analysis of clients and products, who grew and who left', 'Up to 10 users, 3 years of history, Excel export, Telegram alerts'], True),
+        ('Pro · Analytics built for my company', bi_aed(1000), 'a month, price valid until 31 December 2026', ['For marketing to revenue, plans and a custom cabinet', 'Everything in Standard', 'End-to-end analytics: from ads to payment, UTM, ad accounts, spend', 'Sales plans, repeat clients, LTV, attribution, XYZ, RFM', 'An AI analyst answers questions about your numbers', 'Your logo and Bitrix24 fields, 2 hours of custom work a month, unlimited users, hourly updates'], False),
+    ])
+    rows = ''.join(f'<tr><td><b>{n}</b></td><td>{d}</td>' + ''.join(f'<td class="pt-p">{bi_aed(round(v * m * (1 - k)))}<br><small>{bi_aed(round(v * (1 - k)))} a month</small></td>' for _, _, v in BI_T) + '</tr>'
+                   for n, d, m, k in (('Monthly', 'no discount', 1, 0), ('6 months', '10% off', 6, 0.10), ('1 year', '20% off', 12, 0.20)))
+    disc = (f'<h3 class="ce-h">Paying for 6 months or a year</h3><div class="ptw gl"><table class="ptab"><thead><tr><th>Term</th><th>Discount</th>'
+            + ''.join(f'<th style="text-align:right">{n}</th>' for n, _, _ in BI_T) + f'</tr></thead><tbody>{rows}</tbody></table></div>')
+    cmp_rows = [('Tabs in the cabinet', '12', '28', '52'), ('Users', 'up to 3', 'up to 10', 'unlimited'), ('Data updates', 'nightly', 'nightly and on demand', 'hourly and on demand'),
+                ('Data history', '1 year', '3 years', 'all'), ('Excel (CSV) export', 'no', '✓', '✓'), ('Telegram', 'morning summary', 'summary and alerts: overdue, lost deals, drop in enquiries', '+ your own alert rules'),
+                ('End-to-end analytics and ad spend', 'no', 'no', '✓'), ('AI analyst', 'no', 'no', '✓'), ('Logo, custom tabs and Bitrix24 fields', 'no', 'no', '✓, 2 hours of work a month'),
+                ('Integrations', 'Bitrix24: CRM and telephony', 'Bitrix24: CRM and telephony', '+ ad accounts and web analytics; 1C and external telephony on request'), ('Free trial', 'no', '14 days', 'no')]
+    cmp = ('<h3 class="ce-h">Compare plans</h3><div class="ptw gl"><table class="ptab"><thead><tr><th>What is included</th>' + ''.join(f'<th style="text-align:left">{n}</th>' for n, _, _ in BI_T)
+           + '</tr></thead><tbody>' + ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td><td>{d}</td></tr>' for a, b, c, d in cmp_rows) + '</tbody></table></div>')
+    return (f'<p class="note" style="font-size:15px;margin:0 0 22px;color:#4FE07F">{BI_NOTE}</p>' + cards + disc + cmp
+            + '<p class="note">The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. You can switch plans at any time with the Plan button in the cabinet. Higher-plan tabs are visible in the menu and open on demo data. Prices exclude VAT</p>')
 bi_faq = [
     ('What is BI analytics in Bitrix24?', 'Management dashboards on data from the CRM and other systems: sales, pipeline, manager performance, money in dirhams. We build them in the Bitrix24 BI builder or an external BI system.'),
     ('Which sources can be connected?', 'Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions.'),
-    ('How much does BI analytics cost?', 'BI analytics starts from AED 1,000. The final price depends on the number of sources and metrics, the estimate is fixed after we agree on the metric list.'),
+    ('How much does BI analytics cost?', 'A MakeBiz BI cabinet subscription: Basic AED 300, Standard AED 700, Pro AED 1,000 a month. Paying for 6 months gives 10% off, for a year 20% off. Prices are valid until 31 December 2026 and will rise from 1 January.'),
+    ('Which plan should we choose?', 'If you just need to see sales and enquiries, Basic. If you have a sales team and manage people, Standard. If you track ads to revenue, set plans or want a custom cabinet, Pro.'),
+    ('Can we try it?', 'Yes, 14 days free on the Standard plan, on your own Bitrix24 data. Then you choose a plan.'),
+    ('What happens to the price after 31 December?', 'Prices will rise. To keep the current one, pay for a year by 31 December: 12 months with a 20% discount.'),
     ('Will the numbers be right?', 'We start by checking CRM data: a dashboard tells the truth only if the system has no garbage. If needed, we first clean up cards and stages.'),
 ]
 bi_body = hero('Bitrix24 · BI analytics', 'BI analytics <span>for management</span>',
     'Sales, pipeline, managers and money on one screen. Numbers from the CRM and accounting, not from manual spreadsheets',
-    'MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 1,000, estimate after the metric list is agreed.',
+    'MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on Standard.',
     ('#form', 'Discuss a dashboard'), None, V_BI,
-    [('1 screen', 'instead of reports'), ('CRM + accounting', 'and other sources'), ('from AED 1,000', 'BI analytics'), ('AED', 'money in dirhams')], 'BI analytics dashboards')
+    [('1 screen', 'instead of reports'), ('from AED 300', 'a month'), ('14 days', 'free on Standard'), ('−20%', 'when paying yearly')], 'BI analytics dashboards')
+bi_body += section('MakeBiz BI plans', 'A cabinet with ready-made dashboards on your Bitrix24 data: we connect the portal, you work with the numbers', bi_tariffs(), id_='tarify')
 bi_body += section('What dashboards show', '', cards([
     ('Sales and plan', 'Revenue, plan and actuals by department and manager'),
     ('Pipeline', 'Stage conversion and where deals get stuck'),
@@ -774,8 +800,9 @@ bi_body += section('How we build it', '', steps([
 bi_body += section('Cases', '', case_cards(['performia-crm', 'unilin-crm', 'apartika-crm']))
 bi_body += contract_block() + faq(bi_faq) + form_block('bi-analitika', 'We will build a dashboard for your questions') + crosslink('ai')
 page('/bi-analitika', 'bi-analitika', 'BI analytics for Bitrix24 in the UAE: management dashboards | MakeBiz',
-    'BI analytics for UAE companies from AED 1,000: dashboards on Bitrix24, accounting, telephony and ad data. Sales, pipeline, managers and money on one screen.',
-    'bitrix', bi_body, [service_ld('BI analytics for Bitrix24', 'Management dashboards on CRM and accounting data', '/bi-analitika', 1000)],
+    'BI analytics for Bitrix24 in the UAE: plans from AED 300 a month, 14 days free. Sales, pipeline, managers and money on one screen, 20% off yearly.',
+    'bitrix', bi_body, [service_ld('BI analytics for Bitrix24', 'MakeBiz BI cabinet with dashboards on Bitrix24 data', '/bi-analitika', 300),
+        {"@type": "OfferCatalog", "name": "MakeBiz BI plans", "itemListElement": [{"@type": "Offer", "name": 'MakeBiz BI ' + n, "price": str(v), "priceCurrency": "AED", "priceValidUntil": "2026-12-31", "description": d + ', a month', "seller": {"@id": SITE + "/#organization"}} for n, d, v in BI_T]}],
     [('/', 'Home'), ('/bitrix', 'Bitrix24'), ('/bi-analitika', 'BI analytics')], bi_faq)
 
 # ---------- AI AGENTS
@@ -1087,7 +1114,7 @@ ce_faq = [
     ('How much does Bitrix24 implementation cost in the UAE?', f'Standard Bitrix24 CRM setup from AED 10,000, basic launch from 14 days. Work beyond the standard is AED 200 per hour. The Bitrix24 license is paid separately: cloud from {lic(49)} a month billed annually, on-premise from {lic(3590)} a year.'),
     ('How much does Bitrix24 support cost?', 'Monthly hour packages: 5 hours for AED 1,250, 10 hours for AED 2,300, 20 hours for AED 4,200. An hour beyond the package is AED 250.'),
     ('How much do AI agents cost?', 'One agent from AED 5,000. Packages: Start AED 5,000, Business AED 10,000, Holding priced individually. Maintenance is 10% of the implementation cost per month, the demo is free.'),
-    ('How much do integrations, WhatsApp and BI cost?', 'Accounting integration (Zoho Books, QuickBooks, Odoo, 1C) from AED 10,000, WhatsApp or another messenger connection AED 500, BI analytics from AED 1,000. The estimate is fixed before start.'),
+    ('How much do integrations, WhatsApp and BI cost?', 'Accounting integration (Zoho Books, QuickBooks, Odoo, 1C) from AED 10,000, WhatsApp or another messenger connection AED 500, BI analytics from AED 300 a month. The estimate is fixed before start.'),
     ('How much does call speech analytics cost?', 'AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000 minutes and more.'),
     ('How do we pay?', 'Under contract with MakeBiz Technologies FZE LLC, invoice in dirhams, payment to a UAE company account.'),
 ]
@@ -1097,7 +1124,9 @@ CE_ROWS = [
                   ('On-premise Bitrix24 implementation', 'by estimate', 'rate AED 200/h', '/bitrix-korobka'),
                   ('WhatsApp or messenger connection', 'AED 500', 'provider subscription separate', '/bitrix-messengers'),
                   ('Accounting integration', 'from AED 10,000', 'Zoho Books, QuickBooks, Odoo, 1C', '/bitrix-integrations'),
-                  ('BI analytics', 'from AED 1,000', 'estimate after the metric list', '/bi-analitika')]),
+                  ('BI analytics, Basic plan', 'AED 300', 'a month, up to 3 users', '/bi-analitika'),
+                  ('BI analytics, Standard plan', 'AED 700', 'a month, 14 days free', '/bi-analitika'),
+                  ('BI analytics, Pro plan', 'AED 1,000', 'a month; 10% off for 6 months, 20% off for a year', '/bi-analitika')]),
     ('Bitrix24 support', [('5 hours', 'AED 1,250', 'a month', '/bitrix-support'), ('10 hours', 'AED 2,300', 'a month', '/bitrix-support'),
                   ('20 hours', 'AED 4,200', 'a month', '/bitrix-support'), ('Hour beyond package', 'AED 250', 'as used', '/bitrix-support')]),
     (f'Bitrix24 licenses (bitrix24.ae prices as of {PRICE_DATE})', [('Cloud Basic, 5 users', lic(49), 'a month billed annually ($49)', '/bitrix-licenses'),
@@ -1120,7 +1149,7 @@ def ce_table():
     return out
 ce_body = f'''<section class="hero hero-small"><div class="wrap"><div class="eyebrow">Prices in AED</div><h1>MakeBiz prices <span>in the UAE</span></h1>
 <p class="lead">Bitrix24 implementation and support, licenses, AI agents and speech analytics: all prices in dirhams on one page. We work under contract and fix the estimate before start</p>
-<p class="answer">At MakeBiz Technologies standard Bitrix24 CRM setup starts from AED 10,000, an hour of work is AED 200, support from AED 1,250 a month for 5 hours, accounting integration from AED 10,000, WhatsApp AED 500, BI analytics from AED 1,000, one AI agent from AED 5,000. Bitrix24 licenses: cloud from {lic(49)} a month, on-premise from {lic(3590)} a year. Prices as of {PRICE_DATE}.</p></div></section>
+<p class="answer">At MakeBiz Technologies standard Bitrix24 CRM setup starts from AED 10,000, an hour of work is AED 200, support from AED 1,250 a month for 5 hours, accounting integration from AED 10,000, WhatsApp AED 500, BI analytics from AED 300 a month, one AI agent from AED 5,000. Bitrix24 licenses: cloud from {lic(49)} a month, on-premise from {lic(3590)} a year. Prices as of {PRICE_DATE}.</p></div></section>
 <section class="sec" style="padding-top:20px"><div class="wrap">{ce_table()}<p class="note">Service prices exclude licenses and VAT unless stated otherwise. Licenses at vendor prices from bitrix24.ae in US dollars, in dirhams at 3.6725</p></div></section>'''
 ce_body += contract_block() + faq(ce_faq) + form_block('ceny', 'We will estimate your project', 'Describe the task, we send an estimate in dirhams with price and timeline')
 page('/ceny', 'ceny', 'MakeBiz prices in the UAE: Bitrix24, support and AI agents in AED',

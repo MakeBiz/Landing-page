@@ -124,3 +124,5 @@ body.mbskin{background:transparent}
 /* perf 24.10 */
 .is-off,.is-off *{animation-play-state:paused!important}
 @media (max-width:960px),(pointer:coarse),(prefers-reduced-transparency:reduce){*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.hdr.is-scrolled{background:rgba(4,5,10,.97)}}
+
+html[lang="en"] .price.is-hot::before{content:"Popular"}

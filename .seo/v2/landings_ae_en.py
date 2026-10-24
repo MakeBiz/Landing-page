@@ -246,7 +246,7 @@ la_page(dict(path='/bitrix-logistics', slug='bitrix-logistics', crumb='CRM for l
             ('Shipment without an owner', 'The client hears about a delay before the rep does'),
             ('No view of margin', 'Revenue is there, profitable clients are not visible'),
         ], 2), tone='tint'),
-        section('More', '', '<div class="card"><p>How to link sales and money is on the ' + LA('/bitrix-distribution', 'CRM for trading and distribution') + ' page. A single view of clients and margin comes from ' + LA('/bi-analitika', 'BI analytics') + ' from AED 1,000. What calls reveal that never reaches the CRM is in our news on ' + LA('/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki', 'calls and the CRM record') + '</p></div>'),
+        section('More', '', '<div class="card"><p>How to link sales and money is on the ' + LA('/bitrix-distribution', 'CRM for trading and distribution') + ' page. A single view of clients and margin comes from ' + LA('/bi-analitika', 'BI analytics') + ' from AED 300 a month. What calls reveal that never reaches the CRM is in our news on ' + LA('/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki', 'calls and the CRM record') + '</p></div>'),
     ],
     table_title='What a logistics CRM costs', table_sub='Our work, the Bitrix24 license is separate',
     table=la_prices(['Standard CRM setup', 'Work beyond the standard', 'Accounting integration', 'BI analytics', 'Support after launch', 'Bitrix24 license']),
@@ -254,7 +254,7 @@ la_page(dict(path='/bitrix-logistics', slug='bitrix-logistics', crumb='CRM for l
     cases=['cdek-b2b', 'unilin-crm', 'haval-vector'],
     faq=[
         ('Does Bitrix24 work for a logistics company?', 'Yes. Requests and quotes run in the sales pipeline, shipments in a separate process with their own statuses, and invoices and payments come from accounting.'),
-        ('How much does a logistics CRM cost in the UAE?', 'Standard setup from AED 10,000, accounting integration from AED 10,000, BI from AED 1,000. The exact estimate is fixed after a survey.'),
+        ('How much does a logistics CRM cost in the UAE?', 'Standard setup from AED 10,000, accounting integration from AED 10,000, BI from AED 300 a month. The exact estimate is fixed after a survey.'),
         ('Can rate requests come from email?', 'Yes, the mailbox is connected to the CRM and an email creates a request with an owner.'),
         ('Do you work with our TMS or WMS?', 'If the system has an API, we scope the data exchange in the survey at AED 200 per hour.'),
     ],
