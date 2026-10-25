@@ -20,7 +20,7 @@ R = [
  ("['in', 'ch-max', 'MAX', 'Можно созвониться завтра?']", "['in', 'ch-wa', 'WhatsApp', 'Можно созвониться завтра?']"),
  ("form: 'site-' + f.dataset.page, page: f.dataset.page, from: 'сайт makebiz.life'",
   "form: 'site-ae-' + f.dataset.page, page: f.dataset.page, from: 'сайт makebiztechnologies.com'"),
- ("    if (g === 'tg_channel' || g === 'cta_form' || /^\\/en(\\/|$)/.test(location.pathname)) return;\n", "    return;\n"),
+ ("    if (g === 'tg_channel' || g === 'cta_form' || /^\\/en(\\/|$)/.test(location.pathname)) return;\n", "    if (g === 'tg_channel' || g === 'cta_form') return;\n"),
  ("function fm(x){return Math.round(x).toLocaleString('ru-RU')+' ₽'}", "function fm(x){return Math.round(x).toLocaleString('ru-RU')+' AED'}"),
 ]
 miss = [a[:60] for a, b in R if a not in s]

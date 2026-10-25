@@ -62,7 +62,7 @@
     else if (/#form$/.test(h)) g = 'cta_form';
     if (!g) return;
     goal(g);
-    return;
+    if (g === 'tg_channel' || g === 'cta_form') return;
     try {
       var kk = 'mb_clk_' + g, last = 0;
       try { last = +sessionStorage.getItem(kk) || 0; } catch (x) {}
@@ -180,6 +180,7 @@ c.querySelector('[data-o=n]').textContent=n;c.querySelector('[data-o=c]').textCo
 c.addEventListener('input',up);up()})();
 ;document.addEventListener('click',function(e){var y=e.target.closest&&e.target.closest('.yt');if(!y||y.querySelector('iframe'))return;var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+y.dataset.id+'?autoplay=1';f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.title='MakeBiz video';y.appendChild(f);try{if(window.ym)ym(112503709,'reachGoal','video_play')}catch(x){}});
 ;(function(){var c=navigator.connection;if(c&&(c.saveData||/2g/.test(c.effectiveType||'')))return;var done={},tm;function ok(a){if(!a||!a.href||a.target==='_blank'||a.hasAttribute('download'))return false;var u;try{u=new URL(a.href)}catch(e){return false}if(u.origin!==location.origin||u.search||/^\/api\/|\.(xml|txt|pdf|zip|png|jpe?g|webp|svg)$/i.test(u.pathname))return false;if(u.pathname===location.pathname)return false;return u.pathname}function go(p){if(done[p])return;done[p]=1;var l=document.createElement('link');l.rel='prefetch';l.href=p;document.head.appendChild(l)}document.addEventListener('mouseover',function(e){var a=e.target.closest&&e.target.closest('a');var p=ok(a);if(!p)return;clearTimeout(tm);tm=setTimeout(function(){go(p)},65)},{passive:true});document.addEventListener('mouseout',function(){clearTimeout(tm)},{passive:true});document.addEventListener('touchstart',function(e){var a=e.target.closest&&e.target.closest('a');var p=ok(a);if(p)go(p)},{passive:true});})();
+;(function(){if(window.__mbLeadPatch||!window.fetch)return;window.__mbLeadPatch=1;var of=window.fetch;window.fetch=function(u,o){try{var url=typeof u==='string'?u:(u&&u.url)||'';if(/\/api\/lead(\?|$)/.test(url)&&o&&typeof o.body==='string'){var d=JSON.parse(o.body);if(d&&typeof d==='object'){var ch=0;if(!d.attr&&window.__mbAttr){d.attr=window.__mbAttr();ch=1}if(!d._title){d._title=String(document.title||'').slice(0,200);ch=1}if(!d._url){d._url=String(location.href).slice(0,500);ch=1}if(ch){o=Object.assign({},o,{body:JSON.stringify(d)})}}}}catch(e){}return of.call(this,u,o)}})();
 
 // ===== фон «Лучи» в цветах флага ОАЭ (как на прошлом makebiztechnologies.com): тёмная подложка и мягкие лучи за курсором
 ;(function(){
