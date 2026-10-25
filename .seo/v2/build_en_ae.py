@@ -744,36 +744,67 @@ def bi_aed(v): return 'AED ' + f'{v:,}'
 BI_NOTE = 'Prices are valid until 31 December 2026 and will rise from 1 January. Pay for a year by 31 December and lock the price for 12 months with a 20% discount'
 def bi_tariffs():
     cards = prices([
-        ('Basic · I see the key numbers', bi_aed(300), 'a month, price valid until 31 December 2026', ['For small businesses and a first step', 'Business pulse: revenue, enquiries, deals and calls vs last year, quarter and month', 'Leads and deals: sources, pipelines, reasons for lost deals', 'Calls from Bitrix24 telephony: how many, who, missed', 'Up to 3 users, 1 year of history', 'Nightly updates, morning summary in Telegram'], False),
+        ('Basic · I see the key numbers', bi_aed(300), 'a month, price valid until 31 December 2026, 14 days free', ['For small businesses and a first step', 'Business pulse: revenue, enquiries, deals and calls vs last year, quarter and month', 'Leads and deals: sources, pipelines, reasons for lost deals', 'Calls from Bitrix24 telephony: how many, who, missed', 'Up to 3 users, 1 year of history', 'Nightly updates, morning summary in Telegram'], False),
         ('Standard · I run a sales team', bi_aed(700), 'a month, most popular, 14 days free', ['For sales teams of 3 people or more', 'Everything in Basic', 'People: deals, leads, tasks, activities and what is urgent now', 'Stuck deals, month and quarter forecast', 'ABC analysis of clients and products, who grew and who left', 'Up to 10 users, 3 years of history, Excel export, Telegram alerts'], True),
-        ('Pro · Analytics built for my company', bi_aed(1000), 'a month, price valid until 31 December 2026', ['For marketing to revenue, plans and a custom cabinet', 'Everything in Standard', 'End-to-end analytics: from ads to payment, UTM, ad accounts, spend', 'Sales plans, repeat clients, LTV, attribution, XYZ, RFM', 'An AI analyst answers questions about your numbers', 'Your logo and Bitrix24 fields, 2 hours of custom work a month, unlimited users, hourly updates'], False),
+        ('Pro · Analytics built for my company', bi_aed(1000), 'a month, price valid until 31 December 2026, 14 days free', ['For marketing to revenue, plans and a custom cabinet', 'Everything in Standard', 'End-to-end analytics: from ads to payment by CRM UTM, spend entry', 'Sales plans, repeat clients, LTV, attribution, XYZ, RFM', 'An AI analyst answers questions about your numbers', 'Your logo and Bitrix24 fields, 2 hours of custom work a month, unlimited users, hourly updates', 'Ad accounts, web analytics and accounting systems connected on request for an extra fee'], False),
     ])
-    rows = ''.join(f'<tr><td><b>{n}</b></td><td>{d}</td>' + ''.join(f'<td class="pt-p">{bi_aed(round(v * m * (1 - k)))}<br><small>{bi_aed(round(v * (1 - k)))} a month</small></td>' for _, _, v in BI_T) + '</tr>'
-                   for n, d, m, k in (('Monthly', 'no discount', 1, 0), ('6 months', '10% off', 6, 0.10), ('1 year', '20% off', 12, 0.20)))
-    disc = (f'<h3 class="ce-h">Paying for 6 months or a year</h3><div class="ptw gl"><table class="ptab"><thead><tr><th>Term</th><th>Discount</th>'
-            + ''.join(f'<th style="text-align:right">{n}</th>' for n, _, _ in BI_T) + f'</tr></thead><tbody>{rows}</tbody></table></div>')
+    disc_box = ('<div class="bi-disc"><div class="bi-disc-t">Discount for paying ahead</div><div class="bi-disc-row">'
+                '<div class="bi-disc-c"><b>−10%</b><span>when you pay for 6 months</span></div><div class="bi-disc-c"><b>−20%</b><span>when you pay for a year</span></div></div>'
+                '<p>Prices are valid until 31 December 2026. Pay for a year by 31 December: 20% off and the price is locked for 12 months</p></div>')
+    rows = ''
+    for n, d, v in BI_T:
+        h6 = round(v * 6 * .9); y = round(v * 12 * .8)
+        rows += (f'<tr><td><b>{n}</b></td><td class="pt-p">{bi_aed(v)}<small>a month</small></td>'
+                 f'<td class="pt-p tm-d">{bi_aed(h6 // 6)}<small>a month, total {bi_aed(h6)}</small><em>you save {bi_aed(v * 6 - h6)}</em></td>'
+                 f'<td class="pt-p tm-d tm-best">{bi_aed(y // 12)}<small>a month, total {bi_aed(y)}</small><em>you save {bi_aed(v * 12 - y)}</em></td></tr>')
+    disc = ('<h3 class="ce-h">Discounts for longer terms</h3><div class="ptw gl"><table class="ptab term"><thead><tr><th>Plan</th><th>Month</th>'
+            '<th>6 months <span class="tm-b">−10%</span></th><th>1 year <span class="tm-b tm-b2">−20%</span></th></tr></thead><tbody>' + rows + '</tbody></table></div>')
     cmp_rows = [('Tabs in the cabinet', '12', '28', '52'), ('Users', 'up to 3', 'up to 10', 'unlimited'), ('Data updates', 'nightly', 'nightly and on demand', 'hourly and on demand'),
-                ('Data history', '1 year', '3 years', 'all'), ('Excel (CSV) export', 'no', '✓', '✓'), ('Telegram', 'morning summary', 'summary and alerts: overdue, lost deals, drop in enquiries', '+ your own alert rules'),
-                ('End-to-end analytics and ad spend', 'no', 'no', '✓'), ('AI analyst', 'no', 'no', '✓'), ('Logo, custom tabs and Bitrix24 fields', 'no', 'no', '✓, 2 hours of work a month'),
-                ('Integrations', 'Bitrix24: CRM and telephony', 'Bitrix24: CRM and telephony', '+ ad accounts and web analytics; 1C and external telephony on request'), ('Free trial', 'no', '14 days', 'no')]
-    cmp = ('<h3 class="ce-h">Compare plans</h3><div class="ptw gl"><table class="ptab"><thead><tr><th>What is included</th>' + ''.join(f'<th style="text-align:left">{n}</th>' for n, _, _ in BI_T)
-           + '</tr></thead><tbody>' + ''.join(f'<tr><td><b>{a}</b></td><td>{b}</td><td>{c}</td><td>{d}</td></tr>' for a, b, c, d in cmp_rows) + '</tbody></table></div>')
-    return (f'<p class="note" style="font-size:15px;margin:0 0 22px;color:#4FE07F">{BI_NOTE}</p>' + cards + disc + cmp
-            + '<p class="note">The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. You can switch plans at any time with the Plan button in the cabinet. Higher-plan tabs are visible in the menu and open on demo data. Prices exclude VAT</p>')
+                ('Data history', '1 year', '3 years', 'all'), ('Excel (CSV) export', 'no', '✓', '✓'), ('People, tasks, control, forecast', 'no', '✓', '✓'), ('ABC analysis of clients and products', 'no', '✓', '✓'),
+                ('Telegram', 'morning summary', 'summary and alerts: overdue, lost deals, drop in enquiries', '+ your own alert rules'),
+                ('End-to-end analytics by CRM UTM and ad spend', 'no', 'no', '✓'), ('Sales plans, LTV, XYZ, RFM', 'no', 'no', '✓'), ('AI analyst', 'no', 'no', '✓'), ('Logo, custom tabs and Bitrix24 fields', 'no', 'no', '✓ 2 hours of work a month'),
+                ('Bitrix24: CRM and telephony', '✓', '✓', '✓'), ('Ad accounts and web analytics', 'no', 'no', '$ on request, extra fee'), ('Accounting systems and external telephony', 'no', 'no', '$ on request, extra fee'),
+                ('14 days free (full Pro)', '✓', '✓', '✓')]
+    def cell(c):
+        if c == 'no': return '<td class="cm-no"><i>✕</i> not included</td>'
+        if c.startswith('$'): return f'<td class="cm-extra"><i>+</i> {c[1:].strip()}</td>'
+        if c.startswith('✓'): return f'<td class="cm-yes"><i>✓</i> {c[1:].strip() or "included"}</td>'
+        return f'<td>{c}</td>'
+    cmp = ('<h3 class="ce-h">Compare plans</h3><div class="ptw gl"><table class="ptab cmp"><thead><tr><th>What is included</th>' + ''.join(f'<th style="text-align:left">{n}</th>' for n, _, _ in BI_T)
+           + '</tr></thead><tbody>' + ''.join(f'<tr><td><b>{r[0]}</b></td>' + ''.join(cell(c) for c in r[1:]) + '</tr>' for r in cmp_rows) + '</tbody></table></div>')
+    return (disc_box + cards + disc + cmp
+            + '<p class="note">The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. 14 days free on any plan: for the trial we connect the full Pro plan. You can switch plans at any time with the Plan button in the cabinet. Prices exclude VAT</p>')
 bi_faq = [
     ('What is BI analytics in Bitrix24?', 'Management dashboards on data from the CRM and other systems: sales, pipeline, manager performance, money in dirhams. We build them in the Bitrix24 BI builder or an external BI system.'),
-    ('Which sources can be connected?', 'Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions.'),
+    ('Which sources can be connected?', 'Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions. The subscription includes Bitrix24 CRM and telephony, other sources are connected on request for an extra fee.'),
     ('How much does BI analytics cost?', 'A MakeBiz BI cabinet subscription: Basic AED 300, Standard AED 700, Pro AED 1,000 a month. Paying for 6 months gives 10% off, for a year 20% off. Prices are valid until 31 December 2026 and will rise from 1 January.'),
     ('Which plan should we choose?', 'If you just need to see sales and enquiries, Basic. If you have a sales team and manage people, Standard. If you track ads to revenue, set plans or want a custom cabinet, Pro.'),
-    ('Can we try it?', 'Yes, 14 days free on the Standard plan, on your own Bitrix24 data. Then you choose a plan.'),
+    ('Can we try it?', 'Yes, 14 days free on any plan. For the trial we connect the full Pro plan on your own Bitrix24 data, then you choose a plan.'),
     ('What happens to the price after 31 December?', 'Prices will rise. To keep the current one, pay for a year by 31 December: 12 months with a 20% discount.'),
     ('Will the numbers be right?', 'We start by checking CRM data: a dashboard tells the truth only if the system has no garbage. If needed, we first clean up cards and stages.'),
 ]
 bi_body = hero('Bitrix24 · BI analytics', 'BI analytics <span>for management</span>',
     'Sales, pipeline, managers and money on one screen. Numbers from the CRM and accounting, not from manual spreadsheets',
-    'MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on Standard.',
+    'MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on any plan.',
     ('#form', 'Discuss a dashboard'), None, V_BI,
-    [('1 screen', 'instead of reports'), ('from AED 300', 'a month'), ('14 days', 'free on Standard'), ('−20%', 'when paying yearly')], 'BI analytics dashboards')
+    [('1 screen', 'instead of reports'), ('from AED 300', 'a month'), ('14 days', 'free, full Pro'), ('−20%', 'when paying yearly')], 'BI analytics dashboards')
+SHOT_ALT.update({'mbbi-puls': 'Business pulse: revenue, enquiries, deals and calls vs last month, pace and forecast (demo data, Russian interface)',
+    'mbbi-leads': 'Leads: flow by source, reply speed, lost leads and dynamics (demo data, Russian interface)',
+    'mbbi-sales': 'Deals: revenue, conversion, money in progress, plan vs actual (demo data, Russian interface)',
+    'mbbi-eff': 'Performance: touches, tasks on time, overdue items and revenue per employee (demo data, Russian interface)',
+    'mbbi-e2e': 'End-to-end analytics: from ads to payment, spend, leads, deals, payments and ROMI (demo data, Russian interface)',
+    'mbbi-abc': 'ABC analysis: revenue by client class A, B and C, top clients and products (demo data, Russian interface)',
+    'mbbi-ai': 'AI analyst answering «what matters most on this page right now» (demo data, Russian interface)'})
+TABS.update({'mbbi-puls': 'Business pulse', 'mbbi-leads': 'Leads', 'mbbi-sales': 'Deals', 'mbbi-eff': 'Performance', 'mbbi-e2e': 'End-to-end', 'mbbi-abc': 'ABC analysis', 'mbbi-ai': 'AI analyst'})
+bi_body += feature('demo', 'Demo cabinet', 'This is <span>MakeBiz BI</span>',
+    'Screens from the demo cabinet on made-up data, Russian interface. You get your own Bitrix24 numbers, updated automatically',
+    ['<b>Business pulse:</b> revenue, enquiries, deals and calls vs last month, pace and month forecast',
+     '<b>Leads:</b> flow by source, reply speed, lost leads and who has not been picked up yet',
+     '<b>Deals:</b> revenue, conversion, money in progress, plan vs actual by day',
+     '<b>Performance:</b> touches, tasks on time, overdue items and revenue per employee',
+     '<b>End-to-end analytics:</b> from ads to payment, cost of each step and ROMI',
+     '<b>ABC analysis and AI analyst:</b> who brings the money and answers about your numbers'],
+    ['mbbi-puls', 'mbbi-leads', 'mbbi-sales', 'mbbi-eff', 'mbbi-e2e', 'mbbi-abc', 'mbbi-ai'], 'MakeBiz BI · demo cabinet')
 bi_body += section('MakeBiz BI plans', 'A cabinet with ready-made dashboards on your Bitrix24 data: we connect the portal, you work with the numbers', bi_tariffs(), id_='tarify')
 bi_body += section('What dashboards show', '', cards([
     ('Sales and plan', 'Revenue, plan and actuals by department and manager'),
@@ -783,14 +814,6 @@ bi_body += section('What dashboards show', '', cards([
     ('Advertising', 'Where clients come from and which channels pay off'),
     ('Operations', 'Workload, timelines and quality of your processes'),
 ], 3))
-bi_body += feature('pult', 'Example from our company', 'Company pulse <span>on one screen</span>',
-    'We run MakeBiz through this cabinet: data comes from Bitrix24, banks, accounting, telephony and ads and updates without manual spreadsheets. Russian interface, demo data',
-    ['Revenue, profit, costs and assets for every business line and project',
-     'Sales: leads, payments, touches, reply speed and drops by week',
-     'Finance: turnover, profitability, dividends and cash runway in months',
-     'Marketing: spend, clicks and cost per click by campaign, SEO and AI visibility',
-     'An AI agent reads the same numbers and flags risks by itself'],
-    ['bi-puls', 'bi-sales', 'bi-fin', 'bi-direct'], 'Company pulse')
 bi_body += section('How we build it', '', steps([
     ('Management questions', 'We fix which decisions the dashboard must support'),
     ('Data', 'We check sources and clean up the CRM if needed'),

@@ -680,13 +680,25 @@ Title: BI analytics for Bitrix24 in the UAE: management dashboards | MakeBiz
 Bitrix24 · BI analytics
 # BI analytics for management
 Sales, pipeline, managers and money on one screen. Numbers from the CRM and accounting, not from manual spreadsheets
-MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on Standard.
+MakeBiz Technologies builds BI dashboards for UAE companies on data from Bitrix24, accounting systems, telephony and ads: management sees the plan, conversion, every manager and money in dirhams in real time. BI analytics from AED 300 a month, 14 days free on any plan.
+Demo cabinet
+## This is MakeBiz BI
+Screens from the demo cabinet on made-up data, Russian interface. You get your own Bitrix24 numbers, updated automatically
+- Business pulse: revenue, enquiries, deals and calls vs last month, pace and month forecast
+- Leads: flow by source, reply speed, lost leads and who has not been picked up yet
+- Deals: revenue, conversion, money in progress, plan vs actual by day
+- Performance: touches, tasks on time, overdue items and revenue per employee
+- End-to-end analytics: from ads to payment, cost of each step and ROMI
+- ABC analysis and AI analyst: who brings the money and answers about your numbers
 ## MakeBiz BI plans
 A cabinet with ready-made dashboards on your Bitrix24 data: we connect the portal, you work with the numbers
-Prices are valid until 31 December 2026 and will rise from 1 January. Pay for a year by 31 December and lock the price for 12 months with a 20% discount
+Discount for paying ahead
+−10% when you pay for 6 months
+−20% when you pay for a year
+Prices are valid until 31 December 2026. Pay for a year by 31 December: 20% off and the price is locked for 12 months
 Basic · I see the key numbers
 AED 300
-a month, price valid until 31 December 2026
+a month, price valid until 31 December 2026, 14 days free
 - For small businesses and a first step
 - Business pulse: revenue, enquiries, deals and calls vs last year, quarter and month
 - Leads and deals: sources, pipelines, reasons for lost deals
@@ -704,32 +716,38 @@ a month, most popular, 14 days free
 - Up to 10 users, 3 years of history, Excel export, Telegram alerts
 Pro · Analytics built for my company
 AED 1,000
-a month, price valid until 31 December 2026
+a month, price valid until 31 December 2026, 14 days free
 - For marketing to revenue, plans and a custom cabinet
 - Everything in Standard
-- End-to-end analytics: from ads to payment, UTM, ad accounts, spend
+- End-to-end analytics: from ads to payment by CRM UTM, spend entry
 - Sales plans, repeat clients, LTV, attribution, XYZ, RFM
 - An AI analyst answers questions about your numbers
 - Your logo and Bitrix24 fields, 2 hours of custom work a month, unlimited users, hourly updates
-### Paying for 6 months or a year
-| Term | Discount | Basic | Standard | Pro
-| Monthly | no discount | AED 300 AED 300 a month | AED 700 AED 700 a month | AED 1,000 AED 1,000 a month
-| 6 months | 10% off | AED 1,620 AED 270 a month | AED 3,780 AED 630 a month | AED 5,400 AED 900 a month
-| 1 year | 20% off | AED 2,880 AED 240 a month | AED 6,720 AED 560 a month | AED 9,600 AED 800 a month
+- Ad accounts, web analytics and accounting systems connected on request for an extra fee
+### Discounts for longer terms
+| Plan | Month | 6 months −10% | 1 year −20%
+| Basic | AED 300 a month | AED 270 a month, total AED 1,620 you save AED 180 | AED 240 a month, total AED 2,880 you save AED 720
+| Standard | AED 700 a month | AED 630 a month, total AED 3,780 you save AED 420 | AED 560 a month, total AED 6,720 you save AED 1,680
+| Pro | AED 1,000 a month | AED 900 a month, total AED 5,400 you save AED 600 | AED 800 a month, total AED 9,600 you save AED 2,400
 ### Compare plans
 | What is included | Basic | Standard | Pro
 | Tabs in the cabinet | 12 | 28 | 52
 | Users | up to 3 | up to 10 | unlimited
 | Data updates | nightly | nightly and on demand | hourly and on demand
 | Data history | 1 year | 3 years | all
-| Excel (CSV) export | no | ✓ | ✓
+| Excel (CSV) export | ✕ not included | ✓ included | ✓ included
+| People, tasks, control, forecast | ✕ not included | ✓ included | ✓ included
+| ABC analysis of clients and products | ✕ not included | ✓ included | ✓ included
 | Telegram | morning summary | summary and alerts: overdue, lost deals, drop in enquiries | + your own alert rules
-| End-to-end analytics and ad spend | no | no | ✓
-| AI analyst | no | no | ✓
-| Logo, custom tabs and Bitrix24 fields | no | no | ✓, 2 hours of work a month
-| Integrations | Bitrix24: CRM and telephony | Bitrix24: CRM and telephony | + ad accounts and web analytics; 1C and external telephony on request
-| Free trial | no | 14 days | no
-The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. You can switch plans at any time with the Plan button in the cabinet. Higher-plan tabs are visible in the menu and open on demo data. Prices exclude VAT
+| End-to-end analytics by CRM UTM and ad spend | ✕ not included | ✕ not included | ✓ included
+| Sales plans, LTV, XYZ, RFM | ✕ not included | ✕ not included | ✓ included
+| AI analyst | ✕ not included | ✕ not included | ✓ included
+| Logo, custom tabs and Bitrix24 fields | ✕ not included | ✕ not included | ✓ 2 hours of work a month
+| Bitrix24: CRM and telephony | ✓ included | ✓ included | ✓ included
+| Ad accounts and web analytics | ✕ not included | ✕ not included | + on request, extra fee
+| Accounting systems and external telephony | ✕ not included | ✕ not included | + on request, extra fee
+| 14 days free (full Pro) | ✓ included | ✓ included | ✓ included
+The subscription includes connecting your Bitrix24 portal, data sync, dashboard updates and technical support. 14 days free on any plan: for the trial we connect the full Pro plan. You can switch plans at any time with the Plan button in the cabinet. Prices exclude VAT
 ## What dashboards show
 ### Sales and plan
 Revenue, plan and actuals by department and manager
@@ -743,14 +761,6 @@ Payments, receivables and VAT from the accounting system
 Where clients come from and which channels pay off
 ### Operations
 Workload, timelines and quality of your processes
-Example from our company
-## Company pulse on one screen
-We run MakeBiz through this cabinet: data comes from Bitrix24, banks, accounting, telephony and ads and updates without manual spreadsheets. Russian interface, demo data
-- Revenue, profit, costs and assets for every business line and project
-- Sales: leads, payments, touches, reply speed and drops by week
-- Finance: turnover, profitability, dividends and cash runway in months
-- Marketing: spend, clicks and cost per click by campaign, SEO and AI visibility
-- An AI agent reads the same numbers and flags risks by itself
 ## How we build it
 - 1
 ### Management questions
@@ -797,13 +807,13 @@ Implementation, support, integrations and AI agents by one team, no need to gath
 **What is BI analytics in Bitrix24?**
 Management dashboards on data from the CRM and other systems: sales, pipeline, manager performance, money in dirhams. We build them in the Bitrix24 BI builder or an external BI system.
 **Which sources can be connected?**
-Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions.
+Bitrix24, Zoho Books, QuickBooks, Odoo, 1C, telephony, Google Ads, Meta, Google Analytics, spreadsheets and bank statements. The set depends on your questions. The subscription includes Bitrix24 CRM and telephony, other sources are connected on request for an extra fee.
 **How much does BI analytics cost?**
 A MakeBiz BI cabinet subscription: Basic AED 300, Standard AED 700, Pro AED 1,000 a month. Paying for 6 months gives 10% off, for a year 20% off. Prices are valid until 31 December 2026 and will rise from 1 January.
 **Which plan should we choose?**
 If you just need to see sales and enquiries, Basic. If you have a sales team and manage people, Standard. If you track ads to revenue, set plans or want a custom cabinet, Pro.
 **Can we try it?**
-Yes, 14 days free on the Standard plan, on your own Bitrix24 data. Then you choose a plan.
+Yes, 14 days free on any plan. For the trial we connect the full Pro plan on your own Bitrix24 data, then you choose a plan.
 **What happens to the price after 31 December?**
 Prices will rise. To keep the current one, pay for a year by 31 December: 12 months with a 20% discount.
 **Will the numbers be right?**

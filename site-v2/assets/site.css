@@ -537,3 +537,36 @@ body.mbskin{background:transparent}
 @media (max-width:960px),(pointer:coarse),(prefers-reduced-transparency:reduce){*,*::before,*::after{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}.hdr.is-scrolled{background:rgba(4,5,10,.97)}}
 
 html[lang="en"] .price.is-hot::before{content:"Popular"}
+
+/* bi v3: скидки и сравнение */
+.bi-disc{margin:4px 0 28px;padding:22px 24px;border-radius:var(--r);background:linear-gradient(120deg,rgba(27,163,90,.17),rgba(27,163,90,.05));border:2px solid rgba(27,163,90,.5)}
+.bi-disc-t{font-weight:800;font-size:19px;color:#0f6b3a;letter-spacing:-.01em}
+.bi-disc-row{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0}
+.bi-disc-c{display:flex;align-items:center;gap:14px;padding:10px 20px 10px 10px;background:#fff;border-radius:16px;border:1px solid rgba(27,163,90,.35);box-shadow:0 12px 26px -14px rgba(27,163,90,.65)}
+.bi-disc-c b{font-size:32px;line-height:1;font-weight:900;color:#fff;background:linear-gradient(180deg,#22B865,#138A49);padding:8px 14px;border-radius:12px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.bi-disc-c span{font-weight:700;font-size:16px;color:var(--ink)}
+.bi-disc p{margin:0;color:var(--ink2);font-size:15px;line-height:1.5}
+.tm-b{display:inline-block;margin-left:6px;padding:3px 9px;border-radius:999px;background:#1BA35A;color:#fff;font-size:12.5px;font-weight:800;letter-spacing:0;text-transform:none}
+.tm-b2{background:linear-gradient(180deg,#22B865,#0F7A3E);font-size:13.5px;box-shadow:0 6px 14px -6px rgba(27,163,90,.8)}
+.ptab.term .tm-d em{display:inline-block;margin-top:6px;font-style:normal;font-size:12.5px;font-weight:800;color:#0f6b3a;background:rgba(27,163,90,.13);padding:3px 9px;border-radius:8px}
+.ptab.term .tm-best{background:rgba(27,163,90,.07)}
+.ptab.cmp td.cm-yes{color:#13804a;font-weight:600;background:rgba(27,163,90,.08)}
+.ptab.cmp td.cm-no{color:#C4122E;background:rgba(216,33,59,.06)}
+.ptab.cmp td.cm-extra{color:#985800;background:rgba(245,158,11,.12);font-weight:600}
+.ptab.cmp td i{font-style:normal;font-weight:900;margin-right:5px}
+@media (max-width:760px){.bi-disc-c{flex:1 1 100%}.bi-disc-c b{font-size:26px}}
+/* bi v3: тёмная тема ОАЭ */
+.bi-disc{background:linear-gradient(120deg,rgba(22,193,90,.18),rgba(22,193,90,.04));border-color:rgba(79,224,127,.5)}
+.bi-disc-t{color:#4FE07F}
+.bi-disc-c{background:rgba(255,255,255,.04);border-color:rgba(79,224,127,.35);box-shadow:none}
+.bi-disc-c span{color:#fff}
+.bi-disc p{color:var(--ink2)}
+.ptab.term .tm-d em{color:#4FE07F;background:rgba(79,224,127,.12)}
+.ptab.term .tm-best{background:rgba(79,224,127,.06)}
+.ptab.term td small{display:block;font-weight:500;color:var(--mut);font-size:12.5px;margin-top:2px}
+.ptab.term .pt-p,.ptab.term th:last-child{text-align:left}
+.ptab.cmp{min-width:680px}
+.ptab.cmp th,.ptab.cmp td{font-size:14.5px;vertical-align:top;text-align:left}
+.ptab.cmp td.cm-yes{color:#4FE07F;background:rgba(79,224,127,.08)}
+.ptab.cmp td.cm-no{color:#FF7A8A;background:rgba(255,90,110,.07)}
+.ptab.cmp td.cm-extra{color:#FFC266;background:rgba(255,194,102,.09)}
