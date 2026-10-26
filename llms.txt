@@ -60,6 +60,7 @@ Key facts:
 - [CRM access rights in the UAE: who should see what](https://makebiztechnologies.com/en/news/prava-dostupa-v-crm-kto-chto-vidit): UAE law gives a person the right to ask what you hold on them. Who should see what in your CRM, who keeps export rights, and how long data stays.
 - [Which AI agent to start with in a sales team](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh): Not all of them at once. Start with one agent on a narrow task with a clear metric: qualifying inbound leads and reviving stalled deals.
 - [98% accuracy, and the invoices are still wrong](https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami): Vendors show 97-99% accuracy on document parsing, yet the books fill up with duplicates and the wrong VAT.
+- [Three dashboards a head of sales actually opens](https://makebiztechnologies.com/en/news/tri-dashborda-rukovoditelya-prodazh): Month pace, inbound leads and stalled deals. The MakeBiz BI cabinet in the UAE starts at AED 300 a month, 14 days free on full Pro.
 - [Bitrix24 in the UAE: how the project differs from a Russian one](https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya): Same product, different project. The working week, WhatsApp instead of calls, dirhams and VAT, UAE data protection rules and two languages in one client record.
 
 ## Company
@@ -110,4 +111,5 @@ Key facts:
 - [Права доступа в CRM: кто что видит в компании в ОАЭ](https://makebiztechnologies.com/news/prava-dostupa-v-crm-kto-chto-vidit)
 - [С какого AI-агента начинать в отделе продаж](https://makebiztechnologies.com/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
 - [Точность 98%, а счета все равно с ошибками](https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami)
+- [Три дашборда, которые смотрит руководитель продаж](https://makebiztechnologies.com/news/tri-dashborda-rukovoditelya-prodazh)
 - [Внедрение Битрикс24 в ОАЭ: чем проект отличается от российского](https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya)

@@ -120,9 +120,11 @@
     {
       "key": "bi-dashboards-sales",
       "cat": "auto",
-      "status": "planned",
+      "status": "used",
       "angle": "Какие три дашборда реально смотрит руководитель отдела продаж",
-      "query": "bi аналитика продаж"
+      "query": "bi аналитика продаж",
+      "used_slug": "tri-dashborda-rukovoditelya-prodazh",
+      "used_date": "2026-10-26"
     },
     {
       "key": "crm-server-or-cloud",
