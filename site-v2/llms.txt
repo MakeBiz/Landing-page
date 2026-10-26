@@ -78,6 +78,7 @@ Key facts:
 - [Where procurement loses money comparing suppliers · MakeBiz](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi)
 - [CRM implementation cost in the UAE: what you pay for · MakeBiz](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
 - [What AI actually saves in sales, and what it does not · MakeBiz](https://makebiztechnologies.com/en/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net)
+- [Cloud or on-premise CRM in the UAE: how to choose · MakeBiz](https://makebiztechnologies.com/en/news/oblako-ili-svoy-server-dlya-crm-v-oae)
 - [Why AI Forgets Everything, and How Memory Fixes It · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-ai-zabyvaet-vsyo-i-kak-eto-chinitsya-pamyatyu)
 - [Why One Agent Stalls, and a Team of Agents Gets the Job Done · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-odin-agent-ne-tyanet-a-komanda-dovodit-delo)
 - [Five reasons AI agent rollouts stall · MakeBiz](https://makebiztechnologies.com/en/news/pochemu-vnedrenie-ai-agentov-buksuet)
