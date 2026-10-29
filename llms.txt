@@ -50,6 +50,7 @@ Key facts:
 - [What to migrate when you switch CRM, and what to leave](https://makebiztechnologies.com/en/news/chto-perenosit-pri-smene-crm): Clients, deals and history move across, automation is rebuilt. What to clean up first and where the built in importer stops.
 - [What Is an AI Agent, and How Is It Different From a Chatbot](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota): A chatbot answers a question and forgets it. An agent has a role, memory, and access to your systems: it runs the process itself, sees it through to a result…
 - [What the call knows and the CRM record does not](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki): The deal record keeps the outcome, the call keeps the reasons. What belongs in the CRM after every conversation, and how to capture it.
+- [UAE e-invoicing: appoint your provider by 30 October](https://makebiztechnologies.com/en/news/e-invoicing-oae-srok-30-oktyabrya): The FTA restated the deadline: at AED 50m+ revenue an accredited provider must be appointed by 30 October 2026. AED 5,000 for each month late.
 - [Where the Sales Team Loses a Client During a Call](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka): The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down.
 - [Where procurement loses money comparing suppliers](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi): A rate with no date, VAT inside the price, lead time buried in an email and manual retyping: four places UAE procurement loses money.
 - [CRM implementation cost in the UAE: what you pay for](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm): Starter setup from 10 000 AED, licence and migration quoted separately, and a support hour at 250, 230 or 210 dirhams.
@@ -102,6 +103,7 @@ Key facts:
 - [Что переносить при смене CRM, а что оставить](https://makebiztechnologies.com/news/chto-perenosit-pri-smene-crm)
 - [Что такое AI-агент и чем он отличается от чат-бота](https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
 - [Что слышно в звонке и чего нет в карточке сделки](https://makebiztechnologies.com/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
+- [E-invoicing в ОАЭ: провайдера выбрать до 30 октября](https://makebiztechnologies.com/news/e-invoicing-oae-srok-30-oktyabrya)
 - [Где отдел продаж теряет клиента внутри звонка](https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Где теряются деньги при сравнении поставщиков](https://makebiztechnologies.com/news/gde-v-zakupkah-teryayutsya-dengi)
 - [Смета внедрения CRM в ОАЭ: из чего складывается цена](https://makebiztechnologies.com/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)

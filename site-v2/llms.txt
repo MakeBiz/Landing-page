@@ -74,6 +74,7 @@ Key facts:
 - [What to migrate when you switch CRM, and what to leave · MakeBiz](https://makebiztechnologies.com/en/news/chto-perenosit-pri-smene-crm)
 - [What Is an AI Agent, and How Is It Different From a Chatbot · MakeBiz](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
 - [What the call knows and the CRM record does not · MakeBiz](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
+- [UAE e-invoicing: appoint your provider by 30 October · MakeBiz](https://makebiztechnologies.com/en/news/e-invoicing-oae-srok-30-oktyabrya)
 - [Where the Sales Team Loses a Client During a Call · MakeBiz](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Where procurement loses money comparing suppliers · MakeBiz](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi)
 - [CRM implementation cost in the UAE: what you pay for · MakeBiz](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
@@ -86,4 +87,3 @@ Key facts:
 - [Which AI agent to start with in a sales team · MakeBiz](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
 - [98% accuracy, and the invoices are still wrong · MakeBiz](https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami)
 - [Three dashboards a head of sales actually opens · MakeBiz](https://makebiztechnologies.com/en/news/tri-dashborda-rukovoditelya-prodazh)
-- [Bitrix24 in the UAE: how the project differs from a Russian one · MakeBiz](https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya)

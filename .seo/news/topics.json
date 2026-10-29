@@ -155,6 +155,51 @@
    "status": "planned",
    "angle": "Какие семь вопросов задать подрядчику по ИИ до подписания договора",
    "query": "как выбрать подрядчика по внедрению ии"
+  },
+  {
+   "key": "einvoicing-asp-deadline",
+   "cat": "biz",
+   "status": "used",
+   "angle": "Срок выбора аккредитованного провайдера e-invoicing в ОАЭ и штраф 5 000 AED за месяц просрочки",
+   "query": "e-invoicing оаэ сроки",
+   "used_slug": "e-invoicing-oae-srok-30-oktyabrya",
+   "used_date": "2026-10-29",
+   "note": "Повод: напоминание FTA 25.10.2026 и руководство Минфина ОАЭ версии 2.0 от 26.10.2026"
+  },
+  {
+   "key": "corporate-tax-crm-data",
+   "cat": "biz",
+   "status": "planned",
+   "angle": "Какие данные в CRM нужны к отчётности по корпоративному налогу в ОАЭ и чего не хватает чаще всего",
+   "query": "корпоративный налог оаэ отчётность"
+  },
+  {
+   "key": "free-zone-mainland-one-portal",
+   "cat": "crm",
+   "status": "planned",
+   "angle": "Free zone и mainland в одном Битрикс24: права, счета и во что это обходится против двух порталов",
+   "query": "битрикс24 два юрлица оаэ"
+  },
+  {
+   "key": "whatsapp-real-cost",
+   "cat": "auto",
+   "status": "planned",
+   "angle": "Сколько реально стоит WhatsApp Business в ОАЭ помимо подключения за 500 AED",
+   "query": "whatsapp business api цена оаэ"
+  },
+  {
+   "key": "ai-agent-payback",
+   "cat": "agents",
+   "status": "planned",
+   "angle": "Как посчитать окупаемость ИИ-агента за 5 000 AED на цифрах своего отдела продаж",
+   "query": "окупаемость ии агента"
+  },
+  {
+   "key": "pdpl-crm-fields",
+   "cat": "it",
+   "status": "planned",
+   "angle": "PDPL и CRM: какие поля в портале лучше не собирать и кому открывать доступ",
+   "query": "pdpl оаэ персональные данные crm"
   }
  ]
 }
