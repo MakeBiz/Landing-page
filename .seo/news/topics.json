@@ -145,9 +145,11 @@
   {
    "key": "telephony-before-crm",
    "cat": "crm",
-   "status": "planned",
+   "status": "used",
    "angle": "Телефония в ОАЭ: что выяснить до подключения номера к CRM",
-   "query": "ip телефония оаэ для crm"
+   "query": "ip телефония оаэ для crm",
+   "used_slug": "telefoniya-v-oae-dlya-crm",
+   "used_date": "2026-10-30"
   },
   {
    "key": "ai-vendor-questions",
