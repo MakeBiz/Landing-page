@@ -140,7 +140,8 @@
    "cat": "biz",
    "status": "planned",
    "angle": "Сколько длится внедрение CRM и от чего реально зависит срок",
-   "query": "сроки внедрения crm"
+   "query": "сроки внедрения crm",
+   "note": "Отложена 02.11.2026: нет свежего повода и нового сильного факта, тема больше для журнала, чем для ленты"
   },
   {
    "key": "telephony-before-crm",
@@ -185,9 +186,12 @@
   {
    "key": "whatsapp-real-cost",
    "cat": "auto",
-   "status": "planned",
+   "status": "used",
    "angle": "Сколько реально стоит WhatsApp Business в ОАЭ помимо подключения за 500 AED",
-   "query": "whatsapp business api цена оаэ"
+   "query": "whatsapp business api цена оаэ",
+   "used_slug": "skolko-stoit-whatsapp-business-v-oae",
+   "used_date": "2026-11-02",
+   "note": "Повод: Meta с 1 октября 2026 берёт плату за сервисные сообщения (1 000 в месяц на номер бесплатно) и за утилитарные в окне, по ОАЭ повышение маркетинговой ставки. Источник: документация Meta по тарифам платформы, сверено 02.11.2026"
   },
   {
    "key": "ai-agent-payback",
