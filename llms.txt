@@ -62,6 +62,7 @@ Key facts:
 - [CRM access rights in the UAE: who should see what](https://makebiztechnologies.com/en/news/prava-dostupa-v-crm-kto-chto-vidit): UAE law gives a person the right to ask what you hold on them. Who should see what in your CRM, who keeps export rights, and how long data stays.
 - [Which AI agent to start with in a sales team](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh): Not all of them at once. Start with one agent on a narrow task with a clear metric: qualifying inbound leads and reviving stalled deals.
 - [WhatsApp Business pricing in the UAE after 1 October](https://makebiztechnologies.com/en/news/skolko-stoit-whatsapp-business-v-oae): From 1 October 2026 Meta charges for WhatsApp service messages: 1,000 free per business number a month, then per rate card. What it costs in the UAE.
+- [UAE CRM rollout timeline: work back from July 2027](https://makebiztechnologies.com/en/news/sroki-vnedreniya-crm-v-oae): Bitrix24 setup starts at 14 days, complex projects take months. Under AED 50M revenue, pick an e-invoicing provider by 31 March 2027.
 - [UAE business telephony for your CRM: check this first](https://makebiztechnologies.com/en/news/telefoniya-v-oae-dlya-crm): Only du and e& may provide VoIP in the UAE under TDRA rules. Five things to settle before you connect a sales line to Bitrix24, and the costs.
 - [98% accuracy, and the invoices are still wrong](https://makebiztechnologies.com/en/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami): Vendors show 97-99% accuracy on document parsing, yet the books fill up with duplicates and the wrong VAT.
 - [Three dashboards a head of sales actually opens](https://makebiztechnologies.com/en/news/tri-dashborda-rukovoditelya-prodazh): Month pace, inbound leads and stalled deals. The MakeBiz BI cabinet in the UAE starts at AED 300 a month, 14 days free on full Pro.
@@ -118,6 +119,7 @@ Key facts:
 - [Права доступа в CRM: кто что видит в компании в ОАЭ](https://makebiztechnologies.com/news/prava-dostupa-v-crm-kto-chto-vidit)
 - [С какого AI-агента начинать в отделе продаж](https://makebiztechnologies.com/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
 - [Сколько стоит WhatsApp Business в ОАЭ после 1 октября](https://makebiztechnologies.com/news/skolko-stoit-whatsapp-business-v-oae)
+- [Сроки внедрения CRM в ОАЭ: считаем от 1 июля 2027](https://makebiztechnologies.com/news/sroki-vnedreniya-crm-v-oae)
 - [Телефония в ОАЭ для CRM: что проверить до подключения](https://makebiztechnologies.com/news/telefoniya-v-oae-dlya-crm)
 - [Точность 98%, а счета все равно с ошибками](https://makebiztechnologies.com/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami)
 - [Три дашборда, которые смотрит руководитель продаж](https://makebiztechnologies.com/news/tri-dashborda-rukovoditelya-prodazh)
