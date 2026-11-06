@@ -6,13 +6,21 @@
 ---
 
 Page: https://makebiztechnologies.com/en
-Title: Bitrix24 implementation in Dubai and the UAE, AI agents | MakeBiz
+Title: AI agents and Bitrix24 implementation in Dubai and the UAE | MakeBiz
 
-Official Bitrix24 partner in the UAE
-# Bitrix24 that sells for you
-We implement and support Bitrix24 for companies in the UAE: deals, calls, WhatsApp, invoices in dirhams and analytics in one system. And AI agents take over the routine
-MakeBiz Technologies, an official Bitrix24 partner, implements and supports Bitrix24 for companies in Dubai and across the Emirates and builds AI agents for business. Standard CRM setup from AED 10,000, one AI agent from AED 5,000, we work in English and Russian.
-Bitrix24 · main direction
+IT integrator for businesses in the UAE
+# AI agents and business automation
+From AI agents to CRM and BI analytics: agents answer clients on WhatsApp, review calls and watch the money, while we connect Bitrix24, accounting and reports into one system
+MakeBiz Technologies, an IT integrator and official Bitrix24 partner, implements AI agents and automates sales, finance and management for companies in Dubai and across the Emirates. One AI agent from AED 5,000, standard CRM setup from AED 10,000, we work in English and Russian.
+Area · AI agents
+## AI agents that work inside your business
+Agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. We connect them to your CRM and messengers. One agent from AED 5,000
+More about agents
+- AI sales head replies when a manager is silent
+- Calls every conversation scored
+- Hiring a bot runs the first interview
+- Marketing content and AI visibility
+Area · CRM and Bitrix24
 ## Everything about Bitrix24 in one team
 From the first CRM setup to daily support: we implement, connect WhatsApp and accounting systems, help with licenses and build analytics
 ### Bitrix24 implementation
@@ -30,14 +38,6 @@ Cloud from AED 180, on-premise from AED 13,184
 ### BI analytics
 Dashboards for management
 Standard Bitrix24 CRM setup · from AED 10,000 · support from AED 1,250 a month See implementation
-Second direction
-## AI agents on top of your Bitrix24
-Once the CRM is set up, agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
-More about agents
-- AI sales head replies when a manager is silent
-- Calls every conversation scored
-- Hiring a bot runs the first interview
-- Marketing content and AI visibility
 Cases
 ## Projects we have run for years
 CDEK
@@ -84,7 +84,7 @@ Portal, server and accounts belong to your company. We work under a separate acc
 Implementation, support, integrations and AI agents by one team, no need to gather contractors
 ## Questions and answers
 **What does MakeBiz do in the UAE?**
-Two directions. First: Bitrix24 implementation and support for companies in Dubai and across the Emirates, including WhatsApp, accounting integrations, licenses and BI analytics. Second: AI agents that take over routine in sales, finance, procurement and hiring.
+MakeBiz Technologies is an IT integrator: we implement AI agents that take over routine in sales, finance, procurement and hiring, and automate business on Bitrix24 for companies in Dubai and across the Emirates, including WhatsApp, accounting integrations, licenses and BI analytics.
 **Are you an official Bitrix24 partner?**
 Yes, MakeBiz Technologies is an official Bitrix24 partner in the UAE: we implement and support portals and help with cloud and on-premise Bitrix24 licenses.
 **How much does Bitrix24 implementation cost?**

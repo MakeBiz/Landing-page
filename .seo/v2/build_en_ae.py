@@ -410,7 +410,7 @@ def mods_html():
     return '<div class="mods">' + ''.join(f'<a class="md gl tilt" href="{U(p)}"><div class="ic">{ICON[MOD_IC[p]]}</div><h3>{esc(t)}</h3><p>{esc(s)}</p><b>Learn more →</b></a>' for p, t, s in BITRIX_MENU) + '</div>'
 INDS = ''.join(f'<span>{x}</span>' for x in ['Real estate', 'Trading and distribution', 'Logistics', 'Car dealers', 'Clinics', 'Education', 'B2B services', 'Retail'] * 2)
 STATS3 = ('<div class="stats gl"><div><div class="n3"><b>8</b></div><span>years in IT and CRM</span></div><div><div class="n3"><b>1</b><b>5</b><b>0</b><i>+</i></div><span>implementation projects</span></div>'
-          '<div><div class="n3"><b>7</b></div><span>Bitrix24 services</span></div><div><div class="n3"><b>2</b><b>4</b><i>/7</i></div><span>AI agents at work</span></div></div>'
+          '<div><div class="n3"><b>4</b></div><span>areas: AI, CRM, BI, integrations</span></div><div><div class="n3"><b>2</b><b>4</b><i>/7</i></div><span>AI agents at work</span></div></div>'
           f'<div class="mq"><div>{INDS}</div></div>')
 def sec_head(ey, h2, sub=''):
     return f'<div class="sec-head"><span class="eyebrow">{esc(ey)}</span><h2>{h2}</h2>' + (f'<p class="sec-sub">{sub}</p>' if sub else '') + '</div>'
@@ -420,7 +420,7 @@ built = []
 # ================================================================ PAGES
 # ---------- HOME
 home_faq = [
-    ('What does MakeBiz do in the UAE?', 'Two directions. First: Bitrix24 implementation and support for companies in Dubai and across the Emirates, including WhatsApp, accounting integrations, licenses and BI analytics. Second: AI agents that take over routine in sales, finance, procurement and hiring.'),
+    ('What does MakeBiz do in the UAE?', 'MakeBiz Technologies is an IT integrator: we implement AI agents that take over routine in sales, finance, procurement and hiring, and automate business on Bitrix24 for companies in Dubai and across the Emirates, including WhatsApp, accounting integrations, licenses and BI analytics.'),
     ('Are you an official Bitrix24 partner?', 'Yes, MakeBiz Technologies is an official Bitrix24 partner in the UAE: we implement and support portals and help with cloud and on-premise Bitrix24 licenses.'),
     ('How much does Bitrix24 implementation cost?', 'Standard Bitrix24 CRM setup starts from AED 10,000. Work beyond the standard is charged at AED 200 per hour, with a fixed estimate after a short survey. The Bitrix24 license is paid separately.'),
     ('How much do AI agents cost?', 'One agent on your process starts from AED 5,000, maintenance is 10% of the implementation cost per month. A demo on your process is free.'),
@@ -432,26 +432,26 @@ home_body = f'''
 <section class="hero hero-home">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <span class="eyebrow">Official Bitrix24 partner in the UAE</span>
-      <h1>Bitrix24 that <span>sells for you</span></h1>
-      <p class="lead">We implement and support Bitrix24 for companies in the UAE: deals, calls, WhatsApp, invoices in dirhams and analytics in one system. And AI agents take over the routine</p>
-      <p class="answer">MakeBiz Technologies, an official Bitrix24 partner, implements and supports Bitrix24 for companies in Dubai and across the Emirates and builds AI agents for business. Standard CRM setup from AED 10,000, one AI agent from AED 5,000, we work in English and Russian.</p>
-      <div class="cta-row"><a class="btn" href="#form">Book a diagnostic →</a><a class="btn btn-ghost" href="#bitrix24">What we implement</a></div>
+      <span class="eyebrow">IT integrator for businesses in the UAE</span>
+      <h1>AI agents <span>and business automation</span></h1>
+      <p class="lead">From AI agents to CRM and BI analytics: agents answer clients on WhatsApp, review calls and watch the money, while we connect Bitrix24, accounting and reports into one system</p>
+      <p class="answer">MakeBiz Technologies, an IT integrator and official Bitrix24 partner, implements AI agents and automates sales, finance and management for companies in Dubai and across the Emirates. One AI agent from AED 5,000, standard CRM setup from AED 10,000, we work in English and Russian.</p>
+      <div class="cta-row"><a class="btn" href="#form">Book a diagnostic →</a><a class="btn btn-ghost" href="#agents">What we implement</a></div>
     </div>
-    {V_BOARD}
+    {V_BOARD.replace('Bitrix24 · live pipeline', 'CRM · live pipeline', 1)}
   </div>
   <div class="wrap">{STATS3}</div>
 </section>
-<section class="sec" id="bitrix24"><div class="wrap">
-  {sec_head('Bitrix24 · main direction', 'Everything about Bitrix24 <span>in one team</span>', 'From the first CRM setup to daily support: we implement, connect WhatsApp and accounting systems, help with licenses and build analytics')}
-  {mods_html()}
-  <div class="pricebar gl"><span>Standard Bitrix24 CRM setup · <b>from AED 10,000</b> · support from AED 1,250 a month</span><a class="btn" href="{U('/bitrix')}">See implementation</a></div>
-</div></section>
-<section class="sec" style="padding-top:0"><div class="wrap"><div class="aiblk"><div><span class="eyebrow">Second direction</span>
-  <h2 style="margin-top:4px">AI agents on top of <span>your Bitrix24</span></h2><p>Once the CRM is set up, agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000</p>
+<section class="sec" id="agents"><div class="wrap"><div class="aiblk"><div><span class="eyebrow">Area · AI agents</span>
+  <h2 style="margin-top:4px">AI agents that <span>work inside your business</span></h2><p>Agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. We connect them to your CRM and messengers. One agent from AED 5,000</p>
   <a class="btn btn-ghost" href="{U('/ai-agents')}">More about agents</a></div>
   <ul><li><a href="{U('/ai-agents/rop')}">AI sales head<small>replies when a manager is silent</small></a></li><li><a href="{U('/ai-agents/zvonki')}">Calls<small>every conversation scored</small></a></li>
   <li><a href="{U('/ai-agents/hr')}">Hiring<small>a bot runs the first interview</small></a></li><li><a href="{U('/ai-agents/marketing')}">Marketing<small>content and AI visibility</small></a></li></ul></div></div></section>
+<section class="sec" id="bitrix24" style="padding-top:0"><div class="wrap">
+  {sec_head('Area · CRM and Bitrix24', 'Everything about Bitrix24 <span>in one team</span>', 'From the first CRM setup to daily support: we implement, connect WhatsApp and accounting systems, help with licenses and build analytics')}
+  {mods_html()}
+  <div class="pricebar gl"><span>Standard Bitrix24 CRM setup · <b>from AED 10,000</b> · support from AED 1,250 a month</span><a class="btn" href="{U('/bitrix')}">See implementation</a></div>
+</div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">{sec_head('Cases', 'Projects we have run <span>for years</span>')}{case_cards(['cdek-b2b','unilin-crm','haval-vector'])}<p class="more"><a href="{U('/keysy')}">All cases →</a></p></div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">{sec_head('How we work', 'From diagnostic <span>to profit growth</span>')}{steps([
     ('Diagnostic', 'We review processes and find where requests, money and time are lost. Free, 30-60 minutes, in Dubai or by video call'),
@@ -461,10 +461,10 @@ home_body = f'''
 ])}</div></section>
 {contract_block()}
 {faq(home_faq)}
-{form_block('index', 'Book a diagnostic', 'We show what to set up in Bitrix24 first and how much it costs. Reply within a business day')}
+{form_block('index', 'Book a diagnostic', 'We show what to automate first: agents, CRM or reports, and how much it costs. Reply within a business day')}
 '''
-page('/', 'index', 'Bitrix24 implementation in Dubai and the UAE, AI agents | MakeBiz',
-    'Bitrix24 implementation and support in Dubai and the UAE: WhatsApp, Zoho Books and QuickBooks integration, licenses, BI analytics. AI agents for sales. Prices in AED.',
+page('/', 'index', 'AI agents and Bitrix24 implementation in Dubai and the UAE | MakeBiz',
+    'IT integrator in Dubai and the UAE: AI agents for sales, finance and hiring, Bitrix24 implementation and support, WhatsApp, Zoho Books and QuickBooks integration, BI analytics. Prices in AED.',
     'home', home_body, [{"@type": "WebSite", "@id": SITE + "/en#website", "url": SITE + "/en", "name": "MakeBiz", "inLanguage": "en"}],
     [('/', 'Home')], home_faq)
 
