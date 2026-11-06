@@ -73,8 +73,8 @@ def header(active):
   <div class="wrap hdr-in">
     <a class="logo" href="{U('/')}" aria-label="MakeBiz home"><img src="{U('/img/logo.png')}" width="234" height="80" alt="MakeBiz"></a>
     <nav class="nav" aria-label="Main menu">
-      {dd('Bitrix24', BITRIX_MENU, 'bitrix')}
       {dd('AI agents', AI_MENU, 'ai')}
+      {dd('Bitrix24', BITRIX_MENU, 'bitrix')}
       {a(U('/keysy'), 'Cases', 'keysy')}
       {a(U('/en/news'), 'News', 'news')}
       {a(U('/partners'), 'Partners', 'partners')}
@@ -88,8 +88,8 @@ def header(active):
     </div>
   </div>
   <div class="mnav" hidden>
-    <div class="mnav-group"><div class="mnav-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div class="mnav-group"><div class="mnav-t">AI agents</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in AI_MENU)}</div>
+    <div class="mnav-group"><div class="mnav-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div class="mnav-group"><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="{U('/o-kompanii')}">About</a><a href="{U('/contacts')}">Contacts</a><a href="https://wa.me/{WA}">WhatsApp</a><a href="{RU('/')}" lang="ru">Русская версия</a><a href="tel:{PHONE_TEL}">{PHONE}</a></div>
   </div>
 </header>'''
@@ -100,11 +100,11 @@ def footer():
   <div class="wrap ftr-grid">
     <div class="ftr-brand">
       <a class="logo" href="{U('/')}"><img src="{U('/img/logo.png')}" width="234" height="80" alt="MakeBiz"></a>
-      <p>Official Bitrix24 partner in the UAE. We implement Bitrix24 and AI agents for companies in Dubai and across the Emirates. 8 years in IT, we work in English and Russian</p>
+      <p>IT integrator in the UAE and official Bitrix24 partner. We implement AI agents and Bitrix24 for companies in Dubai and across the Emirates. 8 years in IT, we work in English and Russian</p>
       <p class="ftr-contacts"><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{WA}">WhatsApp</a> · <a href="https://t.me/{TG}">Telegram @{TG}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
-    <div><div class="ftr-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI sales head</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
+    <div><div class="ftr-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
   </div>
   <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">By task and industry</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,_,_,t,_ in LANDINGS_AE)}</div>

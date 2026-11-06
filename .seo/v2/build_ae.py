@@ -80,8 +80,8 @@ def header(active):
   <div class="wrap hdr-in">
     <a class="logo" href="{U('/')}" aria-label="MakeBiz, на главную"><img src="{U('/img/logo.png')}" width="234" height="80" alt="MakeBiz"></a>
     <nav class="nav" aria-label="Основное меню">
-      {dd('Битрикс24', BITRIX_MENU, 'bitrix')}
       {dd('ИИ-агенты', AI_MENU, 'ai')}
+      {dd('Битрикс24', BITRIX_MENU, 'bitrix')}
       {a(U('/keysy'), 'Кейсы', 'keysy')}
       {a(U('/news'), 'Новости', 'news')}
       {a(U('/partners'), 'Партнёрам', 'partners')}
@@ -95,8 +95,8 @@ def header(active):
     </div>
   </div>
   <div class="mnav" hidden>
-    <div class="mnav-group"><div class="mnav-t">Битрикс24</div>{''.join(f'<a href="{nav_href(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div class="mnav-group"><div class="mnav-t">ИИ-агенты</div>{''.join(f'<a href="{nav_href(p)}">{esc(t)}</a>' for p,t,_ in AI_MENU)}</div>
+    <div class="mnav-group"><div class="mnav-t">Битрикс24</div>{''.join(f'<a href="{nav_href(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div class="mnav-group"><a href="{U('/o-kompanii')}">О компании</a><a href="{U('/ceny')}">Цены</a><a href="{U('/keysy')}">Кейсы</a><a href="{U('/vps')}">Серверы и VPS</a><a href="{U('/news')}">Новости</a><a href="{U('/partners')}">Партнёрам</a><a href="{U('/contacts')}">Контакты</a><a href="https://wa.me/{WA}">WhatsApp</a><a href="tel:{PHONE_TEL}">{PHONE}</a></div>
   </div>
 </header>'''
@@ -107,11 +107,11 @@ def footer():
   <div class="wrap ftr-grid">
     <div class="ftr-brand">
       <a class="logo" href="{U('/')}"><img src="{U('/img/logo.png')}" width="234" height="80" alt="MakeBiz"></a>
-      <p>Официальный партнёр Битрикс24 в ОАЭ. Внедряем Битрикс24 и ИИ-агентов для компаний в Дубае и по всем Эмиратам. 8 лет в IT, работаем на русском и английском</p>
+      <p>IT-интегратор в ОАЭ и официальный партнёр Битрикс24. Внедряем ИИ-агентов и Битрикс24 для компаний в Дубае и по всем Эмиратам. 8 лет в IT, работаем на русском и английском</p>
       <p class="ftr-contacts"><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{WA}">WhatsApp</a> · <a href="https://t.me/{TG}">Telegram @{TG}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
-    <div><div class="ftr-t">Битрикс24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">ИИ-агенты</div><a href="{U('/ai-agents')}">Внедрение ИИ-агентов</a><a href="{U('/ai-agents/rop')}">ИИ-РОП</a><a href="{U('/ai-agents/zvonki')}">Речевая аналитика</a><a href="{U('/ai-agents/hr')}">HR-агент</a><a href="{U('/ai-agents/marketing')}">Маркетолог</a></div>
+    <div><div class="ftr-t">Битрикс24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">Компания</div><a href="{U('/o-kompanii')}">О компании</a><a href="{U('/ceny')}">Цены</a><a href="{U('/keysy')}">Кейсы</a><a href="{U('/vps')}">Серверы и VPS</a><a href="{U('/news')}">Новости</a><a href="{U('/partners')}">Партнёрам</a><a href="https://t.me/makebizchannel">Telegram-канал</a><a href="{U('/contacts')}">Контакты</a><a href="{BASE}/en">English version</a></div>
   </div>
   <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">Под задачу</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,t,_,_,_ in LANDINGS_AE)}</div>
