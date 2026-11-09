@@ -75,6 +75,7 @@ Key facts:
 - [What Is an AI Agent, and How Is It Different From a Chatbot · MakeBiz](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
 - [What the call knows and the CRM record does not · MakeBiz](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
 - [UAE e-invoicing: appoint your provider by 30 October · MakeBiz](https://makebiztechnologies.com/en/news/e-invoicing-oae-srok-30-oktyabrya)
+- [Free zone and mainland: one Bitrix24 or two · MakeBiz](https://makebiztechnologies.com/en/news/free-zone-i-mainland-v-odnom-bitrix24)
 - [Where the Sales Team Loses a Client During a Call · MakeBiz](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Where procurement loses money comparing suppliers · MakeBiz](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi)
 - [CRM implementation cost in the UAE: what you pay for · MakeBiz](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
@@ -86,4 +87,3 @@ Key facts:
 - [CRM access rights in the UAE: who should see what · MakeBiz](https://makebiztechnologies.com/en/news/prava-dostupa-v-crm-kto-chto-vidit)
 - [Which AI agent to start with in a sales team · MakeBiz](https://makebiztechnologies.com/en/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh)
 - [WhatsApp Business pricing in the UAE after 1 October · MakeBiz](https://makebiztechnologies.com/en/news/skolko-stoit-whatsapp-business-v-oae)
-- [UAE CRM rollout timeline: work back from July 2027 · MakeBiz](https://makebiztechnologies.com/en/news/sroki-vnedreniya-crm-v-oae)
