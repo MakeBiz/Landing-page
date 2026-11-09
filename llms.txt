@@ -50,6 +50,7 @@ Key facts:
 - [What to migrate when you switch CRM, and what to leave](https://makebiztechnologies.com/en/news/chto-perenosit-pri-smene-crm): Clients, deals and history move across, automation is rebuilt. What to clean up first and where the built in importer stops.
 - [What Is an AI Agent, and How Is It Different From a Chatbot](https://makebiztechnologies.com/en/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota): A chatbot answers a question and forgets it. An agent has a role, memory, and access to your systems: it runs the process itself, sees it through to a result…
 - [What the call knows and the CRM record does not](https://makebiztechnologies.com/en/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki): The deal record keeps the outcome, the call keeps the reasons. What belongs in the CRM after every conversation, and how to capture it.
+- [UAE corporate tax: the CRM data your return relies on](https://makebiztechnologies.com/en/news/dannye-crm-dlya-korporativnogo-naloga-oae): Keep records for 7 years, file within 9 months. Which Bitrix24 fields matter for the 9% tax and for relief under AED 3 million.
 - [UAE e-invoicing: appoint your provider by 30 October](https://makebiztechnologies.com/en/news/e-invoicing-oae-srok-30-oktyabrya): The FTA restated the deadline: at AED 50m+ revenue an accredited provider must be appointed by 30 October 2026. AED 5,000 for each month late.
 - [Free zone and mainland: one Bitrix24 or two](https://makebiztechnologies.com/en/news/free-zone-i-mainland-v-odnom-bitrix24): The Dubai mainland permit costs AED 5,000 per six months and that revenue needs separate records. One Bitrix24 portal or two: the numbers.
 - [Where the Sales Team Loses a Client During a Call](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka): The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down.
@@ -108,6 +109,7 @@ Key facts:
 - [Что переносить при смене CRM, а что оставить](https://makebiztechnologies.com/news/chto-perenosit-pri-smene-crm)
 - [Что такое AI-агент и чем он отличается от чат-бота](https://makebiztechnologies.com/news/chto-takoe-ai-agent-i-chem-otlichaetsya-ot-chat-bota)
 - [Что слышно в звонке и чего нет в карточке сделки](https://makebiztechnologies.com/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki)
+- [Корпоративный налог в ОАЭ: какие данные держать в CRM](https://makebiztechnologies.com/news/dannye-crm-dlya-korporativnogo-naloga-oae)
 - [E-invoicing в ОАЭ: провайдера выбрать до 30 октября](https://makebiztechnologies.com/news/e-invoicing-oae-srok-30-oktyabrya)
 - [Free zone и mainland: один Битрикс24 или два](https://makebiztechnologies.com/news/free-zone-i-mainland-v-odnom-bitrix24)
 - [Где отдел продаж теряет клиента внутри звонка](https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)

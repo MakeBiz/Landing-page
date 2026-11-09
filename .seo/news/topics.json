@@ -177,16 +177,21 @@
   {
    "key": "corporate-tax-crm-data",
    "cat": "biz",
-   "status": "planned",
+   "status": "used",
    "angle": "Какие данные в CRM нужны к отчётности по корпоративному налогу в ОАЭ и чего не хватает чаще всего",
-   "query": "корпоративный налог оаэ отчётность"
+   "query": "корпоративный налог оаэ отчётность",
+   "used_slug": "dannye-crm-dlya-korporativnogo-naloga-oae",
+   "used_date": "2026-11-09"
   },
   {
    "key": "free-zone-mainland-one-portal",
    "cat": "crm",
-   "status": "planned",
+   "status": "used",
    "angle": "Free zone и mainland в одном Битрикс24: права, счета и во что это обходится против двух порталов",
-   "query": "битрикс24 два юрлица оаэ"
+   "query": "битрикс24 два юрлица оаэ",
+   "used_slug": "free-zone-i-mainland-v-odnom-bitrix24",
+   "used_date": "2026-11-09",
+   "note": "Сильный факт: разрешение Free Zone Mainland Operating Permit, решение Исполнительного совета Дубая № 11 от 2025 года, 5 000 AED за шесть месяцев, корпоративный налог 9% на выручку по mainland и обязанность вести по ней отдельный финансовый учёт. Источник: релиз правительства Дубая от 08.10.2025, сверено 09.11.2026. Цены лицензий со страницы /bitrix-licenses на 23.10.2026"
   },
   {
    "key": "whatsapp-real-cost",
@@ -211,6 +216,48 @@
    "status": "planned",
    "angle": "PDPL и CRM: какие поля в портале лучше не собирать и кому открывать доступ",
    "query": "pdpl оаэ персональные данные crm"
+  },
+  {
+   "key": "crm-brokers-dubai",
+   "cat": "crm",
+   "status": "planned",
+   "angle": "CRM для брокера недвижимости в Дубае: откуда приходят заявки с порталов и что делать с дублями",
+   "query": "crm для агентства недвижимости дубай"
+  },
+  {
+   "key": "dual-currency-aed-usd",
+   "cat": "auto",
+   "status": "planned",
+   "angle": "AED и USD в одном портале: как считать выручку, когда сделки в двух валютах",
+   "query": "битрикс24 несколько валют"
+  },
+  {
+   "key": "ai-agent-arabic-english",
+   "cat": "agents",
+   "status": "planned",
+   "angle": "ИИ-агент на арабском и английском: что меняется в настройке и в цене",
+   "query": "ии агент арабский язык"
+  },
+  {
+   "key": "ai-agent-vs-operator-cost",
+   "cat": "ai",
+   "status": "planned",
+   "angle": "Что дешевле на входящих обращениях: оператор в штате или ИИ-агент от 5 000 AED",
+   "query": "ии агент вместо оператора"
+  },
+  {
+   "key": "portal-handover-docs",
+   "cat": "it",
+   "status": "planned",
+   "angle": "Передача портала клиенту: какая документация экономит часы поддержки по 200 AED",
+   "query": "администрирование битрикс24"
+  },
+  {
+   "key": "free-zone-audit-from-crm",
+   "cat": "biz",
+   "status": "planned",
+   "angle": "Аудит и продление лицензии free zone: какие документы собираются из CRM за день, а не за неделю",
+   "query": "аудит компании free zone оаэ"
   }
  ]
 }
