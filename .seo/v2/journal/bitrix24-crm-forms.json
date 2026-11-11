@@ -1,0 +1,114 @@
+{
+ "slug": "bitrix24-crm-forms",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "CRM-формы Битрикс24: заявка с сайта в сделку | MakeBiz",
+  "desc": "CRM-формы Битрикс24 для компании в ОАЭ: заявка с сайта сразу в сделку, UTM-метки, распределение и ответ в WhatsApp. Работы 200 AED в час, WhatsApp 500 AED.",
+  "h1": "CRM-формы Битрикс24: заявка с сайта сразу в сделку",
+  "crumb": "CRM-формы Битрикс24",
+  "lead": "Заявка с сайта, которая сначала уходит на почту, теряет время, а часто и источник рекламы. CRM-формы Битрикс24 убирают этот шаг. Разбираем, как настроить форму, разметку, распределение и первый ответ в WhatsApp.",
+  "answer": "CRM-форма Битрикс24 создаёт лид или сделку с контактом в момент отправки: поля формы ложатся в карточку, UTM-метки рекламы сохраняются в сделке, ответственный назначается по очереди, а робот ставит задачу или запускает первое касание в WhatsApp. У MakeBiz Technologies формы входят в проект внедрения со стандартной настройкой от 10 000 AED или делаются отдельно по 200 AED в час, подключение WhatsApp стоит 500 AED.",
+  "body": "<h2>CRM-форма записывает заявку прямо в Битрикс24</h2>\n<p>Обычная форма на сайте отправляет письмо на общую почту. Дальше кто-то должен его заметить, скопировать телефон в CRM и назначить менеджера. На каждом шаге заявка может потеряться, а источник рекламы теряется почти всегда.</p>\n<p>CRM-форма Битрикс24 устроена иначе: её создают в самом портале, и отправка сразу создаёт запись в CRM. Форму можно разместить несколькими способами:</p>\n<ul>\n<li>встроить кодом в страницу сайта, в том числе собранного не на Битрикс24</li>\n<li>показать во всплывающем окне по кнопке или по таймеру</li>\n<li>добавить в виджет на сайте рядом с онлайн-чатом и обратным звонком</li>\n<li>отправить ссылкой в WhatsApp, письмо или рекламное объявление</li>\n</ul>\n<p>Если заявки приходят из собственной формы сайта или внешней системы, их можно передавать в CRM через REST API или вебхуки, это уже задача <a href=\"/bitrix-development\">разработки под Битрикс24</a>.</p>\n<h2>Схема CRM решает, что создаст заявка</h2>\n<p>В настройках формы выбирают, какие записи появятся в CRM после отправки. От этого выбора зависит, как дальше работает отдел продаж.</p>\n<table><thead><tr><th>Что создаёт форма</th><th>Когда подходит</th><th>Что учесть</th></tr></thead><tbody>\n<tr><td><b>Лид</b></td><td>Много нецелевых заявок, нужна квалификация до сделки</td><td>Кто и за какое время превращает лид в сделку</td></tr>\n<tr><td><b>Сделка и контакт</b></td><td>Заявки почти всегда целевые, их сразу ведут по воронке</td><td>В какую воронку и на какую стадию падает сделка</td></tr>\n<tr><td><b>Сделка, контакт и компания</b></td><td>B2B-продажи, где важна организация клиента</td><td>Поле названия компании в форме и проверка дублей</td></tr>\n<tr><td><b>Повторная заявка</b></td><td>Клиент уже есть в базе</td><td>Правило дублей: новая запись или привязка к существующей</td></tr>\n</tbody></table>\n<p class=\"note\">Набор возможностей форм зависит от тарифа Битрикс24, поэтому тариф проверяем до сметы.</p>\n<p>Для компании с несколькими направлениями удобно делать отдельную форму под каждое: тогда сделка сразу попадает в свою воронку, а менеджер видит, о какой услуге речь, ещё до звонка. Поля формы сохраняются в полях карточки, поэтому в форме стоит спрашивать только то, что действительно используется в продаже.</p>\n<h2>UTM-метки показывают, какая реклама привела заявку</h2>\n<p>Если посетитель пришёл на сайт по ссылке с UTM-метками, CRM-форма сохраняет их в карточке: источник, канал, кампанию, объявление и ключевое слово. Это работает и для Google Ads, и для рекламы Meta, если ссылки в объявлениях размечены одинаково.</p>\n<p>Правило простое: договоритесь о единой разметке до запуска рекламы. Например, utm_source всегда google или meta, а utm_campaign совпадает с названием кампании в рекламном кабинете. Тогда в отчёте CRM видно не просто «заявки с сайта», а какая кампания приносит сделки и оплаты. Связать рекламу, CRM и деньги в одном экране помогает <a href=\"/bi-analitika\">BI-аналитика</a> от 300 AED в месяц, а какие отчёты смотрит руководитель, мы описали в новости о <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">трёх дашбордах руководителя продаж</a>.</p>\n<!--cta-->\n<h2>Распределение заявок настраивается в форме и роботами</h2>\n<p>В самой форме указывают ответственного. Если ответственных несколько, заявки распределяются между ними по очереди. Для более тонкой логики подключают роботов на первой стадии воронки:</p>\n<ul>\n<li>сменить ответственного по условию: язык клиента, эмират, услуга из формы</li>\n<li>поставить менеджеру задачу с крайним сроком, например перезвонить в течение 15 минут</li>\n<li>уведомить руководителя, если стадия сделки не изменилась за заданное время</li>\n<li>отправить клиенту письмо с подтверждением заявки</li>\n</ul>\n<p>Роботы настраиваются на стадии, поэтому правило одно для всех заявок, а не для каждого менеджера отдельно. Как устроена связка воронки, роботов и каналов, описано на странице <a href=\"/bitrix\">внедрения Битрикс24 в Дубае</a>.</p>\n<h2>Ответ в WhatsApp уходит шаблоном через официальный канал</h2>\n<p>В ОАЭ клиент, оставивший заявку, ждёт сообщения в WhatsApp, а не письма. Здесь есть техническая деталь: отправка формы не открывает окно обслуживания WhatsApp на 24 часа. Его открывает только сообщение самого клиента. Поэтому первое сообщение после заявки уходит шаблоном, заранее одобренным Meta, через официальный канал WhatsApp Business Platform. Разницу между API и WhatsApp Web мы разобрали в гайде <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API или WhatsApp Web</a>.</p>\n<p>Канал подключается к открытым линиям Битрикс24, у нас это стоит 500 AED, подписка провайдера отдельно (подробнее на странице <a href=\"/bitrix-messengers\">WhatsApp в Битрикс24</a>). Если приложение провайдера поддерживает отправку шаблона из робота, первое касание можно автоматизировать. Если нет, робот ставит менеджеру задачу написать клиенту. Когда клиент ответит, диалог попадает в карточку, и дальше менеджер пишет свободным текстом.</p>\n<p>Если менеджер не отвечает, подстрахует <a href=\"/ai-agents/rop\">ИИ-РОП</a>: агент отвечает клиенту, когда менеджер молчит, и следит за воронкой. Как агент разбирает входящие сообщения, читайте в новости про <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">ИИ-агента в WhatsApp</a>.</p>\n<h2>В форме достаточно пяти полей</h2>\n<p>Каждое лишнее поле это ещё одна причина не дописать заявку. Для первой заявки обычно хватает пяти полей: имя, телефон с кодом страны, email, интересующая услуга и удобный язык общения (русский или английский). Всё остальное менеджер уточнит в разговоре.</p>\n<p>Ещё три настройки, о которых часто забывают: обязательные поля помечаются явно, согласие на обработку данных добавляется отдельным полем, а защита от спама включается сразу, иначе CRM заполнится ботами. Поля можно показывать по условию: например, вопрос о бюджете появляется только для одной услуги.</p>\n<h2>Условный пример: агентство недвижимости с тремя формами</h2>\n<p>Условное агентство недвижимости в Дубае принимает заявки на покупку, аренду и оценку объекта. Делаем три формы, каждая создаёт сделку в своей воронке, UTM-метки рекламы сохраняются в карточке, заявки распределяются между брокерами по очереди, а робот через 15 минут без движения сообщает руководителю. Если на формы, роботов и разметку уйдёт, например, 8 часов, это 1 600 AED по ставке 200 AED в час, плюс 500 AED за подключение WhatsApp. В проекте со стандартной настройкой от 10 000 AED формы делаются вместе с воронкой. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Настроим формы, которые сразу создают сделки",
+   "Формы, UTM-метки, распределение и роботы по 200 AED в час, подключение WhatsApp 500 AED",
+   "Обсудить настройку"
+  ],
+  "faq": [
+   [
+    "Можно ли встроить CRM-форму Битрикс24 на сайт не на Битрикс24?",
+    "Да. Форма встраивается кодом в страницу любого сайта, показывается во всплывающем окне или открывается по ссылке. Заявки из собственной формы сайта можно передавать через REST API или вебхуки."
+   ],
+   [
+    "Сохраняет ли форма UTM-метки?",
+    "Да, если посетитель пришёл по размеченной ссылке, метки сохраняются в карточке лида или сделки. Важно заранее договориться о единой разметке в Google Ads и Meta."
+   ],
+   [
+    "Как распределить заявки между менеджерами?",
+    "В форме указывают нескольких ответственных, и заявки идут по очереди. Более сложные правила, например по языку или услуге, настраиваются роботами на первой стадии воронки."
+   ],
+   [
+    "Можно ли сразу написать клиенту в WhatsApp после заявки?",
+    "Да, но первое сообщение уходит шаблоном, одобренным Meta, через официальный канал: отправка формы не открывает окно 24 часа. Подключение WhatsApp к Битрикс24 у нас стоит 500 AED."
+   ],
+   [
+    "Сколько стоит настройка CRM-форм?",
+    "В проекте со стандартной настройкой от 10 000 AED формы делаются вместе с воронкой. Отдельно работы идут по 200 AED в час, объём фиксируем в смете до старта."
+   ]
+  ],
+  "cta": [
+   "Подключим заявки с сайта к CRM",
+   "Пришлите адрес сайта и опишите, откуда идут заявки. Предложим схему форм и смету в AED"
+  ],
+  "related": [
+   [
+    "/journal/whatsapp-business-api-vs-whatsapp-web",
+    "WhatsApp Business API или WhatsApp Web в CRM"
+   ],
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Внедрение Битрикс24 под ключ в ОАЭ: что входит"
+   ],
+   [
+    "/news/ai-agent-v-whatsapp-vhodyashchie-zayavki",
+    "ИИ-агент в WhatsApp: как он разбирает входящие заявки"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Bitrix24 CRM forms: website leads into deals | MakeBiz",
+  "desc": "Bitrix24 CRM forms for a UAE business: website leads straight into deals, UTM tags, routing and a WhatsApp reply. Setup at AED 200 an hour, WhatsApp AED 500.",
+  "h1": "Bitrix24 CRM forms: website leads straight into deals",
+  "crumb": "Bitrix24 CRM forms",
+  "lead": "A website lead that goes to an inbox first loses time and often its ad source. Bitrix24 CRM forms remove that step. Here is how to set up the form, tagging, routing and the first WhatsApp reply.",
+  "answer": "A Bitrix24 CRM form creates a lead, or a deal with a contact, the moment it is submitted: form fields fill the record, UTM tags from ads are stored in the deal, a rep is assigned in rotation and an automation rule sets a task or triggers the first WhatsApp touch. At MakeBiz Technologies forms are part of an implementation with the standard setup from AED 10,000, or built separately at AED 200 an hour, and connecting WhatsApp costs AED 500.",
+  "body": "<h2>A CRM form writes the lead straight into Bitrix24</h2>\n<p>A typical website form sends an email to a shared inbox. Someone then has to notice it, copy the phone number into the CRM and assign a rep. The lead can get lost at every step, and the ad source is lost almost every time.</p>\n<p>A Bitrix24 CRM form works differently: you build it inside the portal, and every submission creates a CRM record right away. You can publish the form in several ways:</p>\n<ul>\n<li>embed it with a code snippet on any page, including sites not built on Bitrix24</li>\n<li>show it as a pop-up on a button click or after a delay</li>\n<li>add it to the website widget next to live chat and the callback request</li>\n<li>share it as a link in WhatsApp, an email or an ad</li>\n</ul>\n<p>If leads come from your own site form or another system, they can be passed into the CRM through the REST API or webhooks, which is a job for <a href=\"/bitrix-development\">Bitrix24 development</a>.</p>\n<h2>The CRM scheme decides what a submission creates</h2>\n<p>In the form settings you choose which records appear in the CRM after a submission. That choice shapes how your sales team works from then on.</p>\n<table><thead><tr><th>What the form creates</th><th>When it fits</th><th>What to decide</th></tr></thead><tbody>\n<tr><td><b>Lead</b></td><td>Lots of unqualified enquiries that need screening before a deal</td><td>Who converts leads into deals, and how fast</td></tr>\n<tr><td><b>Deal and contact</b></td><td>Enquiries are almost always genuine and go straight into the pipeline</td><td>Which pipeline and which stage the deal lands in</td></tr>\n<tr><td><b>Deal, contact and company</b></td><td>B2B sales where the client&#39;s organisation matters</td><td>A company name field and duplicate checks</td></tr>\n<tr><td><b>Repeat enquiry</b></td><td>The client is already in the database</td><td>The duplicate rule: a new record or a link to the existing one</td></tr>\n</tbody></table>\n<p class=\"note\">Form features depend on the Bitrix24 plan, so we check the plan before quoting.</p>\n<p>If you sell several services, a separate form for each one works well: the deal lands in its own pipeline, and the rep knows what the enquiry is about before calling.</p>\n<h2>UTM tags show which ad brought the lead</h2>\n<p>When a visitor arrives through a link with UTM tags, the CRM form saves them in the record: source, medium, campaign, ad content and keyword. It works for Google Ads and Meta ads alike, as long as the links in your ads are tagged the same way.</p>\n<p>The rule is simple: agree on one tagging convention before ads go live. For example, utm_source is always google or meta, and utm_campaign matches the campaign name in the ad account. Then the CRM report shows not just \"website leads\" but which campaign brings deals and payments. <a href=\"/bi-analitika\">BI analytics</a> from AED 300 a month puts ads, CRM and revenue on one screen, and our news on <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">three dashboards a sales manager checks</a> shows which reports matter.</p>\n<!--cta-->\n<h2>Lead routing is set in the form and in automation rules</h2>\n<p>The form itself names the responsible person. If you list several, leads are assigned to them in turn. For finer logic, add automation rules to the first pipeline stage:</p>\n<ul>\n<li>reassign the lead by condition: the client&#39;s language, emirate or the service picked in the form</li>\n<li>give the rep a task with a deadline, for example call back within 15 minutes</li>\n<li>alert the manager if the deal stage has not changed within a set time</li>\n<li>email the client a confirmation that the request was received</li>\n</ul>\n<p>How pipeline, rules and channels fit together is explained on the <a href=\"/bitrix\">Bitrix24 implementation in Dubai</a> page.</p>\n<h2>The WhatsApp reply goes out as a template on the official channel</h2>\n<p>In the UAE a client who fills in a form expects a WhatsApp message, not an email. There is one technical catch: a form submission does not open WhatsApp&#39;s 24-hour customer service window. Only a message from the client does. So the first message after a form goes out as a template approved by Meta in advance, through the official WhatsApp Business Platform. We compared the API with WhatsApp Web in our guide <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API or WhatsApp Web</a>.</p>\n<p>The channel connects to Bitrix24 open channels for AED 500 with us, plus the provider subscription (details on the <a href=\"/bitrix-messengers\">WhatsApp in Bitrix24</a> page). If the provider&#39;s app supports sending a template from an automation rule, the first touch can be automatic. If not, a rule gives the rep a task to message the client. Once the client replies, the chat lands in the record and the rep continues in free text.</p>\n<p>If a rep goes quiet, the <a href=\"/ai-agents/rop\">AI sales manager</a> steps in: the agent replies to the client when the rep does not and keeps an eye on the pipeline. How an agent sorts incoming messages is covered in our news on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a>.</p>\n<h2>Five fields are enough for a first enquiry</h2>\n<p>Every extra field is one more reason to abandon the form. For a first enquiry five fields usually do the job: name, phone with country code, email, the service they are interested in and preferred language (English or Russian). The rep can ask the rest on the call.</p>\n<p>Three settings people often forget: mark required fields clearly, add consent to data processing as a separate field, and switch on spam protection from day one, or the CRM fills up with bots. Fields can also appear by condition, so a budget question shows up for one service only.</p>\n<h2>A worked example: a real estate agency with three forms</h2>\n<p>A hypothetical Dubai real estate agency takes enquiries to buy, rent and value a property. We build three forms, each creating a deal in its own pipeline. UTM tags from ads are saved in the record, enquiries rotate between brokers, and a rule alerts the manager if a deal sits untouched for 15 minutes. If the forms, rules and tagging take, say, 8 hours, that is AED 1,600 at AED 200 an hour, plus AED 500 to connect WhatsApp. In a project with the standard setup from AED 10,000, forms are built together with the pipeline. All prices are on the <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We build forms that create deals on submit",
+   "Forms, UTM tags, routing and automation at AED 200 an hour, WhatsApp connection AED 500",
+   "Discuss the setup"
+  ],
+  "faq": [
+   [
+    "Can I embed a Bitrix24 CRM form on a site that is not built on Bitrix24?",
+    "Yes. The form embeds with a code snippet on any site, shows as a pop-up or opens from a link."
+   ],
+   [
+    "Does the form keep UTM tags?",
+    "Yes. If the visitor came through a tagged link, the tags are saved in the lead or deal. Agree on one tagging convention for Google Ads and Meta in advance."
+   ],
+   [
+    "How do I split leads between sales reps?",
+    "List several responsible people in the form and leads go to them in turn. More complex rules, for example by language or service, are set with automation rules on the first pipeline stage."
+   ],
+   [
+    "Can we message the client on WhatsApp right after the form?",
+    "Yes, but the first message is a Meta-approved template sent through the official channel, because a form submission does not open the 24-hour window. Connecting WhatsApp to Bitrix24 costs AED 500 with us."
+   ],
+   [
+    "How much does CRM form setup cost?",
+    "In a project with the standard setup from AED 10,000, forms are built together with the pipeline. On their own they are AED 200 an hour, with the scope fixed in the quote before work starts."
+   ]
+  ],
+  "cta": [
+   "Let us connect your website leads to the CRM",
+   "Send us your website address and tell us where leads come from. We will propose a form setup and a quote in AED"
+  ],
+  "related": [
+   [
+    "/journal/whatsapp-business-api-vs-whatsapp-web",
+    "WhatsApp Business API or WhatsApp Web in your CRM"
+   ],
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Turnkey Bitrix24 implementation in the UAE: what is included"
+   ],
+   [
+    "/news/ai-agent-v-whatsapp-vhodyashchie-zayavki",
+    "The AI agent in WhatsApp: how it sorts incoming leads"
+   ]
+  ]
+ }
+}

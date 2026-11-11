@@ -1,0 +1,114 @@
+{
+ "slug": "sales-forecasting-crm",
+ "date": "2026-11-11",
+ "rubric_ru": "Аналитика",
+ "rubric_en": "Analytics",
+ "ru": {
+  "title": "Прогноз продаж по данным CRM: из чего строится | MakeBiz",
+  "desc": "Прогноз продаж по CRM: вероятности стадий по истории, цикл сделки, прогноз менеджера и план на одном дашборде. MakeBiz BI от 700 AED в месяц, 14 дней бесплатно.",
+  "h1": "Прогноз продаж по данным CRM",
+  "crumb": "Прогноз продаж",
+  "lead": "Прогноз продаж «по ощущениям» каждый месяц расходится с фактом. Если в CRM есть суммы, стадии и даты, прогноз можно считать по данным и проверять каждую неделю.",
+  "answer": "Прогноз продаж по CRM складывается из суммы открытых сделок, вероятности каждой стадии по истории закрытий и даты оплаты с поправкой на средний цикл. В MakeBiz Technologies такой прогноз собирают в MakeBiz BI: прогноз месяца и квартала входит в тариф Стандарт за 700 AED в месяц, первые 14 дней бесплатно.",
+  "body": "<h2>Прогноз строится из трёх величин: сумма, вероятность и дата</h2>\n<p>У каждой открытой сделки в CRM есть сумма, стадия и ожидаемая дата закрытия. Из этих трёх полей и складывается прогноз. Сумма показывает, сколько можно заработать. Вероятность показывает, насколько это реально. Дата показывает, в каком месяце придут деньги.</p>\n<p>Простейшая формула: сумма сделки умножается на вероятность её стадии, результаты складываются по месяцам. Это называется взвешенной воронкой. Сделка на 40 000 AED на стадии с вероятностью 25% даёт в прогноз 10 000 AED. Ни одна отдельная сделка не принесёт ровно эту сумму, но на большом числе сделок ошибки взаимно гасятся, и итог по месяцу становится полезным для планирования.</p>\n<p>Слабое место формулы в качестве полей. Если сумма не заполнена, сделка выпадает из прогноза. Если дата закрытия стоит «на завтра» уже третий месяц, прогноз каждый раз переезжает. Поэтому до любых расчётов нужно навести порядок в данных, об этом ниже.</p>\n<h2>Вероятность стадии считается по истории, а не на глаз</h2>\n<p>Во многих порталах вероятности стадий выставлены при настройке: 10, 30, 50, 90%. Это догадки. Честная вероятность считается по закрытым сделкам за 6-12 месяцев: сколько сделок, дошедших до стадии, в итоге оплатили.</p>\n<table><thead><tr><th>Стадия</th><th>Дошли до стадии</th><th>Из них оплатили</th><th>Вероятность</th></tr></thead><tbody>\n<tr><td><b>Новая заявка</b></td><td>400</td><td>48</td><td>12%</td></tr>\n<tr><td><b>Квалификация пройдена</b></td><td>200</td><td>48</td><td>24%</td></tr>\n<tr><td><b>КП отправлено</b></td><td>120</td><td>48</td><td>40%</td></tr>\n<tr><td><b>Согласование условий</b></td><td>70</td><td>48</td><td>69%</td></tr>\n<tr><td><b>Счёт выставлен</b></td><td>55</td><td>48</td><td>87%</td></tr>\n</tbody></table>\n<p class=\"note\">Условный пример с вымышленными цифрами, чтобы показать расчёт. Ваши вероятности считаются по вашим сделкам.</p>\n<p>Вероятности стоит пересчитывать раз в квартал и отдельно по направлениям. Повторная продажа постоянному клиенту и первая сделка с новым клиентом на одной стадии ведут себя по-разному. Если в компании есть продажи в free zone и на mainland через разные команды, их тоже стоит считать отдельно.</p>\n<h2>Цикл сделки сдвигает прогноз по месяцам</h2>\n<p>Менеджеры почти всегда ставят дату закрытия оптимистично. Поэтому дату из карточки сравнивают со средним циклом: сколько дней обычно проходит от каждой стадии до оплаты. Если на стадии «КП отправлено» сделки в среднем закрываются через 35 дней, а менеджер поставил дату через неделю, прогноз берёт расчётную дату.</p>\n<p>Второе правило касается зависших сделок. Сделка, которая сидит на стадии в два-три раза дольше среднего, почти наверняка не закроется в срок. Такие сделки выносят в отдельный список для руководителя, а в прогнозе снижают их вес. Контроль зависших сделок можно отдать <a href=\"/ai-agents/rop\">ИИ-РОПу</a>: агент видит воронку, напоминает менеджеру и сообщает руководителю, если ответа нет.</p>\n<!--cta-->\n<h2>Взвешенная воронка и прогноз менеджера считаются рядом</h2>\n<p>Математика по стадиям не знает того, что знает менеджер: клиент уже подписал договор у себя, но платёж пройдёт после закрытия квартала. Поэтому рядом со взвешенной воронкой ведут прогноз менеджеров. В Битрикс24 для этого делают поле в сделке с тремя значениями:</p>\n<ul>\n<li><b>Уверен</b>: сделка закроется в этом периоде, менеджер готов за это отвечать</li>\n<li><b>Возможно</b>: есть шанс, но остались открытые вопросы</li>\n<li><b>Не в этом периоде</b>: сделка жива, но деньги придут позже</li>\n</ul>\n<p>Руководитель смотрит на обе цифры. Если прогноз менеджеров сильно выше взвешенной воронки, команда переоценивает сделки. Если ниже, возможно, сделки зависли и их пора разобрать. Разговор о прогнозе на планёрке становится предметным: обсуждают конкретные сделки, а не ощущения.</p>\n<p>Дополнительный источник правды это звонки. Что клиент говорит о сроках и бюджете, часто не попадает в карточку сделки. Речевая аналитика звонков от 1 000 AED в месяц за 5 000 минут помогает это увидеть, подробнее в новости о том, <a href=\"/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki\">что теряется между звонком и карточкой сделки</a>, и на странице <a href=\"/ai-agents/zvonki\">агента по звонкам</a>.</p>\n<h2>Данные CRM нужно привести в порядок до прогноза</h2>\n<p>Прогноз наследует все ошибки CRM. Минимальный список проверок перед запуском:</p>\n<ol>\n<li>У каждой открытой сделки есть сумма в AED и дата закрытия</li>\n<li>Стадии описаны: что должно произойти, чтобы сделка перешла дальше</li>\n<li>Нет дублей сделок по одному клиенту и одной потребности</li>\n<li>Проигранные сделки закрываются с причиной, а не висят в воронке</li>\n<li>Сумма сделки и сумма счёта считаются одинаково, с VAT 5% или без него</li>\n</ol>\n<p>Подробно о типовых ошибках данных мы пишем в гайде <a href=\"/journal/bitrix24-crm-analytics\">почему отчёты CRM врут</a>. Если портал давно не проверяли, начните с <a href=\"/bitrix-audit\">аудита Битрикс24</a>. Если CRM ещё нет или воронка не отражает реальный процесс, сначала нужна <a href=\"/bitrix\">настройка Битрикс24</a>: стандартная от 10 000 AED, запуск от 14 дней.</p>\n<h2>План, прогноз и факт сходятся на одном дашборде</h2>\n<p>Рабочий прогноз живёт на дашборде, который обновляется сам. На одном экране три линии по месяцам: план продаж, прогноз по взвешенной воронке и факт оплат. Ниже таблица по менеджерам и список сделок с наибольшим вкладом в прогноз.</p>\n<p>Факт оплат надёжнее брать из учётной системы, а не со стадии «Успешно». Связку Битрикс24 с Zoho Books, QuickBooks или Odoo мы делаем от 10 000 AED, подробнее на странице <a href=\"/bitrix-integrations\">интеграций</a>. В <a href=\"/bi-analitika\">BI-аналитике MakeBiz</a> прогноз месяца и квартала и зависшие сделки входят в тариф Стандарт за 700 AED в месяц, планы продаж добавляет тариф Профи за 1 000 AED, а учётные системы подключаются к BI по запросу за отдельную плату. Первые 14 дней бесплатно. Как связать рекламу с этими оплатами, читайте в гайде о <a href=\"/journal/full-funnel-analytics\">сквозной аналитике</a>.</p>\n<h2>Условный пример: дистрибьютор на 20 менеджеров</h2>\n<p>Условный дистрибьютор в Шардже ведёт продажи в Битрикс24, но план на месяц руководитель собирает в таблице по звонку каждому менеджеру. Цифры каждый раз разные, а в конце месяца факт сильно расходится с ожиданиями.</p>\n<p>Сначала команда чистит воронку: закрывает мёртвые сделки, заполняет суммы и даты. Затем вероятности стадий пересчитываются по истории за год, а в сделках появляется поле прогноза менеджера. Через месяц руководитель видит план, взвешенную воронку и факт на одном экране и разбирает на планёрке только сделки с расхождениями. Сколько стоит проект именно у вас, считаем по смете до старта, цены на работы на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Соберём прогноз продаж по вашей CRM",
+   "Вероятности стадий по истории, план, прогноз и факт на одном дашборде. Прогноз в BI от 700 AED в месяц, 14 дней бесплатно",
+   "Обсудить прогноз"
+  ],
+  "faq": [
+   [
+    "Как посчитать вероятность стадии сделки?",
+    "Возьмите закрытые сделки за 6-12 месяцев и посчитайте, какая доля сделок, дошедших до стадии, в итоге оплатила. Это и есть вероятность, пересчитывайте её раз в квартал."
+   ],
+   [
+    "Что такое взвешенная воронка?",
+    "Это сумма всех открытых сделок, умноженных на вероятность их стадии. Она показывает ожидаемую выручку по месяцам с учётом того, что часть сделок не закроется."
+   ],
+   [
+    "Сколько данных нужно для прогноза?",
+    "Нужна история закрытых сделок, выигранных и проигранных, с суммами и датами. Чем больше сделок за период, тем устойчивее вероятности, при малом числе сделок прогноз менеджера важнее математики."
+   ],
+   [
+    "Можно ли построить прогноз прямо в Битрикс24?",
+    "Базовые отчёты по воронке в Битрикс24 есть. Для плана, прогноза и факта оплат из учётной системы на одном экране удобнее BI-дашборд, он обновляется автоматически."
+   ],
+   [
+    "Сколько стоит прогноз продаж в MakeBiz?",
+    "Прогноз месяца и квартала входит в тариф BI Стандарт за 700 AED в месяц, планы продаж в тариф Профи за 1 000 AED. Если данные CRM нужно привести в порядок, работы считаются по часам, 200 AED в час, по смете до старта."
+   ]
+  ],
+  "cta": [
+   "Покажем, насколько ваш прогноз отличается от факта",
+   "Напишите, где ведёте сделки и как сейчас собираете план. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/full-funnel-analytics",
+    "Сквозная аналитика: от рекламы до оплаты"
+   ],
+   [
+    "/journal/bitrix24-crm-analytics",
+    "Почему отчёты CRM врут и как это исправить"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Три дашборда, которые смотрит руководитель продаж"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Sales forecasting from CRM data: how it works | MakeBiz",
+  "desc": "Sales forecasting from CRM data: stage probabilities, sales cycle, rep forecast and plan on one dashboard. MakeBiz BI from AED 700 a month, 14 days free.",
+  "h1": "Sales forecasting from CRM data",
+  "crumb": "Sales forecasting",
+  "lead": "A forecast based on gut feel misses actuals every month. If your CRM holds amounts, stages and dates, you can forecast from data and check it every week.",
+  "answer": "A CRM sales forecast combines the value of open deals, the probability of each stage based on past closes, and the payment date adjusted for your average sales cycle. In MakeBiz BI the monthly and quarterly forecast is part of the Standard plan at AED 700 a month, and the first 14 days are free.",
+  "body": "<h2>A forecast is built from three numbers: amount, probability and date</h2>\n<p>Every open deal in your CRM has an amount, a stage and an expected close date. Those three fields are what a forecast is made of. The amount tells you what you could earn. The probability tells you how likely it is. The date tells you which month the money lands in.</p>\n<p>The simplest formula multiplies each deal amount by its stage probability and adds the results up by month: a weighted pipeline. A deal worth AED 40,000 at a stage with a 25% probability contributes AED 10,000 to the forecast. No single deal pays exactly that, but across many deals the errors cancel out.</p>\n<p>The weak spot is data quality. A blank amount drops the deal out, and a close date that has said \"tomorrow\" for three months keeps the forecast sliding. So the data comes first, more on that below.</p>\n<h2>Stage probability comes from history, not gut feel</h2>\n<p>In many portals stage probabilities were typed in during setup: 10, 30, 50, 90%. Those are guesses. A real probability comes from closed deals over the last 6 to 12 months: of all deals that reached a stage, how many ended up paying.</p>\n<table><thead><tr><th>Stage</th><th>Deals that reached it</th><th>Of those, paid</th><th>Probability</th></tr></thead><tbody>\n<tr><td><b>New lead</b></td><td>400</td><td>48</td><td>12%</td></tr>\n<tr><td><b>Qualified</b></td><td>200</td><td>48</td><td>24%</td></tr>\n<tr><td><b>Quote sent</b></td><td>120</td><td>48</td><td>40%</td></tr>\n<tr><td><b>Negotiating terms</b></td><td>70</td><td>48</td><td>69%</td></tr>\n<tr><td><b>Invoice issued</b></td><td>55</td><td>48</td><td>87%</td></tr>\n</tbody></table>\n<p class=\"note\">A hypothetical example with made-up figures to show the calculation. Your probabilities are calculated from your own deals.</p>\n<p>Recalculate probabilities every quarter and separately for each line of business. A repeat order and a first deal with a new client behave differently at the same stage, and so may separate free zone and mainland teams.</p>\n<h2>The sales cycle moves the forecast between months</h2>\n<p>Reps set close dates optimistically, so the deal date is compared with the average cycle from each stage to payment. If deals at \"Quote sent\" typically close 35 days later and a rep has set a date one week out, the forecast uses the calculated date instead.</p>\n<p>The second rule covers stalled deals. A deal that has been sitting at a stage two or three times longer than average is very unlikely to close on time. Those deals go onto a separate list for the sales manager and carry less weight in the forecast. You can hand stalled-deal control to the <a href=\"/ai-agents/rop\">AI sales manager</a>: the agent watches the pipeline, nudges the rep and alerts the manager if nothing happens.</p>\n<!--cta-->\n<h2>Run the weighted pipeline and the rep forecast side by side</h2>\n<p>Stage maths cannot know what the rep knows: the client has signed internally, but payment will clear after quarter end. That is why a rep forecast runs alongside the weighted pipeline. In Bitrix24 we add a deal field with three values:</p>\n<ul>\n<li><b>Commit</b>: the deal will close this period and the rep stands behind it</li>\n<li><b>Upside</b>: there is a real chance, but open questions remain</li>\n<li><b>Not this period</b>: the deal is alive, but the money will come later</li>\n</ul>\n<p>The sales director looks at both. If the rep forecast is far above the weighted pipeline, the team is overrating its deals; far below, and deals may be stuck. The weekly meeting turns to specific deals instead of impressions.</p>\n<p>Calls are another source of truth. What a client says about timing and budget often never makes it into the deal record. Call speech analytics, from AED 1,000 a month for 5,000 minutes, helps you see it. Read more in our news on <a href=\"/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki\">what gets lost between the call and the deal record</a> and on the <a href=\"/ai-agents/zvonki\">call analysis agent</a> page.</p>\n<h2>Clean CRM data comes before the forecast</h2>\n<p>A forecast inherits every error in your CRM. The minimum checklist before you start:</p>\n<ol>\n<li>Every open deal has an amount in AED and a close date</li>\n<li>Stages have exit criteria: what has to happen for a deal to move on</li>\n<li>No duplicate deals for the same client and the same need</li>\n<li>Lost deals are closed with a reason instead of lingering in the pipeline</li>\n<li>Deal amount and invoice amount are calculated the same way, with or without 5% VAT</li>\n</ol>\n<p>We cover typical data problems in our guide on <a href=\"/journal/bitrix24-crm-analytics\">why CRM reports lie</a>. If nobody has reviewed the portal in a while, start with a <a href=\"/bitrix-audit\">Bitrix24 audit</a>. If you have no CRM yet, or the pipeline does not match how you actually sell, you need <a href=\"/bitrix\">Bitrix24 setup</a> first: the standard package starts at AED 10,000 and go-live takes from 14 days.</p>\n<h2>Plan, forecast and actuals belong on one dashboard</h2>\n<p>A working forecast lives on a dashboard that refreshes itself. One screen, three lines by month: the sales plan, the weighted pipeline forecast and actual payments. Underneath, a table by rep and a list of the deals that carry the most weight in the forecast.</p>\n<p>Actual payments are more reliable when they come from accounting rather than from the \"Won\" stage. We connect Bitrix24 to Zoho Books, QuickBooks or Odoo from AED 10,000, see the <a href=\"/bitrix-integrations\">integrations page</a>. In <a href=\"/bi-analitika\">MakeBiz BI analytics</a> the monthly and quarterly forecast and stalled deals come with the Standard plan at AED 700 a month, sales plans come with Pro at AED 1,000, and accounting systems are connected to BI on request for an extra fee. The first 14 days are free. To connect ad spend to those payments, see our guide on <a href=\"/journal/full-funnel-analytics\">end-to-end analytics</a>.</p>\n<h2>A worked example: a distributor with 20 sales reps</h2>\n<p>A hypothetical Sharjah distributor runs sales in Bitrix24, yet the director builds the monthly outlook in a spreadsheet by calling each rep, and actuals never match it.</p>\n<p>First the team cleans up the pipeline: dead deals get closed, amounts and dates get filled in. Then stage probabilities are recalculated from a year of history, and deals get a rep forecast field. A month later the director sees plan, weighted pipeline and actuals on one screen and only discusses deals with gaps at the weekly meeting. What a project like this costs for you is set in a quote before work starts, and rates are on our <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We build a sales forecast on your CRM",
+   "Stage probabilities from history, plan, forecast and actuals on one dashboard. Forecasting in BI from AED 700 a month, 14 days free",
+   "Talk about forecasting"
+  ],
+  "faq": [
+   [
+    "How do I calculate the probability of a deal stage?",
+    "Take closed deals from the last 6 to 12 months and work out what share of deals that reached the stage ended up paying. That share is the probability, and it should be recalculated every quarter."
+   ],
+   [
+    "What is a weighted pipeline?",
+    "It is the total of all open deals, each multiplied by the probability of its stage. It shows expected revenue by month, allowing for the fact that some deals will not close."
+   ],
+   [
+    "How much data do I need for a forecast?",
+    "You need a history of closed deals, both won and lost, with amounts and dates. The more deals per period, the more stable the probabilities. With only a few deals, the rep forecast matters more than the maths."
+   ],
+   [
+    "Can I build the forecast inside Bitrix24?",
+    "Bitrix24 has basic pipeline reports. For plan, forecast and actual payments from accounting on one screen, a BI dashboard is more practical, and it refreshes automatically."
+   ],
+   [
+    "How much does sales forecasting cost with MakeBiz?",
+    "The monthly and quarterly forecast comes with the BI Standard plan at AED 700 a month, and sales plans with Pro at AED 1,000. If the CRM data needs cleaning first, that work is billed at AED 200 an hour against a quote agreed before we start."
+   ]
+  ],
+  "cta": [
+   "We will show you how far your forecast is from actuals",
+   "Tell us where you track deals and how you build the plan today. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/full-funnel-analytics",
+    "End-to-end analytics: from ad click to payment"
+   ],
+   [
+    "/journal/bitrix24-crm-analytics",
+    "Why CRM reports lie and how to fix them"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Three dashboards a sales director checks"
+   ]
+  ]
+ }
+}

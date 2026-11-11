@@ -1,0 +1,114 @@
+{
+ "slug": "auto-service-crm-uae",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "CRM для автосервиса в ОАЭ: запись, ТО и WhatsApp | MakeBiz",
+  "desc": "CRM для автосервиса в ОАЭ: запись по боксам, карточка автомобиля, напоминания о ТО в WhatsApp, контроль звонков. Настройка Битрикс24 от 10 000 AED.",
+  "h1": "CRM для автосервиса в ОАЭ: запись, ТО и WhatsApp",
+  "crumb": "CRM для автосервиса",
+  "lead": "Автосервис теряет деньги не в боксе, а до него: пропущенный звонок, запись в тетради, клиент, которому никто не напомнил о плановом ТО. CRM закрывает именно эти места.",
+  "answer": "Автосервису в ОАЭ CRM нужна для четырёх вещей: запись клиентов, карточка автомобиля с историей работ, напоминания о ТО через WhatsApp и контроль звонков. В Битрикс24 это собирает стандартная настройка MakeBiz Technologies от 10 000 AED с запуском от 14 дней. Подключение WhatsApp стоит 500 AED, речевая аналитика звонков от 1 000 AED в месяц за 5 000 минут.",
+  "body": "<h2>Автосервис теряет клиентов ещё до бокса</h2>\n<p>Деньги в сервисе зарабатываются в боксе, а теряются раньше. Звонок в час пик никто не взял. Сообщение в WhatsApp прочитали и забыли. Запись сделали в тетради, и мастер узнал о машине, когда она уже стояла у ворот. А клиент, который был полгода назад, поехал на ТО к соседям, потому что ему никто не напомнил.</p>\n<p>CRM для автосервиса закрывает именно эти места: каждое обращение попадает в систему, у записи есть время и бокс, а у машины история работ и дата следующего визита. Ниже путь клиента и то, что на каждом шаге делает CRM.</p>\n<table><thead><tr><th>Этап</th><th>Что делает CRM</th><th>Канал</th></tr></thead><tbody>\n<tr><td><b>Обращение</b></td><td>Создаёт лид, ищет клиента и машину по номеру телефона</td><td>Звонок, WhatsApp, сайт</td></tr>\n<tr><td><b>Запись</b></td><td>Ставит визит в календарь бокса и мастера</td><td>Администратор или онлайн-форма</td></tr>\n<tr><td><b>Напоминание о визите</b></td><td>Отправляет подтверждение накануне</td><td>WhatsApp-шаблон</td></tr>\n<tr><td><b>Приёмка</b></td><td>Фиксирует пробег, жалобы, фото, предварительную смету</td><td>Карточка автомобиля</td></tr>\n<tr><td><b>Доп. работы</b></td><td>Отправляет клиенту смету на согласование, фиксирует ответ</td><td>WhatsApp</td></tr>\n<tr><td><b>Выдача и оплата</b></td><td>Закрывает заказ-наряд, передаёт сумму в учёт</td><td>Касса, учётная система</td></tr>\n<tr><td><b>Следующее ТО</b></td><td>Ставит напоминание по дате или пробегу</td><td>WhatsApp-шаблон, задача</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies для автосервиса, этапы меняются под ваш процесс.</p>\n<h2>Карточка автомобиля важнее карточки клиента</h2>\n<p>В сервисе работают не с человеком, а с машиной. У одного клиента может быть две машины, а у корпоративного автопарка десятки машин и несколько водителей. Поэтому в Битрикс24 под автомобиль заводят отдельный смарт-процесс: марка, модель, год, VIN, номер, пробег, дата последнего ТО и история заказ-нарядов.</p>\n<p>Машина связывается с клиентом или компанией, и администратор по номеру телефона сразу видит, что за автомобиль, что меняли в прошлый раз и какие работы клиент отложил. Как устроены смарт-процессы и когда они нужны, разобрано в гайде <a href=\"/journal/bitrix24-smart-processes\">про смарт-процессы Битрикс24</a>, нестандартные доработки на странице <a href=\"/bitrix-development\">разработки под Битрикс24</a>.</p>\n<h2>Запись и загрузка боксов видны в одном календаре</h2>\n<p>Пока запись ведётся в тетради или в чате администраторов, два клиента на одно время в одном боксе неизбежны. В CRM у каждого бокса и мастера свой календарь, а визит связан с машиной и заказом. Руководитель видит загрузку на неделю вперёд и понимает, где есть окна.</p>\n<p>Онлайн-форма на сайте создаёт заявку на запись, администратор подтверждает время, а клиенту уходит сообщение в WhatsApp. Накануне визита CRM отправляет напоминание, и неявок становится меньше.</p>\n<p>Клиентов без записи тоже заводят в CRM: администратор создаёт визит за минуту при приёмке, и машина не выпадает из истории. Иначе отчёт покажет только тех, кто записывался заранее, а реальная загрузка сервиса останется неизвестной.</p>\n<!--cta-->\n<h2>Напоминания о ТО возвращают клиентов</h2>\n<p>Плановое ТО это повод для визита, который сервис знает заранее. CRM считает дату следующего обслуживания от последнего визита или по пробегу и за пару недель ставит задачу администратору и отправляет клиенту напоминание.</p>\n<p>Напоминания удобно разделить по типам: плановое ТО, проверка кондиционера перед летом, замена шин, продление страховки, если вы с ней помогаете. У каждого типа свой шаблон, свой срок и свой ответственный.</p>\n<p>Для таких сообщений нужен официальный WhatsApp: по <a href=\"https://developers.facebook.com/docs/whatsapp/pricing\">документации Meta по тарифам</a> вне 24-часового окна после сообщения клиента можно отправить только шаблон, заранее согласованный с Meta. Поэтому напоминания о ТО, подтверждения записи и счета оформляют шаблонами. Подключение WhatsApp к Битрикс24 у нас стоит 500 AED, подписка провайдера и плата Meta за сообщения отдельно, состав работ на странице <a href=\"/bitrix-messengers\">WhatsApp и мессенджеров</a>.</p>\n<h2>Звонки и WhatsApp сходятся в одной карточке</h2>\n<p>Телефония подключается к CRM: входящий звонок открывает карточку клиента и машины, пропущенный сразу превращается в задачу перезвонить. Что проверить у оператора до подключения, мы описали в новости <a href=\"/news/telefoniya-v-oae-dlya-crm\">о телефонии в ОАЭ для CRM</a>.</p>\n<p>Дальше важно не только взять трубку, но и как разговаривает администратор: назвал ли цену, предложил ли время, записал ли. Агент <a href=\"/ai-agents/zvonki\">Звонки</a> оценивает каждый разговор, речевая аналитика звонков стоит 1 000 AED в месяц за 5 000 минут и 1 700 AED за 10 000 минут. А <a href=\"/ai-agents/rop\">ИИ-РОП</a> отвечает клиенту в мессенджере, если администратор занят, подробнее в новости <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">про ИИ-агента в WhatsApp</a>.</p>\n<h2>Бюджет автосервиса считается заранее</h2>\n<ul>\n<li><b>Лицензия Битрикс24.</b> Basic на 5 пользователей 180 AED в месяц, Standard на 50 пользователей 364 AED, при оплате за год, цены bitrix24.ae на 23 октября 2026</li>\n<li><b>Настройка.</b> Стандартная настройка CRM от 10 000 AED, запуск от 14 дней, смарт-процесс автомобиля и календарь записи входят в смету</li>\n<li><b>WhatsApp.</b> 500 AED за подключение плюс подписка провайдера</li>\n<li><b>Учёт.</b> Если заказ-наряды нужно передавать в Zoho Books, QuickBooks или Odoo, интеграция от 10 000 AED, подробнее на странице <a href=\"/bitrix-integrations\">интеграций</a></li>\n<li><b>Поддержка.</b> По желанию, 5 часов в месяц за 1 250 AED</li>\n</ul>\n<p>Цены услуг без лицензий и VAT, договор с MakeBiz Technologies FZE LLC, счета в AED. Все цифры на странице <a href=\"/ceny\">цен в AED</a>, порядок работ на странице <a href=\"/bitrix\">внедрения Битрикс24</a>. Если у вас ещё и прокат, посмотрите страницу <a href=\"/bitrix-car-rental\">CRM для проката авто</a>.</p>\n<h2>Условный пример: независимый сервис на 6 боксов</h2>\n<p>Условный независимый автосервис в Аль-Кузе: 6 боксов, 2 администратора, 8 мастеров. Запись ведут в общем чате, клиенты пишут на личный WhatsApp старшего администратора, напоминаний о ТО нет.</p>\n<p>Сервис выбирает Standard, потому что администраторам, мастерам-приёмщикам и владельцу вместе нужно больше 5 пользователей. Настраивается смарт-процесс автомобиля, календарь по боксам, WhatsApp на номер компании и шаблоны: подтверждение записи, согласование доп. работ, напоминание о ТО. Через пару месяцев владелец видит загрузку боксов, число пропущенных звонков и клиентов, которым пора на обслуживание.</p>",
+  "mid": [
+   "Настроим CRM для вашего сервиса",
+   "Запись по боксам, карточка автомобиля, WhatsApp и напоминания о ТО. Настройка от 10 000 AED, запуск от 14 дней",
+   "Обсудить настройку"
+  ],
+  "faq": [
+   [
+    "Можно ли вести в Битрикс24 историю обслуживания машины?",
+    "Да, под автомобиль заводят смарт-процесс с VIN, номером, пробегом и историей заказ-нарядов. Машина связана с клиентом или компанией, поэтому история видна по номеру телефона."
+   ],
+   [
+    "Как настроить напоминания о ТО?",
+    "CRM считает дату следующего ТО от последнего визита или пробега и заранее ставит задачу администратору. Клиенту уходит WhatsApp-шаблон, согласованный с Meta, потому что вне 24-часового окна свободный текст отправить нельзя."
+   ],
+   [
+    "Сколько стоит CRM для автосервиса?",
+    "Стандартная настройка Битрикс24 у MakeBiz Technologies стоит от 10 000 AED, WhatsApp 500 AED. Лицензия Standard 364 AED в месяц при оплате за год, цены bitrix24.ae на 23 октября 2026."
+   ],
+   [
+    "Можно ли контролировать звонки администраторов?",
+    "Да, телефония подключается к CRM, пропущенные звонки становятся задачами. Речевая аналитика звонков оценивает каждый разговор, от 1 000 AED в месяц за 5 000 минут."
+   ],
+   [
+    "Подойдёт ли CRM для сервиса с корпоративными клиентами?",
+    "Да, к компании привязываются все её машины и водители, а заказ-наряды видны по всему автопарку. Счета можно передавать в Zoho Books, QuickBooks или Odoo, интеграция от 10 000 AED."
+   ]
+  ],
+  "cta": [
+   "Обсудим CRM для автосервиса",
+   "Напишите, сколько у вас боксов, как сейчас ведётся запись и откуда приходят клиенты. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/small-business-crm-uae",
+    "CRM для малого бизнеса в ОАЭ: что нужно и сколько стоит"
+   ],
+   [
+    "/journal/bitrix24-smart-processes",
+    "Смарт-процессы Битрикс24: что это и когда нужны"
+   ],
+   [
+    "/news/telefoniya-v-oae-dlya-crm",
+    "Телефония в ОАЭ для CRM: что проверить до подключения"
+   ]
+  ]
+ },
+ "en": {
+  "title": "CRM for a car service centre in the UAE | MakeBiz",
+  "desc": "CRM for a UAE car service centre: bay bookings, vehicle history, WhatsApp service reminders and call control. Bitrix24 setup from AED 10,000.",
+  "h1": "CRM for a car service centre in the UAE: bookings, servicing and WhatsApp",
+  "crumb": "CRM for a car service centre",
+  "lead": "A garage rarely loses money in the bay. It loses it before: a missed call, a booking in a notebook, a customer nobody reminded about their next service. That is exactly where a CRM helps.",
+  "answer": "A car service centre in the UAE needs a CRM for four things: bookings, a vehicle record with service history, WhatsApp service reminders and call control. In Bitrix24 this is covered by standard setup from MakeBiz Technologies starting at AED 10,000 and going live from 14 days. Connecting WhatsApp is AED 500, and call speech analytics starts at AED 1,000 a month for 5,000 minutes.",
+  "body": "<h2>A garage loses customers before the car reaches the bay</h2>\n<p>A service centre makes its money in the bay and loses it earlier. A call at rush hour goes unanswered. A WhatsApp message gets read and forgotten. A booking is scribbled in a notebook, and the technician finds out about the car when it is already at the gate. And the customer who came in six months ago goes elsewhere for the next service because nobody reminded them.</p>\n<p>A CRM for a car service centre closes exactly these gaps: every enquiry lands in the system, every booking has a time slot and a bay, and every car has a service history and a next visit date. Here is the customer journey and what the CRM does at each step.</p>\n<table><thead><tr><th>Step</th><th>What the CRM does</th><th>Channel</th></tr></thead><tbody>\n<tr><td><b>Enquiry</b></td><td>Creates a lead and finds the customer and car by phone number</td><td>Call, WhatsApp, website</td></tr>\n<tr><td><b>Booking</b></td><td>Puts the visit into the bay and technician calendar</td><td>Service advisor or online form</td></tr>\n<tr><td><b>Visit reminder</b></td><td>Sends a confirmation the day before</td><td>WhatsApp template</td></tr>\n<tr><td><b>Check-in</b></td><td>Records mileage, complaints, photos and a first estimate</td><td>Vehicle record</td></tr>\n<tr><td><b>Extra work</b></td><td>Sends the estimate for approval and logs the answer</td><td>WhatsApp</td></tr>\n<tr><td><b>Handover and payment</b></td><td>Closes the job card and passes the amount to accounting</td><td>Till, accounting system</td></tr>\n<tr><td><b>Next service</b></td><td>Schedules a reminder by date or mileage</td><td>WhatsApp template, task</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies template for a car service centre, adjusted to your process.</p>\n<h2>The vehicle record matters more than the customer record</h2>\n<p>A garage works with cars, not just people. One customer may own two cars, and a corporate fleet can have dozens of vehicles and several drivers. That is why in Bitrix24 the vehicle gets its own smart process: make, model, year, VIN, plate number, mileage, last service date and the full history of job cards.</p>\n<p>The car is linked to a person or a company, so the service advisor types in a phone number and instantly sees which car it is, what was replaced last time and which work the customer postponed. How smart processes work and when you need them is covered in our guide to <a href=\"/journal/bitrix24-smart-processes\">Bitrix24 smart processes</a>, and custom work is on the <a href=\"/bitrix-development\">Bitrix24 development</a> page.</p>\n<h2>Bookings and bay capacity live in one calendar</h2>\n<p>While bookings sit in a notebook or a group chat, double-booking a bay is only a matter of time. In the CRM each bay and technician has a calendar, and every visit is tied to a car and a job. The owner sees the week ahead and knows where the free slots are.</p>\n<p>An online form on your website creates a booking request, the service advisor confirms the slot, and the customer gets a WhatsApp message. The day before, the CRM sends a reminder, which cuts down on no-shows. Walk-ins go into the CRM too: the advisor creates the visit at check-in, so the car keeps its history and your capacity reports reflect reality.</p>\n<!--cta-->\n<h2>Service reminders bring customers back</h2>\n<p>A scheduled service is a visit you know about in advance. The CRM works out the next service date from the last visit or the mileage, and a couple of weeks ahead it creates a task for the advisor and sends the customer a reminder.</p>\n<p>Split reminders by type: routine service, an AC check before summer, a tyre change. Each type gets its own template, timing and owner.</p>\n<p>These messages need the official WhatsApp channel. According to <a href=\"https://developers.facebook.com/docs/whatsapp/pricing\">Meta&#39;s pricing documentation</a>, outside the 24-hour window after a customer&#39;s message you can only send a template approved by Meta in advance, so service reminders, booking confirmations and invoices go out as templates. We connect WhatsApp to Bitrix24 for AED 500, with the provider subscription and Meta message fees on top. The scope is on the <a href=\"/bitrix-messengers\">WhatsApp and messengers</a> page.</p>\n<h2>Calls and WhatsApp end up in one record</h2>\n<p>Telephony connects to the CRM: an incoming call opens the customer and vehicle record, and a missed call turns straight into a call-back task. What to check with your carrier first is covered in our news piece on <a href=\"/news/telefoniya-v-oae-dlya-crm\">telephony for CRM in the UAE</a>.</p>\n<p>Answering is only half of it. What matters is how the advisor handles the call: did they quote a price, offer a slot, book the car? The <a href=\"/ai-agents/zvonki\">call agent</a> scores every conversation, and call speech analytics costs AED 1,000 a month for 5,000 minutes or AED 1,700 for 10,000. The <a href=\"/ai-agents/rop\">AI sales manager agent</a> replies on WhatsApp when the advisor is busy, see our news piece on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a>.</p>\n<h2>A garage can budget its CRM up front</h2>\n<ul>\n<li><b>Bitrix24 license.</b> Basic for 5 users at AED 180 a month, Standard for 50 users at AED 364, billed annually, bitrix24.ae prices as of 23 October 2026</li>\n<li><b>Setup.</b> Standard CRM setup from AED 10,000, live from 14 days, with the vehicle smart process and booking calendar in the estimate</li>\n<li><b>WhatsApp.</b> AED 500 to connect, plus the provider subscription</li>\n<li><b>Accounting.</b> If job cards need to flow into Zoho Books, QuickBooks or Odoo, integration starts at AED 10,000, see <a href=\"/bitrix-integrations\">integrations</a></li>\n<li><b>Support.</b> Optional, 5 hours a month for AED 1,250</li>\n</ul>\n<p>Service prices exclude licenses and VAT, the contract is with MakeBiz Technologies FZE LLC and invoices are in AED. All figures are on our <a href=\"/ceny\">pricing page</a>, the process on the <a href=\"/bitrix\">Bitrix24 implementation</a> page. If you also rent out cars, see <a href=\"/bitrix-car-rental\">CRM for car rental</a>.</p>\n<h2>A worked example: an independent garage with 6 bays</h2>\n<p>A hypothetical independent garage in Al Quoz has 6 bays, 2 service advisors and 8 technicians. Bookings live in a group chat, customers message the senior advisor&#39;s personal WhatsApp, and there are no service reminders at all.</p>\n<p>The garage picks Standard, because advisors, check-in staff and the owner together need more than 5 users. It gets a vehicle smart process, a calendar per bay, WhatsApp on the company number and templates for booking confirmation, extra work approval and service reminders. A couple of months later the owner can see bay utilisation, missed calls and which customers are due for a service.</p>",
+  "mid": [
+   "We set up CRM for your service centre",
+   "Bay bookings, vehicle records, WhatsApp and service reminders. Setup from AED 10,000, live from 14 days",
+   "Discuss the setup"
+  ],
+  "faq": [
+   [
+    "Can Bitrix24 keep a car's service history?",
+    "Yes. The vehicle gets a smart process with VIN, plate number, mileage and job card history. It is linked to a person or company, so the history comes up from a phone number."
+   ],
+   [
+    "How do service reminders work?",
+    "The CRM calculates the next service from the last visit or mileage and creates a task for the advisor ahead of time. The customer gets a Meta-approved WhatsApp template, because free text cannot be sent outside the 24-hour window."
+   ],
+   [
+    "How much does a CRM for a garage cost?",
+    "Standard Bitrix24 setup with MakeBiz Technologies starts at AED 10,000, and WhatsApp is AED 500. The Standard license is AED 364 a month billed annually, bitrix24.ae prices as of 23 October 2026."
+   ],
+   [
+    "Can we monitor service advisors' calls?",
+    "Yes. Telephony connects to the CRM and missed calls become tasks. Call speech analytics scores every conversation, from AED 1,000 a month for 5,000 minutes."
+   ],
+   [
+    "Does it work for fleet customers?",
+    "Yes. All vehicles and drivers are linked to the company, so job cards are visible across the fleet. Invoices can flow into Zoho Books, QuickBooks or Odoo, with integration from AED 10,000."
+   ]
+  ],
+  "cta": [
+   "Let us talk about CRM for your garage",
+   "Tell us how many bays you have, how bookings work today and where customers come from. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/small-business-crm-uae",
+    "CRM for a small business in the UAE: what you need and what it costs"
+   ],
+   [
+    "/journal/bitrix24-smart-processes",
+    "Bitrix24 smart processes: what they are and when you need them"
+   ],
+   [
+    "/news/telefoniya-v-oae-dlya-crm",
+    "Telephony for CRM in the UAE: what to check first"
+   ]
+  ]
+ }
+}

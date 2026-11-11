@@ -1,0 +1,114 @@
+{
+ "slug": "bitrix24-smart-processes",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "Смарт-процессы Битрикс24: что это и когда нужны | MakeBiz",
+  "desc": "Смарт-процессы Битрикс24 на примерах: заявки на закупку, договоры, сервисные заявки. Когда нужны вместо сделок и сколько стоит настройка: 200 AED в час.",
+  "h1": "Смарт-процессы Битрикс24: что это и когда нужны",
+  "crumb": "Смарт-процессы",
+  "lead": "Когда в воронке продаж появляются карточки, которые не являются продажами, портал начинает путать всех. Смарт-процессы Битрикс24 дают таким процессам отдельное место. Разбираем, как они устроены и когда оправданы.",
+  "answer": "Смарт-процесс в Битрикс24 это собственная сущность CRM со своими стадиями, полями, правами и роботами: для заявок на закупку, договоров, сервисных обращений и всего, что не помещается в сделку. Он нужен, когда у процесса свой путь, свои участники и нужен отчёт. У MakeBiz Technologies смарт-процессы настраиваются в рамках внедрения со стандартной настройкой от 10 000 AED или отдельно по 200 AED в час, смета фиксируется до старта.",
+  "body": "<h2>Смарт-процесс это своя сущность CRM рядом со сделкой</h2>\n<p>В CRM Битрикс24 есть стандартные сущности: лиды, сделки, контакты, компании, предложения и счета. Они хорошо описывают продажу. Но в компании идут и другие процессы: заявка отдела на закупку, согласование договора, обращение клиента в сервис после продажи. Если вести их в сделках, воронка продаж засоряется чужими карточками, а отчёты по выручке перестают сходиться.</p>\n<p>Смарт-процесс решает это: администратор создаёт новую сущность со своим названием, и у неё есть всё, что есть у сделки:</p>\n<ul>\n<li>свои стадии в канбане и, при необходимости, несколько воронок</li>\n<li>свои поля: суммы, даты, списки, файлы, ссылки на сотрудников</li>\n<li>связи с контактами, компаниями, сделками и другими смарт-процессами</li>\n<li>роботы и триггеры на стадиях, как в воронке продаж</li>\n<li>отдельные права доступа: кто видит, кто создаёт, кто меняет стадии</li>\n<li>документы по шаблонам прямо из карточки</li>\n</ul>\n<p>Доступность смарт-процессов и их число зависят от тарифа Битрикс24, поэтому тариф проверяем до сметы.</p>\n<h2>Сделка, смарт-процесс, задача и бизнес-процесс решают разные задачи</h2>\n<p>Частая ошибка в портале не нехватка инструментов, а их путаница. Таблица помогает понять, куда положить процесс.</p>\n<table><thead><tr><th>Инструмент</th><th>Для чего</th><th>Признак</th></tr></thead><tbody>\n<tr><td><b>Сделка</b></td><td>Продажа клиенту</td><td>Есть сумма, вероятность и этапы продажи</td></tr>\n<tr><td><b>Смарт-процесс</b></td><td>Повторяющийся процесс со своими стадиями: закупка, договор, сервис</td><td>Много однотипных карточек, у каждой свой путь и участники</td></tr>\n<tr><td><b>Задача</b></td><td>Разовое поручение сотруднику</td><td>Один исполнитель, один результат, без стадий</td></tr>\n<tr><td><b>Бизнес-процесс</b></td><td>Цепочка действий с условиями и согласованиями</td><td>Логика с ветками поверх любой сущности</td></tr>\n</tbody></table>\n<p>Смарт-процесс и бизнес-процесс не конкуренты: стадии и карточки живут в смарт-процессе, а сложное согласование с ветками запускается на нужной стадии как бизнес-процесс. Простые действия (поставить задачу, сменить ответственного, отправить уведомление) закрывают роботы.</p>\n<h2>Заявки на закупку проходят путь от запроса до оплаты</h2>\n<p>Условная торговая компания: отделы присылают запросы на закупку в чат, финансовый директор согласует в личных сообщениях, а через месяц никто не помнит, кто что одобрил. Смарт-процесс «Заявка на закупку» собирает всё в одной карточке.</p>\n<ol>\n<li><b>Новая.</b> Сотрудник заполняет, что нужно, сколько и к какой дате</li>\n<li><b>Согласование.</b> Робот отправляет задание руководителю, сумма выше порога уходит финансовому директору</li>\n<li><b>Запрос КП.</b> Закупщик запрашивает предложения поставщиков и прикладывает их к карточке</li>\n<li><b>Заказано.</b> Выбран поставщик, карточка связана с его компанией в CRM</li>\n<li><b>Получено и закрыто.</b> Отметка о поставке, затем оплата</li>\n</ol>\n<p>Карточка хранит всю историю: кто создал заявку, кто согласовал, какие предложения пришли и почему выбран именно этот поставщик. Через полгода на вопрос «почему купили здесь» отвечает сама карточка, а не память сотрудников.</p>\n<p>Сбор и сравнение предложений можно отдать <a href=\"/ai-agents/zakupki\">ИИ-агенту закупок</a>: он рассылает запросы поставщикам и сводит КП в таблицу. Где именно теряются деньги на этом этапе, мы разбирали в новости о <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">сравнении поставщиков</a>.</p>\n<!--cta-->\n<h2>Договоры получают свои стадии и сроки</h2>\n<p>Договор связан со сделкой и компанией, но живёт дольше продажи. В смарт-процессе «Договоры» у него свои стадии: черновик, проверка, согласование с клиентом, подписан, действует, истекает. В полях хранятся номер, сумма в AED, дата начала и дата окончания.</p>\n<p>Дальше работают роботы: за заданное число дней до окончания договора ответственный получает задачу связаться с клиентом о продлении, а документ формируется по шаблону из данных карточки. Менеджер открывает сделку и сразу видит связанный договор во вкладке, без поиска по папкам и почте.</p>\n<h2>Сервисные заявки показывают, что происходит после продажи</h2>\n<p>После продажи клиенту нужен монтаж, обслуживание или ответ на претензию. Если это ведут в чатах, руководитель не видит, сколько обращений открыто и сколько из них висят. Смарт-процесс «Сервисная заявка» связывается с компанией и сделкой, и менеджер создаёт его из карточки клиента в один клик.</p>\n<p>Стадии простые: принята, назначен исполнитель, в работе, ждём клиента, выполнена. Робот с задержкой напоминает исполнителю, если заявка застряла на стадии, а руководитель видит канбан по всем открытым обращениям. Если заявки приходят из WhatsApp, канал подключается к открытым линиям Битрикс24, подробнее на странице <a href=\"/bitrix-messengers\">WhatsApp в Битрикс24</a>.</p>\n<h2>Смарт-процесс нужен при трёх признаках</h2>\n<p>Не каждый процесс стоит выносить в отдельную сущность. Смарт-процесс оправдан, если:</p>\n<ul>\n<li>у процесса есть свои стадии, и по ним проходят десятки однотипных карточек</li>\n<li>в процессе участвуют разные люди или отделы, и важно, кто на каком шаге</li>\n<li>по процессу нужен отчёт: сколько заявок, на какой стадии, сколько времени в работе</li>\n</ul>\n<p>Если же это одно-два поля в сделке («нужна доставка: да или нет»), отдельная сущность только усложнит портал. Простой тест: если процесс естественно раскладывается на колонки канбана и по ним хочется двигать карточки, это кандидат в смарт-процесс. Если в портале уже накопились лишние воронки и сущности, начните с <a href=\"/bitrix-audit\">аудита Битрикс24</a>. Чем робот CRM отличается от ИИ-агента в таких процессах, мы объясняли в новости <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">про агента и робота</a>.</p>\n<h2>Сколько стоит настройка: условный пример</h2>\n<p>Условная компания на 30 сотрудников хочет три смарт-процесса: закупки, договоры и сервис. Если на поля, стадии, права, роботов и шаблоны документов уйдёт, например, 24 часа, это 4 800 AED по ставке 200 AED в час. В проекте <a href=\"/bitrix\">внедрения Битрикс24</a> со стандартной настройкой от 10 000 AED смарт-процессы закладываются в общую смету, которая фиксируется до старта. Связь смарт-процесса с внешней системой или учётом считается как <a href=\"/bitrix-development\">разработка</a>, а изменения после запуска удобно вести в <a href=\"/bitrix-support\">поддержке</a>, например пакетом 10 часов за 2 300 AED в месяц. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Настроим смарт-процессы под ваши процессы",
+   "Закупки, договоры, сервис: стадии, права, роботы и шаблоны документов по 200 AED в час, смета до старта",
+   "Обсудить процесс"
+  ],
+  "faq": [
+   [
+    "Чем смарт-процесс отличается от сделки?",
+    "Сделка описывает продажу с суммой и этапами. Смарт-процесс это отдельная сущность для другого процесса, например закупки или договора, со своими стадиями, полями и правами, и он не засоряет воронку продаж."
+   ],
+   [
+    "Можно ли связать смарт-процесс со сделкой и компанией?",
+    "Да. Смарт-процесс связывается с контактами, компаниями, сделками и другими смарт-процессами, а связанные карточки видны во вкладках друг у друга."
+   ],
+   [
+    "Работают ли в смарт-процессах роботы и бизнес-процессы?",
+    "Да. На стадиях смарт-процесса настраиваются роботы и триггеры, а для согласований с ветвлениями запускаются бизнес-процессы."
+   ],
+   [
+    "Доступны ли смарт-процессы на любом тарифе Битрикс24?",
+    "Доступность и число смарт-процессов зависят от тарифа. Мы проверяем тариф до сметы, чтобы процесс не упёрся в ограничение после запуска."
+   ],
+   [
+    "Сколько стоит настройка смарт-процесса?",
+    "Работы идут по 200 AED в час, объём фиксируется в смете до старта. В проекте внедрения со стандартной настройкой от 10 000 AED смарт-процессы закладываются в общую смету."
+   ]
+  ],
+  "cta": [
+   "Разберём, какие процессы вынести из сделок",
+   "Опишите, что сейчас ведётся в чатах и таблицах. Предложим структуру смарт-процессов и смету в AED"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Внедрение Битрикс24 под ключ в ОАЭ: что входит"
+   ],
+   [
+    "/journal/bitrix24-crm-forms",
+    "CRM-формы Битрикс24: заявка с сайта сразу в сделку"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI-агент или робот в CRM: в чём разница"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Bitrix24 smart processes: what and when to use | MakeBiz",
+  "desc": "Bitrix24 smart processes by example: purchase requests, contracts, service requests. When you need them instead of deals and what setup costs: AED 200 an hour.",
+  "h1": "Bitrix24 smart processes: what they are and when you need them",
+  "crumb": "Smart processes",
+  "lead": "Once your sales pipeline fills with cards that are not sales, the portal starts confusing everyone. Bitrix24 smart processes give those processes a place of their own. Here is how they work and when they are worth it.",
+  "answer": "A Bitrix24 smart process is a custom CRM entity with its own stages, fields, permissions and automation rules, built for purchase requests, contracts, service requests and anything else that does not fit into a deal. You need one when a process has its own path, its own people and needs its own report. MakeBiz Technologies sets up smart processes as part of an implementation with the standard setup from AED 10,000, or separately at AED 200 an hour, with the quote fixed before work starts.",
+  "body": "<h2>A smart process is a CRM entity of its own, next to deals</h2>\n<p>Bitrix24 CRM comes with standard entities: leads, deals, contacts, companies, quotes and invoices. They describe a sale well. But a company runs other processes too: a department&#39;s purchase request, a contract going through sign-off, a client&#39;s service request after the sale. Put those into deals and the sales pipeline fills with cards that are not sales, while revenue reports stop adding up.</p>\n<p>A smart process fixes that. An administrator creates a new entity with its own name, and it gets everything a deal has:</p>\n<ul>\n<li>its own kanban stages and, if needed, several pipelines</li>\n<li>its own fields: amounts, dates, lists, files, links to employees</li>\n<li>links to contacts, companies, deals and other smart processes</li>\n<li>automation rules and triggers on stages, just like the sales pipeline</li>\n<li>separate access rights: who can see, create and move items</li>\n<li>documents generated from templates right inside the item</li>\n</ul>\n<p>Whether smart processes are available, and how many, depends on the Bitrix24 plan, so we check the plan before quoting.</p>\n<h2>Deals, smart processes, tasks and workflows do different jobs</h2>\n<p>The usual problem in a portal is not a lack of tools but mixing them up. This table helps decide where a process belongs.</p>\n<table><thead><tr><th>Tool</th><th>What it is for</th><th>Tell-tale sign</th></tr></thead><tbody>\n<tr><td><b>Deal</b></td><td>A sale to a client</td><td>There is an amount, a probability and sales stages</td></tr>\n<tr><td><b>Smart process</b></td><td>A recurring process with its own stages: purchasing, contracts, service</td><td>Many similar items, each with its own path and people</td></tr>\n<tr><td><b>Task</b></td><td>A one-off assignment</td><td>One person, one result, no stages</td></tr>\n<tr><td><b>Workflow (business process)</b></td><td>A chain of steps with conditions and approvals</td><td>Branching logic on top of any entity</td></tr>\n</tbody></table>\n<p>Smart processes and workflows are not rivals. Stages and items live in the smart process, and a branching approval runs as a workflow at the right stage. Simple actions such as creating a task, changing the owner or sending a notification are handled by automation rules.</p>\n<h2>Purchase requests travel from request to payment in one item</h2>\n<p>Take a hypothetical trading company: departments send purchase requests in a group chat, the finance director approves them in private messages, and a month later nobody remembers who signed off what. A \"Purchase request\" smart process puts it all in one item.</p>\n<ol>\n<li><b>New.</b> An employee fills in what is needed, how many and by when</li>\n<li><b>Approval.</b> A rule sends an approval task to the line manager, and anything above a threshold goes to the finance director</li>\n<li><b>Quotes.</b> The buyer requests supplier quotes and attaches them to the item</li>\n<li><b>Ordered.</b> A supplier is chosen and the item is linked to its company record</li>\n<li><b>Received and closed.</b> Delivery is confirmed, then payment</li>\n</ol>\n<p>Collecting and comparing quotes can go to the <a href=\"/ai-agents/zakupki\">procurement AI agent</a>: it sends requests to suppliers and puts the quotes side by side. Where money leaks at this step is covered in our news on <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">comparing suppliers</a>.</p>\n<!--cta-->\n<h2>Contracts get their own stages and deadlines</h2>\n<p>A contract is linked to a deal and a company, but it outlives the sale. In a \"Contracts\" smart process it has stages of its own: draft, review, client sign-off, signed, active, expiring. Fields hold the number, the amount in AED, the start date and the end date.</p>\n<p>Automation rules do the rest: a set number of days before the end date the owner gets a task to talk to the client about renewal, and the document itself is generated from a template using the item&#39;s data. A rep opens the deal and sees the linked contract in a tab, with no digging through folders or email.</p>\n<h2>Service requests show what happens after the sale</h2>\n<p>After a sale the client needs installation, maintenance or an answer to a complaint. If that runs through chats, the manager cannot see how many requests are open or how many are stuck. A \"Service request\" smart process is linked to the company and the deal, and a rep creates one from the client record in a click.</p>\n<p>The stages are simple: received, assigned, in progress, waiting for client, done. A delayed rule reminds the engineer if a request sits too long on one stage, and the manager sees a kanban of every open request. If requests arrive on WhatsApp, the channel connects to Bitrix24 open channels, see the <a href=\"/bitrix-messengers\">WhatsApp in Bitrix24</a> page.</p>\n<h2>A smart process pays off when three signs are present</h2>\n<p>Not every process deserves its own entity. A smart process makes sense when:</p>\n<ul>\n<li>the process has its own stages, and dozens of similar items go through them</li>\n<li>different people or departments take part, and it matters who is on which step</li>\n<li>you need a report on it: how many items, at which stage, how long in progress</li>\n</ul>\n<p>If it is really one or two fields on a deal (\"delivery needed: yes or no\"), a separate entity only makes the portal harder to use. If your portal has already collected spare pipelines and entities, start with a <a href=\"/bitrix-audit\">Bitrix24 audit</a>. How a CRM automation rule differs from an AI agent in such processes is explained in our news on <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">agents and CRM rules</a>.</p>\n<h2>What setup costs: a worked example</h2>\n<p>A hypothetical company with 30 staff wants three smart processes: purchasing, contracts and service. If fields, stages, permissions, rules and document templates take, say, 24 hours, that is AED 4,800 at AED 200 an hour. In a <a href=\"/bitrix\">Bitrix24 implementation</a> with the standard setup from AED 10,000, smart processes go into the overall quote, which is fixed before work starts. Linking a smart process to an external system or accounting is priced as <a href=\"/bitrix-development\">development</a>, and changes after go-live are easiest to run through <a href=\"/bitrix-support\">support</a>, for example a 10-hour package at AED 2,300 a month. All prices are on the <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We build smart processes around how you work",
+   "Purchasing, contracts, service: stages, permissions, rules and document templates at AED 200 an hour, quote fixed upfront",
+   "Discuss your process"
+  ],
+  "faq": [
+   [
+    "How is a smart process different from a deal?",
+    "A deal describes a sale with an amount and stages. A smart process is a separate entity for another process, such as purchasing or contracts, with its own stages, fields and permissions, and it keeps the sales pipeline clean."
+   ],
+   [
+    "Can a smart process be linked to deals and companies?",
+    "Yes. A smart process links to contacts, companies, deals and other smart processes, and linked items show up in each other&#39;s tabs."
+   ],
+   [
+    "Do automation rules and workflows work in smart processes?",
+    "Yes. Automation rules and triggers are set on smart process stages, and workflows handle approvals with branching logic."
+   ],
+   [
+    "Are smart processes available on every Bitrix24 plan?",
+    "Availability and the number of smart processes depend on the plan. We check it before quoting so the process does not hit a limit after go-live."
+   ],
+   [
+    "How much does it cost to set up a smart process?",
+    "Work is billed at AED 200 an hour, with the scope fixed in the quote before work starts. In an implementation with the standard setup from AED 10,000, smart processes go into the overall quote."
+   ]
+  ],
+  "cta": [
+   "Let us find what should move out of your deals",
+   "Tell us what your team runs in chats and spreadsheets today. We will propose a smart process structure and a quote in AED"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Turnkey Bitrix24 implementation in the UAE: what is included"
+   ],
+   [
+    "/journal/bitrix24-crm-forms",
+    "Bitrix24 CRM forms: website leads straight into deals"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI agent or CRM automation rule: what is the difference"
+   ]
+  ]
+ }
+}

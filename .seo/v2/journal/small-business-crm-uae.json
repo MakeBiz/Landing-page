@@ -1,0 +1,114 @@
+{
+ "slug": "small-business-crm-uae",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "CRM для малого бизнеса в ОАЭ: что нужно и цена | MakeBiz",
+  "desc": "CRM для малого бизнеса в ОАЭ на 5-10 человек: Битрикс24 от 180 AED в месяц, WhatsApp, настройка от 10 000 AED. Считаем бюджет первого года в AED.",
+  "h1": "CRM для малого бизнеса в ОАЭ: что нужно и сколько стоит",
+  "crumb": "CRM для малого бизнеса",
+  "lead": "Компании на 5-10 человек CRM нужна не ради отчётов, а чтобы заявки из WhatsApp, с сайта и звонков не терялись. Разбираем, какой минимум закрыть и во что он обойдётся в AED.",
+  "answer": "Малому бизнесу в ОАЭ обычно хватает облачного Битрикс24: Basic на 5 пользователей стоит 180 AED в месяц, Standard на 50 пользователей 364 AED (при оплате за год, цены bitrix24.ae на 23 октября 2026). Стандартная настройка CRM у MakeBiz Technologies стоит от 10 000 AED и запускается от 14 дней, подключение WhatsApp 500 AED, подписка провайдера отдельно.",
+  "body": "<h2>Малому бизнесу нужна одна воронка, а не вся платформа</h2>\n<p>В компании на 5-10 человек нет отдела аналитики и времени на долгие проекты. CRM здесь решает простые задачи: каждая заявка попадает в одно место, у неё есть ответственный, следующий шаг и история переписки. Когда это работает, руководитель видит, сколько денег в работе, без опроса менеджеров в чате.</p>\n<p>Минимальный набор для старта:</p>\n<ul>\n<li>одна воронка продаж с 5-7 понятными стадиями</li>\n<li>заявки с сайта, из WhatsApp и звонков сразу в CRM</li>\n<li>задачи и напоминания, чтобы клиент не ждал ответа днями</li>\n<li>карточка клиента с телефоном в формате +971, email и историей</li>\n<li>права доступа: менеджер видит свои сделки, руководитель все</li>\n</ul>\n<p>Остальное (склад, смарт-процессы, сложные отчёты) добавляют, когда команда привыкнет. С чего компании в Дубае обычно начинают автоматизацию, мы писали в новости <a href=\"/news/chto-avtomatiziruyut-pervym-v-dubae\">о первых шагах автоматизации</a>.</p>\n<h2>Тариф Битрикс24 зависит от числа пользователей</h2>\n<p>Для малого бизнеса выбор обычно между двумя облачными тарифами. Главная разница в лимите пользователей: Basic рассчитан на 5 человек, и с приходом шестого сотрудника придётся переходить на Standard.</p>\n<table><thead><tr><th>Параметр</th><th>Basic</th><th>Standard</th></tr></thead><tbody>\n<tr><td><b>Пользователей</b></td><td>до 5</td><td>до 50</td></tr>\n<tr><td><b>Цена в месяц</b></td><td>180 AED ($49)</td><td>364 AED ($99)</td></tr>\n<tr><td><b>За 12 месяцев</b></td><td>2 160 AED</td><td>4 368 AED</td></tr>\n<tr><td><b>Кому подходит</b></td><td>Команда до 5 человек без планов роста в этом году</td><td>Команда 6-10 человек или та, что скоро наберёт людей</td></tr>\n</tbody></table>\n<p class=\"note\">Цены лицензий при оплате за год, цены bitrix24.ae на 23 октября 2026, курс 3,6725. С ноября 2026 на bitrix24.ae есть линейка Vibe+, и REST API в облаке доступен только в ней: перед покупкой сверяйте актуальный тариф.</p>\n<p>Подробнее на странице <a href=\"/bitrix-licenses\">лицензий Битрикс24</a>, а сравнение для команд разного размера в гайде <a href=\"/journal/bitrix24-plan-10-25-50-users\">какой тариф выбрать на 10, 25 или 50 пользователей</a>.</p>\n<h2>WhatsApp подключают в первую очередь</h2>\n<p>В ОАЭ клиенты охотно пишут в WhatsApp. Если переписка живёт на личных телефонах менеджеров, компания не видит, кто и что ответил, а при уходе сотрудника теряет клиентов вместе с его телефоном.</p>\n<p>Поэтому WhatsApp подключают к CRM одним из первых каналов: номер компании, открытые линии, лид из первого сообщения. У нас подключение стоит 500 AED, подписка провайдера и плата Meta за сообщения идут отдельно. Состав работ на странице <a href=\"/bitrix-messengers\">WhatsApp и мессенджеров в Битрикс24</a>, тарифы Meta в новости <a href=\"/news/skolko-stoit-whatsapp-business-v-oae\">сколько стоит WhatsApp Business в ОАЭ</a>. Почему официальный канал надёжнее подключения через браузер, разобрано в гайде <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API или WhatsApp Web</a>.</p>\n<p>Второй канал обычно сайт: форма CRM создаёт лид с источником и UTM-метками, менеджер получает задачу сразу. Как это настроить, описано в гайде <a href=\"/journal/bitrix24-crm-forms\">про CRM-формы</a>.</p>\n<!--cta-->\n<h2>Бюджет первого года складывается из четырёх строк</h2>\n<p>Чтобы не было сюрпризов, считайте CRM как проект на год, а не как подписку на месяц:</p>\n<ol>\n<li><b>Лицензия.</b> 2 160 AED за год на Basic или 4 368 AED на Standard по ценам выше</li>\n<li><b>Настройка.</b> Стандартная настройка CRM у MakeBiz Technologies от 10 000 AED, запуск от 14 дней. Смета фиксируется до старта</li>\n<li><b>Каналы.</b> WhatsApp 500 AED плюс подписка провайдера, телефония по тарифу оператора</li>\n<li><b>Сопровождение.</b> По желанию: пакет 5 часов в месяц за 1 250 AED или разовые доработки по 200 AED в час</li>\n</ol>\n<p>Цены услуг указаны без лицензий и VAT, ставка VAT в ОАЭ 5%. Договор заключается с MakeBiz Technologies FZE LLC, счета выставляются в AED, а доступы и данные остаются у вас. Все цифры собраны на странице <a href=\"/ceny\">цен в AED</a>, а что входит в настройку, на странице <a href=\"/bitrix\">внедрения Битрикс24</a> и в гайде <a href=\"/journal/bitrix24-turnkey-implementation\">о внедрении под ключ</a>.</p>\n<h2>Запуск идёт от простого к сложному</h2>\n<p>Малому бизнесу не нужен проект на полгода. Работает короткий цикл: запустить базовую воронку, поработать месяц, собрать замечания команды и только потом добавлять автоматизацию. Порядок обычно такой:</p>\n<ul>\n<li>первая неделя: воронка, поля, импорт клиентов из таблицы, права</li>\n<li>вторая неделя: WhatsApp, форма сайта, роботы на задачи и напоминания</li>\n<li>после запуска: обучение команды по вашему порталу и правки по обратной связи</li>\n</ul>\n<p>Короткое обучение снимает большую часть вопросов в первый месяц, формат описан на странице <a href=\"/bitrix-training\">обучения Битрикс24</a>. Если доработок много, удобнее <a href=\"/bitrix-support\">пакет поддержки</a>, чем отдельные счета на каждую мелочь.</p>\n<h2>Три ошибки съедают пользу от CRM</h2>\n<ul>\n<li><b>Купить тариф и не настроить.</b> Пустой портал без воронки и каналов через месяц превращается в ещё одну вкладку, которую никто не открывает</li>\n<li><b>Оставить WhatsApp на личных телефонах.</b> Тогда в CRM попадает только часть заявок, и отчёты показывают неполную картину</li>\n<li><b>Сразу автоматизировать всё.</b> Десятки роботов в первую неделю путают команду, проще начать с напоминаний и задач</li>\n</ul>\n<p>Когда воронка заработала, следующий шаг часто ИИ-агент: <a href=\"/ai-agents/rop\">ИИ-РОП</a> отвечает клиенту, если менеджер молчит, и следит, чтобы у каждой сделки был следующий шаг. Пакет Старт с одним агентом стоит 5 000 AED разово, демонстрация на вашем процессе бесплатна.</p>\n<h2>Условный пример: ремонтная компания на 8 человек</h2>\n<p>Условная компания по ремонту квартир в Дубае: владелец, 4 менеджера, 2 прораба и офис-менеджер. Заявки приходят в WhatsApp и с сайта, сметы отправляют из личных телефонов, и часть клиентов теряется между замером и договором.</p>\n<p>Компания выбирает Standard, потому что 8 пользователей не помещаются в Basic: 4 368 AED за год. Настройка воронки «заявка, замер, смета, договор, работы, оплата», подключение WhatsApp и формы сайта считаются по смете от стандартной настройки 10 000 AED плюс 500 AED за канал. Через месяц владелец видит все заявки в одном месте и знает, на каком этапе застряла каждая.</p>",
+  "mid": [
+   "Запустим CRM для небольшой команды",
+   "Воронка, WhatsApp, форма сайта и права доступа. Стандартная настройка от 10 000 AED, запуск от 14 дней",
+   "Обсудить запуск"
+  ],
+  "faq": [
+   [
+    "Какой тариф Битрикс24 выбрать для команды из 5 человек?",
+    "Для команды до 5 человек подходит Basic за 180 AED в месяц при оплате за год. Если в этом году планируете нанимать, сразу берите Standard на 50 пользователей за 364 AED, цены bitrix24.ae на 23 октября 2026."
+   ],
+   [
+    "Сколько стоит CRM для малого бизнеса в ОАЭ за первый год?",
+    "Сумма складывается из лицензии (2 160 или 4 368 AED за год), настройки от 10 000 AED, подключения WhatsApp за 500 AED и подписки провайдера. Сопровождение по желанию, от 1 250 AED в месяц за 5 часов."
+   ],
+   [
+    "Можно ли настроить Битрикс24 самим?",
+    "Можно, базовые функции доступны сразу после покупки. Но воронка, каналы, права и роботы требуют времени, и без них портал часто остаётся пустым."
+   ],
+   [
+    "Сколько времени занимает запуск?",
+    "Стандартная настройка CRM запускается от 14 дней. Срок зависит от числа каналов, объёма импорта и того, как быстро команда даёт обратную связь."
+   ],
+   [
+    "Подключается ли WhatsApp к Битрикс24?",
+    "Да, через официальную платформу WhatsApp и провайдера. Подключение у нас стоит 500 AED, подписка провайдера и плата Meta за сообщения оплачиваются отдельно."
+   ]
+  ],
+  "cta": [
+   "Посчитаем CRM для вашей команды",
+   "Напишите, сколько человек работает с клиентами и откуда приходят заявки. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Внедрение Битрикс24 под ключ в ОАЭ: что входит"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Какой тариф Битрикс24 выбрать на 10, 25 или 50 пользователей"
+   ],
+   [
+    "/news/skolko-stoit-whatsapp-business-v-oae",
+    "Сколько стоит WhatsApp Business в ОАЭ после 1 октября"
+   ]
+  ]
+ },
+ "en": {
+  "title": "CRM for a small business in the UAE: needs and costs | MakeBiz",
+  "desc": "CRM for a 5 to 10 person UAE business: Bitrix24 from AED 180 a month, WhatsApp, setup from AED 10,000. Your first-year budget in AED, line by line.",
+  "h1": "CRM for a small business in the UAE: what you need and what it costs",
+  "crumb": "CRM for a small business",
+  "lead": "A team of 5 to 10 people does not need a CRM for fancy reports. It needs one so that WhatsApp, website and phone enquiries stop slipping through. Here is the minimum to cover and what it costs in AED.",
+  "answer": "Most small businesses in the UAE are well served by cloud Bitrix24: Basic for 5 users costs AED 180 a month and Standard for 50 users AED 364 (billed annually, bitrix24.ae prices as of 23 October 2026). Standard CRM setup with MakeBiz Technologies starts at AED 10,000 and goes live from 14 days, and connecting WhatsApp is AED 500 plus the provider subscription.",
+  "body": "<h2>A small team needs one pipeline, not the whole platform</h2>\n<p>A company of 5 to 10 people has no analytics team and no appetite for a six-month project. Here a CRM does simple jobs: every enquiry lands in one place, has an owner, a next step and a chat history. When that works, the owner can see how much money is in the pipeline without chasing reps in a group chat.</p>\n<p>The minimum to start with:</p>\n<ul>\n<li>one sales pipeline with 5 to 7 clear stages</li>\n<li>website, WhatsApp and phone enquiries going straight into the CRM</li>\n<li>tasks and reminders so no client waits days for a reply</li>\n<li>a client record with a +971 phone number, email and history</li>\n<li>access rights: reps see their own deals, the owner sees everything</li>\n</ul>\n<p>Inventory, smart processes and advanced reports can wait until the team is used to the basics. Where Dubai companies usually start automating is covered in our news piece on <a href=\"/news/chto-avtomatiziruyut-pervym-v-dubae\">first automation steps</a>.</p>\n<h2>Your Bitrix24 plan depends on headcount</h2>\n<p>For a small business the choice is usually between two cloud plans. The key difference is the user limit: Basic covers 5 people, so the day you hire a sixth, you move to Standard.</p>\n<table><thead><tr><th></th><th>Basic</th><th>Standard</th></tr></thead><tbody>\n<tr><td><b>Users</b></td><td>up to 5</td><td>up to 50</td></tr>\n<tr><td><b>Price per month</b></td><td>AED 180 ($49)</td><td>AED 364 ($99)</td></tr>\n<tr><td><b>Over 12 months</b></td><td>AED 2,160</td><td>AED 4,368</td></tr>\n<tr><td><b>Good fit for</b></td><td>A team of up to 5 with no hiring planned this year</td><td>A team of 6 to 10, or one about to grow</td></tr>\n</tbody></table>\n<p class=\"note\">License prices billed annually, bitrix24.ae prices as of 23 October 2026, exchange rate 3.6725. Since November 2026 bitrix24.ae also offers the Vibe+ line, and cloud REST API access is only available there, so check the current plan before you buy.</p>\n<p>More on the <a href=\"/bitrix-licenses\">Bitrix24 licenses</a> page, and a comparison for different team sizes in our guide on <a href=\"/journal/bitrix24-plan-10-25-50-users\">which plan to choose for 10, 25 or 50 users</a>.</p>\n<h2>WhatsApp is the first channel to connect</h2>\n<p>Customers in the UAE are quick to message on WhatsApp. If those chats live on reps&#39; personal phones, you cannot see who said what, and when someone leaves, their clients leave with the phone.</p>\n<p>That is why WhatsApp goes into the CRM early: a company number, open channels and a lead created from the first message. We connect it for AED 500, while the provider subscription and Meta message fees are paid separately. The scope is on the <a href=\"/bitrix-messengers\">WhatsApp and messengers in Bitrix24</a> page, Meta pricing is in our news piece on <a href=\"/news/skolko-stoit-whatsapp-business-v-oae\">WhatsApp Business costs in the UAE</a>, and the case for the official channel over a browser connector is in our guide <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API or WhatsApp Web</a>.</p>\n<p>Your website is usually the second channel: a CRM form creates a lead with its source and UTM tags, and the rep gets a task right away. See our guide to <a href=\"/journal/bitrix24-crm-forms\">Bitrix24 CRM forms</a>.</p>\n<!--cta-->\n<h2>First-year budget comes down to four lines</h2>\n<p>Treat the CRM as a one-year project, not a monthly subscription, and there are no surprises:</p>\n<ol>\n<li><b>License.</b> AED 2,160 a year on Basic or AED 4,368 on Standard at the prices above</li>\n<li><b>Setup.</b> Standard CRM setup with MakeBiz Technologies starts at AED 10,000, live from 14 days, with the estimate fixed before we start</li>\n<li><b>Channels.</b> WhatsApp at AED 500 plus the provider subscription, telephony at your carrier&#39;s rates</li>\n<li><b>Ongoing help.</b> Optional: 5 hours a month for AED 1,250, or one-off changes at AED 200 an hour</li>\n</ol>\n<p>Service prices exclude licenses and VAT, which is 5% in the UAE. You sign with MakeBiz Technologies FZE LLC, invoices are in AED, and access and data stay with you. All figures are on our <a href=\"/ceny\">pricing page</a>, the setup scope is on the <a href=\"/bitrix\">Bitrix24 implementation</a> page and in our guide to <a href=\"/journal/bitrix24-turnkey-implementation\">turnkey implementation</a>.</p>\n<h2>Launch simple, then add automation</h2>\n<p>A small business does not need a long project. A short loop works: launch a basic pipeline, use it for a month, collect the team&#39;s feedback, then add automation. The usual order:</p>\n<ul>\n<li>week one: pipeline, fields, client import from a spreadsheet, access rights</li>\n<li>week two: WhatsApp, website form, automation for tasks and reminders</li>\n<li>after launch: team training on your own portal and fixes based on feedback</li>\n</ul>\n<p>A short session answers most first-month questions, see <a href=\"/bitrix-training\">Bitrix24 training</a>. If you expect frequent tweaks, a <a href=\"/bitrix-support\">support plan</a> is easier than a separate invoice for every small change.</p>\n<h2>Three mistakes eat up the value of a CRM</h2>\n<ul>\n<li><b>Buying a plan and never setting it up.</b> An empty portal with no pipeline or channels becomes one more browser tab nobody opens</li>\n<li><b>Leaving WhatsApp on personal phones.</b> Only part of your enquiries reach the CRM, so reports show half the picture</li>\n<li><b>Automating everything at once.</b> Dozens of rules in week one confuse the team, start with tasks and reminders</li>\n</ul>\n<p>Once the pipeline runs, the next step is often an AI agent. The <a href=\"/ai-agents/rop\">AI sales manager agent</a> replies to a client if a rep goes quiet and makes sure every deal has a next step. The Start package with one agent is AED 5,000 one-off, and a demo on your own process is free.</p>\n<h2>A worked example: a fit-out company with 8 people</h2>\n<p>A hypothetical Dubai apartment fit-out company has an owner, 4 sales reps, 2 site supervisors and an office manager. Enquiries come through WhatsApp and the website, quotes go out from personal phones, and some clients drop off between the site visit and the contract.</p>\n<p>The company takes Standard, because 8 users do not fit into Basic: AED 4,368 a year. A pipeline of enquiry, site visit, quote, contract, works and payment, plus WhatsApp and the website form, is estimated from the AED 10,000 standard setup plus AED 500 for the channel. A month later the owner sees every enquiry in one place and knows where each one is stuck.</p>",
+  "mid": [
+   "We launch CRM for small teams",
+   "Pipeline, WhatsApp, website form and access rights. Standard setup from AED 10,000, live from 14 days",
+   "Talk about your launch"
+  ],
+  "faq": [
+   [
+    "Which Bitrix24 plan suits a team of 5?",
+    "For up to 5 people, Basic at AED 180 a month billed annually. If you plan to hire this year, go straight to Standard for 50 users at AED 364, bitrix24.ae prices as of 23 October 2026."
+   ],
+   [
+    "What does a small business CRM cost in the UAE in year one?",
+    "It adds up to the license (AED 2,160 or 4,368 a year), setup from AED 10,000, WhatsApp at AED 500 and the provider subscription. Ongoing support is optional, from AED 1,250 a month for 5 hours."
+   ],
+   [
+    "Can we set up Bitrix24 ourselves?",
+    "Yes, the basic features work right after you buy. But the pipeline, channels, rights and automation take time, and without them the portal often stays empty."
+   ],
+   [
+    "How long does the launch take?",
+    "Standard CRM setup goes live from 14 days. The timeline depends on the number of channels, the size of the import and how quickly your team gives feedback."
+   ],
+   [
+    "Does WhatsApp connect to Bitrix24?",
+    "Yes, through the official WhatsApp platform and a provider. We connect it for AED 500, and the provider subscription and Meta message fees are paid separately."
+   ]
+  ],
+  "cta": [
+   "Let us price a CRM for your team",
+   "Tell us how many people deal with clients and where your enquiries come from. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Turnkey Bitrix24 implementation in the UAE: what is included"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Which Bitrix24 plan for 10, 25 or 50 users"
+   ],
+   [
+    "/news/skolko-stoit-whatsapp-business-v-oae",
+    "WhatsApp Business pricing in the UAE after 1 October"
+   ]
+  ]
+ }
+}

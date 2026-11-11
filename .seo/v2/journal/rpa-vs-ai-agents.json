@@ -1,0 +1,114 @@
+{
+ "slug": "rpa-vs-ai-agents",
+ "date": "2026-11-11",
+ "rubric_ru": "Автоматизация",
+ "rubric_en": "Automation",
+ "ru": {
+  "title": "RPA или ИИ-агенты: что выбрать для автоматизации | MakeBiz",
+  "desc": "RPA или ИИ-агенты: сравнение по типам задач, где хватит робота, где нужен агент и где связка. Один ИИ-агент под ключ от 5 000 AED, демо бесплатно.",
+  "h1": "RPA или ИИ-агенты: что выбрать для автоматизации",
+  "crumb": "RPA или ИИ-агенты",
+  "lead": "RPA и ИИ-агентов часто сравнивают как две версии одного и того же. На деле они решают разные задачи, и выбор зависит не от моды, а от того, какие данные идут через процесс.",
+  "answer": "Если задача повторяется по жёстким правилам и данные лежат в одинаковых полях, хватит RPA или роботов CRM. Если в процессе есть письма, переписка, PDF и исключения, нужен ИИ-агент: у MakeBiz Technologies внедрение одного агента стоит от 5 000 AED разово, команды агентов от 10 000 AED, обслуживание 10% от стоимости внедрения в месяц. Часто выгоднее связка: правила выполняют роботы и интеграции, а агент берёт то, что в правила не укладывается.",
+  "body": "<h2>RPA повторяет действия, ИИ-агент работает со смыслом</h2>\n<p>RPA (robotic process automation) это программный робот, который повторяет действия человека в интерфейсе: открывает систему, копирует значение из одного окна в другое, нажимает кнопки по сценарию. Он не понимает, что делает, зато делает это одинаково тысячу раз подряд.</p>\n<p>ИИ-агент устроен иначе. Он читает письмо, сообщение клиента в WhatsApp или коммерческое предложение поставщика, понимает, о чём речь, и выбирает следующий шаг: ответить, создать задачу, сравнить цены, позвать человека. Чем агент отличается от обычного робота в CRM, мы разбирали в новости <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">про агента и робота в CRM</a>.</p>\n<p>Отсюда главное правило: RPA автоматизирует действия, агент автоматизирует решения. Если в процессе нечего решать, агент не нужен.</p>\n<h2>Тип задачи определяет выбор инструмента</h2>\n<p>Процесс удобнее раскладывать не по отделам, а по типу работы. Ниже сравнение, с которым мы приходим на первую встречу с клиентом.</p>\n<table><thead><tr><th>Тип задачи</th><th>RPA или робот CRM</th><th>ИИ-агент</th></tr></thead><tbody>\n<tr><td><b>Перенос данных между системами с одинаковыми полями</b></td><td>Подходит, если у системы нет API</td><td>Избыточен</td></tr>\n<tr><td><b>Сделка из формы сайта</b></td><td>Робот CRM справляется</td><td>Не нужен</td></tr>\n<tr><td><b>Разбор входящих писем и сообщений</b></td><td>Не понимает свободный текст</td><td>Подходит: разбирает запрос и отвечает</td></tr>\n<tr><td><b>Сравнение КП поставщиков в PDF</b></td><td>Ломается на разных форматах</td><td>Подходит: собирает таблицу сравнения</td></tr>\n<tr><td><b>Ответ клиенту, если менеджер молчит</b></td><td>Только шаблон по таймеру</td><td>Отвечает по сути вопроса</td></tr>\n<tr><td><b>Сверка платежей по точным реквизитам</b></td><td>Подходит</td><td>Нужен только для исключений</td></tr>\n<tr><td><b>Оценка разговоров менеджеров</b></td><td>Не применим</td><td>Подходит: оценивает каждый звонок</td></tr>\n</tbody></table>\n<p class=\"note\">Сравнение MakeBiz Technologies по типовым задачам, ноябрь 2026. Ваш процесс проверяем на демонстрации.</p>\n<h2>RPA выигрывает там, где правила не меняются</h2>\n<p>Робот хорош, когда у задачи три признака: вход всегда одного формата, шаги известны заранее, а ошибка видна сразу. Выгрузка выписки из банка в таблицу, перенос заказов из старой системы без API, ежедневная проверка статусов на портале поставщика.</p>\n<p>Слабое место RPA тоже известно: он завязан на интерфейс. Поменялась кнопка, добавилось поле, сайт поставщика стал грузиться медленнее, и сценарий встаёт. Поэтому, если у системы есть API, мы сначала предлагаем интеграцию, а не робота поверх экрана. Для связки CRM с учётом в ОАЭ это обычно Zoho Books, QuickBooks или Odoo, такая интеграция с Битрикс24 у нас стоит от 10 000 AED, подробнее на странице <a href=\"/bitrix-integrations\">интеграций с учётной системой</a>.</p>\n<p>Многое из того, что компании называют RPA, на деле закрывают обычные роботы и бизнес-процессы Битрикс24: поставить задачу, сменить стадию, отправить шаблон, напомнить о счёте. Это дешевле и проще в поддержке, чем отдельная платформа.</p>\n<!--cta-->\n<h2>ИИ-агент нужен там, где текст, исключения и переписка</h2>\n<p>Признаки задачи для агента обратные: вход каждый раз разный, правила описываются словами «обычно» и «смотря по ситуации», а работу сейчас делает человек, который читает и думает. Типичные места:</p>\n<ul>\n<li>входящие заявки в WhatsApp и почте, где клиент пишет как хочет. Такую роль закрывает <a href=\"/ai-agents/rop\">ИИ-РОП</a>: отвечает клиенту, если менеджер молчит, и следит за воронкой</li>\n<li>закупки: запросы поставщикам и сравнение КП, которые приходят в разных форматах. Это агент <a href=\"/ai-agents/zakupki\">Закупки</a></li>\n<li>финансы: сводка по деньгам и отклонениям для руководителя</li>\n<li>найм: первое собеседование с кандидатом</li>\n</ul>\n<p>У агента своя цена ошибки. Он может неверно понять редкий случай, поэтому решения о деньгах и обещания клиенту мы проектируем с проверкой человеком, пока агент не наберёт историю на ваших данных.</p>\n<h2>Связка робота, интеграции и агента закрывает процесс целиком</h2>\n<p>В реальном процессе редко бывает «или-или». Заявка приходит, робот CRM создаёт сделку, агент читает текст и определяет, что нужно клиенту, интеграция с учётом выставляет счёт в AED с VAT 5%, а человек подключается на согласовании скидки. Каждый инструмент делает свою часть, и никто не делает чужую.</p>\n<p>Как разложить процесс на такие точки, разобрано в гайде <a href=\"/journal/ai-agent-in-business-process\">где в бизнес-процессе встаёт ИИ-агент</a>, а про работу CRM и ИИ вместе есть страница <a href=\"/bitrix-ai-crm\">Битрикс24 с ИИ</a>.</p>\n<h2>Бюджет считают по стоимости владения, а не по цене старта</h2>\n<p>Сравнивать только разовую цену бессмысленно. У RPA основные расходы это лицензии платформы по тарифу вендора и правки сценариев при каждом изменении интерфейса. У агента это внедрение и ежемесячное обслуживание.</p>\n<ol>\n<li>Посчитайте, сколько часов в месяц уходит на задачу сейчас и кто её делает</li>\n<li>Отметьте, какая доля случаев идёт по правилам, а какая требует решения</li>\n<li>Для доли по правилам оцените робота CRM или интеграцию, для остального агента</li>\n<li>Добавьте поддержку: у агента 10% от стоимости внедрения в месяц, у RPA правки сценариев</li>\n</ol>\n<p>Пакеты агентов: Старт (один агент) 5 000 AED, Бизнес (команда агентов) 10 000 AED, Холдинг по смете. Что входит в каждый, описано в гайде <a href=\"/journal/ai-agents-for-business-cost\">про состав и цену ИИ-агентов</a>, все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<h2>Условный пример: дистрибьютор на 15 человек</h2>\n<p>Условная торговая компания в Дубае получает запросы клиентов в WhatsApp и по почте, а цены у поставщиков собирает вручную. Менеджеры копируют данные из писем в CRM, закупщик сводит КП в таблицу.</p>\n<p>Робот поверх почты здесь не поможет: письма каждый раз разные. Разумный план такой: роботы Битрикс24 создают сделки и задачи, агент разбирает входящие сообщения и сравнивает КП, интеграция с учётом выставляет счета. Начать можно с одного агента в пакете Старт и добавить второго, когда первый заработает. С какого агента обычно начинают в продажах, мы писали в новости <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">с какого агента начинать</a>.</p>\n<p>Подобрать агентов под процесс можно на странице <a href=\"/ai-agents\">ИИ-агентов</a>. Демонстрация на вашем процессе бесплатна и занимает 30-40 минут.</p>",
+  "mid": [
+   "Покажем ИИ-агента на вашем процессе",
+   "Разберём, что закрывает робот CRM, а что агент. Один агент от 5 000 AED разово, демонстрация 30-40 минут бесплатно",
+   "Записаться на демо"
+  ],
+  "faq": [
+   [
+    "Чем RPA отличается от ИИ-агента?",
+    "RPA повторяет заданные действия в интерфейсе по сценарию и не понимает содержание. ИИ-агент читает текст, понимает смысл и выбирает следующий шаг, поэтому справляется с письмами, перепиской и документами разного формата."
+   ],
+   [
+    "Можно ли заменить RPA роботами Битрикс24?",
+    "Часть задач да: смену стадий, задачи, уведомления и шаблоны сообщений делают роботы и бизнес-процессы CRM. Для обмена данными с внешней системой надёжнее интеграция через API, чем робот поверх экрана."
+   ],
+   [
+    "Сколько стоит внедрение ИИ-агента?",
+    "Один агент в пакете Старт стоит 5 000 AED разово, команда агентов в пакете Бизнес 10 000 AED, Холдинг считаем по смете. Обслуживание 10% от стоимости внедрения в месяц, цены без VAT."
+   ],
+   [
+    "Что будет, если агент ошибётся?",
+    "Решения о деньгах и обещания клиенту на старте идут через проверку человеком. Когда агент накопит историю на ваших данных, проверку сужают до исключений."
+   ],
+   [
+    "С чего начать выбор между RPA и агентом?",
+    "Распишите процесс по шагам и отметьте, где работа идёт по правилам, а где человек читает и решает. Затем покажем агента на вашем процессе: демонстрация бесплатная и занимает 30-40 минут."
+   ]
+  ],
+  "cta": [
+   "Разложим ваш процесс на робота и агента",
+   "Опишите задачу, которую хотите автоматизировать, и какие системы в ней участвуют. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/ai-agent-in-business-process",
+    "Где в бизнес-процессе встаёт ИИ-агент"
+   ],
+   [
+    "/journal/ai-agents-for-business-cost",
+    "ИИ-агенты для бизнеса: состав, цена, обслуживание"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI-агент или робот в CRM: в чём разница"
+   ]
+  ]
+ },
+ "en": {
+  "title": "RPA vs AI agents: which to choose for automation | MakeBiz",
+  "desc": "RPA or AI agents compared by task type: where a rule-based bot is enough, where you need an agent, and where both. One AI agent from AED 5,000.",
+  "h1": "RPA or AI agents: which to choose for automation",
+  "crumb": "RPA or AI agents",
+  "lead": "RPA and AI agents are often pitched as two versions of the same thing. They are not. They solve different problems, and the right choice depends on what kind of data flows through your process.",
+  "answer": "If a task follows fixed rules and the data always sits in the same fields, RPA or CRM automation rules will do the job. If the process involves emails, chats, PDFs and exceptions, you need an AI agent: at MakeBiz Technologies one agent costs from AED 5,000 one-off, a team of agents from AED 10,000, and ongoing support is 10% of the implementation cost per month. Often it pays to combine them: rules and integrations take the predictable part, the agent takes whatever the rules cannot cover.",
+  "body": "<h2>RPA repeats actions, an AI agent works with meaning</h2>\n<p>RPA (robotic process automation) is a software bot that mimics what a person does on screen: it opens a system, copies a value from one window to another and clicks buttons according to a script. It does not understand the work, but repeats it the same way a thousand times.</p>\n<p>An AI agent works differently. It reads an email, a client&#39;s WhatsApp message or a supplier quote, understands what it is about and decides the next step: reply, create a task, compare prices or hand over to a person. We covered how an agent differs from a standard CRM automation rule in our news piece on <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">AI agents vs CRM automation</a>.</p>\n<p>The rule of thumb: RPA automates actions, an agent automates decisions. If there is nothing to decide in a process, you do not need an agent.</p>\n<h2>The type of task decides the tool</h2>\n<p>Break the process down by type of work, not by department. This is the comparison we bring to a first client meeting.</p>\n<table><thead><tr><th>Task</th><th>RPA or CRM rule</th><th>AI agent</th></tr></thead><tbody>\n<tr><td><b>Moving data between systems with identical fields</b></td><td>Works if the system has no API</td><td>Overkill</td></tr>\n<tr><td><b>Creating a deal from a website form</b></td><td>A CRM rule handles it</td><td>Not needed</td></tr>\n<tr><td><b>Sorting incoming emails and messages</b></td><td>Cannot read free text</td><td>Fits: understands the request and replies</td></tr>\n<tr><td><b>Comparing supplier quotes in PDF</b></td><td>Breaks on different layouts</td><td>Fits: builds a comparison table</td></tr>\n<tr><td><b>Replying when a sales rep goes quiet</b></td><td>Only a timed template</td><td>Answers the actual question</td></tr>\n<tr><td><b>Matching payments by exact references</b></td><td>Works</td><td>Only for exceptions</td></tr>\n<tr><td><b>Scoring sales calls</b></td><td>Not applicable</td><td>Fits: scores every call</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies comparison of typical tasks, November 2026. We test your own process in a demo.</p>\n<h2>RPA wins where the rules never change</h2>\n<p>A bot is a good fit when a task ticks three boxes: the input always comes in the same format, the steps are known in advance, and a mistake shows up immediately. Say, pulling a bank statement into a spreadsheet, moving orders out of a legacy system with no API, or checking order statuses on a supplier portal every morning.</p>\n<p>The weak spot of RPA: it depends on the user interface. A button moves, a field is added, the supplier site gets slower, and the script stops. So when a system has an API, we suggest a proper integration first rather than a bot clicking over the screen. For linking a CRM with accounting in the UAE that usually means Zoho Books, QuickBooks or Odoo, and we build that <a href=\"/bitrix-integrations\">integration with Bitrix24</a> from AED 10,000.</p>\n<p>Much of what companies call RPA is really covered by standard Bitrix24 automation rules: tasks, stage changes, templates, payment reminders. That is cheaper to run than a separate RPA platform.</p>\n<!--cta-->\n<h2>An AI agent belongs where there is text, exceptions and conversation</h2>\n<p>The signs of an agent task are the opposite: the input is different every time, the rules are described with words like \"usually\" and \"it depends\", and today the work is done by someone who reads and thinks. Typical places:</p>\n<ul>\n<li>inbound leads on WhatsApp and email, where clients write however they like. The <a href=\"/ai-agents/rop\">AI sales manager</a> covers this: it replies when a rep goes quiet and watches the pipeline</li>\n<li>procurement: sending requests to suppliers and comparing quotes that arrive in all sorts of formats. That is the <a href=\"/ai-agents/zakupki\">Procurement agent</a></li>\n<li>finance: a summary of cash and variances for the business owner</li>\n<li>hiring: the first screening interview with a candidate</li>\n</ul>\n<p>An agent has its own kind of error. It can misread an unusual case, so anything involving money or a promise to a client is designed with human approval until the agent has built up a track record on your data.</p>\n<h2>A bot, an integration and an agent together cover the whole process</h2>\n<p>Real processes are rarely either-or. A lead comes in, a CRM rule creates a deal, the agent reads the message and works out what the client needs, the accounting integration issues an invoice in AED with 5% VAT, and a person steps in to approve a discount.</p>\n<p>How to map a process into these points is covered in our guide on <a href=\"/journal/ai-agent-in-business-process\">where an AI agent fits into a business process</a>, and the <a href=\"/bitrix-ai-crm\">Bitrix24 with AI</a> page explains how the CRM and agents work together.</p>\n<h2>Budget on total cost of ownership, not the launch price</h2>\n<p>With RPA the main costs are the platform licence at the vendor&#39;s rates and script fixes every time an interface changes. With an agent it is the implementation plus monthly support.</p>\n<ol>\n<li>Work out how many hours a month the task takes today and who does it</li>\n<li>Estimate what share of cases follows the rules and what share needs a judgement call</li>\n<li>Price a CRM rule or an integration for the rule-based share, and an agent for the rest</li>\n<li>Add support: 10% of the implementation cost per month for an agent, script maintenance for RPA</li>\n</ol>\n<p>Our agent packages: Start (one agent) AED 5,000, Business (a team of agents) AED 10,000, Holding quoted on scope. What each one includes is in the guide on <a href=\"/journal/ai-agents-for-business-cost\">what AI agents for business cost</a>, and all prices are on the <a href=\"/ceny\">pricing page</a>.</p>\n<h2>A worked example: a distributor with 15 staff</h2>\n<p>A hypothetical trading company in Dubai gets client requests on WhatsApp and by email, and collects supplier prices by hand. Sales reps copy details from emails into the CRM, and the buyer pastes quotes into a spreadsheet.</p>\n<p>A bot on the inbox will not help, since every email is different. A sensible plan: Bitrix24 rules create deals and tasks, an agent reads incoming messages and compares quotes, and the accounting integration issues invoices. You can start with one agent on the Start package and add a second once the first is running smoothly. Which agent sales teams usually start with is covered in our news piece on <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">choosing your first sales agent</a>.</p>\n<p>You can browse the agents on the <a href=\"/ai-agents\">AI agents</a> page. A demo on your own process is free and takes 30 to 40 minutes.</p>",
+  "mid": [
+   "See an AI agent working on your process",
+   "We will show what a CRM rule can handle and what needs an agent. One agent from AED 5,000 one-off, a 30 to 40 minute demo is free",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "What is the difference between RPA and an AI agent?",
+    "RPA repeats predefined on-screen actions from a script and does not understand the content. An AI agent reads text, understands what it means and picks the next step, so it copes with emails, chats and mixed-format documents."
+   ],
+   [
+    "Can Bitrix24 automation replace RPA?",
+    "For many tasks, yes: stage changes, tasks, notifications and message templates are handled by CRM automation rules and workflows. For data exchange with outside systems, an API integration is more reliable than a screen bot."
+   ],
+   [
+    "How much does an AI agent cost to implement?",
+    "One agent on the Start package is AED 5,000 one-off, a team of agents on the Business package is AED 10,000, and Holding is quoted on scope. Support is 10% of the implementation cost per month, prices exclude VAT."
+   ],
+   [
+    "What happens if the agent gets something wrong?",
+    "At launch, decisions involving money or promises to clients go through human approval."
+   ],
+   [
+    "Where do I start when choosing between RPA and an agent?",
+    "Map the process and mark where work follows rules and where someone reads and decides. Then we will show an agent on your process: the demo is free and takes 30 to 40 minutes."
+   ]
+  ],
+  "cta": [
+   "Let us split your process between rules and agents",
+   "Tell us which task you want to automate and which systems are involved. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/ai-agent-in-business-process",
+    "Where an AI agent fits into a business process"
+   ],
+   [
+    "/journal/ai-agents-for-business-cost",
+    "AI agents for business: what is included and what it costs"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI agent or CRM automation: what is the difference"
+   ]
+  ]
+ }
+}

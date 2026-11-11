@@ -1,0 +1,114 @@
+{
+ "slug": "bi-implementation",
+ "date": "2026-11-11",
+ "rubric_ru": "Аналитика",
+ "rubric_en": "Analytics",
+ "ru": {
+  "title": "Внедрение BI-аналитики: этапы, сроки и роли | MakeBiz",
+  "desc": "Внедрение BI-аналитики в компании в ОАЭ: пять этапов, источники, модель данных и роли. MakeBiz BI 300, 700 и 1 000 AED в месяц, 14 дней бесплатно.",
+  "h1": "Внедрение BI-аналитики: этапы, сроки и роли",
+  "crumb": "Внедрение BI",
+  "lead": "BI-аналитика окупается, когда руководитель каждый день принимает по ней решения. Разбираем, как пройти путь от вопросов к рабочим дашбордам и кто за что отвечает в проекте.",
+  "answer": "Внедрение BI-аналитики проходит пять этапов: вопросы руководителя, источники данных, модель и чистка данных, дашборды и запуск в работу. Тарифы MakeBiz BI стоят 300, 700 и 1 000 AED в месяц (Базовый до 3 пользователей, Стандарт до 10, Профи без ограничений), первые 14 дней бесплатно, при оплате за 6 месяцев скидка 10%, за год 20%.",
+  "body": "<h2>BI-проект начинается с вопросов руководителя, а не с графиков</h2>\n<p>Типичная ошибка: начать с красивого дашборда, а потом искать, кому он нужен. Через месяц экран никто не открывает, потому что он не отвечает ни на один рабочий вопрос. Правильный старт обратный: руководитель записывает 10-15 вопросов, на которые хочет видеть ответ каждый день или каждую неделю.</p>\n<ul>\n<li>сколько денег пришло за месяц и сколько ещё в работе</li>\n<li>какой менеджер отстаёт от плана и почему</li>\n<li>из каких источников приходят клиенты, которые платят</li>\n<li>где сделки застревают дольше всего</li>\n<li>какие клиенты перестали покупать</li>\n</ul>\n<p>Каждый вопрос превращается в метрику с точным определением. «Выручка» должна означать одно и то же для продаж и бухгалтерии: оплаченные счета или закрытые сделки, с VAT 5% или без него. Пока это не договорено, любые графики будут спорными.</p>\n<h2>Внедрение проходит пять этапов</h2>\n<p>Каждый этап даёт понятный результат, и без него следующий не начинают.</p>\n<table><thead><tr><th>Этап</th><th>Что делаем</th><th>Результат</th><th>Кто участвует</th></tr></thead><tbody>\n<tr><td><b>1. Вопросы и метрики</b></td><td>Собираем вопросы руководства, даём метрикам определения</td><td>Список метрик и формул</td><td>Владелец, руководитель продаж</td></tr>\n<tr><td><b>2. Источники</b></td><td>Описываем, где лежат данные, выдаём доступы</td><td>Карта источников</td><td>Ответственный за данные, IT</td></tr>\n<tr><td><b>3. Модель и чистка</b></td><td>Связываем таблицы, убираем дубли, сводим справочники</td><td>Данные, которым можно верить</td><td>Подрядчик и ответственный за данные</td></tr>\n<tr><td><b>4. Дашборды</b></td><td>Собираем экраны под роли: собственник, РОП, маркетинг</td><td>Рабочие экраны на живых данных</td><td>Подрядчик, ключевые пользователи</td></tr>\n<tr><td><b>5. Запуск в работу</b></td><td>Встраиваем экраны в планёрки, настраиваем сигналы</td><td>Решения принимаются по дашборду</td><td>Руководитель</td></tr>\n</tbody></table>\n<p class=\"note\">Схема этапов MakeBiz Technologies. Для небольшой компании этапы 1-2 могут занять одну встречу.</p>\n<h2>Источники данных определяют объём работ</h2>\n<p>Чем больше систем нужно связать, тем больше работы и тем выше риск расхождений. Поэтому источники подключают по очереди, начиная с главного.</p>\n<ul>\n<li><b>CRM.</b> Сделки, лиды, менеджеры, задачи. В MakeBiz BI данные Битрикс24 и его телефонии входят в подписку</li>\n<li><b>Учётная система.</b> Счета и оплаты из Zoho Books, QuickBooks или Odoo. Подключается к BI по запросу за отдельную плату</li>\n<li><b>Реклама и веб-аналитика.</b> Расходы и клики для сквозной аналитики, тоже по запросу за отдельную плату</li>\n<li><b>Внешняя телефония.</b> Если звонки идут не через Битрикс24, а через отдельного провайдера</li>\n<li><b>Таблицы.</b> Планы и справочники, которых нет в системах. Их стоит перенести в CRM, иначе отчёт зависит от того, кто последний правил файл</li>\n</ul>\n<p>Если учёт и CRM пока не связаны, начните с интеграции: из сделки создаётся счёт, оплата возвращается в CRM, и BI получает одну цепочку вместо двух несвязанных. Интеграция Битрикс24 с учётом у нас от 10 000 AED, подробнее на странице <a href=\"/bitrix-integrations\">интеграций</a>. Что проверить у провайдера звонков, мы писали в новости о <a href=\"/news/telefoniya-v-oae-dlya-crm\">телефонии в ОАЭ для CRM</a>.</p>\n<!--cta-->\n<h2>Модель данных важнее красоты дашборда</h2>\n<p>Модель данных это правила, по которым таблицы связаны между собой: какая сделка относится к какому клиенту, какой счёт к какой сделке, какой менеджер за что отвечает. Если модель собрана неверно, самый аккуратный график покажет неверную цифру.</p>\n<p>На этом этапе находятся старые проблемы CRM: дубли компаний, сделки без суммы, менеджеры, которые уволились, но числятся в отчётах, суммы в разных валютах. Всё приводится к AED и одному справочнику менеджеров и направлений. Подробно о таких ошибках наш гайд <a href=\"/journal/bitrix24-crm-analytics\">почему отчёты CRM врут</a>. Если портал не проверяли давно, сначала закажите <a href=\"/bitrix-audit\">аудит Битрикс24</a>, а если воронка не отражает реальные продажи, нужна <a href=\"/bitrix\">настройка CRM</a> от 10 000 AED.</p>\n<h2>У проекта четыре роли</h2>\n<ul>\n<li><b>Владелец проекта.</b> Собственник или директор, который утверждает вопросы и метрики и потом сам смотрит дашборд</li>\n<li><b>Ответственный за данные.</b> Человек внутри компании, который знает, где что лежит, и следит за правилами заполнения CRM</li>\n<li><b>Ключевые пользователи.</b> Руководитель продаж, маркетолог, финансист: проверяют экраны на своих задачах</li>\n<li><b>Подрядчик.</b> MakeBiz подключает источники, строит модель и дашборды, поддерживает их в работе</li>\n</ul>\n<p>Доступы и данные остаются у клиента, договор заключается с MakeBiz Technologies FZE LLC, счета выставляются в AED. BI-проект буксует, если нет ответственного за данные: без него никто не исправляет ошибки в CRM, и дашборд постепенно теряет доверие.</p>\n<h2>Тариф выбирают по числу пользователей и глубине анализа</h2>\n<p>MakeBiz BI работает по подписке. В неё входят подключение портала Битрикс24, синхронизация данных, обновления дашбордов и техническая поддержка.</p>\n<ul>\n<li><b>Базовый, 300 AED в месяц.</b> До 3 пользователей: выручка, заявки, сделки, звонки, источники и причины провалов</li>\n<li><b>Стандарт, 700 AED в месяц.</b> До 10 пользователей: работа сотрудников, зависшие сделки, прогноз месяца и квартала, ABC-анализ</li>\n<li><b>Профи, 1 000 AED в месяц.</b> Пользователи без ограничений: сквозная аналитика, планы продаж, ИИ-аналитик, свои поля и вкладки</li>\n</ul>\n<p>При оплате за 6 месяцев скидка 10%, за год 20%. Первые 14 дней бесплатно на любом тарифе, на пробный период подключается Профи целиком. Подробности на странице <a href=\"/bi-analitika\">BI-аналитики</a> и на странице <a href=\"/ceny\">цен в AED</a>. Как строится прогноз, читайте в гайде <a href=\"/journal/sales-forecasting-crm\">о прогнозе продаж по CRM</a>, а как связать рекламу с оплатами, в гайде <a href=\"/journal/full-funnel-analytics\">о сквозной аналитике</a>.</p>\n<h2>Условный пример: сервисная компания на 25 сотрудников</h2>\n<p>Условная сервисная компания в Абу-Даби ведёт сделки в Битрикс24, а отчёты для собственника менеджер собирает в таблицах раз в неделю. Цифры из CRM и бухгалтерии не сходятся, и каждая планёрка начинается со спора о том, чья цифра верная.</p>\n<p>Собственник записывает вопросы, назначает ответственного за данные и подключает пробный период. За 14 бесплатных дней команда смотрит экраны на своих данных и составляет список расхождений. Затем дубли и пустые поля в CRM исправляются, компания выбирает Стандарт на 10 пользователей за 700 AED в месяц, а подключение учётной системы считается отдельно по смете. Какие экраны руководитель открывает первыми, мы описали в новости о <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">трёх дашбордах руководителя продаж</a>.</p>",
+  "mid": [
+   "Подключим BI к вашему Битрикс24",
+   "Дашборды руководителя на живых данных CRM, телефонии и учёта. От 300 AED в месяц, 14 дней бесплатно на полном тарифе Профи",
+   "Обсудить BI"
+  ],
+  "faq": [
+   [
+    "Сколько длится внедрение BI-аналитики?",
+    "Срок зависит от числа источников и качества данных в CRM. Подключение Битрикс24 входит в подписку, а дополнительные источники и сроки по ним фиксируем в смете до старта."
+   ],
+   [
+    "Что нужно подготовить до старта?",
+    "Список вопросов руководителя, ответственного за данные и доступы к CRM и другим системам. Чем точнее определены метрики, тем быстрее команда получает рабочие экраны."
+   ],
+   [
+    "Можно ли подключить к BI учётную систему и рекламу?",
+    "Да, Zoho Books, QuickBooks, Odoo, рекламные кабинеты и веб-аналитику подключаем по запросу за отдельную плату. Данные Битрикс24 и его телефонии входят в подписку."
+   ],
+   [
+    "Какой тариф выбрать на старте?",
+    "Для собственника и 1-2 руководителей хватит Базового за 300 AED. Если нужен контроль сотрудников и прогноз, берите Стандарт за 700 AED, для сквозной аналитики и планов нужен Профи за 1 000 AED."
+   ],
+   [
+    "Можно ли попробовать бесплатно?",
+    "Да, первые 14 дней бесплатно на любом тарифе, на это время подключаем Профи целиком. За это время можно посмотреть экраны на своих данных и собрать замечания."
+   ]
+  ],
+  "cta": [
+   "Покажем ваши цифры на одном экране",
+   "Напишите, где ведёте сделки и учёт и какие вопросы хотите закрыть дашбордом. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/sales-forecasting-crm",
+    "Прогноз продаж по данным CRM"
+   ],
+   [
+    "/journal/full-funnel-analytics",
+    "Сквозная аналитика: от рекламы до оплаты"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Три дашборда, которые смотрит руководитель продаж"
+   ]
+  ]
+ },
+ "en": {
+  "title": "BI implementation: stages, timeline and roles | MakeBiz",
+  "desc": "BI implementation for a UAE company: five stages, data sources, data model and roles. MakeBiz BI at AED 300, 700 or 1,000 a month, 14 days free.",
+  "h1": "BI implementation: stages, timeline and roles",
+  "crumb": "BI implementation",
+  "lead": "BI pays off when management makes decisions from it every day. Here is how to get from questions to working dashboards, and who owns what in the project.",
+  "answer": "BI implementation runs in five stages: management questions, data sources, data model and clean-up, dashboards, and adoption. MakeBiz BI plans cost AED 300, 700 and 1,000 a month (Basic up to 3 users, Standard up to 10, Pro unlimited), the first 14 days are free, and paying for 6 months saves 10%, for a year 20%.",
+  "body": "<h2>A BI project starts with management questions, not charts</h2>\n<p>The classic mistake is to build a good-looking dashboard first and look for an audience later. A month on, nobody opens it, because it answers no real business question. Start the other way round: the owner writes down 10 to 15 questions they want answered every day or every week.</p>\n<ul>\n<li>how much money came in this month and how much is still in the pipeline</li>\n<li>which rep is behind plan, and why</li>\n<li>which sources bring clients who actually pay</li>\n<li>where deals get stuck the longest</li>\n<li>which clients have stopped buying</li>\n</ul>\n<p>Each question becomes a metric with a precise definition. \"Revenue\" has to mean the same thing to sales and finance: paid invoices or won deals, gross or net of 5% VAT. Until that is agreed, every chart will be disputed.</p>\n<h2>Implementation runs in five stages</h2>\n<p>Each stage has a clear output, and the next one does not start without it.</p>\n<table><thead><tr><th>Stage</th><th>What happens</th><th>Output</th><th>Who is involved</th></tr></thead><tbody>\n<tr><td><b>1. Questions and metrics</b></td><td>Collect management questions, define the metrics</td><td>Metric list with formulas</td><td>Owner, head of sales</td></tr>\n<tr><td><b>2. Sources</b></td><td>Map where the data lives, grant access</td><td>Source map</td><td>Data owner, IT</td></tr>\n<tr><td><b>3. Model and clean-up</b></td><td>Link tables, remove duplicates, align reference lists</td><td>Data you can trust</td><td>Contractor and data owner</td></tr>\n<tr><td><b>4. Dashboards</b></td><td>Build views by role: owner, sales head, marketing</td><td>Working screens on live data</td><td>Contractor, key users</td></tr>\n<tr><td><b>5. Adoption</b></td><td>Bring the screens into weekly meetings, set up alerts</td><td>Decisions made from the dashboard</td><td>Management</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies stage plan. For a small company, stages 1 and 2 can fit into one meeting.</p>\n<h2>Your data sources set the scope of work</h2>\n<p>The more systems you connect, the more work there is and the higher the risk of mismatches. So sources go in one at a time, starting with the main one.</p>\n<ul>\n<li><b>CRM.</b> Deals, leads, reps, tasks. In MakeBiz BI, Bitrix24 data and Bitrix24 telephony are included in the subscription</li>\n<li><b>Accounting.</b> Invoices and payments from Zoho Books, QuickBooks or Odoo, connected on request for an extra fee</li>\n<li><b>Ads and web analytics.</b> Spend and clicks for end-to-end analytics, also on request for an extra fee</li>\n<li><b>External telephony.</b> If calls run through a separate provider rather than Bitrix24</li>\n<li><b>Spreadsheets.</b> Plans and lists that live nowhere else. Move them into the CRM, or the report depends on whoever last edited the file</li>\n</ul>\n<p>If accounting and the CRM are not yet linked, start with the integration: the invoice is raised from the deal, the payment flows back, and BI gets one chain instead of two. We integrate Bitrix24 with accounting from AED 10,000, see our <a href=\"/bitrix-integrations\">integrations page</a>. What to check with your phone provider is covered in our news on <a href=\"/news/telefoniya-v-oae-dlya-crm\">UAE telephony for your CRM</a>.</p>\n<!--cta-->\n<h2>The data model matters more than the visuals</h2>\n<p>The data model is the set of rules that links tables: which deal belongs to which client, which invoice to which deal, which rep owns what. Get the model wrong and the neatest chart shows the wrong number.</p>\n<p>This is where old CRM problems surface: duplicate companies, deals with no amount, reps who left but still appear in reports, amounts in different currencies. Everything is brought to AED and to one list of reps and business lines. We cover these errors in our guide on <a href=\"/journal/bitrix24-crm-analytics\">why CRM reports lie</a>. If nobody has reviewed the portal in a while, start with a <a href=\"/bitrix-audit\">Bitrix24 audit</a>, and if the pipeline does not match how you sell, you need <a href=\"/bitrix\">CRM setup</a> from AED 10,000.</p>\n<h2>The project has four roles</h2>\n<ul>\n<li><b>Project owner.</b> The owner or MD who signs off questions and metrics, then actually uses the dashboard</li>\n<li><b>Data owner.</b> Someone inside the company who knows where everything lives and enforces CRM data rules</li>\n<li><b>Key users.</b> Head of sales, marketing, finance: they test the screens against their own work</li>\n<li><b>Contractor.</b> MakeBiz connects the sources, builds the model and dashboards, and keeps them running</li>\n</ul>\n<p>Access and data stay with you, the contract is with MakeBiz Technologies FZE LLC and invoices are in AED. A BI project stalls when there is no data owner: nobody fixes CRM errors, and the dashboard slowly loses trust.</p>\n<h2>Pick the plan by number of users and depth of analysis</h2>\n<p>MakeBiz BI is a subscription. It covers connecting your Bitrix24 portal, data sync, dashboard updates and technical support.</p>\n<ul>\n<li><b>Basic, AED 300 a month.</b> Up to 3 users: revenue, leads, deals, calls, sources and loss reasons</li>\n<li><b>Standard, AED 700 a month.</b> Up to 10 users: team activity, stalled deals, monthly and quarterly forecast, ABC analysis</li>\n<li><b>Pro, AED 1,000 a month.</b> Unlimited users: end-to-end analytics, sales plans, an AI analyst, your own fields and tabs</li>\n</ul>\n<p>Pay for 6 months and get 10% off, pay for a year and get 20% off. The first 14 days are free on any plan, and the trial runs on the full Pro plan. Details are on the <a href=\"/bi-analitika\">BI analytics page</a> and our <a href=\"/ceny\">pricing page</a>. For forecasting, see our guide on <a href=\"/journal/sales-forecasting-crm\">sales forecasting from CRM data</a>, and for linking ads to payments, our guide on <a href=\"/journal/full-funnel-analytics\">end-to-end analytics</a>.</p>\n<h2>A worked example: a service company with 25 staff</h2>\n<p>A hypothetical service company in Abu Dhabi runs deals in Bitrix24, while a manager builds the owner&#39;s reports in spreadsheets once a week. CRM and finance numbers never match, and every meeting opens with an argument about whose figure is right.</p>\n<p>The owner writes down the questions, names a data owner and starts the free trial. Over the 14 days the team reviews the screens on its own data and lists the mismatches. Duplicates and empty CRM fields get fixed, the company picks Standard for 10 users at AED 700 a month, and connecting accounting is quoted separately. Which screens a sales director opens first is covered in our news on <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">three sales dashboards</a>.</p>",
+  "mid": [
+   "We connect BI to your Bitrix24",
+   "Management dashboards on live CRM, telephony and accounting data. From AED 300 a month, 14 days free on the full Pro plan",
+   "Talk about BI"
+  ],
+  "faq": [
+   [
+    "How long does BI implementation take?",
+    "It depends on the number of sources and the quality of your CRM data. Connecting Bitrix24 is part of the subscription, and extra sources with their timelines are fixed in a quote before we start."
+   ],
+   [
+    "What do I need to prepare?",
+    "A list of management questions, a named data owner and access to the CRM and other systems. The clearer the metric definitions, the sooner the team gets working screens."
+   ],
+   [
+    "Can you connect accounting and ad platforms to BI?",
+    "Yes. Zoho Books, QuickBooks, Odoo, ad accounts and web analytics are connected on request for an extra fee. Bitrix24 and its telephony are included in the subscription."
+   ],
+   [
+    "Which plan should I start with?",
+    "For an owner and one or two managers, Basic at AED 300 is enough. For team control and forecasting take Standard at AED 700, and for end-to-end analytics and sales plans you need Pro at AED 1,000."
+   ],
+   [
+    "Is there a free trial?",
+    "Yes, the first 14 days are free on any plan, and we switch on the full Pro plan for that period. It is time to see the screens on your own data and note what is missing."
+   ]
+  ],
+  "cta": [
+   "We will put your numbers on one screen",
+   "Tell us where you track deals and accounting and which questions the dashboard should answer. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/sales-forecasting-crm",
+    "Sales forecasting from CRM data"
+   ],
+   [
+    "/journal/full-funnel-analytics",
+    "End-to-end analytics: from ad click to payment"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Three dashboards a sales director checks"
+   ]
+  ]
+ }
+}

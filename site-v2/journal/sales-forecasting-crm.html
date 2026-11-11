@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Прогноз продаж по данным CRM: из чего строится | MakeBiz</title>
+<meta name="description" content="Прогноз продаж по CRM: вероятности стадий по истории, цикл сделки, прогноз менеджера и план на одном дашборде. MakeBiz BI от 700 AED в месяц, 14 дней бесплатно.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://makebiztechnologies.com/journal/sales-forecasting-crm">
+<link rel="alternate" hreflang="ru" href="https://makebiztechnologies.com/journal/sales-forecasting-crm"><link rel="alternate" hreflang="en" href="https://makebiztechnologies.com/en/journal/sales-forecasting-crm"><link rel="alternate" hreflang="x-default" href="https://makebiztechnologies.com/journal/sales-forecasting-crm">
+<meta name="yandex-verification" content="4da996bcccf8e587">
+<meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="MakeBiz">
+<meta property="og:title" content="Прогноз продаж по данным CRM: из чего строится | MakeBiz"><meta property="og:description" content="Прогноз продаж по CRM: вероятности стадий по истории, цикл сделки, прогноз менеджера и план на одном дашборде. MakeBiz BI от 700 AED в месяц, 14 дней бесплатно."><meta property="og:url" content="https://makebiztechnologies.com/journal/sales-forecasting-crm"><meta property="og:image" content="https://makebiztechnologies.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=32990186">
+<meta name="theme-color" content="#04050A">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["Organization", "ProfessionalService"], "@id": "https://makebiztechnologies.com/#organization", "name": "MakeBiz", "alternateName": "MakeBiz Technologies", "legalName": "MakeBiz Technologies FZE LLC", "url": "https://makebiztechnologies.com/", "logo": "https://makebiztechnologies.com/favicon.png", "image": "https://makebiztechnologies.com/og-image.jpg", "telephone": "+971502620927", "email": "info@makebiztechnologies.com", "priceRange": "AED", "address": {"@type": "PostalAddress", "streetAddress": "Amber Gem Tower, Sheikh Khalifa Street", "addressLocality": "Ajman", "addressCountry": "AE"}, "identifier": {"@type": "PropertyValue", "propertyID": "Ajman NuVentures Centre registration number", "value": "2624215090888"}, "areaServed": [{"@type": "City", "name": "Dubai"}, {"@type": "Country", "name": "United Arab Emirates"}], "knowsLanguage": ["ru", "en"], "founder": {"@type": "Person", "@id": "https://makebiztechnologies.com/#founder", "name": "Антон Чернобаев"}, "knowsAbout": ["Битрикс24", "внедрение CRM в ОАЭ", "коробочный Битрикс24", "интеграция Битрикс24 с Zoho Books", "WhatsApp в CRM", "VAT в CRM", "BI-аналитика", "ИИ-агенты", "речевая аналитика звонков"], "disambiguatingDescription": "Официальный партнёр и интегратор Битрикс24 в ОАЭ: Битрикс24, ИИ-агенты и BI. Не занимается регистрацией компаний, визами и лицензиями", "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Официальный партнёр Битрикс24", "credentialCategory": "partner"}, "sameAs": ["https://t.me/makebizchannel", "https://makebiz.life/"]}, {"@type": "WebPage", "@id": "https://makebiztechnologies.com/journal/sales-forecasting-crm#webpage", "url": "https://makebiztechnologies.com/journal/sales-forecasting-crm", "name": "Прогноз продаж по данным CRM: из чего строится | MakeBiz", "description": "Прогноз продаж по CRM: вероятности стадий по истории, цикл сделки, прогноз менеджера и план на одном дашборде. MakeBiz BI от 700 AED в месяц, 14 дней бесплатно.", "inLanguage": "ru", "dateModified": "2026-10-23", "isPartOf": {"@id": "https://makebiztechnologies.com/#website"}, "publisher": {"@id": "https://makebiztechnologies.com/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://makebiztechnologies.com/"}, {"@type": "ListItem", "position": 2, "name": "Журнал", "item": "https://makebiztechnologies.com/journal"}, {"@type": "ListItem", "position": 3, "name": "Прогноз продаж", "item": "https://makebiztechnologies.com/journal/sales-forecasting-crm"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Как посчитать вероятность стадии сделки?", "acceptedAnswer": {"@type": "Answer", "text": "Возьмите закрытые сделки за 6-12 месяцев и посчитайте, какая доля сделок, дошедших до стадии, в итоге оплатила. Это и есть вероятность, пересчитывайте её раз в квартал."}}, {"@type": "Question", "name": "Что такое взвешенная воронка?", "acceptedAnswer": {"@type": "Answer", "text": "Это сумма всех открытых сделок, умноженных на вероятность их стадии. Она показывает ожидаемую выручку по месяцам с учётом того, что часть сделок не закроется."}}, {"@type": "Question", "name": "Сколько данных нужно для прогноза?", "acceptedAnswer": {"@type": "Answer", "text": "Нужна история закрытых сделок, выигранных и проигранных, с суммами и датами. Чем больше сделок за период, тем устойчивее вероятности, при малом числе сделок прогноз менеджера важнее математики."}}, {"@type": "Question", "name": "Можно ли построить прогноз прямо в Битрикс24?", "acceptedAnswer": {"@type": "Answer", "text": "Базовые отчёты по воронке в Битрикс24 есть. Для плана, прогноза и факта оплат из учётной системы на одном экране удобнее BI-дашборд, он обновляется автоматически."}}, {"@type": "Question", "name": "Сколько стоит прогноз продаж в MakeBiz?", "acceptedAnswer": {"@type": "Answer", "text": "Прогноз месяца и квартала входит в тариф BI Стандарт за 700 AED в месяц, планы продаж в тариф Профи за 1 000 AED. Если данные CRM нужно привести в порядок, работы считаются по часам, 200 AED в час, по смете до старта."}}]}, {"@type": "Article", "@id": "https://makebiztechnologies.com/journal/sales-forecasting-crm#article", "headline": "Прогноз продаж по данным CRM", "description": "Прогноз продаж по CRM: вероятности стадий по истории, цикл сделки, прогноз менеджера и план на одном дашборде. MakeBiz BI от 700 AED в месяц, 14 дней бесплатно.", "datePublished": "2026-11-11", "dateModified": "2026-11-11", "inLanguage": "ru", "articleSection": "Аналитика", "wordCount": 1143, "mainEntityOfPage": "https://makebiztechnologies.com/journal/sales-forecasting-crm", "url": "https://makebiztechnologies.com/journal/sales-forecasting-crm", "image": "https://makebiztechnologies.com/img/og.jpg", "author": {"@type": "Organization", "@id": "https://makebiztechnologies.com/#organization", "name": "MakeBiz Technologies", "url": "https://makebiztechnologies.com/"}, "publisher": {"@type": "Organization", "@id": "https://makebiztechnologies.com/#organization", "name": "MakeBiz Technologies", "logo": {"@type": "ImageObject", "url": "https://makebiztechnologies.com/favicon.png"}}}]}</script>
+<script defer src="https://makebiz-makebiz-platform-3628.twc1.net/px/t.js" data-site="makebiz-com" data-endpoint="https://makebiz-makebiz-platform-3628.twc1.net/px"></script>
+<script>window.__mbYM=function(){
+  var ID=112503709, SRC='https://mc.yandex.ru/metrika/tag.js?id='+ID, i='ym', m=window;
+  m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  m[i](ID,'init',{ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  function ensure(){
+    try{
+      var ss=document.getElementsByTagName('script');
+      for(var j=0;j<ss.length;j++){ if(ss[j].src===SRC) return; }
+      var k=document.createElement('script'); k.async=1; k.src=SRC;
+      (document.head||document.documentElement).appendChild(k);
+    }catch(e){}
+  }
+  ensure();
+  var n=0, iv=setInterval(function(){ ensure(); if(++n>20) clearInterval(iv); }, 400);
+};
+</script>
+<script>(function(){
+  if(window.__mbCookieInit) return; window.__mbCookieInit=1;
+  var KEY='mb_consent_v2';
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){window.dataLayer.push(arguments);}
+  if(!window.gtag) window.gtag=gtag;
+  gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+  var EN=/^\/en(\/|$)/.test(location.pathname);
+  var PRE=EN?'/en':(/^\/ru(\/|$)/.test(location.pathname)?'/ru':'');
+  var T=EN
+    ?{t:'We use cookies and analytics (Yandex Metrica and Google services) to improve the site and measure advertising. Accept, or decline non-essential.',a:'Accept',d:'Decline',m:'Privacy Policy',u:PRE+'/privacy#cookie',s:'Cookie settings'}
+    :{t:'Мы используем cookie и аналитику (Яндекс.Метрика и сервисы Google), чтобы улучшать сайт и оценивать рекламу. Примите или отклоните необязательные.',a:'Принять',d:'Отклонить',m:'Политика конфиденциальности',u:PRE+'/privacy#cookie',s:'Настройки cookie'};
+  function GT(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function ST(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function grant(){
+    gtag('consent','update',{ad_storage:'granted',analytics_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',personalization_storage:'granted'});
+    window.__mbConsent='granted';
+    if(typeof window.__mbYM==='function'){try{window.__mbYM();}catch(e){}}
+  }
+  function deny(){ gtag('consent','update',{ad_storage:'denied',analytics_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',personalization_storage:'denied'}); window.__mbConsent='denied'; }
+  if(GT()==='accepted') grant();
+  var ICON='<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2a10 10 0 1 0 10 10 3 3 0 0 1-3-3 3 3 0 0 1-3-3 3 3 0 0 1-1-2Z"/><circle cx="9" cy="10.5" r="1" fill="currentColor" stroke="none"/><circle cx="13" cy="14" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="9.5" r="1" fill="currentColor" stroke="none"/></svg>';
+  var CSS='#mbCk{position:fixed;left:14px;right:14px;bottom:14px;z-index:2147483000;background:#0e1620;color:#eaf1fb;border:1px solid rgba(255,255,255,.14);border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.45);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}'
+   +'#mbCk .i{max-width:1080px;margin:0 auto;padding:15px 20px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}'
+   +'#mbCk .x{font-size:13px;line-height:1.5;flex:1;min-width:230px}#mbCk a{color:#7FB0FF;text-decoration:underline}'
+   +'#mbCk .z{display:flex;gap:10px;flex:none}#mbCk button{font:600 14px system-ui,sans-serif;padding:10px 22px;border-radius:100px;cursor:pointer;border:1px solid rgba(255,255,255,.22)}'
+   +'#mbCkD{background:transparent;color:#cbd6e8}#mbCkA{background:#16C15A;color:#04120a;border-color:#16C15A}'
+   +'#mbCkT{position:fixed;left:14px;bottom:14px;z-index:2147482000;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:#0e1620;color:#eaf1fb;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35)}';
+  function style(){ if(!document.getElementById('mbCkCSS')){var s=document.createElement('style');s.id='mbCkCSS';s.textContent=CSS;(document.head||document.documentElement).appendChild(s);} }
+  function done(){var x=document.getElementById('mbCk');if(x&&x.parentNode)x.parentNode.removeChild(x);}
+  function banner(){
+    if(document.getElementById('mbCk')) return;
+    var d=document.createElement('div');d.id='mbCk';
+    d.innerHTML='<div class="i"><div class="x">'+T.t+' <a href="'+T.u+'" target="_blank" rel="noopener">'+T.m+'</a></div><div class="z"><button id="mbCkD" type="button">'+T.d+'</button><button id="mbCkA" type="button">'+T.a+'</button></div></div>';
+    (document.body||document.documentElement).appendChild(d);
+    d.querySelector('#mbCkA').onclick=function(){ST('accepted');grant();done();};
+    d.querySelector('#mbCkD').onclick=function(){ST('declined');deny();done();};
+  }
+  function toggle(){
+    if(document.getElementById('mbCkT'))return;
+    var b=document.createElement('button');b.id='mbCkT';b.type='button';b.title=T.s;b.setAttribute('aria-label',T.s);b.innerHTML=ICON;
+    b.onclick=function(){ if(!document.getElementById('mbCk')) banner(); };
+    (document.body||document.documentElement).appendChild(b);
+  }
+  function ensure(){ style(); if(GT()){ done(); toggle(); } else { banner(); } }
+  ensure(); setInterval(ensure,800);
+})();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YPNHBR4DXK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-YPNHBR4DXK');</script>
+</head>
+<body data-page="journal-sales-forecasting-crm"><div class="flag" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="hdr" id="top">
+  <div class="wrap hdr-in">
+    <a class="logo" href="/" aria-label="MakeBiz, на главную"><img src="/img/logo.png" width="234" height="80" alt="MakeBiz"></a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav-dd"><button class="nav-link" type="button" aria-expanded="false">ИИ-агенты<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="dd-panel"><a class="dd-item" href="/ai-agents"><b>Внедрение ИИ-агентов</b><span>Агенты в продажах, финансах, закупках</span></a><a class="dd-item" href="/ai-agents/rop"><b>ИИ-РОП</b><span>Переписки, план, разбор ошибок</span></a><a class="dd-item" href="/ai-agents/svyaznoy"><b>Связной</b><span>Контакты и отношения</span></a><a class="dd-item" href="/ai-agents/zvonki"><b>Речевая аналитика</b><span>Оценка каждого звонка</span></a><a class="dd-item" href="/ai-agents/hr"><b>HR-агент</b><span>Отбор и собеседования ботом</span></a><a class="dd-item" href="/ai-agents/zakupki"><b>Закупки</b><span>Запросы и сравнение КП</span></a><a class="dd-item" href="/ai-agents/marketing"><b>Маркетолог</b><span>SEO, GEO и реклама</span></a><a class="dd-item" href="/ai-agents/finansy"><b>Финансы</b><span>Пульс компании</span></a></div></div>
+      <div class="nav-dd"><button class="nav-link" type="button" aria-expanded="false">Битрикс24<svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="dd-panel"><a class="dd-item" href="/bitrix"><b>Внедрение Битрикс24</b><span>CRM, воронки, процессы под ключ</span></a><a class="dd-item" href="/bitrix-support"><b>Поддержка</b><span>Пакеты часов, администрирование</span></a><a class="dd-item" href="/bitrix-messengers"><b>Мессенджеры</b><span>WhatsApp, Telegram, соцсети</span></a><a class="dd-item" href="/bitrix-integrations"><b>Интеграции с учётом</b><span>Zoho Books, QuickBooks, Odoo, 1С</span></a><a class="dd-item" href="/bitrix-korobka"><b>Коробочный Битрикс24</b><span>Внедрение на вашем сервере</span></a><a class="dd-item" href="/bitrix-licenses"><b>Лицензии и цены</b><span>Облако от 180 AED, коробка от 13 184 AED</span></a><a class="dd-item" href="/bi-analitika"><b>BI-аналитика</b><span>Дашборды для руководителя</span></a></div></div>
+      <a class="nav-link" href="/keysy">Кейсы</a>
+      <a class="nav-link" href="/news">Новости</a>
+      <a class="nav-link" href="/partners">Партнёрам</a>
+      <a class="nav-link" href="/contacts">Контакты</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="lang" role="group" aria-label="Язык сайта"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span class="on" aria-current="true">RU</span><a href="/en/journal/sales-forecasting-crm" hreflang="en" lang="en" title="English version">EN</a></div>
+      <a class="hdr-phone" href="tel:+971502620927">+971 50 262 0927</a>
+      <a class="btn btn-sm" href="#form">Обсудить задачу</a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mnav" hidden>
+    <div class="mnav-group"><div class="mnav-t">ИИ-агенты</div><a href="/ai-agents">Внедрение ИИ-агентов</a><a href="/ai-agents/rop">ИИ-РОП</a><a href="/ai-agents/svyaznoy">Связной</a><a href="/ai-agents/zvonki">Речевая аналитика</a><a href="/ai-agents/hr">HR-агент</a><a href="/ai-agents/zakupki">Закупки</a><a href="/ai-agents/marketing">Маркетолог</a><a href="/ai-agents/finansy">Финансы</a></div>
+    <div class="mnav-group"><div class="mnav-t">Битрикс24</div><a href="/bitrix">Внедрение Битрикс24</a><a href="/bitrix-support">Поддержка</a><a href="/bitrix-messengers">Мессенджеры</a><a href="/bitrix-integrations">Интеграции с учётом</a><a href="/bitrix-korobka">Коробочный Битрикс24</a><a href="/bitrix-licenses">Лицензии и цены</a><a href="/bi-analitika">BI-аналитика</a></div>
+    <div class="mnav-group"><a href="/o-kompanii">О компании</a><a href="/ceny">Цены</a><a href="/keysy">Кейсы</a><a href="/vps">Серверы и VPS</a><a href="/news">Новости</a><a href="/partners">Партнёрам</a><a href="/contacts">Контакты</a><a href="https://wa.me/971502620927">WhatsApp</a><a href="tel:+971502620927">+971 50 262 0927</a></div>
+  </div>
+</header>
+<main>
+<nav class="crumbs wrap" aria-label="Хлебные крошки"><a href="/">Главная</a><i>/</i><a href="/journal">Журнал</a><i>/</i><span aria-current="page">Прогноз продаж</span></nav>
+<section class="hero hero-small"><div class="wrap"><span class="eyebrow">Журнал · Аналитика</span><h1>Прогноз продаж по данным CRM</h1><p class="lead">Прогноз продаж «по ощущениям» каждый месяц расходится с фактом. Если в CRM есть суммы, стадии и даты, прогноз можно считать по данным и проверять каждую неделю.</p><p class="answer">Прогноз продаж по CRM складывается из суммы открытых сделок, вероятности каждой стадии по истории закрытий и даты оплаты с поправкой на средний цикл. В MakeBiz Technologies такой прогноз собирают в MakeBiz BI: прогноз месяца и квартала входит в тариф Стандарт за 700 AED в месяц, первые 14 дней бесплатно.</p><p class="jmeta">MakeBiz Technologies · 11 ноября 2026 · читать 6 мин</p></div></section><style>.jart{max-width:860px;margin:0 auto}.jart h3{font-size:19px;margin:22px 0 8px}.jart ul,.jart ol{margin:0 0 16px 22px;padding:0;color:var(--ink2);font-size:17px;line-height:1.6}.jart li{margin:6px 0}.jart .ptw{margin:18px 0 8px}.jart a{text-decoration:underline;text-underline-offset:3px}.jart p.note{font-size:14px}.jmeta{margin-top:10px;font-size:14px;color:var(--mut)}.jhub .card small{display:block;margin-top:10px;font-size:13px;color:var(--mut)}.jrub{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}</style><section class="sec" style="padding-top:0"><div class="wrap"><article class="kart gl jart"><h2>Прогноз строится из трёх величин: сумма, вероятность и дата</h2>
+<p>У каждой открытой сделки в CRM есть сумма, стадия и ожидаемая дата закрытия. Из этих трёх полей и складывается прогноз. Сумма показывает, сколько можно заработать. Вероятность показывает, насколько это реально. Дата показывает, в каком месяце придут деньги.</p>
+<p>Простейшая формула: сумма сделки умножается на вероятность её стадии, результаты складываются по месяцам. Это называется взвешенной воронкой. Сделка на 40 000 AED на стадии с вероятностью 25% даёт в прогноз 10 000 AED. Ни одна отдельная сделка не принесёт ровно эту сумму, но на большом числе сделок ошибки взаимно гасятся, и итог по месяцу становится полезным для планирования.</p>
+<p>Слабое место формулы в качестве полей. Если сумма не заполнена, сделка выпадает из прогноза. Если дата закрытия стоит «на завтра» уже третий месяц, прогноз каждый раз переезжает. Поэтому до любых расчётов нужно навести порядок в данных, об этом ниже.</p>
+<h2>Вероятность стадии считается по истории, а не на глаз</h2>
+<p>Во многих порталах вероятности стадий выставлены при настройке: 10, 30, 50, 90%. Это догадки. Честная вероятность считается по закрытым сделкам за 6-12 месяцев: сколько сделок, дошедших до стадии, в итоге оплатили.</p>
+<div class="ptw gl"><table class="ptab"><thead><tr><th>Стадия</th><th>Дошли до стадии</th><th>Из них оплатили</th><th>Вероятность</th></tr></thead><tbody>
+<tr><td><b>Новая заявка</b></td><td>400</td><td>48</td><td>12%</td></tr>
+<tr><td><b>Квалификация пройдена</b></td><td>200</td><td>48</td><td>24%</td></tr>
+<tr><td><b>КП отправлено</b></td><td>120</td><td>48</td><td>40%</td></tr>
+<tr><td><b>Согласование условий</b></td><td>70</td><td>48</td><td>69%</td></tr>
+<tr><td><b>Счёт выставлен</b></td><td>55</td><td>48</td><td>87%</td></tr>
+</tbody></table></div>
+<p class="note">Условный пример с вымышленными цифрами, чтобы показать расчёт. Ваши вероятности считаются по вашим сделкам.</p>
+<p>Вероятности стоит пересчитывать раз в квартал и отдельно по направлениям. Повторная продажа постоянному клиенту и первая сделка с новым клиентом на одной стадии ведут себя по-разному. Если в компании есть продажи в free zone и на mainland через разные команды, их тоже стоит считать отдельно.</p>
+<h2>Цикл сделки сдвигает прогноз по месяцам</h2>
+<p>Менеджеры почти всегда ставят дату закрытия оптимистично. Поэтому дату из карточки сравнивают со средним циклом: сколько дней обычно проходит от каждой стадии до оплаты. Если на стадии «КП отправлено» сделки в среднем закрываются через 35 дней, а менеджер поставил дату через неделю, прогноз берёт расчётную дату.</p>
+<p>Второе правило касается зависших сделок. Сделка, которая сидит на стадии в два-три раза дольше среднего, почти наверняка не закроется в срок. Такие сделки выносят в отдельный список для руководителя, а в прогнозе снижают их вес. Контроль зависших сделок можно отдать <a href="/ai-agents/rop">ИИ-РОПу</a>: агент видит воронку, напоминает менеджеру и сообщает руководителю, если ответа нет.</p>
+</article></div></section><section class="sec dark"><div class="wrap"><div class="cross"><div><h3>Соберём прогноз продаж по вашей CRM</h3><p>Вероятности стадий по истории, план, прогноз и факт на одном дашборде. Прогноз в BI от 700 AED в месяц, 14 дней бесплатно</p></div><a class="btn" href="#form">Обсудить прогноз</a></div></div></section><section class="sec"><div class="wrap"><article class="kart gl jart">
+<h2>Взвешенная воронка и прогноз менеджера считаются рядом</h2>
+<p>Математика по стадиям не знает того, что знает менеджер: клиент уже подписал договор у себя, но платёж пройдёт после закрытия квартала. Поэтому рядом со взвешенной воронкой ведут прогноз менеджеров. В Битрикс24 для этого делают поле в сделке с тремя значениями:</p>
+<ul>
+<li><b>Уверен</b>: сделка закроется в этом периоде, менеджер готов за это отвечать</li>
+<li><b>Возможно</b>: есть шанс, но остались открытые вопросы</li>
+<li><b>Не в этом периоде</b>: сделка жива, но деньги придут позже</li>
+</ul>
+<p>Руководитель смотрит на обе цифры. Если прогноз менеджеров сильно выше взвешенной воронки, команда переоценивает сделки. Если ниже, возможно, сделки зависли и их пора разобрать. Разговор о прогнозе на планёрке становится предметным: обсуждают конкретные сделки, а не ощущения.</p>
+<p>Дополнительный источник правды это звонки. Что клиент говорит о сроках и бюджете, часто не попадает в карточку сделки. Речевая аналитика звонков от 1 000 AED в месяц за 5 000 минут помогает это увидеть, подробнее в новости о том, <a href="/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki">что теряется между звонком и карточкой сделки</a>, и на странице <a href="/ai-agents/zvonki">агента по звонкам</a>.</p>
+<h2>Данные CRM нужно привести в порядок до прогноза</h2>
+<p>Прогноз наследует все ошибки CRM. Минимальный список проверок перед запуском:</p>
+<ol>
+<li>У каждой открытой сделки есть сумма в AED и дата закрытия</li>
+<li>Стадии описаны: что должно произойти, чтобы сделка перешла дальше</li>
+<li>Нет дублей сделок по одному клиенту и одной потребности</li>
+<li>Проигранные сделки закрываются с причиной, а не висят в воронке</li>
+<li>Сумма сделки и сумма счёта считаются одинаково, с VAT 5% или без него</li>
+</ol>
+<p>Подробно о типовых ошибках данных мы пишем в гайде <a href="/journal/bitrix24-crm-analytics">почему отчёты CRM врут</a>. Если портал давно не проверяли, начните с <a href="/bitrix-audit">аудита Битрикс24</a>. Если CRM ещё нет или воронка не отражает реальный процесс, сначала нужна <a href="/bitrix">настройка Битрикс24</a>: стандартная от 10 000 AED, запуск от 14 дней.</p>
+<h2>План, прогноз и факт сходятся на одном дашборде</h2>
+<p>Рабочий прогноз живёт на дашборде, который обновляется сам. На одном экране три линии по месяцам: план продаж, прогноз по взвешенной воронке и факт оплат. Ниже таблица по менеджерам и список сделок с наибольшим вкладом в прогноз.</p>
+<p>Факт оплат надёжнее брать из учётной системы, а не со стадии «Успешно». Связку Битрикс24 с Zoho Books, QuickBooks или Odoo мы делаем от 10 000 AED, подробнее на странице <a href="/bitrix-integrations">интеграций</a>. В <a href="/bi-analitika">BI-аналитике MakeBiz</a> прогноз месяца и квартала и зависшие сделки входят в тариф Стандарт за 700 AED в месяц, планы продаж добавляет тариф Профи за 1 000 AED, а учётные системы подключаются к BI по запросу за отдельную плату. Первые 14 дней бесплатно. Как связать рекламу с этими оплатами, читайте в гайде о <a href="/journal/full-funnel-analytics">сквозной аналитике</a>.</p>
+<h2>Условный пример: дистрибьютор на 20 менеджеров</h2>
+<p>Условный дистрибьютор в Шардже ведёт продажи в Битрикс24, но план на месяц руководитель собирает в таблице по звонку каждому менеджеру. Цифры каждый раз разные, а в конце месяца факт сильно расходится с ожиданиями.</p>
+<p>Сначала команда чистит воронку: закрывает мёртвые сделки, заполняет суммы и даты. Затем вероятности стадий пересчитываются по истории за год, а в сделках появляется поле прогноза менеджера. Через месяц руководитель видит план, взвешенную воронку и факт на одном экране и разбирает на планёрке только сделки с расхождениями. Сколько стоит проект именно у вас, считаем по смете до старта, цены на работы на странице <a href="/ceny">цен в AED</a>.</p></article></div></section><section class="sec" id="faq"><div class="wrap"><h2>Вопросы и ответы</h2><div class="faq"><details><summary>Как посчитать вероятность стадии сделки?</summary><p>Возьмите закрытые сделки за 6-12 месяцев и посчитайте, какая доля сделок, дошедших до стадии, в итоге оплатила. Это и есть вероятность, пересчитывайте её раз в квартал.</p></details><details><summary>Что такое взвешенная воронка?</summary><p>Это сумма всех открытых сделок, умноженных на вероятность их стадии. Она показывает ожидаемую выручку по месяцам с учётом того, что часть сделок не закроется.</p></details><details><summary>Сколько данных нужно для прогноза?</summary><p>Нужна история закрытых сделок, выигранных и проигранных, с суммами и датами. Чем больше сделок за период, тем устойчивее вероятности, при малом числе сделок прогноз менеджера важнее математики.</p></details><details><summary>Можно ли построить прогноз прямо в Битрикс24?</summary><p>Базовые отчёты по воронке в Битрикс24 есть. Для плана, прогноза и факта оплат из учётной системы на одном экране удобнее BI-дашборд, он обновляется автоматически.</p></details><details><summary>Сколько стоит прогноз продаж в MakeBiz?</summary><p>Прогноз месяца и квартала входит в тариф BI Стандарт за 700 AED в месяц, планы продаж в тариф Профи за 1 000 AED. Если данные CRM нужно привести в порядок, работы считаются по часам, 200 AED в час, по смете до старта.</p></details></div></div></section><section class="sec rel-sec"><div class="wrap"><h2>Читайте также</h2><div class="rel"><a class="rel-a gl" href="/journal/full-funnel-analytics"><small>Журнал</small><b>Сквозная аналитика: от рекламы до оплаты</b><span>Читать →</span></a><a class="rel-a gl" href="/journal/bitrix24-crm-analytics"><small>Журнал</small><b>Почему отчёты CRM врут и как это исправить</b><span>Читать →</span></a><a class="rel-a gl" href="/news/tri-dashborda-rukovoditelya-prodazh"><small>Новости</small><b>Три дашборда, которые смотрит руководитель продаж</b><span>Читать →</span></a></div><p class="more"><a href="/journal">Все статьи журнала →</a></p></div></section><section class="sec formsec" id="form"><div class="wrap form-grid">
+  <div class="form-text"><h2>Покажем, насколько ваш прогноз отличается от факта</h2><p class="sec-sub">Напишите, где ведёте сделки и как сейчас собираете план. Ответим в течение рабочего дня</p>
+    <ul class="form-direct"><li><a href="https://wa.me/971502620927">WhatsApp +971 50 262 0927</a></li><li><a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a></li><li><a href="tel:+971502620927">+971 50 262 0927</a></li></ul></div>
+  <form class="lead-form" data-page="journal-sales-forecasting-crm" novalidate>
+    <label>Имя<input name="name" autocomplete="name" required></label>
+    <label>Телефон или Telegram<input name="phone" autocomplete="tel" required placeholder="+971 ... или @username"></label>
+    <label>Задача<textarea name="comment" rows="3" placeholder="Коротко: что нужно сделать"></textarea></label>
+    <input class="hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn btn-wide" type="submit">Отправить заявку</button>
+    <p class="form-note">Нажимая кнопку, вы соглашаетесь с <a href="/privacy">политикой конфиденциальности</a></p>
+    <p class="form-ok" hidden>Спасибо! Заявка принята, скоро свяжемся</p>
+    <p class="form-err" hidden>Не получилось отправить. Напишите нам в <a href="https://wa.me/971502620927">WhatsApp</a></p>
+  </form>
+</div></section>
+</main>
+<footer class="ftr">
+  <div class="wrap ftr-grid">
+    <div class="ftr-brand">
+      <a class="logo" href="/"><img src="/img/logo.png" width="234" height="80" alt="MakeBiz"></a>
+      <p>IT-интегратор в ОАЭ и официальный партнёр Битрикс24. Внедряем ИИ-агентов и Битрикс24 для компаний в Дубае и по всем Эмиратам. 8 лет в IT, работаем на русском и английском</p>
+      <p class="ftr-contacts"><a href="tel:+971502620927">+971 50 262 0927</a><br><a href="https://wa.me/971502620927">WhatsApp</a> · <a href="https://t.me/Anton_MakeBiz">Telegram @Anton_MakeBiz</a><br><a href="mailto:info@makebiztechnologies.com">info@makebiztechnologies.com</a></p>
+    </div>
+    <div><div class="ftr-t">ИИ-агенты</div><a href="/ai-agents">Внедрение ИИ-агентов</a><a href="/ai-agents/rop">ИИ-РОП</a><a href="/ai-agents/zvonki">Речевая аналитика</a><a href="/ai-agents/hr">HR-агент</a><a href="/ai-agents/marketing">Маркетолог</a></div>
+    <div><div class="ftr-t">Битрикс24</div><a href="/bitrix">Внедрение Битрикс24</a><a href="/bitrix-support">Поддержка</a><a href="/bitrix-messengers">Мессенджеры</a><a href="/bitrix-integrations">Интеграции с учётом</a><a href="/bitrix-korobka">Коробочный Битрикс24</a><a href="/bitrix-licenses">Лицензии и цены</a><a href="/bi-analitika">BI-аналитика</a></div>
+    <div><div class="ftr-t">Компания</div><a href="/o-kompanii">О компании</a><a href="/ceny">Цены</a><a href="/keysy">Кейсы</a><a href="/vps">Серверы и VPS</a><a href="/news">Новости</a><a href="/journal">Журнал</a><a href="/partners">Партнёрам</a><a href="https://t.me/makebizchannel">Telegram-канал</a><a href="/contacts">Контакты</a><a href="/en">English version</a></div>
+  </div>
+  <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">Под задачу</span><a style="display:inline;padding:2px 0" href="/bitrix-vs-hubspot">Битрикс24 или HubSpot</a><a style="display:inline;padding:2px 0" href="/bitrix-audit">Аудит Битрикс24</a><a style="display:inline;padding:2px 0" href="/bitrix-training">Обучение команды</a><a style="display:inline;padding:2px 0" href="/bitrix-car-rental">CRM для аренды авто</a><a style="display:inline;padding:2px 0" href="/bitrix-logistics">CRM для логистики</a><a style="display:inline;padding:2px 0" href="/bitrix-education">CRM для учебного центра</a><a style="display:inline;padding:2px 0" href="/bitrix-recruitment">CRM для рекрутинга</a><a style="display:inline;padding:2px 0" href="/bitrix-ai-crm">CRM с ИИ</a><a style="display:inline;padding:2px 0" href="/bitrix-development">Разработка под Битрикс24</a><a style="display:inline;padding:2px 0" href="/bitrix-travel">CRM для турагентства</a><a style="display:inline;padding:2px 0" href="/bitrix-events">CRM для ивент-агентства</a><a style="display:inline;padding:2px 0" href="/bitrix-agency">CRM для агентства</a></div>
+  <div class="wrap ftr-legal">
+    <span>MakeBiz Technologies FZE LLC · Ajman NuVentures Centre · рег. номер 2624215090888 · Amber Gem Tower, Аджман, ОАЭ</span>
+    <span><a href="/privacy">Политика конфиденциальности</a> · <a href="/terms">Пользовательское соглашение</a> · © 2026 MakeBiz</span>
+  </div>
+</footer>
+<div class="mbar"><a href="tel:+971502620927">Позвонить</a><a href="https://wa.me/971502620927">WhatsApp</a><a class="mbar-cta" href="#form">Заявка</a></div>
+<script src="/assets/site.js?v=32990186" defer></script>
+</body>
+</html>

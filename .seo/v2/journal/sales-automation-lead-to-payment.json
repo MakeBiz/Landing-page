@@ -1,0 +1,114 @@
+{
+ "slug": "sales-automation-lead-to-payment",
+ "date": "2026-11-11",
+ "rubric_ru": "Автоматизация",
+ "rubric_en": "Automation",
+ "ru": {
+  "title": "Автоматизация продаж: от заявки до оплаты | MakeBiz",
+  "desc": "Автоматизация продаж в ОАЭ: роботы CRM, ИИ-агент и счёт в AED с VAT 5% из учётной системы. Настройка Битрикс24 от 10 000 AED, запуск от 14 дней.",
+  "h1": "Автоматизация продаж: от заявки до оплаты",
+  "crumb": "Автоматизация продаж",
+  "lead": "Сделки теряются не на больших шагах, а в паузах между ними. Разбираем, как связать заявку, CRM, ИИ-агента и учётную систему так, чтобы сделка доходила до оплаты без ручного переноса данных.",
+  "answer": "Автоматизация продаж от заявки до оплаты связывает форму сайта и WhatsApp, сделку в CRM, счёт в учётной системе и статус оплаты без ручного переноса данных. У MakeBiz Technologies настройка Битрикс24 стоит от 10 000 AED с запуском от 14 дней, интеграция с Zoho Books, QuickBooks или Odoo от 10 000 AED, ИИ-агент от 5 000 AED.",
+  "body": "<h2>Автоматизация продаж закрывает разрывы между этапами</h2>\n<p>Деньги в продажах редко теряются на одном большом шаге. Они теряются в паузах: заявка с сайта полчаса лежит без ответа, менеджер забыл перезвонить после КП, счёт выставили через два дня после согласия клиента, оплату никто не отметил в CRM. Каждая пауза небольшая, но вместе они растягивают сделку и отдают клиента тому, кто ответил быстрее.</p>\n<p>Автоматизация от заявки до оплаты убирает эти паузы. Данные переходят от этапа к этапу без ручного переноса, а за каждым шагом закреплён исполнитель: робот CRM, ИИ-агент или менеджер. Руководитель видит, где сделка застряла, ещё до того, как клиент ушёл.</p>\n<h2>Каждый этап сделки получает своего исполнителя</h2>\n<p>Главное решение в проекте автоматизации: какой шаг отдать правилу, какой ИИ, а какой оставить человеку. Ниже типовое распределение для B2B-продаж в ОАЭ.</p>\n<table><thead><tr><th>Этап</th><th>Что происходит</th><th>Кто делает</th></tr></thead><tbody>\n<tr><td><b>Заявка</b></td><td>Форма, WhatsApp или звонок создают лид с источником</td><td>Робот CRM</td></tr>\n<tr><td><b>Первый ответ</b></td><td>Клиент получает ответ, пока менеджер занят</td><td>ИИ-агент</td></tr>\n<tr><td><b>Распределение</b></td><td>Лид уходит менеджеру по направлению, языку или очереди</td><td>Робот CRM</td></tr>\n<tr><td><b>Квалификация и КП</b></td><td>Выяснить задачу, подготовить предложение</td><td>Менеджер, агент помогает с черновиком</td></tr>\n<tr><td><b>Контроль воронки</b></td><td>Напоминания, зависшие сделки, сигнал руководителю</td><td>ИИ-агент</td></tr>\n<tr><td><b>Счёт</b></td><td>Счёт в AED с VAT 5% создаётся из сделки</td><td>Учётная система через интеграцию</td></tr>\n<tr><td><b>Оплата</b></td><td>Статус оплаты возвращается в сделку, сделка закрывается</td><td>Интеграция и робот CRM</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies для типового проекта, распределение меняется под ваш процесс.</p>\n<h2>Роботы CRM берут на себя правила</h2>\n<p>Всё, что можно описать фразой «если X, то Y», делают роботы и бизнес-процессы Битрикс24. Это дёшево, предсказуемо и не требует ИИ.</p>\n<ul>\n<li>создать лид из CRM-формы и сохранить UTM-метки</li>\n<li>распределить заявки между менеджерами по очереди или направлению</li>\n<li>поставить задачу перезвонить, если клиент не ответил</li>\n<li>сменить стадию, когда отправлено КП или выставлен счёт</li>\n<li>уведомить руководителя, если сделка без движения дольше заданного срока</li>\n</ul>\n<p>Роботы входят в <a href=\"/bitrix\">стандартную настройку Битрикс24</a> от 10 000 AED с запуском от 14 дней. Подключение WhatsApp к открытым линиям стоит 500 AED, подписка провайдера отдельно, подробнее на странице <a href=\"/bitrix-messengers\">мессенджеров</a>.</p>\n<h2>ИИ-агент работает там, где нужен текст и суждение</h2>\n<p>Робот не умеет ответить клиенту по существу или понять, что сделка зависла из-за сомнений в цене. Здесь нужен агент. <a href=\"/ai-agents/rop\">ИИ-РОП</a> отвечает клиенту, если менеджер молчит, и следит за воронкой: напоминает о сделках без движения и сообщает руководителю, где нужна помощь. Агент подключается к CRM и мессенджерам, поэтому работает с теми же данными, что и команда.</p>\n<p>Разницу между агентом и роботом мы подробно разобрали в новости <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">AI-агент или робот в CRM</a>. Короткое правило: правило отдают роботу, разговор и оценку ситуации отдают агенту, решение о скидке и условиях оставляют менеджеру. Пакет Старт с одним агентом стоит 5 000 AED разово, обслуживание 10% от стоимости внедрения в месяц.</p>\n<!--cta-->\n<h2>Счёт в AED с VAT 5% выставляет учётная система</h2>\n<p>Самый частый разрыв в автоматизации продаж находится между CRM и бухгалтерией. Менеджер согласовал условия, а потом пишет бухгалтеру в чат, тот вручную создаёт счёт, а об оплате менеджер узнаёт от клиента. Пока это происходит, сделка стоит.</p>\n<p>Интеграция решает это так: из сделки в Битрикс24 создаётся счёт в Zoho Books, QuickBooks или Odoo с товарами, суммой в AED и VAT 5%, а когда учёт фиксирует оплату, статус возвращается в CRM и робот закрывает сделку. Налоговые настройки и реквизиты задаёт ваша бухгалтерия в учётной системе, интеграция их только использует. Интеграция с учётом у нас от 10 000 AED, состав работ на странице <a href=\"/bitrix-integrations\">интеграций Битрикс24</a>. Про переход ОАЭ на электронные счета читайте новость <a href=\"/news/e-invoicing-oae-srok-30-oktyabrya\">об e-invoicing</a>.</p>\n<h2>Запуск идёт по шагам</h2>\n<ol>\n<li>Опишите процесс как есть: откуда приходят заявки, кто отвечает, где сделка ждёт дольше всего</li>\n<li>Настройте воронку и стадии с понятными условиями перехода</li>\n<li>Подключите каналы: CRM-формы сайта, WhatsApp, телефонию</li>\n<li>Добавьте роботов на правила: распределение, задачи, уведомления</li>\n<li>Свяжите CRM с учётной системой для счетов и оплат</li>\n<li>Подключите ИИ-агента на первый ответ и контроль воронки</li>\n<li>Обучите команду и через месяц сверьте, где сделки всё ещё ждут</li>\n</ol>\n<p>Чтобы оценить эффект, до запуска зафиксируйте три цифры за прошлый месяц: время первого ответа на заявку, время от согласия клиента до выставленного счёта и долю сделок без движения дольше недели. Через месяц после запуска сравните их с новыми значениями, так будет видно, какой шаг дал результат, а какой нужно донастроить.</p>\n<p>Порядок важен: агент на грязной воронке без стадий и правил будет напоминать не о тех сделках. Как обучить менеджеров, смотрите на странице <a href=\"/bitrix-training\">обучения Битрикс24</a>. Чтобы видеть, какой канал приводит оплаченные сделки, добавьте <a href=\"/journal/full-funnel-analytics\">сквозную аналитику</a>.</p>\n<h2>Условный пример: дистрибьютор на 15 менеджеров</h2>\n<p>Условный дистрибьютор оборудования в Дубае получает заявки с сайта и в WhatsApp. Менеджеры отвечают из личных телефонов, счета выставляет бухгалтер в QuickBooks по сообщению в чате, а об оплатах отдел продаж узнаёт с опозданием.</p>\n<p>После автоматизации заявка сразу становится лидом с источником, ИИ-РОП отвечает клиенту в WhatsApp, если менеджер занят, счёт создаётся из сделки, а оплата закрывает её сама. Разовые расходы такого проекта: настройка Битрикс24 от 10 000 AED, WhatsApp 500 AED, интеграция с QuickBooks от 10 000 AED, ИИ-агент от 5 000 AED. Ежемесячно: обслуживание агента 500 AED (10% от 5 000) и, при желании, поддержка от 1 250 AED за 5 часов. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Свяжем заявку, CRM и оплату в один процесс",
+   "Роботы Битрикс24, ИИ-РОП на первый ответ и контроль воронки, счёт из сделки через учётную систему. Настройка CRM от 10 000 AED",
+   "Обсудить автоматизацию"
+  ],
+  "faq": [
+   [
+    "С чего начать автоматизацию продаж?",
+    "С описания процесса как есть: откуда приходят заявки, кто отвечает и где сделка ждёт дольше всего. Затем настраивают воронку, каналы и роботов, и только после этого подключают ИИ-агента."
+   ],
+   [
+    "Чем робот CRM отличается от ИИ-агента?",
+    "Робот выполняет правило «если X, то Y»: создать лид, поставить задачу, сменить стадию. Агент понимает текст и ситуацию: отвечает клиенту, замечает зависшие сделки и сообщает о них руководителю."
+   ],
+   [
+    "Можно ли выставлять счета с VAT 5% прямо из Битрикс24?",
+    "Счёт создаётся из сделки, но формирует его учётная система: Zoho Books, QuickBooks или Odoo. Налоговые настройки задаёт ваша бухгалтерия, интеграция передаёт данные сделки и возвращает статус оплаты."
+   ],
+   [
+    "Сколько стоит автоматизация продаж в MakeBiz?",
+    "Настройка Битрикс24 от 10 000 AED, интеграция с учётом от 10 000 AED, WhatsApp 500 AED, ИИ-агент от 5 000 AED и обслуживание 10% от внедрения в месяц. Смету фиксируем до старта."
+   ],
+   [
+    "Можно ли посмотреть агента до покупки?",
+    "Да, демонстрацию на вашем процессе мы проводим бесплатно, она занимает 30-40 минут. На ней видно, как агент отвечает клиенту и работает с вашей воронкой."
+   ]
+  ],
+  "cta": [
+   "Найдём паузы, в которых теряются ваши сделки",
+   "Напишите, откуда приходят заявки и в какой системе вы выставляете счета. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/full-funnel-analytics",
+    "Сквозная аналитика: от рекламы до оплаты"
+   ],
+   [
+    "/journal/sales-forecasting-crm",
+    "Прогноз продаж по данным CRM"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI-агент или робот в CRM: в чём разница"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Sales automation: from lead to payment | MakeBiz",
+  "desc": "Sales automation in the UAE: CRM rules, an AI agent and AED invoices with 5% VAT from your accounting system. Bitrix24 setup from AED 10,000, live from 14 days.",
+  "h1": "Sales automation: from lead to payment",
+  "crumb": "Sales automation",
+  "lead": "Deals are not lost on the big steps but in the gaps between them. Here is how to connect enquiries, the CRM, an AI agent and your accounting system so a deal reaches payment without anyone retyping data.",
+  "answer": "Lead-to-payment sales automation connects your web forms and WhatsApp, the CRM deal, the invoice in your accounting system and the payment status, with no manual data entry in between. With MakeBiz Technologies, Bitrix24 setup starts at AED 10,000 with go-live from 14 days, integration with Zoho Books, QuickBooks or Odoo starts at AED 10,000, and an AI agent starts at AED 5,000.",
+  "body": "<h2>Sales automation closes the gaps between stages</h2>\n<p>Sales teams rarely lose money on one big step, they lose it in the gaps: a website enquiry sits unanswered for half an hour, a rep forgets to follow up after sending a quote, the invoice goes out two days after the client said yes, and nobody marks the payment in the CRM. Together these gaps stretch the deal and hand the client to whoever replied faster.</p>\n<p>Automating the path from lead to payment removes those gaps. Data moves from stage to stage without anyone retyping it, and every step has an owner: a CRM automation rule, an AI agent or a sales rep. The sales manager can see where a deal is stuck before the client walks away.</p>\n<h2>Every stage of the deal gets an owner</h2>\n<p>The key decision is which step goes to a rule, which to AI and which stays with a person. A typical split for B2B sales in the UAE:</p>\n<table><thead><tr><th>Stage</th><th>What happens</th><th>Who does it</th></tr></thead><tbody>\n<tr><td><b>Enquiry</b></td><td>A web form, WhatsApp chat or call creates a lead with its source</td><td>CRM automation</td></tr>\n<tr><td><b>First reply</b></td><td>The client gets an answer while the rep is busy</td><td>AI agent</td></tr>\n<tr><td><b>Routing</b></td><td>The lead goes to a rep by product line, language or queue</td><td>CRM automation</td></tr>\n<tr><td><b>Qualification and quote</b></td><td>Understand the need, prepare the proposal</td><td>Sales rep, with the agent drafting</td></tr>\n<tr><td><b>Pipeline control</b></td><td>Reminders, stalled deals, alerts to the manager</td><td>AI agent</td></tr>\n<tr><td><b>Invoice</b></td><td>An AED invoice with 5% VAT is raised from the deal</td><td>Accounting system via integration</td></tr>\n<tr><td><b>Payment</b></td><td>Payment status flows back and the deal closes</td><td>Integration and CRM automation</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies blueprint for a typical project. The split changes to fit your process.</p>\n<h2>CRM automation handles the rules</h2>\n<p>Anything that reads \"if X, then Y\" is a job for Bitrix24 automation rules: cheap, predictable, no AI needed.</p>\n<ul>\n<li>create a lead from a CRM form and keep the UTM tags</li>\n<li>route enquiries between reps by queue or product line</li>\n<li>set a call-back task if the client has not replied</li>\n<li>move the stage when a quote is sent or an invoice is issued</li>\n<li>alert the manager if a deal has not moved for longer than a set period</li>\n</ul>\n<p>Automation rules are part of our <a href=\"/bitrix\">standard Bitrix24 setup</a>, which starts at AED 10,000 with go-live from 14 days. Connecting WhatsApp to open channels costs AED 500, with the provider subscription on top, see <a href=\"/bitrix-messengers\">WhatsApp and messengers</a>.</p>\n<h2>An AI agent takes the steps that need language and judgement</h2>\n<p>A rule cannot give a client a proper answer or notice that a deal has stalled because the client is unsure about price. That calls for an agent. The <a href=\"/ai-agents/rop\">AI sales manager</a> replies to the client when the rep goes quiet and keeps an eye on the pipeline: it flags deals that have stopped moving and tells the manager where help is needed. The agent connects to your CRM and messengers, so it works with the same data as your team.</p>\n<p>We explain the difference between an agent and an automation rule in our news piece <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">AI agent or CRM automation</a>. The short version: rules go to automation, conversations and judgement calls go to the agent, and decisions on discounts and terms stay with the rep. The Start package with one agent is AED 5,000 one-off, and maintenance is 10% of the implementation cost per month.</p>\n<!--cta-->\n<h2>Your accounting system issues the AED invoice with 5% VAT</h2>\n<p>The most common break sits between the CRM and finance: the rep agrees terms, messages the accountant, the invoice is created by hand, and the rep hears about payment from the client.</p>\n<p>An integration fixes this. The Bitrix24 deal creates an invoice in Zoho Books, QuickBooks or Odoo with the line items, the AED amount and 5% VAT. When accounting records the payment, the status flows back to the CRM and an automation rule closes the deal. Tax settings and company details are set by your finance team in the accounting system, and the integration simply uses them. Accounting integration with us starts at AED 10,000, see the scope on our <a href=\"/bitrix-integrations\">Bitrix24 integrations</a> page. For the UAE move to electronic invoicing, see our news on <a href=\"/news/e-invoicing-oae-srok-30-oktyabrya\">e-invoicing</a>.</p>\n<h2>Roll it out step by step</h2>\n<ol>\n<li>Map the process as it is: where enquiries come from, who answers, where deals wait the longest</li>\n<li>Set up the pipeline and stages with clear exit criteria</li>\n<li>Connect the channels: website CRM forms, WhatsApp, telephony</li>\n<li>Add automation rules: routing, tasks, alerts</li>\n<li>Connect the CRM to accounting for invoices and payments</li>\n<li>Add the AI agent for first replies and pipeline control</li>\n<li>Train the team, and after a month check where deals still wait</li>\n</ol>\n<p>To measure the effect, record three numbers from last month before go-live: time to first reply, time from the client saying yes to the invoice going out, and the share of deals with no activity for over a week. A month after launch compare them to see which step worked.</p>\n<p>Order matters: an agent on a messy pipeline with no stages or rules will chase the wrong deals. For getting reps up to speed, see <a href=\"/bitrix-training\">Bitrix24 training</a>. To see which channel brings in paying deals, add <a href=\"/journal/full-funnel-analytics\">end-to-end analytics</a>.</p>\n<h2>A worked example: a distributor with 15 sales reps</h2>\n<p>A hypothetical equipment distributor in Dubai gets enquiries from its website and on WhatsApp. Reps answer from their personal phones, the accountant raises invoices in QuickBooks after a chat message, and the sales team learns about payments late.</p>\n<p>After automation, every enquiry becomes a lead with a source, the AI sales manager replies on WhatsApp when the rep is busy, the invoice is created from the deal, and the payment closes the deal on its own. One-off costs: Bitrix24 setup from AED 10,000, WhatsApp AED 500, QuickBooks integration from AED 10,000 and an AI agent from AED 5,000. Monthly: agent maintenance of AED 500 (10% of 5,000) and, if you want it, support from AED 1,250 for 5 hours. All prices are on our <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We connect enquiry, CRM and payment into one process",
+   "Bitrix24 automation, an AI sales manager for first replies and pipeline control, invoices from the deal through accounting. CRM setup from AED 10,000",
+   "Talk about automation"
+  ],
+  "faq": [
+   [
+    "Where should sales automation start?",
+    "With a map of the process as it is: where enquiries come from, who answers and where deals wait the longest. Then you set up the pipeline, channels and automation rules, and only after that add an AI agent."
+   ],
+   [
+    "What is the difference between CRM automation and an AI agent?",
+    "An automation rule runs \"if X, then Y\": create a lead, set a task, move a stage. An agent understands text and context: it replies to clients, spots stalled deals and tells the manager about them."
+   ],
+   [
+    "Can I issue invoices with 5% VAT straight from Bitrix24?",
+    "The invoice is triggered from the deal, but your accounting system produces it: Zoho Books, QuickBooks or Odoo. Your finance team sets up tax, and the integration passes deal data across and returns the payment status."
+   ],
+   [
+    "How much does sales automation cost with MakeBiz?",
+    "Bitrix24 setup from AED 10,000, accounting integration from AED 10,000, WhatsApp AED 500, an AI agent from AED 5,000, plus maintenance at 10% of the implementation cost per month. We fix the quote before we start."
+   ],
+   [
+    "Can I see the agent before buying?",
+    "Yes. We run a free demo on your own process, and it takes 30 to 40 minutes. You see how the agent replies to clients and works with your pipeline."
+   ]
+  ],
+  "cta": [
+   "We will find the gaps where your deals stall",
+   "Tell us where your enquiries come from and which system you invoice from. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/full-funnel-analytics",
+    "End-to-end analytics: from ad click to payment"
+   ],
+   [
+    "/journal/sales-forecasting-crm",
+    "Sales forecasting from CRM data"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI agent or CRM automation: the difference"
+   ]
+  ]
+ }
+}

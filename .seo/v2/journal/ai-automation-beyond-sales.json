@@ -1,0 +1,114 @@
+{
+ "slug": "ai-automation-beyond-sales",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "ИИ за пределами продаж: финансы, закупки, найм | MakeBiz",
+  "desc": "Автоматизация бизнеса ИИ за пределами продаж: какие задачи финансов, закупок и найма отдать агентам. Один агент от 5 000 AED, команда агентов 10 000 AED.",
+  "h1": "Автоматизация бизнеса ИИ за пределами продаж: финансы, закупки, найм",
+  "crumb": "ИИ за пределами продаж",
+  "lead": "Об ИИ в бизнесе чаще говорят в связке с продажами: ответить клиенту, оценить звонок. Но много повторяющейся работы живёт в бэк-офисе, и там агенты так же снимают с людей рутину. Разбираем по отделам, что можно отдать агенту и что остаётся за человеком.",
+  "answer": "За пределами продаж ИИ-агенты берут на себя повторяющуюся работу финансов, закупок и найма: сводку денег и рисков по направлениям, запросы поставщикам и сравнение КП, первое собеседование с кандидатом. У MakeBiz Technologies один такой агент стоит 5 000 AED разово, команда агентов для нескольких отделов 10 000 AED, обслуживание 10% от стоимости внедрения в месяц.",
+  "body": "<h2>В бэк-офисе много работы по шаблону</h2>\n<p>Финансист каждую неделю сводит цифры из учёта и CRM в одну таблицу. Закупщик отправляет один и тот же запрос пяти поставщикам и потом вручную переносит их ответы. Рекрутер задаёт первым кандидатам одни и те же десять вопросов. Это работа по шаблону, и в ней агент снимает с человека самую длинную часть, а решение оставляет ему.</p>\n<table><thead><tr><th>Отдел</th><th>Задача</th><th>Что делает агент</th><th>Что остаётся за человеком</th></tr></thead><tbody>\n<tr><td><b>Финансы</b></td><td>Картина денег по направлениям</td><td>Собирает доходы, расходы, прибыль и остатки, подсвечивает риски</td><td>Решения о платежах, бюджете и кредитах</td></tr>\n<tr><td><b>Закупки</b></td><td>Запросы поставщикам и сравнение КП</td><td>Рассылает запросы, собирает ответы, сводит цены, сроки и надёжность</td><td>Выбор поставщика и переговоры</td></tr>\n<tr><td><b>Найм</b></td><td>Первичный отбор кандидатов</td><td>Принимает отклики, проводит первое собеседование, оценивает и ведёт воронку</td><td>Финальное интервью и оффер</td></tr>\n<tr><td><b>Маркетинг</b></td><td>Контент и видимость в поиске</td><td>Готовит статьи и следит за видимостью в поиске и ИИ-ассистентах</td><td>Позиционирование и согласование текстов</td></tr>\n<tr><td><b>Связи с клиентами</b></td><td>Кто ждёт ответа и с кем пора связаться</td><td>Показывает забытые контакты и ожидающих ответа</td><td>Сам разговор и отношения</td></tr>\n</tbody></table>\n<p class=\"note\">Состав задач по агентам MakeBiz Technologies, ноябрь 2026. Точный набор функций под ваш процесс фиксируем в смете.</p>\n<h2>Финансовый агент собирает картину денег</h2>\n<p>Руководитель компании хочет видеть доходы, прибыль, расходы и запас денег по каждому направлению на одном экране, а не ждать отчёта в конце месяца. <a href=\"/ai-agents/finansy\">Агент финансов</a> собирает эту картину из учётной системы и CRM, считает маржу и рентабельность и подаёт сигнал, когда что-то идёт не так: направление ушло в минус, расходы обгоняют план, денег осталось на меньший срок, чем обычно.</p>\n<p>Агент не платит и не подписывает. Он экономит время на сборе цифр и показывает, куда смотреть. Чтобы данные текли сами, CRM должна быть связана с учётом: <a href=\"/bitrix-integrations\">интеграция Битрикс24</a> с Zoho Books, QuickBooks или Odoo у нас стоит от 10 000 AED. Сами дашборды для руководителя живут в <a href=\"/bi-analitika\">BI-аналитике</a>, тарифы от 300 AED в месяц.</p>\n<h2>Агент закупок сводит предложения в одну таблицу</h2>\n<p>В закупках время уходит на переписку. Нужно отправить запрос, дождаться ответов, напомнить тем, кто молчит, и перенести цены из PDF и писем в таблицу. <a href=\"/ai-agents/zakupki\">Агент закупок</a> рассылает запросы поставщикам, собирает коммерческие предложения и сравнивает их по цене, сроку и надёжности. Закупщик получает готовое сравнение и тратит время на переговоры, а не на копирование.</p>\n<p>Самые дорогие ошибки сравнения прячутся в мелочах: разная валюта, VAT внутри цены или сверху, разные сроки поставки. Мы разбирали их в новости о том, <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">где теряются деньги при сравнении поставщиков</a>. А почему даже точное распознавание документов не спасает от ошибок в счетах, читайте в новости <a href=\"/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami\">про точность 98%</a>.</p>\n<!--cta-->\n<h2>HR-агент проводит первое собеседование</h2>\n<p>На одну вакансию в Дубае может прийти больше откликов, чем рекрутер успевает просмотреть. Первый звонок с каждым кандидатом занимает время, а половина отсеивается на базовых вопросах: опыт, языки, готовность к графику, ожидания по зарплате. <a href=\"/ai-agents/hr\">HR-агент</a> принимает отклики с job-площадок и сайта, проводит первое собеседование в WhatsApp или Telegram, оценивает ответы и ведёт кандидата по воронке до выхода на работу.</p>\n<p>Рекрутер видит короткий список и оценку по каждому кандидату. Финальное интервью, решение и оффер остаются за людьми. Кандидаты, которые не подошли сейчас, попадают в резерв и не теряются в переписке.</p>\n<h2>Маркетинг и связи с клиентами тоже работают на агентах</h2>\n<p>Два агента стоят на стыке с продажами, но работают не с конкретной сделкой. <a href=\"/ai-agents/marketing\">Маркетолог</a> готовит статьи, публикует их и следит за видимостью компании в поиске и ИИ-ассистентах. Связной держит картину всех контактов: кто ждёт ответа, с кем давно не говорили, кому пора напомнить о себе. Обоих имеет смысл ставить, когда базовые процессы уже автоматизированы.</p>\n<h2>Начинать стоит с отдела, где работа повторяется каждый день</h2>\n<p>Выбирайте отдел не по тому, где интереснее, а по трём признакам: задача повторяется каждый день, ошибка стоит денег, результат можно измерить цифрой. В закупках это время от запроса до выбора поставщика, в найме время до первого собеседования, в финансах время, за которое руководитель получает картину денег.</p>\n<p>До старта проверьте, что у агента будут данные для работы:</p>\n<ul>\n<li>финансам нужен доступ к учётной системе и CRM, а также список направлений, по которым считать прибыль</li>\n<li>закупкам нужны справочник поставщиков, шаблон запроса и правила сравнения: валюта, VAT, сроки</li>\n<li>найму нужны описание вакансии, вопросы первого этапа и критерии, по которым кандидат проходит дальше</li>\n</ul>\n<p>Если агенты должны работать вместе, например закупки передают будущий платёж финансам, им нужны общие данные. Это пакет Бизнес за 10 000 AED: команда агентов, общий дашборд, запуск по очереди. Как встроить агента в процесс так, чтобы он не мешал роботам CRM и людям, мы разобрали в гайде <a href=\"/journal/ai-agent-in-business-process\">о месте агента в бизнес-процессе</a>. Все агенты собраны на странице <a href=\"/ai-agents\">ИИ-агентов</a>.</p>\n<h2>Условный пример: дистрибьютор на 40 сотрудников</h2>\n<p>Условный дистрибьютор в Джебель-Али закупает товар у десятка поставщиков и ведёт три направления. Закупщик тратит большую часть недели на запросы и таблицы, а директор видит прибыль по направлениям только после закрытия месяца.</p>\n<p>Компания берёт пакет Бизнес: агент закупок собирает и сравнивает КП, агент финансов показывает деньги и риски по направлениям, а будущие платежи поставщикам сразу попадают в общую картину. Бюджет по нашим строкам: 10 000 AED за внедрение и 1 000 AED в месяц обслуживания. Интеграция CRM с учётной системой, если её ещё нет, считается отдельно в смете до старта.</p>",
+  "mid": [
+   "Покажем агента для вашего отдела",
+   "Финансы, закупки или найм: демонстрация 30-40 минут бесплатно. Один агент от 5 000 AED",
+   "Записаться на демо"
+  ],
+  "faq": [
+   [
+    "Какие задачи вне продаж можно отдать ИИ-агенту?",
+    "Сводку денег и рисков по направлениям, запросы поставщикам и сравнение КП, первое собеседование с кандидатами, подготовку статей и контроль контактов. Решения о платежах, выборе поставщика и найме остаются за людьми."
+   ],
+   [
+    "Сколько стоит ИИ-агент для финансов, закупок или HR?",
+    "Один агент в пакете Старт стоит 5 000 AED разово, команда агентов для нескольких отделов 10 000 AED. Обслуживание 10% от стоимости внедрения в месяц, цены без VAT."
+   ],
+   [
+    "Может ли финансовый агент проводить платежи?",
+    "Нет, агент собирает картину денег, считает маржу и подаёт сигналы о рисках. Платежи, бюджет и кредиты остаются решением руководителя и финансиста."
+   ],
+   [
+    "Нужна ли интеграция с учётной системой?",
+    "Для агента финансов да: данные должны приходить из учёта автоматически. Интеграция Битрикс24 с Zoho Books, QuickBooks или Odoo стоит от 10 000 AED."
+   ],
+   [
+    "На каком языке HR-агент общается с кандидатами?",
+    "Мы работаем на русском и английском, и агент проводит собеседование на этих языках. Арабский интерфейс мы не обещаем."
+   ]
+  ],
+  "cta": [
+   "Разберём, что отдать агентам в вашем бэк-офисе",
+   "Расскажите, какой отдел тратит больше всего времени на ручную работу. Предложим агента и смету в AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agent-in-business-process",
+    "Где в бизнес-процессе встаёт ИИ-агент"
+   ],
+   [
+    "/journal/ai-adoption-plan",
+    "Внедрение ИИ в компанию: план на первые 90 дней"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Где теряются деньги при сравнении поставщиков"
+   ]
+  ]
+ },
+ "en": {
+  "title": "AI automation beyond sales: finance, procurement, HR | MakeBiz",
+  "desc": "AI automation beyond sales: which finance, procurement and hiring tasks to hand to agents. One agent from AED 5,000, a team of agents AED 10,000.",
+  "h1": "AI automation beyond sales: finance, procurement and hiring",
+  "crumb": "AI beyond sales",
+  "lead": "Most talk about AI in business is about sales: reply to the lead, score the call. Yet a lot of repetitive work lives in the back office, and agents take the grind out of it there too. Here is what each department can hand to an agent and what stays with people.",
+  "answer": "Beyond sales, AI agents take over repetitive work in finance, procurement and hiring: a view of cash and risk by business line, supplier requests and quote comparison, and the first interview with a candidate. At MakeBiz Technologies one such agent costs AED 5,000 one-off, a team of agents for several departments AED 10,000, and support is 10% of the implementation fee per month.",
+  "body": "<h2>The back office runs on repeatable work</h2>\n<p>Every week your finance person pulls numbers from the accounting system and the CRM into one spreadsheet. Your buyer sends the same request to five suppliers and then copies their answers by hand. Your recruiter asks the first candidates the same ten questions. That is template work, and an agent can take the longest part of it while leaving the decision with a person.</p>\n<table><thead><tr><th>Department</th><th>Task</th><th>What the agent does</th><th>What stays with people</th></tr></thead><tbody>\n<tr><td><b>Finance</b></td><td>Cash picture by business line</td><td>Pulls together revenue, costs, profit and balances, flags risks</td><td>Decisions on payments, budgets and credit</td></tr>\n<tr><td><b>Procurement</b></td><td>Supplier requests and quote comparison</td><td>Sends requests, collects replies, compares price, lead time and reliability</td><td>Choosing the supplier and negotiating</td></tr>\n<tr><td><b>Hiring</b></td><td>Initial candidate screening</td><td>Takes in applications, runs the first interview, scores and tracks the pipeline</td><td>Final interview and offer</td></tr>\n<tr><td><b>Marketing</b></td><td>Content and search visibility</td><td>Drafts articles and tracks visibility in search and AI assistants</td><td>Positioning and sign-off</td></tr>\n<tr><td><b>Client relationships</b></td><td>Who is waiting and who needs a follow-up</td><td>Surfaces forgotten contacts and people awaiting a reply</td><td>The conversation and the relationship</td></tr>\n</tbody></table>\n<p class=\"note\">Task scope of MakeBiz Technologies agents, November 2026. The exact feature set for your process is fixed in the estimate.</p>\n<h2>The finance agent builds the cash picture</h2>\n<p>A managing director wants revenue, profit, costs and cash runway for every business line on one screen, not a report at month end. The <a href=\"/ai-agents/finansy\">finance agent</a> builds that view from your accounting system and CRM, calculates margin and profitability, and raises a flag when something drifts: a business line turns negative, costs run ahead of plan, or cash covers a shorter period than usual.</p>\n<p>The agent does not pay or sign anything. It saves time on collecting numbers and shows you where to look. For the data to flow on its own, the CRM must be linked to accounting: our <a href=\"/bitrix-integrations\">Bitrix24 integration</a> with Zoho Books, QuickBooks or Odoo starts at AED 10,000. The management dashboards themselves live in <a href=\"/bi-analitika\">BI analytics</a>, with plans from AED 300 a month.</p>\n<h2>The procurement agent puts every quote in one table</h2>\n<p>In procurement the time goes on correspondence. You send the request, wait for replies, chase the suppliers who went quiet, and move prices from PDFs and emails into a spreadsheet. The <a href=\"/ai-agents/zakupki\">procurement agent</a> sends requests to suppliers, collects their quotes and compares them on price, lead time and reliability. Your buyer gets a ready comparison and spends the time negotiating instead of copying.</p>\n<p>The costliest comparison mistakes hide in the details: different currencies, VAT included or on top, different delivery terms. We covered them in our news piece on <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">where money leaks when comparing suppliers</a>. And for why even accurate document recognition does not stop invoice errors, read our news on <a href=\"/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami\">98% accuracy</a>.</p>\n<!--cta-->\n<h2>The HR agent runs the first interview</h2>\n<p>A single vacancy in Dubai can attract more applications than a recruiter has time to read. The first call with each candidate takes time, and half of them drop out on basics: experience, languages, availability for the schedule, salary expectations. The <a href=\"/ai-agents/hr\">HR agent</a> takes applications from job boards and your website, runs the first interview on WhatsApp or Telegram, scores the answers and moves each candidate through the pipeline up to their first day.</p>\n<p>Your recruiter sees a shortlist with a score for every candidate. The final interview, the decision and the offer stay with people. Candidates who are not a fit right now go into a talent pool instead of getting lost in chat threads.</p>\n<h2>Marketing and client relationships can run on agents too</h2>\n<p>Two agents sit next to sales but do not work on a specific deal. The <a href=\"/ai-agents/marketing\">marketing agent</a> drafts and publishes articles and tracks how visible the company is in search and in AI assistants. The relationship agent keeps the full picture of your contacts: who is waiting for a reply, who you have not spoken to in a while, who needs a nudge. Both make sense once the core processes are already automated.</p>\n<h2>Start with the department where work repeats daily</h2>\n<p>Pick the department not by what sounds exciting but by three signs: the task repeats every day, mistakes cost money, and the result can be measured with a number. In procurement that is the time from request to supplier choice, in hiring the time to first interview, in finance how quickly the director gets the cash picture.</p>\n<p>Before launch, make sure the agent will have something to work with:</p>\n<ul>\n<li>finance needs access to the accounting system and CRM, plus the list of business lines to report profit on</li>\n<li>procurement needs a supplier list, a request template and comparison rules: currency, VAT, lead times</li>\n<li>hiring needs a job description, first-round questions and the criteria for moving a candidate forward</li>\n</ul>\n<p>If agents need to work together, say procurement hands an upcoming payment to finance, they need shared data. That is the Business package at AED 10,000: a team of agents, a shared dashboard and a phased rollout. How to fit an agent into a process without clashing with CRM automation or people is covered in our guide on <a href=\"/journal/ai-agent-in-business-process\">where an agent fits into a business process</a>. All agents are listed on the <a href=\"/ai-agents\">AI agents page</a>.</p>\n<h2>A worked example: a distributor with 40 staff</h2>\n<p>A hypothetical distributor in Jebel Ali buys from a dozen suppliers and runs three business lines. The buyer spends most of the week on requests and spreadsheets, and the director only sees profit by line after the month closes.</p>\n<p>The company takes the Business package: the procurement agent collects and compares quotes, the finance agent shows cash and risk by business line, and upcoming supplier payments land straight in the shared picture. Budget on our lines: AED 10,000 for implementation and AED 1,000 a month for support. If the CRM is not yet linked to accounting, that integration is priced separately in the estimate before work starts.</p>",
+  "mid": [
+   "See an agent built for your department",
+   "Finance, procurement or hiring: a free 30 to 40 minute demo. One agent from AED 5,000",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "Which non-sales tasks can an AI agent take on?",
+    "A cash and risk view by business line, supplier requests and quote comparison, first interviews with candidates, article drafts and contact follow-ups. Decisions on payments, suppliers and hires stay with people."
+   ],
+   [
+    "How much does an AI agent for finance, procurement or HR cost?",
+    "One agent under the Start package costs AED 5,000 one-off, and a team of agents for several departments costs AED 10,000. Support is 10% of the implementation fee per month, prices exclude VAT."
+   ],
+   [
+    "Can the finance agent make payments?",
+    "No. The agent builds the cash picture, calculates margin and flags risks. Payments, budgets and credit remain decisions for the director and the finance team."
+   ],
+   [
+    "Do I need an integration with my accounting system?",
+    "For the finance agent, yes: the data has to come from accounting automatically. A Bitrix24 integration with Zoho Books, QuickBooks or Odoo starts at AED 10,000."
+   ],
+   [
+    "Which languages does the HR agent use with candidates?",
+    "We work in English and Russian, and the agent interviews candidates in those languages. We do not promise an Arabic interface."
+   ]
+  ],
+  "cta": [
+   "Let us map what your back office can hand to agents",
+   "Tell us which department spends the most time on manual work. We will suggest an agent and send an estimate in AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agent-in-business-process",
+    "Where an AI agent fits into a business process"
+   ],
+   [
+    "/journal/ai-adoption-plan",
+    "AI adoption plan for a company: the first 90 days"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Where money leaks when comparing suppliers"
+   ]
+  ]
+ }
+}

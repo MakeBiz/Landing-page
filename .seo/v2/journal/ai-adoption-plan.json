@@ -1,0 +1,114 @@
+{
+ "slug": "ai-adoption-plan",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "Внедрение ИИ в компанию: план на первые 90 дней | MakeBiz",
+  "desc": "План внедрения ИИ в компании в ОАЭ на 90 дней: процесс, ответственный, данные, доступы, пилот. Пилот одного агента 5 000 AED, обслуживание 500 AED/мес.",
+  "h1": "Внедрение ИИ в компанию: план на первые 90 дней",
+  "crumb": "План внедрения ИИ",
+  "lead": "Внедрение ИИ редко ломается на технологии. Чаще его тормозят неготовые данные, размытые доступы и отсутствие человека, который отвечает за результат. Ниже план на первый квартал, который снимает эти вопросы по порядку.",
+  "answer": "Первые 90 дней внедрения ИИ удобно разбить на три отрезка: подготовка процесса, данных и доступов, пилот одного агента, решение о расширении. Пилот у MakeBiz Technologies стоит 5 000 AED за одного агента плюс обслуживание 500 AED в месяц, поэтому бюджет квартала по нашим строкам не превышает 6 500 AED. Начать можно с бесплатной демонстрации на вашем процессе, она занимает 30-40 минут.",
+  "body": "<h2>Квартал делится на три отрезка по 30 дней</h2>\n<p>Девяносто дней это рамка, а не обещание сроков: каждый отрезок может занять больше или меньше, в зависимости от того, в каком состоянии CRM и данные. Важно другое. У каждого отрезка есть свой результат, и следующий не начинается, пока предыдущий не закрыт.</p>\n<table><thead><tr><th>Период</th><th>Что делаем</th><th>Кто отвечает</th><th>Результат отрезка</th></tr></thead><tbody>\n<tr><td><b>Дни 1-30</b></td><td>Выбираем процесс, назначаем ответственного, собираем данные и доступы</td><td>Владелец процесса и MakeBiz</td><td>Описание процесса, база знаний, список доступов, исходные показатели</td></tr>\n<tr><td><b>Дни 31-60</b></td><td>Запускаем одного агента, он работает рядом с командой</td><td>Владелец процесса, команда, MakeBiz</td><td>Агент в работе, первые разборы ошибок</td></tr>\n<tr><td><b>Дни 61-90</b></td><td>Сравниваем показатели до и после, решаем, что дальше</td><td>Руководитель компании</td><td>Решение: расширить, донастроить или остановить</td></tr>\n</tbody></table>\n<p class=\"note\">Рамка MakeBiz Technologies для пилота одного агента. Реальные сроки зависят от готовности данных и фиксируются в смете.</p>\n<h2>Процесс выбирают по деньгам, а не по моде</h2>\n<p>Первый агент должен стоять там, где работа повторяется каждый день и где её потеря стоит денег. Четыре вопроса помогают выбрать:</p>\n<ul>\n<li>сколько раз в день или в неделю повторяется задача</li>\n<li>сколько стоит ошибка или задержка: потерянная заявка, переплата поставщику, кандидат, который ушёл к конкуренту</li>\n<li>есть ли данные, на которые агент может опереться: CRM, прайс, шаблоны, история переписок</li>\n<li>можно ли измерить результат простой цифрой: время ответа, доля заявок без ответа, число оценённых звонков</li>\n</ul>\n<p>Для отдела продаж порядок выбора мы разобрали в новости <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">с какого агента начинать в продажах</a>. Если продажи уже в порядке, посмотрите гайд <a href=\"/journal/ai-automation-beyond-sales\">про ИИ в финансах, закупках и найме</a>: там те же критерии применены к другим отделам.</p>\n<h2>Ответственного назначают до старта</h2>\n<p>У агента должен быть владелец внутри компании. Это не IT-специалист, а человек, который отвечает за процесс: руководитель продаж, закупщик, HR. Он решает, что агент говорит клиенту, где граница его прав и когда подключается человек. Без такого владельца пилот превращается в эксперимент, о котором через месяц никто не помнит.</p>\n<p>Кроме владельца нужны ещё две роли. Администратор CRM открывает доступы и следит за полями. Руководитель компании в конце квартала принимает решение по цифрам. Отсутствие ответственного входит в число причин, по которым <a href=\"/news/pochemu-vnedrenie-ai-agentov-buksuet\">внедрение ИИ-агентов буксует</a>, поэтому мы фиксируем эти роли в первую же неделю.</p>\n<h2>Данные и доступы готовят в первый месяц</h2>\n<p>Агент работает с теми данными, которые ему дали. Если в CRM дубли, пустые поля и стадии, которыми никто не пользуется, агент повторит этот беспорядок быстрее людей. Поэтому первый месяц уходит на подготовку:</p>\n<ol>\n<li>Проверить воронку и поля в CRM. Если портал давно не разбирали, начните с <a href=\"/bitrix-audit\">аудита Битрикс24</a></li>\n<li>Собрать базу знаний: прайс, условия оплаты и доставки, ответы на частые вопросы, шаблоны документов</li>\n<li>Подключить каналы официально. Для WhatsApp это Business Platform, подключение к Битрикс24 у нас 500 AED, подробности на странице <a href=\"/bitrix-messengers\">мессенджеров</a></li>\n<li>Завести для агента отдельную учётную запись с нужными правами, а не работать под аккаунтом сотрудника</li>\n<li>Записать исходные показатели, чтобы потом было с чем сравнивать</li>\n</ol>\n<p>Доступы и данные остаются у компании. Если CRM ещё нет, сначала нужна её настройка: стандартная настройка <a href=\"/bitrix\">Битрикс24</a> стоит от 10 000 AED, запуск от 14 дней.</p>\n<!--cta-->\n<h2>Пилот идёт рядом с командой, а не вместо неё</h2>\n<p>Во втором месяце агент выходит в работу. Первые недели он работает параллельно с людьми: например, <a href=\"/ai-agents/rop\">ИИ-РОП</a> отвечает клиенту, только если менеджер молчит, а <a href=\"/ai-agents/zvonki\">агент звонков</a> оценивает разговоры, которые руководитель всё равно слушает выборочно. Так команда видит, как агент принимает решения, и доверие появляется на фактах.</p>\n<p>Каждую неделю владелец процесса и наша команда разбирают ошибки агента: где он ответил не так, где не хватило данных, где нужно было сразу звать человека. Эти разборы и есть основная работа пилота. Правила, которые появились на них, записываются в базу знаний, и агент перестаёт повторять одни и те же промахи.</p>\n<h2>Бюджет на квартал известен заранее</h2>\n<p>Бюджет пилота по нашим строкам считается просто. Внедрение одного агента в пакете Старт стоит 5 000 AED разово. Обслуживание 10% от стоимости внедрения, то есть 500 AED в месяц, начиная с запуска. За квартал это не больше 6 500 AED.</p>\n<p>Отдельно идут лицензии CRM и подписка провайдера WhatsApp, их компания платит поставщикам. Если для пилота нужна настройка CRM или интеграция с учётной системой (Zoho Books, QuickBooks, Odoo), эти работы попадают в смету до старта. Договор заключается с MakeBiz Technologies FZE LLC, счета в AED, цены без VAT. Все цены собраны на странице <a href=\"/ceny\">цен в AED</a>, а из чего состоит каждый пакет, читайте в гайде <a href=\"/journal/ai-agents-for-business-cost\">о составе и цене ИИ-агентов</a>.</p>\n<h2>На 90-й день принимают одно из трёх решений</h2>\n<p>В конце квартала руководитель сравнивает показатели до и после и выбирает:</p>\n<ul>\n<li><b>расширить</b>: добавить агентов в соседних отделах, это пакет Бизнес за 10 000 AED с общими данными и дашбордом</li>\n<li><b>донастроить</b>: агент работает, но цифры не дотянули, и ещё месяц уходит на правила и данные</li>\n<li><b>остановить</b>: процесс выбран неудачно, агент отключается, а данные и доступы остаются у компании</li>\n</ul>\n<p>Условный пример: сервисная компания в Дубае на 12 сотрудников теряет заявки, которые приходят в WhatsApp после 18:00. В первый месяц она чистит воронку и собирает базу ответов, во второй запускает ИИ-РОПа, в третий видит, сколько вечерних заявок получили ответ и дошли до сделки. По этой цифре и принимается решение. Посмотреть всех агентов, которых можно поставить следующими, можно на странице <a href=\"/ai-agents\">ИИ-агентов</a>.</p>",
+  "mid": [
+   "Начните с демонстрации на вашем процессе",
+   "30-40 минут бесплатно. Пилот одного агента 5 000 AED, обслуживание 500 AED в месяц",
+   "Записаться на демо"
+  ],
+  "faq": [
+   [
+    "С чего начать внедрение ИИ в компании?",
+    "С выбора одного процесса, который повторяется каждый день и стоит денег при сбое, и с назначения владельца этого процесса. Данные и доступы готовят уже под выбранный процесс."
+   ],
+   [
+    "Сколько стоит пилот ИИ-агента?",
+    "Внедрение одного агента у MakeBiz Technologies стоит 5 000 AED, обслуживание 500 AED в месяц. За первый квартал по нашим строкам это не больше 6 500 AED без VAT и лицензий."
+   ],
+   [
+    "Кто должен отвечать за ИИ-агента в компании?",
+    "Владелец процесса: руководитель продаж, закупщик или HR. Он решает, что агент говорит и где его границы, а администратор CRM отвечает за доступы и поля."
+   ],
+   [
+    "Нужна ли CRM для внедрения ИИ-агента?",
+    "Агенты подключаются к CRM и мессенджерам, поэтому без системы, где хранятся клиенты и сделки, им не на что опереться. Если CRM нет, стандартная настройка Битрикс24 стоит от 10 000 AED."
+   ],
+   [
+    "Что делать, если пилот не дал результата?",
+    "Разобрать, в чём причина: в данных, в правилах или в самом выборе процесса. Агента можно донастроить или отключить, данные и доступы при этом остаются у компании."
+   ]
+  ],
+  "cta": [
+   "Составим план пилота под вашу компанию",
+   "Расскажите, какой процесс хотите отдать ИИ и сколько людей в нём работает. Предложим агента, роли и смету в AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agents-for-business-cost",
+    "ИИ-агенты для бизнеса под ключ: что входит и сколько стоит"
+   ],
+   [
+    "/journal/ai-automation-beyond-sales",
+    "Автоматизация бизнеса ИИ за пределами продаж"
+   ],
+   [
+    "/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh",
+    "С какого AI-агента начинать в отделе продаж"
+   ]
+  ]
+ },
+ "en": {
+  "title": "AI adoption plan for a company: the first 90 days | MakeBiz",
+  "desc": "A 90-day AI adoption plan for a UAE company: process, owner, data, access and a pilot. One-agent pilot AED 5,000 plus AED 500 a month for support.",
+  "h1": "AI adoption plan for a company: the first 90 days",
+  "crumb": "90-day AI plan",
+  "lead": "AI projects rarely fail because of the technology. They stall on messy data, unclear access rights and nobody owning the result. This plan for your first quarter deals with those issues in order.",
+  "answer": "The first 90 days of AI adoption break down into three stages: preparing the process, data and access; piloting one agent; and deciding whether to scale. A one-agent pilot with MakeBiz Technologies costs AED 5,000 plus AED 500 a month for support, so our part of the quarter&#39;s budget stays within AED 6,500. You can start with a free 30 to 40 minute demo on your own process.",
+  "body": "<h2>The quarter splits into three 30-day stages</h2>\n<p>Ninety days is a framework, not a promised deadline. Each stage can run shorter or longer depending on the state of your CRM and data. What matters is that every stage has a clear output, and the next one does not start until the previous one is done.</p>\n<table><thead><tr><th>Period</th><th>What happens</th><th>Who owns it</th><th>Output</th></tr></thead><tbody>\n<tr><td><b>Days 1-30</b></td><td>Pick the process, name an owner, gather data and access</td><td>Process owner and MakeBiz</td><td>Process description, knowledge base, access list, baseline numbers</td></tr>\n<tr><td><b>Days 31-60</b></td><td>Launch one agent working alongside the team</td><td>Process owner, team, MakeBiz</td><td>Agent in production, first error reviews</td></tr>\n<tr><td><b>Days 61-90</b></td><td>Compare before and after, decide what comes next</td><td>Managing director or CEO</td><td>Decision: scale, tune or stop</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies framework for a one-agent pilot. Actual timings depend on how ready your data is and are fixed in the estimate.</p>\n<h2>Choose the process by money, not by hype</h2>\n<p>Your first agent belongs where the work repeats every day and where dropping it costs money. Four questions help you choose:</p>\n<ul>\n<li>how many times a day or week does the task come up</li>\n<li>what does a mistake or delay cost: a lost lead, an overpaid supplier, a candidate who joined a competitor</li>\n<li>is there data the agent can rely on: the CRM, a price list, templates, chat history</li>\n<li>can the result be measured with one simple number: response time, share of unanswered leads, calls scored</li>\n</ul>\n<p>For a sales team we covered the order of choice in our news piece on <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">which agent to start with in sales</a>. If sales already run smoothly, see our guide to <a href=\"/journal/ai-automation-beyond-sales\">AI in finance, procurement and hiring</a>, which applies the same criteria to other departments.</p>\n<h2>Name the owner before you start</h2>\n<p>Every agent needs an owner inside the company. Not an IT person, but whoever is accountable for the process: the head of sales, the procurement lead, the HR manager. They decide what the agent tells clients, where its permissions end and when a human steps in. Without that owner a pilot turns into an experiment nobody remembers a month later.</p>\n<p>Two more roles matter. A CRM administrator opens access and looks after the fields. The managing director makes the call at the end of the quarter, based on the numbers. A missing owner is one of the reasons <a href=\"/news/pochemu-vnedrenie-ai-agentov-buksuet\">AI agent projects stall</a>, so we pin these roles down in week one.</p>\n<h2>Data and access are prepared in month one</h2>\n<p>An agent works with whatever data it is given. If your CRM is full of duplicates, empty fields and stages nobody uses, the agent will repeat that mess faster than people do. So the first month goes on preparation:</p>\n<ol>\n<li>Review the pipeline and fields in the CRM. If nobody has looked at the portal in a while, start with a <a href=\"/bitrix-audit\">Bitrix24 audit</a></li>\n<li>Build a knowledge base: price list, payment and delivery terms, answers to common questions, document templates</li>\n<li>Connect channels the official way. For WhatsApp that means the Business Platform; we connect it to Bitrix24 for AED 500, details on the <a href=\"/bitrix-messengers\">messaging page</a></li>\n<li>Give the agent its own user account with the right permissions instead of running it under an employee&#39;s login</li>\n<li>Record baseline numbers so you have something to compare against</li>\n</ol>\n<p>Access and data stay with your company. If you have no CRM yet, that comes first: a standard <a href=\"/bitrix\">Bitrix24</a> setup starts at AED 10,000 with go-live from 14 days.</p>\n<!--cta-->\n<h2>The pilot runs alongside the team, not instead of it</h2>\n<p>In month two the agent goes live. For the first weeks it works in parallel with people. The <a href=\"/ai-agents/rop\">AI sales manager</a>, for example, only replies when a rep has gone quiet, and the <a href=\"/ai-agents/zvonki\">call agent</a> scores conversations that a manager would otherwise only spot-check. Your team sees how the agent makes decisions, and trust builds on evidence.</p>\n<p>Every week the process owner and our team review the agent&#39;s mistakes: where it answered wrongly, where data was missing, where it should have called a human straight away. Those reviews are the real work of a pilot. The rules that come out of them go into the knowledge base, and the agent stops repeating the same slips.</p>\n<h2>The quarter&#39;s budget is known upfront</h2>\n<p>Our share of the pilot budget is simple to work out. Implementing one agent under the Start package costs AED 5,000 one-off. Support is 10% of that, so AED 500 a month from launch. Across the quarter that comes to no more than AED 6,500.</p>\n<p>CRM licences and the WhatsApp provider subscription are separate and paid to the vendors. If the pilot needs a CRM setup or an integration with your accounting system (Zoho Books, QuickBooks, Odoo), that work goes into the estimate before we start. Your contract is with MakeBiz Technologies FZE LLC, invoices are in AED and prices exclude VAT. All prices are on our <a href=\"/ceny\">pricing page</a>, and what each package includes is explained in our guide to <a href=\"/journal/ai-agents-for-business-cost\">AI agent scope and pricing</a>.</p>\n<h2>Day 90 ends with one of three decisions</h2>\n<p>At the end of the quarter the managing director compares the numbers and chooses:</p>\n<ul>\n<li><b>scale</b>: add agents in neighbouring departments under the Business package, AED 10,000 with shared data and a dashboard</li>\n<li><b>tune</b>: the agent works but the numbers fell short, so another month goes on rules and data</li>\n<li><b>stop</b>: the process was the wrong pick, the agent is switched off, and data and access stay with you</li>\n</ul>\n<p>A worked example: a hypothetical Dubai service company with 12 staff loses enquiries that arrive on WhatsApp after 6 pm. In month one it cleans up the pipeline and builds a bank of answers, in month two it launches the AI sales manager, and in month three it sees how many evening enquiries got a reply and turned into deals. That number drives the decision. You can browse the agents that could come next on the <a href=\"/ai-agents\">AI agents page</a>.</p>",
+  "mid": [
+   "Start with a demo on your own process",
+   "30 to 40 minutes, free. A one-agent pilot is AED 5,000 plus AED 500 a month for support",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "Where should a company start with AI?",
+    "Pick one process that repeats every day and costs money when it breaks, and name the person who owns it. Data and access are then prepared for that specific process."
+   ],
+   [
+    "How much does an AI agent pilot cost?",
+    "Implementing one agent with MakeBiz Technologies costs AED 5,000, with support at AED 500 a month. Over the first quarter our share comes to no more than AED 6,500, excluding VAT and licences."
+   ],
+   [
+    "Who should be responsible for an AI agent?",
+    "The process owner: the head of sales, the procurement lead or the HR manager. They decide what the agent says and where its limits are, while the CRM administrator handles access and fields."
+   ],
+   [
+    "Do I need a CRM to deploy an AI agent?",
+    "Our agents connect to the CRM and messaging channels, so without a system holding clients and deals they have nothing to work from. If you have no CRM, a standard Bitrix24 setup starts at AED 10,000."
+   ],
+   [
+    "What if the pilot does not deliver?",
+    "Find out why: the data, the rules or the choice of process. The agent can be tuned or switched off, and your data and access stay with your company either way."
+   ]
+  ],
+  "cta": [
+   "Let us draft your pilot plan",
+   "Tell us which process you want to hand to AI and how many people work on it. We will suggest the agent, the roles and an estimate in AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agents-for-business-cost",
+    "AI agents for business: what is included and what it costs"
+   ],
+   [
+    "/journal/ai-automation-beyond-sales",
+    "AI automation beyond sales: finance, procurement, hiring"
+   ],
+   [
+    "/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh",
+    "Which AI agent to start with in a sales team"
+   ]
+  ]
+ }
+}

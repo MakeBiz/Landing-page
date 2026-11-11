@@ -1,0 +1,114 @@
+{
+ "slug": "full-funnel-analytics",
+ "date": "2026-11-11",
+ "rubric_ru": "Аналитика",
+ "rubric_en": "Analytics",
+ "ru": {
+  "title": "Сквозная аналитика: от клика в рекламе до оплаты | MakeBiz",
+  "desc": "Сквозная аналитика для компании в ОАЭ: UTM, Google Ads, Meta, CRM и оплата в одной цепочке. Дашборд в MakeBiz BI на тарифе Профи, 1 000 AED в месяц.",
+  "h1": "Сквозная аналитика: от рекламы до оплаты",
+  "crumb": "Сквозная аналитика",
+  "lead": "Рекламный кабинет считает клики, CRM считает сделки, бухгалтерия считает деньги. Сквозная аналитика сводит их вместе и показывает, какой канал на самом деле приносит оплату.",
+  "answer": "Сквозная аналитика связывает каждый платёж с рекламным источником: UTM-метки и идентификаторы кликов попадают в сделку CRM, а факт оплаты приходит из учётной системы. У MakeBiz Technologies настройка CRM Битрикс24 стоит от 10 000 AED, интеграция с Zoho Books, QuickBooks или Odoo от 10 000 AED, дашборд сквозной аналитики в MakeBiz BI входит в тариф Профи за 1 000 AED в месяц, первые 14 дней бесплатно.",
+  "body": "<h2>Сквозная аналитика отвечает на один вопрос: какой канал приносит деньги</h2>\n<p>Рекламный кабинет видит клики и заявки. CRM видит сделки. Учётная система видит оплаты. По отдельности каждая система говорит правду, но ни одна не отвечает, сколько денег вернул бюджет, вложенный в Google Ads. Сквозная аналитика соединяет эти три точки в одну цепочку, и тогда у каждой оплаты появляется источник.</p>\n<p>Без этой цепочки решения принимают по стоимости заявки. Канал с дешёвыми заявками кажется выгодным, хотя его клиенты могут не платить вовсе. Канал с дорогими заявками отключают, хотя именно он приносит крупные сделки. Сквозная аналитика меняет метрику: вместо стоимости заявки руководитель смотрит стоимость оплаты и возврат вложений по каждому источнику.</p>\n<h2>Цепочка состоит из пяти звеньев</h2>\n<p>Данные проходят путь от клика до денег через пять систем. Ошибка в любом звене обрывает связь, поэтому каждое звено проверяют отдельно.</p>\n<table><thead><tr><th>Звено</th><th>Что передаётся</th><th>Где хранится</th><th>Что обычно ломается</th></tr></thead><tbody>\n<tr><td><b>Реклама</b></td><td>Расход, клики, кампания</td><td>Google Ads, Meta Ads</td><td>Разные названия кампаний в разных кабинетах</td></tr>\n<tr><td><b>Сайт и форма</b></td><td>UTM-метки, gclid, fbclid</td><td>Скрытые поля формы</td><td>Метка теряется при переходе между страницами</td></tr>\n<tr><td><b>Мессенджер и звонок</b></td><td>Источник обращения</td><td>Открытая линия, телефония</td><td>Заявка из WhatsApp или звонок приходят без метки</td></tr>\n<tr><td><b>CRM</b></td><td>Лид, сделка, сумма, стадия</td><td>Битрикс24</td><td>Дубли контактов, ручные сделки без источника</td></tr>\n<tr><td><b>Учёт</b></td><td>Счёт и факт оплаты</td><td>Zoho Books, QuickBooks, Odoo</td><td>Счёт не связан со сделкой</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies для типового проекта, состав звеньев зависит от ваших каналов.</p>\n<h2>Метки ставятся до запуска рекламы</h2>\n<p>Самая частая причина «дыр» в отчёте: рекламу запустили раньше, чем договорились о метках. Через месяц в CRM лежат сделки с источником «сайт», и понять, какая кампания их привела, уже нельзя.</p>\n<ul>\n<li><b>Единые правила UTM.</b> utm_source для площадки, utm_medium для типа трафика, utm_campaign для кампании. Названия пишут латиницей, маленькими буквами и одинаково во всех кабинетах</li>\n<li><b>Идентификаторы кликов.</b> Автоматическая пометка в Google Ads добавляет gclid, Meta добавляет fbclid. Их сохраняют в сделке, чтобы потом вернуть оплату в кабинет</li>\n<li><b>Скрытые поля в форме.</b> CRM-форма Битрикс24 забирает метки из адреса страницы и пишет их в лид, менеджеру ничего вводить не нужно</li>\n<li><b>Отдельные точки входа.</b> Для WhatsApp нужна ссылка или номер под конкретную кампанию, для звонков отдельный номер на источник</li>\n</ul>\n<p>В ОАЭ клиенты охотно пишут в WhatsApp и звонят, и именно здесь метка теряется чаще всего. Как устроить канал, мы описали в новости про <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">ИИ-агента в WhatsApp</a>, а что проверить у провайдера связи, в материале о <a href=\"/news/telefoniya-v-oae-dlya-crm\">телефонии для CRM</a>. Подключение WhatsApp к Битрикс24 у нас стоит 500 AED, подписка провайдера отдельно, подробности на странице <a href=\"/bitrix-messengers\">мессенджеров в Битрикс24</a>.</p>\n<!--cta-->\n<h2>Оплата берётся из учётной системы, а не со стадии сделки</h2>\n<p>Стадия «Успешно» в CRM означает, что менеджер закрыл сделку. Это ещё не деньги: клиент мог заплатить частично, позже или не заплатить. Поэтому финальное звено цепочки берут из учёта. Счёт создаётся из сделки, а статус оплаты возвращается в CRM автоматически.</p>\n<p>Интеграцию Битрикс24 с Zoho Books, QuickBooks или Odoo мы делаем от 10 000 AED, состав работ на странице <a href=\"/bitrix-integrations\">интеграций</a>. Отдельно договоритесь, какую сумму считать выручкой: счёт в ОАЭ включает VAT 5%, и в отчёте сумма с налогом и без него должна быть подписана, чтобы не сравнивать разные цифры.</p>\n<h2>Настройка идёт по шагам</h2>\n<ol>\n<li>Опишите источники: рекламные кабинеты, сайт, WhatsApp, телефон, партнёры, повторные продажи</li>\n<li>Утвердите правила UTM и названия кампаний, разошлите их всем, кто запускает рекламу</li>\n<li>Настройте CRM-формы и открытые линии так, чтобы метки попадали в лид без участия менеджера</li>\n<li>Запретите сделки без источника: поле обязательное, а для ручных сделок есть список значений</li>\n<li>Свяжите CRM с учётной системой, чтобы оплата возвращалась в сделку</li>\n<li>Загрузите расходы из рекламных кабинетов в BI и соедините их с оплатами по кампании</li>\n<li>Через 2-4 недели сверьте отчёт с кабинетами и бухгалтерией, исправьте расхождения</li>\n</ol>\n<p>Если в портале уже есть сделки за прошлые периоды, сначала проверьте их качество. Дубли и пустые поля портят отчёт сильнее, чем отсутствие меток, об этом наш гайд <a href=\"/journal/bitrix24-crm-analytics\">почему отчёты CRM врут</a>. Проверку портала можно заказать отдельно как <a href=\"/bitrix-audit\">аудит Битрикс24</a>.</p>\n<h2>Дашборд показывает стоимость оплаты, а не стоимость заявки</h2>\n<p>Готовая сквозная аналитика сводится к одной таблице по источникам и нескольким графикам. Минимальный набор метрик:</p>\n<ul>\n<li>расход на канал и число заявок</li>\n<li>число сделок и оплат из этих заявок</li>\n<li>стоимость заявки и стоимость оплаты</li>\n<li>выручка и возврат вложений по каналу</li>\n<li>средний срок от заявки до оплаты</li>\n</ul>\n<p>Последняя метрика важна для длинных B2B-сделок. Если клиент платит через два месяца, реклама прошлого месяца ещё не показала результат, и отключать её рано. Сквозная аналитика по UTM из CRM с внесением расходов входит в тариф Профи <a href=\"/bi-analitika\">BI-аналитики MakeBiz</a> за 1 000 AED в месяц, а рекламные кабинеты и учётные системы подключаются к BI по запросу за отдельную плату. Первые 14 дней бесплатно, на пробный период подключается Профи целиком. Какие ещё панели нужны руководителю, мы разобрали в новости о <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">трёх дашбордах руководителя продаж</a>.</p>\n<p>Оплаты полезно отправлять обратно в рекламные кабинеты. В Google Ads для этого есть импорт офлайн-конверсий по gclid, в Meta есть Conversions API. Тогда алгоритмы площадок учатся на клиентах, которые заплатили, а не на всех, кто оставил телефон.</p>\n<h2>Условный пример: торговая компания на 10 менеджеров</h2>\n<p>Условная торговая компания в Дубае тратит деньги на Google Ads и Meta, заявки приходят через форму, WhatsApp и телефон. В CRM у половины сделок источник «не указан», а бухгалтерия ведёт оплаты в Zoho Books. Руководитель видит, что Meta даёт дешёвые заявки, и хочет перенести туда весь бюджет.</p>\n<p>После настройки цепочки компания видит по каждой кампании путь от расхода до оплаты. Решение о бюджете теперь принимается по стоимости оплаты, а не заявки. Разовые расходы такого проекта: настройка CRM от 10 000 AED, WhatsApp 500 AED, интеграция с учётом от 10 000 AED. Ежемесячно: тариф Профи в BI 1 000 AED и, при желании, поддержка от 1 250 AED за 5 часов, все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Соберём цепочку от клика до оплаты",
+   "UTM в CRM-формах, источник в каждой сделке, оплаты из учёта и дашборд по каналам в BI на тарифе Профи, 1 000 AED в месяц",
+   "Обсудить аналитику"
+  ],
+  "faq": [
+   [
+    "Что такое сквозная аналитика простыми словами?",
+    "Это отчёт, в котором у каждой оплаты есть рекламный источник. Данные рекламных кабинетов, CRM и учётной системы связаны, поэтому видно, сколько денег принёс каждый канал."
+   ],
+   [
+    "Можно ли сделать сквозную аналитику без CRM?",
+    "Только частично: без CRM не видно, какие заявки стали сделками и оплатами. Минимальная связка для отчёта: рекламный кабинет, CRM с источником в сделке и учёт оплат."
+   ],
+   [
+    "Как учитывать заявки из WhatsApp и звонки?",
+    "Для WhatsApp используют отдельные ссылки или номера под кампании, для звонков отдельные номера под источники. Тогда обращение приходит в CRM уже с меткой."
+   ],
+   [
+    "Сколько стоит сквозная аналитика в MakeBiz?",
+    "Это набор работ: настройка CRM от 10 000 AED, интеграция с учётной системой от 10 000 AED, дашборд в BI на тарифе Профи 1 000 AED в месяц. Точную смету фиксируем до старта."
+   ],
+   [
+    "Когда отчёт начнёт показывать правду?",
+    "Новые сделки попадают в отчёт с метками сразу после настройки. Для честных выводов по каналам нужен хотя бы один полный цикл сделки, от заявки до оплаты."
+   ]
+  ],
+  "cta": [
+   "Покажем, где теряется связь между рекламой и деньгами",
+   "Напишите, какие каналы рекламы и какая учётная система у вас сейчас. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-crm-analytics",
+    "Почему отчёты CRM врут и как это исправить"
+   ],
+   [
+    "/journal/bi-implementation",
+    "Внедрение BI-аналитики: этапы, сроки и роли"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Три дашборда, которые смотрит руководитель продаж"
+   ]
+  ]
+ },
+ "en": {
+  "title": "End-to-end analytics: from ad click to payment | MakeBiz",
+  "desc": "End-to-end analytics for a UAE company: UTM tags, Google Ads, Meta, CRM and payments in one chain. Dashboard on the MakeBiz BI Pro plan, AED 1,000 a month.",
+  "h1": "End-to-end marketing analytics: from ad click to payment",
+  "crumb": "End-to-end analytics",
+  "lead": "Your ad account counts clicks, your CRM counts deals and your finance team counts money. End-to-end analytics brings them together and shows which channel really brings in payments.",
+  "answer": "End-to-end analytics links every payment to the ad that produced it: UTM tags and click IDs are saved in the CRM deal, and the payment comes in from your accounting system. With MakeBiz Technologies, Bitrix24 CRM setup starts at AED 10,000, integration with Zoho Books, QuickBooks or Odoo starts at AED 10,000, and the end-to-end dashboard in MakeBiz BI is part of the Pro plan at AED 1,000 a month, with the first 14 days free.",
+  "body": "<h2>End-to-end analytics answers one question: which channel brings in money</h2>\n<p>Your ad account sees clicks and leads. Your CRM sees deals. Your accounting system sees payments. Each is accurate on its own, yet none can say how much revenue your Google Ads budget returned. End-to-end analytics joins them into one chain, so every payment has a source.</p>\n<p>Without it, budgets are set on cost per lead. A channel with cheap leads looks like a winner even if those leads never pay, and a channel with expensive leads gets paused although it brings the large deals. End-to-end analytics swaps that for cost per paying customer and return on ad spend by source.</p>\n<h2>The chain has five links</h2>\n<p>Data travels from click to money through five systems, and a break in any of them cuts the chain.</p>\n<table><thead><tr><th>Link</th><th>What is passed on</th><th>Where it lives</th><th>What usually breaks</th></tr></thead><tbody>\n<tr><td><b>Ads</b></td><td>Spend, clicks, campaign</td><td>Google Ads, Meta Ads</td><td>Campaigns named differently in each account</td></tr>\n<tr><td><b>Website and form</b></td><td>UTM tags, gclid, fbclid</td><td>Hidden form fields</td><td>Tags are lost as the visitor moves between pages</td></tr>\n<tr><td><b>WhatsApp and calls</b></td><td>Lead source</td><td>Open channels, telephony</td><td>A WhatsApp chat or a call arrives with no tag</td></tr>\n<tr><td><b>CRM</b></td><td>Lead, deal, amount, stage</td><td>Bitrix24</td><td>Duplicate contacts, deals created by hand with no source</td></tr>\n<tr><td><b>Accounting</b></td><td>Invoice and payment</td><td>Zoho Books, QuickBooks, Odoo</td><td>The invoice is not linked to the deal</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies blueprint for a typical project. The links you need depend on your channels.</p>\n<h2>Tracking rules come before the first campaign</h2>\n<p>The most common reason for gaps in the report: ads went live before anyone agreed on tagging. A month later the CRM is full of deals with the source \"website\" and no campaign behind them.</p>\n<ul>\n<li><b>One UTM convention.</b> utm_source for the platform, utm_medium for the traffic type, utm_campaign for the campaign. Names in lowercase Latin letters, spelled the same way in every ad account</li>\n<li><b>Click IDs.</b> Google Ads auto-tagging adds gclid, Meta adds fbclid. Store them in the deal so you can send the payment back to the ad platform later</li>\n<li><b>Hidden form fields.</b> A Bitrix24 CRM form reads the tags from the page URL and writes them into the lead, so sales reps type nothing</li>\n<li><b>Dedicated entry points.</b> A WhatsApp link or number per campaign, and a separate phone number per source for calls</li>\n</ul>\n<p>In the UAE many customers message on WhatsApp or call instead of filling in a form, and that is where tags go missing. Our news piece on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a> covers the channel side, and our piece on <a href=\"/news/telefoniya-v-oae-dlya-crm\">telephony for your CRM</a> lists what to check with your carrier. We connect WhatsApp to Bitrix24 for AED 500 plus the provider subscription, see <a href=\"/bitrix-messengers\">WhatsApp and messengers in Bitrix24</a>.</p>\n<!--cta-->\n<h2>Revenue comes from accounting, not from the deal stage</h2>\n<p>A deal marked \"Won\" means the rep closed it, not that the money is in the bank: the client may pay in part, late or not at all. So the last link comes from accounting. The invoice is raised from the deal, and the payment status flows back to the CRM on its own.</p>\n<p>We integrate Bitrix24 with Zoho Books, QuickBooks or Odoo from AED 10,000, the scope is on our <a href=\"/bitrix-integrations\">integrations page</a>. Agree which figure counts as revenue: UAE invoices include 5% VAT, so label amounts as gross or net of VAT.</p>\n<h2>Setting it up is a step-by-step job</h2>\n<ol>\n<li>List every source: ad accounts, website, WhatsApp, phone, partners, repeat business</li>\n<li>Sign off the UTM convention and campaign naming, and share it with everyone who launches ads</li>\n<li>Configure CRM forms and open channels so tags land in the lead without the rep touching them</li>\n<li>Make the source field mandatory, with a fixed list of values for deals created by hand</li>\n<li>Connect the CRM to accounting so payments flow back into the deal</li>\n<li>Pull spend from the ad platforms into BI and match it with payments by campaign</li>\n<li>After 2 to 4 weeks, reconcile the report with the ad accounts and finance</li>\n</ol>\n<p>Check the quality of older deals first: duplicates and empty fields damage a report more than missing tags, see our guide on <a href=\"/journal/bitrix24-crm-analytics\">why CRM reports lie</a>. You can also order a stand-alone <a href=\"/bitrix-audit\">Bitrix24 audit</a>.</p>\n<h2>The dashboard shows cost per payment, not cost per lead</h2>\n<p>The result is one table by source and a few charts. Core metrics:</p>\n<ul>\n<li>spend per channel and number of leads</li>\n<li>deals and payments from those leads</li>\n<li>cost per lead and cost per paying customer</li>\n<li>revenue and return on ad spend by channel</li>\n<li>average time from lead to payment</li>\n</ul>\n<p>The last one matters for long B2B deals: if clients pay two months after the first enquiry, last month&#39;s campaigns have not shown results yet. End-to-end analytics by CRM UTM data, with ad spend added, is part of the Pro plan of <a href=\"/bi-analitika\">MakeBiz BI analytics</a> at AED 1,000 a month, while ad accounts and accounting systems are connected to BI on request for an extra fee. The first 14 days are free, and the trial runs on the full Pro plan. Which other views a sales director needs is covered in our news on <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">three sales dashboards</a>.</p>\n<p>It also pays to send payments back to the ad platforms. Google Ads supports offline conversion imports by gclid, and Meta offers the Conversions API. The platforms then optimise for paying customers, not for everyone who left a number.</p>\n<h2>A worked example: a trading company with 10 sales reps</h2>\n<p>A hypothetical Dubai trading company runs Google Ads and Meta, and leads arrive by web form, WhatsApp and phone. Half the CRM deals have no source, and finance tracks payments in Zoho Books. The owner sees that Meta delivers cheap leads and wants to move the whole budget there.</p>\n<p>Once the chain is in place, every campaign can be followed from spend to payment, and budget is set on cost per paying customer. One-off costs: CRM setup from AED 10,000, WhatsApp AED 500, accounting integration from AED 10,000. Monthly: the BI Pro plan at AED 1,000 and, if you want it, support from AED 1,250 for 5 hours. Full prices are on our <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We build the chain from click to payment",
+   "UTM tags in CRM forms, a source on every deal, payments from accounting and a dashboard by channel on the BI Pro plan, AED 1,000 a month",
+   "Talk about analytics"
+  ],
+  "faq": [
+   [
+    "What is end-to-end analytics in plain terms?",
+    "It is a report in which every payment has an ad source. Data from the ad accounts, the CRM and accounting is linked, so you can see how much money each channel brought in."
+   ],
+   [
+    "Can I do end-to-end analytics without a CRM?",
+    "Only partly, because without a CRM you cannot see which leads became deals and payments. The minimum is an ad account, a CRM with a source on every deal and payments from accounting."
+   ],
+   [
+    "How do I track WhatsApp enquiries and phone calls?",
+    "Use separate WhatsApp links or numbers per campaign and separate phone numbers per source. The enquiry then reaches the CRM already tagged."
+   ],
+   [
+    "How much does end-to-end analytics cost with MakeBiz?",
+    "It is a set of jobs: CRM setup from AED 10,000, accounting integration from AED 10,000 and a BI dashboard on the Pro plan at AED 1,000 a month. We fix the exact quote before work starts."
+   ],
+   [
+    "When will the report start telling the truth?",
+    "New deals arrive tagged as soon as setup is live. Fair conclusions about channels need at least one full sales cycle."
+   ]
+  ],
+  "cta": [
+   "We will show you where ads and revenue lose track of each other",
+   "Tell us which ad channels and which accounting system you use today. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-crm-analytics",
+    "Why CRM reports lie and how to fix them"
+   ],
+   [
+    "/journal/bi-implementation",
+    "BI implementation: stages, timeline and roles"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Three dashboards a sales director checks"
+   ]
+  ]
+ }
+}

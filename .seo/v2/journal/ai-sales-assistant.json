@@ -1,0 +1,114 @@
+{
+ "slug": "ai-sales-assistant",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "ИИ-ассистент для отдела продаж: что умеет и цена | MakeBiz",
+  "desc": "ИИ-ассистент для отдела продаж в ОАЭ: ответ в WhatsApp, контроль сделок, задачи и разбор переписок. Внедрение 5 000 AED, обслуживание 500 AED в месяц.",
+  "h1": "ИИ-ассистент для отдела продаж: что умеет и сколько стоит",
+  "crumb": "ИИ-ассистент для продаж",
+  "lead": "Клиент в ОАЭ пишет в WhatsApp вечером и ждёт ответа сразу, а менеджер в это время на встрече или уже дома. ИИ-ассистент закрывает такие паузы и следит за сделками. Разбираем, что он делает, чего не делает и из чего складывается бюджет.",
+  "answer": "ИИ-ассистент для отдела продаж готовит ответ клиенту в WhatsApp и других каналах, сам отвечает, если менеджер молчит, следит за сделками без следующего шага, ставит задачи и каждое утро разбирает переписки. У MakeBiz Technologies это агент ИИ-РОП внутри Битрикс24: внедрение 5 000 AED разово, обслуживание 10% в месяц (500 AED), подключение WhatsApp 500 AED, подписка провайдера отдельно.",
+  "body": "<h2>Ассистент работает в чате, в сделке и в утреннем разборе</h2>\n<p>Под словами «ИИ-ассистент для продаж» продают разное: от чат-бота на сайте до генератора писем. Полезный ассистент встроен в CRM и мессенджеры и закрывает три зоны: переписку с клиентом, движение сделок и контроль работы отдела. Вот как распределяются задачи между ним и менеджером.</p>\n<table><thead><tr><th>Задача</th><th>Что делает ассистент</th><th>Что остаётся менеджеру</th></tr></thead><tbody>\n<tr><td><b>Ответ клиенту</b></td><td>Готовит ответ в окне чата с ценой в AED и следующим шагом</td><td>Отправить, поправить или переписать</td></tr>\n<tr><td><b>Пауза в диалоге</b></td><td>Если менеджер не ответил 15 минут, отвечает сам и ставит задачу</td><td>Подхватить разговор</td></tr>\n<tr><td><b>Очередь «ждут ответа»</b></td><td>Показывает, кто из клиентов ждёт и сколько минут, по всем каналам</td><td>Разобрать очередь</td></tr>\n<tr><td><b>Сделки без движения</b></td><td>Находит сделки без следующего шага и ставит задачи</td><td>Связаться с клиентом</td></tr>\n<tr><td><b>Кому позвонить сегодня</b></td><td>Список клиентов с причиной и подсказкой, что сказать</td><td>Позвонить</td></tr>\n<tr><td><b>Разбор переписок</b></td><td>Каждое утро: где ошиблись, кого закрыли рано, кого вернуть</td><td>Исправить подход</td></tr>\n</tbody></table>\n<p class=\"note\">Функции агента ИИ-РОП MakeBiz Technologies в Битрикс24.</p>\n<h2>Ответ в WhatsApp готов до того, как менеджер открыл чат</h2>\n<p>Ассистент читает диалог, карточку клиента и базу знаний компании: прайс, условия, ответы на частые вопросы. По ним он готовит ответ прямо в окне чата. Менеджер вставляет его, правит или одной кнопкой просит сделать короче или мягче. Вечером и на встречах работает подхват: если менеджер молчит 15 минут, агент отвечает клиенту сам по согласованному сценарию и ставит задачу ответственному.</p>\n<p>Граница задаётся заранее: ассистент не даёт скидок, не называет неутверждённых сроков и не спорит. Нестандартный запрос, жалоба или просьба позвать человека сразу уходят менеджеру. Как агент разбирает первые сообщения из рекламы, мы описали в новости про <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">ИИ-агента в WhatsApp</a>.</p>\n<p>Работает это только поверх официального канала: один номер компании, подключённый к CRM. Подключение WhatsApp к Битрикс24 стоит 500 AED, состав работ на странице <a href=\"/bitrix-messengers\">мессенджеров в Битрикс24</a>, а чем официальный API отличается от WhatsApp Web, разобрано в гайде <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API или WhatsApp Web</a>.</p>\n<h2>Контроль сделок держится на правилах, которые вы задали</h2>\n<p>Сделки теряются не в момент отказа, а в паузах: КП отправили, клиент замолчал, следующего шага никто не поставил. Ассистент проверяет воронку по правилам, которые вы записали:</p>\n<ul>\n<li>у каждой открытой сделки есть следующий шаг с датой</li>\n<li>после отправки КП без ответа клиента через заданное число дней появляется задача</li>\n<li>сделка, которая стоит на стадии дольше нормы, попадает в список руководителю</li>\n</ul>\n<p>Простые условия закрывают и обычные роботы CRM. Разница в тексте: агент читает переписку и понимает, что клиент написал «вернёмся к вопросу после праздников», и ставит задачу на нужную дату. Где нужен робот, а где агент, объяснено на странице <a href=\"/bitrix-ai-crm\">ИИ в Битрикс24</a>, а все функции ассистента на странице <a href=\"/ai-agents/rop\">агента ИИ-РОП</a>.</p>\n<!--cta-->\n<h2>Утренний разбор переписок заменяет выборочную проверку</h2>\n<p>Руководитель отдела не может прочитать все диалоги за день и обычно смотрит несколько наугад. Ассистент разбирает все переписки и к утру готовит короткий итог: где менеджер не ответил на вопрос клиента, кого закрыли как отказ слишком рано, кого стоит вернуть и что сказать. Рядом план и факт по каждому менеджеру и сделки, которые стоит закрыть первыми.</p>\n<p>Звонки разбирает отдельный агент: <a href=\"/ai-agents/zvonki\">речевая аналитика звонков</a> оценивает каждый разговор. Её стоимость считается по минутам: 5 000 минут в месяц стоят 1 000 AED, 10 000 минут 1 700 AED.</p>\n<h2>Бюджет складывается из четырёх строк</h2>\n<ul>\n<li>внедрение агента ИИ-РОП: 5 000 AED разово по пакету Старт, а команда агентов, например ИИ-РОП и Звонки, по пакету Бизнес 10 000 AED</li>\n<li>обслуживание: 10% от стоимости внедрения в месяц, то есть 500 или 1 000 AED</li>\n<li>канал WhatsApp: подключение 500 AED, подписка провайдера и сообщения Meta оплачиваются отдельно</li>\n<li>CRM: если Битрикс24 ещё не настроен, стандартная настройка стоит от 10 000 AED, запуск от 14 дней, подробнее на странице <a href=\"/bitrix\">внедрения Битрикс24</a></li>\n</ul>\n<p>Цены указаны без лицензий и VAT, смета фиксируется до старта. Полный прайс на странице <a href=\"/ceny\">цен в AED</a>. Перед внедрением мы бесплатно показываем агента на вашем процессе, демонстрация занимает 30-40 минут.</p>\n<h2>Ассистент не продаёт за менеджера</h2>\n<p>ИИ экономит время вокруг сделки: ответы, заполнение карточки, напоминания, разбор. На саму сделку он почти не влияет: цена, скидка, условия договора и доверие к человеку остаются за менеджером. Подробно этот счёт разобран в новости <a href=\"/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net\">«На чём AI в продажах экономит, а на чём нет»</a>.</p>\n<p>Чтобы ассистент работал, нужны три условия: один бизнес-номер в CRM вместо личных телефонов, описанная воронка с понятными стадиями и база знаний с ценами и условиями. С какого агента начинать, если отдел продаж только знакомится с ИИ, мы разобрали в новости <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">о первом агенте в отделе продаж</a>.</p>\n<h2>Условный пример: компания по продаже оборудования на 10 менеджеров</h2>\n<p>Условная компания в Дубае получает заявки из рекламы в WhatsApp, в том числе вечером и в выходные. Часть сообщений ждёт до утра, сделки после КП висят без следующего шага, а руководитель узнаёт о потерянных клиентах в конце месяца. После запуска ответ готов в окне чата, ночные сообщения получают первый ответ по сценарию, а утром руководитель видит разбор и список, кому позвонить. Расходы: 5 000 AED за внедрение, 500 AED в месяц за обслуживание и 500 AED за подключение WhatsApp, если канал ещё не в CRM.</p>",
+  "mid": [
+   "Покажем ИИ-РОП на вашем отделе продаж",
+   "Ответ в WhatsApp, подхват диалога и контроль сделок в Битрикс24. Внедрение 5 000 AED, демонстрация бесплатно",
+   "Показать на нашем процессе"
+  ],
+  "faq": [
+   [
+    "Чем ИИ-ассистент отличается от чат-бота?",
+    "Чат-бот отвечает по заранее заданному сценарию. Ассистент видит переписку, карточку сделки и базу знаний компании, готовит ответ под конкретного клиента и следит за сделками, а сложные случаи передаёт менеджеру."
+   ],
+   [
+    "Ответит ли ассистент клиенту ночью?",
+    "Да, если менеджер не ответил, агент отвечает сам по согласованному сценарию и ставит задачу ответственному. Скидок и неутверждённых сроков он не обещает."
+   ],
+   [
+    "Нужен ли для ассистента Битрикс24?",
+    "ИИ-РОП работает внутри Битрикс24 и мессенджеров. Если CRM ещё нет, сначала настраиваем портал: стандартная настройка от 10 000 AED, запуск от 14 дней."
+   ],
+   [
+    "Сколько стоит ИИ-ассистент для продаж?",
+    "Внедрение агента ИИ-РОП 5 000 AED разово, обслуживание 10% от стоимости внедрения в месяц, то есть 500 AED. Подключение WhatsApp 500 AED, подписка провайдера и сообщения Meta отдельно."
+   ],
+   [
+    "Видит ли руководитель, что отвечал ассистент?",
+    "Да, все ответы ассистента пишутся в сделку Битрикс24 рядом с перепиской менеджеров. Руководитель видит, где агент подхватил диалог и какую задачу поставил."
+   ]
+  ],
+  "cta": [
+   "Обсудим ассистента для вашего отдела продаж",
+   "Напишите, сколько у вас менеджеров и в каких каналах пишут клиенты. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/news/ai-agent-v-whatsapp-vhodyashchie-zayavki",
+    "ИИ-агент в WhatsApp: как он разбирает входящие заявки"
+   ],
+   [
+    "/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net",
+    "На чём AI в продажах экономит, а на чём нет"
+   ],
+   [
+    "/journal/whatsapp-business-api-vs-whatsapp-web",
+    "WhatsApp Business API или WhatsApp Web в CRM"
+   ]
+  ]
+ },
+ "en": {
+  "title": "AI sales assistant: what it does and what it costs | MakeBiz",
+  "desc": "An AI sales assistant for a UAE sales team: WhatsApp replies, deal follow-up, tasks and daily chat reviews. AED 5,000 to implement, AED 500 a month support.",
+  "h1": "AI sales assistant: what it does and what it costs",
+  "crumb": "AI sales assistant",
+  "lead": "UAE customers message you on WhatsApp in the evening and expect an answer right away, while your sales rep is in a meeting or already home. An AI sales assistant covers those gaps and keeps an eye on your deals. Here is what it does, what it does not do and what goes into the budget.",
+  "answer": "An AI sales assistant drafts replies to customers on WhatsApp and other channels, answers on its own when a rep stays silent, tracks deals with no next step, creates tasks and reviews every conversation each morning. At MakeBiz Technologies this is the AI sales manager agent inside Bitrix24: AED 5,000 one-off to implement, support at 10% a month (AED 500), WhatsApp connection AED 500, with the provider subscription billed separately.",
+  "body": "<h2>The assistant works in the chat, in the deal and in a morning review</h2>\n<p>\"AI sales assistant\" can mean anything from a website chatbot to an email writer. A useful one sits inside your CRM and messengers and covers three areas: customer conversations, deal progress and team oversight.</p>\n<table><thead><tr><th>Task</th><th>What the assistant does</th><th>What the rep does</th></tr></thead><tbody>\n<tr><td><b>Reply to a customer</b></td><td>Drafts a reply in the chat window with an AED price and a next step</td><td>Send, edit or rewrite it</td></tr>\n<tr><td><b>Silence in a chat</b></td><td>If the rep has not replied in 15 minutes, answers itself and creates a task</td><td>Pick the conversation back up</td></tr>\n<tr><td><b>\"Waiting for reply\" queue</b></td><td>Shows which customers are waiting and for how long, across all channels</td><td>Work through the queue</td></tr>\n<tr><td><b>Stalled deals</b></td><td>Finds deals with no next step and creates tasks</td><td>Contact the customer</td></tr>\n<tr><td><b>Who to call today</b></td><td>A list of customers with the reason and a suggested opener</td><td>Make the calls</td></tr>\n<tr><td><b>Chat review</b></td><td>Every morning: where reps slipped, which leads were closed too early, who to win back</td><td>Adjust the approach</td></tr>\n</tbody></table>\n<p class=\"note\">Functions of the MakeBiz Technologies AI sales manager agent in Bitrix24.</p>\n<h2>The WhatsApp reply is ready before the rep opens the chat</h2>\n<p>The assistant reads the conversation, the customer record and your knowledge base: price list, terms, answers to common questions. From that it drafts a reply right in the chat window. The rep pastes it, edits it, or asks for a shorter or softer version with one click. In the evening and during meetings, the fallback kicks in: if the rep is silent for 15 minutes, the agent replies to the customer using an agreed script and creates a task for the owner of the deal.</p>\n<p>The limits are set in advance: the assistant does not offer discounts, does not promise unconfirmed dates and does not argue. Unusual requests, complaints or \"can I talk to a person\" go straight to a rep. How the agent handles first messages from ads is covered in our news piece on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a>.</p>\n<p>All of this needs the official channel: one company number connected to the CRM. Connecting WhatsApp to Bitrix24 costs AED 500, the scope is on our <a href=\"/bitrix-messengers\">messengers in Bitrix24</a> page, and the difference between the official API and WhatsApp Web is explained in our guide <a href=\"/journal/whatsapp-business-api-vs-whatsapp-web\">WhatsApp Business API or WhatsApp Web</a>.</p>\n<h2>Deal follow-up runs on rules you define</h2>\n<p>Deals are lost in the gaps: the quote went out, the customer went quiet, nobody set a next step. The assistant checks the pipeline against rules you write down:</p>\n<ul>\n<li>every open deal has a next step with a date</li>\n<li>if a customer has not replied a set number of days after a quote, a task appears</li>\n<li>a deal that sits in one stage longer than normal goes on the manager&#39;s list</li>\n</ul>\n<p>Simple conditions can be handled by standard CRM automation rules too. The difference is text: the agent reads the chat, understands that the customer wrote \"let us pick this up after the holidays\" and sets the task for the right date. When you need a rule and when you need an agent is explained on our <a href=\"/bitrix-ai-crm\">AI in Bitrix24</a> page, and the full feature list is on the <a href=\"/ai-agents/rop\">AI sales manager</a> page.</p>\n<!--cta-->\n<h2>A morning chat review replaces spot checks</h2>\n<p>A sales manager cannot read every conversation from the day, so they usually check a few at random. The assistant reviews all of them and has a short summary ready by morning: where a rep ignored the customer&#39;s question, which leads were marked lost too early, who is worth winning back and what to say. Next to it sit plan versus actual for each rep and the deals to close first.</p>\n<p>Calls are handled by a separate agent: <a href=\"/ai-agents/zvonki\">call speech analytics</a> scores every conversation. It is priced by minutes: 5,000 minutes a month cost AED 1,000, and 10,000 minutes cost AED 1,700.</p>\n<h2>The budget comes down to four lines</h2>\n<ul>\n<li>implementing the AI sales manager agent: AED 5,000 one-off on the Start package, or AED 10,000 on the Business package for a team of agents, such as the sales manager plus calls</li>\n<li>support: 10% of the implementation fee per month, so AED 500 or AED 1,000</li>\n<li>WhatsApp channel: AED 500 to connect, with the provider subscription and Meta message fees paid separately</li>\n<li>CRM: if Bitrix24 is not set up yet, standard setup starts from AED 10,000 and takes from 14 days, see our <a href=\"/bitrix\">Bitrix24 implementation</a> page</li>\n</ul>\n<p>Prices exclude licences and VAT, and the estimate is fixed before work starts. The full price list is on our <a href=\"/ceny\">pricing page</a>. Before any implementation we show the agent on your own process for free, and the demo takes 30 to 40 minutes.</p>\n<h2>The assistant does not sell for your reps</h2>\n<p>AI saves time around the deal: replies, record updates, reminders, reviews. It does very little for the deal itself: price, discount, contract terms and trust in a person stay with your rep. We go through that maths in our news piece <a href=\"/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net\">on where AI in sales saves time and where it does not</a>.</p>\n<p>For the assistant to work you need three things: one business number in the CRM instead of personal phones, a defined pipeline with clear stages, and a knowledge base with prices and terms. Which agent to start with if your sales team is new to AI is covered in our news piece on <a href=\"/news/s-kakogo-ai-agenta-nachinat-v-otdele-prodazh\">the first agent for a sales team</a>.</p>\n<h2>A worked example: an equipment supplier with 10 reps</h2>\n<p>A hypothetical Dubai equipment supplier gets WhatsApp leads from ads, including evenings and weekends. Some messages wait until morning and deals stall after the quote. After launch the reply is ready in the chat window, overnight messages get a first answer from the script, and each morning the manager sees the review and a list of who to call. Cost: AED 5,000 to implement, AED 500 a month for support, and AED 500 to connect WhatsApp if the channel is not in the CRM yet.</p>",
+  "mid": [
+   "See the AI sales manager on your own team",
+   "WhatsApp replies, chat fallback and deal follow-up in Bitrix24. AED 5,000 to implement, the demo is free",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "How is an AI sales assistant different from a chatbot?",
+    "A chatbot follows a fixed script. The assistant sees the conversation, the deal record and your knowledge base, drafts a reply for that specific customer, tracks deals and hands complex cases to a rep."
+   ],
+   [
+    "Will the assistant reply to customers at night?",
+    "Yes. If the rep has not replied, the agent answers using an agreed script and creates a task for the deal owner. It does not promise discounts or unconfirmed dates."
+   ],
+   [
+    "Do we need Bitrix24 for the assistant?",
+    "The AI sales manager works inside Bitrix24 and your messengers. If you have no CRM yet, we set up the portal first: standard setup starts from AED 10,000 and takes from 14 days."
+   ],
+   [
+    "How much does an AI sales assistant cost?",
+    "Implementing the AI sales manager agent is AED 5,000 one-off, with support at 10% of that per month, so AED 500. Connecting WhatsApp is AED 500, and the provider subscription and Meta fees are separate."
+   ],
+   [
+    "Can the manager see what the assistant said?",
+    "Yes. Every reply from the assistant is logged in the Bitrix24 deal next to the reps&#39; messages. The manager sees where the agent stepped in and which task it created."
+   ]
+  ],
+  "cta": [
+   "Let us talk about an assistant for your sales team",
+   "Tell us how many reps you have and which channels your customers use. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/news/ai-agent-v-whatsapp-vhodyashchie-zayavki",
+    "AI agent in WhatsApp: how it handles incoming leads"
+   ],
+   [
+    "/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net",
+    "Where AI in sales saves time and where it does not"
+   ],
+   [
+    "/journal/whatsapp-business-api-vs-whatsapp-web",
+    "WhatsApp Business API or WhatsApp Web in your CRM"
+   ]
+  ]
+ }
+}

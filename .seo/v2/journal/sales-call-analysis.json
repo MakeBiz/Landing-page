@@ -1,0 +1,114 @@
+{
+ "slug": "sales-call-analysis",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "Анализ звонков менеджеров: критерии и обучение | MakeBiz",
+  "desc": "Анализ звонков менеджеров: какие критерии оценивать, как разбирать звонок и учить по нему. Речевая аналитика от 1 000 AED в месяц за 5 000 минут.",
+  "h1": "Анализ звонков менеджеров: что смотреть и как учить по ним",
+  "crumb": "Анализ звонков менеджеров",
+  "lead": "Записи звонков есть почти в каждой CRM, а пользы от них мало: слушать некогда, а после прослушки непонятно, что сказать менеджеру. Анализ звонков работает, когда есть критерии, цифры по ним и понятный способ разбора.",
+  "answer": "Звонок продаж оценивают по этапам разговора: контакт, выявление потребности, презентация, возражения, следующий шаг, и отдельно по речи менеджера. Речевая аналитика звонков MakeBiz оценивает каждый разговор по вашему скрипту и стоит от 1 000 AED в месяц за 5 000 минут, а руководитель разбирает с менеджером один навык за раз на реальных фрагментах.",
+  "body": "<h2>Анализ звонка начинается с критериев, а не с прослушки</h2>\n<p>Если руководитель слушает звонок без списка критериев, оценка зависит от его настроения и от того, понравился ли ему голос менеджера. Через месяц такие оценки нельзя сравнить ни между людьми, ни во времени.</p>\n<p>Поэтому сначала скрипт продаж раскладывают на этапы и для каждого записывают, что считается выполненным. Не «хорошо выявил потребность», а «задал минимум два открытых вопроса о задаче клиента и пересказал её своими словами». Чем конкретнее формулировка, тем меньше споров на разборе. Как разрыв разговора привязывают к этапу, мы писали в новости <a href=\"/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka\">где отдел продаж теряет клиента внутри звонка</a>.</p>\n<h2>Шесть блоков критериев покрывают типовой звонок продаж</h2>\n<p>Набор ниже подходит для большинства продаж по телефону, в B2B и B2C. Под свой процесс его сокращают или дополняют, например отдельным критерием для повторного звонка.</p>\n<table><thead><tr><th>Блок</th><th>Что проверяем</th><th>Признак проблемы</th></tr></thead><tbody>\n<tr><td><b>Контакт</b></td><td>Представился, назвал компанию и цель звонка, уточнил, удобно ли говорить</td><td>Клиент переспрашивает, кто звонит</td></tr>\n<tr><td><b>Выявление потребности</b></td><td>Открытые вопросы, задача клиента, сроки, кто принимает решение</td><td>Переход к презентации через минуту</td></tr>\n<tr><td><b>Презентация</b></td><td>Говорит о пользе для задачи клиента, а не о продукте вообще</td><td>Монолог без вопросов</td></tr>\n<tr><td><b>Возражения</b></td><td>Уточняет, что стоит за возражением, отвечает по сути</td><td>Спор или сразу скидка</td></tr>\n<tr><td><b>Следующий шаг</b></td><td>Конкретная договорённость: дата, действие, канал</td><td>«Я вам перезвоню» без даты</td></tr>\n<tr><td><b>Речь и тон</b></td><td>Темп, перебивания, доля речи менеджера</td><td>Менеджер говорит почти всё время</td></tr>\n</tbody></table>\n<p class=\"note\">Базовый набор критериев MakeBiz Technologies, ноябрь 2026. Финальный список согласуем под ваш скрипт.</p>\n<p>Не все блоки весят одинаково. Пропущенное приветствие редко стоит сделки, а разговор без следующего шага почти всегда заканчивается тишиной. Поэтому у критериев ставят веса: больше баллов дают выявлению потребности и договорённости, меньше тону. Веса согласуют с руководителем отдела до первого отчёта, иначе цифры начнут оспаривать.</p>\n<h2>Цифры по звонкам читают по менеджеру и по этапу</h2>\n<p>Общий средний балл отдела почти ничего не говорит. Полезны два среза:</p>\n<ul>\n<li><b>по этапам для всего отдела.</b> Если почти все проваливают следующий шаг, проблема в скрипте или обучении, а не в отдельных людях</li>\n<li><b>по менеджерам на одном этапе.</b> Если один менеджер стабильно теряет баллы на возражениях, это тема его личного разбора</li>\n</ul>\n<p>Третий полезный срез это вопросы и возражения клиентов по всем звонкам. Повторяющиеся вопросы показывают, что дописать в скрипт и на сайт, а повторяющиеся возражения подсказывают, где менять само предложение. Часть этой информации так и не попадает в CRM, об этом новость <a href=\"/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki\">что слышно в звонке и чего нет в карточке сделки</a>.</p>\n<!--cta-->\n<h2>Разбор с менеджером идёт по одному навыку за раз</h2>\n<p>Частая ошибка разбора: руководитель перечисляет менеджеру всё, что было не так. Человек запоминает один-два пункта, а остальное воспринимает как критику. Работает другой порядок:</p>\n<ol>\n<li>Выберите один этап, где у менеджера стабильно низкий балл</li>\n<li>Найдите 2-3 звонка, где эта ошибка видна, и один, где он справился</li>\n<li>Послушайте фрагменты вместе, начиная с удачного</li>\n<li>Договоритесь о конкретном действии: какой вопрос задавать, какую фразу убрать</li>\n<li>Через неделю проверьте этот же критерий на новых звонках</li>\n</ol>\n<p>Короткий разбор раз в неделю полезнее часовой встречи раз в месяц: менеджер успевает применить одно изменение и увидеть результат в своих цифрах.</p>\n<h2>Обучение строят из реальных фрагментов разговоров</h2>\n<p>Когда звонки оценены, у компании появляется библиотека: удачные ответы на частые возражения, хорошие вопросы на выявлении, примеры чёткого следующего шага. Это материал для новичков и для общих тренировок отдела.</p>\n<ul>\n<li>соберите по 3-5 удачных фрагментов на каждый этап</li>\n<li>добавьте типичные ошибки с разбором, без имён менеджеров</li>\n<li>обновляйте подборку раз в месяц по новым звонкам</li>\n<li>давайте новичку слушать подборку до первых самостоятельных звонков</li>\n</ul>\n<p>Если команда работает на нескольких языках, библиотеку собирают отдельно для каждого: удачная фраза на русском не всегда работает в переводе. Работе в CRM и с отчётами по звонкам мы учим на <a href=\"/bitrix-training\">занятиях для команды</a>.</p>\n<h2>Система оценивает все звонки, руководитель разбирает выбранные</h2>\n<p>Слушать вручную каждый разговор руководитель не может, а случайная выборка пропускает закономерности. Поэтому разделение такое: <a href=\"/ai-agents/zvonki\">речевая аналитика звонков</a> расшифровывает и оценивает каждый разговор по вашим критериям, показывает средний балл по менеджерам и этапам и подсказывает, кому нужно обучение. Руководитель тратит время только на звонки, которые система отметила. Агент работает на тех же данных, что и другие <a href=\"/ai-agents\">ИИ-агенты</a> в CRM.</p>\n<p>Цены речевой аналитики: 5 000 минут 1 000 AED в месяц, 10 000 минут 1 700 AED, от 30 000 минут от 4 000 AED. Когда хватает выборки, а когда нужна сплошная проверка, разобрано в гайде <a href=\"/journal/call-quality-team-vs-system\">о контроле качества звонков</a>. Если звонки идут на нескольких языках, качество расшифровки проверяем на ваших записях до запуска.</p>\n<p>Чтобы система работала, записи звонков должны попадать в CRM вместе с карточкой клиента. Что проверить у провайдера телефонии до подключения, мы разобрали в новости <a href=\"/news/telefoniya-v-oae-dlya-crm\">о телефонии в ОАЭ для CRM</a>.</p>\n<h2>Условный пример: отдел на 10 менеджеров</h2>\n<p>Условная компания в Дубае продаёт услуги по телефону и уверена, что теряет клиентов на цене. После оценки всех звонков по шести блокам картина другая: у большинства менеджеров низкий балл на следующем шаге, разговор заканчивается без даты. Руководитель два месяца разбирает с каждым только этот этап, а в скрипт добавляют обязательный вопрос о дате следующего контакта. Через месяц руководитель смотрит, вырос ли балл на этом этапе, и только потом берёт следующий.</p>\n<p>Переписку после звонка подхватывает <a href=\"/ai-agents/rop\">ИИ-РОП</a>: напоминает, если менеджер не написал клиенту, и отвечает, если менеджер молчит. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>",
+  "mid": [
+   "Оценим каждый звонок по вашему скрипту",
+   "Критерии под ваш процесс, балл по менеджерам и этапам, топ возражений. От 1 000 AED в месяц за 5 000 минут",
+   "Показать на наших звонках"
+  ],
+  "faq": [
+   [
+    "Какие критерии использовать для оценки звонков?",
+    "Базовый набор: контакт, выявление потребности, презентация, работа с возражениями, следующий шаг, речь и тон. Для каждого критерия записывают, что считается выполненным, чтобы оценки разных людей совпадали."
+   ],
+   [
+    "Сколько звонков разбирать с менеджером?",
+    "Для личного разбора хватает 2-3 звонков с одной ошибкой и одного удачного. Важнее регулярность: короткий разбор раз в неделю по одному навыку."
+   ],
+   [
+    "Сколько стоит речевая аналитика звонков?",
+    "У MakeBiz Technologies 5 000 минут стоят 1 000 AED в месяц, 10 000 минут 1 700 AED, от 30 000 минут от 4 000 AED. Цены без VAT."
+   ],
+   [
+    "Можно ли анализировать звонки на английском и русском?",
+    "Мы работаем на русском и английском, а критерии оценки пишем на языке команды. Качество расшифровки, особенно на смешанных разговорах, проверяем на ваших записях до запуска."
+   ],
+   [
+    "Заменяет ли система руководителя отдела продаж?",
+    "Нет. Система оценивает разговоры и показывает, где проблема, а переписать скрипт и научить менеджера должен человек."
+   ]
+  ],
+  "cta": [
+   "Разберём звонки вашего отдела",
+   "Напишите, сколько менеджеров звонят и какая у вас телефония. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/call-quality-team-vs-system",
+    "Контроль качества звонков: отдел, система или вместе"
+   ],
+   [
+    "/journal/ai-team-training",
+    "Как научить команду работать с ИИ-агентами"
+   ],
+   [
+    "/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka",
+    "Где отдел продаж теряет клиента внутри звонка"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Sales call analysis: what to check and how to coach | MakeBiz",
+  "desc": "Sales call analysis: which criteria to score, how to review a call with a rep and coach from it. Call speech analytics from AED 1,000 a month for 5,000 minutes.",
+  "h1": "Sales call analysis: what to check and how to coach",
+  "crumb": "Sales call analysis",
+  "lead": "Almost every CRM stores call recordings, yet few teams get much out of them: nobody has time to listen, and after listening it is not clear what to tell the rep. Call analysis works when you have criteria, numbers against them and a clear way to review.",
+  "answer": "Score a sales call by the stages of the conversation (opening, discovery, pitch, objections, next step) plus the rep&#39;s delivery. MakeBiz call speech analytics scores every call against your own script from AED 1,000 a month for 5,000 minutes, and the sales manager coaches one skill at a time using real moments from those calls.",
+  "body": "<h2>Call analysis starts with criteria, not with listening</h2>\n<p>If a manager listens to a call without a list of criteria, the score depends on their mood and on whether they liked the rep&#39;s voice. A month later those scores cannot be compared across people or over time.</p>\n<p>So first you break the sales script into stages and write down what counts as done for each one. Not \"good discovery\", but \"asked at least two open questions about the client&#39;s problem and played it back in their own words\". The more specific the wording, the fewer arguments in the review. How a dropped conversation gets tied to a specific stage is covered in our news piece on <a href=\"/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka\">where sales teams lose clients inside the call</a>.</p>\n<h2>Six blocks of criteria cover a typical sales call</h2>\n<p>The set below works for most phone sales, B2B and B2C. Trim it or extend it for your process, for example with a separate criterion for follow-up calls.</p>\n<table><thead><tr><th>Block</th><th>What we check</th><th>Red flag</th></tr></thead><tbody>\n<tr><td><b>Opening</b></td><td>Introduced themselves, named the company and the reason for the call, checked it is a good time</td><td>The client asks who is calling</td></tr>\n<tr><td><b>Discovery</b></td><td>Open questions, the client&#39;s problem, timing, who makes the decision</td><td>Jumps to the pitch within a minute</td></tr>\n<tr><td><b>Pitch</b></td><td>Talks about value for the client&#39;s problem, not the product in general</td><td>A monologue with no questions</td></tr>\n<tr><td><b>Objections</b></td><td>Finds out what is behind the objection and answers the real concern</td><td>An argument, or an instant discount</td></tr>\n<tr><td><b>Next step</b></td><td>A specific agreement: date, action, channel</td><td>\"I&#39;ll call you back\" with no date</td></tr>\n<tr><td><b>Delivery</b></td><td>Pace, interruptions, the rep&#39;s share of talk time</td><td>The rep does nearly all the talking</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies baseline criteria, November 2026. The final list is agreed against your script.</p>\n<p>The blocks do not carry equal weight. A missed greeting rarely costs a deal, while a call with no next step almost always ends in silence. So criteria get weights: discovery and the next step score more, delivery scores less. Agree the weights with the head of sales before the first report, or the numbers will be disputed.</p>\n<h2>Read call scores by rep and by stage</h2>\n<p>An overall team average tells you very little. Two views are useful:</p>\n<ul>\n<li><b>by stage across the team.</b> If almost everyone fails the next step, the problem is the script or the training, not individual people</li>\n<li><b>by rep on a single stage.</b> If one rep keeps losing points on objections, that is the topic of their one-to-one</li>\n</ul>\n<p>A third useful view is client questions and objections across all calls. Repeated questions show what to add to the script and the website, and repeated objections point to where the offer itself needs work. Much of this never makes it into the CRM, as we wrote in our news piece on <a href=\"/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki\">what you hear on a call but never see in the deal</a>.</p>\n<!--cta-->\n<h2>Coach one skill at a time</h2>\n<p>A common coaching mistake is listing everything that went wrong. The rep remembers one or two points and hears the rest as criticism. This order works:</p>\n<ol>\n<li>Pick one stage where the rep consistently scores low</li>\n<li>Find 2 or 3 calls where the mistake is obvious, and one where they got it right</li>\n<li>Listen to the clips together, starting with the good one</li>\n<li>Agree on one concrete action: which question to ask, which phrase to drop</li>\n<li>A week later, check the same criterion on new calls</li>\n</ol>\n<p>A short session every week beats an hour-long meeting once a month: the rep has time to try one change and see it in their own numbers.</p>\n<h2>Training is built from real call clips</h2>\n<p>Once calls are scored, you end up with a library: strong answers to common objections, good discovery questions, examples of a clean next step. That is material for new hires and for team practice sessions.</p>\n<ul>\n<li>collect 3 to 5 strong clips for each stage</li>\n<li>add typical mistakes with a short breakdown, with rep names removed</li>\n<li>refresh the set every month from new calls</li>\n<li>have new hires listen to the set before their first solo calls</li>\n</ul>\n<p>If your team sells in more than one language, build a separate library for each: a line that lands well in Russian does not always work in English. We train teams on the CRM and on call reports in our <a href=\"/bitrix-training\">team training sessions</a>.</p>\n<h2>Software scores every call, the manager reviews the flagged ones</h2>\n<p>No manager can listen to every conversation, and a random sample misses patterns. So the split is simple: <a href=\"/ai-agents/zvonki\">call speech analytics</a> transcribes and scores every call against your criteria, shows average scores by rep and stage, and suggests who needs coaching. The manager spends time only on the calls the system has flagged. The agent works on the same CRM data as our other <a href=\"/ai-agents\">AI agents</a>.</p>\n<p>Pricing: 5,000 minutes for AED 1,000 a month, 10,000 minutes for AED 1,700, and from AED 4,000 for 30,000 minutes or more. When a sample is enough and when you need full coverage is covered in our guide on <a href=\"/journal/call-quality-team-vs-system\">call quality control</a>. If your calls mix languages, we test transcription quality on your own recordings before launch.</p>\n<p>For any of this to work, recordings have to land in the CRM together with the client record. What to check with your telephony provider before connecting is in our news piece on <a href=\"/news/telefoniya-v-oae-dlya-crm\">telephony for a CRM in the UAE</a>.</p>\n<h2>A worked example: a team of 10 reps</h2>\n<p>A hypothetical Dubai company sells services over the phone and is sure it loses clients on price. Once every call is scored across the six blocks, the picture changes: most reps score low on the next step, and calls end without a date. For two months the sales manager coaches everyone on that stage only, and the script gets a mandatory question about the date of the next contact. After a month the manager checks whether that score has moved, and only then picks the next skill.</p>\n<p>Follow-up after the call is picked up by the <a href=\"/ai-agents/rop\">AI sales manager</a>: it reminds a rep who has not messaged the client and replies when the rep goes quiet. All prices are on the <a href=\"/ceny\">pricing page</a>.</p>",
+  "mid": [
+   "We score every call against your script",
+   "Criteria built around your process, scores by rep and stage, top objections. From AED 1,000 a month for 5,000 minutes",
+   "See it on our calls"
+  ],
+  "faq": [
+   [
+    "What criteria should I use to score sales calls?",
+    "A solid baseline is opening, discovery, pitch, objection handling, next step, and delivery. For each criterion, write down what counts as done so that different reviewers give the same score."
+   ],
+   [
+    "How many calls should I review with a rep?",
+    "For a one-to-one, 2 or 3 calls showing the same mistake plus one good call is enough. Regularity matters more: a short weekly session on one skill."
+   ],
+   [
+    "How much does call speech analytics cost?",
+    "With MakeBiz Technologies, 5,000 minutes cost AED 1,000 a month, 10,000 minutes AED 1,700, and 30,000 minutes or more from AED 4,000. Prices exclude VAT."
+   ],
+   [
+    "Can you analyse calls in English and Russian?",
+    "We work in English and Russian, and we write the scoring criteria in your team&#39;s language. We test transcription quality on your own recordings before launch, especially where calls mix languages."
+   ],
+   [
+    "Does the software replace the sales manager?",
+    "No. It scores conversations and shows where the problem is, but rewriting the script and coaching the rep is still a person&#39;s job."
+   ]
+  ],
+  "cta": [
+   "Let us look at your team's calls",
+   "Tell us how many reps are on the phone and which telephony you use. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/call-quality-team-vs-system",
+    "Call quality control: QA team, software or both"
+   ],
+   [
+    "/journal/ai-team-training",
+    "Training your team to work with AI agents"
+   ],
+   [
+    "/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka",
+    "Where sales teams lose clients inside the call"
+   ]
+  ]
+ }
+}

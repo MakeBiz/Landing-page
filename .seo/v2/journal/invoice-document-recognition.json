@@ -1,0 +1,114 @@
+{
+ "slug": "invoice-document-recognition",
+ "date": "2026-11-11",
+ "rubric_ru": "Документы",
+ "rubric_en": "Documents",
+ "ru": {
+  "title": "Распознавание счетов и документов: что умеет ИИ | MakeBiz",
+  "desc": "ИИ-распознавание счетов, КП и прайсов: чем OCR отличается от ИИ-разбора, что с PDF и сканами, где нужен человек. Один агент 5 000 AED, демо бесплатно.",
+  "h1": "Распознавание счетов и документов: что умеет ИИ и где граница",
+  "crumb": "Распознавание документов",
+  "lead": "Счета, КП, прайсы и накладные приходят в почту и WhatsApp в любом виде, а в учёт и CRM их до сих пор переносят руками. Разбираем, что ИИ умеет доставать из документов, где он ошибается и как проверить его на своих файлах.",
+  "answer": "ИИ-распознавание документов извлекает из счетов, КП и прайсов поставщика, номер, дату, суммы, VAT и строки позиций, сверяет их с заказом и отдаёт человеку только спорные места. Граница проходит на плохих сканах, рукописных пометках и решениях об оплате: их проверяет сотрудник. MakeBiz Technologies встраивает распознавание в агентов закупок и финансов, один агент стоит 5 000 AED разово, а качество разбора показываем на ваших документах на бесплатной демонстрации.",
+  "body": "<h2>OCR читает символы, ИИ-разбор понимает документ</h2>\n<p>OCR (оптическое распознавание символов) превращает картинку в текст: буквы и цифры, но без смысла. Он не знает, где сумма счёта, а где номер телефона, и для каждого макета документа ему нужен свой шаблон. ИИ-разбор документов (Document AI) идёт дальше: находит поля по смыслу, собирает таблицу позиций и понимает, что «Total incl. VAT» и «Grand total» в двух разных счетах это одно и то же поле.</p>\n<table><thead><tr><th>Задача</th><th>OCR</th><th>ИИ-разбор документов</th><th>Человек</th></tr></thead><tbody>\n<tr><td><b>Текст из скана или фото</b></td><td>Да, это его основная работа</td><td>Использует OCR как первый шаг</td><td>Не нужен</td></tr>\n<tr><td><b>Поставщик, номер, дата, сумма</b></td><td>Только по шаблону под каждый макет</td><td>По смыслу, без шаблона под каждого поставщика</td><td>Проверяет спорные</td></tr>\n<tr><td><b>Строки: количество, цена, сумма</b></td><td>Таблицы часто разваливаются</td><td>Да, качество зависит от исходника</td><td>Проверяет помеченные</td></tr>\n<tr><td><b>Сверка с заказом и прайсом</b></td><td>Нет</td><td>Да, если подключены CRM и учёт</td><td>Решает расхождения</td></tr>\n<tr><td><b>Решение об оплате</b></td><td>Нет</td><td>Нет</td><td>Да</td></tr>\n</tbody></table>\n<p class=\"note\">Сравнение MakeBiz Technologies по типовым задачам разбора входящих документов.</p>\n<h2>Качество разбора зависит от исходника</h2>\n<p>Один и тот же движок на разных файлах даёт разный результат. Вот что обычно приходит в компанию:</p>\n<ul>\n<li>PDF, выгруженный из учётной системы поставщика: текст уже внутри файла, это самый надёжный вариант</li>\n<li>скан: многое зависит от разрешения, печатей и подписей поверх цифр</li>\n<li>фото с телефона: перекос, тени, обрезанные края</li>\n<li>таблица в теле письма или сообщение в WhatsApp: текст есть, но структура свободная</li>\n<li>Excel-прайс: цифры точные, но колонки у каждого поставщика свои</li>\n</ul>\n<p>Поэтому процент точности «вообще» мало что говорит. Пока разбор не проверен на вашем потоке документов, любое число остаётся цифрой со слайда.</p>\n<h2>Шапку счёта прочитать проще, чем строки позиций</h2>\n<p>Поля шапки есть почти в каждом счёте: поставщик и его налоговый номер (TRN), номер и дата документа, валюта, итог и сумма VAT. С ними ИИ-разбор справляется уверенно. Строки позиций сложнее: таблица на несколько страниц, перенос названия на две строки, одинаковые товары в разной упаковке, скидка отдельной строкой внизу.</p>\n<p>Здесь помогает простая арифметика, которую система проверяет сама:</p>\n<ul>\n<li>количество, умноженное на цену, равно сумме строки</li>\n<li>сумма строк равна итогу без налога</li>\n<li>сумма VAT сходится с базой по указанной в документе ставке (стандартная ставка в ОАЭ 5%)</li>\n</ul>\n<p>Если хоть одна проверка не сходится, документ получает флаг и уходит человеку. Это не налоговая проверка, а контроль того, что цифры прочитаны правильно.</p>\n<h2>Английский и арабский проверяем на ваших документах</h2>\n<p>В ОАЭ документы приходят на английском, иногда на арабском или на двух языках сразу, а поставщики из других стран добавляют свои форматы. Мы не обещаем заранее одинаковое качество для любого языка и макета. Разбор арабского текста, двуязычных счетов и рукописных пометок проверяем на ваших реальных файлах до запуска и только после этого договариваемся, какие поля берём автоматически, а какие оставляем на ручную проверку. Работаем на русском и английском, арабский интерфейс не обещаем.</p>\n<!--cta-->\n<h2>Граница проходит там, где ошибка стоит денег</h2>\n<p>Высокая точность на отдельном поле и надёжность всего процесса это разные вещи, почему так, мы разобрали в новости <a href=\"/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami\">«Точность 98%, а счета всё равно с ошибками»</a>. Практический вывод один: система должна знать, когда она не уверена, и останавливаться, а не писать догадку в учёт.</p>\n<p>Правила, которые мы ставим почти всегда:</p>\n<ul>\n<li>сверка с заказом: позиции и цены из счёта сравниваются с заказом, любое расхождение идёт человеку</li>\n<li>дубли: тот же поставщик, номер и сумма получают флаг до оплаты</li>\n<li>новый поставщик или изменённые реквизиты: всегда ручная проверка</li>\n<li>суммы выше порога, который вы задали: подтверждение сотрудником</li>\n<li>оплата: ИИ платежи не отправляет</li>\n</ul>\n<p>В итоге человек работает на исключениях, а не на всём потоке документов.</p>\n<h2>Распознавание встраивают в процесс, а не ставят отдельным сервисом</h2>\n<p>Данные из документа полезны, только если попадают туда, где ими пользуются. В закупках КП поставщиков разбираются сразу в таблицу сравнения: так работает <a href=\"/ai-agents/zakupki\">агент закупок</a>, а шаблон таблицы есть в гайде о <a href=\"/journal/supplier-quote-comparison\">сравнении КП поставщиков</a>. В финансах счета и выписки собирает <a href=\"/ai-agents/finansy\">финансовый агент</a> и показывает деньги по направлениям.</p>\n<p>Документ сохраняется в карточке CRM рядом с извлечёнными данными, поэтому любое значение можно сверить с оригиналом. Если данные нужно передавать в Zoho Books, QuickBooks или Odoo, понадобится <a href=\"/bitrix-integrations\">интеграция с учётной системой</a>, она стоит от 10 000 AED. Как распознавание встаёт в путь от заявки до заказа, описано в гайде об <a href=\"/journal/procurement-automation\">автоматизации закупок</a>.</p>\n<h2>Проверка начинается с ваших документов</h2>\n<ol>\n<li>Соберите реальные документы за обычный месяц: аккуратные PDF, плохие сканы, фото, двуязычные счета</li>\n<li>Демонстрация 30-40 минут, бесплатно: показываем разбор на вашем процессе</li>\n<li>Договариваемся, какие поля нужны и в какую систему они идут</li>\n<li>Задаём правила сверки и пороги ручной проверки</li>\n<li>Запускаем один поток, например счета поставщиков, затем расширяем</li>\n</ol>\n<p>Один агент по пакету Старт стоит 5 000 AED разово, закупки и финансы вместе по пакету Бизнес 10 000 AED, обслуживание 10% от стоимости внедрения в месяц. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<p>Условный пример: дистрибьютор получает счета поставщиков по почте, часть в PDF, часть сканами с печатями. После запуска агент разбирает каждый счёт, сверяет его с заказом в CRM и пропускает дальше только те, где всё сошлось. Бухгалтер открывает очередь помеченных документов, а не весь поток.</p>",
+  "mid": [
+   "Покажем разбор на ваших документах",
+   "Счета, КП и прайсы в CRM и учёт без ручного ввода, спорное отдельно. Один агент 5 000 AED разово",
+   "Показать на нашем процессе"
+  ],
+  "faq": [
+   [
+    "Чем OCR отличается от ИИ-распознавания документов?",
+    "OCR превращает изображение в текст, но не понимает, где в нём сумма или номер счёта. ИИ-разбор находит поля по смыслу, собирает строки позиций и сверяет цифры между собой."
+   ],
+   [
+    "Распознаёт ли ИИ сканы и фотографии?",
+    "Да, но качество зависит от исходника: разрешение, печать поверх цифр, перекос и тени снижают надёжность. Такие документы чаще получают флаг и уходят на ручную проверку."
+   ],
+   [
+    "Работает ли распознавание с арабским языком?",
+    "Проверяем на ваших документах до запуска. Арабский текст, двуязычные счета и рукописные пометки разбираются по-разному в зависимости от файла, поэтому заранее процентов не обещаем."
+   ],
+   [
+    "Можно ли полностью убрать человека из ввода счетов?",
+    "Не нужно. Система снимает рутину с основного потока, а сотрудник проверяет расхождения с заказом, дубли, новых поставщиков и крупные суммы."
+   ],
+   [
+    "Сколько стоит распознавание документов?",
+    "Распознавание работает внутри агентов закупок и финансов: один агент 5 000 AED разово, два по пакету Бизнес 10 000 AED. Обслуживание 10% от стоимости внедрения в месяц."
+   ]
+  ],
+  "cta": [
+   "Пришлите несколько своих документов",
+   "Опишите, какие документы приходят и сколько их в месяц, покажем разбор на демонстрации. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/supplier-quote-comparison",
+    "Сравнение коммерческих предложений поставщиков: критерии и таблица"
+   ],
+   [
+    "/journal/procurement-automation",
+    "Автоматизация закупок: от заявки до выбора поставщика"
+   ],
+   [
+    "/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami",
+    "Точность 98%, а счета все равно с ошибками"
+   ]
+  ]
+ },
+ "en": {
+  "title": "AI invoice and document recognition: what it does | MakeBiz",
+  "desc": "AI recognition for invoices, quotes and price lists: OCR versus Document AI, PDFs and scans, where a person stays in the loop. One agent AED 5,000, free demo.",
+  "h1": "AI invoice and document recognition: what it does and where it stops",
+  "crumb": "Document recognition",
+  "lead": "Invoices, quotes, price lists and delivery notes reach you by email and WhatsApp in every possible format, and someone still types them into the CRM and the accounts. Here is what AI can pull out of documents, where it gets things wrong and how to test it on your own files.",
+  "answer": "AI document recognition extracts the supplier, number, date, amounts, VAT and line items from invoices, quotes and price lists, checks them against the purchase order and passes only the doubtful cases to a person. It stops at poor scans, handwritten notes and payment decisions, which an employee reviews. MakeBiz Technologies builds recognition into its procurement and finance agents: one agent is AED 5,000 one-off, and we show how it handles your own documents in a free demo.",
+  "body": "<h2>OCR reads characters, Document AI understands the document</h2>\n<p>OCR (optical character recognition) turns an image into text: letters and digits, with no meaning attached. It does not know which number is the invoice total and which is a phone number, and it needs a template for every document layout. Document AI goes further: it finds fields by meaning, rebuilds the line item table and knows that \"Total incl. VAT\" on one invoice and \"Grand total\" on another are the same field.</p>\n<table><thead><tr><th>Task</th><th>OCR</th><th>Document AI</th><th>Person</th></tr></thead><tbody>\n<tr><td><b>Text from a scan or photo</b></td><td>Yes, that is its core job</td><td>Uses OCR as the first step</td><td>Not needed</td></tr>\n<tr><td><b>Supplier, number, date, total</b></td><td>Only with a template per layout</td><td>By meaning, no template per supplier</td><td>Reviews doubtful cases</td></tr>\n<tr><td><b>Line items: quantity, price, amount</b></td><td>Tables often break apart</td><td>Yes, quality depends on the source</td><td>Reviews flagged lines</td></tr>\n<tr><td><b>Match to PO and price list</b></td><td>No</td><td>Yes, if the CRM and accounts are connected</td><td>Resolves mismatches</td></tr>\n<tr><td><b>Approve payment</b></td><td>No</td><td>No</td><td>Yes</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies comparison for typical incoming document tasks.</p>\n<h2>Results depend on the source file</h2>\n<p>The same engine gives different results on different files. This is what usually lands in a company&#39;s inbox:</p>\n<ul>\n<li>a PDF exported from the supplier&#39;s accounting system: the text is already inside the file, which makes it the most reliable case</li>\n<li>a scan: much depends on resolution and on stamps or signatures over the figures</li>\n<li>a phone photo: skew, shadows, cropped edges</li>\n<li>a table in an email body or a WhatsApp message: the text is there, but the structure is loose</li>\n<li>an Excel price list: exact figures, but every supplier uses different columns</li>\n</ul>\n<p>That is why an accuracy figure \"in general\" tells you very little. Until extraction has been tested on your own document flow, any number is just a number on a slide.</p>\n<h2>Invoice headers are easier than line items</h2>\n<p>Header fields appear on almost every invoice: supplier and tax registration number (TRN), document number and date, currency, total and VAT amount. Document AI handles these with confidence. Line items are harder: a table running over several pages, a description wrapped onto two lines, the same product in different pack sizes, a discount on its own line at the bottom.</p>\n<p>Simple arithmetic helps here, and the system runs it on its own:</p>\n<ul>\n<li>quantity times unit price equals the line amount</li>\n<li>the sum of the lines equals the total before tax</li>\n<li>the VAT amount matches the base at the rate stated on the document (the standard UAE rate is 5%)</li>\n</ul>\n<p>If any check fails, the document is flagged and goes to a person. This is not a tax review, it is a check that the numbers were read correctly.</p>\n<h2>We test English and Arabic on your own documents</h2>\n<p>In the UAE documents arrive in English, sometimes in Arabic or in both at once, and overseas suppliers add their own formats. We do not promise the same quality for every language and layout up front. Arabic text, bilingual invoices and handwritten notes are tested on your real files before launch, and only then do we agree which fields are captured automatically and which stay with manual review. We work in English and Russian, and an Arabic interface is not part of the offer.</p>\n<!--cta-->\n<h2>The line sits where a mistake costs money</h2>\n<p>High accuracy on a single field and reliability of the whole process are two different things, as we explain in our news piece <a href=\"/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami\">on why invoices still contain errors at 98% accuracy</a>. The practical takeaway is simple: the system has to know when it is unsure and stop, rather than write a guess into your books.</p>\n<p>Rules we set up in almost every project:</p>\n<ul>\n<li>PO matching: items and prices on the invoice are checked against the order, and any mismatch goes to a person</li>\n<li>duplicates: same supplier, number and amount get flagged before payment</li>\n<li>a new supplier or changed bank details: always reviewed by hand</li>\n<li>amounts above a threshold you set: confirmed by an employee</li>\n<li>payments: the AI never sends them</li>\n</ul>\n<p>The result is that people work on exceptions, not on the whole document flow.</p>\n<h2>Recognition belongs inside a process, not in a standalone tool</h2>\n<p>Extracted data is only useful if it lands where people use it. In purchasing, supplier quotes go straight into a comparison table: that is how the <a href=\"/ai-agents/zakupki\">procurement agent</a> works, and the table template is in our guide to <a href=\"/journal/supplier-quote-comparison\">comparing supplier quotes</a>. In finance, the <a href=\"/ai-agents/finansy\">finance agent</a> collects invoices and bank statements and shows cash by business line.</p>\n<p>The original document is stored in the CRM record next to the extracted data, so any value can be checked against the source. If the data has to reach Zoho Books, QuickBooks or Odoo, you need an <a href=\"/bitrix-integrations\">accounting system integration</a>, which starts from AED 10,000. Where recognition fits on the path from request to order is covered in our guide to <a href=\"/journal/procurement-automation\">procurement automation</a>.</p>\n<h2>Testing starts with your own documents</h2>\n<ol>\n<li>Collect real documents from a normal month: clean PDFs, poor scans, photos, bilingual invoices</li>\n<li>Demo: 30 to 40 minutes, free, we show extraction on your own process</li>\n<li>Agree which fields you need and which system they go to</li>\n<li>Set the matching rules and the thresholds for manual review</li>\n<li>Launch one flow, such as supplier invoices, then extend</li>\n</ol>\n<p>One agent on the Start package is AED 5,000 one-off, procurement and finance together on the Business package are AED 10,000, and support is 10% of the implementation fee per month. All prices are on our <a href=\"/ceny\">pricing page</a>.</p>\n<p>A hypothetical example: a distributor receives supplier invoices by email, some as PDFs, some as stamped scans. After launch the agent reads each invoice, matches it to the order in the CRM and lets through only those where everything agrees. The accountant opens a queue of flagged documents instead of the whole flow.</p>",
+  "mid": [
+   "See extraction on your own documents",
+   "Invoices, quotes and price lists into your CRM and accounts without retyping, doubtful cases set aside. One agent AED 5,000 one-off",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "How is OCR different from AI document recognition?",
+    "OCR turns an image into text but does not know where the total or the invoice number is. Document AI finds fields by meaning, rebuilds line items and checks the figures against each other."
+   ],
+   [
+    "Can AI read scans and photos?",
+    "Yes, but quality depends on the source: low resolution, stamps over figures, skew and shadows all reduce reliability. Those documents are more likely to be flagged for manual review."
+   ],
+   [
+    "Does recognition work with Arabic?",
+    "We test it on your documents before launch. Arabic text, bilingual invoices and handwritten notes behave differently depending on the file, so we do not quote accuracy percentages in advance."
+   ],
+   [
+    "Can we take people out of invoice entry completely?",
+    "You should not. The system takes the routine off the main flow, and an employee reviews PO mismatches, duplicates, new suppliers and large amounts."
+   ],
+   [
+    "How much does document recognition cost?",
+    "Recognition runs inside the procurement and finance agents: one agent is AED 5,000 one-off, two on the Business package are AED 10,000. Support is 10% of the implementation fee per month."
+   ]
+  ],
+  "cta": [
+   "Send us a few of your documents",
+   "Tell us which documents you receive and how many a month, and we will show extraction in a demo. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/supplier-quote-comparison",
+    "Comparing supplier quotes: criteria and a comparison table"
+   ],
+   [
+    "/journal/procurement-automation",
+    "Procurement automation: from request to supplier choice"
+   ],
+   [
+    "/news/tochnost-98-a-scheta-vsyo-ravno-s-oshibkami",
+    "98% accuracy, and invoices still have errors"
+   ]
+  ]
+ }
+}

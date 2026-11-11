@@ -1,0 +1,114 @@
+{
+ "slug": "call-quality-team-vs-system",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "Контроль качества звонков: отдел, система или вместе | MakeBiz",
+  "desc": "Контроль качества звонков: выборочная прослушка отделом или 100% звонков системой. Считаем в минутах, речевая аналитика от 1 000 AED в месяц.",
+  "h1": "Контроль качества звонков: отдел, система или вместе",
+  "crumb": "Контроль качества звонков",
+  "lead": "Компания с отделом продаж рано или поздно решает, кто будет слушать звонки: сотрудник контроля качества, система речевой аналитики или оба. Ответ зависит от объёма разговоров и от того, что вы хотите узнать.",
+  "answer": "Сотрудник контроля качества слушает выборку и хорошо разбирает отдельные разговоры, система оценивает 100% звонков и находит закономерности, а на практике работает связка: система размечает все звонки, человек разбирает отмеченные и учит менеджеров. Речевая аналитика у MakeBiz стоит 1 000 AED в месяц за 5 000 минут, 1 700 AED за 10 000 минут и от 4 000 AED от 30 000 минут.",
+  "body": "<h2>Выборка и сплошная проверка отвечают на разные вопросы</h2>\n<p>Выборочная прослушка отвечает на вопрос «как этот менеджер провёл эти разговоры». Сплошная проверка отвечает на вопрос «что происходит во всех разговорах отдела». Это разные задачи, и путаница между ними приводит к ложным выводам.</p>\n<p>Представьте, что разговор срывается на одном этапе в заметной доле звонков. Если специалист слушает несколько разговоров на менеджера в неделю, он может эту закономерность увидеть, а может и нет: всё решает, какие звонки попали в выборку. Система, которая смотрит все разговоры, покажет долю таких звонков по каждому менеджеру. Пример такой точки разрыва мы разбирали в новости <a href=\"/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka\">где отдел продаж теряет клиента внутри звонка</a>.</p>\n<h2>Три подхода различаются покрытием и ролью человека</h2>\n<table><thead><tr><th>Критерий</th><th>Отдел контроля качества</th><th>Система речевой аналитики</th><th>Связка</th></tr></thead><tbody>\n<tr><td><b>Покрытие</b></td><td>Выборка звонков</td><td>100% звонков</td><td>Система все, человек выборку отмеченных</td></tr>\n<tr><td><b>Что находит</b></td><td>Ошибки в конкретных разговорах, нюансы тона</td><td>Закономерности по этапам, менеджерам, возражениям</td><td>И то, и другое</td></tr>\n<tr><td><b>Скорость</b></td><td>Зависит от часов сотрудника</td><td>После обработки записи</td><td>Отчёт системы, разбор по графику</td></tr>\n<tr><td><b>Субъективность</b></td><td>Зависит от проверяющего</td><td>Одни критерии для всех звонков</td><td>Критерии общие, спорное решает человек</td></tr>\n<tr><td><b>Обучение менеджеров</b></td><td>Сильная сторона</td><td>Подсказки, но не наставничество</td><td>Разбор по отмеченным звонкам</td></tr>\n<tr><td><b>Основные расходы</b></td><td>Зарплата и время сотрудника</td><td>Подписка по минутам</td><td>Подписка и часть времени сотрудника</td></tr>\n</tbody></table>\n<p class=\"note\">Сравнение MakeBiz Technologies, ноябрь 2026. Цены системы на странице цен, расходы на сотрудника у каждой компании свои.</p>\n<h2>Экономику считают в минутах разговоров</h2>\n<p>Чтобы сравнить подходы, посчитайте объём звонков в минутах: число менеджеров, умноженное на звонки в день, среднюю длительность и рабочие дни. Возьмём условный отдел: 6 менеджеров, по 20 звонков в день, в среднем по 3 минуты, 22 рабочих дня. Это 2 640 звонков и 7 920 минут в месяц, или 132 часа записей.</p>\n<p>Прослушать 132 часа в месяц один человек не может, если у него есть другая работа, а кроме прослушки нужно ещё заполнить оценку. Поэтому отдел качества всегда работает с выборкой. Например, 5 звонков на менеджера в неделю дают 120 звонков в месяц из 2 640, около 4,5% разговоров и около 6 часов чистой прослушки.</p>\n<p>Система на такой объём укладывается в тариф 10 000 минут за 1 700 AED в месяц. Если звонков меньше чем на 5 000 минут, хватит тарифа за 1 000 AED, а крупным отделам от 30 000 минут считаем от 4 000 AED. Все тарифы на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<p>Чтобы сравнение было честным, к расходам на сотрудника добавьте не только зарплату, но и время руководителя на проверку его оценок, а также обучение нового проверяющего, если он уйдёт. У системы расходы предсказуемее: подписка зависит от минут, а не от людей.</p>\n<!--cta-->\n<h2>Отдел качества остаётся нужен и при системе</h2>\n<p>Система не заменяет человека, который понимает продукт и клиентов. Она не решит, правильно ли менеджер выбрал момент для скидки в нестандартной сделке, и не поговорит с сотрудником, который выгорел. Человек нужен для трёх вещей:</p>\n<ul>\n<li>настройка и правка критериев: что считается хорошим звонком в вашем бизнесе</li>\n<li>разбор спорных и важных разговоров: крупная сделка, жалоба, потерянный клиент</li>\n<li>наставничество: разбор с менеджером, тренировка, проверка через неделю</li>\n</ul>\n<p>Как устроить такой разбор, мы описали в гайде <a href=\"/journal/sales-call-analysis\">об анализе звонков менеджеров</a>. Руководителей и специалистов по качеству учим работать с отчётами на <a href=\"/bitrix-training\">занятиях для команды</a>.</p>\n<h2>Система берёт рутину и находит закономерности</h2>\n<p><a href=\"/ai-agents/zvonki\">Речевая аналитика звонков</a> расшифровывает каждый разговор, ставит балл по этапам скрипта, собирает топ вопросов и возражений клиентов, показывает динамику по менеджерам и подсказывает, кому нужно обучение. Итог разговора и оценка видны в карточке сделки, рядом с перепиской.</p>\n<p>Главное, что меняется: человек больше не тратит время на поиск проблемных звонков. Он открывает отчёт, видит, где падает балл, и слушает именно эти разговоры. Если звонков мало и менеджеров двое, система может оказаться избыточной, и выборки хватит.</p>\n<p>Ещё одна польза сплошной проверки: оценки сопоставимы между менеджерами и месяцами. Когда критерии одинаковы для всех звонков, спор «меня проверили строже, чем коллегу» исчезает, и разговор с менеджером идёт о цифрах, а не о впечатлениях.</p>\n<h2>Связка работает по понятному циклу</h2>\n<ol>\n<li>Критерии оценки согласуют с руководителем отдела и записывают под ваш скрипт</li>\n<li>Система оценивает все звонки и обновляет отчёт</li>\n<li>Специалист по качеству раз в неделю берёт отмеченные звонки и разбирает их</li>\n<li>Руководитель проводит короткие разборы с менеджерами по одному навыку</li>\n<li>Раз в месяц критерии сверяют с реальностью и правят формулировки</li>\n</ol>\n<p>Звонки это только часть общения с клиентом. Переписку в WhatsApp и контроль воронки берёт на себя <a href=\"/ai-agents/rop\">ИИ-РОП</a>, а записи звонков должны попадать в CRM: что проверить у телефонии, мы писали в новости <a href=\"/news/telefoniya-v-oae-dlya-crm\">о телефонии в ОАЭ для CRM</a>.</p>\n<h2>Условный пример: отдел на 6 менеджеров</h2>\n<p>Условная компания в Абу-Даби держит одного сотрудника контроля качества, который слушает около 5 звонков на менеджера в неделю. После подключения системы он перестаёт искать проблемные разговоры вручную и тратит то же время на разбор отмеченных звонков и обучение. Руководитель видит балл каждого менеджера по этапам, а не только впечатления проверяющего. Через квартал компания решает, нужен ли второй проверяющий, по данным, а не по ощущению загрузки.</p>\n<p>Расходы на систему для объёма около 7 920 минут в месяц: 1 700 AED за тариф 10 000 минут, без VAT. Демонстрацию на вашем процессе проводим бесплатно, она занимает 30-40 минут. Другие агенты, которые работают на тех же данных CRM, собраны на странице <a href=\"/ai-agents\">ИИ-агентов</a>.</p>",
+  "mid": [
+   "Оценим 100% звонков вашего отдела",
+   "Балл по этапам и менеджерам, топ возражений. 5 000 минут 1 000 AED в месяц, 10 000 минут 1 700 AED",
+   "Посчитать для моего отдела"
+  ],
+  "faq": [
+   [
+    "Что выбрать: отдел контроля качества или речевую аналитику?",
+    "Зависит от объёма звонков. Если разговоров немного, хватает выборки, которую слушает человек. Если звонков сотни в день, система оценивает все, а человек разбирает отмеченные и учит менеджеров."
+   ],
+   [
+    "Сколько стоит речевая аналитика звонков?",
+    "5 000 минут стоят 1 000 AED в месяц, 10 000 минут 1 700 AED, от 30 000 минут от 4 000 AED. Цены без VAT."
+   ],
+   [
+    "Как посчитать, сколько минут звонков в месяц?",
+    "Умножьте число менеджеров на звонки в день, среднюю длительность и рабочие дни. Точнее взять выгрузку из телефонии или CRM за прошлый месяц."
+   ],
+   [
+    "Можно ли совсем убрать ручную прослушку?",
+    "Не стоит. Система находит проблемные разговоры, но критерии, спорные случаи и обучение менеджеров остаются за человеком."
+   ],
+   [
+    "Видит ли менеджер свою оценку?",
+    "Оценка и итог разговора видны в карточке сделки. Кто какие отчёты видит, настраивается правами доступа в CRM: обычно менеджер видит свои звонки, руководитель весь отдел."
+   ]
+  ],
+  "cta": [
+   "Посчитаем контроль качества под ваш объём",
+   "Напишите, сколько менеджеров звонят и примерно сколько звонков в день. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/sales-call-analysis",
+    "Анализ звонков менеджеров: что смотреть и как учить"
+   ],
+   [
+    "/journal/ai-team-training",
+    "Как научить команду работать с ИИ-агентами"
+   ],
+   [
+    "/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka",
+    "Где отдел продаж теряет клиента внутри звонка"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Call quality control: QA team, software or both | MakeBiz",
+  "desc": "Call quality control: a QA specialist sampling calls or software scoring 100% of them. Do the maths in minutes. Call speech analytics from AED 1,000 a month.",
+  "h1": "Call quality control: QA team, software or both",
+  "crumb": "Call quality control",
+  "lead": "Sooner or later every company with a sales team has to decide who listens to the calls: a QA specialist, call speech analytics software, or both. The answer depends on your call volume and on what you actually want to find out.",
+  "answer": "A QA specialist listens to a sample and is good at unpacking individual calls, software scores 100% of calls and spots patterns, and in practice the combination works: the software scores every call, a person reviews the flagged ones and coaches the reps. MakeBiz call speech analytics costs AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes and from AED 4,000 for 30,000 minutes or more.",
+  "body": "<h2>Sampling and full coverage answer different questions</h2>\n<p>Sampling answers the question \"how did this rep handle these calls\". Full coverage answers \"what is happening across every call the team makes\". They are different jobs, and mixing them up leads to the wrong conclusions.</p>\n<p>Say calls break down at the same stage in a noticeable share of conversations. If a QA specialist listens to a handful of calls per rep each week, they may spot the pattern or they may not: it all depends on which calls landed in the sample. Software that looks at every call shows the share of those calls for each rep. We walked through one such breaking point in our news piece on <a href=\"/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka\">where sales teams lose clients inside the call</a>.</p>\n<h2>The three approaches differ in coverage and the human role</h2>\n<table><thead><tr><th>Criterion</th><th>QA team</th><th>Call speech analytics</th><th>Both</th></tr></thead><tbody>\n<tr><td><b>Coverage</b></td><td>A sample of calls</td><td>100% of calls</td><td>Software covers all, a person reviews the flagged ones</td></tr>\n<tr><td><b>What it finds</b></td><td>Mistakes in specific calls, nuances of tone</td><td>Patterns by stage, rep and objection</td><td>Both</td></tr>\n<tr><td><b>Speed</b></td><td>Depends on the specialist&#39;s hours</td><td>Once the recording is processed</td><td>System report, reviews on a schedule</td></tr>\n<tr><td><b>Consistency</b></td><td>Depends on the reviewer</td><td>The same criteria for every call</td><td>Shared criteria, a person settles disputes</td></tr>\n<tr><td><b>Coaching reps</b></td><td>A real strength</td><td>Suggestions, not mentoring</td><td>Coaching based on flagged calls</td></tr>\n<tr><td><b>Main costs</b></td><td>Salary and the specialist&#39;s time</td><td>Subscription by minutes</td><td>Subscription plus part of a specialist&#39;s time</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies comparison, November 2026. Software prices are on our pricing page, staff costs vary by company.</p>\n<h2>Do the maths in call minutes</h2>\n<p>To compare the options, work out your call volume in minutes: number of reps, times calls per day, times average call length, times working days. Take a hypothetical team: 6 reps, 20 calls a day each, 3 minutes on average, 22 working days. That is 2,640 calls and 7,920 minutes a month, or 132 hours of recordings.</p>\n<p>No one person can listen to 132 hours a month and still do anything else, and scoring takes time on top of listening. That is why a QA team always works with a sample. For example, 5 calls per rep per week gives you 120 calls a month out of 2,640, about 4.5% of conversations and roughly 6 hours of pure listening.</p>\n<p>For software, that volume fits the 10,000-minute plan at AED 1,700 a month. Under 5,000 minutes the AED 1,000 plan is enough, and larger teams with 30,000 minutes or more start from AED 4,000. All plans are on the <a href=\"/ceny\">pricing page</a>.</p>\n<p>To keep the comparison fair, the cost of a QA specialist is more than a salary: add the manager&#39;s time spent checking their scores, and onboarding a replacement if they leave. Software costs are more predictable, because the subscription depends on minutes, not people.</p>\n<!--cta-->\n<h2>You still need a QA person with software in place</h2>\n<p>Software does not replace someone who understands your product and your clients. It will not judge whether a rep picked the right moment for a discount on an unusual deal, and it will not have the conversation with a rep who is burning out. A person is needed for three things:</p>\n<ul>\n<li>setting and refining the criteria: what a good call means in your business</li>\n<li>reviewing disputed and high-stakes calls: a large deal, a complaint, a lost client</li>\n<li>mentoring: the one-to-one, practice, and a check a week later</li>\n</ul>\n<p>How to run those reviews is covered in our guide on <a href=\"/journal/sales-call-analysis\">sales call analysis</a>. We train managers and QA staff to work with the reports in our <a href=\"/bitrix-training\">team training sessions</a>.</p>\n<h2>Software takes the routine and surfaces patterns</h2>\n<p><a href=\"/ai-agents/zvonki\">Call speech analytics</a> transcribes every conversation, scores it against the stages of your script, collects the top client questions and objections, tracks each rep over time and suggests who needs coaching. The call summary and score appear in the deal record, next to the chat history.</p>\n<p>The big change is that nobody spends time hunting for problem calls any more. The QA person opens the report, sees where scores drop and listens to exactly those calls. If you only have two reps and a light call load, software may be overkill and a sample will do.</p>\n<p>Full coverage has another benefit: scores are comparable across reps and months. When every call is judged by the same criteria, the \"I was marked harder than my colleague\" argument goes away, and coaching is about numbers rather than impressions.</p>\n<h2>The combined setup runs on a simple cycle</h2>\n<ol>\n<li>Agree the scoring criteria with the head of sales and write them up for your script</li>\n<li>The software scores every call and updates the report</li>\n<li>Once a week the QA specialist takes the flagged calls and reviews them</li>\n<li>The sales manager runs short one-to-ones with reps, one skill at a time</li>\n<li>Once a month the criteria are checked against reality and the wording is refined</li>\n</ol>\n<p>Calls are only part of the client conversation. WhatsApp follow-up and pipeline control are handled by the <a href=\"/ai-agents/rop\">AI sales manager</a>, and call recordings need to land in the CRM: what to check with your telephony provider is in our news piece on <a href=\"/news/telefoniya-v-oae-dlya-crm\">telephony for a CRM in the UAE</a>.</p>\n<h2>A worked example: a team of 6 reps</h2>\n<p>A hypothetical Abu Dhabi company has one QA specialist who listens to about 5 calls per rep each week. Once the software is connected, they stop searching for problem calls by hand and spend the same hours reviewing flagged calls and coaching. The sales manager sees every rep&#39;s score by stage, not just the reviewer&#39;s impressions. After a quarter the company decides whether it needs a second QA person based on data, not on how busy everyone feels.</p>\n<p>Software cost for around 7,920 minutes a month: AED 1,700 on the 10,000-minute plan, excluding VAT. A demo on your process is free and takes 30 to 40 minutes. The other agents that work on the same CRM data are on the <a href=\"/ai-agents\">AI agents</a> page.</p>",
+  "mid": [
+   "We score 100% of your team's calls",
+   "Scores by stage and rep, top objections. 5,000 minutes AED 1,000 a month, 10,000 minutes AED 1,700",
+   "Price it for my team"
+  ],
+  "faq": [
+   [
+    "Should I hire a QA specialist or use call speech analytics?",
+    "It depends on call volume. With a light call load, a sample reviewed by a person is enough. With hundreds of calls a day, software scores all of them and a person reviews the flagged ones and coaches reps."
+   ],
+   [
+    "How much does call speech analytics cost?",
+    "5,000 minutes cost AED 1,000 a month, 10,000 minutes AED 1,700, and 30,000 minutes or more from AED 4,000. Prices exclude VAT."
+   ],
+   [
+    "How do I estimate my monthly call minutes?",
+    "Multiply the number of reps by calls per day, average call length and working days. For a more accurate figure, export last month&#39;s data from your telephony or CRM."
+   ],
+   [
+    "Can I drop manual call listening completely?",
+    "We would not recommend it. Software finds the problem calls, but the criteria, disputed cases and coaching stay with a person."
+   ],
+   [
+    "Can reps see their own scores?",
+    "The score and call summary appear in the deal record. Who sees which reports is set by CRM permissions: usually a rep sees their own calls and the manager sees the whole team."
+   ]
+  ],
+  "cta": [
+   "Let us size call QA for your volume",
+   "Tell us how many reps are on the phone and roughly how many calls they make a day. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/sales-call-analysis",
+    "Sales call analysis: what to check and how to coach"
+   ],
+   [
+    "/journal/ai-team-training",
+    "Training your team to work with AI agents"
+   ],
+   [
+    "/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka",
+    "Where sales teams lose clients inside the call"
+   ]
+  ]
+ }
+}

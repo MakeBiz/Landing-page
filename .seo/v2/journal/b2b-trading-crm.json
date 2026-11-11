@@ -1,0 +1,114 @@
+{
+ "slug": "b2b-trading-crm",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "CRM для B2B-торговли в ОАЭ: длинная сделка и учёт | MakeBiz",
+  "desc": "CRM для B2B и торговой компании в ОАЭ: длинная сделка, контакты, КП из каталога, связка с Zoho Books или QuickBooks от 10 000 AED.",
+  "h1": "CRM для B2B и торговой компании в ОАЭ: длинная сделка и учёт",
+  "crumb": "CRM для B2B-торговли",
+  "lead": "У торговой компании сделка тянется неделями, у клиента несколько контактных лиц, а счёт уходит из учётной системы. Простая воронка «заявка, звонок, оплата» здесь не работает.",
+  "answer": "B2B-торговле в ОАЭ нужна CRM, где у компании несколько контактов, сделка проходит этапы от запроса до оплаты, а КП собирается из каталога. В Битрикс24 это закрывает стандартная настройка MakeBiz Technologies от 10 000 AED с запуском от 14 дней. Интеграция с Zoho Books, QuickBooks или Odoo стоит от 10 000 AED отдельно, смета фиксируется до старта.",
+  "body": "<h2>Длинная B2B-сделка требует своих стадий</h2>\n<p>В рознице клиент решает за день. В B2B-торговле между первым запросом и оплатой проходят недели: уточнение спецификации, КП, согласование цены, иногда тендер, договор, счёт, отгрузка. Если всё это сжато в три стадии, сделки неделями висят на «Переговорах», и руководитель не понимает, где реально застрял заказ.</p>\n<p>Стадии стоит строить по решениям клиента, а у каждой задать критерий входа и ответственного. Типовая схема для торговой компании выглядит так:</p>\n<table><thead><tr><th>Стадия</th><th>Что фиксируется в CRM</th><th>Что автоматизировать</th></tr></thead><tbody>\n<tr><td><b>Запрос</b></td><td>Компания, контакт, канал, что нужно и в каком объёме</td><td>Лид из почты, формы или WhatsApp, задача менеджеру</td></tr>\n<tr><td><b>Квалификация</b></td><td>Объём, сроки, кто принимает решение, бюджет</td><td>Обязательные поля перед переходом дальше</td></tr>\n<tr><td><b>КП отправлено</b></td><td>Документ КП из каталога, версия, срок действия</td><td>Напоминание, если клиент молчит после КП</td></tr>\n<tr><td><b>Согласование</b></td><td>Скидка, условия оплаты и поставки, кто согласовал</td><td>Согласование скидки выше порога руководителем</td></tr>\n<tr><td><b>Договор и счёт</b></td><td>Договор, счёт в AED с VAT 5%, юрлицо клиента</td><td>Счёт из учётной системы, статус в сделке</td></tr>\n<tr><td><b>Отгрузка и оплата</b></td><td>Дата отгрузки, частичные оплаты, остаток долга</td><td>Задача на контроль оплаты по сроку</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies для торговой компании, стадии меняются под ваш процесс.</p>\n<p>Повторные заказы постоянных клиентов удобнее вести не в той же воронке, а в отдельной: у них другой цикл и другие задачи. Когда сделки разных типов перемешаны, отчёты по конверсии теряют смысл, подробнее в гайде <a href=\"/journal/bitrix24-crm-analytics\">почему отчёты CRM врут</a>.</p>\n<h2>Клиент в B2B это компания с несколькими контактами</h2>\n<p>У одного покупателя обычно несколько людей: закупщик, который запрашивает цену, технический специалист, который проверяет спецификацию, финансовый отдел, который платит, и директор, который подписывает. Если в CRM записан только один контакт, менеджер теряет половину переговоров.</p>\n<p>В Битрикс24 к компании привязываются все контакты, а в сделке видно, кто какую роль играет. Полезно добавить поля, которые нужны именно в ОАЭ: юрлицо клиента, номер TRN для счетов и то, работает он в free zone или на mainland. Как вести несколько своих юрлиц в одном портале, разобрано в новости <a href=\"/news/free-zone-i-mainland-v-odnom-bitrix24\">free zone и mainland в одном Битрикс24</a>.</p>\n<p>Переписка по почте тоже должна попадать в карточку. В Битрикс24 подключают общий и личные ящики менеджеров, письма привязываются к компании и сделке. Когда менеджер в отпуске, коллега видит всю историю и не переспрашивает клиента о том, что уже обсуждали.</p>\n<h2>КП собирается из каталога, а не в Word</h2>\n<p>Когда менеджеры собирают КП вручную, в них расходятся цены, артикулы и условия. В CRM коммерческое предложение формируется из товарного каталога: позиции, цена в AED, скидка, VAT 5% отдельной строкой, срок действия. Каждая версия сохраняется в сделке, и через месяц видно, что именно клиент получил.</p>\n<p>Для сложных согласований (заявка на спеццену, проверка кредитного лимита, договор с особыми условиями) удобны смарт-процессы. Когда они нужны, описано в гайде <a href=\"/journal/bitrix24-smart-processes\">про смарт-процессы Битрикс24</a>, а нестандартные доработки на странице <a href=\"/bitrix-development\">разработки под Битрикс24</a>.</p>\n<!--cta-->\n<h2>Деньги считает учётная система, CRM их показывает</h2>\n<p>Частая ошибка торговой компании: вести счета и оплаты в CRM и в бухгалтерии параллельно. Через квартал цифры расходятся, и никто не знает, какой верить. Рабочая схема другая: счёт выставляется в учётной системе, а CRM получает его номер, сумму и статус оплаты.</p>\n<p>Обычно между Битрикс24 и Zoho Books, QuickBooks или Odoo синхронизируют:</p>\n<ul>\n<li>справочник клиентов с реквизитами</li>\n<li>товары, цены и остатки, если они ведутся в учёте</li>\n<li>счета и их статусы: выставлен, оплачен частично, оплачен</li>\n<li>дебиторскую задолженность по каждому клиенту</li>\n</ul>\n<p>Интеграция с учётной системой у MakeBiz Technologies стоит от 10 000 AED, точная сумма фиксируется в смете до старта. Состав работ на странице <a href=\"/bitrix-integrations\">интеграций с учётом</a>. Перед проектом проверьте тариф: с ноября 2026 REST API в облаке на bitrix24.ae доступен только в линейке Vibe+.</p>\n<h2>Повторные продажи и долги видны в карточке клиента</h2>\n<p>Постоянные клиенты в торговле заказывают снова и снова, и CRM помогает не пропустить момент повторного заказа: робот ставит задачу менеджеру, если клиент не заказывал дольше обычного, а по просроченной оплате создаётся напоминание с суммой долга из учёта.</p>\n<p>Там, где менеджеры не успевают, подключают ИИ-агентов. <a href=\"/ai-agents/rop\">ИИ-РОП</a> следит за воронкой и отвечает клиенту, если менеджер молчит, а агент <a href=\"/ai-agents/zvonki\">Звонки</a> оценивает каждый разговор. Агенты подключаются к CRM и мессенджерам, пакет Старт с одним агентом стоит 5 000 AED разово, демонстрация на вашем процессе бесплатна.</p>\n<h2>Аналитика показывает цикл сделки и выручку по клиентам</h2>\n<p>Когда стадии честные, а суммы приходят из учёта, руководитель видит то, ради чего B2B-компании и ставят CRM: средний цикл сделки, конверсию из КП в договор, выручку по клиентам и менеджерам. Для сводных экранов есть <a href=\"/bi-analitika\">BI-аналитика</a> от 300 AED в месяц, первые 14 дней бесплатно. На тех же данных строится <a href=\"/journal/sales-forecasting-crm\">прогноз продаж по CRM</a>.</p>\n<p>Как это выглядит в большом проекте, можно посмотреть в российском кейсе <a href=\"/keysy/cdek-b2b\">СДЭК</a>: B2B-направление на коробке Битрикс24 с ИИ-агентами и BI-дашбордами.</p>\n<h2>Условный пример: дистрибьютор на 20 менеджеров</h2>\n<p>Условный дистрибьютор оборудования в Джебель Али: 20 менеджеров, клиенты в ОАЭ и соседних странах, счета в QuickBooks. КП собирают в таблицах, у каждого менеджера свой шаблон, а оплаты сверяют вручную раз в неделю. Клиентская база живёт в таблицах и почте менеджеров.</p>\n<p>Первым шагом компания решает, какие данные переносить из таблиц и почты, а какие оставить в архиве, об этом наша новость <a href=\"/news/chto-perenosit-pri-smene-crm\">что переносить при смене CRM</a>.</p>\n<p>Компания настраивает две воронки (новые клиенты и повторные заказы), каталог с ценами в AED, КП из каталога и согласование скидок. Затем подключает QuickBooks: счета и статусы оплат приходят в сделку. Бюджет понятен заранее: стандартная настройка от 10 000 AED и интеграция от 10 000 AED, обе суммы фиксируются в смете. Все цены на странице <a href=\"/ceny\">цен в AED</a>, порядок работ на странице <a href=\"/bitrix\">внедрения Битрикс24</a>.</p>",
+  "mid": [
+   "Настроим CRM под длинную B2B-сделку",
+   "Стадии, контакты, КП из каталога и связка с учётом. Настройка от 10 000 AED, интеграция от 10 000 AED",
+   "Обсудить проект"
+  ],
+  "faq": [
+   [
+    "Какой тариф Битрикс24 нужен торговой компании?",
+    "Зависит от числа пользователей и интеграций: Standard на 50 пользователей стоит 364 AED в месяц, Professional на 100 пользователей 731 AED, при оплате за год, цены bitrix24.ae на 23 октября 2026. Для интеграции через REST API в облаке проверьте линейку Vibe+."
+   ],
+   [
+    "Можно ли выставлять счета прямо из Битрикс24?",
+    "Технически можно, но торговой компании надёжнее выставлять счета в учётной системе и передавать номер, сумму и статус оплаты в сделку. Так цифры в CRM и бухгалтерии не расходятся."
+   ],
+   [
+    "С какими учётными системами интегрируется Битрикс24?",
+    "Мы подключаем Zoho Books, QuickBooks и Odoo. Интеграция стоит от 10 000 AED, состав синхронизации и сумма фиксируются в смете до старта."
+   ],
+   [
+    "Как вести в CRM повторные заказы?",
+    "Удобнее отдельной воронкой: у повторных заказов свой цикл и свои задачи. Робот напоминает менеджеру, если постоянный клиент не заказывал дольше обычного."
+   ],
+   [
+    "Сколько длится внедрение для B2B-компании?",
+    "Стандартная настройка CRM запускается от 14 дней. Интеграция с учётом и сложные согласования добавляют время, точный срок фиксируется в смете."
+   ]
+  ],
+  "cta": [
+   "Обсудим CRM для вашей торговли",
+   "Напишите, сколько у вас менеджеров, какая учётная система и как сейчас собираются КП. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-smart-processes",
+    "Смарт-процессы Битрикс24: что это и когда нужны"
+   ],
+   [
+    "/journal/sales-forecasting-crm",
+    "Прогноз продаж по данным CRM"
+   ],
+   [
+    "/news/free-zone-i-mainland-v-odnom-bitrix24",
+    "Free zone и mainland: один Битрикс24 или два"
+   ]
+  ]
+ },
+ "en": {
+  "title": "CRM for a B2B trading company in the UAE | MakeBiz",
+  "desc": "CRM for a B2B trading company in the UAE: long deals, multiple contacts, quotes from a catalog, and Zoho Books or QuickBooks sync from AED 10,000.",
+  "h1": "CRM for a B2B trading company in the UAE: long deals and accounting",
+  "crumb": "CRM for B2B trading",
+  "lead": "In a trading company a deal runs for weeks, the client has several people involved, and the invoice comes out of the accounting system. A simple enquiry, call, payment pipeline does not cope with that.",
+  "answer": "A B2B trading company in the UAE needs a CRM where each client company has several contacts, deals move through stages from enquiry to payment, and quotes are built from a catalog. In Bitrix24 this is covered by standard setup from MakeBiz Technologies starting at AED 10,000 and going live from 14 days. Integration with Zoho Books, QuickBooks or Odoo starts at AED 10,000 on top, with the estimate fixed before we start.",
+  "body": "<h2>A long B2B deal needs its own stages</h2>\n<p>In retail a customer decides within a day. In B2B trading, weeks pass between the first enquiry and payment: clarifying the spec, sending a quote, agreeing the price, sometimes a tender, then the contract, the invoice and the delivery. Squeeze all of that into three stages and deals sit in \"Negotiation\" for weeks while nobody can tell where an order is really stuck.</p>\n<p>Build stages around the buyer&#39;s decisions, and give each one an entry criterion and an owner. A typical setup for a trading company:</p>\n<table><thead><tr><th>Stage</th><th>What the CRM records</th><th>What to automate</th></tr></thead><tbody>\n<tr><td><b>Enquiry</b></td><td>Company, contact, channel, product and volume</td><td>Lead from email, form or WhatsApp, task for the rep</td></tr>\n<tr><td><b>Qualification</b></td><td>Volume, timing, decision maker, budget</td><td>Required fields before moving on</td></tr>\n<tr><td><b>Quote sent</b></td><td>Quote built from the catalog, version, validity date</td><td>Reminder if the client goes quiet</td></tr>\n<tr><td><b>Approval</b></td><td>Discount, payment and delivery terms, who approved</td><td>Manager sign-off for discounts above a threshold</td></tr>\n<tr><td><b>Contract and invoice</b></td><td>Contract, AED invoice with 5% VAT, client entity</td><td>Invoice from accounting, status in the deal</td></tr>\n<tr><td><b>Delivery and payment</b></td><td>Delivery date, part payments, balance due</td><td>Payment follow-up task on the due date</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies template for a trading company, adjusted to your process.</p>\n<p>Repeat orders from existing clients work well in a separate pipeline: they have a different cycle and different tasks. Mix deal types in one pipeline and conversion reports stop making sense, see our guide on <a href=\"/journal/bitrix24-crm-analytics\">why CRM reports lie</a>.</p>\n<h2>In B2B the client is a company with several contacts</h2>\n<p>One buyer usually means several people: a procurement officer asking for prices, an engineer checking the spec, a finance team that pays and a director who signs. If the CRM holds a single contact, your rep is missing half the conversation.</p>\n<p>In Bitrix24 every contact is linked to the company, and the deal shows who plays which role. Add the fields that matter in the UAE: the client&#39;s legal entity, its TRN for invoices, and whether it sits in a free zone or on the mainland. Running several of your own entities in one portal is covered in our news piece on <a href=\"/news/free-zone-i-mainland-v-odnom-bitrix24\">free zone and mainland in one Bitrix24</a>.</p>\n<p>Email belongs in the record too. Connect shared and personal mailboxes, and messages attach to the company and the deal.</p>\n<h2>Quotes come from the catalog, not from Word</h2>\n<p>When reps put quotes together by hand, prices, SKUs and terms drift apart. In the CRM a quote is built from the product catalog: line items, AED prices, discount, 5% VAT on its own line, validity date. Every version is saved in the deal, so a month later you can see exactly what the client received.</p>\n<p>For more involved approvals (a special price request, a credit limit check, a contract with custom terms) smart processes do the job. When you need them is explained in our guide to <a href=\"/journal/bitrix24-smart-processes\">Bitrix24 smart processes</a>, and custom work is on the <a href=\"/bitrix-development\">Bitrix24 development</a> page.</p>\n<!--cta-->\n<h2>Accounting holds the money, the CRM shows it</h2>\n<p>A common mistake in trading companies is tracking invoices and payments in both the CRM and the accounting system. Within a quarter the numbers diverge and nobody knows which to trust. The working model is simpler: the invoice is issued in accounting, and the CRM receives its number, amount and payment status.</p>\n<p>Between Bitrix24 and Zoho Books, QuickBooks or Odoo you would typically sync:</p>\n<ul>\n<li>the client list with company details</li>\n<li>products, prices and stock, if your accounting system holds them</li>\n<li>invoices and their status: issued, part paid, paid</li>\n<li>receivables for each client</li>\n</ul>\n<p>An accounting integration with MakeBiz Technologies starts at AED 10,000, and the exact figure is fixed in the estimate before we start. The scope is on the <a href=\"/bitrix-integrations\">accounting integrations</a> page. Check your plan first: since November 2026 cloud REST API access on bitrix24.ae is only available in the Vibe+ line.</p>\n<h2>Repeat orders and overdue payments show up on the client record</h2>\n<p>Regular clients in trading reorder again and again, and the CRM makes sure you do not miss the moment. An automation rule creates a task when a client has gone longer than usual without ordering, and an overdue invoice triggers a reminder with the balance pulled from accounting.</p>\n<p>Where reps cannot keep up, AI agents step in. The <a href=\"/ai-agents/rop\">AI sales manager agent</a> watches the pipeline and replies to the client if a rep goes quiet, and the <a href=\"/ai-agents/zvonki\">call agent</a> scores every conversation. Agents connect to your CRM and messengers, the Start package with one agent is AED 5,000 one-off, and a demo on your own process is free.</p>\n<h2>Analytics shows deal cycle and revenue by client</h2>\n<p>With honest stages and amounts coming from accounting, management finally sees what a B2B company puts in a CRM for: average deal cycle, quote-to-contract conversion, and revenue by client and by rep. Summary screens come from <a href=\"/bi-analitika\">BI analytics</a> starting at AED 300 a month, with the first 14 days free. The same data feeds a <a href=\"/journal/sales-forecasting-crm\">sales forecast from CRM data</a>.</p>\n<p>For a larger example, see our Russian project for <a href=\"/keysy/cdek-b2b\">CDEK</a>: a B2B line of business on on-premise Bitrix24 with AI agents and BI dashboards.</p>\n<h2>A worked example: a distributor with 20 reps</h2>\n<p>A hypothetical equipment distributor in Jebel Ali has 20 reps, clients in the UAE and neighbouring countries, and invoices in QuickBooks. Quotes are built in spreadsheets with a different template per rep, payments are reconciled by hand once a week, and the client base lives in spreadsheets and inboxes.</p>\n<p>First the company decides what to migrate and what to archive, as described in our news piece on <a href=\"/news/chto-perenosit-pri-smene-crm\">what to move when you switch CRM</a>. Then it sets up two pipelines (new clients and repeat orders), a catalog with AED prices, quotes from the catalog and discount approval, and connects QuickBooks so invoices and payment statuses flow into the deal. The budget is clear up front: standard setup from AED 10,000 and integration from AED 10,000, both fixed in the estimate. All prices are on our <a href=\"/ceny\">pricing page</a>, and the process is on the <a href=\"/bitrix\">Bitrix24 implementation</a> page.</p>",
+  "mid": [
+   "We set up CRM for long B2B deals",
+   "Stages, contacts, catalog quotes and an accounting link. Setup from AED 10,000, integration from AED 10,000",
+   "Discuss your project"
+  ],
+  "faq": [
+   [
+    "Which Bitrix24 plan does a trading company need?",
+    "It depends on users and integrations: Standard for 50 users is AED 364 a month and Professional for 100 users AED 731, billed annually, bitrix24.ae prices as of 23 October 2026. For cloud REST API integrations, check the Vibe+ line."
+   ],
+   [
+    "Can we issue invoices straight from Bitrix24?",
+    "You can, but a trading company is safer issuing invoices in its accounting system and passing the number, amount and payment status to the deal. That way CRM and accounting figures stay in line."
+   ],
+   [
+    "Which accounting systems does Bitrix24 integrate with?",
+    "We connect Zoho Books, QuickBooks and Odoo. Integration starts at AED 10,000, and the sync scope and price are fixed in the estimate before we start."
+   ],
+   [
+    "How should repeat orders be handled in the CRM?",
+    "A separate pipeline works well, since repeat orders have their own cycle and tasks. An automation rule reminds the rep when a regular client has not ordered for longer than usual."
+   ],
+   [
+    "How long does implementation take for a B2B company?",
+    "Standard CRM setup goes live from 14 days. An accounting integration and complex approvals add time, and the exact timeline is fixed in the estimate."
+   ]
+  ],
+  "cta": [
+   "Let us talk about CRM for your trading business",
+   "Tell us how many reps you have, which accounting system you use and how quotes are built today. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-smart-processes",
+    "Bitrix24 smart processes: what they are and when you need them"
+   ],
+   [
+    "/journal/sales-forecasting-crm",
+    "Sales forecasting from CRM data"
+   ],
+   [
+    "/news/free-zone-i-mainland-v-odnom-bitrix24",
+    "Free zone and mainland: one Bitrix24 or two"
+   ]
+  ]
+ }
+}

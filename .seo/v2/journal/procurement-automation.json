@@ -1,0 +1,114 @@
+{
+ "slug": "procurement-automation",
+ "date": "2026-11-11",
+ "rubric_ru": "Автоматизация",
+ "rubric_en": "Automation",
+ "ru": {
+  "title": "Автоматизация закупок: от заявки до выбора поставщика | MakeBiz",
+  "desc": "Автоматизация закупок в компании в ОАЭ: шесть этапов от заявки до выбора поставщика и где работает ИИ-агент. Один агент 5 000 AED разово.",
+  "h1": "Автоматизация закупок: от заявки до выбора поставщика",
+  "crumb": "Автоматизация закупок",
+  "lead": "В небольшой компании закупка часто живёт в почте, WhatsApp и Excel: заявку пишут в чат, запросы рассылают вручную, предложения сводят в таблицу, которая потом теряется. Разбираем, какие этапы можно отдать системе и что остаётся за закупщиком.",
+  "answer": "Автоматизация закупок закрывает путь от заявки до выбора поставщика: заявка в CRM, рассылка запросов по спецификации, сбор КП, сравнение по цене, сроку и условиям, согласование. ИИ-агент закупок от MakeBiz Technologies берёт на себя рассылку, напоминания и сведение предложений, а решение остаётся за человеком. Внедрение одного агента стоит 5 000 AED разово, обслуживание 10% от стоимости внедрения в месяц, то есть 500 AED.",
+  "body": "<h2>Закупка проходит шесть этапов, и у каждого свой владелец</h2>\n<p>Прежде чем что-то автоматизировать, процесс стоит разложить на этапы. В большинстве компаний их шесть, даже если никто их так не называет. Таблица показывает, кто ведёт каждый этап после автоматизации и где остаются данные.</p>\n<table><thead><tr><th>Этап</th><th>Что происходит</th><th>Кто делает после автоматизации</th><th>Где данные</th></tr></thead><tbody>\n<tr><td><b>1. Заявка</b></td><td>Инициатор описывает, что нужно, сколько и к какому сроку</td><td>Сотрудник заполняет форму в CRM</td><td>Карточка заявки</td></tr>\n<tr><td><b>2. Согласование</b></td><td>Руководитель подтверждает потребность и бюджет</td><td>Робот CRM отправляет на согласование по сумме</td><td>Карточка заявки</td></tr>\n<tr><td><b>3. Запросы поставщикам</b></td><td>Спецификация уходит нескольким поставщикам</td><td>ИИ-агент рассылает и напоминает</td><td>Письма и сообщения в CRM</td></tr>\n<tr><td><b>4. Сбор КП</b></td><td>Ответы приходят в PDF, Excel, письмом и в WhatsApp</td><td>ИИ-агент разбирает и раскладывает по позициям</td><td>Документы в карточке</td></tr>\n<tr><td><b>5. Сравнение и выбор</b></td><td>Цены, сроки и условия сводятся вместе</td><td>Агент готовит таблицу, закупщик решает</td><td>Таблица сравнения в CRM</td></tr>\n<tr><td><b>6. Заказ и поставка</b></td><td>Заказ, оплата, контроль срока</td><td>Робот CRM ставит задачи, закупщик ведёт</td><td>Сделка и учётная система</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies для типовой закупки товаров и услуг, без тендерных процедур.</p>\n<p>Больше всего ручного труда на третьем, четвёртом и пятом этапах: письма, ожидание ответов и перенос цифр из файлов. Там агент и забирает основную рутину, а первый, второй и шестой этапы закрываются обычными роботами CRM.</p>\n<h2>Заявку оформляют в CRM, а не в чате</h2>\n<p>Автоматизация начинается не с ИИ, а с формы заявки. Пока потребность присылают в общий чат голосовым сообщением, никакая система не поймёт, что именно купить. В Битрикс24 заявку удобно вести отдельным смарт-процессом со своими стадиями: новая, на согласовании, в запросе, сравнение, заказ, закрыта. Как такие процессы настраивают, смотрите на странице <a href=\"/bitrix-development\">доработки Битрикс24</a>.</p>\n<p>Обязательных полей немного:</p>\n<ul>\n<li>позиция или ссылка на номенклатуру, количество и единица измерения</li>\n<li>нужный срок и адрес поставки: склад, офис или объект</li>\n<li>ориентир по бюджету и подразделение, на которое пойдут расходы</li>\n<li>вложения: фото, чертёж или спецификация, если они есть</li>\n</ul>\n<p>Правило простое: без этих полей заявка не переходит на следующую стадию. Робот CRM отправляет её на согласование руководителю, а если сумма выше порога, который вы задали, то ещё и финансовому директору. Это обычная автоматизация, ИИ здесь не нужен.</p>\n<h2>Запросы и напоминания поставщикам забирает агент</h2>\n<p>После согласования начинается работа, которую закупщики любят меньше всего. Нужно выбрать поставщиков по категории, разослать спецификацию, через день напомнить тем, кто молчит, ответить на уточняющие вопросы и не забыть, кому что отправлено. <a href=\"/ai-agents/zakupki\">Агент закупок</a> делает это сам: берёт поставщиков из вашей базы по категории, отправляет запрос по почте или в мессенджер и напоминает тем, кто не ответил.</p>\n<p>Каждое письмо и каждый ответ сохраняются в карточке заявки, поэтому история не уходит вместе с сотрудником. Если поставщики общаются в WhatsApp, канал подключают к CRM официально, подробнее на странице <a href=\"/bitrix-messengers\">мессенджеров в Битрикс24</a>. Агент не обещает объёмов и не торгуется: если поставщик спрашивает что-то за пределами спецификации, вопрос уходит закупщику.</p>\n<!--cta-->\n<h2>Предложения сводятся в одну таблицу на одной базе</h2>\n<p>Ответы поставщиков приходят в разном виде: PDF со сканом печати, Excel-прайс на сотню строк, цена прямо в тексте письма. Агент разбирает каждый документ и раскладывает его по позициям заявки: цена за единицу, валюта, VAT внутри или сверху, срок поставки, наличие, условия оплаты, гарантия. Что умеет такой разбор и где у него граница, мы описали в гайде о <a href=\"/journal/invoice-document-recognition\">распознавании счетов и документов</a>.</p>\n<p>Главное в сравнении не скорость, а одна база. Цены приводятся к одной валюте по зафиксированному курсу с датой, все суммы показываются без VAT, а налог (в ОАЭ стандартная ставка 5%) стоит отдельной колонкой. Четыре места, где на сведении теряются деньги, разобраны в новости <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">о сравнении поставщиков</a>, а шаблон таблицы со всеми колонками есть в гайде <a href=\"/journal/supplier-quote-comparison\">о сравнении коммерческих предложений</a>.</p>\n<p>Позиции, где данные не сходятся или поставщик ответил не на тот вопрос, агент помечает отдельно. Закупщик смотрит только их, а не перепроверяет всю таблицу.</p>\n<h2>Решение и ответственность остаются за человеком</h2>\n<p>Агент готовит выбор, но не делает его. Дело не только в осторожности: часть критериев нигде не записана. Поставщик, который однажды выручил в срочной ситуации, новый игрок с низкой ценой, но без истории, скидка, которую обсудили на встрече. Закупщик видит таблицу, рекомендацию агента с объяснением и принимает решение сам.</p>\n<p>За человеком остаются:</p>\n<ul>\n<li>переговоры о цене и условиях, особенно с ключевыми поставщиками</li>\n<li>выбор нового поставщика для важной категории</li>\n<li>исключения: срочная закупка, единственный поставщик, нестандартная оплата</li>\n<li>подпись заказа или договора</li>\n</ul>\n<p>Где проходит граница между агентом и роботом CRM, разобрано на странице <a href=\"/bitrix-ai-crm\">ИИ в Битрикс24</a>. Коротко: робот выполняет правило, агент работает с текстом и документами, человек отвечает за решение.</p>\n<h2>Запуск начинается с одной категории закупок</h2>\n<ol>\n<li>Демонстрация: 30-40 минут, бесплатно, показываем агента на вашем процессе</li>\n<li>Выбор категории: частые закупки с понятной спецификацией, например расходники или упаковка</li>\n<li>База поставщиков: контакты, категории и история цен, если она есть</li>\n<li>Правила: какие поля обязательны, сколько поставщиков опрашивать, сколько ждать ответа</li>\n<li>Подключение к CRM, почте и мессенджерам, работа агента вместе с закупщиком</li>\n<li>Расширение на другие категории, когда первая работает без ручных правок</li>\n</ol>\n<p>Внедрение одного агента по пакету Старт стоит 5 000 AED разово, команда агентов (например, закупки и финансы) по пакету Бизнес 10 000 AED. Если заказ нужно сразу передавать в Zoho Books, QuickBooks или Odoo, интеграция с учётной системой стоит от 10 000 AED. Все цены на странице <a href=\"/ceny\">цен в AED</a>, без лицензий и VAT.</p>\n<h2>Условный пример: торговая компания с тремя закупщиками</h2>\n<p>Условная торговая компания в Дубае закупает упаковку, расходники и логистические услуги. Заявки приходят в общий чат, каждый закупщик ведёт свой Excel, а с уходом сотрудника пропадает и история цен. После запуска заявки идут через форму в CRM, агент рассылает запросы пяти поставщикам по категории, напоминает молчащим и собирает таблицу сравнения в карточке. Закупщики тратят время на спорные позиции и переговоры, а руководитель видит все процедуры и их статусы в одном списке. Разовые расходы: 5 000 AED за агента, обслуживание 500 AED в месяц.</p>",
+  "mid": [
+   "Покажем агента закупок на вашем процессе",
+   "Рассылка запросов, сбор КП и сравнение поставщиков прямо в CRM. Один агент 5 000 AED разово, демонстрация бесплатно",
+   "Показать на нашем процессе"
+  ],
+  "faq": [
+   [
+    "Можно ли автоматизировать закупки, не меняя CRM?",
+    "Да, если в CRM можно завести отдельный процесс заявок и подключить почту. Чаще всего мы делаем это в Битрикс24 через смарт-процесс, а агент подключается к нему и к мессенджерам компании."
+   ],
+   [
+    "С каких закупок начать автоматизацию?",
+    "С частых и повторяющихся, где спецификация понятна, а поставщиков несколько: расходники, упаковка, типовые услуги. Разовые и стратегические закупки подключают позже, когда правила отлажены."
+   ],
+   [
+    "Агент сам выбирает поставщика?",
+    "Нет. Агент рассылает запросы, собирает КП, сводит их в таблицу и даёт рекомендацию с объяснением. Решение, переговоры и подпись заказа остаются за закупщиком."
+   ],
+   [
+    "Сколько стоит автоматизация закупок?",
+    "Один агент по пакету Старт стоит 5 000 AED разово, обслуживание 10% от стоимости внедрения в месяц. Настройка CRM и интеграция с учётной системой считаются отдельно, смета фиксируется до старта."
+   ],
+   [
+    "Где хранятся данные о поставщиках и ценах?",
+    "В вашей CRM: заявки, письма, документы и таблицы сравнения лежат в карточках. Доступы и данные остаются у компании, мы работаем под отдельной учётной записью."
+   ]
+  ],
+  "cta": [
+   "Обсудим ваши закупки",
+   "Напишите, сколько закупок в месяц проходит через отдел и где сейчас живут заявки и КП. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/supplier-quote-comparison",
+    "Сравнение коммерческих предложений поставщиков: критерии и таблица"
+   ],
+   [
+    "/journal/invoice-document-recognition",
+    "Распознавание счетов и документов: что умеет ИИ и где граница"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Где теряются деньги при сравнении поставщиков"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Procurement automation: from request to supplier choice | MakeBiz",
+  "desc": "Procurement automation for a UAE company: six stages from purchase request to supplier choice and where an AI agent fits. One agent, AED 5,000 one-off.",
+  "h1": "Procurement automation: from purchase request to supplier choice",
+  "crumb": "Procurement automation",
+  "lead": "In a small or mid-sized company, purchasing usually lives in email, WhatsApp and Excel: requests arrive in a group chat, RFQs go out by hand and quotes end up in a spreadsheet nobody can find later. Here is which stages a system can take over and what stays with your buyer.",
+  "answer": "Procurement automation covers the path from purchase request to supplier choice: a request in the CRM, RFQs sent from a specification, quotes collected, compared on price, lead time and terms, then approved. The MakeBiz Technologies procurement AI agent handles the RFQs, follow-ups and quote consolidation, while the decision stays with a person. One agent costs AED 5,000 one-off to implement, and support is 10% of the implementation fee per month, so AED 500.",
+  "body": "<h2>Purchasing runs in six stages, and each has an owner</h2>\n<p>Before you automate anything, break the process into stages. Most companies have six, even if nobody calls them that. The table shows who runs each stage once it is automated and where the data ends up.</p>\n<table><thead><tr><th>Stage</th><th>What happens</th><th>Who does it after automation</th><th>Where the data lives</th></tr></thead><tbody>\n<tr><td><b>1. Request</b></td><td>Someone states what they need, how many and by when</td><td>The employee fills in a CRM form</td><td>Request record</td></tr>\n<tr><td><b>2. Approval</b></td><td>A manager confirms the need and the budget</td><td>A CRM automation rule routes it by amount</td><td>Request record</td></tr>\n<tr><td><b>3. RFQs</b></td><td>The specification goes to several suppliers</td><td>The AI agent sends RFQs and chases replies</td><td>Emails and chats in the CRM</td></tr>\n<tr><td><b>4. Quote collection</b></td><td>Replies arrive as PDFs, Excel files, emails and WhatsApp messages</td><td>The AI agent reads them and maps them to line items</td><td>Documents in the record</td></tr>\n<tr><td><b>5. Comparison and choice</b></td><td>Prices, lead times and terms are put side by side</td><td>The agent builds the table, the buyer decides</td><td>Comparison table in the CRM</td></tr>\n<tr><td><b>6. Order and delivery</b></td><td>Purchase order, payment, delivery tracking</td><td>CRM rules create tasks, the buyer manages it</td><td>Deal and accounting system</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies outline for routine purchases of goods and services, excluding formal tenders.</p>\n<p>Stages three to five carry most of the manual work, so that is where the agent goes. The rest is ordinary CRM automation.</p>\n<h2>Requests belong in the CRM, not in a group chat</h2>\n<p>Automation starts with a request form, not with AI. A voice note in a group chat tells no system what to buy. In Bitrix24 a purchase request works well as a separate smart process with its own stages: new, awaiting approval, RFQ sent, comparison, ordered, closed. See how these are built on our <a href=\"/bitrix-development\">Bitrix24 development</a> page.</p>\n<p>Required fields:</p>\n<ul>\n<li>item or catalogue reference, quantity and unit of measure</li>\n<li>required date and delivery address: warehouse, office or site</li>\n<li>budget estimate and the cost centre it is charged to</li>\n<li>attachments: photo, drawing or specification, if there is one</li>\n</ul>\n<p>Without these fields a request does not move on. A CRM rule sends it to the line manager, and above a threshold you set, to the finance director too. No AI needed here.</p>\n<h2>The agent takes over RFQs and supplier follow-ups</h2>\n<p>After approval comes the part buyers like least: sending the specification, chasing silent suppliers and tracking who got what. The <a href=\"/ai-agents/zakupki\">procurement agent</a> does this itself: it takes suppliers for the category from your database, sends the RFQ by email or messenger and follows up with anyone who has not replied.</p>\n<p>Every message is saved in the request record, so history stays when people leave. If your suppliers work on WhatsApp, the channel is connected to the CRM through the official platform, see our <a href=\"/bitrix-messengers\">messengers in Bitrix24</a> page. The agent does not promise volumes and does not negotiate: if a supplier asks something outside the specification, the question goes to the buyer.</p>\n<!--cta-->\n<h2>Quotes go into one table on one basis</h2>\n<p>Replies come as scanned PDFs, long Excel price lists or a price typed into an email. The agent reads each document and maps it to the request line items: unit price, currency, VAT included or on top, lead time, stock, payment terms, warranty. What this kind of extraction can do and where it stops is covered in our guide to <a href=\"/journal/invoice-document-recognition\">invoice and document recognition</a>.</p>\n<p>What matters in a comparison is not speed but a common basis. Prices are converted to one currency at a recorded rate and date, all amounts are shown excluding VAT, and the tax (the standard UAE rate is 5%) sits in its own column. The four places where money leaks during consolidation are covered in our news piece on <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">comparing suppliers</a>, and a table template with every column is in the guide to <a href=\"/journal/supplier-quote-comparison\">comparing supplier quotes</a>.</p>\n<p>Lines that do not add up are flagged, so the buyer reviews those instead of the whole table.</p>\n<h2>The decision and the accountability stay with a person</h2>\n<p>The agent prepares the choice, it does not make it. Some criteria are written down nowhere: the supplier who saved you on an urgent order, a cheap newcomer with no track record, a discount agreed in a meeting. The buyer sees the table and the agent&#39;s reasoning, then decides.</p>\n<p>These stay with people:</p>\n<ul>\n<li>negotiating price and terms, especially with key suppliers</li>\n<li>choosing a new supplier for an important category</li>\n<li>exceptions: urgent orders, a single source, unusual payment terms</li>\n<li>signing the purchase order or contract</li>\n</ul>\n<p>The line between an AI agent and a CRM automation rule is explained on our <a href=\"/bitrix-ai-crm\">AI in Bitrix24</a> page. In short: a rule executes a condition, an agent works with text and documents, and a person owns the decision.</p>\n<h2>Roll-out starts with one purchase category</h2>\n<ol>\n<li>Demo: 30 to 40 minutes, free, we show the agent on your own process</li>\n<li>Pick a category: frequent purchases with a clear specification, such as consumables or packaging</li>\n<li>Supplier base: contacts, categories and price history, if you have it</li>\n<li>Rules: required fields, how many suppliers to ask, how long to wait for a reply</li>\n<li>Connect the CRM, email and messengers, then the agent works alongside your buyer</li>\n<li>Extend to more categories once the first runs without manual fixes</li>\n</ol>\n<p>One agent on the Start package is AED 5,000 one-off, and a team of agents (for example procurement and finance) on the Business package is AED 10,000. If purchase orders need to flow straight into Zoho Books, QuickBooks or Odoo, the accounting integration starts from AED 10,000. All prices are on our <a href=\"/ceny\">pricing page</a>, excluding licences and VAT.</p>\n<h2>A worked example: a trading company with three buyers</h2>\n<p>A hypothetical Dubai trading company buys packaging, consumables and logistics. Requests land in a group chat and each buyer keeps their own Excel file. After the roll-out requests come through a CRM form, the agent sends RFQs to five suppliers per category, chases the silent ones and builds the comparison table in the record. Buyers work on flagged lines and negotiations, and the manager sees every purchase in one list. One-off cost: AED 5,000 for the agent, then AED 500 a month for support.</p>",
+  "mid": [
+   "See the procurement agent on your own process",
+   "RFQs, quote collection and supplier comparison inside your CRM. One agent AED 5,000 one-off, the demo is free",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "Can we automate procurement without changing our CRM?",
+    "Yes, as long as the CRM can hold a separate request process and connect to email. We usually build it in Bitrix24 as a smart process, and the agent connects to it and to your messengers."
+   ],
+   [
+    "Which purchases should we automate first?",
+    "Frequent, repeat purchases with a clear specification and several suppliers: consumables, packaging, standard services. One-off and strategic purchases come later, once the rules are settled."
+   ],
+   [
+    "Does the agent choose the supplier?",
+    "No. It sends RFQs, collects quotes, builds the comparison table and gives a recommendation with its reasoning. The decision, the negotiation and the signature stay with your buyer."
+   ],
+   [
+    "How much does procurement automation cost?",
+    "One agent on the Start package is AED 5,000 one-off, with support at 10% of the implementation fee per month. CRM setup and accounting integration are quoted separately, and the estimate is fixed before work starts."
+   ],
+   [
+    "Where is supplier and price data stored?",
+    "In your CRM: requests, emails, documents and comparison tables sit in the records. Access and data stay with your company, and we work under a separate user account."
+   ]
+  ],
+  "cta": [
+   "Let us look at your purchasing",
+   "Tell us how many purchases go through the team each month and where requests and quotes live today. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/supplier-quote-comparison",
+    "Comparing supplier quotes: criteria and a comparison table"
+   ],
+   [
+    "/journal/invoice-document-recognition",
+    "AI invoice and document recognition: what it does and its limits"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Where money leaks when comparing suppliers"
+   ]
+  ]
+ }
+}

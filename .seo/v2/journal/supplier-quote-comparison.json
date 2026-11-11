@@ -1,0 +1,114 @@
+{
+ "slug": "supplier-quote-comparison",
+ "date": "2026-11-11",
+ "rubric_ru": "Документы",
+ "rubric_en": "Documents",
+ "ru": {
+  "title": "Сравнение КП поставщиков: критерии и таблица | MakeBiz",
+  "desc": "Как сравнить коммерческие предложения поставщиков: 9 колонок шаблона, веса критериев и единая база в AED. Агент закупок соберёт таблицу, 5 000 AED.",
+  "h1": "Сравнение коммерческих предложений поставщиков: критерии и таблица",
+  "crumb": "Сравнение КП поставщиков",
+  "lead": "Четыре поставщика прислали четыре КП в разном виде, и закупщику нужно понять, какое выгоднее. Даём шаблон таблицы, порядок сравнения и показываем, как агент собирает её из писем и файлов.",
+  "answer": "Коммерческие предложения поставщиков сравнивают по позициям и на одной базе: цена за единицу без VAT в AED по зафиксированному курсу, доставка, срок и наличие, условия оплаты, минимальная партия, гарантия и срок действия КП. Веса критериев задают до того, как открыли предложения. Агент закупок MakeBiz Technologies собирает такую таблицу из писем и файлов сам: внедрение одного агента 5 000 AED разово, демонстрация бесплатно.",
+  "body": "<h2>Сравнивают позиции, а не итоговые суммы</h2>\n<p>Итог в КП почти никогда нельзя сравнить напрямую. Один поставщик посчитал девять позиций из десяти, другой дал цену за коробку вместо штуки, третий включил доставку, четвёртый нет. Если поставить рядом итоговые суммы, выиграет тот, кто чего-то не посчитал.</p>\n<p>Поэтому строка таблицы это позиция заявки, а столбцы это поставщики. До того как открывать ответы, зафиксируйте список позиций, количества и базовую единицу измерения: штуку, килограмм, метр. Тогда каждое предложение раскладывается в одну сетку, и пропуски видны сразу.</p>\n<h2>Девять колонок покрывают почти любую закупку</h2>\n<p>Для каждой позиции и каждого поставщика в таблице заполняются одни и те же поля. Вот шаблон, с которого удобно начать:</p>\n<table><thead><tr><th>Колонка</th><th>Что записывать</th><th>Как привести к одной базе</th></tr></thead><tbody>\n<tr><td><b>Цена за единицу</b></td><td>Цена из КП и единица, за которую она дана</td><td>Пересчитать в базовую единицу заявки</td></tr>\n<tr><td><b>Валюта и курс</b></td><td>Валюта предложения</td><td>Перевести в AED по курсу на дату сравнения, курс и дату записать</td></tr>\n<tr><td><b>VAT</b></td><td>Включён, сверху или не указан</td><td>Цена без VAT, налог отдельной колонкой, «не указан» значит вопрос поставщику</td></tr>\n<tr><td><b>Доставка</b></td><td>До склада, самовывоз, кто платит логистику</td><td>Стоимость доставки добавить к цене или вынести строкой</td></tr>\n<tr><td><b>Срок и наличие</b></td><td>Со склада в ОАЭ или под заказ</td><td>Записать в днях от заказа до поставки</td></tr>\n<tr><td><b>Условия оплаты</b></td><td>Предоплата, отсрочка, оплата частями</td><td>Доля предоплаты и отсрочка в днях</td></tr>\n<tr><td><b>Минимальная партия</b></td><td>Минимальный заказ и кратность упаковки</td><td>Проверить, что ваше количество её проходит</td></tr>\n<tr><td><b>Гарантия и возврат</b></td><td>Срок и условия</td><td>Одна формулировка для всех поставщиков</td></tr>\n<tr><td><b>Срок действия КП</b></td><td>До какой даты цена в силе</td><td>Просроченное КП не сравнивать без подтверждения</td></tr>\n</tbody></table>\n<p class=\"note\">Шаблон MakeBiz Technologies. Под категорию добавляют свои колонки: сертификаты, страну происхождения, сервисное обслуживание.</p>\n<p>Отдельно о валюте и VAT: в ОАЭ стандартная ставка VAT 5%, и если одно КП с налогом, а другое без, разница легко перекрывает разрыв между близкими предложениями. Четыре такие ловушки мы разобрали в новости о том, <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">где теряются деньги при сравнении поставщиков</a>.</p>\n<h2>Веса критериев задают до того, как открыли предложения</h2>\n<p>Если веса придумывают после, они незаметно подгоняются под поставщика, который уже нравится. Поэтому их записывают в карточку закупки заранее. Условный пример для расходников: цена 50, срок 20, условия оплаты 15, надёжность по истории 15. Для срочной закупки вес срока поднимают, для крупной партии важнее становятся оплата и минимальная партия.</p>\n<p>Баллы считают просто: поставщик с самой низкой ценой получает по цене 10, остальные меньше пропорционально разнице. Так же со сроком. Итог это сумма баллов, умноженных на веса.</p>\n<p>Надёжность считают по истории, а не по ощущениям: сколько раз поставщик сорвал срок, менял цену после КП, долго не отвечал. Такие данные появляются, только если закупки ведутся в CRM, а не в личных таблицах. Как устроить сам процесс заявок, мы описали в гайде об <a href=\"/journal/procurement-automation\">автоматизации закупок</a>.</p>\n<!--cta-->\n<h2>Агент собирает таблицу из писем и файлов</h2>\n<p>Руками это выглядит так: закупщик открывает каждое письмо, ищет цену в PDF, переносит её в Excel, пересчитывает коробки в штуки и надеется, что ничего не пропустил. <a href=\"/ai-agents/zakupki\">Агент закупок</a> делает ту же работу по правилам, которые вы задали:</p>\n<ul>\n<li>забирает КП из почты и мессенджеров, подключённых к CRM</li>\n<li>читает PDF, Excel, сканы и текст письма и раскладывает цифры по позициям заявки</li>\n<li>пересчитывает единицы и валюту по вашему курсу, отделяет VAT</li>\n<li>у каждого значения сохраняет источник: файл и место в нём, чтобы проверить в один клик</li>\n<li>помечает пропущенные позиции, неуказанный VAT, просроченное КП и цену, которая сильно отличается от истории</li>\n</ul>\n<p>Если данных не хватает, агент пишет поставщику уточняющий вопрос и ждёт ответа. Как ИИ читает документы и где у этого граница, разобрано в гайде о <a href=\"/journal/invoice-document-recognition\">распознавании счетов и документов</a>.</p>\n<h2>Рекомендация агента объясняет выбор, а не делает его</h2>\n<p>Когда таблица собрана, агент считает баллы по вашим весам и пишет короткое объяснение: почему поставщик Б первый, в чём риск у поставщика А, какие позиции у В стоит перезапросить. Решение принимает закупщик. Если он выбирает не первого по баллам, причина записывается в карточку одной строкой, и через полгода её можно найти.</p>\n<p>Граница здесь та же, что в любой работе агента: он работает с документами и цифрами, а переговоры, исключения и подпись остаются за человеком. Подробнее о разделении ролей между агентом, роботом и сотрудником на странице <a href=\"/bitrix-ai-crm\">ИИ в Битрикс24</a>.</p>\n<h2>Таблица хранится вместе с решением</h2>\n<p>Сравнение, которое живёт в личном файле, исчезает со следующей закупкой. В CRM таблица остаётся в карточке вместе с исходными КП, выбранным поставщиком и причиной выбора. В Битрикс24 для этого настраивают смарт-процесс закупок, подробнее на странице <a href=\"/bitrix-development\">доработки Битрикс24</a>.</p>\n<p>Через несколько месяцев из этих карточек складывается история цен по каждой позиции и поставщику. Её удобно смотреть в дашборде <a href=\"/bi-analitika\">BI-аналитики</a>: тариф Базовый стоит 300 AED в месяц, первые 14 дней бесплатно. Все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<h2>Условный пример: четыре предложения на расходники</h2>\n<p>Условная компания запросила десять позиций у четырёх поставщиков. У первого самая низкая итоговая сумма, но две позиции не посчитаны, а VAT не указан. Второй дал цену за коробку по 12 штук. Третий предлагает поставку под заказ с долгим сроком. Четвёртый включил доставку до склада в цену. После приведения к одной базе первый уходит на уточнение, а реальный выбор идёт между вторым и четвёртым, и решает его вес срока, записанный заранее.</p>",
+  "mid": [
+   "Соберём таблицу сравнения КП за вас",
+   "Агент закупок разбирает предложения из почты и мессенджеров и сводит их на одной базе. 5 000 AED разово",
+   "Показать на нашем процессе"
+  ],
+  "faq": [
+   [
+    "Сколько поставщиков сравнивать в одной закупке?",
+    "Жёсткого правила нет: для частых закупок обычно опрашивают трёх-пять, для крупной разовой поставки больше. Важнее, чтобы все получили одну спецификацию и один срок ответа."
+   ],
+   [
+    "Что делать, если поставщик не указал VAT?",
+    "Не угадывать, а уточнить письменно. До ответа КП помечается как неполное, иначе разница в 5% может решить выбор за вас."
+   ],
+   [
+    "Можно ли сравнивать КП в Excel?",
+    "Можно, если шаблон один для всех закупок и таблица хранится вместе с решением. Проблемы начинаются, когда у каждого закупщика свой файл, а история цен пропадает со сменой сотрудника."
+   ],
+   [
+    "Как агент получает КП поставщиков?",
+    "Из почты и мессенджеров, подключённых к CRM. Он разбирает PDF, Excel и текст письма, раскладывает цифры по позициям заявки и указывает источник каждого значения."
+   ],
+   [
+    "Сколько стоит автоматическое сравнение КП?",
+    "Агент закупок по пакету Старт стоит 5 000 AED разово, обслуживание 10% от стоимости внедрения в месяц. Работу агента на вашем процессе показываем бесплатно за 30-40 минут."
+   ]
+  ],
+  "cta": [
+   "Покажите нам свою закупку",
+   "Напишите, сколько поставщиков обычно отвечает и в каком виде приходят КП. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/procurement-automation",
+    "Автоматизация закупок: от заявки до выбора поставщика"
+   ],
+   [
+    "/journal/invoice-document-recognition",
+    "Распознавание счетов и документов: что умеет ИИ и где граница"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Где теряются деньги при сравнении поставщиков"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Comparing supplier quotes: criteria and a table | MakeBiz",
+  "desc": "How to compare supplier quotes in the UAE: a 9-column template, criteria weights and one basis in AED. Our procurement agent builds the table, AED 5,000.",
+  "h1": "Comparing supplier quotes: criteria and a comparison table",
+  "crumb": "Comparing supplier quotes",
+  "lead": "Four suppliers sent four quotes in four different formats, and your buyer has to work out which one is actually cheaper. Here is a table template, the order to compare in, and how an AI agent builds the table from emails and files.",
+  "answer": "Compare supplier quotes line by line and on one basis: unit price excluding VAT in AED at a recorded exchange rate, delivery, lead time and stock, payment terms, minimum order, warranty and quote validity. Set the weights for each criterion before you open the quotes. The MakeBiz Technologies procurement agent builds this table from emails and files on its own: one agent is AED 5,000 one-off to implement, and the demo is free.",
+  "body": "<h2>Compare line items, not quote totals</h2>\n<p>A quote total is almost never comparable as it stands. One supplier priced nine items out of ten, another quoted per box instead of per piece, a third included delivery and a fourth did not. Put the totals side by side and the winner is whoever left something out.</p>\n<p>So each row in the table is a line item from your request, and each column is a supplier. Before you open any replies, lock the item list, the quantities and the base unit: piece, kilo, metre. Every quote then drops into the same grid, and gaps show up straight away.</p>\n<h2>Nine columns cover almost any purchase</h2>\n<p>For every item and every supplier, the same fields get filled in. This template is a good place to start:</p>\n<table><thead><tr><th>Column</th><th>What to record</th><th>How to normalise it</th></tr></thead><tbody>\n<tr><td><b>Unit price</b></td><td>Price from the quote and the unit it refers to</td><td>Convert to the base unit of the request</td></tr>\n<tr><td><b>Currency and rate</b></td><td>Quote currency</td><td>Convert to AED at the rate on the comparison date, and record both</td></tr>\n<tr><td><b>VAT</b></td><td>Included, on top or not stated</td><td>Price excluding VAT, tax in its own column, \"not stated\" means a question to the supplier</td></tr>\n<tr><td><b>Delivery</b></td><td>Delivered to warehouse, ex-works, who pays freight</td><td>Add the delivery cost to the price or show it as a separate line</td></tr>\n<tr><td><b>Lead time and stock</b></td><td>Ex-stock in the UAE or made to order</td><td>Days from order to delivery</td></tr>\n<tr><td><b>Payment terms</b></td><td>Advance, credit terms, instalments</td><td>Advance share and credit period in days</td></tr>\n<tr><td><b>Minimum order</b></td><td>MOQ and pack multiples</td><td>Check your quantity meets it</td></tr>\n<tr><td><b>Warranty and returns</b></td><td>Period and conditions</td><td>One wording for all suppliers</td></tr>\n<tr><td><b>Quote validity</b></td><td>Date the price holds until</td><td>Do not compare an expired quote without reconfirmation</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies template. Add columns for your category: certificates, country of origin, after-sales service.</p>\n<p>A word on currency and VAT: the standard UAE VAT rate is 5%, and if one quote includes it and another does not, that gap can easily outweigh the difference between two close offers. We covered four traps like this in our news piece on <a href=\"/news/gde-v-zakupkah-teryayutsya-dengi\">where money leaks when comparing suppliers</a>.</p>\n<h2>Set the weights before you open the quotes</h2>\n<p>Weights invented after the fact quietly bend towards the supplier someone already likes. So write them into the purchase record up front. A hypothetical set for consumables: price 50, lead time 20, payment terms 15, track record 15. For an urgent order you raise the lead time weight, for a large batch payment terms and minimum order matter more.</p>\n<p>Scoring is simple: the supplier with the lowest price gets 10 points on price, the others get proportionally less. Lead time works the same way. The total is the sum of scores multiplied by the weights.</p>\n<p>Track record comes from history, not gut feeling: how often a supplier missed a date, changed the price after quoting or went silent. You only have that data if purchasing runs in a CRM rather than in personal spreadsheets. How to set up the request process itself is in our guide to <a href=\"/journal/procurement-automation\">procurement automation</a>.</p>\n<!--cta-->\n<h2>The agent builds the table from emails and files</h2>\n<p>Done by hand, it looks like this: the buyer opens every email, hunts for the price in a PDF, types it into Excel, converts boxes to pieces and hopes nothing was missed. The <a href=\"/ai-agents/zakupki\">procurement agent</a> does the same job by the rules you set:</p>\n<ul>\n<li>picks up quotes from email and messengers connected to the CRM</li>\n<li>reads PDFs, Excel files, scans and email text and maps the figures to request line items</li>\n<li>converts units and currency at your rate and separates VAT</li>\n<li>keeps the source of every value, the file and the spot in it, so it can be checked in one click</li>\n<li>flags missing items, unstated VAT, expired quotes and prices far from the item&#39;s history</li>\n</ul>\n<p>If something is missing, the agent sends the supplier a clarifying question and waits for the answer. How AI reads documents and where it stops is covered in our guide to <a href=\"/journal/invoice-document-recognition\">invoice and document recognition</a>.</p>\n<h2>The recommendation explains the choice, it does not make it</h2>\n<p>Once the table is complete, the agent scores it with your weights and writes a short note: why supplier B comes first, what the risk is with supplier A, which items to re-request from C. The buyer decides. If they pick someone other than the top scorer, the reason goes into the record in one line, so it can be found six months later.</p>\n<p>The boundary is the same as in any agent work: it handles documents and numbers, while negotiation, exceptions and signatures stay with a person. More on how roles split between an agent, an automation rule and an employee on our <a href=\"/bitrix-ai-crm\">AI in Bitrix24</a> page.</p>\n<h2>Keep the table with the decision</h2>\n<p>A comparison saved in someone&#39;s personal file is gone by the next purchase. In a CRM the table stays in the record together with the original quotes, the chosen supplier and the reason. In Bitrix24 this is a purchasing smart process, see our <a href=\"/bitrix-development\">Bitrix24 development</a> page.</p>\n<p>After a few months those records add up to a price history for every item and supplier. It reads well on a <a href=\"/bi-analitika\">BI analytics</a> dashboard: the Basic plan is AED 300 a month, with the first 14 days free. All prices are on our <a href=\"/ceny\">pricing page</a>.</p>\n<h2>A worked example: four quotes for consumables</h2>\n<p>A hypothetical company asks four suppliers to quote on ten items. The first has the lowest total, but two items are missing and VAT is not stated. The second quotes per box of 12. The third offers made to order with a long lead time. The fourth includes delivery to the warehouse. Once everything is on one basis, the first quote goes back for clarification, and the real choice is between the second and the fourth, settled by the lead time weight agreed in advance.</p>",
+  "mid": [
+   "We build your quote comparison table",
+   "The procurement agent reads quotes from email and messengers and puts them on one basis. AED 5,000 one-off",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "How many suppliers should we compare per purchase?",
+    "There is no fixed rule: for routine purchases three to five is common, for a large one-off order you ask more. What matters is that everyone gets the same specification and the same reply deadline."
+   ],
+   [
+    "What if a supplier does not state VAT?",
+    "Do not guess, ask in writing. Until they reply, mark the quote as incomplete, otherwise a 5% gap can make the choice for you."
+   ],
+   [
+    "Can we compare quotes in Excel?",
+    "Yes, if there is one template for all purchases and the table is kept with the decision. Problems start when every buyer has their own file and the price history leaves with the employee."
+   ],
+   [
+    "How does the agent get supplier quotes?",
+    "From email and messengers connected to the CRM. It reads PDFs, Excel files and email text, maps the figures to request line items and records the source of each value."
+   ],
+   [
+    "How much does automated quote comparison cost?",
+    "The procurement agent on the Start package is AED 5,000 one-off, with support at 10% of the implementation fee per month. We show the agent on your own process for free in 30 to 40 minutes."
+   ]
+  ],
+  "cta": [
+   "Show us one of your purchases",
+   "Tell us how many suppliers usually reply and what format their quotes come in. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/procurement-automation",
+    "Procurement automation: from request to supplier choice"
+   ],
+   [
+    "/journal/invoice-document-recognition",
+    "AI invoice and document recognition: what it does and its limits"
+   ],
+   [
+    "/news/gde-v-zakupkah-teryayutsya-dengi",
+    "Where money leaks when comparing suppliers"
+   ]
+  ]
+ }
+}

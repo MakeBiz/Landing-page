@@ -1,0 +1,114 @@
+{
+ "slug": "bitrix24-implementation-contract",
+ "date": "2026-11-11",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "Договор на внедрение Битрикс24: что прописать | MakeBiz",
+  "desc": "Что прописать в договоре на внедрение Битрикс24 в ОАЭ: объём, сроки от 14 дней, приёмку, доступы, поддержку от 1 250 AED в месяц и оплату в AED.",
+  "h1": "Договор на внедрение Битрикс24: что прописать",
+  "crumb": "Договор на внедрение",
+  "lead": "Споры по внедрению CRM чаще начинаются не с плохой настройки, а с договора, где объём записан одной строкой. Собрали пункты, которые стоит проверить до подписи.",
+  "answer": "В договоре на внедрение Битрикс24 пропишите восемь вещей: перечень работ, что в него не входит, сроки по этапам (стандартный запуск у нас от 14 дней), порядок приёмки, владельца портала и доступов, порядок изменений объёма, поддержку и оплату. У MakeBiz Technologies договор заключается с MakeBiz Technologies FZE LLC, счета выставляются в AED, смета фиксируется до старта, а поддержка после запуска идёт пакетами от 1 250 AED за 5 часов в месяц.",
+  "body": "<h2>Объём работ записывается списком, а не словом «внедрение»</h2>\n<p>Строка «внедрение CRM Битрикс24» в предмете договора ничего не фиксирует. Через месяц заказчик считает, что в неё входила интеграция с учётом, а подрядчик считает, что нет. Поэтому объём записывают перечнем работ с результатом: настроена воронка продаж с такими-то стадиями, заведены роли и права для таких-то групп, подключён канал WhatsApp, создан шаблон счёта с VAT 5%.</p>\n<p>Не менее важен второй список: что в договор не входит. Обычно это лицензия Битрикс24, платные сторонние сервисы, перенос данных, сложные интеграции и своя разработка. Если пункт не назван ни в одном списке, спор о нём почти гарантирован. Состав нашей стандартной настройки мы разобрали в гайде про <a href=\"/journal/bitrix24-turnkey-implementation\">внедрение Битрикс24 под ключ</a>, его удобно брать за основу перечня.</p>\n<p class=\"note\">Это чек-лист заказчика, а не юридическая консультация: формулировки договора проверяет ваш юрист.</p>\n<h2>Восемь пунктов договора закрывают типичные споры</h2>\n<table><thead><tr><th>Пункт</th><th>Что записать</th><th>Что бывает, если пропустить</th></tr></thead><tbody>\n<tr><td><b>Объём</b></td><td>Перечень работ с результатом по каждой</td><td>Спор, входила ли работа в цену</td></tr>\n<tr><td><b>Исключения</b></td><td>Лицензия, сервисы, перенос, разработка</td><td>Неожиданные счета в середине проекта</td></tr>\n<tr><td><b>Сроки</b></td><td>Даты этапов и что нужно от заказчика к каждой</td><td>Сдвиг сроков без понятной причины</td></tr>\n<tr><td><b>Приёмка</b></td><td>Сценарии проверки и срок на замечания</td><td>Проект не закрывается месяцами</td></tr>\n<tr><td><b>Доступы и данные</b></td><td>Кто владелец портала, как выдаются и закрываются доступы</td><td>Портал зависит от подрядчика</td></tr>\n<tr><td><b>Изменения объёма</b></td><td>Как оценивается новая задача и по какой ставке</td><td>Доработки без оценки и согласования</td></tr>\n<tr><td><b>Поддержка</b></td><td>Пакет часов, время ответа, порядок заявок</td><td>Некому чинить после запуска</td></tr>\n<tr><td><b>Оплата</b></td><td>Валюта, реквизиты, график, налоги</td><td>Задержки платежей и пересчёт курсов</td></tr>\n</tbody></table>\n<p>Таблица не заменяет договор, но по ней удобно пройтись перед подписью. Если по двум-трём строкам в проекте договора пусто, это повод задать вопросы подрядчику. Похожий список вопросов, только для проектов с ИИ, есть в новости <a href=\"/news/voprosy-podryadchiku-po-ii-do-dogovora\">о вопросах подрядчику до договора</a>.</p>\n<h2>Сроки привязываются к этапам и к решениям заказчика</h2>\n<p>Стандартный запуск Битрикс24 у нас занимает от 14 дней. Но в договоре полезнее не одна дата окончания, а даты этапов: обследование, настройка, обучение, передача. К каждому этапу стоит записать, что нужно от компании: ответственный, список пользователей, согласованные стадии воронки, пример счёта, доступ к порталу.</p>\n<p>Так обе стороны видят, почему сдвинулся срок. Если согласование стадий заняло неделю, этап настройки начинается на неделю позже, и это не нарушение подрядчика. Что удлиняет проекты в ОАЭ (юрлица, учёт, перенос, каналы), мы разбирали в новости о <a href=\"/news/sroki-vnedreniya-crm-v-oae\">сроках внедрения CRM</a>.</p>\n<!--cta-->\n<h2>Приёмка идёт по сценариям, а не по ощущениям</h2>\n<p>Фраза «система настроена» не проверяется. Проверяются сценарии, которые записаны заранее. Например:</p>\n<ol>\n<li>новое сообщение в WhatsApp создаёт лид и попадает ответственному</li>\n<li>сделка проходит все стадии воронки, обязательные поля не дают пропустить шаг</li>\n<li>из карточки сделки выставляется счёт в AED с VAT 5% по вашему шаблону</li>\n<li>менеджер видит только свои сделки, руководитель видит отдел</li>\n<li>роботы ставят задачи и отправляют уведомления на нужных стадиях</li>\n</ol>\n<p>Рядом записывают срок на замечания, например несколько рабочих дней после передачи, и правило: замечание это то, что не работает по согласованному сценарию. Новое пожелание («а давайте ещё отчёт по эмиратам») это изменение объёма, оно оценивается отдельно. Такое разделение спасает от бесконечной приёмки.</p>\n<h2>Портал, доступы и данные остаются у компании</h2>\n<p>Портал Битрикс24 и лицензия должны быть оформлены на вашу компанию, а администратором портала должен быть ваш сотрудник. Подрядчик работает под отдельной учётной записью, которую можно отключить в любой момент. В договоре стоит прямо записать:</p>\n<ul>\n<li>портал, аккаунты сервисов и данные принадлежат заказчику</li>\n<li>доступы подрядчику выдаются на время работ и закрываются по окончании</li>\n<li>настройки, шаблоны и описание интеграций передаются вместе с системой</li>\n</ul>\n<p>У MakeBiz Technologies это стандартное условие: доступы и данные у клиента. Как оформляется лицензия и какие тарифы бывают, смотрите на странице <a href=\"/bitrix-licenses\">лицензий Битрикс24</a>.</p>\n<h2>Изменения объёма и поддержка оформляются отдельно</h2>\n<p>В любом проекте появляются задачи, которых не было в смете. Хороший договор описывает, что с ними делать: подрядчик называет оценку в часах до начала работ, заказчик подтверждает письменно, работа идёт по согласованной ставке. У нас работы сверх стандарта стоят 200 AED в час, подробнее на странице <a href=\"/bitrix-development\">разработки под Битрикс24</a>.</p>\n<p>Поддержку после запуска удобнее вынести в отдельное соглашение или приложение. В нём фиксируют пакет часов, порядок подачи заявок и время ответа. Наши пакеты: 5 часов за 1 250 AED в месяц, 10 часов за 2 300 AED, 20 часов за 4 200 AED, час сверх пакета 250 AED. Состав работ описан на странице <a href=\"/bitrix-support\">поддержки Битрикс24</a>.</p>\n<h2>Оплата в AED и реквизиты сторон</h2>\n<p>Для компании в ОАЭ удобнее всего договор с местным юрлицом и счета в дирхамах: не нужно пересчитывать курс и объяснять бухгалтерии платежи за рубеж. Договор на работы MakeBiz Technologies заключается с MakeBiz Technologies FZE LLC, счета выставляются в AED, смета фиксируется до старта. Цены услуг указаны без лицензий и без VAT, ставка VAT в ОАЭ составляет 5%. Все цены собраны на странице <a href=\"/ceny\">цен в AED</a>, состав внедрения на странице <a href=\"/bitrix\">Битрикс24 в Дубае</a>.</p>\n<p>График оплаты (одним платежом или по этапам) стороны выбирают сами. Главное, чтобы этапы оплаты совпадали с этапами приёмки: так деньги идут за результат, который вы проверили. Если вы ещё выбираете подрядчика, начните с гайда о том, <a href=\"/journal/choose-bitrix24-partner-uae\">как выбрать партнёра Битрикс24 в ОАЭ</a>.</p>",
+  "mid": [
+   "Пришлём проект договора до созвона",
+   "Перечень работ, этапы, приёмка и смета в AED. Стандартная настройка от 10 000 AED, запуск от 14 дней",
+   "Запросить договор"
+  ],
+  "faq": [
+   [
+    "Нужен ли отдельный договор на стандартную настройку?",
+    "Да, даже для стандартного пакета стоит договор с перечнем работ и порядком приёмки. Он короткий, но снимает вопросы о том, что входило в цену."
+   ],
+   [
+    "Можно ли увидеть проект договора заранее?",
+    "Да. Проект договора MakeBiz Technologies можно запросить до созвона, чтобы ваш юрист посмотрел его параллельно с обсуждением объёма."
+   ],
+   [
+    "Что делать, если по ходу проекта нужны новые работы?",
+    "Подрядчик оценивает задачу в часах, вы подтверждаете письменно, работа идёт по согласованной ставке. У нас работы сверх стандарта стоят 200 AED в час."
+   ],
+   [
+    "Кому принадлежит портал после окончания договора?",
+    "Портал, лицензия, аккаунты и данные принадлежат вашей компании. Доступы подрядчика закрываются по окончании работ, настройки остаются у вас."
+   ],
+   [
+    "В какой валюте оплачивается внедрение?",
+    "В дирхамах: договор заключается с MakeBiz Technologies FZE LLC, счета выставляются в AED. Цены указаны без лицензий и VAT."
+   ]
+  ],
+  "cta": [
+   "Обсудим объём и договор",
+   "Напишите, что нужно настроить и сколько сотрудников будут в CRM. Пришлём перечень работ, смету в AED и проект договора"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Внедрение Битрикс24 под ключ в ОАЭ: что входит"
+   ],
+   [
+    "/journal/choose-bitrix24-partner-uae",
+    "Как выбрать партнёра Битрикс24 в ОАЭ"
+   ],
+   [
+    "/news/sroki-vnedreniya-crm-v-oae",
+    "Сроки внедрения CRM в ОАЭ: считаем от 1 июля 2027"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Bitrix24 implementation contract: what to include | MakeBiz",
+  "desc": "What to put in a Bitrix24 implementation contract in the UAE: scope, timeline from 14 days, acceptance, access, support from AED 1,250 a month, AED billing.",
+  "h1": "Bitrix24 implementation contract: what to include",
+  "crumb": "Implementation contract",
+  "lead": "CRM projects usually go wrong not because of bad setup but because the contract describes the scope in one line. Here are the clauses worth checking before you sign.",
+  "answer": "A Bitrix24 implementation contract should cover eight things: the list of work, what is excluded, stage deadlines (a standard launch with us takes from 14 days), acceptance, who owns the portal and access, how scope changes are handled, support and payment. MakeBiz Technologies contracts through MakeBiz Technologies FZE LLC, invoices in AED, fixes the quote before work starts and offers post-launch support from AED 1,250 for 5 hours a month.",
+  "body": "<h2>Scope is written as a list, not as the word \"implementation\"</h2>\n<p>A line that says \"Bitrix24 CRM implementation\" in the contract fixes nothing. A month in, the client assumes the accounting integration was included and the partner assumes it was not. So write the scope as a list of tasks with outcomes: a sales pipeline with these stages, roles and permissions for these groups, a WhatsApp channel connected, an invoice template with 5% VAT created.</p>\n<p>The second list matters just as much: what the contract does not cover. Typically that is the Bitrix24 licence, paid third-party services, data migration, complex integrations and custom development. If an item appears in neither list, you will almost certainly argue about it later. Our standard setup is broken down in the guide to <a href=\"/journal/bitrix24-turnkey-implementation\">turnkey Bitrix24 implementation</a>, and it works well as a starting point for your list.</p>\n<p class=\"note\">This is a buyer&#39;s checklist, not legal advice: have your lawyer review the contract wording.</p>\n<h2>Eight clauses prevent most disputes</h2>\n<table><thead><tr><th>Clause</th><th>What to write down</th><th>What happens if you skip it</th></tr></thead><tbody>\n<tr><td><b>Scope</b></td><td>A list of tasks, each with an outcome</td><td>Arguments over what the price covered</td></tr>\n<tr><td><b>Exclusions</b></td><td>Licence, services, migration, development</td><td>Surprise invoices halfway through</td></tr>\n<tr><td><b>Timeline</b></td><td>Stage dates and what the client provides for each</td><td>Delays nobody can explain</td></tr>\n<tr><td><b>Acceptance</b></td><td>Test scenarios and a deadline for feedback</td><td>A project that never closes</td></tr>\n<tr><td><b>Access and data</b></td><td>Who owns the portal, how access is granted and revoked</td><td>A portal that depends on the partner</td></tr>\n<tr><td><b>Change requests</b></td><td>How new work is estimated and at what rate</td><td>Extra work with no estimate or sign-off</td></tr>\n<tr><td><b>Support</b></td><td>Hours package, response time, how requests are logged</td><td>Nobody to fix things after go-live</td></tr>\n<tr><td><b>Payment</b></td><td>Currency, company details, schedule, taxes</td><td>Late payments and exchange rate surprises</td></tr>\n</tbody></table>\n<p>The table does not replace a contract, but it is a quick pass before you sign. If the draft says nothing on two or three of these rows, ask the partner about them. We published a similar checklist for AI projects in our news on <a href=\"/news/voprosy-podryadchiku-po-ii-do-dogovora\">questions to ask a contractor before signing</a>.</p>\n<h2>Deadlines are tied to stages and to client decisions</h2>\n<p>A standard Bitrix24 launch with us takes from 14 days. In the contract, though, a single end date is less useful than stage dates: discovery, setup, training, handover. Next to each stage, note what the company has to provide: an owner on your side, the list of users, signed-off pipeline stages, a sample invoice, access to the portal.</p>\n<p>That way both sides can see why a date moved. If signing off the stages took a week, setup starts a week later, and that is not the partner&#39;s breach. What makes UAE projects longer (multiple entities, accounting, migration, channels) is covered in our news on <a href=\"/news/sroki-vnedreniya-crm-v-oae\">CRM implementation timelines</a>.</p>\n<!--cta-->\n<h2>Acceptance runs on scenarios, not on impressions</h2>\n<p>\"The system is set up\" cannot be tested. Scenarios agreed in advance can. For example:</p>\n<ol>\n<li>a new WhatsApp message creates a lead and reaches the right rep</li>\n<li>a deal moves through every pipeline stage, and required fields stop anyone skipping a step</li>\n<li>an invoice in AED with 5% VAT goes out from the deal using your template</li>\n<li>a rep sees only their own deals, the manager sees the whole team</li>\n<li>automation rules create tasks and send notifications at the right stages</li>\n</ol>\n<p>Add a feedback window, for example a few business days after handover, and one rule: a defect is something that does not work according to an agreed scenario. A new wish (\"could we also get a report by emirate?\") is a change request and is estimated separately. That split is what stops acceptance from dragging on forever.</p>\n<h2>The portal, access and data stay with your company</h2>\n<p>The Bitrix24 portal and licence should be registered to your company, and the portal administrator should be one of your employees. The partner works under a separate user account that you can switch off at any time. Put it in writing:</p>\n<ul>\n<li>the portal, service accounts and data belong to the client</li>\n<li>the partner gets access for the duration of the work, and it is revoked at the end</li>\n<li>settings, templates and integration notes are handed over with the system</li>\n</ul>\n<p>At MakeBiz Technologies this is a standard term: access and data stay with the client. How licences are issued and what plans exist is on the <a href=\"/bitrix-licenses\">Bitrix24 licences</a> page.</p>\n<h2>Change requests and support get their own terms</h2>\n<p>Every project produces tasks that were not in the quote. A good contract says how to handle them: the partner gives an estimate in hours before starting, the client confirms in writing, and the work is billed at the agreed rate. With us, work beyond the standard scope is AED 200 an hour, see <a href=\"/bitrix-development\">Bitrix24 development</a>.</p>\n<p>Post-launch support is easier to manage as a separate agreement or annex covering the hours package, how requests are submitted and the response time. Our packages are 5 hours for AED 1,250 a month, 10 hours for AED 2,300 and 20 hours for AED 4,200, with extra hours at AED 250. The scope is on the <a href=\"/bitrix-support\">Bitrix24 support</a> page.</p>\n<h2>Payment in AED and the parties&#39; details</h2>\n<p>For a UAE company, the simplest set-up is a contract with a local entity and invoices in dirhams: no exchange rate maths and no cross-border payments to explain to your accountant. MakeBiz Technologies contracts through MakeBiz Technologies FZE LLC, invoices in AED and fixes the quote before work starts. Service prices exclude licences and VAT, and the UAE VAT rate is 5%. All prices are on the <a href=\"/ceny\">pricing page</a>, and the implementation scope is on the <a href=\"/bitrix\">Bitrix24 in Dubai</a> page.</p>\n<p>The payment schedule (one payment or by stage) is for the two sides to agree. What matters is that payment milestones match acceptance milestones, so money follows results you have checked. If you are still choosing a partner, start with our guide on <a href=\"/journal/choose-bitrix24-partner-uae\">how to choose a Bitrix24 partner in the UAE</a>.</p>",
+  "mid": [
+   "Get our draft contract before the call",
+   "List of work, stages, acceptance and a quote in AED. Standard setup from AED 10,000, launch from 14 days",
+   "Request the contract"
+  ],
+  "faq": [
+   [
+    "Do I need a contract for a standard setup?",
+    "Yes. Even a standard package deserves a contract with the list of work and the acceptance process. It is short, but it settles what the price included."
+   ],
+   [
+    "Can I see the draft contract in advance?",
+    "Yes. You can ask MakeBiz Technologies for the draft before the first call, so your lawyer can review it while we discuss the scope."
+   ],
+   [
+    "What if we need new work during the project?",
+    "The partner estimates the task in hours, you confirm in writing, and the work is billed at the agreed rate. With us, work beyond the standard scope is AED 200 an hour."
+   ],
+   [
+    "Who owns the portal when the contract ends?",
+    "Your company owns the portal, licence, accounts and data. The partner&#39;s access is revoked when the work ends, and the configuration stays with you."
+   ],
+   [
+    "What currency is the implementation paid in?",
+    "Dirhams. The contract is with MakeBiz Technologies FZE LLC and invoices are issued in AED. Prices exclude licences and VAT."
+   ]
+  ],
+  "cta": [
+   "Let us agree the scope and the contract",
+   "Tell us what needs to be set up and how many people will use the CRM. We will send the list of work, a quote in AED and a draft contract"
+  ],
+  "related": [
+   [
+    "/journal/bitrix24-turnkey-implementation",
+    "Turnkey Bitrix24 implementation in the UAE: what is included"
+   ],
+   [
+    "/journal/choose-bitrix24-partner-uae",
+    "How to choose a Bitrix24 partner in the UAE"
+   ],
+   [
+    "/news/sroki-vnedreniya-crm-v-oae",
+    "CRM implementation timelines in the UAE"
+   ]
+  ]
+ }
+}

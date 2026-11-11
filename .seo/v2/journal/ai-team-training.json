@@ -1,0 +1,114 @@
+{
+ "slug": "ai-team-training",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "Как научить команду работать с ИИ-агентами | MakeBiz",
+  "desc": "Обучение команды работе с ИИ-агентами: роли, правила, контроль и план первых 2 недель. Обучение в Битрикс24 200 AED в час, демо агента бесплатно.",
+  "h1": "Как научить команду работать с ИИ-агентами",
+  "crumb": "Обучение команды работе с ИИ",
+  "lead": "Агент может быть настроен безупречно и всё равно не заработать, если команда не понимает, что он делает и где её зона. Обучение здесь не про кнопки, а про то, как люди и агент делят работу.",
+  "answer": "Команду учат по ролям за первые 2 недели после запуска: кто владеет агентом, кто проверяет его решения, кто работает с результатом и как сообщать об ошибках. У MakeBiz Technologies демонстрация агента на вашем процессе бесплатна и занимает 30-40 минут, обучение команды в Битрикс24 стоит 200 AED в час, а сопровождение агента после запуска идёт в обслуживании за 10% от стоимости внедрения в месяц.",
+  "body": "<h2>Команду учат делить работу с агентом, а не нажимать кнопки</h2>\n<p>С обычной программой всё просто: показали экран, человек запомнил. С агентом иначе. Он сам пишет клиенту, ставит задачи, оценивает звонки, и сотрудник должен понимать, что агент уже сделал, что оставил ему и когда вмешаться.</p>\n<p>Поэтому первая тема обучения не интерфейс, а карта процесса: какие шаги теперь делает агент, какие человек, где они передают работу друг другу. Без этой карты менеджеры либо дублируют агента, либо перестают следить за тем, что он делает. Обе ошибки типичны для первых недель, мы разбирали их в новости <a href=\"/news/pochemu-vnedrenie-ai-agentov-buksuet\">о пяти ошибках внедрения агентов</a>.</p>\n<h2>У каждой роли своя зона ответственности</h2>\n<p>Мы делим команду на четыре роли. В небольшой компании один человек может совмещать две, но зоны не стоит смешивать.</p>\n<table><thead><tr><th>Роль</th><th>Кто обычно</th><th>Что делает с агентом</th><th>Чему учим</th></tr></thead><tbody>\n<tr><td><b>Владелец агента</b></td><td>Руководитель отдела или владелец процесса</td><td>Решает, что агент делает сам, а что через согласование</td><td>Читать отчёты агента, менять правила, решать спорные случаи</td></tr>\n<tr><td><b>Контролёр</b></td><td>РОП, старший менеджер, бухгалтер</td><td>Проверяет решения агента в первые недели</td><td>Где видеть действия агента, как отметить ошибку</td></tr>\n<tr><td><b>Пользователь</b></td><td>Менеджеры, закупщики, рекрутеры</td><td>Работает с тем, что подготовил агент</td><td>Читать подсказки, забирать диалог, не дублировать работу</td></tr>\n<tr><td><b>Администратор CRM</b></td><td>Внутренний админ или партнёр</td><td>Следит за доступами и интеграциями</td><td>Права, поля, куда агент пишет результат</td></tr>\n</tbody></table>\n<p class=\"note\">Распределение ролей MakeBiz Technologies для запуска агентов, ноябрь 2026.</p>\n<p>Отдельно стоит назначить одного человека, который принимает решения по правилам агента. Если правила может менять каждый, через месяц агент отвечает клиентам противоречиво, и никто не помнит, кто что поменял. Изменения удобно записывать в тот же регламент с датой и причиной.</p>\n<h2>Правила работы с агентом записывают до запуска</h2>\n<p>Устные договорённости за неделю превращаются в «я думал, агент это сделает». Короткий регламент на одну-две страницы снимает большую часть вопросов. В нём стоит зафиксировать:</p>\n<ul>\n<li>что агент делает без согласования: например, отвечает на типовой вопрос о сроках или напоминает о встрече</li>\n<li>что требует подтверждения человека: скидка, изменение цены, обещание срока, отказ клиенту</li>\n<li>как сотрудник забирает диалог у агента и как возвращает обратно</li>\n<li>куда писать, если агент ошибся, и в какой срок на это реагируют</li>\n<li>какие данные агенту нельзя видеть или пересылать</li>\n</ul>\n<p>Регламент пишут на языке команды. В Дубае это часто английский и русский одновременно, поэтому мы готовим две версии, как и при <a href=\"/bitrix-training\">обучении команды Битрикс24</a>.</p>\n<!--cta-->\n<h2>Первые две недели идут по плану</h2>\n<p>Самый чувствительный период это первые 10 рабочих дней. План, который мы берём за основу:</p>\n<ol>\n<li><b>Дни 1-2.</b> Короткие встречи по ролям: карта процесса, регламент, где видеть действия агента. Отдельно для менеджеров и для руководителей</li>\n<li><b>Дни 3-5.</b> Агент работает, контролёр проверяет каждое его решение и отмечает ошибки. Менеджеры учатся забирать диалог</li>\n<li><b>Дни 6-7.</b> Первый разбор: какие ошибки повторяются, что поправить в правилах и текстах агента</li>\n<li><b>Дни 8-9.</b> Проверка сужается до спорных случаев и всего, что касается денег</li>\n<li><b>День 10.</b> Итоговая встреча: что агент делает сам, что остаётся у людей, кто владеет правилами дальше</li>\n</ol>\n<p>За эти дни полезно считать три простые вещи: сколько решений агента проверено, сколько из них исправлено и сколько раз менеджеры забирали диалог. Если исправлений не становится меньше, причина обычно в правилах или исходных данных, а не в людях.</p>\n<p>Весь путь с данными, доступами и бюджетом расписан в гайде <a href=\"/journal/ai-adoption-plan\">о плане внедрения ИИ на первые 90 дней</a>. Обучение команды это его часть, а не отдельный проект.</p>\n<h2>Контроль качества держится на разборе ошибок</h2>\n<p>Ошибки агента в первые недели нормальны. Ненормально, когда о них никто не узнаёт. Поэтому у каждой ошибки должен быть путь: сотрудник отметил, контролёр проверил, владелец решил, менять правило или текст. После правки та же ошибка не должна повториться.</p>\n<p>Удобно вести такой разбор в CRM: агент пишет свои действия в карточку сделки, контролёр видит их рядом с перепиской. В продажах это <a href=\"/ai-agents/rop\">ИИ-РОП</a>, в звонках агент <a href=\"/ai-agents/zvonki\">речевой аналитики</a>, который оценивает каждый разговор. Как учить менеджеров по таким оценкам, разобрано в гайде <a href=\"/journal/sales-call-analysis\">про анализ звонков менеджеров</a>.</p>\n<h2>Сопротивление снимают прозрачностью, а не приказом</h2>\n<p>Частый страх сотрудников: агент нужен, чтобы следить за ними или заменить их. Помогает простое объяснение, что агент забирает рутину, а решения остаются у людей. И это нужно показать на деле, а не только сказать.</p>\n<ul>\n<li>покажите, какие задачи уходят агенту и сколько времени они занимали</li>\n<li>дайте менеджерам право забрать диалог в любой момент</li>\n<li>публикуйте разбор ошибок агента так же открыто, как разбор ошибок людей</li>\n<li>собирайте предложения команды и вносите их в правила</li>\n</ul>\n<p>Отдельно поговорите с самыми опытными сотрудниками. Их знание того, как на самом деле устроен процесс, нужно для правил агента, и если они участвуют в настройке, команда принимает агента спокойнее.</p>\n<h2>Условный пример: отдел продаж на 12 менеджеров</h2>\n<p>Условная компания в Дубае подключила агента, который отвечает в WhatsApp, когда менеджер не успел. В первые дни менеджеры дублировали его ответы, и клиент получал два сообщения. После встречи по ролям у отдела появилось правило: если агент ответил, менеджер продолжает диалог, а не начинает заново. РОП две недели проверял ответы агента, затем оставил проверку только для скидок и сроков.</p>\n<p>Обучение такой команды идёт по ставке 200 AED в час или в пакете поддержки от 1 250 AED в месяц, подробнее на страницах <a href=\"/bitrix-support\">поддержки Битрикс24</a> и <a href=\"/ceny\">цен в AED</a>. Подобрать агента под процесс можно на странице <a href=\"/ai-agents\">ИИ-агентов</a>.</p>",
+  "mid": [
+   "Научим команду работать с агентом",
+   "Роли, регламент и разбор ошибок первых 2 недель на вашем портале. Обучение 200 AED в час, демо агента бесплатно",
+   "Обсудить обучение"
+  ],
+  "faq": [
+   [
+    "Сколько времени команда привыкает к агенту?",
+    "Базовый план рассчитан на первые 2 недели: встречи по ролям, проверка каждого решения, разбор ошибок и сужение контроля. Дальше агент работает в обычном режиме, а правила меняет владелец."
+   ],
+   [
+    "Кто в компании должен отвечать за агента?",
+    "Владелец процесса, обычно руководитель отдела. Он решает, что агент делает сам, что через согласование, и разбирает спорные случаи."
+   ],
+   [
+    "Нужно ли учить всех сотрудников одинаково?",
+    "Нет, учат по ролям: менеджерам важно забирать диалог и не дублировать агента, руководителю читать отчёты и менять правила, администратору следить за доступами. Группы по языку команды тоже делим отдельно."
+   ],
+   [
+    "Сколько стоит обучение команды?",
+    "Демонстрация агента на вашем процессе бесплатна и занимает 30-40 минут. Обучение команды в Битрикс24 идёт по ставке 200 AED в час или в пакете поддержки от 1 250 AED в месяц, цены без VAT."
+   ],
+   [
+    "Что делать, если сотрудники не доверяют агенту?",
+    "Покажите, какие задачи он забирает, и дайте право забрать диалог в любой момент. Открытый разбор ошибок агента снимает напряжение быстрее уговоров."
+   ]
+  ],
+  "cta": [
+   "Подготовим команду к запуску агента",
+   "Напишите, сколько человек будут работать с агентом и на каких языках. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/ai-adoption-plan",
+    "Внедрение ИИ в компанию: план на первые 90 дней"
+   ],
+   [
+    "/journal/rpa-vs-ai-agents",
+    "RPA или ИИ-агенты: что выбрать для автоматизации"
+   ],
+   [
+    "/news/pochemu-vnedrenie-ai-agentov-buksuet",
+    "Пять ошибок, из-за которых AI-агенты буксуют"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Training your team to work with AI agents | MakeBiz",
+  "desc": "How to train a team to work with AI agents: roles, ground rules, quality control and a plan for the first 2 weeks. Bitrix24 training at AED 200 an hour.",
+  "h1": "How to train your team to work with AI agents",
+  "crumb": "Team training for AI agents",
+  "lead": "An agent can be set up flawlessly and still go nowhere if the team does not understand what it does and where their own job starts. Training here is about how people and the agent split the work, not about buttons.",
+  "answer": "Train the team by role over the first 2 weeks after launch: who owns the agent, who checks its decisions, who works with its output and how mistakes get reported. At MakeBiz Technologies a demo of the agent on your process is free and takes 30 to 40 minutes, team training in Bitrix24 costs AED 200 an hour, and after launch the agent is looked after under the support plan at 10% of the implementation cost per month.",
+  "body": "<h2>Teams learn to share work with the agent, not to click buttons</h2>\n<p>An agent is not ordinary software. It messages clients, sets tasks and scores calls on its own, so every employee needs to know what the agent has already done, what it has left for them and when to step in.</p>\n<p>That is why the first training topic is the process map, not the interface: which steps the agent now handles, which ones stay with people, and where the handovers are. Without that map, reps either duplicate the agent or stop watching what it does. We covered both mistakes in our news piece on <a href=\"/news/pochemu-vnedrenie-ai-agentov-buksuet\">five reasons AI agent projects stall</a>.</p>\n<h2>Every role has its own area of responsibility</h2>\n<p>We split the team into four roles. In a small company one person can cover two of them, but keep the responsibilities clearly separate.</p>\n<table><thead><tr><th>Role</th><th>Usually</th><th>What they do with the agent</th><th>What we train</th></tr></thead><tbody>\n<tr><td><b>Agent owner</b></td><td>Head of department or process owner</td><td>Decides what the agent does alone and what needs approval</td><td>Reading agent reports, changing rules, settling edge cases</td></tr>\n<tr><td><b>Reviewer</b></td><td>Sales manager, team lead, accountant</td><td>Checks the agent&#39;s decisions in the first weeks</td><td>Where to see the agent&#39;s actions, how to flag a mistake</td></tr>\n<tr><td><b>User</b></td><td>Sales reps, buyers, recruiters</td><td>Works with what the agent has prepared</td><td>Reading suggestions, taking over a chat, not doubling up</td></tr>\n<tr><td><b>CRM admin</b></td><td>In-house admin or partner</td><td>Looks after access and integrations</td><td>Permissions, fields, where the agent writes its output</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies role split for agent launches, November 2026.</p>\n<p>Name one person who signs off on the agent&#39;s rules. If anyone can change them, within a month the agent gives clients inconsistent answers and nobody remembers who changed what. Log every change in the playbook with a date and a reason.</p>\n<h2>Ground rules are written down before launch</h2>\n<p>Verbal agreements turn into \"I thought the agent would handle that\" within a week. A short playbook of one or two pages clears up most questions. It should cover:</p>\n<ul>\n<li>what the agent does without approval, such as answering a standard question about delivery times or sending a meeting reminder</li>\n<li>what needs a human to confirm: a discount, a price change, a promised deadline, saying no to a client</li>\n<li>how an employee takes a conversation over from the agent and hands it back</li>\n<li>where to report an agent mistake and how quickly someone responds</li>\n<li>what data the agent must not see or forward</li>\n</ul>\n<p>Write the playbook in the team&#39;s language. In Dubai that is often English and Russian at the same time, so we prepare both versions, just as we do for <a href=\"/bitrix-training\">Bitrix24 team training</a>.</p>\n<!--cta-->\n<h2>The first two weeks follow a plan</h2>\n<p>The first 10 working days are the most sensitive. Here is the plan we use as a starting point:</p>\n<ol>\n<li><b>Days 1 to 2.</b> Short sessions by role: the process map, the playbook, where to see the agent&#39;s actions. Separate sessions for reps and for managers</li>\n<li><b>Days 3 to 5.</b> The agent goes live and the reviewer checks every decision it makes and flags errors. Reps practise taking over conversations</li>\n<li><b>Days 6 to 7.</b> First review: which mistakes repeat, and what to fix in the agent&#39;s rules and wording</li>\n<li><b>Days 8 to 9.</b> Checks narrow down to edge cases and anything involving money</li>\n<li><b>Day 10.</b> Wrap-up: what the agent now does on its own, what stays with people, and who owns the rules from here</li>\n</ol>\n<p>Track three simple numbers over this period: how many agent decisions were checked, how many were corrected, and how often reps took a conversation over. If corrections are not going down, the cause is usually the rules or the source data, not the people.</p>\n<p>The full path, with data, access and budget, is laid out in our guide to an <a href=\"/journal/ai-adoption-plan\">AI adoption plan for the first 90 days</a>. Team training is part of that plan, not a separate project.</p>\n<h2>Quality control runs on reviewing mistakes</h2>\n<p>Agent mistakes in the first weeks are normal. Nobody hearing about them is not. Every mistake needs a route: an employee flags it, the reviewer checks it, the owner decides whether to change a rule or the wording. Once fixed, it should not come back.</p>\n<p>Run this review in the CRM: the agent logs its actions in the deal record, and the reviewer sees them next to the conversation. In sales that is the <a href=\"/ai-agents/rop\">AI sales manager</a>, for calls it is the <a href=\"/ai-agents/zvonki\">call speech analytics</a> agent that scores every conversation. How to coach reps using those scores is covered in our guide on <a href=\"/journal/sales-call-analysis\">sales call analysis</a>.</p>\n<h2>Openness beats orders when people push back</h2>\n<p>A common fear is that the agent is there to watch staff or replace them. What helps is a plain explanation: the agent takes the routine, the decisions stay with people.</p>\n<ul>\n<li>show which tasks move to the agent and how much time they used to take</li>\n<li>give reps the right to take over a conversation at any moment</li>\n<li>share the agent&#39;s mistakes as openly as you review people&#39;s mistakes</li>\n<li>collect the team&#39;s suggestions and put them into the rules</li>\n</ul>\n<p>Talk separately to your most experienced people. Their knowledge of how the process really works is what the agent&#39;s rules need, and when they help shape the setup, the team accepts the agent more calmly.</p>\n<h2>A worked example: a sales team of 12</h2>\n<p>A hypothetical Dubai company connected an agent that replies on WhatsApp when a rep is too slow. In the first days reps kept duplicating its replies and clients got two messages. After the role sessions the team adopted one rule: if the agent has replied, the rep continues the conversation instead of starting over. The sales manager reviewed the agent&#39;s replies for two weeks, then kept checks only for discounts and deadlines.</p>\n<p>Training for a team like this is billed at AED 200 an hour or covered by a support plan from AED 1,250 a month, see the <a href=\"/bitrix-support\">Bitrix24 support</a> and <a href=\"/ceny\">pricing</a> pages. You can pick an agent for your process on the <a href=\"/ai-agents\">AI agents</a> page.</p>",
+  "mid": [
+   "We will train your team to work with the agent",
+   "Roles, a playbook and a review of mistakes over the first 2 weeks, on your own portal. Training AED 200 an hour, agent demo free",
+   "Talk about training"
+  ],
+  "faq": [
+   [
+    "How long does it take a team to get used to an agent?",
+    "Our baseline plan covers the first 2 weeks: role sessions, checking every decision, reviewing mistakes and then narrowing the checks. After that the agent runs as normal and the owner maintains the rules."
+   ],
+   [
+    "Who in the company should own the agent?",
+    "The process owner, usually the head of the department. They decide what the agent does alone and settle edge cases."
+   ],
+   [
+    "Does everyone need the same training?",
+    "No, training is by role: reps learn to take over conversations and not duplicate the agent, managers learn to read reports and change rules, the admin looks after access. We also split groups by language."
+   ],
+   [
+    "How much does team training cost?",
+    "A demo of the agent on your process is free and takes 30 to 40 minutes. Team training in Bitrix24 is AED 200 an hour or part of a support plan from AED 1,250 a month, prices exclude VAT."
+   ],
+   [
+    "What if staff do not trust the agent?",
+    "Show which tasks it takes over and give people the right to step in at any time. An open review of the agent&#39;s mistakes eases tension faster than any pep talk."
+   ]
+  ],
+  "cta": [
+   "Let us get your team ready for the agent",
+   "Tell us how many people will work with the agent and in which languages. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/ai-adoption-plan",
+    "AI adoption plan for a company: the first 90 days"
+   ],
+   [
+    "/journal/rpa-vs-ai-agents",
+    "RPA or AI agents: which to choose for automation"
+   ],
+   [
+    "/news/pochemu-vnedrenie-ai-agentov-buksuet",
+    "Five mistakes that make AI agents stall"
+   ]
+  ]
+ }
+}

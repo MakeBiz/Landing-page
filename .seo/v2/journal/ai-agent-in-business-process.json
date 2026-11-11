@@ -1,0 +1,114 @@
+{
+ "slug": "ai-agent-in-business-process",
+ "date": "2026-11-11",
+ "rubric_ru": "ИИ-агенты",
+ "rubric_en": "AI agents",
+ "ru": {
+  "title": "Где в бизнес-процессе встаёт ИИ-агент | MakeBiz",
+  "desc": "Где в бизнес-процессе нужен ИИ-агент, где робот CRM, а где человек: разметка шагов от заявки до оплаты. Один агент от 5 000 AED, час настройки 200 AED.",
+  "h1": "Где в бизнес-процессе встаёт ИИ-агент",
+  "crumb": "ИИ-агент в процессе",
+  "lead": "ИИ-агент не заменяет процесс целиком. Он встаёт в отдельные шаги, а рядом продолжают работать роботы CRM и люди. Показываем, как разметить процесс, чтобы каждый шаг достался тому, кто справится с ним надёжнее и дешевле.",
+  "answer": "ИИ-агент встаёт в те шаги процесса, где нужно понять свободный текст, речь или документ и принять решение по правилам: первый ответ клиенту, квалификация по переписке, оценка звонка, сводка руководителю. Шаги по чёткому условию забирают роботы CRM, а деньги, исключения и споры остаются за человеком. У MakeBiz Technologies один агент стоит 5 000 AED, настройка роботов по 200 AED в час.",
+  "body": "<h2>В любом процессе есть шаги трёх типов</h2>\n<p>Возьмите путь клиента от заявки до оплаты и выпишите каждый шаг. Почти любой из них попадает в одну из трёх групп: действие по правилу, действие, где нужно понять смысл, и решение, за которое кто-то отвечает. От группы зависит, кто делает шаг.</p>\n<table><thead><tr><th>Шаг процесса</th><th>Кто делает</th><th>Почему</th></tr></thead><tbody>\n<tr><td>Заявка с сайта попадает в CRM</td><td><b>Робот CRM</b></td><td>Правило без вариантов: создать лид и записать источник</td></tr>\n<tr><td>Клиент пишет в WhatsApp вечером</td><td><b>ИИ-агент</b></td><td>Нужно понять вопрос и ответить по базе знаний</td></tr>\n<tr><td>Назначение ответственного менеджера</td><td><b>Робот CRM</b></td><td>Распределение по очереди, языку или направлению</td></tr>\n<tr><td>Квалификация: задача, бюджет, срок</td><td><b>ИИ-агент</b></td><td>Ответы спрятаны в свободном тексте переписки</td></tr>\n<tr><td>Скидка выше лимита</td><td><b>Человек</b></td><td>Деньги и ответственность за маржу</td></tr>\n<tr><td>Оценка звонка по критериям</td><td><b>ИИ-агент</b></td><td>Нужно разобрать речь, а не поле в карточке</td></tr>\n<tr><td>Счёт по шаблону после согласования</td><td><b>Робот CRM</b></td><td>Все данные уже в карточке сделки</td></tr>\n<tr><td>Сводка по застрявшим сделкам</td><td><b>ИИ-агент</b></td><td>Нужно выбрать важное и объяснить, почему сделка стоит</td></tr>\n<tr><td>Спорная претензия клиента</td><td><b>Человек</b></td><td>Отношения и решение за компанию</td></tr>\n</tbody></table>\n<p class=\"note\">Разметка MakeBiz Technologies для типового процесса продаж. В вашем процессе шаги и их владельцы могут отличаться.</p>\n<h2>Робот CRM забирает всё, что описывается правилом «если, то»</h2>\n<p>Если шаг можно записать как «когда сделка перешла на стадию X, сделай Y», ему не нужен ИИ. Создать лид из формы, поставить задачу, отправить шаблонное письмо, сменить стадию после оплаты: это работа роботов и бизнес-процессов <a href=\"/bitrix\">Битрикс24</a>. Робот срабатывает одинаково каждый раз, стоит дешевле и не ошибается в простом.</p>\n<p>Ставить агента на такой шаг значит платить за понимание там, где понимать нечего. Подробно разницу между двумя инструментами мы разбирали в новости <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">чем ИИ-агент отличается от робота в CRM</a>. Если стандартных роботов не хватает, нестандартные сценарии и связки с внешними системами делаются через <a href=\"/bitrix-development\">разработку под Битрикс24</a>, по 200 AED в час.</p>\n<h2>Агент встаёт там, где нужно понять смысл</h2>\n<p>Агент нужен на шагах, где входные данные не укладываются в поле: сообщение клиента, разговор, письмо поставщика, документ. Робот не поймёт, что «а если взять на год, будет дешевле?» означает интерес к годовому контракту. Агент поймёт, ответит по базе знаний и запишет в карточку, что клиента интересует.</p>\n<p>Типовые места агента в процессе продаж:</p>\n<ul>\n<li>первый ответ клиенту, если менеджер молчит, и контроль воронки: это <a href=\"/ai-agents/rop\">ИИ-РОП</a></li>\n<li>оценка каждого разговора по критериям, а не выборки: это <a href=\"/ai-agents/zvonki\">агент звонков</a></li>\n<li>разбор входящих заявок в мессенджере: как это устроено, мы описали в новости <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">про ИИ-агента в WhatsApp</a></li>\n</ul>\n<p>Часть таких задач закрывает встроенный ИИ Битрикс24: он расшифровывает звонки и заполняет поля. Где его хватает, а где нужен отдельный агент, смотрите на странице <a href=\"/bitrix-ai-crm\">CRM с ИИ</a>.</p>\n<!--cta-->\n<h2>Человек остаётся там, где цена ошибки высокая</h2>\n<p>Есть шаги, которые не стоит отдавать ни роботу, ни агенту, даже если технически это возможно. Скидка выше лимита, нестандартные условия оплаты, спорная претензия, отказ крупному клиенту. Здесь решает человек, потому что он отвечает за последствия.</p>\n<p>Задача агента на таких шагах в другом: вовремя заметить, что ситуация вышла за рамки, и подключить нужного сотрудника с короткой сводкой. Руководитель получает не сырую переписку, а суть: что просит клиент, что уже обещано, какая сумма на кону. Решение остаётся за ним, но принимается быстрее.</p>\n<h2>Границы агента прописывают до запуска</h2>\n<p>Перед запуском для каждого агента фиксируют три списка: что он читает, что он может менять и что ему запрещено. Например, агент может отвечать клиенту и обновлять поля квалификации, но не может менять сумму сделки и не обещает скидки. Всё, что агент сделал, видно в карточке сделки, поэтому руководитель в любой момент проверяет его работу.</p>\n<p>Агент работает под отдельной учётной записью с нужными правами. Доступы и данные остаются у компании, а если агент отвечает в мессенджере, канал подключают официально: подключение WhatsApp к Битрикс24 у нас 500 AED, подробности на странице <a href=\"/bitrix-messengers\">мессенджеров</a>.</p>\n<h2>Карту процесса размечают за один разбор</h2>\n<p>Разметка не требует долгого проекта. Её можно сделать за одну встречу с владельцем процесса:</p>\n<ol>\n<li>Выпишите шаги от первого контакта до оплаты, как они идут сейчас, а не как задумано</li>\n<li>Пометьте каждый шаг: правило, смысл или решение</li>\n<li>Отметьте, где шаги теряются чаще всего: заявки без ответа, звонки без разбора, сделки без движения</li>\n<li>Поставьте агента в одно узкое место со смыслом, остальное отдайте роботам</li>\n<li>Определите, по какой цифре увидите результат: время ответа, доля разобранных звонков</li>\n</ol>\n<p>С этой картой проще считать бюджет: из чего он складывается, мы описали в гайде <a href=\"/journal/ai-agents-for-business-cost\">о составе и цене ИИ-агентов</a>, а как провести первый квартал, в гайде <a href=\"/journal/ai-adoption-plan\">про план внедрения ИИ на 90 дней</a>.</p>\n<h2>Условный пример: сервисная компания с заявками в WhatsApp</h2>\n<p>Условная компания по обслуживанию кондиционеров в Шардже получает большую часть заявок в WhatsApp. Менеджеры днём отвечают сами, вечером заявки ждут до утра, а роботы в CRM настроены только на создание лида.</p>\n<p>После разметки процесс выглядит так. Робот создаёт лид и назначает менеджера по району. Агент отвечает вечером, уточняет адрес, модель и проблему и записывает это в карточку. Робот ставит выезд в календарь, когда клиент подтвердил время. Человек решает только нестандартное: гарантийные споры и скидки. Бюджет по нашим строкам: 5 000 AED за агента в пакете Старт, 500 AED в месяц обслуживания и несколько часов на роботов по 200 AED. Все агенты описаны на странице <a href=\"/ai-agents\">ИИ-агентов</a>.</p>",
+  "mid": [
+   "Разметим ваш процесс вместе",
+   "Покажем, где нужен агент, а где хватит робота CRM. Демонстрация 30-40 минут бесплатно, один агент от 5 000 AED",
+   "Записаться на демо"
+  ],
+  "faq": [
+   [
+    "Чем ИИ-агент отличается от робота в CRM?",
+    "Робот выполняет действие по чёткому условию: стадия сменилась, значит поставить задачу. Агент понимает свободный текст, речь и документы и принимает решение по правилам, которые ему задали."
+   ],
+   [
+    "Можно ли поставить агента на весь процесс сразу?",
+    "Технически можно, но надёжнее начать с одного узкого места, где нужно понимать смысл. Шаги по правилу дешевле и стабильнее отдать роботам CRM."
+   ],
+   [
+    "Какие решения нельзя отдавать ИИ-агенту?",
+    "Решения о деньгах и исключениях: скидки выше лимита, нестандартные условия оплаты, спорные претензии. Агент замечает такие ситуации и передаёт их человеку со сводкой."
+   ],
+   [
+    "Как проверить, что делает агент?",
+    "Все действия агента видны в карточке сделки, а права заданы заранее: что он читает, что меняет и что ему запрещено. Руководитель проверяет его работу так же, как работу сотрудника."
+   ],
+   [
+    "Сколько стоит встроить агента в процесс?",
+    "Один агент в пакете Старт стоит 5 000 AED разово, обслуживание 500 AED в месяц. Настройка роботов CRM вокруг агента идёт по 200 AED в час, цены без VAT."
+   ]
+  ],
+  "cta": [
+   "Найдём место для агента в вашем процессе",
+   "Опишите путь клиента от заявки до оплаты и где он чаще всего застревает. Предложим разметку шагов и смету в AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agents-for-business-cost",
+    "ИИ-агенты для бизнеса под ключ: что входит и сколько стоит"
+   ],
+   [
+    "/journal/ai-automation-beyond-sales",
+    "Автоматизация бизнеса ИИ за пределами продаж"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI-агент или робот в CRM: в чём разница"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Where an AI agent fits into a business process | MakeBiz",
+  "desc": "Where a business process needs an AI agent, where CRM automation will do and where a person decides. One agent from AED 5,000, setup at AED 200 an hour.",
+  "h1": "Where an AI agent fits into a business process",
+  "crumb": "AI agent in a process",
+  "lead": "An AI agent does not replace a whole process. It slots into specific steps, while CRM automation and people keep handling the rest. Here is how to map a process so each step goes to whoever handles it most reliably and at the lowest cost.",
+  "answer": "An AI agent belongs on the steps where someone has to understand free text, speech or a document and decide by set rules: the first reply to a client, qualifying a lead from a chat, scoring a call, a summary for the manager. Steps with a clear trigger go to CRM automation, while money, exceptions and disputes stay with a person. At MakeBiz Technologies one agent costs AED 5,000, and CRM automation is set up at AED 200 an hour.",
+  "body": "<h2>Every process has three kinds of steps</h2>\n<p>Write down every step from first enquiry to payment. Nearly all fall into three groups: an action that follows a rule, an action that requires understanding, and a decision someone is accountable for. The group decides who should do the step.</p>\n<table><thead><tr><th>Process step</th><th>Who does it</th><th>Why</th></tr></thead><tbody>\n<tr><td>A website form becomes a lead in the CRM</td><td><b>CRM automation</b></td><td>A fixed rule: create the lead and record the source</td></tr>\n<tr><td>A client messages on WhatsApp in the evening</td><td><b>AI agent</b></td><td>It has to understand the question and answer from the knowledge base</td></tr>\n<tr><td>Assigning the account manager</td><td><b>CRM automation</b></td><td>Routing by queue, language or team</td></tr>\n<tr><td>Qualification: need, budget, timing</td><td><b>AI agent</b></td><td>The answers are buried in free-text chat</td></tr>\n<tr><td>A discount above the limit</td><td><b>Person</b></td><td>Money and responsibility for margin</td></tr>\n<tr><td>Scoring a call against criteria</td><td><b>AI agent</b></td><td>It means analysing speech, not reading a field</td></tr>\n<tr><td>An invoice from a template once terms are agreed</td><td><b>CRM automation</b></td><td>All the data is already in the deal record</td></tr>\n<tr><td>A summary of stalled deals</td><td><b>AI agent</b></td><td>It has to pick what matters and explain why a deal is stuck</td></tr>\n<tr><td>A disputed client complaint</td><td><b>Person</b></td><td>The relationship and a decision on behalf of the company</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies mapping for a typical sales process. In your process the steps and their owners may differ.</p>\n<h2>CRM automation takes every if-then step</h2>\n<p>If a step can be written as \"when the deal moves to stage X, do Y\", it does not need AI. Creating a lead from a form, setting a task, sending a template email, moving the stage after payment: that is the job of <a href=\"/bitrix\">Bitrix24</a> automation rules and workflows. A rule fires the same way every time, costs less and does not slip on simple things.</p>\n<p>An agent on such a step is paying for understanding where there is nothing to understand. We explained the difference between the two tools in our news piece on <a href=\"/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm\">AI agents versus CRM automation</a>. When standard rules are not enough, custom scenarios and links to outside systems are built through <a href=\"/bitrix-development\">Bitrix24 development</a> at AED 200 an hour.</p>\n<h2>An agent steps in where meaning matters</h2>\n<p>You need an agent on the steps where the input does not fit into a field: a client message, a conversation, a supplier email, a document. A rule cannot tell that \"would it be cheaper if we signed for a year?\" signals interest in an annual contract. An agent can, answers from the knowledge base and notes in the deal record what the client is after.</p>\n<p>Typical places for an agent in a sales process:</p>\n<ul>\n<li>the first reply to a client when the rep goes quiet, plus pipeline control: that is the <a href=\"/ai-agents/rop\">AI sales manager</a></li>\n<li>scoring every conversation against criteria instead of a sample: that is the <a href=\"/ai-agents/zvonki\">call agent</a></li>\n<li>sorting incoming enquiries in a messaging app: we described how it works in our news on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a></li>\n</ul>\n<p>Some of these tasks are covered by the AI built into Bitrix24, which transcribes calls and fills in fields. Where that is enough and where you need a separate agent is explained on our <a href=\"/bitrix-ai-crm\">AI-powered CRM</a> page.</p>\n<!--cta-->\n<h2>A person stays where mistakes are expensive</h2>\n<p>Some steps belong to neither automation nor an agent: a discount above the limit, non-standard payment terms, a disputed complaint. A person decides here, because a person answers for the outcome.</p>\n<p>The agent&#39;s job on these steps is different: spot that the situation has gone outside the rules and bring in the right colleague with a short summary. The manager gets the essence rather than the raw chat: what the client wants, what has already been promised, how much is at stake. The decision stays with them, it just happens faster.</p>\n<h2>The agent&#39;s limits are set before launch</h2>\n<p>Before launch every agent gets three lists: what it can read, what it can change and what it must never do. For example, the agent may reply to clients and update qualification fields, but cannot change the deal amount and never promises discounts. Everything it does is visible in the deal record.</p>\n<p>The agent runs under its own user account with the right permissions. Access and data stay with your company, and if the agent replies on a messaging channel, that channel is connected the official way: we connect WhatsApp to Bitrix24 for AED 500, details on our <a href=\"/bitrix-messengers\">messaging page</a>.</p>\n<h2>One working session is enough to map the process</h2>\n<p>Mapping does not need a long project. You can do it in a single meeting with the process owner:</p>\n<ol>\n<li>List the steps from first contact to payment as they happen today, not as they were designed</li>\n<li>Tag each step: rule, meaning or decision</li>\n<li>Mark where things fall through most often: unanswered enquiries, calls nobody reviews, deals that do not move</li>\n<li>Put an agent on one narrow step that needs understanding, and hand the rest to automation</li>\n<li>Decide which number will show the result: response time, share of calls reviewed</li>\n</ol>\n<p>With that map the budget is easier to plan. What it is made of is covered in our guide to <a href=\"/journal/ai-agents-for-business-cost\">AI agent scope and pricing</a>, and how to run the first quarter in our <a href=\"/journal/ai-adoption-plan\">90-day AI adoption plan</a>.</p>\n<h2>A worked example: a service company taking WhatsApp enquiries</h2>\n<p>A hypothetical air-conditioning maintenance company in Sharjah gets most of its enquiries on WhatsApp. Evening enquiries wait until morning, and CRM automation only creates the lead.</p>\n<p>After mapping, the process looks like this. Automation creates the lead and assigns a rep by area. The agent replies in the evening, asks for the address, the unit model and the problem, and records them in the deal. Automation books the visit in the calendar once the client confirms a time. A person handles only the exceptions: warranty disputes and discounts. Budget on our lines: AED 5,000 for the agent under Start, AED 500 a month for support and a few hours of automation work at AED 200 an hour. All agents are listed on the <a href=\"/ai-agents\">AI agents page</a>.</p>",
+  "mid": [
+   "Let us map your process together",
+   "We will show where you need an agent and where CRM automation will do. Free 30 to 40 minute demo, one agent from AED 5,000",
+   "Book a demo"
+  ],
+  "faq": [
+   [
+    "How is an AI agent different from CRM automation?",
+    "Automation runs an action on a clear trigger: the stage changed, so create a task. An agent understands free text, speech and documents and makes decisions within the rules you give it."
+   ],
+   [
+    "Can an agent run the whole process at once?",
+    "Technically yes, but it is safer to start with one narrow step that needs understanding. Rule-based steps are cheaper and more stable in CRM automation."
+   ],
+   [
+    "Which decisions should never go to an AI agent?",
+    "Decisions about money and exceptions: discounts above the limit, non-standard payment terms, disputed complaints. The agent spots these cases and hands them to a person with a summary."
+   ],
+   [
+    "How do I check what the agent is doing?",
+    "Every action the agent takes is visible in the deal record, and its permissions are set in advance: what it reads, what it changes and what is off-limits. A manager reviews its work the same way as an employee&#39;s."
+   ],
+   [
+    "How much does it cost to add an agent to a process?",
+    "One agent under the Start package costs AED 5,000 one-off, with support at AED 500 a month. CRM automation around the agent is set up at AED 200 an hour, prices exclude VAT."
+   ]
+  ],
+  "cta": [
+   "Let us find the right spot for an agent in your process",
+   "Describe the client journey from enquiry to payment and where it gets stuck most often. We will suggest a step map and an estimate in AED"
+  ],
+  "related": [
+   [
+    "/journal/ai-agents-for-business-cost",
+    "AI agents for business: what is included and what it costs"
+   ],
+   [
+    "/journal/ai-automation-beyond-sales",
+    "AI automation beyond sales: finance, procurement, hiring"
+   ],
+   [
+    "/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm",
+    "AI agent or CRM automation: what is the difference"
+   ]
+  ]
+ }
+}

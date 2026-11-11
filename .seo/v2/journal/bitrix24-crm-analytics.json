@@ -1,0 +1,114 @@
+{
+ "slug": "bitrix24-crm-analytics",
+ "date": "2026-11-11",
+ "rubric_ru": "Аналитика",
+ "rubric_en": "Analytics",
+ "ru": {
+  "title": "Почему отчёты CRM врут и как это исправить | MakeBiz",
+  "desc": "Почему отчёты CRM показывают не то: дубли, пустые поля, размытые стадии. План исправления и BI-дашборды от 300 AED в месяц, 14 дней бесплатно.",
+  "h1": "Почему отчёты CRM врут и как это исправить",
+  "crumb": "Почему врут отчёты CRM",
+  "lead": "Руководитель открывает отчёт по продажам и не верит цифрам: конверсия скачет, выручка не сходится с бухгалтерией. Почти всегда дело не в отчёте, а в данных, которые в него попадают.",
+  "answer": "Отчёты CRM врут из-за четырёх причин: дубли клиентов, пустые ключевые поля, размытые стадии воронки и отсутствие правил, кто и когда заполняет карточку. Исправление начинается с аудита портала, работы MakeBiz Technologies считаются по 200 AED в час со сметой до старта. Когда данные чистые, BI-дашборды стоят от 300 AED в месяц, первые 14 дней бесплатно.",
+  "body": "<h2>Отчёт показывает ровно то, что внесли менеджеры</h2>\n<p>Отчёты Битрикс24 и любой другой CRM считают не продажи, а записи о продажах. Если менеджер завёл одного клиента дважды, забыл указать источник или закрыл сделку через месяц после оплаты, отчёт честно посчитает именно это. Поэтому спор «отчёт кривой» почти всегда заканчивается в карточках сделок, а не в настройках виджета.</p>\n<p>Ниже типовые симптомы и то, что за ними обычно стоит.</p>\n<table><thead><tr><th>Симптом в отчёте</th><th>Причина в данных</th><th>Что исправить</th></tr></thead><tbody>\n<tr><td><b>Конверсия скачет или больше 100%</b></td><td>Сделки создают без лида, один лид конвертируют несколько раз</td><td>Один сценарий входа: заявка, затем сделка, создание роботом</td></tr>\n<tr><td><b>Клиентов больше, чем есть на самом деле</b></td><td>Дубли компаний и контактов с разным написанием и номерами</td><td>Поиск и объединение дублей, единый формат телефона +971</td></tr>\n<tr><td><b>Источник «не указан»</b></td><td>Поле источника заполняют вручную</td><td>Источник из CRM-формы, UTM и канала автоматически</td></tr>\n<tr><td><b>Выручка не сходится с учётом</b></td><td>Сумму не меняют после скидки, оплаты частями не отмечают</td><td>Сумма и оплата из Zoho Books, QuickBooks или Odoo</td></tr>\n<tr><td><b>Сделки стоят на одной стадии месяцами</b></td><td>Нет правила закрытия и срока на стадии</td><td>Обязательная причина проигрыша, робот на сделку без движения</td></tr>\n<tr><td><b>Цикл сделки короче реального</b></td><td>Стадию «Оплата» ставят задним числом или пропускают</td><td>Дата перехода фиксируется автоматически, перескок ограничен</td></tr>\n</tbody></table>\n<p class=\"note\">Таблица MakeBiz Technologies по типовым ошибкам данных в CRM, без привязки к конкретной компании.</p>\n<h2>Дубли раздувают базу и делят историю клиента</h2>\n<p>Дубль появляется, когда клиент сначала пишет в WhatsApp, а потом звонит с другого номера, или когда два менеджера заводят одну компанию с разным написанием названия. В отчёте это два клиента, две сделки и две истории, а в реальности один человек, который уже получил два разных КП.</p>\n<p>В Битрикс24 есть поиск и объединение дубликатов по телефону, email и названию. Но разовая чистка не поможет, если не закрыть вход: проверка при создании карточки, единый формат номера, запрет создавать компанию без поиска по базе. Кто в компании может объединять и удалять записи, решают права доступа, мы разбирали их в новости про <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">права доступа в CRM</a>.</p>\n<h2>Пустые поля превращают аналитику в догадки</h2>\n<p>Пустое поле не равно нулю, оно просто выпадает из отчёта. Если причина проигрыша заполнена только у части сделок, отчёт «почему теряем клиентов» строится по этой части и делает вывод за всех. То же с источником, отраслью, суммой и датой следующего контакта.</p>\n<p>Решение не в том, чтобы сделать обязательными все поля карточки. Тогда менеджеры начнут ставить что угодно, лишь бы сохранить сделку, и мусора станет больше. Работает другой подход:</p>\n<ul>\n<li>оставить 5-7 полей, по которым реально принимаются решения</li>\n<li>делать каждое обязательным только на той стадии, где информация появляется: сумма на стадии КП, причина при закрытии</li>\n<li>заполнять автоматически всё, что можно взять из формы, звонка или счёта</li>\n<li>убрать поля, которые никто не открывал больше квартала</li>\n</ul>\n<p>Часть информации теряется ещё раньше, в разговоре: клиент назвал бюджет и срок, а в карточку это не попало. Об этом наша новость <a href=\"/news/chto-teryaetsya-mezhdu-zvonkom-i-kartochkoy-sdelki\">о том, что слышно в звонке и чего нет в карточке сделки</a>.</p>\n<h2>Стадия воронки должна значить одно и то же для всех</h2>\n<p>«Переговоры» у одного менеджера означают первый звонок, у другого согласованный договор. В итоге отчёт по стадиям показывает не процесс, а привычки сотрудников. У каждой стадии нужен критерий входа, который можно проверить: «КП отправлено» значит, что в карточке есть документ КП, «Счёт выставлен» значит, что счёт создан в CRM или учётной системе.</p>\n<p>Стадий должно быть столько, сколько у клиента реальных решений, обычно 5-8. Если стадию никто не может описать одним предложением, её стоит объединить с соседней. И ограничьте перескок через стадии, иначе конверсия между этапами теряет смысл.</p>\n<!--cta-->\n<h2>Правила заполнения держат роботы, а не регламент в PDF</h2>\n<p>Регламент из общей папки читают один раз при найме. Правила, зашитые в портал, работают каждый день. В Битрикс24 это делается штатными средствами:</p>\n<ul>\n<li>робот ставит задачу, если сделка без движения дольше заданного срока</li>\n<li>обязательные поля по стадиям не пускают дальше без нужных данных</li>\n<li>источник и UTM подставляются из формы и канала, подробнее в гайде <a href=\"/journal/bitrix24-crm-forms\">про CRM-формы Битрикс24</a></li>\n<li>руководитель получает сводку по карточкам с пустыми полями</li>\n</ul>\n<p>Там, где роботов мало, помогает ИИ-агент. <a href=\"/ai-agents/rop\">ИИ-РОП</a> следит за воронкой, напоминает менеджеру о сделке без следующего шага и отвечает клиенту, если менеджер молчит. Агенты подключаются к CRM и мессенджерам, демонстрация на вашем процессе бесплатна и занимает 30-40 минут.</p>\n<p>Новым сотрудникам правила проще показать на коротком занятии по вашему порталу, чем пересказывать устно. Формат описан на странице <a href=\"/bitrix-training\">обучения Битрикс24</a>.</p>\n<h2>Исправление проходит в пять шагов</h2>\n<ol>\n<li><b>Аудит.</b> Смотрим, какие отчёты нужны руководителю, и сверяем их с полями, стадиями и роботами портала. Что проверяем, описано на странице <a href=\"/bitrix-audit\">аудита Битрикс24</a></li>\n<li><b>Чистка.</b> Объединяем дубли, восстанавливаем критичные поля по истории, закрываем мёртвые сделки с причиной</li>\n<li><b>Правила.</b> Критерии стадий, обязательные поля, роботы контроля, единый формат телефонов</li>\n<li><b>Связь с учётом.</b> Сумма и оплата приходят из учётной системы, и выручка в CRM совпадает с бухгалтерией</li>\n<li><b>Дашборды.</b> Только после этого строим отчёты, которым можно верить</li>\n</ol>\n<p>Работы считаются по часам, 200 AED за час, смета фиксируется до старта. Если после запуска нужен человек, который следит за порядком, подходит пакет <a href=\"/bitrix-support\">поддержки</a>: 5 часов в месяц за 1 250 AED или 10 часов за 2 300 AED. Связка с учётом описана на странице <a href=\"/bitrix-integrations\">интеграций</a>, все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<h2>BI-аналитика нужна, когда данные уже чистые</h2>\n<p>Встроенных отчётов Битрикс24 хватает для ежедневной работы менеджера. Руководителю обычно нужно больше: сравнение периодов, план-факт, реклама и учёт на одном экране. Для этого есть <a href=\"/bi-analitika\">BI-аналитика</a>: тариф Базовый 300 AED в месяц до 3 пользователей, Стандарт 700 AED, Профи 1 000 AED, первые 14 дней бесплатно. При оплате за 6 месяцев скидка 10%, за год 20%.</p>\n<p>Какие экраны смотреть в первую очередь, мы описали в новости <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">о трёх дашбордах руководителя продаж</a>. Дальше на чистых данных строят <a href=\"/journal/sales-forecasting-crm\">прогноз продаж по CRM</a> и <a href=\"/journal/full-funnel-analytics\">сквозную аналитику</a> от рекламы до оплаты.</p>\n<h2>Условный пример: дистрибьютор на 15 менеджеров</h2>\n<p>Условная дистрибуционная компания в Дубае два года работает в Битрикс24. Отчёт показывает высокую конверсию, выручка по CRM расходится с учётом, а причин проигрыша почти нет. Аудит находит три вещи: менеджеры создают сделки в обход лидов, не меняют сумму после скидки, а оплаченные сделки неделями стоят на стадии «Счёт».</p>\n<p>Компания объединяет дубли, оставляет 6 стадий с понятными критериями, делает причину проигрыша обязательной при закрытии, связывает суммы с учётной системой и только потом подключает дашборды для директора и двух руководителей отделов. Бюджет известен заранее: часы аудита и настройки по 200 AED и тариф BI по числу пользователей отчётов.</p>",
+  "mid": [
+   "Проверим, почему врут ваши отчёты",
+   "Аудит портала: дубли, поля, стадии и роботы. Работы по 200 AED в час, смета до старта",
+   "Заказать аудит"
+  ],
+  "faq": [
+   [
+    "Почему отчёт по конверсии в Битрикс24 показывает странные цифры?",
+    "Чаще всего сделки создают в обход лидов или один клиент заведён несколько раз. Отчёт считает записи, поэтому сначала наводят порядок во входе заявок и в дублях."
+   ],
+   [
+    "Как убрать дубли в Битрикс24?",
+    "Встроенный поиск дубликатов находит совпадения по телефону, email и названию, записи можно объединить. Чтобы дубли не возвращались, нужен единый формат телефонов и проверка при создании карточки."
+   ],
+   [
+    "Сколько полей сделать обязательными?",
+    "Обычно хватает 5-7 полей, по которым принимаются решения. Делайте их обязательными на тех стадиях, где информация появляется, а остальное заполняйте автоматически."
+   ],
+   [
+    "Сколько стоит навести порядок в CRM?",
+    "Работы MakeBiz Technologies считаются по 200 AED в час, смета фиксируется до старта и зависит от объёма портала. Поддержка после запуска от 1 250 AED в месяц за 5 часов."
+   ],
+   [
+    "Нужна ли BI-система, если в Битрикс24 есть отчёты?",
+    "Менеджерам встроенных отчётов обычно достаточно. BI нужна, когда руководитель сводит CRM, рекламу и учёт в одном месте, тариф от 300 AED в месяц и 14 дней бесплатно."
+   ]
+  ],
+  "cta": [
+   "Наведём порядок в данных CRM",
+   "Напишите, какие отчёты не сходятся и сколько человек работает в портале. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/sales-forecasting-crm",
+    "Прогноз продаж по данным CRM"
+   ],
+   [
+    "/journal/full-funnel-analytics",
+    "Сквозная аналитика: от рекламы до оплаты"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Три дашборда, которые смотрит руководитель продаж"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Why CRM reports lie and how to fix them | MakeBiz",
+  "desc": "Why CRM reports show the wrong numbers: duplicates, empty fields, vague stages. A fix plan, plus BI dashboards from AED 300 a month with 14 days free.",
+  "h1": "Why CRM reports lie and how to fix them",
+  "crumb": "Why CRM reports lie",
+  "lead": "A sales director opens the pipeline report and does not believe it: conversion jumps around and revenue does not match the accounts. The report is rarely the problem. The data going into it usually is.",
+  "answer": "CRM reports go wrong for four reasons: duplicate clients, empty key fields, vague pipeline stages and no rules on who fills in what and when. The fix starts with a portal audit, which MakeBiz Technologies bills at AED 200 an hour with the estimate fixed before we start. Once the data is clean, BI dashboards start at AED 300 a month, with the first 14 days free.",
+  "body": "<h2>A report shows exactly what your team typed in</h2>\n<p>CRM reports do not count sales, they count records of sales. If a rep creates the same client twice, skips the lead source or closes a deal a month after payment, the report counts exactly that. So \"the report is broken\" almost always turns out to be a problem inside deal records, not in the widget settings.</p>\n<table><thead><tr><th>What you see</th><th>What is wrong in the data</th><th>What to fix</th></tr></thead><tbody>\n<tr><td><b>Conversion jumps or tops 100%</b></td><td>Deals created without a lead, or one lead converted twice</td><td>One entry route: lead, then deal, created by automation</td></tr>\n<tr><td><b>More clients than you have</b></td><td>Duplicate companies and contacts</td><td>Merge duplicates, one +971 phone format</td></tr>\n<tr><td><b>Source \"not specified\"</b></td><td>Reps type the source by hand</td><td>Source from the form, UTM tags and channel</td></tr>\n<tr><td><b>Revenue does not match the books</b></td><td>Amount not updated after a discount, part payments missing</td><td>Amount and payment from Zoho Books, QuickBooks or Odoo</td></tr>\n<tr><td><b>Deals stuck for months</b></td><td>No closing rule, no time limit per stage</td><td>Mandatory loss reason, automation for stalled deals</td></tr>\n<tr><td><b>Sales cycle looks too short</b></td><td>\"Paid\" stage set retroactively or skipped</td><td>Stage dates recorded automatically, skipping restricted</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies summary of common CRM data problems, not tied to any specific company.</p>\n<h2>Duplicates inflate the database and split client history</h2>\n<p>A duplicate appears when a client messages on WhatsApp and later calls from another number, or when two reps add the same company under slightly different names. The report sees two clients and two histories. In reality it is one buyer who already has two different quotes.</p>\n<p>Bitrix24 can find and merge duplicates by phone, email and company name. A one-off clean-up will not last unless you close the door: a check when a record is created, one phone format, and no new company without a search. Who may merge or delete records is an access rights question, covered in our news piece on <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">CRM access rights</a>.</p>\n<h2>Empty fields turn analytics into guesswork</h2>\n<p>An empty field is not a zero, it simply drops out of the report. If only some deals have a loss reason, your \"why we lose clients\" report draws conclusions for everyone from that subset.</p>\n<p>Making every field mandatory does not help: reps will type anything just to save the deal. What works:</p>\n<ul>\n<li>keep the 5 to 7 fields you actually decide on</li>\n<li>require each one only at the stage where the information appears: amount at the quote stage, loss reason at closing</li>\n<li>fill in automatically whatever can come from a form, a call or an invoice</li>\n<li>drop fields nobody has opened in a quarter</li>\n</ul>\n<h2>Every stage has to mean the same thing to everyone</h2>\n<p>For one rep \"Negotiation\" is the first call, for another it is an agreed contract. The stage report then shows habits, not your sales process. Give each stage an entry criterion you can check: \"Quote sent\" means a quote is attached, \"Invoice issued\" means the invoice exists in the CRM or your accounting system.</p>\n<p>Keep as many stages as your client has real decisions, usually 5 to 8. If nobody can describe a stage in one sentence, merge it with the next. Restrict stage skipping, or stage-to-stage conversion stops meaning anything.</p>\n<!--cta-->\n<h2>Automation enforces the rules, a PDF policy does not</h2>\n<p>A CRM policy in a shared folder gets read once. Rules built into the portal work every day, and Bitrix24 does this with standard tools:</p>\n<ul>\n<li>a task is created when a deal has not moved for a set period</li>\n<li>stage-specific required fields stop a deal moving on without the data</li>\n<li>source and UTM tags come from the form and channel, see our guide to <a href=\"/journal/bitrix24-crm-forms\">Bitrix24 CRM forms</a></li>\n<li>the sales manager gets a summary of records with empty fields</li>\n</ul>\n<p>Where automation falls short, an AI agent helps. The <a href=\"/ai-agents/rop\">AI sales manager agent</a> watches the pipeline, nudges a rep about a deal with no next step and replies to the client if the rep goes quiet. Agents connect to your CRM and messengers, and a demo on your own process is free and takes 30 to 40 minutes.</p>\n<h2>Fixing the data takes five steps</h2>\n<ol>\n<li><b>Audit.</b> We list the reports management needs and check them against fields, stages and automation, see the <a href=\"/bitrix-audit\">Bitrix24 audit</a> page</li>\n<li><b>Clean-up.</b> Merge duplicates, restore key fields from history, close dead deals with a reason</li>\n<li><b>Rules.</b> Stage criteria, required fields, control automation, one phone format</li>\n<li><b>Accounting link.</b> Amounts and payments come from your accounting system, so CRM revenue matches the books</li>\n<li><b>Dashboards.</b> Only now do we build reports you can trust</li>\n</ol>\n<p>The work is billed at AED 200 an hour, with the estimate fixed before we start. To keep things tidy after launch, a <a href=\"/bitrix-support\">support plan</a> covers 5 hours a month for AED 1,250 or 10 hours for AED 2,300. The accounting link is on the <a href=\"/bitrix-integrations\">integrations</a> page, all prices are on our <a href=\"/ceny\">pricing page</a>.</p>\n<h2>BI analytics pays off once the data is clean</h2>\n<p>Built-in Bitrix24 reports cover a rep&#39;s daily work. Management usually wants period comparisons, plan versus actual, ad spend and accounting on one screen. That is what <a href=\"/bi-analitika\">BI analytics</a> is for: Basic at AED 300 a month for up to 3 users, Standard at AED 700, Pro at AED 1,000, first 14 days free. Paying for 6 months saves 10%, a year saves 20%.</p>\n<p>Which screens to start with is in our news piece on <a href=\"/news/tri-dashborda-rukovoditelya-prodazh\">three dashboards a sales director checks</a>. Clean data is also the base for a <a href=\"/journal/sales-forecasting-crm\">sales forecast from CRM data</a> and <a href=\"/journal/full-funnel-analytics\">end-to-end analytics</a> from ad click to payment.</p>\n<h2>A worked example: a distributor with 15 reps</h2>\n<p>A hypothetical Dubai distributor has used Bitrix24 for two years. Conversion looks high, CRM revenue does not match the books and loss reasons are rarely recorded. The audit finds that reps bypass leads, do not update amounts after discounts, and paid deals sit in the \"Invoice\" stage for weeks.</p>\n<p>The company merges duplicates, keeps 6 stages with clear criteria, makes the loss reason mandatory, links amounts to accounting and only then adds dashboards for the managing director and two department heads.</p>",
+  "mid": [
+   "Find out why your reports do not add up",
+   "A portal audit covering duplicates, fields, stages and automation. AED 200 an hour, estimate fixed before we start",
+   "Book an audit"
+  ],
+  "faq": [
+   [
+    "Why does my Bitrix24 conversion report show odd numbers?",
+    "Usually deals are created without going through leads, or the same client exists several times. Reports count records, so start with how leads come in and with duplicates."
+   ],
+   [
+    "How do I remove duplicates in Bitrix24?",
+    "Built-in duplicate search finds matches by phone, email and company name, and you can merge them. To stop them coming back, use one phone format and check for an existing record before creating a new one."
+   ],
+   [
+    "How many fields should be mandatory?",
+    "Usually the 5 to 7 fields you make decisions on. Require them at the stage where the information appears and fill the rest automatically."
+   ],
+   [
+    "How much does a CRM data clean-up cost?",
+    "MakeBiz Technologies bills it at AED 200 an hour, and the estimate is fixed up front based on the size of your portal. Support after launch starts at AED 1,250 a month for 5 hours."
+   ],
+   [
+    "Do I need BI if Bitrix24 already has reports?",
+    "For reps the built-in reports are usually enough. BI makes sense when management wants CRM, ads and accounting in one place, from AED 300 a month with 14 days free."
+   ]
+  ],
+  "cta": [
+   "Let us get your CRM data in order",
+   "Tell us which reports do not add up and how many people use the portal. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/sales-forecasting-crm",
+    "Sales forecasting from CRM data"
+   ],
+   [
+    "/journal/full-funnel-analytics",
+    "End-to-end analytics: from ad click to payment"
+   ],
+   [
+    "/news/tri-dashborda-rukovoditelya-prodazh",
+    "Three dashboards a sales director checks"
+   ]
+  ]
+ }
+}
