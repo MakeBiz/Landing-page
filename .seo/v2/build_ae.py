@@ -112,7 +112,7 @@ def footer():
     </div>
     <div><div class="ftr-t">ИИ-агенты</div><a href="{U('/ai-agents')}">Внедрение ИИ-агентов</a><a href="{U('/ai-agents/rop')}">ИИ-РОП</a><a href="{U('/ai-agents/zvonki')}">Речевая аналитика</a><a href="{U('/ai-agents/hr')}">HR-агент</a><a href="{U('/ai-agents/marketing')}">Маркетолог</a></div>
     <div><div class="ftr-t">Битрикс24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
-    <div><div class="ftr-t">Компания</div><a href="{U('/o-kompanii')}">О компании</a><a href="{U('/ceny')}">Цены</a><a href="{U('/keysy')}">Кейсы</a><a href="{U('/vps')}">Серверы и VPS</a><a href="{U('/news')}">Новости</a><a href="{U('/partners')}">Партнёрам</a><a href="https://t.me/makebizchannel">Telegram-канал</a><a href="{U('/contacts')}">Контакты</a><a href="{BASE}/en">English version</a></div>
+    <div><div class="ftr-t">Компания</div><a href="{U('/o-kompanii')}">О компании</a><a href="{U('/ceny')}">Цены</a><a href="{U('/keysy')}">Кейсы</a><a href="{U('/vps')}">Серверы и VPS</a><a href="{U('/news')}">Новости</a><a href="{U('/journal')}">Журнал</a><a href="{U('/partners')}">Партнёрам</a><a href="https://t.me/makebizchannel">Telegram-канал</a><a href="{U('/contacts')}">Контакты</a><a href="{BASE}/en">English version</a></div>
   </div>
   <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">Под задачу</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,t,_,_,_ in LANDINGS_AE)}</div>
   <div class="wrap ftr-legal">
@@ -1390,6 +1390,8 @@ built.append(page('/contacts', 'contacts', 'Контакты MakeBiz Technologie
     'contacts', ct_body, [{"@type": "ContactPage", "url": SITE + "/contacts"}], [('/', 'Главная'), ('/contacts', 'Контакты')], ct_faq))
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landings_ae.py'), encoding='utf-8').read())
+# журнал гайдов /journal (статьи в .seo/v2/journal/*.json)
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'journal_ae.py'), encoding='utf-8').read())
 
 # обвязка для журнала и новостей (server.js оборачивает их в новый дизайн)
 os.makedirs(os.path.join(OUT, '_chrome'), exist_ok=True)

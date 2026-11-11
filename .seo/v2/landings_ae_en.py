@@ -342,3 +342,226 @@ la_page(dict(path='/bitrix-recruitment', slug='bitrix-recruitment', crumb='CRM f
     ],
     form=('Let us discuss your agency CRM', 'Tell us how many recruiters and jobs a month. We reply within a business day'),
     svc=('CRM for recruitment', 'Bitrix24 implementation for recruitment agencies in the UAE', 10000)))
+
+# ================================================================ Wave 2 (11.11.2026), EN
+# Prices only from /en/pricing on 11.11.2026; topics and sources as in the wave 2 block of landings_ae.py. British spelling in new text
+LA_DATE2 = 'November 11, 2026'
+_LA_UPD = (UPDATED, UPDATED_ISO)
+UPDATED, UPDATED_ISO = LA_DATE2, '2026-11-11'
+
+def la2_tbl(rows, extra_note=''):
+    return la_tbl(['Work', 'Price', 'Terms'], rows, 'Prices as of ' + LA_DATE2 + ', excluding VAT' + extra_note + '. ' + LA('/ceny', 'All prices'))
+LA2_SETUP = ('Standard CRM setup', 'from AED 10,000', 'up to 20 users, from 14 days')
+def LA2_HOUR(what): return (what, 'AED 200 per hour', 'estimate before start')
+LA2_WA = ('WhatsApp or another messenger', 'AED 500', 'provider subscription separate')
+LA2_SUP = ('Support after launch', 'from AED 1,250', 'a month, 5 hours')
+LA2_BI = ('BI analytics', 'from AED 300', 'a month; Standard AED 700, Pro AED 1,000')
+LA2_LIC = ('Bitrix24 licence', 'from AED 180', 'a month, Basic for 5 users, billed annually')
+def la2_card(text): return '<div class="card"><p>' + text + '</p></div>'
+
+# ---------------------------------------------------------------- 8. AI-powered CRM
+la_page(dict(path='/bitrix-ai-crm', slug='bitrix-ai-crm', crumb='AI-powered CRM',
+    title='AI-powered CRM in Dubai: Bitrix24 with AI | MakeBiz',
+    desc='AI-powered CRM on Bitrix24 for UAE companies: CoPilot transcribes calls and fills in fields, an AI agent replies on WhatsApp. One agent from AED 5,000.',
+    eyebrow='CRM · artificial intelligence', h1='AI-powered CRM <span>for UAE business</span>',
+    lead='What AI does inside Bitrix24, what agents add and what it costs',
+    answer='An AI-powered CRM for a UAE company has two layers: the Bitrix24 assistant CoPilot transcribes calls, writes summaries and fills in deal fields, while MakeBiz AI agents reply to customers on WhatsApp and score calls. CRM setup from AED 10,000, one AI agent from AED 5,000, speech analytics from AED 1,000 a month. Prices as of ' + LA_DATE2 + '.',
+    cta='Discuss an AI-powered CRM', vis=V_AGENTS,
+    chips=[('from AED 5,000', 'one AI agent'), ('from AED 10,000', 'CRM setup'), ('AED 1,000/mo', 'speech analytics'), ('Partner', 'Bitrix24')],
+    alt='AI-powered CRM on Bitrix24',
+    sections=[
+        section('What the Bitrix24 built-in AI does', 'Bitrix24 helpdesk, November 6, 2026', cards([
+            ('Call transcript', 'Searchable text in the language of the call'),
+            ('Call summary', 'The key points in the deal timeline'),
+            ('Fields from the call', 'Empty fields are filled, filled ones only get a suggested change'),
+            ('Script check', 'The call is scored against your sales script'),
+            ('Follow-up activity', 'The next activity with a short call outcome'),
+            ('Chat review', 'Chats in leads, deals, contacts and companies'),
+        ], 3)),
+        section('Where built-in AI is not enough', '', cards([
+            ('CoPilot in the record', 'Helps with one call or chat, within plan limits'),
+            ('An agent in the chat', 'The ' + LA('/ai-agents/rop', 'AI sales head') + ' replies on its own if the rep is silent for 15 minutes'),
+            ('Every team call', LA('/ai-agents/zvonki', 'Speech analytics') + ' scores every call, rep by rep'),
+            ('Agent or rule', 'The difference is in our news on ' + LA('/news/chem-ai-agent-otlichaetsya-ot-robota-v-crm', 'agents and rules')),
+        ], 2)),
+        section('Limits, plan and data', '', la2_card('Regular Bitrix24 plans have monthly AI limits, Vibe+ plans do not (Bitrix24 blog, August 17, 2026). Agents reach a cloud portal through the REST API, which per the Bitrix24 documentation now comes with Vibe+ plans, not Essentials. CoPilot runs on third-party models such as OpenAI; if data must stay with you, we deploy agents on your server, including in the UAE. Plan prices: ' + LA('/bitrix-licenses', 'Bitrix24 licences')), tone='tint'),
+        section('Example: a sales team of 8', '', la2_card('An illustration, not a case. 8 reps, leads from WhatsApp and calls. CRM setup AED 10,000 plus the AI sales head on the Start package for AED 5,000, who answers in the evening and at weekends. Total AED 15,000 one-off, AED 500 a month maintenance and the licence. Speech analytics, if needed: AED 1,000 a month.')),
+    ],
+    table_title='What an AI-powered CRM costs', table_sub='Our work and the licence',
+    table=la2_tbl([LA2_SETUP, LA2_HOUR('CoPilot setup: fields, script, rights'), ('AI agent, Start package', 'AED 5,000', 'one-off, maintenance 10% a month'), ('Speech analytics', 'from AED 1,000', 'a month for 5,000 minutes'), LA2_WA, LA2_LIC]),
+    mid=('We will show AI on your calls and chats', 'A free 30-40 minute demo with prices', 'Book a demo'),
+    cases=['haval-vector', 'cdek-b2b', 'apartika-crm'],
+    faq=[
+        ('Does Bitrix24 have built-in AI?', 'Yes, CoPilot: in the CRM it transcribes and summarises calls, fills in fields and scores calls. Usage depends on the plan.'),
+        ('How much does an AI-powered CRM cost in the UAE?', 'CRM setup from AED 10,000, an AI agent from AED 5,000 plus 10% a month, speech analytics from AED 1,000 a month, licence separate.'),
+        ('How is an AI agent different from CoPilot?', 'CoPilot helps an employee in the record. An agent works on its own: replies, leads the dialogue to a booking and sets a task for the rep.'),
+        ('Which languages does the AI work in?', 'CoPilot uses the language of the call, our agents reply in English and Russian.'),
+    ],
+    form=('Let us show you an AI-powered CRM', 'Tell us your team size. We reply within a business day'),
+    svc=('AI-powered CRM', 'Bitrix24 implementation with CoPilot and AI agents for UAE companies', 10000)))
+
+# ---------------------------------------------------------------- 9. Bitrix24 development
+la_page(dict(path='/bitrix-development', slug='bitrix-development', crumb='Bitrix24 development',
+    title='Bitrix24 development in Dubai: API and integrations | MakeBiz',
+    desc='Bitrix24 development for UAE companies: REST API, webhooks, apps, exchange with your website and in-house systems. AED 200 per hour, estimate before start.',
+    eyebrow='Bitrix24 · development', h1='Bitrix24 <span>development</span>',
+    lead='When the standard setup is not enough: links to your website and in-house systems, custom automation and apps inside the portal',
+    answer='MakeBiz Technologies, an official Bitrix24 partner in the UAE, extends portals where the standard setup is not enough: REST API and webhook integrations, exchange with your website and in-house systems, custom apps and automation steps. AED 200 per hour with the estimate in AED fixed before start; accounting integration from AED 10,000. Prices as of ' + LA_DATE2 + '.',
+    cta='Discuss development', vis=V_SYNC,
+    chips=[('AED 200/hr', 'development'), ('from AED 10,000', 'accounting link'), ('REST API', 'webhooks, apps'), ('Partner', 'Bitrix24')],
+    alt='Bitrix24 development and integrations',
+    sections=[
+        section('What we build', '', cards([
+            ('Website exchange', 'Leads, orders and statuses without retyping'),
+            ('In-house systems', 'Warehouse, ERP, TMS or your own database, both ways'),
+            ('Custom automation steps', 'Actions the standard Bitrix24 set does not have'),
+            ('Event handlers', 'A deal changes stage, the external system gets the data'),
+            ('App inside the portal', 'Your own tab or widget inside Bitrix24'),
+            ('Exports and reports', 'CRM data to BI and spreadsheets on a schedule'),
+        ], 3)),
+        section('Bitrix24 plan and REST API', 'apidocs.bitrix24.com, checked ' + LA_DATE2, la2_card('Ongoing REST API access in the cloud now comes with Vibe+ plans, not Essentials. Existing subscriptions may keep access for a transition period, and a 15-day Professional Vibe+ trial is available for testing. The cloud limit is 2 requests per second with a burst of up to 50, on Enterprise 5 and 250. On-premise, your server sets the load. So we check the plan before the estimate and for heavy exchanges consider ' + LA('/bitrix-korobka', 'on-premise Bitrix24') + '; see our news on ' + LA('/news/oblako-ili-svoy-server-dlya-crm-v-oae', 'cloud or own server'))),
+        section('How we work', '', steps([
+            ('Review', 'What to connect, which data, which direction'),
+            ('Map and estimate', 'Objects, fields, events, hours and price in AED'),
+            ('Build and test', 'Test data first, then live data'),
+            ('Launch and support', 'Exchange documentation, then a support package'),
+        ]), tone='tint'),
+        section('Example: website and warehouse', '', la2_card('An illustration, not a case. Website leads land in a deal with their source, and warehouse stock shows in the CRM. At, say, 30 hours, that is AED 6,000. If invoices and payments are involved, it is an ' + LA('/bitrix-integrations', 'accounting integration') + ' from AED 10,000, and ' + LA('/bi-analitika', 'BI analytics') + ' from AED 300 a month gives the combined view.')),
+    ],
+    table_title='What development costs', table_sub='You pay for hours',
+    table=la2_tbl([('Task review', 'free', '30-60 minutes by video call'), ('Development and integrations', 'AED 200 per hour', 'estimate in AED before start'), ('Accounting integration', 'from AED 10,000', 'Zoho Books, QuickBooks, Odoo, 1C'), ('Support after launch', 'from AED 1,250', 'a month, 5 hours; 10 hours AED 2,300, 20 hours AED 4,200'), ('Hour beyond a package', 'AED 250', 'as used')], '. The Bitrix24 licence is separate'),
+    mid=('We will scope the work before it starts', 'Describe what needs to connect, we return an exchange map and an estimate in AED', 'Get an estimate'),
+    cases=['cdek-b2b', 'unilin-crm', 'apartika-crm'],
+    faq=[
+        ('How much does Bitrix24 development cost?', 'AED 200 per hour with the estimate in AED fixed before start. Accounting integration from AED 10,000.'),
+        ('Do we need a specific plan for an integration?', 'A cloud portal needs REST API access, which per the Bitrix24 documentation comes with Vibe+ plans, not Essentials.'),
+        ('Do you work on a portal set up by another partner?', 'Yes. We review what has been done first and do not rebuild what works.'),
+        ('Do you work with on-premise Bitrix24?', 'Yes, cloud and on-premise. Our cases include on-premise Bitrix24 at Unilin linked with 1C and ERP.'),
+    ],
+    form=('Let us discuss your Bitrix24 development', 'Tell us what needs to connect with what. We reply within a business day'),
+    svc=('Bitrix24 development', 'Bitrix24 customisation, REST API integrations and apps for UAE companies', None)))
+
+# ---------------------------------------------------------------- 10. Travel agency
+la_page(dict(path='/bitrix-travel', slug='bitrix-travel', crumb='CRM for travel agencies',
+    title='CRM for a travel agency in Dubai on Bitrix24 | MakeBiz',
+    desc='CRM for travel agencies and tour operators in Dubai on Bitrix24: WhatsApp enquiries, options, bookings, payments, repeat trips. Setup from AED 10,000.',
+    eyebrow='CRM · travel', h1='CRM for a <span>travel agency</span>',
+    lead='Enquiries, options, bookings, payments and repeat trips in one system instead of personal phones',
+    answer='MakeBiz Technologies sets up CRM for travel agencies and tour operators in Dubai on Bitrix24: enquiries from WhatsApp, the website and social media, options and quotes, supplier bookings, payments, pre-trip reminders and repeat sales. Standard setup from AED 10,000, WhatsApp AED 500, custom work AED 200 per hour. Prices as of ' + LA_DATE2 + '.',
+    cta='Discuss a travel agency CRM', vis=V_CHAT,
+    chips=[('from AED 10,000', 'setup'), ('AED 500', 'WhatsApp'), ('AED 200/hr', 'custom work'), ('Partner', 'Bitrix24')],
+    alt='CRM for a travel agency',
+    sections=[
+        section('What we set up for a travel agency', '', cards([
+            ('Enquiries in one pipeline', 'WhatsApp, website, calls and social media with source and owner'),
+            ('Options and quote', 'Dates, travellers and budget in the record, a quote from a template'),
+            ('Bookings and suppliers', 'Hotels, flights and transfers as a process with statuses'),
+            ('Payments', 'Deposit and balance with due dates and reminders'),
+            ('Before the trip', 'Documents, payment and departure date tracked in the record'),
+            ('Repeat trips', 'Travel history and an offer for next season'),
+        ], 3)),
+        section('Where a travel agency loses sales', '', cards([
+            ('A reply after an hour', 'The client asked three agencies and booked with the first to answer'),
+            ('A quote in a chat', 'Options and prices are scattered across chats'),
+            ('Payments without control', 'The balance date passed and the booking is at risk'),
+            ('The client after the trip', 'Came back happy, booked the next trip elsewhere'),
+        ], 2)),
+        section('First reply and the right plan', '', la2_card('Night enquiries can go to an ' + LA('/ai-agents/rop', 'AI agent') + ' that clarifies dates, budget and travellers and hands over a ready enquiry; see our news on ' + LA('/news/ai-agent-v-whatsapp-vhodyashchie-zayavki', 'an AI agent on WhatsApp') + '. WhatsApp integration comes with the Basic plan, invoices, estimates and web forms from Standard (bitrix24.ae, checked ' + LA_DATE2 + '). A similar path from enquiry to booking, in property rental, is in the ' + LA('/keysy/apartika-crm', 'Apartico case')), tone='tint'),
+        section('Example: an agency with 6 agents', '', la2_card('An illustration, not a case. 6 agents, enquiries mostly from WhatsApp. Setup AED 10,000, WhatsApp AED 500, and bookings and payments at, say, 20 hours, or AED 4,000: AED 14,500 one-off in total. Basic covers 5 users, so a team of 6 needs Standard for up to 50 users at AED 364 a month billed annually.')),
+    ],
+    table_title='What a travel agency CRM costs', table_sub='Our work and the licence',
+    table=la2_tbl([LA2_SETUP, LA2_HOUR('Bookings, suppliers, payments'), LA2_WA, ('AI agent for enquiries', 'from AED 5,000', 'maintenance 10% a month'), LA2_SUP, LA2_LIC]),
+    mid=('We will show a travel pipeline in a demo', 'Tell us your destinations, we show the CRM and the price', 'Book a demo'),
+    cases=['apartika-crm', 'performia-crm', 'cdek-b2b'],
+    faq=[
+        ('Does Bitrix24 work for a travel agency?', 'Yes. Enquiries run in a pipeline, bookings and payments in their own processes.'),
+        ('How much does a travel agency CRM cost in Dubai?', 'Standard setup from AED 10,000, WhatsApp AED 500, custom work AED 200 per hour after a survey. The Bitrix24 licence is separate, from AED 180 a month.'),
+        ('Can clients get a reply at night?', 'Yes, an AI agent from AED 5,000 can reply first and clarify details, and agents get ready enquiries in the morning.'),
+        ('Will you connect our booking systems?', 'If it has an API, we scope the exchange at AED 200 per hour. A cloud portal needs a plan with REST API access.'),
+    ],
+    form=('Let us discuss your travel agency CRM', 'Tell us your team size. We reply within a business day'),
+    svc=('CRM for travel agencies', 'Bitrix24 implementation for travel agencies and tour operators in the UAE', 10000)))
+
+# ---------------------------------------------------------------- 11. Event management
+la_page(dict(path='/bitrix-events', slug='bitrix-events', crumb='CRM for event companies',
+    title='CRM for an event management company in Dubai | MakeBiz',
+    desc='CRM for event management companies in Dubai on Bitrix24: enquiries, budgets, venues and vendors, project tasks, payments in instalments. From AED 10,000.',
+    eyebrow='CRM · events', h1='CRM for an <span>event management company</span>',
+    lead='Enquiry, budget, venue and vendors, team tasks and payments for every event in one system',
+    answer='MakeBiz Technologies sets up CRM for event management companies in Dubai on Bitrix24: event enquiries, budgets and proposals, venues and vendors, a project with tasks and deadlines for every event, payments in instalments and feedback afterwards. Standard setup from AED 10,000, custom work AED 200 per hour, WhatsApp AED 500. Prices as of ' + LA_DATE2 + '.',
+    cta='Discuss an event CRM', vis=V_BOARD,
+    chips=[('from AED 10,000', 'setup'), ('AED 200/hr', 'custom work'), ('Projects', 'and tasks'), ('Partner', 'Bitrix24')],
+    alt='CRM for an event management company',
+    sections=[
+        section('What we set up for events', '', cards([
+            ('Enquiries', 'Date, format, guests and budget from the first contact'),
+            ('Budget and proposal', 'Lines from the catalogue, a proposal from a template'),
+            ('Venues and vendors', 'A supplier base with terms and work history'),
+            ('A project per event', 'Team tasks with deadlines, a checklist and owners'),
+            ('Payments in instalments', 'Advance and balance by date, a debt reminder'),
+            ('After the event', 'Feedback, closing documents, a repeat order'),
+        ], 3)),
+        section('Where an event company loses money', '', cards([
+            ('A budget in a spreadsheet', 'A vendor raised the price, the client got the old version'),
+            ('An enquiry without a reply', 'While the budget was prepared, the client chose a faster agency'),
+            ('Tasks in chats', 'A week before the event nobody knows who books the equipment'),
+            ('Margin not visible', 'What remains after vendors is counted by hand'),
+        ], 2)),
+        section('Projects, plan and analytics', '', la2_card('Each event works best as a separate project with tasks and owners, linked to the deal. On bitrix24.ae unlimited projects, invoices and estimates come from the Standard plan, task time tracking from Professional (checked ' + LA_DATE2 + '). Revenue and margin by event and client come together in ' + LA('/bi-analitika', 'BI analytics') + ' from AED 300 a month; see our news on ' + LA('/news/tri-dashborda-rukovoditelya-prodazh', 'three dashboards')), tone='tint'),
+        section('Example: 10 events a month', '', la2_card('An illustration, not a case. About 10 corporate events a month, a team of 12. Setup AED 10,000, WhatsApp AED 500, and budgets and event projects at, say, 25 hours, or AED 5,000: AED 15,500 one-off in total. Standard for up to 50 users costs AED 364 a month billed annually. A similar flow of sales, handover and payments in instalments, in education, is in the ' + LA('/keysy/performia-crm', 'Performia case'))),
+    ],
+    table_title='What an event CRM costs', table_sub='Our work and the licence',
+    table=la2_tbl([LA2_SETUP, LA2_HOUR('Budgets, vendors, event projects'), LA2_WA, LA2_BI, LA2_SUP, LA2_LIC]),
+    mid=('We will map your event process in the CRM', 'Tell us what events you run, we show the map and the price', 'Get a map'),
+    cases=['performia-crm', 'apartika-crm', 'cdek-b2b'],
+    faq=[
+        ('Does Bitrix24 work for an event management company?', 'Yes. Enquiries and budgets run in the pipeline, each event is a project with tasks.'),
+        ('How much does an event CRM cost in Dubai?', 'Standard setup from AED 10,000, custom work AED 200 per hour after a survey, WhatsApp AED 500. The Bitrix24 licence is separate.'),
+        ('Can we see margin per event?', 'Yes, income and vendor costs are tracked per event; BI analytics from AED 300 a month sums them up.'),
+        ('Will there be payment reminders?', 'Yes, the advance and balance have due dates. An automation rule sets the task; bitrix24.ae lists sales automation from Professional.'),
+    ],
+    form=('Let us discuss your event CRM', 'Tell us what events you run. We reply within a business day'),
+    svc=('CRM for event management companies', 'Bitrix24 implementation for event management companies in the UAE', 10000)))
+
+# ---------------------------------------------------------------- 12. Marketing agency
+la_page(dict(path='/bitrix-agency', slug='bitrix-agency', crumb='CRM for agencies',
+    title='CRM for a marketing agency in Dubai on Bitrix24 | MakeBiz',
+    desc='CRM for marketing and digital agencies in Dubai on Bitrix24: leads, proposals, retainers, projects and tasks, hours per client. Setup from AED 10,000.',
+    eyebrow='CRM · agencies', h1='CRM for a <span>marketing agency</span>',
+    lead='Leads, proposals, retainers and tasks in one system: which client brings money and which eats hours',
+    answer='MakeBiz Technologies sets up CRM for marketing, digital and creative agencies in Dubai on Bitrix24: leads and proposals, monthly retainers as recurring deals, projects and tasks for each client, hours tracking and a profitability report. Standard setup from AED 10,000, custom work AED 200 per hour, BI analytics from AED 300 a month. Prices as of ' + LA_DATE2 + '.',
+    cta='Discuss an agency CRM', vis=V_TICKETS,
+    chips=[('from AED 10,000', 'setup'), ('AED 200/hr', 'custom work'), ('from AED 300/mo', 'BI analytics'), ('Partner', 'Bitrix24')],
+    alt='CRM for a marketing agency',
+    sections=[
+        section('What we set up for an agency', '', cards([
+            ('Leads and briefs', 'Website, WhatsApp and social media leads with the brief in the record'),
+            ('Proposals', 'A proposal from a template right from the deal'),
+            ('Retainers', 'Monthly contracts as recurring deals on a schedule'),
+            ('Client projects', 'Team tasks for each client with deadlines'),
+            ('Hours and budget', 'Hours spent on a client versus what they pay for'),
+            ('Reports', 'Revenue, team workload and profit by client'),
+        ], 3)),
+        section('Where an agency loses money', '', cards([
+            ('Hours not tracked', 'The client pays a fixed fee and nobody counts the hours'),
+            ('A verbal renewal', 'The contract ended, no invoice went out, the work goes on for free'),
+            ('Tasks in chats', 'Client edits arrive in five places and half get lost'),
+            ('Leads without a reply', 'While the proposal was in progress, the client signed elsewhere'),
+        ], 2)),
+        section('The right Bitrix24 plan for an agency', '', la2_card('Recurring deals come with the Basic plan, unlimited projects, invoices and estimates from Standard, task time tracking from Professional (bitrix24.ae, checked ' + LA_DATE2 + '). So we pick the plan by how the agency earns: if clients pay for hours, you need Professional; for a fixed package Standard may be enough. Plan prices in AED: ' + LA('/bitrix-licenses', 'Bitrix24 licences') + '. Who sees client amounts is in our news on ' + LA('/news/prava-dostupa-v-crm-kto-chto-vidit', 'access rights')), tone='tint'),
+        section('Example: an agency of 15 people', '', la2_card('An illustration, not a case. 15 staff, 12 clients on retainer. Setup AED 10,000 plus retainers, projects and hours tracking at, say, 20 hours, or AED 4,000: AED 14,000 one-off in total. Time tracking needs Professional for up to 100 users, AED 731 a month billed annually. BI analytics from AED 300 a month shows profit by client.')),
+    ],
+    table_title='What an agency CRM costs', table_sub='Our work and the licence',
+    table=la2_tbl([LA2_SETUP, LA2_HOUR('Retainers, projects, hours tracking'), LA2_BI, LA2_WA, LA2_SUP, LA2_LIC]),
+    mid=('We will show the profitability of your clients', 'Tell us how many retainer clients you have, we show the map and the price', 'Get a map'),
+    cases=['performia-crm', 'cdek-b2b', 'unilin-crm'],
+    faq=[
+        ('Does Bitrix24 work for a marketing agency?', 'Yes. Leads and proposals run in a pipeline, retainers as recurring deals, client work in projects and tasks.'),
+        ('How much does an agency CRM cost in Dubai?', 'Setup from AED 10,000, custom work AED 200 per hour, BI analytics from AED 300 a month, licence separate.'),
+        ('Can we track hours per client?', 'Yes, with task time tracking, which per bitrix24.ae comes from the Professional plan.'),
+        ('How do we not forget to invoice a retainer?', 'A recurring deal is created on schedule and appears as a new deal for the responsible manager.'),
+    ],
+    form=('Let us discuss your agency CRM', 'Tell us your team size. We reply within a business day'),
+    svc=('CRM for marketing agencies', 'Bitrix24 implementation for marketing and digital agencies in the UAE', 10000)))
+
+UPDATED, UPDATED_ISO = _LA_UPD

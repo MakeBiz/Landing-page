@@ -105,7 +105,7 @@ def footer():
     </div>
     <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI sales head</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
     <div><div class="ftr-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
-    <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
+    <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/journal')}">Journal</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
   </div>
   <div class="wrap ftr-sol" style="display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;padding-top:18px;margin-top:18px;border-top:1px solid rgba(127,140,170,.18)"><span class="ftr-t" style="margin:0 6px 0 0">By task and industry</span>{''.join(f'<a style="display:inline;padding:2px 0" href="{U(p)}">{esc(t)}</a>' for p,_,_,t,_ in LANDINGS_AE)}</div>
   <div class="wrap ftr-legal">
@@ -1292,6 +1292,8 @@ page('/contacts', 'contacts', 'MakeBiz Technologies contacts: WhatsApp, phone, T
     'contacts', ct_body, [{"@type": "ContactPage", "url": SITE + en_path("/contacts")}], [('/', 'Home'), ('/contacts', 'Contacts')], ct_faq)
 
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landings_ae_en.py'), encoding='utf-8').read())
+# журнал гайдов /journal (статьи в .seo/v2/journal/*.json)
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'journal_ae_en.py'), encoding='utf-8').read())
 
 # ---------- chrome for the English blog (/en/news), the server wraps it like the Russian journal
 CH = os.path.join(ROOT, os.environ.get('MB_OUT', '.'), '_chrome')

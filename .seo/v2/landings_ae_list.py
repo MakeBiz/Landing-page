@@ -10,3 +10,11 @@ LANDINGS_AE = [
     ('/bitrix-education', 'CRM для учебного центра', 'Набор, оплаты, группы', 'CRM for training centres', 'Enrolment, payments, groups'),
     ('/bitrix-recruitment', 'CRM для рекрутинга', 'Кандидаты, вакансии, клиенты', 'CRM for recruitment', 'Candidates, jobs, clients'),
 ]
+# Волна 2 (11.11.2026)
+LANDINGS_AE += [
+    ('/bitrix-ai-crm', 'CRM с ИИ', 'CoPilot и ИИ-агенты', 'AI-powered CRM', 'CoPilot and AI agents'),
+    ('/bitrix-development', 'Разработка под Битрикс24', 'REST API и интеграции', 'Bitrix24 development', 'REST API and integrations'),
+    ('/bitrix-travel', 'CRM для турагентства', 'Запросы, брони, оплаты', 'CRM for travel agencies', 'Enquiries, bookings, payments'),
+    ('/bitrix-events', 'CRM для ивент-агентства', 'Сметы, подрядчики, проекты', 'CRM for event companies', 'Budgets, vendors, projects'),
+    ('/bitrix-agency', 'CRM для агентства', 'Ретейнеры, задачи, часы', 'CRM for agencies', 'Retainers, tasks, hours'),
+]

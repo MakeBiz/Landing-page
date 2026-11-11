@@ -1,0 +1,114 @@
+{
+ "slug": "whatsapp-business-api-vs-whatsapp-web",
+ "date": "2026-11-10",
+ "rubric_ru": "Мессенджеры",
+ "rubric_en": "Messaging",
+ "ru": {
+  "title": "WhatsApp Business API или WhatsApp Web в CRM | MakeBiz",
+  "desc": "WhatsApp Business API или WhatsApp Web в CRM для компании в ОАЭ: условия WhatsApp, окно 24 часа, лимиты, цена. Подключение к Битрикс24 у нас 500 AED.",
+  "h1": "WhatsApp Business API или WhatsApp Web в CRM",
+  "crumb": "WhatsApp API или WhatsApp Web",
+  "lead": "В ОАЭ клиенты пишут в WhatsApp, поэтому канал подключают к CRM одним из первых. Есть два пути: официальная платформа WhatsApp и подключение через WhatsApp Web. Разбираем, чем они отличаются.",
+  "answer": "Для отдела продаж в ОАЭ надёжнее официальная WhatsApp Business Platform (API): один номер на команду, диалоги в карточке клиента, шаблоны и понятные лимиты. Подключение через WhatsApp Web опирается на стороннюю программу, а условия WhatsApp для Business App запрещают приложения, которые работают с сервисом без письменного согласия WhatsApp. Подключение канала к Битрикс24 у MakeBiz Technologies стоит 500 AED, сообщения Meta оплачиваются отдельно.",
+  "body": "<h2>Два способа подключения отличаются по сути</h2>\n<p>Официальная платформа это канал для бизнеса: номер компании проходит проверку Meta и подключается к CRM через провайдера. WhatsApp Web в CRM это обходной путь: программа или расширение читает переписку из приложения на телефоне и переносит её в портал.</p>\n<table><thead><tr><th>Критерий</th><th>WhatsApp Business Platform (API)</th><th>WhatsApp Web в CRM</th></tr></thead><tbody>\n<tr><td><b>Как подключается</b></td><td>Через провайдера, номер проходит проверку Meta</td><td>Сторонняя программа к приложению на телефоне</td></tr>\n<tr><td><b>Условия WhatsApp</b></td><td>Официальный канал для бизнеса</td><td>Условия Business App запрещают такие приложения без письменного согласия</td></tr>\n<tr><td><b>Команда</b></td><td>Один номер, диалоги распределяются между менеджерами</td><td>Подключение держится на одной сессии приложения</td></tr>\n<tr><td><b>Первое сообщение клиенту</b></td><td>Шаблон, одобренный Meta</td><td>Свободным текстом, без правил платформы</td></tr>\n<tr><td><b>Рассылки</b></td><td>Лимит растёт вместе с качеством сообщений</td><td>Массовые отправки рискуют ограничением номера</td></tr>\n<tr><td><b>Деньги</b></td><td>Подписка провайдера и плата Meta за сообщения</td><td>Дёшево на старте, дорого при потере номера</td></tr>\n</tbody></table>\n<p class=\"note\">Сравнение MakeBiz Technologies по документам WhatsApp и Meta, сверено 10 ноября 2026.</p>\n<h2>Условия WhatsApp ставят точку в выборе</h2>\n<p>В <a href=\"https://www.whatsapp.com/legal/WhatsApp-Terms-for-WhatsApp-Business-App\">условиях WhatsApp для Business App</a> (редакция от 23 сентября 2026, раздел 5 «Restrictions») компании запрещено разрабатывать или использовать приложения, которые взаимодействуют с сервисом Business App без предварительного письменного согласия WhatsApp, а также извлекать из него данные. Там же сказано, что приложение рассчитано на малый и средний бизнес.</p>\n<p>Коннектор через WhatsApp Web как раз такое стороннее приложение. Пока он работает, всё выглядит нормально. Но при нарушении условий аккаунт могут ограничить, и вместе с номером компания теряет канал, по которому её знают клиенты. Это вопрос не вкуса, а риска для продаж.</p>\n<h2>Окно 24 часа и шаблоны работают в API</h2>\n<p>По <a href=\"https://developers.facebook.com/docs/whatsapp/pricing\">документации Meta по тарифам</a> сообщение клиента открывает окно обслуживания на 24 часа. Внутри окна менеджер отвечает свободным текстом, за его пределами можно отправить только шаблон. Шаблон заранее согласуют с Meta: напоминание о встрече, статус заказа, счёт.</p>\n<p>Для CRM это значит простое: скорость ответа влияет на деньги. В Битрикс24 мы ставим контроль времени ответа, и если сообщение без ответа 15 минут, руководитель получает уведомление, пока окно ещё открыто. Как настроить разбор входящих заявок агентом, мы описали в новости про <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">ИИ-агента в WhatsApp</a>.</p>\n<p>Шаблоны делятся на категории: маркетинговые, утилитарные и аутентификационные, а обычные ответы внутри окна считаются сервисными. От категории зависит цена сообщения, поэтому в CRM шаблоны стоит называть так, чтобы менеджер сразу видел, какой из них рекламный, а какой нужен для работы с заказом.</p>\n<!--cta-->\n<h2>Лимиты рассылок растут вместе с качеством</h2>\n<p>По <a href=\"https://developers.facebook.com/docs/whatsapp/messaging-limits\">странице Meta о лимитах</a> лимит считается как число уникальных номеров, которым бизнес может отправить сообщения вне окна обслуживания за скользящие 24 часа. У нового бизнес-портфолио он равен 250 номерам. Пройдя один из путей масштабирования, лимит можно поднять до 2 000.</p>\n<p>Дальше лимит растёт автоматически, если сообщения по всем номерам и шаблонам высокого качества и бизнес использует хотя бы половину текущего лимита за 7 дней. Поэтому рассылки по базе без согласия клиентов вредят и сейчас, и потом: жалобы снижают качество, а вместе с ним и лимит.</p>\n<h2>Сколько стоит каждый вариант</h2>\n<p>Официальный канал состоит из трёх строк бюджета:</p>\n<ul>\n<li>подключение и настройка в Битрикс24: у нас 500 AED разово, это номер, открытые линии, маршрутизация и поля в карточке сделки</li>\n<li>подписка провайдера API: по его тарифу</li>\n<li>плата Meta за сообщения: зависит от рынка и категории, с 1 октября 2026 платными стали и сервисные сообщения сверх 1 000 в месяц на номер, подробно в новости <a href=\"/news/skolko-stoit-whatsapp-business-v-oae\">о ценах WhatsApp Business в ОАЭ</a></li>\n</ul>\n<p>WhatsApp Web выглядит бесплатным, но его цена появляется позже: время на восстановление подключения, переписки, которые не попали в CRM, и риск потерять номер. Состав работ по каналу смотрите на странице <a href=\"/bitrix-messengers\">WhatsApp и мессенджеров в Битрикс24</a>, все цены на странице <a href=\"/ceny\">цен в AED</a>.</p>\n<p>Чтобы увидеть свою сумму заранее, выгрузите из портала число исходящих сообщений за прошлый месяц и разделите их на шаблоны и живые ответы менеджеров. Это быстрее, чем гадать по тарифной карте.</p>\n<h2>Как перейти с WhatsApp Web на API</h2>\n<ol>\n<li>Решите, какой номер станет номером компании, и выгрузите важные переписки из приложения</li>\n<li>Выберите провайдера API и пройдите проверку компании в Meta</li>\n<li>Настройте открытые линии: очередь, рабочее время с учётом выходных в ОАЭ, автоответ</li>\n<li>Свяжите диалоги с лидами и сделками, поставьте контроль времени ответа</li>\n<li>Согласуйте 3-5 шаблонов: первое сообщение, напоминание, счёт, статус</li>\n<li>Предупредите клиентов, если номер меняется, и отключите старый коннектор</li>\n</ol>\n<p>Дольше всего обычно ждут проверку компании и одобрение шаблонов. Поэтому старый способ отключают только после того, как новый канал заработал и команда к нему привыкла: продажи на время перехода не останавливаются.</p>\n<h2>Условный пример: агентство на 8 менеджеров</h2>\n<p>Условное агентство в Дубае подключило WhatsApp Web к CRM: каждый менеджер работает со своего телефона, часть переписок в портал не попадает. После перехода на API у агентства один номер, диалоги распределяются по очереди, а руководитель видит время ответа по каждому менеджеру. Разовые расходы: 500 AED за канал плюс несколько часов на роботов и шаблоны по 200 AED в час.</p>",
+  "mid": [
+   "Подключим WhatsApp к Битрикс24 официально",
+   "Номер компании, открытые линии, лиды из первого сообщения и контроль времени ответа. Подключение 500 AED",
+   "Подключить WhatsApp"
+  ],
+  "faq": [
+   [
+    "Можно ли подключить WhatsApp Web к Битрикс24?",
+    "Технически такие коннекторы есть, но условия WhatsApp для Business App запрещают приложения, которые работают с сервисом без письменного согласия WhatsApp. Для компании надёжнее официальная платформа."
+   ],
+   [
+    "Сколько стоит WhatsApp Business API в ОАЭ?",
+    "Подключение к Битрикс24 у нас 500 AED разово. Отдельно идут подписка провайдера и плата Meta за сообщения, которая зависит от рынка и категории сообщения."
+   ],
+   [
+    "Что такое окно 24 часа в WhatsApp?",
+    "Сообщение клиента открывает окно обслуживания на 24 часа, внутри него можно отвечать свободным текстом. Вне окна бизнес отправляет только шаблоны, одобренные Meta."
+   ],
+   [
+    "Сколько сообщений можно отправить через WhatsApp API?",
+    "У нового бизнес-портфолио лимит 250 уникальных номеров за 24 часа вне окна обслуживания. Его можно поднять до 2 000, дальше он растёт при высоком качестве сообщений."
+   ],
+   [
+    "Могут ли несколько менеджеров работать с одним номером?",
+    "Да, в API номер компании подключается к открытым линиям Битрикс24, и диалоги распределяются между менеджерами по очереди, языку или направлению."
+   ]
+  ],
+  "cta": [
+   "Обсудим WhatsApp в вашей CRM",
+   "Напишите, сколько менеджеров отвечают клиентам и как сейчас подключён WhatsApp. Ответим в течение рабочего дня"
+  ],
+  "related": [
+   [
+    "/journal/choose-bitrix24-partner-uae",
+    "Как выбрать партнёра Битрикс24 в ОАЭ"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Какой тариф Битрикс24 выбрать на 10, 25 или 50 пользователей"
+   ],
+   [
+    "/news/skolko-stoit-whatsapp-business-v-oae",
+    "Сколько стоит WhatsApp Business в ОАЭ после 1 октября"
+   ]
+  ]
+ },
+ "en": {
+  "title": "WhatsApp Business API or WhatsApp Web in your CRM | MakeBiz",
+  "desc": "WhatsApp Business API or WhatsApp Web in a CRM for a UAE company: WhatsApp terms, the 24-hour window, limits, cost. We connect it to Bitrix24 for AED 500.",
+  "h1": "WhatsApp Business API or WhatsApp Web in your CRM",
+  "crumb": "WhatsApp API or WhatsApp Web",
+  "lead": "In the UAE customers message you on WhatsApp, so it is one of the first channels a company connects to its CRM. There are two ways to do it: the official WhatsApp platform or a WhatsApp Web connector. Here is how they differ.",
+  "answer": "For a UAE sales team the official WhatsApp Business Platform (API) is the safer choice: one number for the whole team, conversations inside the client record, templates and clear limits. A WhatsApp Web connector relies on third-party software, and the WhatsApp terms for the Business App prohibit apps that interact with the service without WhatsApp&#39;s written consent. MakeBiz Technologies connects the channel to Bitrix24 for AED 500, Meta message fees are separate.",
+  "body": "<h2>The two options are different by design</h2>\n<p>The official platform is a business channel: your company number is verified by Meta and connected to the CRM through a provider. WhatsApp Web in a CRM is a workaround: a program or browser extension reads chats from the app on a phone and copies them into the portal.</p>\n<table><thead><tr><th>Criterion</th><th>WhatsApp Business Platform (API)</th><th>WhatsApp Web in a CRM</th></tr></thead><tbody>\n<tr><td><b>How it connects</b></td><td>Through a provider, number verified by Meta</td><td>Third-party software attached to the phone app</td></tr>\n<tr><td><b>WhatsApp terms</b></td><td>Official channel for businesses</td><td>Business App terms prohibit such apps without written consent</td></tr>\n<tr><td><b>Team</b></td><td>One number, chats routed between reps</td><td>Depends on one app session staying alive</td></tr>\n<tr><td><b>First message to a client</b></td><td>A template approved by Meta</td><td>Free text, outside platform rules</td></tr>\n<tr><td><b>Broadcasts</b></td><td>The limit grows with message quality</td><td>Bulk sends put the number at risk</td></tr>\n<tr><td><b>Cost</b></td><td>Provider subscription plus Meta message fees</td><td>Cheap at first, expensive if the number is lost</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies comparison based on WhatsApp and Meta documents, checked 10 November 2026.</p>\n<h2>WhatsApp&#39;s own terms settle the question</h2>\n<p>The <a href=\"https://www.whatsapp.com/legal/WhatsApp-Terms-for-WhatsApp-Business-App\">WhatsApp Terms for WhatsApp Business App</a> (effective 23 September 2026, section 5 \"Restrictions\") say a company must not develop or use any applications that interact with the Business App services without WhatsApp&#39;s prior written consent, and must not scrape or extract data from them. The same terms describe the app as designed for small to medium businesses.</p>\n<p>A WhatsApp Web connector is exactly that kind of third-party app. It works fine until it does not. If the terms are breached the account can be restricted, and with the number the company loses the channel its clients know it by. That is a sales risk, not a matter of taste.</p>\n<h2>The 24-hour window and templates come with the API</h2>\n<p>According to <a href=\"https://developers.facebook.com/docs/whatsapp/pricing\">Meta&#39;s pricing documentation</a>, a message from a customer opens a 24-hour customer service window. Inside it your rep replies in free text, outside it you can only send a template. Templates are approved by Meta in advance: a meeting reminder, an order status, an invoice.</p>\n<p>For a CRM this means response speed has a price. In Bitrix24 we set up response time control: if a message has no reply for 15 minutes, the manager is notified while the window is still open. How an agent can sort incoming leads is covered in our news piece on the <a href=\"/news/ai-agent-v-whatsapp-vhodyashchie-zayavki\">AI agent in WhatsApp</a>.</p>\n<p>Templates fall into categories: marketing, utility and authentication, while ordinary replies inside the window count as service messages. The category sets the price of a message, so name templates in the CRM in a way that lets a rep see at a glance which one is promotional and which one is for handling an order.</p>\n<!--cta-->\n<h2>Broadcast limits grow with quality</h2>\n<p>Meta&#39;s <a href=\"https://developers.facebook.com/docs/whatsapp/messaging-limits\">messaging limits page</a> defines the limit as the number of unique WhatsApp users a business can message outside a customer service window in a moving 24-hour period. A newly created business portfolio starts at 250. Completing one of the scaling paths raises it to 2,000.</p>\n<p>After that the limit rises automatically if messages across all your numbers and templates are high quality and you use at least half of your current limit over 7 days. That is why blasting a list of people who never opted in hurts twice: complaints lower your quality rating, and the limit goes down with it.</p>\n<h2>What each option costs</h2>\n<p>The official channel has three budget lines:</p>\n<ul>\n<li>connection and setup in Bitrix24: AED 500 one-off with us, covering the number, open channels, routing and deal fields</li>\n<li>the API provider subscription: at the provider&#39;s rates</li>\n<li>Meta message fees: they depend on the market and the message category, and since 1 October 2026 service messages above 1,000 a month per number are charged too, see our news on <a href=\"/news/skolko-stoit-whatsapp-business-v-oae\">WhatsApp Business pricing in the UAE</a></li>\n</ul>\n<p>WhatsApp Web looks free, but the bill arrives later: time spent reconnecting, chats that never reached the CRM and the risk of losing the number. The full scope is on the <a href=\"/bitrix-messengers\">WhatsApp and messengers in Bitrix24</a> page, and all prices are on the <a href=\"/ceny\">pricing page</a>.</p>\n<p>To see your own number in advance, export last month&#39;s outgoing messages from the portal and split them into templates and live replies from reps. That is quicker than guessing from the rate card.</p>\n<h2>How to move from WhatsApp Web to the API</h2>\n<ol>\n<li>Decide which number becomes the company number and export the chats you need from the app</li>\n<li>Pick an API provider and complete Meta&#39;s business verification</li>\n<li>Set up open channels: queue, working hours with UAE weekends, auto-reply</li>\n<li>Link chats to leads and deals and add response time control</li>\n<li>Get 3 to 5 templates approved: first message, reminder, invoice, status</li>\n<li>Tell clients if the number changes and switch off the old connector</li>\n</ol>\n<p>The longest waits are usually business verification and template approval. That is why the old connector is switched off only once the new channel is live and the team is used to it, so sales do not stop during the move.</p>\n<h2>A worked example: an agency with 8 sales reps</h2>\n<p>A hypothetical Dubai agency runs WhatsApp Web in its CRM: every rep works from their own phone and some chats never reach the portal. After moving to the API the agency has one number, chats are routed in turn, and the manager sees each rep&#39;s response time. One-off cost: AED 500 for the channel plus a few hours on automation and templates at AED 200 an hour.</p>",
+  "mid": [
+   "We connect WhatsApp to Bitrix24 the official way",
+   "Company number, open channels, a lead from the first message and response time control. Connection AED 500",
+   "Connect WhatsApp"
+  ],
+  "faq": [
+   [
+    "Can I connect WhatsApp Web to Bitrix24?",
+    "Such connectors exist, but the WhatsApp terms for the Business App prohibit apps that interact with the service without WhatsApp&#39;s written consent. For a company the official platform is the safer route."
+   ],
+   [
+    "How much does the WhatsApp Business API cost in the UAE?",
+    "Connecting it to Bitrix24 is AED 500 one-off with us. The provider subscription and Meta message fees come on top, and the fees depend on the market and the message category."
+   ],
+   [
+    "What is the 24-hour window in WhatsApp?",
+    "A customer message opens a 24-hour customer service window in which you can reply in free text. Outside it a business can only send templates approved by Meta."
+   ],
+   [
+    "How many messages can I send through the WhatsApp API?",
+    "A new business portfolio can message 250 unique users in 24 hours outside the service window. It can be raised to 2,000, and after that it grows with message quality."
+   ],
+   [
+    "Can several sales reps work with one number?",
+    "Yes. With the API the company number is connected to Bitrix24 open channels, and chats are routed between reps by queue, language or team."
+   ]
+  ],
+  "cta": [
+   "Let us talk about WhatsApp in your CRM",
+   "Tell us how many people answer clients and how WhatsApp is connected today. We reply within a business day"
+  ],
+  "related": [
+   [
+    "/journal/choose-bitrix24-partner-uae",
+    "How to choose a Bitrix24 partner in the UAE"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Which Bitrix24 plan for 10, 25 or 50 users"
+   ],
+   [
+    "/news/skolko-stoit-whatsapp-business-v-oae",
+    "WhatsApp Business pricing in the UAE after 1 October"
+   ]
+  ]
+ }
+}

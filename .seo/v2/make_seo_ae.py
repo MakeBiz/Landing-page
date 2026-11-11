@@ -17,6 +17,8 @@ NEW = ['/', '/bitrix', '/bitrix-support', '/bitrix-messengers', '/bitrix-integra
        '/ai-agents'] + ['/ai-agents/' + a for a in AG] + ['/keysy'] + ['/keysy/' + c for c in CASES] + ['/vps', '/o-kompanii', '/partners', '/contacts']
 from landings_ae_list import LANDINGS_AE
 NEW += [x[0] for x in LANDINGS_AE]
+from journal_src import JOURNAL, jpath
+JNEW = (['/journal'] if JOURNAL else []) + [jpath(a['slug']) for a in JOURNAL]  # журнал гайдов: sitemap, llms.txt, llms-full.txt
 PRIO = {'/': '1.0', '/bitrix': '0.9', '/ai-agents': '0.9', '/bitrix-licenses': '0.9', '/bitrix-korobka': '0.8', '/ceny': '0.8'}
 
 def ru_file(p, base=None): return os.path.join(base or NEWD, 'index.html' if p == '/' else p.strip('/') + '.html')
@@ -38,6 +40,8 @@ pairs = []  # (ru_url, en_url|None, ru_file, en_file|None, priority, changefreq)
 for p in NEW:
     pr = PRIO.get(p, '0.6' if p.startswith('/keysy/') else '0.8')
     pairs.append((p, en_path(p), ru_file(p), en_file(p), pr, 'monthly'))
+for p in JNEW:
+    pairs.append((p, en_path(p), ru_file(p), en_file(p), '0.7', 'weekly' if p == '/journal' else 'monthly'))
 SOL = [u for _, _, _, u in solutions('ru')]
 for u in SOL:
     if os.path.exists(ru_file(u, ROOT)):
@@ -97,6 +101,9 @@ if SOL_EN:
     for e, t, d, u in SOL_EN:
         L.append(f'- [{t}]({SITE}/en{u}): {d}')
     L.append('')
+if JOURNAL:
+    L += ['## Journal: guides for UAE companies', '', f'- [MakeBiz Journal]({SITE}/en/journal): guides on Bitrix24 and CRM in the UAE, each with a short answer, a table and AED prices (Russian version: {SITE}/journal)']
+    L += [f'- [{a["en"]["title"].split(" | ")[0]}]({SITE}/en/journal/{a["slug"]}): {a["en"]["desc"]}' for a in JOURNAL] + ['']
 L += ['## Company', '',
       f'- [Pricing in AED]({U("/ceny")})', f'- [Cases]({U("/keysy")}): CDEK, Unilin, HAVAL, Performia, Apartico',
       f'- [Partner program]({U("/partners")}): 20% of the first payment and 10% of payments for 12 months',
@@ -160,7 +167,7 @@ for EN in (False, True):
               f'> MakeBiz Technologies FZE LLC: Bitrix24, AI agents and BI analytics for companies in Dubai and the UAE, prices in AED. Short version: {SITE}/llms.txt', '']
              if EN else ['# MakeBiz Technologies (makebiztechnologies.com): полный текст сайта для ИИ-поиска', '',
               f'> MakeBiz Technologies FZE LLC: Битрикс24, ИИ-агенты и BI-аналитика для компаний в Дубае и ОАЭ, цены в AED. Краткая версия: {SITE}/llms.txt', ''])
-    for p in NEW:
+    for p in NEW + JNEW:
         f = en_file(p) if EN else ru_file(p)
         if not os.path.exists(f): continue
         t = open(f, encoding='utf-8').read()

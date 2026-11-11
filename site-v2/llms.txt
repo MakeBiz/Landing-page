@@ -38,6 +38,11 @@ Key facts:
 - [CRM for logistics](https://makebiztechnologies.com/en/bitrix-logistics): Quotes, shipments, B2B clients
 - [CRM for training centres](https://makebiztechnologies.com/en/bitrix-education): Enrolment, payments, groups
 - [CRM for recruitment](https://makebiztechnologies.com/en/bitrix-recruitment): Candidates, jobs, clients
+- [AI-powered CRM](https://makebiztechnologies.com/en/bitrix-ai-crm): CoPilot and AI agents
+- [Bitrix24 development](https://makebiztechnologies.com/en/bitrix-development): REST API and integrations
+- [CRM for travel agencies](https://makebiztechnologies.com/en/bitrix-travel): Enquiries, bookings, payments
+- [CRM for event companies](https://makebiztechnologies.com/en/bitrix-events): Budgets, vendors, projects
+- [CRM for agencies](https://makebiztechnologies.com/en/bitrix-agency): Retainers, tasks, hours
 
 ## Bitrix24 solutions for the UAE
 
@@ -49,6 +54,13 @@ Key facts:
 - [Moving from another CRM](https://makebiztechnologies.com/en/bitrix-migration): Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales
 - [Clinics and salons](https://makebiztechnologies.com/en/bitrix-clinics): Online booking, WhatsApp reminders, client consents and health data under UAE law
 - [Business setup and consulting](https://makebiztechnologies.com/en/bitrix-business-setup): Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC
+
+## Journal: guides for UAE companies
+
+- [MakeBiz Journal](https://makebiztechnologies.com/en/journal): guides on Bitrix24 and CRM in the UAE, each with a short answer, a table and AED prices (Russian version: https://makebiztechnologies.com/journal)
+- [WhatsApp Business API or WhatsApp Web in your CRM](https://makebiztechnologies.com/en/journal/whatsapp-business-api-vs-whatsapp-web): WhatsApp Business API or WhatsApp Web in a CRM for a UAE company: WhatsApp terms, the 24-hour window, limits, cost. We connect it to Bitrix24 for AED 500.
+- [How to choose a Bitrix24 partner in the UAE: 8 checks](https://makebiztechnologies.com/en/journal/choose-bitrix24-partner-uae): Choosing a Bitrix24 partner in the UAE: vendor directory listing, contract and AED invoices, a fixed estimate, access ownership, support. 8 checks and a table.
+- [Which Bitrix24 plan for 10, 25 or 50 users in the UAE](https://makebiztechnologies.com/en/journal/bitrix24-plan-10-25-50-users): Bitrix24 plan for a team of 10, 25 or 50 in the UAE: Standard at AED 364 a month for the whole portal, and when you need Professional. bitrix24.ae prices in AED.
 
 ## Company
 
