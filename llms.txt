@@ -73,6 +73,7 @@ Key facts:
 - [Three dashboards a head of sales actually opens](https://makebiztechnologies.com/en/news/tri-dashborda-rukovoditelya-prodazh): Month pace, inbound leads and stalled deals. The MakeBiz BI cabinet in the UAE starts at AED 300 a month, 14 days free on full Pro.
 - [Bitrix24 in the UAE: how the project differs from a Russian one](https://makebiztechnologies.com/en/news/vnedrenie-bitrix24-v-oae-otlichiya): Same product, different project. The working week, WhatsApp instead of calls, dirhams and VAT, UAE data protection rules and two languages in one client record.
 - [Hiring an AI vendor in the UAE? Ask these 7 first](https://makebiztechnologies.com/en/news/voprosy-podryadchiku-po-ii-do-dogovora): Seven questions to put to an AI vendor in the UAE before you sign: PDPL and data location, the model, ownership, CRM fit and running costs in AED.
+- [AED and USD in one Bitrix24: counting revenue right](https://makebiztechnologies.com/en/news/vyruchka-v-aed-i-usd-v-bitrix24): Dirham and dollar deals in Bitrix24: base currency, manual rates, an AED amount field and what UAE VAT expects from a USD invoice.
 
 ## Company
 
@@ -135,3 +136,4 @@ Key facts:
 - [Три дашборда, которые смотрит руководитель продаж](https://makebiztechnologies.com/news/tri-dashborda-rukovoditelya-prodazh)
 - [Внедрение Битрикс24 в ОАЭ: чем проект отличается от российского](https://makebiztechnologies.com/news/vnedrenie-bitrix24-v-oae-otlichiya)
 - [Подрядчик по ИИ в ОАЭ: 7 вопросов до договора](https://makebiztechnologies.com/news/voprosy-podryadchiku-po-ii-do-dogovora)
+- [AED и USD в одном Битрикс24: как считать выручку](https://makebiztechnologies.com/news/vyruchka-v-aed-i-usd-v-bitrix24)

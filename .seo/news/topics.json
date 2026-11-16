@@ -234,9 +234,12 @@
     {
       "key": "dual-currency-aed-usd",
       "cat": "auto",
-      "status": "planned",
+      "status": "used",
       "angle": "AED и USD в одном портале: как считать выручку, когда сделки в двух валютах",
-      "query": "битрикс24 несколько валют"
+      "query": "битрикс24 несколько валют",
+      "used_slug": "vyruchka-v-aed-i-usd-v-bitrix24",
+      "used_date": "2026-11-16",
+      "note": "Справка Битрикс24 «Add and customize currencies in CRM» (обновлена 13.11.2026): базовая валюта, курс вручную, до 4 знаков. Исполнительный регламент VAT ст. 59(1)(j),(k), редакция Минфина 09.2026 на tax.gov.ae: сумма и налог в AED и курс. Число курса привязки не приводим: сайт CBUAE не отдаётся. Цены со страницы /ceny (BI от 300 AED)"
     },
     {
       "key": "ai-agent-arabic-english",
