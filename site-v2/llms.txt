@@ -58,6 +58,8 @@ Key facts:
 ## Journal: guides for UAE companies
 
 - [MakeBiz Journal](https://makebiztechnologies.com/en/journal): guides on Bitrix24 and CRM in the UAE, each with a short answer, a table and AED prices (Russian version: https://makebiztechnologies.com/journal)
+- [Dubai broker sales pipeline: off-plan vs secondary](https://makebiztechnologies.com/en/journal/dubai-broker-pipeline-off-plan-secondary): Sales pipeline stages for Dubai brokers, off-plan and secondary: fields, documents, DLD deadlines. Off-plan goes into Oqood within 90 days. Setup from AED 10,000.
+- [Call recording in the UAE: consent rules for sales](https://makebiztechnologies.com/en/journal/call-recording-consent-uae): Recording sales calls in the UAE: what Article 431 of Law 31/2021 and the PDPL say, how to tell clients and store recordings in CRM. Speech analytics from AED 1,000.
 - [Comparing supplier quotes: criteria and a table](https://makebiztechnologies.com/en/journal/supplier-quote-comparison): How to compare supplier quotes in the UAE: a 9-column template, criteria weights and one basis in AED. Our procurement agent builds the table, AED 5,000.
 - [CRM for a small business in the UAE: needs and costs](https://makebiztechnologies.com/en/journal/small-business-crm-uae): CRM for a 5 to 10 person UAE business: Bitrix24 from AED 180 a month, WhatsApp, setup from AED 10,000. Your first-year budget in AED, line by line.
 - [Sales forecasting from CRM data: how it works](https://makebiztechnologies.com/en/journal/sales-forecasting-crm): Sales forecasting from CRM data: stage probabilities, sales cycle, rep forecast and plan on one dashboard. MakeBiz BI from AED 700 a month, 14 days free.

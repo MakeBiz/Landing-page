@@ -1,0 +1,114 @@
+{
+ "slug": "call-recording-consent-uae",
+ "date": "2026-11-17",
+ "rubric_ru": "Звонки",
+ "rubric_en": "Calls",
+ "ru": {
+  "title": "Запись звонков в ОАЭ: согласие и правила продаж | MakeBiz",
+  "desc": "Запись звонков отдела продаж в ОАЭ: что говорят статья 431 закона 31/2021 и PDPL, как предупреждать клиента и хранить записи в CRM. Речевая аналитика от 1 000 AED.",
+  "h1": "Запись звонков в отделе продаж в ОАЭ: согласие и правила",
+  "crumb": "Запись звонков: согласие и правила",
+  "lead": "Записи звонков нужны отделу продаж каждый день: разобрать спорный разговор, научить нового менеджера, проверить, что обещали клиенту. Но в ОАЭ запись разговора без согласия может стать уголовным вопросом, поэтому порядок записи стоит настроить до того, как телефония подключена к CRM.",
+  "answer": "В ОАЭ статья 431 Закона о преступлениях и наказаниях (Федеральный декрет-закон № 31 от 2021 года) наказывает лишением свободы и штрафом запись разговоров без согласия человека, если это не разрешено законом. Рабочее правило для отдела продаж: клиента предупреждают о записи в начале каждого звонка, факт предупреждения хранится в CRM, доступ к записям есть только у тех, кому он нужен по роли. Речевая аналитика записей у MakeBiz стоит от 1 000 AED в месяц за 5 000 минут.",
+  "body": "<h2>Закон ОАЭ требует согласия на запись разговора</h2>\n<p>Текст закона опубликован на портале законодательства ОАЭ: <a href=\"https://uaelegislation.gov.ae/en/legislations/1529\">Федеральный декрет-закон № 31 от 2021 года о преступлениях и наказаниях</a>, действует с 2 января 2022 года. Статья 431 относит к нарушению частной жизни подслушивание, запись или передачу любым устройством разговоров в частном месте, в том числе по телефону, если это сделано вне случаев, разрешённых законом, или без согласия человека. Наказание: лишение свободы и штраф. Там же сказано, что при записи на встрече в присутствии участников их согласие предполагается.</p>\n<p>Статья 433 того же закона отдельно устанавливает штраф не менее 3 000 AED за подслушивание телефонного разговора. Мы сверили обе статьи по английскому переводу 17 ноября 2026 года; при расхождении действует арабский текст. Это не юридическая консультация: формулировку предупреждения и внутреннее правило по записям согласуйте с вашим юристом.</p>\n<h2>PDPL добавляет правила к хранению записей</h2>\n<p>Запись разговора с клиентом содержит его персональные данные: голос, телефон, иногда адрес и детали сделки. <a href=\"https://uaelegislation.gov.ae/en/legislations/1972\">Федеральный декрет-закон № 45 от 2021 года о защите персональных данных</a> в статье 4 запрещает обработку без согласия владельца данных, кроме перечисленных случаев, например исполнения договора, стороной которого он является. Статья 6 требует, чтобы согласие было ясным, чтобы компания могла его доказать, а человек мог легко его отозвать.</p>\n<p>Для CRM отсюда следует простое: факт согласия должен где-то храниться, и это должно быть поле в карточке, а не память менеджера. Какие ещё поля в CRM лучше не собирать, мы разобрали в новости <a href=\"/news/pdpl-i-crm-kakie-dannye-ne-sobirat\">PDPL и CRM</a>.</p>\n<h2>Как настроить запись в каждом сценарии звонка</h2>\n<p>Звонки отдела продаж идут разными путями, и у каждого свой способ предупредить клиента. Ниже схема, по которой мы настраиваем телефонию в Битрикс24.</p>\n<table><thead><tr><th>Сценарий</th><th>Как предупредить</th><th>Что настроить в Битрикс24</th></tr></thead><tbody>\n<tr><td><b>Входящий на номер компании</b></td><td>Голосовое приветствие до соединения</td><td>Приветствие на линии на EN и других языках клиентов</td></tr>\n<tr><td><b>Исходящий менеджера</b></td><td>Первая фраза скрипта</td><td>Фраза в скрипте и отметка в карточке звонка</td></tr>\n<tr><td><b>Звонок с личного мобильного</b></td><td>Не записывать</td><td>Правило: звонки клиентам только через линию компании</td></tr>\n<tr><td><b>Видеовстреча</b></td><td>Сказать в начале встречи</td><td>Ссылка на запись в деле встречи</td></tr>\n<tr><td><b>Клиент против записи</b></td><td>Отключить запись</td><td>Поле «Без записи» в контакте, звонки без записи</td></tr>\n</tbody></table>\n<p class=\"note\">Схема MakeBiz Technologies. Статьи 431 и 433 Закона 31/2021 и статьи 4 и 6 Закона 45/2021 сверены 17 ноября 2026 по uaelegislation.gov.ae.</p>\n<p>Сама линия должна быть у лицензированного оператора: почему в ОАЭ это du или e&amp; и что проверить до подключения, разобрано в новости <a href=\"/news/telefoniya-v-oae-dlya-crm\">о телефонии в ОАЭ для CRM</a>. Схемы подключения описаны на странице <a href=\"/bitrix-telephony\">телефонии в Битрикс24</a>.</p>\n<!--cta-->\n<h2>Доступ к записям настраивают так же строго, как к сделкам</h2>\n<p>Запись ложится в карточку клиента, и по умолчанию её может открыть каждый, кто видит карточку. Для отдела продаж это слишком широко. Рабочий набор правил:</p>\n<ul>\n<li>менеджер слушает свои звонки, руководитель группы звонки своей группы</li>\n<li>выгрузка и скачивание записей только у руководителя отдела и того, кто отвечает за качество</li>\n<li>срок хранения записей записан во внутреннем правиле, и по нему записи удаляют, а не копят годами</li>\n<li>подрядчик по аналитике работает под отдельной учётной записью, доступ закрывается по окончании работ</li>\n</ul>\n<p>Как разложить роли в портале целиком, мы описали в новости <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">про права доступа в CRM</a>.</p>\n<h2>Записи окупаются, только если их слушают</h2>\n<p>Компания, которая записывает звонки и никогда их не разбирает, несёт риск хранения без пользы. Руководитель физически успевает послушать несколько звонков в неделю, поэтому записи обычно оценивают системой. Речевая аналитика MakeBiz расшифровывает и оценивает каждый звонок по вашему скрипту, подробно на странице <a href=\"/ai-agents/zvonki\">речевой аналитики</a>. Как по оценкам учить менеджеров, мы разобрали в статье <a href=\"/journal/sales-call-analysis\">про анализ звонков</a>, а как делить работу между отделом качества и системой, в статье <a href=\"/journal/call-quality-team-vs-system\">про контроль качества звонков</a>.</p>\n<h2>Сколько стоит настроить запись и разбор звонков</h2>\n<p>Подключение телефонии, приветствие с предупреждением о записи и права доступа входят в настройку Битрикс24 от 10 000 AED. В работающем портале это обычно несколько часов по 200 AED. Речевая аналитика стоит 1 000 AED в месяц за 5 000 минут, 1 700 AED за 10 000 минут, от 4 000 AED от 30 000 минут. Связь оплачивается оператору по его тарифу. Все цены на странице <a href=\"/ceny\">цен</a>.</p>\n<h2>Условный пример: отдел продаж на 10 менеджеров</h2>\n<p>Условная компания в Дубае записывает все звонки, но приветствия на линии нет, а половина менеджеров звонит клиентам с личных телефонов. После настройки входящие звонки начинаются с короткого предупреждения о записи, исходящие идут только через линию компании, а в карточке клиента есть поле «Без записи». Записи видит руководитель группы, скачивать их может только руководитель отдела. Объём звонков около 4 000 минут в месяц укладывается в тариф аналитики за 1 000 AED. Руководитель раз в неделю смотрит не случайные записи, а звонки с самой низкой оценкой, и разбирает их с менеджером на планёрке.</p>",
+  "mid": [
+   "Настроим запись звонков по правилам",
+   "Приветствие с предупреждением, поле согласия, права доступа и разбор записей. Аналитика от 1 000 AED в месяц",
+   "Обсудить телефонию"
+  ],
+  "faq": [
+   [
+    "Можно ли в ОАЭ записывать звонки клиентов?",
+    "Можно, если человек согласен или запись разрешена законом: статья 431 Закона 31/2021 наказывает запись разговора без согласия. Поэтому клиента предупреждают о записи в начале звонка."
+   ],
+   [
+    "Достаточно ли голосового предупреждения на входящей линии?",
+    "Для входящих звонков это обычная практика: клиент слышит предупреждение до соединения и может положить трубку. Точную формулировку стоит согласовать с юристом компании."
+   ],
+   [
+    "Нужно ли предупреждать о записи на исходящем звонке?",
+    "Да, у исходящего нет приветствия линии, поэтому предупреждение ставят первой фразой скрипта и отмечают в карточке звонка."
+   ],
+   [
+    "Как долго хранить записи звонков?",
+    "Срок хранения компания задаёт во внутреннем правиле вместе с юристом, исходя из того, зачем ведётся запись. По этому правилу записи удаляют, а не копят годами."
+   ],
+   [
+    "Сколько стоит речевая аналитика звонков?",
+    "1 000 AED в месяц за 5 000 минут, 1 700 AED за 10 000 минут и от 4 000 AED от 30 000 минут. Цены без VAT."
+   ]
+  ],
+  "cta": [
+   "Проверим, как у вас устроена запись звонков",
+   "Напишите, какая у вас телефония и сколько менеджеров звонят клиентам. Предложим схему записи, предупреждений и доступа"
+  ],
+  "related": [
+   [
+    "/journal/sales-call-analysis",
+    "Анализ звонков менеджеров: что смотреть и как учить по ним"
+   ],
+   [
+    "/journal/call-quality-team-vs-system",
+    "Контроль качества звонков: отдел, система или вместе"
+   ],
+   [
+    "/news/telefoniya-v-oae-dlya-crm",
+    "Телефония в ОАЭ для CRM: что проверить до подключения"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Call recording in the UAE: consent rules for sales | MakeBiz",
+  "desc": "Recording sales calls in the UAE: what Article 431 of Law 31/2021 and the PDPL say, how to tell clients and store recordings in CRM. Speech analytics from AED 1,000.",
+  "h1": "Call recording in UAE sales teams: consent and rules",
+  "crumb": "Call recording: consent and rules",
+  "lead": "Sales teams use call recordings every day: to settle a disputed conversation, coach a new rep, or check what was promised to a client. In the UAE, though, recording someone without consent can become a criminal matter, so it pays to set the rules before your phone system is plugged into the CRM.",
+  "answer": "In the UAE, Article 431 of the Crimes and Penalties Law (Federal Decree-Law No. 31 of 2021) punishes recording a conversation without the person&#39;s consent, outside cases permitted by law, with imprisonment and a fine. The working rule for a sales team: tell the client about recording at the start of every call, keep a record of that notice in the CRM, and limit access to recordings to the roles that need them. MakeBiz speech analytics for those recordings costs from AED 1,000 a month for 5,000 minutes.",
+  "body": "<h2>UAE law requires consent to record a conversation</h2>\n<p>The text is published on the UAE legislation portal: <a href=\"https://uaelegislation.gov.ae/en/legislations/1529\">Federal Decree-Law No. 31 of 2021 Promulgating the Crimes and Penalties Law</a>, in force since 2 January 2022. Article 431 treats as a violation of private life eavesdropping on, recording or transmitting conversations held in a private place by any device, including by telephone, when this is done outside the cases permitted by law or without the person&#39;s consent. The penalty is imprisonment and a fine. The same article says that when this happens during a meeting in front of those present, their consent is presumed.</p>\n<p>Article 433 of the same law separately sets a fine of at least AED 3,000 for eavesdropping on a telephone conversation. We checked both articles against the English translation on 17 November 2026; where the two differ, the Arabic text prevails. This is not legal advice: agree the wording of your recording notice and your internal policy with your own lawyer.</p>\n<h2>The PDPL adds rules for storing recordings</h2>\n<p>A recorded call holds the client&#39;s personal data: their voice, phone number, sometimes an address and deal details. <a href=\"https://uaelegislation.gov.ae/en/legislations/1972\">Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data</a> prohibits processing without the data subject&#39;s consent in Article 4, apart from listed cases such as performing a contract the person is party to. Article 6 requires consent to be clear, provable by the company, and easy to withdraw.</p>\n<p>For the CRM this means one thing: the fact of consent has to be stored somewhere, and that should be a field on the record, not the rep&#39;s memory. Which other fields are better left out of a CRM is covered in our piece on <a href=\"/news/pdpl-i-crm-kakie-dannye-ne-sobirat\">the PDPL and your CRM</a>.</p>\n<h2>How to set up recording for each call scenario</h2>\n<p>Sales calls travel by different routes, and each one needs its own way of telling the client. This is the layout we use when setting up telephony in Bitrix24.</p>\n<table><thead><tr><th>Scenario</th><th>How to notify</th><th>What to set up in Bitrix24</th></tr></thead><tbody>\n<tr><td><b>Inbound to the company number</b></td><td>Voice greeting before the call connects</td><td>Line greeting in English and your clients&#39; other languages</td></tr>\n<tr><td><b>Outbound from a rep</b></td><td>First line of the script</td><td>Script line plus a tick on the call record</td></tr>\n<tr><td><b>Call from a personal mobile</b></td><td>Do not record</td><td>Policy: clients are called only via the company line</td></tr>\n<tr><td><b>Video meeting</b></td><td>Say it at the start</td><td>Recording link on the meeting activity</td></tr>\n<tr><td><b>Client objects to recording</b></td><td>Switch recording off</td><td>&quot;Do not record&quot; field on the contact</td></tr>\n</tbody></table>\n<p class=\"note\">MakeBiz Technologies layout. Articles 431 and 433 of Law 31/2021 and Articles 4 and 6 of Law 45/2021 checked on uaelegislation.gov.ae on 17 November 2026.</p>\n<p>The line itself has to come from a licensed operator. Why that means du or e&amp; in the UAE, and what to check before connecting, is in our piece on <a href=\"/news/telefoniya-v-oae-dlya-crm\">UAE telephony for your CRM</a>. The connection options are on the <a href=\"/bitrix-telephony\">Bitrix24 telephony</a> page.</p>\n<!--cta-->\n<h2>Access to recordings needs the same care as access to deals</h2>\n<p>A recording sits on the client record, and by default anyone who can open that record can play it. For a sales team that is too wide. A working set of rules:</p>\n<ul>\n<li>reps hear their own calls, team leads hear their team&#39;s calls</li>\n<li>only the head of sales and whoever owns call quality can export or download recordings</li>\n<li>a retention period is written into internal policy, and recordings are deleted on schedule rather than kept for years</li>\n<li>an analytics contractor works under a separate account, closed when the work ends</li>\n</ul>\n<p>How to lay out roles across the whole portal is covered in our piece on <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">CRM access rights</a>.</p>\n<h2>Recordings only pay off if someone listens</h2>\n<p>A company that records every call and never reviews them carries the storage risk with none of the benefit. A sales manager can realistically listen to a handful of calls a week, so recordings are usually scored by software. MakeBiz speech analytics transcribes and scores every call against your own script; details are on the <a href=\"/ai-agents/zvonki\">speech analytics</a> page. How to coach reps from those scores is in our guide to <a href=\"/journal/sales-call-analysis\">sales call analysis</a>, and how to split the work between a QA team and software is in the guide to <a href=\"/journal/call-quality-team-vs-system\">call quality control</a>.</p>\n<h2>What it costs to set up recording and call review</h2>\n<p>Connecting telephony, the greeting with the recording notice and the access rights are part of a Bitrix24 setup from AED 10,000. In a portal that is already live, it is usually a few hours at AED 200 an hour. Speech analytics costs AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, and from AED 4,000 for 30,000 minutes and up. Call charges are paid to the operator at its own rates. All prices are on the <a href=\"/ceny\">pricing</a> page.</p>\n<h2>Illustrative example: a sales team of 10</h2>\n<p>Picture a Dubai company that records every call, but has no greeting on the line, and half its reps call clients from their personal phones. After the setup, inbound calls open with a short recording notice, outbound calls go only through the company line, and the client record has a &quot;Do not record&quot; field. Team leads can listen to recordings, and only the head of sales can download them. Around 4,000 minutes of calls a month fits into the AED 1,000 analytics plan.</p>",
+  "mid": [
+   "Call recording set up the right way",
+   "Greeting with a recording notice, consent field, access rights and call review. Analytics from AED 1,000 a month",
+   "Discuss telephony"
+  ],
+  "faq": [
+   [
+    "Is it legal to record client calls in the UAE?",
+    "Yes, if the person consents or the law permits it: Article 431 of Law 31/2021 penalises recording a conversation without consent. That is why clients are told about recording at the start of the call."
+   ],
+   [
+    "Is a voice notice on the inbound line enough?",
+    "For inbound calls it is common practice: the client hears the notice before the call connects and can hang up. Agree the exact wording with your company lawyer."
+   ],
+   [
+    "Do reps need to mention recording on outbound calls?",
+    "Yes. An outbound call has no line greeting, so the notice goes into the first line of the script and is ticked on the call record."
+   ],
+   [
+    "How long should call recordings be kept?",
+    "The company sets the retention period in its internal policy together with its lawyer, based on why calls are recorded. Recordings are then deleted on that schedule rather than kept for years."
+   ],
+   [
+    "How much does call speech analytics cost?",
+    "AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, and from AED 4,000 for 30,000 minutes and up. Prices exclude VAT."
+   ]
+  ],
+  "cta": [
+   "We will review how your calls are recorded",
+   "Tell us which phone system you use and how many reps call clients. We will propose a setup for recording, notices and access"
+  ],
+  "related": [
+   [
+    "/journal/sales-call-analysis",
+    "Sales call analysis: what to check and how to coach"
+   ],
+   [
+    "/journal/call-quality-team-vs-system",
+    "Call quality control: QA team, software or both"
+   ],
+   [
+    "/news/telefoniya-v-oae-dlya-crm",
+    "UAE business telephony for your CRM: check this first"
+   ]
+  ]
+ }
+}

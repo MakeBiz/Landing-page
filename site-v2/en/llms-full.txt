@@ -3204,8 +3204,16 @@ Title: MakeBiz Journal: Bitrix24 and CRM guides for the UAE
 MakeBiz Journal
 # Journal: guides to Bitrix24 and CRM in the UAE
 Short answers to the questions companies ask before a CRM project in Dubai and across the Emirates: choosing a partner, plans, WhatsApp, processes and data
-The MakeBiz Technologies journal has 27 guides for UAE companies: each opens with a short answer, then a table, a worked example and prices in AED with the date they were checked. New articles come out twice a week, market updates are in the news .
-Documents Bitrix24 Analytics AI agents Automation Messaging Licences
+The MakeBiz Technologies journal has 29 guides for UAE companies: each opens with a short answer, then a table, a worked example and prices in AED with the date they were checked. New articles come out twice a week, market updates are in the news .
+Real estate Calls Documents Bitrix24 Analytics AI agents Automation Messaging Licences
+## Real estate
+### Sales pipeline stages for Dubai brokers: off-plan and secondary
+Sales pipeline stages for Dubai brokers, off-plan and secondary: fields, documents, DLD deadlines. Off-plan goes into Oqood within 90 days. Setup from AED 10,000.
+17 November 2026 · 7 min
+## Calls
+### Call recording in UAE sales teams: consent and rules
+Recording sales calls in the UAE: what Article 431 of Law 31/2021 and the PDPL say, how to tell clients and store recordings in CRM. Speech analytics from AED 1,000.
+17 November 2026 · 7 min
 ## Documents
 ### Comparing supplier quotes: criteria and a comparison table
 How to compare supplier quotes in the UAE: a 9-column template, criteria weights and one basis in AED. Our procurement agent builds the table, AED 5,000.
@@ -3294,6 +3302,118 @@ WhatsApp Business API or WhatsApp Web in a CRM for a UAE company: WhatsApp terms
 ### Which Bitrix24 plan for 10, 25 or 50 users
 Bitrix24 plan for a team of 10, 25 or 50 in the UAE: Standard at AED 364 a month for the whole portal, and when you need Professional. bitrix24.ae prices in AED.
 10 November 2026 · 6 min
+
+---
+
+Page: https://makebiztechnologies.com/en/journal/dubai-broker-pipeline-off-plan-secondary
+Title: Dubai broker sales pipeline: off-plan vs secondary | MakeBiz
+
+Journal · Real estate
+# Sales pipeline stages for Dubai brokers: off-plan and secondary
+Most Dubai agencies sell two different products: units under construction from developers, and ready homes on the resale market. Squeeze them into one pipeline and they get in each other's way, because each deal has different parties, different paperwork and a different point where the commission lands.
+A Dubai brokerage needs two pipelines of 7-8 stages each. Off-plan ends when the developer registers the contract in the DLD interim register (Oqood), which has to happen within 90 days of signing; secondary ends with the DLD transfer, where the fee is 2% from the seller and 2% from the buyer. Setting up both pipelines with fields and automation is part of a Bitrix24 implementation from AED 10,000.
+MakeBiz Technologies · 17 November 2026 · 7 min read
+## Off-plan and secondary deals need separate pipelines
+In an off-plan deal the other party is the developer. The broker takes the buyer from choosing a project to the booking and the sale and purchase agreement, and from there the developer's sales team does much of the work. On the secondary market the other party is an owner, often with their own agent, and the broker runs the deal end to end: negotiation, deposit, developer clearance and transfer.
+In one shared pipeline the stages turn into vague labels like "in progress", and the manager can no longer tell where a deal is. That is why in Bitrix24 we build a pipeline per deal type, as described on our CRM for Dubai real estate agencies page, and portal leads are routed into the right one from the start.
+## Stages and required fields for both pipelines
+The table below is the working layout we start from. Rename the stages as you like, but keep one rule: a stage closes only when its field is filled in.
+| Step | Off-plan: stage | Off-plan: required | Secondary: stage | Secondary: required
+| 1 | New lead | Source, project or listing | New lead | Source, listing number
+| 2 | Qualification | Budget in AED, end use or investment | Qualification | Budget, cash or mortgage
+| 3 | Project shortlist | 2-3 projects, developer, handover date | Viewings | Date and feedback per property
+| 4 | Developer presentation | Unit, payment plan | Offer and negotiation | Offered and agreed price
+| 5 | Booking | Booking amount and date | Agreement and deposit | Agreement date, deposit amount
+| 6 | SPA with developer | Signing date | Developer clearance | e-NOC request date
+| 7 | Oqood registration | Registration date, within 90 days | DLD transfer | Transfer date, trustee centre
+| 8 | Commission received | Rate, amount, payment date | Commission received | Amount from each side
+MakeBiz Technologies layout. DLD deadlines and fees checked on dubailand.gov.ae on 17 November 2026.
+## The off-plan pipeline ends with Oqood registration
+The DLD page on registering an initial sale says the service is used by the developer to register units sold off-plan in the interim register, through the Oqood developer portal. The contract has to be registered within 90 days of signing. The same page lists the fee as 2% of the sale value from the seller and 2% from the buyer.
+That gives the CRM two rules. First, the SPA signing date is mandatory at stage 6, and an automation rule gives the broker a check task on day 60 to confirm the registration has gone through. Second, the developer pays the agency under the agency's own agreement with that developer, so the commission rate and payout condition live on the project record, not in the broker's head. Under Dubai Law No. 8 of 2007, buyer payments for off-plan units go into the project escrow account, as the DLD FAQ explains, and that line belongs in the message template you send to buyers.
+### Two pipelines built for your agency
+Off-plan and secondary with fields, DLD deadlines, automation and portal leads. Setup from AED 10,000
+Discuss your pipeline
+## The secondary pipeline turns on the deposit and the developer NOC
+On resale, the slowest stages are outside the broker's control. According to the DLD page on property sale registration , properties in freehold areas need an electronic no-objection certificate (e-NOC) from the developer through the Dubai REST app. The fee is the same 2% from each side, plus the trustee centre fee: AED 4,000 plus VAT when the sale value is AED 500,000 or more, AED 2,000 plus VAT below that.
+So the secondary pipeline gets its own "Developer clearance" stage with the request date and a rule that reminds the broker to chase the status after 3 working days. If the buyer is taking a mortgage, a bank approval stage is added, and the deal cannot move to transfer without it.
+## Automation and manager control at every stage
+Stages only help if something happens at them without the manager chasing people. The minimum set of rules for both pipelines:
+- a new lead with no first reply after 15 minutes alerts the manager, as covered in our piece on CRM for brokers and portal leads
+- after each viewing, the broker gets a task to log the client's feedback the same day
+- a deal stuck for 7 days at stages 3 to 5 creates a task and shows up in the report
+- WhatsApp message templates at the booking and deposit stages; how the channel is connected is on the messaging page
+- at "Commission received" the amount flows into the per-broker report
+A report across both pipelines shows where off-plan buyers drop out, how long resale deals wait for an e-NOC, and which broker turns deposits into transfers. Turning those stages into a revenue forecast is covered in our guide to sales forecasting from CRM data .
+## What it costs to set up both pipelines
+On a new project, both pipelines, their fields, the automation and the portal connections are part of a Bitrix24 setup from AED 10,000. If your portal is already running and you only need to split the pipelines, that is usually a few hours at AED 200 an hour, or a support plan from AED 1,250 a month for 5 hours. Connecting WhatsApp as a channel is AED 500. All rates are on the pricing page.
+## Illustrative example: an agency with 12 brokers
+Picture a Dubai agency running every deal through one five-stage pipeline, with half the cards sitting in "Documents" and a Friday phone round to find out why. After the split, the agency has two pipelines of eight stages. It can now see that 9 of its 40 resale deals have waited more than a week for developer clearance, and 6 off-plan deals are signed with no registration date. Both groups go to the brokers as tasks automatically, and one report replaces the Friday phone round.
+## Questions and answers
+**Why does a broker need a separate off-plan pipeline?**
+Off-plan has a different counterparty, the developer, and the deal ends with the contract registered in Oqood. Mixed with resale, the stages blur and the manager cannot see where each deal stands.
+**Who registers an off-plan sale with DLD?**
+According to the DLD service page, the developer registers the initial sale in the interim register through the Oqood portal. The contract must be registered within 90 days of signing.
+**What is the DLD fee on a ready property sale?**
+The DLD sale registration page lists 2% of the sale value from the seller and 2% from the buyer, plus a trustee centre fee of AED 4,000 plus VAT from AED 500,000 or AED 2,000 plus VAT below. Checked 17 November 2026.
+**Can rentals run in the same CRM?**
+Yes. Leasing becomes a third pipeline with its own stages: enquiry, viewings, tenancy contract, payment, move-in. Properties and clients are shared across all pipelines.
+**How much does a broker pipeline setup in Bitrix24 cost?**
+On a new project the pipelines are included in setup from AED 10,000. In a portal that is already live, splitting them usually takes a few hours at AED 200 an hour.
+
+---
+
+Page: https://makebiztechnologies.com/en/journal/call-recording-consent-uae
+Title: Call recording in the UAE: consent rules for sales | MakeBiz
+
+Journal · Calls
+# Call recording in UAE sales teams: consent and rules
+Sales teams use call recordings every day: to settle a disputed conversation, coach a new rep, or check what was promised to a client. In the UAE, though, recording someone without consent can become a criminal matter, so it pays to set the rules before your phone system is plugged into the CRM.
+In the UAE, Article 431 of the Crimes and Penalties Law (Federal Decree-Law No. 31 of 2021) punishes recording a conversation without the person's consent, outside cases permitted by law, with imprisonment and a fine. The working rule for a sales team: tell the client about recording at the start of every call, keep a record of that notice in the CRM, and limit access to recordings to the roles that need them. MakeBiz speech analytics for those recordings costs from AED 1,000 a month for 5,000 minutes.
+MakeBiz Technologies · 17 November 2026 · 7 min read
+## UAE law requires consent to record a conversation
+The text is published on the UAE legislation portal: Federal Decree-Law No. 31 of 2021 Promulgating the Crimes and Penalties Law , in force since 2 January 2022. Article 431 treats as a violation of private life eavesdropping on, recording or transmitting conversations held in a private place by any device, including by telephone, when this is done outside the cases permitted by law or without the person's consent. The penalty is imprisonment and a fine. The same article says that when this happens during a meeting in front of those present, their consent is presumed.
+Article 433 of the same law separately sets a fine of at least AED 3,000 for eavesdropping on a telephone conversation. We checked both articles against the English translation on 17 November 2026; where the two differ, the Arabic text prevails. This is not legal advice: agree the wording of your recording notice and your internal policy with your own lawyer.
+## The PDPL adds rules for storing recordings
+A recorded call holds the client's personal data: their voice, phone number, sometimes an address and deal details. Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data prohibits processing without the data subject's consent in Article 4, apart from listed cases such as performing a contract the person is party to. Article 6 requires consent to be clear, provable by the company, and easy to withdraw.
+For the CRM this means one thing: the fact of consent has to be stored somewhere, and that should be a field on the record, not the rep's memory. Which other fields are better left out of a CRM is covered in our piece on the PDPL and your CRM .
+## How to set up recording for each call scenario
+Sales calls travel by different routes, and each one needs its own way of telling the client. This is the layout we use when setting up telephony in Bitrix24.
+| Scenario | How to notify | What to set up in Bitrix24
+| Inbound to the company number | Voice greeting before the call connects | Line greeting in English and your clients' other languages
+| Outbound from a rep | First line of the script | Script line plus a tick on the call record
+| Call from a personal mobile | Do not record | Policy: clients are called only via the company line
+| Video meeting | Say it at the start | Recording link on the meeting activity
+| Client objects to recording | Switch recording off | "Do not record" field on the contact
+MakeBiz Technologies layout. Articles 431 and 433 of Law 31/2021 and Articles 4 and 6 of Law 45/2021 checked on uaelegislation.gov.ae on 17 November 2026.
+The line itself has to come from a licensed operator. Why that means du or e& in the UAE, and what to check before connecting, is in our piece on UAE telephony for your CRM . The connection options are on the Bitrix24 telephony page.
+### Call recording set up the right way
+Greeting with a recording notice, consent field, access rights and call review. Analytics from AED 1,000 a month
+Discuss telephony
+## Access to recordings needs the same care as access to deals
+A recording sits on the client record, and by default anyone who can open that record can play it. For a sales team that is too wide. A working set of rules:
+- reps hear their own calls, team leads hear their team's calls
+- only the head of sales and whoever owns call quality can export or download recordings
+- a retention period is written into internal policy, and recordings are deleted on schedule rather than kept for years
+- an analytics contractor works under a separate account, closed when the work ends
+How to lay out roles across the whole portal is covered in our piece on CRM access rights .
+## Recordings only pay off if someone listens
+A company that records every call and never reviews them carries the storage risk with none of the benefit. A sales manager can realistically listen to a handful of calls a week, so recordings are usually scored by software. MakeBiz speech analytics transcribes and scores every call against your own script; details are on the speech analytics page. How to coach reps from those scores is in our guide to sales call analysis , and how to split the work between a QA team and software is in the guide to call quality control .
+## What it costs to set up recording and call review
+Connecting telephony, the greeting with the recording notice and the access rights are part of a Bitrix24 setup from AED 10,000. In a portal that is already live, it is usually a few hours at AED 200 an hour. Speech analytics costs AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, and from AED 4,000 for 30,000 minutes and up. Call charges are paid to the operator at its own rates. All prices are on the pricing page.
+## Illustrative example: a sales team of 10
+Picture a Dubai company that records every call, but has no greeting on the line, and half its reps call clients from their personal phones. After the setup, inbound calls open with a short recording notice, outbound calls go only through the company line, and the client record has a "Do not record" field. Team leads can listen to recordings, and only the head of sales can download them. Around 4,000 minutes of calls a month fits into the AED 1,000 analytics plan.
+## Questions and answers
+**Is it legal to record client calls in the UAE?**
+Yes, if the person consents or the law permits it: Article 431 of Law 31/2021 penalises recording a conversation without consent. That is why clients are told about recording at the start of the call.
+**Is a voice notice on the inbound line enough?**
+For inbound calls it is common practice: the client hears the notice before the call connects and can hang up. Agree the exact wording with your company lawyer.
+**Do reps need to mention recording on outbound calls?**
+Yes. An outbound call has no line greeting, so the notice goes into the first line of the script and is ticked on the call record.
+**How long should call recordings be kept?**
+The company sets the retention period in its internal policy together with its lawyer, based on why calls are recorded. Recordings are then deleted on that schedule rather than kept for years.
+**How much does call speech analytics cost?**
+AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, and from AED 4,000 for 30,000 minutes and up. Prices exclude VAT.
 
 ---
 
