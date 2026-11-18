@@ -17,7 +17,7 @@ R = [
  ("'Пришлите КП, пожалуйста'", "'Please send a quote'"), ("'ИИ-агент'", "'AI agent'"), ("'КП отправлено, сделка переведена на этап «КП»'", "'Quote sent, deal moved to the Quote stage'"),
  ("'Апартаменты в Marina ещё свободны?'", "'Is the Marina apartment still available?'"), ("'Можно созвониться завтра?'", "'Can we call tomorrow?'"),
  ("[['С', 'Связной', 'Ответил клиенту в WhatsApp за 12 сек'], ['Ф', 'Финансист', 'Остатки по счетам обновлены'], ['А', 'Аналитик', 'Разобрал 48 звонков, 3 требуют внимания'], ['З', 'Закупщик', 'Собрал 6 прайсов, лучший на 8% дешевле'], ['К', 'Квалификатор', 'Горячий лид передан менеджеру'], ['Н', 'Наймщик', 'Кандидат прошёл тест, приглашение отправлено']]",
-  "[['L', 'Liaison', 'Replied to a client in WhatsApp in 12 sec'], ['F', 'Finance', 'Account balances updated'], ['A', 'Analyst', 'Reviewed 48 calls, 3 need attention'], ['P', 'Procurement', 'Collected 6 price lists, best is 8% cheaper'], ['Q', 'Qualifier', 'Hot lead passed to a manager'], ['H', 'Recruiter', 'Candidate passed the test, invitation sent']]"),
+  "[['R', 'Relationships', 'Replied to a client in WhatsApp in 12 sec'], ['F', 'Finance', 'Account balances updated'], ['A', 'Analyst', 'Reviewed 48 calls, 3 need attention'], ['P', 'Procurement', 'Collected 6 price lists, best is 8% cheaper'], ['Q', 'Qualifier', 'Hot lead passed to a manager'], ['H', 'Recruiter', 'Candidate passed the test, invitation sent']]"),
  ("'</small></span><span class=\"st ok\">готово</span>'", "'</small></span><span class=\"st ok\">done</span>'"),
  ("'Видео MakeBiz'", "'MakeBiz video'"),
  ("function fm(x){return Math.round(x).toLocaleString('en-US')+' AED'}", "function fm(x){return 'AED '+Math.round(x).toLocaleString('en-US')}"),

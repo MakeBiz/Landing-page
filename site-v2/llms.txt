@@ -25,9 +25,9 @@ Key facts:
 ## AI agents
 
 - [AI agents for business](https://makebiztechnologies.com/en/ai-agents): one agent from AED 5,000; packages Start AED 5,000, Business AED 10,000, Holding priced individually; maintenance 10% of the implementation cost per month; demo free
-- [AI sales head](https://makebiztechnologies.com/en/ai-agents/rop): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan
+- [AI head of sales](https://makebiztechnologies.com/en/ai-agents/rop): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan
 - [Call speech analytics](https://makebiztechnologies.com/en/ai-agents/zvonki): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes
-- [HR agent](https://makebiztechnologies.com/en/ai-agents/hr), [procurement agent](https://makebiztechnologies.com/en/ai-agents/zakupki), [marketing agent](https://makebiztechnologies.com/en/ai-agents/marketing), [finance agent](https://makebiztechnologies.com/en/ai-agents/finansy), [liaison agent](https://makebiztechnologies.com/en/ai-agents/svyaznoy)
+- [HR agent](https://makebiztechnologies.com/en/ai-agents/hr), [procurement agent](https://makebiztechnologies.com/en/ai-agents/zakupki), [marketing agent](https://makebiztechnologies.com/en/ai-agents/marketing), [finance agent](https://makebiztechnologies.com/en/ai-agents/finansy), [relationship agent](https://makebiztechnologies.com/en/ai-agents/svyaznoy)
 
 ## Bitrix24 by task and industry
 
@@ -50,7 +50,7 @@ Key facts:
 - [VAT, dirhams and e-invoicing](https://makebiztechnologies.com/en/bitrix-vat-einvoicing): 5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027
 - [Telephony in the UAE](https://makebiztechnologies.com/en/bitrix-telephony): Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls
 - [Bitrix24 or Zoho CRM](https://makebiztechnologies.com/en/bitrix-vs-zoho): An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting
-- [Distribution and wholesale](https://makebiztechnologies.com/en/bitrix-distribution): Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc
+- [Distribution and wholesale](https://makebiztechnologies.com/en/bitrix-distribution): Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with an AI agent
 - [Moving from another CRM](https://makebiztechnologies.com/en/bitrix-migration): Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales
 - [Clinics and salons](https://makebiztechnologies.com/en/bitrix-clinics): Online booking, WhatsApp reminders, client consents and health data under UAE law
 - [Business setup and consulting](https://makebiztechnologies.com/en/bitrix-business-setup): Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC

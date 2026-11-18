@@ -160,7 +160,7 @@
       v.querySelectorAll('[data-to]').forEach(function (el) { var to = +el.dataset.to, suf = el.dataset.suf || '', t0 = null; function step(t) { if (!t0) t0 = t; var p = Math.min(1, (t - t0) / 1800); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('en-US') + suf; if (p < 1) requestAnimationFrame(step); } requestAnimationFrame(step); });
     },
     agents: function (v) {
-      var box = v.querySelector('.rows'), E = [['L', 'Liaison', 'Replied to a client in WhatsApp in 12 sec'], ['F', 'Finance', 'Account balances updated'], ['A', 'Analyst', 'Reviewed 48 calls, 3 need attention'], ['P', 'Procurement', 'Collected 6 price lists, best is 8% cheaper'], ['Q', 'Qualifier', 'Hot lead passed to a manager'], ['H', 'Recruiter', 'Candidate passed the test, invitation sent']], i = 0;
+      var box = v.querySelector('.rows'), E = [['R', 'Relationships', 'Replied to a client in WhatsApp in 12 sec'], ['F', 'Finance', 'Account balances updated'], ['A', 'Analyst', 'Reviewed 48 calls, 3 need attention'], ['P', 'Procurement', 'Collected 6 price lists, best is 8% cheaper'], ['Q', 'Qualifier', 'Hot lead passed to a manager'], ['H', 'Recruiter', 'Candidate passed the test, invitation sent']], i = 0;
       function add() { var e = E[i++ % E.length], d = document.createElement('div'); d.className = 'rw'; d.innerHTML = '<span class="ico">' + e[0] + '</span><span class="tx"><b>' + e[1] + '</b><small>' + e[2] + '</small></span><span class="st ok">done</span>'; box.insertBefore(d, box.firstChild); var all = box.querySelectorAll('.rw'); if (all.length > 5) all[all.length - 1].remove(); }
       for (var k = 0; k < 4; k++) add(); every(v, add, 2000);
     }

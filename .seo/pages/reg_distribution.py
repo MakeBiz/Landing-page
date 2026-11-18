@@ -90,8 +90,8 @@ patch('.seo/build_d.py', [
 patch('.seo/uae/link_solutions.py', [
     ("'/bitrix-vs-zoho')]),\n 'en':",
      "'/bitrix-vs-zoho'),\n   ('Дистрибуция', 'Дистрибуция и опт', 'Склады и резервы, прайсы в AED и USD, дилеры с лимитами и PDC, "
-     "закупка через IntDoc', '/bitrix-distribution')]),\n 'en':"),
+     "закупка через ИИ-агента', '/bitrix-distribution')]),\n 'en':"),
     ("Zoho Books accounting', '/bitrix-vs-zoho')]),\n}",
      "Zoho Books accounting', '/bitrix-vs-zoho'),\n   ('Distribution', 'Distribution and wholesale', 'Warehouses and "
-     "reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc', '/bitrix-distribution')]),\n}"),
+     "reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with an AI agent', '/bitrix-distribution')]),\n}"),
 ])

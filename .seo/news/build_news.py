@@ -97,7 +97,7 @@ def build_ld(a, lang):
     news_url = SITE + ('/news' if lang == 'ru' else '/en/news')
     org = {"@id": SITE + "/#organization"}
     g = [
-        {"@type": "Organization", "@id": SITE + "/#organization", "name": "MakeBiz Group", "url": SITE + "/",
+        {"@type": "Organization", "@id": SITE + "/#organization", "name": "MakeBiz", "alternateName": ["MakeBiz Technologies", "MakeBiz Group"], "url": SITE + "/",
          "logo": {"@type": "ImageObject", "url": SITE + "/favicon.png", "width": 310, "height": 310}},
         {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": L['title'] + ' · MakeBiz',
          "inLanguage": lang, "isPartOf": {"@id": SITE + "/#website"}, "about": org,
@@ -138,7 +138,7 @@ def render_page(repo, a, lang):
     h = sub1(h, r'<link rel="alternate" hreflang="en"[^>]*>',
              '<link rel="alternate" hreflang="en" href="%s">' % en_url, 'hreflang en')
     h = sub1(h, r'<link rel="alternate" hreflang="x-default"[^>]*>',
-             '<link rel="alternate" hreflang="x-default" href="%s">' % ru_url, 'hreflang x-default')
+             '<link rel="alternate" hreflang="x-default" href="%s">' % en_url, 'hreflang x-default')
     h = sub1(h, r'<meta name="description" content="[^"]*">',
              '<meta name="description" content="%s">' % L['desc'], 'description')
     h = sub1(h, r'<meta property="og:title" content="[^"]*">',

@@ -19,7 +19,7 @@ for url, r in S.items():
         h = set_meta(h, 'og:url', canon, 'property'); h = set_meta(h, 'og:type', 'article', 'property')
         h = re.sub(r'\s*<meta name="robots" content="[^"]*">', '', h)
         h = set_canonical(h, canon)
-        h = set_hreflang(h, [('ru', BASE + '/keysy/' + slug), ('en', BASE + '/en/keysy/' + slug), ('x-default', BASE + '/keysy/' + slug)])
+        h = set_hreflang(h, [('ru', BASE + '/keysy/' + slug), ('en', BASE + '/en/keysy/' + slug), ('x-default', BASE + '/en/keysy/' + slug)])
         ld = ld_script(json.loads(fix(r['ldCase'])), 'mb-ld-case') + ld_script(json.loads(fix(r['ldCrumb'])), 'mb-ld-crumb')
         a, b = head_bounds(h); head = LD_RE.sub('', h[a:b]).rstrip() + '\n' + ld + '\n'; h = h[:a] + head + h[b:]
         assert h.count('<div data-mb-case></div>') == 1

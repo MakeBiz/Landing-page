@@ -137,7 +137,7 @@ def build(key, lang):
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]},
     ]
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(',', ':'))
-    full_title = title + ' | MakeBiz Group'
+    full_title = title + ' | MakeBiz'
     head = [
         '<!DOCTYPE html>', '<html lang="%s">' % lang, '<head>', icons,
         '<meta charset="utf-8">', '<meta name="viewport" content="width=device-width, initial-scale=1">',
@@ -147,10 +147,10 @@ def build(key, lang):
         '<link rel="canonical" href="%s">' % url,
         '<link rel="alternate" hreflang="ru" href="%s/%s">' % (SITE, slug),
         '<link rel="alternate" hreflang="en" href="%s/en/%s">' % (SITE, slug),
-        '<link rel="alternate" hreflang="x-default" href="%s/%s">' % (SITE, slug),
+        '<link rel="alternate" hreflang="x-default" href="%s/en/%s">' % (SITE, slug),
         '<meta property="og:title" content="%s">' % title, '<meta property="og:description" content="%s">' % desc,
         '<meta property="og:url" content="%s">' % url, '<meta property="og:type" content="website">',
-        '<meta property="og:site_name" content="MakeBiz Group">',
+        '<meta property="og:site_name" content="MakeBiz">',
         '<meta property="og:image" content="%s/og/og-bitrix.jpg">' % SITE,
         '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">',
         '<meta property="og:locale" content="%s">' % ('ru_RU' if ru else 'en_US'),

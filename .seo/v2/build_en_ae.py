@@ -50,8 +50,8 @@ BITRIX_MENU = [
 ]
 AI_MENU = [
     ('/ai-agents', 'AI agent implementation', 'Agents in sales, finance, procurement'),
-    ('/ai-agents/rop', 'AI sales head', 'Chats, plan, error review'),
-    ('/ai-agents/svyaznoy', 'Liaison agent', 'Contacts and relationships'),
+    ('/ai-agents/rop', 'AI head of sales', 'Chats, plan, error review'),
+    ('/ai-agents/svyaznoy', 'Relationship agent', 'Contacts and relationships'),
     ('/ai-agents/zvonki', 'Speech analytics', 'Every call scored'),
     ('/ai-agents/hr', 'HR agent', 'Screening and bot interviews'),
     ('/ai-agents/zakupki', 'Procurement', 'Requests and quote comparison'),
@@ -103,7 +103,7 @@ def footer():
       <p>IT integrator in the UAE and official Bitrix24 partner. We implement AI agents and Bitrix24 for companies in Dubai and across the Emirates. 8 years in IT, we work in English and Russian</p>
       <p class="ftr-contacts"><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="https://wa.me/{WA}">WhatsApp</a> · <a href="https://t.me/{TG}">Telegram @{TG}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
-    <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI sales head</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
+    <div><div class="ftr-t">AI agents</div><a href="{U('/ai-agents')}">AI agent implementation</a><a href="{U('/ai-agents/rop')}">AI head of sales</a><a href="{U('/ai-agents/zvonki')}">Speech analytics</a><a href="{U('/ai-agents/hr')}">HR agent</a><a href="{U('/ai-agents/marketing')}">Marketing agent</a></div>
     <div><div class="ftr-t">Bitrix24</div>{''.join(f'<a href="{U(p)}">{esc(t)}</a>' for p,t,_ in BITRIX_MENU)}</div>
     <div><div class="ftr-t">Company</div><a href="{U('/o-kompanii')}">About</a><a href="{U('/ceny')}">Pricing</a><a href="{U('/keysy')}">Cases</a><a href="{U('/vps')}">Servers and VPS</a><a href="{U('/en/news')}">News</a><a href="{U('/journal')}">Journal</a><a href="{U('/partners')}">Partners</a><a href="https://t.me/makebizchannel">Telegram channel</a><a href="{U('/contacts')}">Contacts</a><a href="{RU('/')}" lang="ru">Русская версия</a></div>
   </div>
@@ -240,6 +240,7 @@ ORG = {
     "knowsAbout": ["Bitrix24", "CRM implementation in the UAE", "on-premise Bitrix24", "Bitrix24 and Zoho Books integration", "WhatsApp in CRM", "VAT in CRM", "BI analytics", "AI agents", "call speech analytics"],
     "disambiguatingDescription": "Official Bitrix24 partner and integrator in the UAE: Bitrix24, AI agents and BI. Does not provide company formation, visas or trade licenses",
     "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Official Bitrix24 partner", "credentialCategory": "partner"},
+    "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "telephone": "+971502620927", "email": "info@makebiztechnologies.com", "url": "https://wa.me/971502620927", "availableLanguage": ["en", "ru"], "areaServed": "AE"}],
     "sameAs": ["https://t.me/makebizchannel", "https://makebiz.life/"],
 }
 
@@ -252,7 +253,7 @@ def hreflang(path):
     ru = SITE + (path if path != '/' else '/')
     en = SITE + en_path(path)
     return (f'\n<link rel="alternate" hreflang="ru" href="{ru}"><link rel="alternate" hreflang="en" href="{en}">'
-            f'<link rel="alternate" hreflang="x-default" href="{ru}">')
+            f'<link rel="alternate" hreflang="x-default" href="{en}">')
 
 def page(path, slug, title, desc, active, body, ld_extra, crumb_items, faq_items=None):
     canon = SITE + en_path(path)
@@ -279,7 +280,7 @@ def page(path, slug, title, desc, active, body, ld_extra, crumb_items, faq_items
 <meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="ru_RU"><meta property="og:site_name" content="MakeBiz">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{SITE}/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="icon" type="image/png" href="/favicon-120.png" sizes="120x120"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="{U('/assets/onest-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{U('/assets/site.css')}?v={V}">
 <meta name="theme-color" content="#04050A">
@@ -358,7 +359,7 @@ V_AGENTS = VIS('agents', 'AI agents · working', 'Agents <b>7</b>', '<span class
 
 # ---------- dashboard screenshots (Russian interface, demo data)
 SHOT_ALT = {
- 'ai-chat': 'Chats: sales head hint and a ready reply from the AI agent',
+ 'ai-chat': 'Chats: head of sales hint and a ready reply from the AI agent',
  'rop-razbor': 'Chat review: where the manager went wrong and what to do',
  'rop-plan': 'Sales: monthly plan, leads, deals and payments by manager',
  'bi-sales': 'Sales department: leads, payments, touches and reply speed',
@@ -377,8 +378,8 @@ SHOT_ALT = {
  'calls-reco': 'Calls: recommendations by employee and company report',
  'zak': 'Procurement: supplier map by price and reliability',
  'zak-obzor': 'Procurement: savings, procedures, volume and agent work',
- 'svyaz-today': 'Liaison: waiting for reply, steps for today, hot and new chats',
- 'svyaz-set': 'Liaison: network map, who is who and warmth of each contact',
+ 'svyaz-today': 'Relationships: waiting for reply, steps for today, hot and new chats',
+ 'svyaz-set': 'Relationships: network map, who is who and warmth of each contact',
 }
 TABS = {'ai-chat': 'Chats', 'rop-razbor': 'Chat review', 'rop-plan': 'Sales plan', 'bi-sales': 'Sales dept', 'bi-puls': 'Company pulse', 'bi-fin': 'Finance',
         'bi-direct': 'Ads', 'mk-search': 'Search', 'mk-seo': 'SEO by site', 'mk-geo': 'AI visibility', 'mk-queries': 'Ad queries',
@@ -445,7 +446,7 @@ home_body = f'''
 <section class="sec" id="agents"><div class="wrap"><div class="aiblk"><div><span class="eyebrow">Area · AI agents</span>
   <h2 style="margin-top:4px">AI agents that <span>work inside your business</span></h2><p>Agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. We connect them to your CRM and messengers. One agent from AED 5,000</p>
   <a class="btn btn-ghost" href="{U('/ai-agents')}">More about agents</a></div>
-  <ul><li><a href="{U('/ai-agents/rop')}">AI sales head<small>replies when a manager is silent</small></a></li><li><a href="{U('/ai-agents/zvonki')}">Calls<small>every conversation scored</small></a></li>
+  <ul><li><a href="{U('/ai-agents/rop')}">AI head of sales<small>replies when a manager is silent</small></a></li><li><a href="{U('/ai-agents/zvonki')}">Calls<small>every conversation scored</small></a></li>
   <li><a href="{U('/ai-agents/hr')}">Hiring<small>a bot runs the first interview</small></a></li><li><a href="{U('/ai-agents/marketing')}">Marketing<small>content and AI visibility</small></a></li></ul></div></div></section>
 <section class="sec" id="bitrix24" style="padding-top:0"><div class="wrap">
   {sec_head('Area · CRM and Bitrix24', 'Everything about Bitrix24 <span>in one team</span>', 'From the first CRM setup to daily support: we implement, connect WhatsApp and accounting systems, help with licenses and build analytics')}
@@ -518,7 +519,7 @@ bx_body += section('By task and industry', 'Dedicated pages with scope and price
     f'<a class="lcard tilt" href="{U(p)}"><b>{esc(t)}</b><span>{esc(s_)}</span></a>' for p, _, _, t, s_ in LANDINGS_AE) + '</div>')
 bx_body += section('Cases', '', case_cards(['cdek-b2b', 'unilin-crm', 'performia-crm']), tone='tint')
 bx_body += contract_block() + faq(bx_faq) + form_block('bitrix', 'Let us discuss Bitrix24 implementation') + crosslink('ai')
-page('/bitrix', 'bitrix', 'Official Bitrix24 partner in Dubai: implementation | MakeBiz',
+page('/bitrix', 'bitrix', 'Bitrix24 partner in Dubai, UAE: setup from AED 10,000 | MakeBiz',
     'Turnkey Bitrix24 implementation in Dubai and the UAE: CRM, pipelines, WhatsApp, 5% VAT, accounting integrations. Setup from AED 10,000, launch from 14 days.',
     'bitrix', bx_body, [service_ld('Bitrix24 implementation', 'Turnkey Bitrix24 CRM implementation in the UAE', '/bitrix', 10000)],
     [('/', 'Home'), ('/bitrix', 'Bitrix24 implementation')], bx_faq)
@@ -830,7 +831,7 @@ page('/bi-analitika', 'bi-analitika', 'BI analytics for Bitrix24 in the UAE: man
 
 # ---------- AI AGENTS
 VIDEO_LD = {"@type": "VideoObject", "name": "MakeBiz AI agents: how agents run a company",
-    "description": "A tour of the MakeBiz cabinet: company pulse, chats with sales head hints, chat review, sales pipeline, finance, marketing, hiring, call speech analytics and procurement. Russian interface.",
+    "description": "A tour of the MakeBiz cabinet: company pulse, chats with head of sales hints, chat review, sales pipeline, finance, marketing, hiring, call speech analytics and procurement. Russian interface.",
     "thumbnailUrl": [SITE + '/media/agents-poster.jpg'], "uploadDate": "2026-10-22", "duration": "PT3M10S",
     "contentUrl": SITE + '/media/agents.mp4', "inLanguage": "ru", "publisher": {"@id": SITE + "/#organization"}}
 def video_block():
@@ -852,12 +853,12 @@ def yt_ld(k):
     return o
 
 AGENTS = [
- dict(slug='rop', name='AI sales head', short='Sales and chats', sub='Hints in every chat, chat review, plan control',
-  title='AI sales head agent: sales team and chat control in Bitrix24 | MakeBiz',
+ dict(slug='rop', name='AI head of sales', short='Sales and chats', sub='Hints in every chat, chat review, plan control',
+  title='AI sales agent for WhatsApp and Bitrix24: chat and plan control | MakeBiz',
   desc='An AI agent acting as head of sales: drafts replies, takes over a chat when a manager is silent, reviews manager chats and tracks the plan in Bitrix24.',
-  h1='An AI sales head that <span>never misses a client</span>',
+  h1='An AI head of sales that <span>never misses a client</span>',
   lead='The agent sees every chat and deal, suggests a reply to the manager, answers by itself if nobody reacts, and reviews the team mistakes every morning',
-  answer='The MakeBiz AI sales head works inside Bitrix24 and messengers: it drafts a reply right in the chat window, takes over the conversation after 15 minutes of silence, reviews manager chats and tracks the sales plan.',
+  answer='The MakeBiz AI head of sales works inside Bitrix24 and messengers: it drafts a reply right in the chat window, takes over the conversation after 15 minutes of silence, reviews manager chats and tracks the sales plan.',
   chips=[('15 minutes', 'and the agent replies'), ('Every morning', 'chat review'), ('Plan', 'for every manager'), ('Bitrix24', 'everything in the deal')],
   feats=[('A hint in every chat', 'A ready reply with price in AED and next step in the chat window: insert, shorten or soften in one click'),
          ('Takes over the chat', 'If a manager has not replied in 15 minutes, the agent answers the client and sets a task for the owner'),
@@ -867,16 +868,16 @@ AGENTS = [
          ('Who to call today', 'A list of clients to contact with the reason and a hint on what to say')],
   ticks=['WhatsApp, Telegram, social media, email and site chats in one queue', 'Every chat scored, typical manager mistakes', 'Plan and actuals by manager and pipeline stage', 'Everything is written to the Bitrix24 deal'],
   shots=['ai-chat', 'rop-razbor', 'rop-plan', 'bi-sales'],
-  faq=[('Will the AI sales head replace the head of sales?', 'No, it takes over routine: watches reply speed, reviews chats and gives hints. Decisions and people stay with the head.'),
+  faq=[('Will the AI agent replace your head of sales?', 'No, it takes over routine: watches reply speed, reviews chats and gives hints. Decisions and people stay with the head.'),
        ('Which channels does it work with?', 'WhatsApp, Telegram, social media, email and site chats connected to Bitrix24. Other channels on request.'),
        ('What language does the agent reply in?', 'In the client language: English, Russian and Arabic where needed. Tone and reply rules are set for your company.'),
        ('Does the agent write to clients by itself?', 'Only by the rules you set: for example, if a manager is silent for 15 minutes. Everything the agent wrote is visible in the deal.')]),
- dict(slug='svyaznoy', name='Liaison agent', short='Contacts and relationships', sub='Who waits for a reply, who to contact, the full contact picture',
-  title='Liaison AI agent: contacts, reminders, relationships | MakeBiz',
-  desc='The liaison AI agent watches all contacts: who is waiting for a reply, who to get in touch with, who is hot and who is cooling down.',
-  h1='Liaison: an agent that <span>remembers every person</span>',
+ dict(slug='svyaznoy', name='Relationship agent', short='Contacts and relationships', sub='Who waits for a reply, who to contact, the full contact picture',
+  title='AI relationship agent: contacts, follow-ups and reminders | MakeBiz',
+  desc='The AI relationship agent watches all contacts: who is waiting for a reply, who to get in touch with, who is hot and who is cooling down.',
+  h1='A relationship agent that <span>remembers every person</span>',
   lead='The agent keeps all your contacts in mind: clients, partners, contractors. It reminds you who to answer and who to contact, and shows which relationships are cooling down',
-  answer='The MakeBiz liaison agent collects contacts from WhatsApp, Telegram, CRM and email, shows who is waiting for a reply and which steps are planned for today, and rates the warmth of each contact so relationships are not lost.',
+  answer='The MakeBiz relationship agent collects contacts from WhatsApp, Telegram, CRM and email, shows who is waiting for a reply and which steps are planned for today, and rates the warmth of each contact so relationships are not lost.',
   chips=[('Waiting', 'visible at once'), ('Steps', 'for today'), ('Warmth', 'of each contact'), ('Telegram', 'and CRM')],
   feats=[('Waiting for reply', 'Who wrote and got no answer, how long they wait and what to reply'),
          ('Steps for today', 'Agreed to call or send a quote: the agent reminds you on the right day'),
@@ -886,7 +887,7 @@ AGENTS = [
          ('Morning brief', 'A short Telegram summary: what matters today and who not to forget')],
   ticks=['Contacts from WhatsApp, Telegram, CRM and email in one picture', 'Status and warmth of every card', 'Birthdays and reasons to get in touch', 'Deals and leads created in Bitrix24 in one click'],
   shots=['svyaz-today', 'svyaz-set'],
-  faq=[('How is the liaison agent different from a CRM?', 'A CRM stores deals. The liaison agent watches people: who is waiting, who you have not talked to for a while, what is agreed for today, and passes to the CRM what becomes a deal.'),
+  faq=[('How is the relationship agent different from a CRM?', 'A CRM stores deals. The relationship agent watches people: who is waiting, who you have not talked to for a while, what is agreed for today, and passes to the CRM what becomes a deal.'),
        ('Where does the agent get contacts?', 'From WhatsApp, Telegram, Bitrix24 and email. The source set is defined at the start.'),
        ('Who is it for?', 'Owners, managers and salespeople with hundreds of contacts and agreements that must not be lost.')]),
  dict(slug='zvonki', name='Speech analytics', short='Call analytics', sub='Every conversation scored, objections, recommendations',
@@ -1001,8 +1002,8 @@ ai_faq = [
     ('Where do we start?', 'With one agent where there is the most routine or loss: chats, calls, hiring or procurement. We launch, measure and add the next ones.'),
 ]
 ai_body = hero('AI agents · implementation', 'AI agents that <span>work inside your business</span>',
-    'Not a chatbot on the website, but a team of digital employees: sales head, liaison, speech analytics, HR, procurement, marketing and finance',
-    'MakeBiz Technologies builds and implements AI agents for companies in Dubai and the UAE: the sales head agent runs WhatsApp chats and the sales plan, the liaison agent watches contacts, the calls agent scores every conversation, the HR agent runs first interviews, and the procurement, marketing and finance agents work on BI dashboards. One agent from AED 5,000.',
+    'Not a chatbot on the website, but a team of digital employees: head of sales, relationships, speech analytics, HR, procurement, marketing and finance',
+    'MakeBiz Technologies builds and implements AI agents for companies in Dubai and the UAE: the head of sales agent runs WhatsApp chats and the sales plan, the relationship agent watches contacts, the calls agent scores every conversation, the HR agent runs first interviews, and the procurement, marketing and finance agents work on BI dashboards. One agent from AED 5,000.',
     ('#form', 'Book a demo'), ('#agenty', 'All agents'), V_AGENTS,
     [('7 agents', 'by department'), ('from AED 5,000', 'one agent'), ('Your server', 'your data'), ('EN · RU', 'working languages')], 'A team of AI agents at work')
 ai_body += section('Our agents', 'Our own company is run by these agents: they are built into the CRM, banks, sales, marketing, hiring and procurement. Each can be implemented separately', agent_grid(), id_='agenty')
@@ -1022,8 +1023,8 @@ ai_body += section('How we implement', '', steps([
 ]), tone='tint')
 ai_body += section('Cases', '', case_cards(['haval-vector', 'apartika-crm', 'cdek-b2b']))
 ai_body += contract_block() + faq(ai_faq) + form_block('ai-agents', 'We will show agents on your process') + crosslink('bitrix')
-page('/ai-agents', 'ai-agents', 'AI agents for business in Dubai and the UAE | MakeBiz',
-    'AI agents for business in Dubai and the UAE: sales head on WhatsApp, call analytics, HR, procurement, marketing and finance in Bitrix24. From AED 5,000.',
+page('/ai-agents', 'ai-agents', 'AI agents for business in Dubai and the UAE: from AED 5,000 | MakeBiz',
+    'AI agents for business in Dubai and the UAE: AI head of sales on WhatsApp, call analytics, HR, procurement, marketing and finance in Bitrix24. From AED 5,000.',
     'ai', ai_body, [service_ld('AI agent implementation', 'Development and implementation of AI agents for business in the UAE', '/ai-agents', 5000), VIDEO_LD,
                     {"@type": "ItemList", "name": "MakeBiz AI agents", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": a['name'], "url": SITE + en_path(agent_url(a['slug']))} for i, a in enumerate(AGENTS)]}],
     [('/', 'Home'), ('/ai-agents', 'AI agents')], ai_faq)
@@ -1243,7 +1244,7 @@ ab_body = hero('About', 'MakeBiz Technologies: <span>Bitrix24 and AI agents in t
     [('8 years', 'in IT and CRM'), ('150+', 'projects'), ('FZE LLC', 'UAE company'), ('EN · RU', 'working language')], 'MakeBiz team')
 ab_body += section('What we do', '', cards([
     ('Turnkey Bitrix24', f'Cloud and <a href="{U("/bitrix-korobka")}">on-premise</a> Bitrix24 implementation, support, WhatsApp, accounting integrations, licenses and BI'),
-    ('AI agents', f'<a href="{U("/ai-agents")}">A team of agents</a>: sales head, liaison, speech analytics, HR, procurement, marketing, finance'),
+    ('AI agents', f'<a href="{U("/ai-agents")}">A team of agents</a>: head of sales, relationships, speech analytics, HR, procurement, marketing, finance'),
     ('Analytics', 'BI dashboards on CRM, accounting, bank, telephony and ad data'),
     ('Servers and VPS', f'<a href="{U("/vps")}">Server selection and setup</a> with vetted providers, including UAE locations'),
 ], 4))

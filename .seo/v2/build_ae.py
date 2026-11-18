@@ -302,6 +302,7 @@ ORG = {
     "knowsAbout": ["Битрикс24", "внедрение CRM в ОАЭ", "коробочный Битрикс24", "интеграция Битрикс24 с Zoho Books", "WhatsApp в CRM", "VAT в CRM", "BI-аналитика", "ИИ-агенты", "речевая аналитика звонков"],
     "disambiguatingDescription": "Официальный партнёр и интегратор Битрикс24 в ОАЭ: Битрикс24, ИИ-агенты и BI. Не занимается регистрацией компаний, визами и лицензиями",
     "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Официальный партнёр Битрикс24", "credentialCategory": "partner"},
+    "contactPoint": [{"@type": "ContactPoint", "contactType": "sales", "telephone": "+971502620927", "email": "info@makebiztechnologies.com", "url": "https://wa.me/971502620927", "availableLanguage": ["en", "ru"], "areaServed": "AE"}],
     "sameAs": ["https://t.me/makebizchannel", "https://makebiz.life/"],
 }
 
@@ -311,7 +312,7 @@ def hreflang(path):
     ru = SITE + (path if path != '/' else '/')
     en = SITE + en_path(path)
     return (f'\n<link rel="alternate" hreflang="ru" href="{ru}"><link rel="alternate" hreflang="en" href="{en}">'
-            f'<link rel="alternate" hreflang="x-default" href="{ru}">')
+            f'<link rel="alternate" hreflang="x-default" href="{en}">')
 
 def page(path, slug, title, desc, active, body, ld_extra, crumb_items, faq_items=None):
     body = add_related(path, body)
@@ -343,7 +344,7 @@ def page(path, slug, title, desc, active, body, ld_extra, crumb_items, faq_items
 <meta property="og:type" content="website"><meta property="og:locale" content="ru_RU"><meta property="og:site_name" content="MakeBiz">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{canon}"><meta property="og:image" content="{og_img}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32"><link rel="icon" type="image/png" href="/favicon-120.png" sizes="120x120"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="{U('/assets/onest-cyrillic.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{U('/assets/site.css')}?v={V}">
 <meta name="theme-color" content="#04050A">

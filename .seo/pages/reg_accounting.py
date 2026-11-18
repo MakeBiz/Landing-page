@@ -89,10 +89,10 @@ patch('.seo/build_d.py', [
 
 # 4. Карточка в блоке «Решения для ОАЭ» на /bitrix и /en/bitrix
 patch('.seo/uae/link_solutions.py', [
-    ("закупка через IntDoc', '/bitrix-distribution')]),\n 'en':",
-     "закупка через IntDoc', '/bitrix-distribution'),\n   ('Учёт', 'Интеграция с учётом', 'Zoho Books, QuickBooks, Odoo и 1С: "
+    ("закупка через ИИ-агента', '/bitrix-distribution')]),\n 'en':",
+     "закупка через ИИ-агента', '/bitrix-distribution'),\n   ('Учёт', 'Интеграция с учётом', 'Zoho Books, QuickBooks, Odoo и 1С: "
      "счёт из сделки, оплаты и долги клиентов в CRM', '/bitrix-accounting')]),\n 'en':"),
-    ("sourcing with IntDoc', '/bitrix-distribution')]),\n}",
-     "sourcing with IntDoc', '/bitrix-distribution'),\n   ('Accounting', 'Accounting integration', 'Zoho Books, QuickBooks, Odoo "
+    ("sourcing with an AI agent', '/bitrix-distribution')]),\n}",
+     "sourcing with an AI agent', '/bitrix-distribution'),\n   ('Accounting', 'Accounting integration', 'Zoho Books, QuickBooks, Odoo "
      "and 1C: invoices from deals, payments and client balances in the CRM', '/bitrix-accounting')]),\n}"),
 ])

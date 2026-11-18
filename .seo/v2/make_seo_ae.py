@@ -34,7 +34,7 @@ def title_of(f):
 def alt(ru, en):
     a = f'<xhtml:link rel="alternate" hreflang="ru" href="{SITE}{ru}"/>'
     if en: a += f'<xhtml:link rel="alternate" hreflang="en" href="{SITE}{en}"/>'
-    return a + f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{ru}"/>'
+    return a + f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{en or ru}"/>'
 
 pairs = []  # (ru_url, en_url|None, ru_file, en_file|None, priority, changefreq)
 for p in NEW:
@@ -91,9 +91,9 @@ L = ['# MakeBiz Technologies', '',
      f'- [Servers and VPS]({U("/vps")}): VPS selection from vetted providers (same list as servercalc.com, including UAE locations), deployment of on-premise Bitrix24 and AI agents, setup AED 200 per hour', '',
      '## AI agents', '',
      f'- [AI agents for business]({U("/ai-agents")}): one agent from AED 5,000; packages Start AED 5,000, Business AED 10,000, Holding priced individually; maintenance 10% of the implementation cost per month; demo free',
-     f'- [AI sales head]({U("/ai-agents/rop")}): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan',
+     f'- [AI head of sales]({U("/ai-agents/rop")}): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan',
      f'- [Call speech analytics]({U("/ai-agents/zvonki")}): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes',
-     f'- [HR agent]({U("/ai-agents/hr")}), [procurement agent]({U("/ai-agents/zakupki")}), [marketing agent]({U("/ai-agents/marketing")}), [finance agent]({U("/ai-agents/finansy")}), [liaison agent]({U("/ai-agents/svyaznoy")})', '']
+     f'- [HR agent]({U("/ai-agents/hr")}), [procurement agent]({U("/ai-agents/zakupki")}), [marketing agent]({U("/ai-agents/marketing")}), [finance agent]({U("/ai-agents/finansy")}), [relationship agent]({U("/ai-agents/svyaznoy")})', '']
 L += ['## Bitrix24 by task and industry', ''] + [f'- [{t}]({U(p)}): {s}' for p, _, _, t, s in LANDINGS_AE] + ['']
 SOL_EN = solutions('en')
 if SOL_EN:

@@ -9,10 +9,10 @@ LOGO = {'@type': 'ImageObject', 'url': BASE + '/favicon.png', 'width': 310, 'hei
 T = lambda lang, ru, en: en if lang == 'en' else ru
 
 def org_full(lang):
-    return {'@type': 'Organization', '@id': ORG, 'name': 'MakeBiz Group', 'alternateName': ['MakeBiz', 'MakeBiz Technologies'],
+    return {'@type': 'Organization', '@id': ORG, 'name': 'MakeBiz', 'alternateName': ['MakeBiz Technologies', 'MakeBiz Group'],
       'legalName': 'MakeBiz Technologies FZE LLC', 'url': BASE + '/', 'logo': LOGO, 'image': BASE + '/og-image.jpg',
-      'description': T(lang, 'IT-компания в ОАЭ: внедряет AI-агентов, CRM Битрикс24, речевую аналитику звонков Vector, AI-обработку документов IntDoc, BI-аналитику и IT-инфраструктуру для бизнеса.',
-                        'UAE IT company implementing AI agents, Bitrix24 CRM, Vector call speech analytics, IntDoc document AI, BI analytics and IT infrastructure for business.'),
+      'description': T(lang, 'IT-интегратор в ОАЭ: внедряет ИИ-агентов для продаж, финансов, закупок и найма, CRM Битрикс24, речевую аналитику звонков и BI-аналитику для компаний в Дубае и по всем Эмиратам.',
+                        'IT integrator in the UAE implementing AI agents for sales, finance, procurement and hiring, Bitrix24 CRM, call speech analytics and BI analytics for companies in Dubai and across the Emirates.'),
       'email': 'info@makebiztechnologies.com', 'telephone': '+971502620927',
       'address': {'@type': 'PostalAddress', 'streetAddress': 'Amber Gem Tower, 26th Floor, Office CWS-1V-226413, Sheikh Khalifa Street', 'addressLocality': 'Ajman', 'addressRegion': 'Ajman', 'addressCountry': 'AE'},
       'areaServed': [{'@type': 'City', 'name': 'Dubai'}, {'@type': 'Country', 'name': 'United Arab Emirates'}, {'@type': 'Country', 'name': 'Russia'}],
@@ -21,13 +21,13 @@ def org_full(lang):
       'knowsLanguage': ['ru', 'en'],
       'knowsAbout': ['Bitrix24', 'Bitrix24 partner in the UAE', 'CRM implementation', 'Real estate CRM', 'WhatsApp CRM integration', 'UAE VAT and e-invoicing readiness', 'AI agents', 'Business process automation', 'Speech analytics', 'Call analytics', 'Document AI', 'BI analytics', 'IT infrastructure'],
       'identifier': {'@type': 'PropertyValue', 'propertyID': 'Ajman NuVentures Centre registration number', 'value': '2624215090888'},
-      'sameAs': ['https://t.me/makebizchannel'],
+      'sameAs': ['https://t.me/makebizchannel', 'https://makebiz.life/'],
       'contactPoint': [{'@type': 'ContactPoint', 'contactType': 'sales', 'telephone': '+971502620927', 'email': 'info@makebiztechnologies.com',
                         'url': 'https://t.me/Anton_MakeBiz', 'availableLanguage': ['ru', 'en'], 'areaServed': ['AE', 'RU']}],
       'hasOfferCatalog': {'@type': 'OfferCatalog', 'name': T(lang, 'Услуги MakeBiz', 'MakeBiz services'),
-         'itemListElement': [{'@type': 'Offer', 'itemOffered': {'@id': BASE + T(lang, '', '/en') + p + '#service'}} for p in ['/bitrix', '/ai-agents', '/vector', '/intdoc', '/vps']]}}
+         'itemListElement': [{'@type': 'Offer', 'itemOffered': {'@id': BASE + T(lang, '', '/en') + p + '#service'}} for p in ['/bitrix', '/ai-agents', '/ai-agents/zvonki', '/vps']]}}
 
-ORG_C = {'@type': 'Organization', '@id': ORG, 'name': 'MakeBiz Group', 'url': BASE + '/', 'logo': LOGO}
+ORG_C = {'@type': 'Organization', '@id': ORG, 'name': 'MakeBiz', 'alternateName': ['MakeBiz Technologies', 'MakeBiz Group'], 'url': BASE + '/', 'logo': LOGO}
 
 def webpage(url, lang, name, desc, typ='WebPage', extra=None):
     o = {'@type': typ, '@id': url + '#webpage', 'url': url, 'name': name, 'inLanguage': lang, 'isPartOf': {'@id': SITE}, 'about': {'@id': ORG}}
@@ -117,7 +117,7 @@ def graph_for(f, s):
     key = base[:-5]
     g = []
     if key == 'index':
-        g = [org_full(lang), {'@type': 'WebSite', '@id': SITE, 'url': BASE + '/', 'name': 'MakeBiz Group', 'alternateName': 'MakeBiz', 'inLanguage': ['ru', 'en'], 'publisher': {'@id': ORG}},
+        g = [org_full(lang), {'@type': 'WebSite', '@id': SITE, 'url': BASE + '/', 'name': 'MakeBiz', 'alternateName': ['MakeBiz Technologies', 'MakeBiz Group'], 'inLanguage': ['ru', 'en'], 'publisher': {'@id': ORG}},
              webpage(url, lang, title, desc, extra={'primaryImageOfPage': BASE + '/og-image.jpg'})]
     elif key in SERV:
         g = [ORG_C, webpage(url, lang, title, desc, extra={'breadcrumb': {'@id': url + '#breadcrumb'}, 'mainEntity': {'@id': url + '#service'}}),

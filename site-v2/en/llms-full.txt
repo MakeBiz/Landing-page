@@ -16,7 +16,7 @@ Area · AI agents
 ## AI agents that work inside your business
 Agents take over the routine: they answer clients on WhatsApp, review calls, watch the pipeline and the money. We connect them to your CRM and messengers. One agent from AED 5,000
 More about agents
-- AI sales head replies when a manager is silent
+- AI head of sales replies when a manager is silent
 - Calls every conversation scored
 - Hiring a bot runs the first interview
 - Marketing content and AI visibility
@@ -101,7 +101,7 @@ Leave a request. We run a free diagnostic, find where requests and time are lost
 ---
 
 Page: https://makebiztechnologies.com/en/bitrix
-Title: Official Bitrix24 partner in Dubai: implementation | MakeBiz
+Title: Bitrix24 partner in Dubai, UAE: setup from AED 10,000 | MakeBiz
 
 Bitrix24 · implementation in the UAE
 # Turnkey Bitrix24 implementation in Dubai
@@ -176,7 +176,7 @@ The Bitrix24 license is paid separately at the vendor price. Paid services, comp
 Support Hour packages, administration WhatsApp and messengers WhatsApp, Telegram, social media Accounting integrations Zoho Books, QuickBooks, Odoo, 1C On-premise Bitrix24 Implementation on your server Licenses and prices Cloud from AED 180, on-premise from AED 13,184 BI analytics Dashboards for management
 ## Solutions for the UAE
 Bitrix24 for the way business runs in Dubai: industries, tax, calls, migration
-Real estate Real estate agency in Dubai Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED Tax VAT, dirhams and e-invoicing 5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027 Calls Telephony in the UAE Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls Choosing a CRM Bitrix24 or Zoho CRM An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting Distribution Distribution and wholesale Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with IntDoc Migration Moving from another CRM Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales Health and beauty Clinics and salons Online booking, WhatsApp reminders, client consents and health data under UAE law Corporate services Business setup and consulting Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC
+Real estate Real estate agency in Dubai Property Finder, Bayut and Dubizzle in the CRM, Trakheesi permits, RERA forms and commissions in AED Tax VAT, dirhams and e-invoicing 5% VAT, TRN and currencies in the CRM, ready for electronic invoices from 2027 Calls Telephony in the UAE Through a licensed du or e& line: calls from the CRM, call recordings, tasks for missed calls Choosing a CRM Bitrix24 or Zoho CRM An honest comparison: per-company or per-user pricing, own server, Zoho Books accounting Distribution Distribution and wholesale Warehouses and reservations, AED and USD price lists, dealers with credit limits and PDCs, sourcing with an AI agent Migration Moving from another CRM Kommo, HubSpot and spreadsheets: clients, deals and history move without stopping sales Health and beauty Clinics and salons Online booking, WhatsApp reminders, client consents and health data under UAE law Corporate services Business setup and consulting Long sales cycles, client documents, licence and visa deadlines, beneficial owners and KYC
 ## By task and industry
 Dedicated pages with scope and prices in AED
 Bitrix24 vs HubSpot Comparison for a UAE company Bitrix24 audit Portal review and fix plan Team training Bitrix24 by role, EN and RU CRM for car rental Bookings, deposits, WhatsApp CRM for logistics Quotes, shipments, B2B clients CRM for training centres Enrolment, payments, groups CRM for recruitment Candidates, jobs, clients AI-powered CRM CoPilot and AI agents Bitrix24 development REST API and integrations CRM for travel agencies Enquiries, bookings, payments CRM for event companies Budgets, vendors, projects CRM for agencies Retainers, tasks, hours
@@ -897,12 +897,12 @@ Under contract with MakeBiz Technologies FZE LLC, invoice in dirhams, payment to
 ---
 
 Page: https://makebiztechnologies.com/en/ai-agents
-Title: AI agents for business in Dubai and the UAE | MakeBiz
+Title: AI agents for business in Dubai and the UAE: from AED 5,000 | MakeBiz
 
 AI agents · implementation
 # AI agents that work inside your business
-Not a chatbot on the website, but a team of digital employees: sales head, liaison, speech analytics, HR, procurement, marketing and finance
-MakeBiz Technologies builds and implements AI agents for companies in Dubai and the UAE: the sales head agent runs WhatsApp chats and the sales plan, the liaison agent watches contacts, the calls agent scores every conversation, the HR agent runs first interviews, and the procurement, marketing and finance agents work on BI dashboards. One agent from AED 5,000.
+Not a chatbot on the website, but a team of digital employees: head of sales, relationships, speech analytics, HR, procurement, marketing and finance
+MakeBiz Technologies builds and implements AI agents for companies in Dubai and the UAE: the head of sales agent runs WhatsApp chats and the sales plan, the relationship agent watches contacts, the calls agent scores every conversation, the HR agent runs first interviews, and the procurement, marketing and finance agents work on BI dashboards. One agent from AED 5,000.
 ## Our agents
 Our own company is run by these agents: they are built into the CRM, banks, sales, marketing, hiring and procurement. Each can be implemented separately
 Video · 3 minutes
@@ -1004,12 +1004,12 @@ See Bitrix24
 ---
 
 Page: https://makebiztechnologies.com/en/ai-agents/rop
-Title: AI sales head agent: sales team and chat control in Bitrix24 | MakeBiz
+Title: AI sales agent for WhatsApp and Bitrix24: chat and plan control | MakeBiz
 
-AI agents · AI sales head
-# An AI sales head that never misses a client
+AI agents · AI head of sales
+# An AI head of sales that never misses a client
 The agent sees every chat and deal, suggests a reply to the manager, answers by itself if nobody reacts, and reviews the team mistakes every morning
-The MakeBiz AI sales head works inside Bitrix24 and messengers: it drafts a reply right in the chat window, takes over the conversation after 15 minutes of silence, reviews manager chats and tracks the sales plan.
+The MakeBiz AI head of sales works inside Bitrix24 and messengers: it drafts a reply right in the chat window, takes over the conversation after 15 minutes of silence, reviews manager chats and tracks the sales plan.
 ## What the agent does
 ### A hint in every chat
 A ready reply with price in AED and next step in the chat window: insert, shorten or soften in one click
@@ -1056,7 +1056,7 @@ Portal, server and accounts belong to your company. We work under a separate acc
 ### One team
 Implementation, support, integrations and AI agents by one team, no need to gather contractors
 ## Questions and answers
-**Will the AI sales head replace the head of sales?**
+**Will the AI agent replace your head of sales?**
 No, it takes over routine: watches reply speed, reviews chats and gives hints. Decisions and people stay with the head.
 **Which channels does it work with?**
 WhatsApp, Telegram, social media, email and site chats connected to Bitrix24. Other channels on request.
@@ -1073,12 +1073,12 @@ See Bitrix24
 ---
 
 Page: https://makebiztechnologies.com/en/ai-agents/svyaznoy
-Title: Liaison AI agent: contacts, reminders, relationships | MakeBiz
+Title: AI relationship agent: contacts, follow-ups and reminders | MakeBiz
 
-AI agents · Liaison agent
-# Liaison: an agent that remembers every person
+AI agents · Relationship agent
+# A relationship agent that remembers every person
 The agent keeps all your contacts in mind: clients, partners, contractors. It reminds you who to answer and who to contact, and shows which relationships are cooling down
-The MakeBiz liaison agent collects contacts from WhatsApp, Telegram, CRM and email, shows who is waiting for a reply and which steps are planned for today, and rates the warmth of each contact so relationships are not lost.
+The MakeBiz relationship agent collects contacts from WhatsApp, Telegram, CRM and email, shows who is waiting for a reply and which steps are planned for today, and rates the warmth of each contact so relationships are not lost.
 ## What the agent does
 ### Waiting for reply
 Who wrote and got no answer, how long they wait and what to reply
@@ -1125,8 +1125,8 @@ Portal, server and accounts belong to your company. We work under a separate acc
 ### One team
 Implementation, support, integrations and AI agents by one team, no need to gather contractors
 ## Questions and answers
-**How is the liaison agent different from a CRM?**
-A CRM stores deals. The liaison agent watches people: who is waiting, who you have not talked to for a while, what is agreed for today, and passes to the CRM what becomes a deal.
+**How is the relationship agent different from a CRM?**
+A CRM stores deals. The relationship agent watches people: who is waiting, who you have not talked to for a while, what is agreed for today, and passes to the CRM what becomes a deal.
 **Where does the agent get contacts?**
 From WhatsApp, Telegram, Bitrix24 and email. The source set is defined at the start.
 **Who is it for?**
@@ -1917,7 +1917,7 @@ MakeBiz Technologies FZE LLC (Ajman NuVentures Centre, UAE), an official Bitrix2
 ### Turnkey Bitrix24
 Cloud and on-premise Bitrix24 implementation, support, WhatsApp, accounting integrations, licenses and BI
 ### AI agents
-A team of agents : sales head, liaison, speech analytics, HR, procurement, marketing, finance
+A team of agents : head of sales, relationships, speech analytics, HR, procurement, marketing, finance
 ### Analytics
 BI dashboards on CRM, accounting, bank, telephony and ad data
 ### Servers and VPS
@@ -2766,7 +2766,7 @@ Book a demo
 ### CoPilot in the record
 Helps with one call or chat, within plan limits
 ### An agent in the chat
-The AI sales head replies on its own if the rep is silent for 15 minutes
+The AI head of sales replies on its own if the rep is silent for 15 minutes
 ### Every team call
 Speech analytics scores every call, rep by rep
 ### Agent or rule
@@ -2774,7 +2774,7 @@ The difference is in our news on agents and rules
 ## Limits, plan and data
 Regular Bitrix24 plans have monthly AI limits, Vibe+ plans do not (Bitrix24 blog, August 17, 2026). Agents reach a cloud portal through the REST API, which per the Bitrix24 documentation now comes with Vibe+ plans, not Essentials. CoPilot runs on third-party models such as OpenAI; if data must stay with you, we deploy agents on your server, including in the UAE. Plan prices: Bitrix24 licences
 ## Example: a sales team of 8
-An illustration, not a case. 8 reps, leads from WhatsApp and calls. CRM setup AED 10,000 plus the AI sales head on the Start package for AED 5,000, who answers in the evening and at weekends. Total AED 15,000 one-off, AED 500 a month maintenance and the licence. Speech analytics, if needed: AED 1,000 a month.
+An illustration, not a case. 8 reps, leads from WhatsApp and calls. CRM setup AED 10,000 plus the AI head of sales on the Start package for AED 5,000, who answers in the evening and at weekends. Total AED 15,000 one-off, AED 500 a month maintenance and the licence. Speech analytics, if needed: AED 1,000 a month.
 ## Cases
 Real MakeBiz projects
 HAVAL
