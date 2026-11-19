@@ -56,6 +56,7 @@ Key facts:
 - [Free zone and mainland: one Bitrix24 or two](https://makebiztechnologies.com/en/news/free-zone-i-mainland-v-odnom-bitrix24): The Dubai mainland permit costs AED 5,000 per six months and that revenue needs separate records. One Bitrix24 portal or two: the numbers.
 - [Where the Sales Team Loses a Client During a Call](https://makebiztechnologies.com/en/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka): The problem is not the number of calls, but that the business does not hear at which stage the conversation breaks down.
 - [Where procurement loses money comparing suppliers](https://makebiztechnologies.com/en/news/gde-v-zakupkah-teryayutsya-dengi): A rate with no date, VAT inside the price, lead time buried in an email and manual retyping: four places UAE procurement loses money.
+- [AI agent in Arabic and English: setup and cost](https://makebiztechnologies.com/en/news/ii-agent-na-arabskom-i-angliyskom): Dubai Chambers opened 22 AI agents, all in Arabic and English. What a second language changes in your own agent's setup and in a budget from AED 5,000.
 - [CRM implementation cost in the UAE: what you pay for](https://makebiztechnologies.com/en/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm): Starter setup from 10 000 AED, licence and migration quoted separately, and a support hour at 250, 230 or 210 dirhams.
 - [What AI actually saves in sales, and what it does not](https://makebiztechnologies.com/en/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net): AI saves hours on the work around a deal, not on the deal itself. Where the numbers add up, where they do not, and how to check first.
 - [Cloud or on-premise CRM in the UAE: how to choose](https://makebiztechnologies.com/en/news/oblako-ili-svoy-server-dlya-crm-v-oae): Bitrix24 cloud from AED 180 a month, with .ae data stored in Germany. On-premise from AED 13,184 a year. When a UAE company needs its own server.
@@ -119,6 +120,7 @@ Key facts:
 - [Free zone и mainland: один Битрикс24 или два](https://makebiztechnologies.com/news/free-zone-i-mainland-v-odnom-bitrix24)
 - [Где отдел продаж теряет клиента внутри звонка](https://makebiztechnologies.com/news/gde-otdel-prodazh-teryaet-klienta-vnutri-zvonka)
 - [Где теряются деньги при сравнении поставщиков](https://makebiztechnologies.com/news/gde-v-zakupkah-teryayutsya-dengi)
+- [ИИ-агент на арабском и английском: настройка и цена](https://makebiztechnologies.com/news/ii-agent-na-arabskom-i-angliyskom)
 - [Смета внедрения CRM в ОАЭ: из чего складывается цена](https://makebiztechnologies.com/news/iz-chego-skladyvaetsya-smeta-vnedreniya-crm)
 - [На чём AI в продажах экономит, а на чём нет](https://makebiztechnologies.com/news/na-chem-ai-v-prodazhah-ekonomit-a-na-chem-net)
 - [Облако или свой сервер для CRM в ОАЭ: как выбрать](https://makebiztechnologies.com/news/oblako-ili-svoy-server-dlya-crm-v-oae)

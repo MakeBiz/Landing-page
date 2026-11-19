@@ -244,9 +244,12 @@
     {
       "key": "ai-agent-arabic-english",
       "cat": "agents",
-      "status": "planned",
+      "status": "used",
       "angle": "ИИ-агент на арабском и английском: что меняется в настройке и в цене",
-      "query": "ии агент арабский язык"
+      "query": "ии агент арабский язык",
+      "used_slug": "ii-agent-na-arabskom-i-angliyskom",
+      "used_date": "2026-11-19",
+      "note": "Повод: Chamber AI Hub от Dubai Chambers (запуск 26.10.2026, TradeArabia: 22 агента, 7 функций, все на арабском и английском, песочница, стартовые кредиты, цены пакетов не названы) и колонка VP Dubai Chamber of Digital Economy в Gulf News 16.11.2026 (цель 295 000 компаний за два года). Сверено 19.11.2026. Цены со страницы /ceny"
     },
     {
       "key": "ai-agent-vs-operator-cost",
@@ -268,6 +271,41 @@
       "status": "planned",
       "angle": "Аудит и продление лицензии free zone: какие документы собираются из CRM за день, а не за неделю",
       "query": "аудит компании free zone оаэ"
+    },
+    {
+      "key": "einvoicing-penalties-crm",
+      "cat": "it",
+      "status": "planned",
+      "angle": "Новые штрафы за e-invoicing по Cabinet Decision 173 of 2026: какие поля счёта в CRM проверить заранее, чтобы не платить",
+      "query": "штрафы e-invoicing оаэ"
+    },
+    {
+      "key": "bitrix-onprem-renewal-terms",
+      "cat": "crm",
+      "status": "planned",
+      "angle": "Новые условия продления коробки Битрикс24: сколько стоит пропустить продление и когда считать заранее",
+      "query": "продление лицензии битрикс24 коробка"
+    },
+    {
+      "key": "speech-analytics-arabic-calls",
+      "cat": "ai",
+      "status": "planned",
+      "angle": "Речевая аналитика звонков на арабском и английском: что успеть разобрать в 5 000 минутах за 1 000 AED в месяц",
+      "query": "анализ звонков на арабском"
+    },
+    {
+      "key": "ramadan-2027-sales-plan",
+      "cat": "biz",
+      "status": "planned",
+      "angle": "Рамадан 2027 и план продаж: как заранее перестроить график, воронку и напоминания в CRM",
+      "query": "продажи в рамадан оаэ"
+    },
+    {
+      "key": "lead-response-sla",
+      "cat": "auto",
+      "status": "planned",
+      "angle": "Время первого ответа на заявку: как настроить контроль в Битрикс24 и сколько стоит каждый потерянный час",
+      "query": "время ответа на заявку crm"
     }
   ]
 }
