@@ -1744,16 +1744,16 @@ We pick a server for the job: on-premise Bitrix24, a website, AI agents, databas
 MakeBiz Technologies helps UAE companies choose a VPS from vetted providers (12 on the list, with locations in the UAE, Europe, the US and Asia), deploys on-premise Bitrix24, websites and AI agents on it and supports the server. Plans from $1.83 a month per the servercalc.com catalogue, setup work AED 200 per hour.
 ## Providers
 The same list and order as in our catalogue servercalc.com . Price of the most affordable plan, checked 2026-10-21. Affiliate links, your price does not change
-RackNerd
-from $1.83 a month
-1 vCPU · 1 GB · 20 GB
-USA · Europe · Asia · worldwide
-A very cheap KVM VPS with many US locations plus points in Europe and Asia. Billed a year upfront, hence the low effective price
-- A very low monthly-equivalent price
-- Many US data centers
+Fornex
+from €5.5 a month
+1 vCPU · 1 GB · 10 GB
+Europe · worldwide
+A provider with Russian-speaking support and European locations. A range from a simple VPS to dedicated servers.
+- Russian-speaking support with international locations
+- A broad range of services
 - DDoS protection
-- control panel
-Visit RackNerd →
+- backups
+Visit Fornex →
 Hostman
 from $7 a month
 2 vCPU · 2 GB · 60 GB
@@ -1774,6 +1774,16 @@ Very broad geography: more than forty VPS locations plus a separate dedicated-se
 - DDoS protection
 - backups
 Visit is*hosting →
+RackNerd
+from $1.83 a month
+1 vCPU · 1 GB · 20 GB
+USA · Europe · Asia · worldwide
+A very cheap KVM VPS with many US locations plus points in Europe and Asia. Billed a year upfront, hence the low effective price
+- A very low monthly-equivalent price
+- Many US data centers
+- DDoS protection
+- control panel
+Visit RackNerd →
 VPS.org
 from $3.5 a month
 1 vCPU · 2 GB · 10 GB
@@ -1803,16 +1813,6 @@ Focused on performance and dedicated servers for production. A choice for heavy 
 - Dedicated servers available
 - DDoS protection
 Visit DataPacket →
-Fornex
-from €5.5 a month
-1 vCPU · 1 GB · 10 GB
-Europe · worldwide
-A provider with Russian-speaking support and European locations. A range from a simple VPS to dedicated servers.
-- Russian-speaking support with international locations
-- A broad range of services
-- DDoS protection
-- backups
-Visit Fornex →
 Ethernet Servers
 from $6 a month
 1 vCPU · 2 GB · 80 GB
@@ -1863,6 +1863,11 @@ A managed NVMe VPS with server administration handled by the provider. A single 
 - DDoS protection
 - backups
 Visit RoseHosting →
+## Your own ChatGPT on a server
+Need a server for AI rather than for a website? Calculate a local LLM: buy it turnkey or rent a GPU server
+### Local LLM server for your company
+Works like ChatGPT, data never leaves the company. Calculator with price and payback, buy or rent a GPU server
+Calculate my server
 ## What we do
 Buying a server is easy, setting it up right and keeping data safe is the hard part
 ### Selection
@@ -1903,6 +1908,102 @@ Once the CRM is set up, the next step is removing routine. Agents work inside Bi
 ### AI agents for sales, finance and procurement
 They answer clients on WhatsApp, review calls, watch the pipeline and the money. One agent from AED 5,000
 See AI agents
+
+---
+
+Page: https://makebiztechnologies.com/en/local-llm
+Title: Local LLM server in the UAE: your own ChatGPT, price | MakeBiz
+
+Local LLM server
+# Your own ChatGPT on your server
+Works like ChatGPT, but company data never leaves the company and you do not pay a subscription for every employee
+MakeBiz Technologies installs open-weight large language models on a company server in the UAE: an AI chat for staff, a knowledge base on your documents, assistants for sales, calls and documents. A turnkey server with installation starts from $22k, for a company of up to 100 people it is about $78-113k. You can also rent a GPU server from a partner, and we install the AI on it.
+Data stays inside Documents and chats are processed on your server, which helps meet UAE PDPL and EU GDPR data requirements
+Nothing leaves with an employee Chats, contracts and prompts stay in the company system, not in personal ChatGPT accounts
+One purchase instead of subscriptions You pay for the server and setup once, there is no fee for every seat
+## Server calculator
+Pick tasks and team size: the price and payback change right away. Or start from a ready package
+Start Team up to 30 people, pilot from $22k to $30k
+- AI chat and knowledge base
+- Workstation
+- Turnkey installation
+Most popular Business Company of 30-100 people from $78k to $113k
+- Chat, knowledge base, documents
+- CRM assistant
+- 24×7
+Corporate 100-300 people, customer service from $138k to $211k
+- Everything in Business
+- Customer bot
+- ERP integration
+Enterprise 300+ people, no downtime from $372k to $581k
+- Everything in Corporate
+- Data analytics
+- Standby server, 24×7
+Prices include the server, assembly, installation and setup of the package tasks.
+Package «Business»
+from $78k to $113k
+Corporate AI server
+Payback
+Pays back in 7-10 months
+Get exact quote
+## Buy or rent
+By our estimate, renting costs 3.5-5% of the hardware price a month, so owning pays off in about two years. Renting lets you start without buying hardware
+MakeBiz
+### Buy and install
+We pick and deliver the server or set up the one you already have, install the models, connect tasks and integrations and support the system
+- Turnkey server of the right class or your own hardware
+- Installation and setup $3,700
+- Integrations with CRM, ERP, telephony and email
+- Support from $620 a month or 24×7 SLA
+Get a quote
+Partners
+### Rent a GPU server
+Do not want to buy hardware? Rent a dedicated or GPU server from a partner, and we install the AI on it
+is*hosting Dedicated and GPU servers
+Go to is*hosting →
+DataPacket Dedicated servers, GPU servers on request
+Go to DataPacket →
+Partner links: MakeBiz may receive a commission, your price does not change
+Rent and get it installed
+For a regular VPS for a website, bot or app, compare providers and prices at servercalc.com
+## Example calculations
+Typical configurations calculated with the same calculator. These are scenarios, not client projects
+Chat, knowledge base, documents, CRM assistant · CRM and ERP · 24×7
+### Distributor, 50 people
+$81-117k
+Corporate AI server
+- Pays back in10-14 months
+- Subscriptions and API now$1,200 a mo
+- Staff time AI frees up$8,660 a mo
+Chat, knowledge base, sales, call analysis up to 750k minutes · CRM and telephony · no downtime
+### Call center, 200 people
+$319-508k
+AI cluster of 3 servers
+- Pays back in13-20 months
+- Subscriptions and API now$4,850 a mo
+- Staff time AI frees up$21,650 a mo
+Chat, knowledge base, documents, developer help, data analytics · ERP · high quality
+### Manufacturing, 300 people
+$180-271k
+High-load AI cluster
+- Pays back in5-8 months
+- Subscriptions and API now$4,500 a mo
+- Staff time AI frees up$32,480 a mo
+## Questions and answers
+**Which models do you install?**
+Open-weight models that run on your own server: families such as Llama, Qwen, Mistral and Gemma for chat and documents, Whisper-class models for speech. We pick the model for the task and the hardware and switch to better versions as they come out.
+**Do I need a GPU?**
+For a team, yes: models answer fast only on graphics cards with enough memory, from one 32 GB card in the smallest configuration to four 96 GB cards in the largest. The calculator picks the server class from A to F for your load.
+**What about updates?**
+Updates of models and software are part of support: with “Help” and “24×7 SLA” we install new versions after checking them on your tasks, with “Self” you get instructions and monitoring on request.
+**Can you install it on a rented server?**
+Yes. Rent a dedicated or GPU server from a partner (is*hosting, DataPacket) or from your own provider, and we install and set up the AI on it. In the calculator choose “Rent” to see the monthly cost.
+**How long does the launch take?**
+It depends on hardware delivery and on the number of tasks and integrations. On a server that is already available we start the installation right after the technical meeting. The exact schedule comes with the quote.
+**What is included in support?**
+Three options a month: “Self” $620 (monitoring on request), “Help” $1,480 (updates and assistance), “24×7 SLA” $3,090 (on-call team and response times).
+**How is the price calculated?**
+Server of the chosen class with assembly and test, installation $3,700, setup of each task and integrations; for “No downtime” a standby server is added. Services are shown as a range. Monthly costs are support and, if you rent, the rent. Prices as of November 2026, the exact quote follows a technical meeting.
 
 ---
 

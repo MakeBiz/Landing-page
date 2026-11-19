@@ -28,6 +28,7 @@ Key facts:
 - [AI sales head](https://makebiztechnologies.com/en/ai-agents/rop): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan
 - [Call speech analytics](https://makebiztechnologies.com/en/ai-agents/zvonki): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes
 - [HR agent](https://makebiztechnologies.com/en/ai-agents/hr), [procurement agent](https://makebiztechnologies.com/en/ai-agents/zakupki), [marketing agent](https://makebiztechnologies.com/en/ai-agents/marketing), [finance agent](https://makebiztechnologies.com/en/ai-agents/finansy), [liaison agent](https://makebiztechnologies.com/en/ai-agents/svyaznoy)
+- [Local LLM server](https://makebiztechnologies.com/en/local-llm): private ChatGPT on the company server, data stays inside, no per-seat subscriptions. Turnkey packages Start $22-30k, Business $78-113k, Corporate $138-211k, Enterprise $372-581k (USD, November 2026); or rent a GPU server from partners (is*hosting, DataPacket) and MakeBiz installs the AI; calculator with payback
 
 ## Bitrix24 by task and industry
 

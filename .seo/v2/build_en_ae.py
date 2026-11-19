@@ -1212,7 +1212,9 @@ vps_body = hero('Servers and VPS', 'VPS and servers <span>for business in the UA
     f'MakeBiz Technologies helps UAE companies choose a VPS from vetted providers ({VPS_N} on the list, with locations in the UAE, Europe, the US and Asia), deploys on-premise Bitrix24, websites and AI agents on it and supports the server. Plans{(" from " + VPS_FROM + " a month") if VPS_FROM else ""} per the servercalc.com catalogue, setup work AED 200 per hour.',
     ('#form', 'Pick a server'), ('#providers', 'Providers'), V_BOX,
     [(f'{VPS_N}', 'providers'), ((f'from {VPS_FROM}' if VPS_FROM else 'UAE'), 'a month' if VPS_FROM else 'and other countries'), ('AED 200/h', 'setup'), ('servercalc.com', 'our catalogue')], 'Servers for Bitrix24 and AI agents')
-vps_body += section('Providers', f'The same list and order as in our catalogue <a href="https://servercalc.com/" target="_blank" rel="noopener">servercalc.com</a>. Price of the most affordable plan{(", checked " + VPS_DATE) if VPS_DATE else ""}. Affiliate links, your price does not change', vps_cards(VPS), id_='providers')
+vps_body += section('Providers', f'The same list and order as in our catalogue <a href="https://servercalc.com/?utm_source=makebiz&utm_medium=site&utm_campaign=vps" target="_blank" rel="noopener">servercalc.com</a>. Price of the most affordable plan{(", checked " + VPS_DATE) if VPS_DATE else ""}. Affiliate links, your price does not change', vps_cards(VPS), id_='providers')
+vps_body += section('Your own ChatGPT on a server', 'Need a server for AI rather than for a website? Calculate a local LLM: buy it turnkey or rent a GPU server',
+    f'<div class="cross"><div><h3>Local LLM server for your company</h3><p>Works like ChatGPT, data never leaves the company. Calculator with price and payback, buy or rent a GPU server</p></div><a class="btn" href="{U("/local-llm")}">Calculate my server</a></div>', tone='dark')
 vps_body += section('What we do', 'Buying a server is easy, setting it up right and keeping data safe is the hard part', cards([
     ('Selection', 'We count users and load, choose the provider, country and plan without overpaying'),
     ('Deployment', 'We install on-premise Bitrix24, a website, databases or AI agents and set up SSL and email'),
@@ -1227,6 +1229,9 @@ page('/vps', 'vps', 'VPS and servers for business in the UAE: selection and setu
     'vps', vps_body, [service_ld('VPS selection and setup', 'VPS selection, Bitrix24 and AI agent deployment, server support', '/vps', 200),
         {"@type": "ItemList", "name": "VPS providers", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": d['name'], "url": d['href']} for i, d in enumerate(VPS)]}],
     [('/', 'Home'), ('/vps', 'Servers and VPS')], vps_faq)
+
+# ---------- LOCAL LLM (/en/local-llm): calculator, buy or rent, partners
+LLM_PY = 'en'; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landing_llm.py'), encoding='utf-8').read())
 
 # ---------- ABOUT
 ab_faq = [

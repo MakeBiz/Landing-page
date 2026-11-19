@@ -1310,7 +1310,9 @@ vps_body = hero('Серверы и VPS', 'VPS и серверы <span>для б�
     f'MakeBiz Technologies помогает компаниям в ОАЭ выбрать VPS у проверенных провайдеров ({VPS_N} в списке, есть площадки в ОАЭ, Европе, США и Азии), разворачивает на нём коробочный Битрикс24, сайты и ИИ-агентов и сопровождает сервер. Тарифы{(" от " + VPS_FROM + " в месяц") if VPS_FROM else ""} по данным каталога servercalc.com, работы по настройке 200 AED в час.',
     ('#form', 'Подобрать сервер'), ('#providers', 'Провайдеры'), V_BOX,
     [(f'{VPS_N}', 'провайдеров'), ((f'от {VPS_FROM}' if VPS_FROM else 'ОАЭ'), 'в месяц' if VPS_FROM else 'и другие страны'), ('200 AED/ч', 'настройка'), ('servercalc.com', 'наш каталог')], 'Серверы для Битрикс24 и ИИ-агентов')
-vps_body += section('Провайдеры', f'Тот же список и порядок, что в нашем каталоге <a href="https://servercalc.com/" target="_blank" rel="noopener">servercalc.com</a>. Цена самого доступного тарифа{(", проверено " + VPS_DATE) if VPS_DATE else ""}. Ссылки партнёрские, для вас цена не меняется', vps_cards(VPS), id_='providers')
+vps_body += section('Провайдеры', f'Тот же список и порядок, что в нашем каталоге <a href="https://servercalc.com/?utm_source=makebiz&utm_medium=site&utm_campaign=vps" target="_blank" rel="noopener">servercalc.com</a>. Цена самого доступного тарифа{(", проверено " + VPS_DATE) if VPS_DATE else ""}. Ссылки партнёрские, для вас цена не меняется', vps_cards(VPS), id_='providers')
+vps_body += section('Свой ChatGPT на сервере', 'Нужен сервер под ИИ, а не под сайт? Посчитайте локальную нейросеть: купить под ключ или арендовать GPU-сервер',
+    f'<div class="cross"><div><h3>Локальная нейросеть для компании</h3><p>Работает как ChatGPT, данные не покидают компанию. Калькулятор с ценой и окупаемостью, покупка или аренда GPU-сервера</p></div><a class="btn" href="{U("/local-llm")}">Рассчитать сервер</a></div>', tone='dark')
 vps_body += section('Что делаем мы', 'Сервер купить легко, сложнее правильно его настроить и не потерять данные', cards([
     ('Подбор', 'Считаем пользователей и нагрузку, выбираем провайдера, страну и тариф без переплаты'),
     ('Развёртывание', 'Ставим коробочный Битрикс24, сайт, базы данных или ИИ-агентов, настраиваем SSL и почту'),
@@ -1325,6 +1327,9 @@ built.append(page('/vps', 'vps', 'VPS и серверы для бизнеса в
     'vps', vps_body, [service_ld('Подбор и настройка VPS', 'Подбор VPS, развёртывание Битрикс24 и ИИ-агентов, сопровождение сервера', '/vps', 200),
         {"@type": "ItemList", "name": "Провайдеры VPS", "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": d['name'], "url": d['href']} for i, d in enumerate(VPS)]}],
     [('/', 'Главная'), ('/vps', 'Серверы и VPS')], vps_faq))
+
+# ---------- ЛОКАЛЬНАЯ НЕЙРОСЕТЬ (/local-llm): калькулятор, купить или арендовать, партнёры
+LLM_PY = 'ru'; exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'landing_llm.py'), encoding='utf-8').read())
 
 # ---------- О КОМПАНИИ
 ab_faq = [

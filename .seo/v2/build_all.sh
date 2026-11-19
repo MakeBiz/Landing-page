@@ -9,7 +9,7 @@ set -e
 V2="$(cd "$(dirname "$0")" && pwd)"; SITE="$(cd "$V2/../.." && pwd)"
 MODE=${1:-live}
 if [ "$MODE" = preview ]; then OUTD=v2; B=/v2; PV=1; else OUTD=site-v2; B=; PV=0; fi
-VER=${MB_V:-$(cat "$V2/site-base.css" "$V2/dark_uae.css" "$V2/site-src.js" "$V2/bg_beams.js" "$V2/make_site_ae.py" "$V2/make_site_en_ae.py" | cksum | cut -c1-8)}
+VER=${MB_V:-$(cat "$V2/site-base.css" "$V2/dark_uae.css" "$V2/site-src.js" "$V2/bg_beams.js" "$V2/make_site_ae.py" "$V2/make_site_en_ae.py" "$V2/llm/llm.css" "$V2/llm/engine.js" "$V2/llm/ui.js" | cksum | cut -c1-8)}
 export MB_V=$VER MB_BASE=$B MB_OUT=$OUTD MB_PREVIEW=$PV MB_SITE="$SITE"
 # каталог провайдеров VPS из кабинета MakeBiz (как у servercalc.com): кабинет не ответил, остаётся прошлый файл
 if curl -s -m 15 -f "https://makebiz-makebiz-platform-3628.twc1.net/catalog/servercalc-com.json" -o "$V2/data/.vps-catalog.tmp" && grep -q '"hidden"' "$V2/data/.vps-catalog.tmp"; then cat "$V2/data/.vps-catalog.tmp" > "$V2/data/vps-catalog.json"; fi
@@ -19,7 +19,9 @@ D="$SITE/$OUTD"; mkdir -p "$D/assets"
 T=$(mktemp -d)
 python3 "$V2/make_site_ae.py" "$V2/site-src.js" "$T/ru.js" >/dev/null
 python3 "$V2/make_site_en_ae.py" "$T/ru.js" "$T/en.js" >/dev/null
-cat "$V2/site-base.css" "$V2/dark_uae.css" > "$D/assets/site.css"
+cat "$V2/site-base.css" "$V2/dark_uae.css" "$V2/llm/llm.css" > "$D/assets/site.css"
+# калькулятор локальной нейросети (/local-llm): движок и интерфейс, язык задаёт страница (LLM_LANG)
+cat "$V2/llm/engine.js" "$V2/llm/ui.js" > "$D/assets/llm.js"
 cat "$T/ru.js" "$V2/bg_beams.js" > "$D/assets/site.js"
 cat "$T/en.js" "$V2/bg_beams.js" > "$D/assets/site-en.js"
 if [ "$MODE" = live ]; then python3 "$V2/make_seo_ae.py" "$SITE" "$D"; fi

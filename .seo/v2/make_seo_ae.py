@@ -14,7 +14,7 @@ SITE = 'https://makebiztechnologies.com'
 AG = ['rop', 'svyaznoy', 'zvonki', 'hr', 'zakupki', 'marketing', 'finansy']
 CASES = ['cdek-b2b', 'unilin-crm', 'haval-vector', 'performia-crm', 'apartika-crm']
 NEW = ['/', '/bitrix', '/bitrix-support', '/bitrix-messengers', '/bitrix-integrations', '/bitrix-licenses', '/bitrix-korobka', '/bi-analitika', '/ceny',
-       '/ai-agents'] + ['/ai-agents/' + a for a in AG] + ['/keysy'] + ['/keysy/' + c for c in CASES] + ['/vps', '/o-kompanii', '/partners', '/contacts']
+       '/ai-agents'] + ['/ai-agents/' + a for a in AG] + ['/keysy'] + ['/keysy/' + c for c in CASES] + ['/vps', '/local-llm', '/o-kompanii', '/partners', '/contacts']
 from landings_ae_list import LANDINGS_AE
 NEW += [x[0] for x in LANDINGS_AE]
 from journal_src import JOURNAL, jpath
@@ -70,6 +70,8 @@ import xml.dom.minidom; xml.dom.minidom.parseString(sm.encode())
 open(os.path.join(NEWD, 'sitemap.xml'), 'w', encoding='utf-8').write(sm)
 
 # ---------- llms.txt (английский, как раньше: его читают ассистенты по всему миру)
+import json, subprocess
+LLMF = json.loads(subprocess.run(['node', os.path.join(HERE, 'llm', 'figures.mjs'), 'en'], capture_output=True, text=True, check=True).stdout)  # цены /local-llm тем же движком
 def U(p): return SITE + en_path(p)
 L = ['# MakeBiz Technologies', '',
      '> MakeBiz Technologies (legal entity MakeBiz Technologies FZE LLC) is an IT integrator in the UAE: Bitrix24 CRM implementation and support, AI agents and BI analytics for companies in Dubai and across the Emirates. The website is available in Russian (main version) and English, all prices are in UAE dirhams (AED).', '',
@@ -93,7 +95,8 @@ L = ['# MakeBiz Technologies', '',
      f'- [AI agents for business]({U("/ai-agents")}): one agent from AED 5,000; packages Start AED 5,000, Business AED 10,000, Holding priced individually; maintenance 10% of the implementation cost per month; demo free',
      f'- [AI sales head]({U("/ai-agents/rop")}): drafts replies, takes over a chat after 15 minutes of silence, reviews manager chats, tracks the sales plan',
      f'- [Call speech analytics]({U("/ai-agents/zvonki")}): every call scored by your script; AED 1,000 a month for 5,000 minutes, AED 1,700 for 10,000 minutes, from AED 4,000 for 30,000+ minutes',
-     f'- [HR agent]({U("/ai-agents/hr")}), [procurement agent]({U("/ai-agents/zakupki")}), [marketing agent]({U("/ai-agents/marketing")}), [finance agent]({U("/ai-agents/finansy")}), [liaison agent]({U("/ai-agents/svyaznoy")})', '']
+     f'- [HR agent]({U("/ai-agents/hr")}), [procurement agent]({U("/ai-agents/zakupki")}), [marketing agent]({U("/ai-agents/marketing")}), [finance agent]({U("/ai-agents/finansy")}), [liaison agent]({U("/ai-agents/svyaznoy")})',
+     f'- [Local LLM server]({U("/local-llm")}): private ChatGPT on the company server, data stays inside, no per-seat subscriptions. Turnkey packages ' + ', '.join(f'{p["n"]} {p["short"]}' for p in LLMF['packs']) + f' (USD, {LLMF["cfg"]["priceDate"]}); or rent a GPU server from partners (is*hosting, DataPacket) and MakeBiz installs the AI; calculator with payback', '']
 L += ['## Bitrix24 by task and industry', ''] + [f'- [{t}]({U(p)}): {s}' for p, _, _, t, s in LANDINGS_AE] + ['']
 SOL_EN = solutions('en')
 if SOL_EN:
