@@ -254,9 +254,11 @@
     {
       "key": "ai-agent-vs-operator-cost",
       "cat": "ai",
-      "status": "planned",
+      "status": "used",
       "angle": "Что дешевле на входящих обращениях: оператор в штате или ИИ-агент от 5 000 AED",
-      "query": "ии агент вместо оператора"
+      "query": "ии агент вместо оператора",
+      "used_slug": "ii-agent-ili-operator-chto-deshevle",
+      "used_date": "2026-11-23"
     },
     {
       "key": "portal-handover-docs",
