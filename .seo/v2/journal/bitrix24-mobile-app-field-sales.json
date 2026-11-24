@@ -1,0 +1,114 @@
+{
+ "slug": "bitrix24-mobile-app-field-sales",
+ "date": "2026-11-24",
+ "rubric_ru": "Битрикс24",
+ "rubric_en": "Bitrix24",
+ "ru": {
+  "title": "Мобильный Битрикс24 для выездных продаж в ОАЭ | MakeBiz",
+  "desc": "Мобильное приложение Битрикс24 для торговых представителей в ОАЭ: что умеет, что настроить в портале и сколько стоит. Приложение бесплатное, тариф от 180 AED.",
+  "h1": "Мобильное приложение Битрикс24 для выездных продаж в ОАЭ",
+  "crumb": "Мобильный Битрикс24 для выездных продаж",
+  "lead": "Торговые представители, брокеры и менеджеры по ключевым клиентам в ОАЭ проводят день в машине и в офисах клиентов, а не за компьютером. Если CRM у них только на ноутбуке, итоги встреч доходят до системы через день или не доходят вовсе.",
+  "answer": "Мобильное приложение Битрикс24 бесплатное для iOS и Android, а его возможности задаёт тариф портала: облачный Битрикс24 в ОАЭ стоит от 180 AED в месяц при оплате за год. С телефона менеджер видит историю клиента, звонит из карточки, меняет стадию сделки, ставит следующее дело и отправляет счёт. Чтобы команда в поле работала в CRM, карточку и стадии настраивают под телефон: в рамках настройки от 10 000 AED или за несколько часов по 200 AED в работающем портале.",
+  "body": "<h2>Приложение Битрикс24 бесплатное, а возможности задаёт тариф</h2>\n<p>Мобильное приложение Битрикс24 есть для iOS и Android, его ставят из App Store, Google Play и Huawei AppGallery. Сам Битрикс24 пишет, что приложение бесплатно для любого числа пользователей, но набор функций в нём зависит от тарифа портала. Если функции нет в тарифе, её нет и в приложении.</p>\n<p>Для выездной команды это значит, что выбор начинается с лицензии. Облачный Basic за 180 AED в месяц при оплате за год рассчитан на 5 пользователей, Standard за 364 AED на 50, Professional за 731 AED на 100 и добавляет автоматизацию продаж. Как посчитать тариф под свою команду, мы разобрали в статье <a href=\"/journal/bitrix24-plan-10-25-50-users\">про тарифы на 10, 25 и 50 пользователей</a>, все цены вендора в дирхамах на странице <a href=\"/bitrix-licenses\">лицензий Битрикс24</a>.</p>\n<h2>Менеджер в поле делает в телефоне шесть вещей</h2>\n<p>Мы сверили описание приложения на bitrix24.com и в справке Битрикс24 24 ноября 2026 года. Ниже то, что там заявлено, и то, что мы настраиваем в портале, чтобы это работало у торговых представителей.</p>\n<table><thead><tr><th>Задача в поле</th><th>Что есть в приложении</th><th>Что настроить в портале</th></tr></thead><tbody>\n<tr><td><b>Подготовиться к визиту</b></td><td>Карточка клиента и вся история в ленте</td><td>Короткая карточка: контакт, адрес, последняя сделка, долг</td></tr>\n<tr><td><b>Назначить встречу</b></td><td>Встреча из сделки или лида, синхронизация с Google и Apple Calendar</td><td>Тип дела «Визит» и обязательный итог после встречи</td></tr>\n<tr><td><b>Позвонить клиенту</b></td><td>Звонок из карточки, история звонков сохраняется автоматически</td><td>Телефония компании, чтобы звонок записался и лёг в сделку</td></tr>\n<tr><td><b>Записать итог</b></td><td>Смена стадии, комментарий, следующее дело</td><td>Стадии, понятные с первого взгляда, без лишних полей</td></tr>\n<tr><td><b>Выставить счёт</b></td><td>Счёт из сделки в одно касание, отправка по email или SMS, ссылка на оплату</td><td>Шаблон счёта с TRN и VAT 5%, каталог товаров</td></tr>\n<tr><td><b>Отметить начало дня</b></td><td>Отметка с временем, местом и фото</td><td>Правило, кто и когда отмечается</td></tr>\n</tbody></table>\n<p class=\"note\">Возможности по bitrix24.com/tools/crm/mobile-crm.php и справке Битрикс24 «Mobile app: interface and features», сверено 24 ноября 2026. Набор функций зависит от тарифа.</p>\n<p>В приложении есть и сканирование штрихкодов для склада, а CRM оптовой компании целиком мы описали в статье <a href=\"/journal/b2b-trading-crm\">про CRM для B2B-торговли</a>.</p>\n<h2>Карточку сделки для телефона сокращают до главного</h2>\n<p>Главная причина, по которой выездные менеджеры не пользуются CRM, не в приложении, а в карточке. Если в сделке 30 полей и половина обязательные, на парковке у клиента их никто заполнять не будет. Для поля мы делаем отдельный набор: в карточке на первом экране только то, что нужно до и после визита, а реквизиты для счёта, условия оплаты и документы заполняет офис или подтягивает интеграция с учётом.</p>\n<p>Второе правило: каждая стадия сделки должна читаться без пояснений. «Визит проведён», «Образцы переданы», «Ждём заказ» понятны менеджеру в машине, а «Квалификация 2» нет. И третье: после визита у сделки всегда есть следующее дело с датой. Именно по этому полю руководитель видит, что клиента не забыли.</p>\n<!--cta-->\n<h2>Звонки и WhatsApp с телефона должны попадать в CRM</h2>\n<p>В ОАЭ клиент чаще пишет, чем звонит, и выездной менеджер отвечает ему с того же телефона, на котором стоит приложение. Если переписка идёт в личном WhatsApp, компания не видит, что обещали клиенту. Поэтому WhatsApp подключают к Битрикс24 через открытую линию, тогда диалог виден в карточке и в мобильном чате. Подключение стоит 500 AED, подписка провайдера отдельно, подробности на странице <a href=\"/bitrix-messengers\">мессенджеров в Битрикс24</a>.</p>\n<p>Со звонками так же. Звонок из карточки сохраняется в истории, а запись разговора ложится в сделку, если звонок идёт через телефонию компании, подключённую к порталу. Звонки с личной SIM-карты мимо CRM лучше запретить правилом. Как предупреждать клиента о записи по закону ОАЭ, разобрано в статье <a href=\"/journal/call-recording-consent-uae\">о записи звонков и согласии</a>, а схемы подключения линии на странице <a href=\"/bitrix-telephony\">телефонии в Битрикс24</a>.</p>\n<h2>Руководитель видит работу в поле по делам и стадиям</h2>\n<p>Отчёт «где был и что сделал» в общем чате заменяют данные CRM. Руководитель открывает список дел на день: какие визиты запланированы, какие закрыты с итогом, по каким сделкам нет следующего шага. Если отметка начала дня включена, видно и время старта. Права настраивают так, чтобы менеджер видел своих клиентов, а руководитель группы всю группу, об этом подробно в новости <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">про права доступа в CRM</a>.</p>\n<p>Так работает и наш реальный проект: в <a href=\"/keysy/unilin-crm\">кейсе Unilin</a> разъездные менеджеры ведут регионы и торговые точки с телефона на коробочном Битрикс24, а руководство смотрит рынок и точки в дашбордах. Проект российский, схема для ОАЭ та же.</p>\n<h2>Что приложение не заменяет</h2>\n<p>В описании приложения на bitrix24.com мы не нашли офлайн-режима и отслеживания маршрута в течение дня. Есть отметка начала дня с местом и фото, но это не трекинг каждого визита. Если команда работает там, где пропадает связь, итог визита вносят сразу после выезда, и правило «итог в тот же день» прописывают в регламенте. Сложные документы, сметы и согласования удобнее оставить офису: в приложении их можно открыть и согласовать, но собирать с телефона неудобно.</p>\n<h2>Сколько стоит запустить мобильную работу</h2>\n<p>Само приложение бесплатное, платите за лицензию и настройку. Короткая карточка, стадии, тип дела «Визит», шаблон счёта и права входят в стандартную настройку CRM Битрикс24 от 10 000 AED. В работающем портале это обычно несколько часов по 200 AED. Подключение WhatsApp 500 AED, обучение выездной команды по ставке 200 AED в час, о нём на странице <a href=\"/bitrix-training\">обучения Битрикс24</a>. Все цены на странице <a href=\"/ceny\">цен</a>.</p>\n<h2>Условный пример: дистрибьютор с шестью торговыми представителями</h2>\n<p>Условная компания в Дубае продаёт товары в магазины по всем эмиратам. Шесть торговых представителей записывают визиты в блокнот и пересылают заказы в WhatsApp офис-менеджеру. После настройки у каждого в телефоне список визитов на день, короткая карточка точки и кнопка звонка. Итог визита это стадия и следующее дело, заказ уходит счётом из сделки со ставкой VAT 5%, а переписка с магазинами идёт через подключённый WhatsApp. Восемь сотрудников вместе с офисом укладываются в тариф Standard за 364 AED в месяц. Руководитель утром смотрит не чат, а список сделок без следующего дела.</p>",
+  "mid": [
+   "Настроим Битрикс24 для работы в поле",
+   "Короткая карточка, стадии, визиты, звонки и WhatsApp в телефоне менеджера. Настройка от 10 000 AED или по 200 AED в час",
+   "Обсудить выездные продажи"
+  ],
+  "faq": [
+   [
+    "Сколько стоит мобильное приложение Битрикс24?",
+    "Приложение бесплатное для iOS и Android. Платите за тариф портала: облачный Битрикс24 от 180 AED в месяц при оплате за год, и набор функций в приложении зависит от этого тарифа."
+   ],
+   [
+    "Можно ли работать со сделками с телефона?",
+    "Да. В приложении создают и редактируют сделки, меняют стадии, планируют дела, смотрят историю клиента и выставляют счета. Чтобы это было удобно, карточку для телефона сокращают до главного."
+   ],
+   [
+    "Записываются ли звонки из мобильного приложения?",
+    "История звонков из карточки сохраняется автоматически. Запись разговора попадает в сделку, если звонок идёт через телефонию компании, подключённую к Битрикс24."
+   ],
+   [
+    "Работает ли приложение без интернета?",
+    "В описании приложения на bitrix24.com офлайн-режим не заявлен. Если связь на объектах пропадает, итог визита вносят сразу после выезда и прописывают это правилом."
+   ],
+   [
+    "Видит ли руководитель, где менеджер?",
+    "В приложении есть отметка начала дня с временем, местом и фото. Отслеживания маршрута в течение дня в описании нет, поэтому работу в поле контролируют по делам и стадиям в CRM."
+   ]
+  ],
+  "cta": [
+   "Разберём, как ваша команда работает в поле",
+   "Напишите, сколько у вас выездных менеджеров и как сейчас попадают в CRM итоги встреч. Предложим карточку, стадии и порядок работы с телефона"
+  ],
+  "related": [
+   [
+    "/journal/b2b-trading-crm",
+    "CRM для B2B и торговой компании в ОАЭ: длинная сделка и учёт"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Какой тариф Битрикс24 выбрать на 10, 25 или 50 пользователей"
+   ],
+   [
+    "/journal/call-recording-consent-uae",
+    "Запись звонков в отделе продаж в ОАЭ: согласие и правила"
+   ]
+  ]
+ },
+ "en": {
+  "title": "Bitrix24 mobile app for field sales in the UAE | MakeBiz",
+  "desc": "The Bitrix24 mobile app for field sales reps in the UAE: what it does, what to set up in the portal and what it costs. The app is free, plans from AED 180.",
+  "h1": "Bitrix24 mobile app for field sales in the UAE",
+  "crumb": "Bitrix24 mobile app for field sales",
+  "lead": "Sales reps, brokers and key account managers in the UAE spend the day in cars and client offices. If the CRM only lives on a laptop, meeting outcomes arrive late or never.",
+  "answer": "The Bitrix24 mobile app is free on iOS and Android, and what it can do depends on your portal plan: cloud Bitrix24 in the UAE starts at AED 180 a month on annual billing. From the phone, a rep can see the client history, call from the record, move the deal stage, plan the next activity and send an invoice. The record and stages are set up for the phone as part of a setup from AED 10,000, or in a few hours at AED 200 an hour in a live portal.",
+  "body": "<h2>The Bitrix24 app is free, your plan sets what it can do</h2>\n<p>The Bitrix24 mobile app runs on iOS and Android and installs from the App Store, Google Play and Huawei AppGallery. Bitrix24 says it is free for unlimited users, but the features inside depend on your portal plan: if a feature is not in your plan, it is not in the app either.</p>\n<p>For a field team, that means the decision starts with the licence. Cloud Basic at AED 180 a month on annual billing covers 5 users, Standard at AED 364 covers 50, and Professional at AED 731 covers 100 and adds sales automation. Sizing is covered in the guide to <a href=\"/journal/bitrix24-plan-10-25-50-users\">plans for 10, 25 and 50 users</a>, vendor prices in dirhams on the <a href=\"/bitrix-licenses\">Bitrix24 licences</a> page.</p>\n<h2>A field rep needs six things on the phone</h2>\n<p>What Bitrix24 lists for the app (checked 24 November 2026) and what we configure in the portal:</p>\n<table><thead><tr><th>Field task</th><th>What the app offers</th><th>What to set up in the portal</th></tr></thead><tbody>\n<tr><td><b>Prepare for a visit</b></td><td>Client record with full history in the timeline</td><td>A short record: contact, address, last deal, outstanding balance</td></tr>\n<tr><td><b>Book a meeting</b></td><td>Meeting from a deal or lead, synced with Google and Apple Calendar</td><td>A &quot;Visit&quot; activity type with a required outcome</td></tr>\n<tr><td><b>Call the client</b></td><td>Call from the record, call history saved automatically</td><td>Company telephony, so the call is recorded and attached to the deal</td></tr>\n<tr><td><b>Log the outcome</b></td><td>Change stage, add a comment, plan the next activity</td><td>Stages that read at a glance, no extra fields</td></tr>\n<tr><td><b>Send an invoice</b></td><td>One-tap invoice from the deal, sent by email or SMS, payment link</td><td>Invoice template with TRN and 5% VAT, product catalogue</td></tr>\n<tr><td><b>Check in for the day</b></td><td>Check-in with time, location and a photo</td><td>A rule for who checks in and when</td></tr>\n</tbody></table>\n<p class=\"note\">Features per bitrix24.com/tools/crm/mobile-crm.php and the Bitrix24 help article &quot;Mobile app: interface and features&quot;, checked 24 November 2026. Available features depend on the plan.</p>\n<p>The app can also scan barcodes for stock operations; the full CRM for wholesale is in the guide to <a href=\"/journal/b2b-trading-crm\">CRM for B2B trading</a>.</p>\n<h2>The deal record is trimmed down for the phone</h2>\n<p>Field reps skip the CRM because of the record, not the app. If a deal has 30 fields and half are required, nobody fills them in from a car park in Al Quoz. For field work the first screen holds only what matters before and after a visit; billing details and documents are handled by the office or the accounting integration.</p>\n<p>Every stage should read without a manual: &quot;Visit done&quot; and &quot;Waiting for order&quot; are clear between meetings, &quot;Qualification 2&quot; is not. And after a visit, the deal always gets a next activity with a date, which is how a manager sees that no client is forgotten.</p>\n<!--cta-->\n<h2>Calls and WhatsApp from the phone have to land in the CRM</h2>\n<p>In the UAE, clients message more than they call. If a rep chats from a personal WhatsApp, the company has no idea what was promised, so WhatsApp is connected to Bitrix24 through an open channel and the conversation shows up in the client record. Connection is AED 500 plus the provider subscription, see the <a href=\"/bitrix-messengers\">Bitrix24 messengers</a> page.</p>\n<p>A call placed from the record is saved in the history, and the recording lands in the deal when the call goes through company telephony connected to the portal. Calls from a personal SIM are best ruled out by policy. How to notify clients about recording under UAE law is explained in the guide to <a href=\"/journal/call-recording-consent-uae\">call recording and consent</a>, and line setup options are on the <a href=\"/bitrix-telephony\">Bitrix24 telephony</a> page.</p>\n<h2>Managers see field work through activities and stages</h2>\n<p>The &quot;where I went today&quot; message in a group chat is replaced by CRM data: the day&#39;s visits, which are closed with an outcome, which deals have no next step. Reps see their own clients and team leads their whole team, as explained in our news on <a href=\"/news/prava-dostupa-v-crm-kto-chto-vidit\">CRM access rights</a>.</p>\n<p>In our <a href=\"/keysy/unilin-crm\">Unilin case</a>, travelling sales managers run regions and retail points from the phone on on-premise Bitrix24, and leadership follows the outlets in dashboards. The project is in Russia, but the field setup carries over to the UAE.</p>\n<h2>What the app does not replace</h2>\n<p>We found no offline mode and no route tracking through the day in the app description on bitrix24.com. The start-of-day check-in is not tracking of every visit. Where signal drops, the outcome goes in right after leaving the site, under a &quot;same-day outcome&quot; rule. Complex quotes and documents are better built in the office; the app is fine for opening and approving them.</p>\n<h2>What it costs to get the field team running</h2>\n<p>The app is free; you pay for the licence and setup. The short record, stages, the &quot;Visit&quot; activity, the invoice template and access rights are part of a standard Bitrix24 setup from AED 10,000. In a portal that is already live, it is usually a few hours at AED 200 an hour. WhatsApp connection is AED 500, and training the field team runs at AED 200 an hour, see the <a href=\"/bitrix-training\">Bitrix24 training</a> page. All prices are on the <a href=\"/ceny\">pricing</a> page.</p>\n<h2>Illustrative example: a distributor with six sales reps</h2>\n<p>Picture a Dubai company supplying shops across the emirates. Six reps log visits in a notebook and send orders to the office on WhatsApp. After the setup, each rep has the day&#39;s visits, a short outlet record and a call button on the phone. An outcome is a stage plus a next activity, and the order goes out as an invoice from the deal with 5% VAT. Eight users including the office fit into the Standard plan at AED 364 a month. In the morning, the manager checks the list of deals with no next activity instead of scrolling the chat.</p>",
+  "mid": [
+   "Bitrix24 set up for your field team",
+   "Short record, stages, visits, calls and WhatsApp in the mobile app. Setup from AED 10,000 or AED 200 an hour",
+   "Discuss field sales"
+  ],
+  "faq": [
+   [
+    "How much does the Bitrix24 mobile app cost?",
+    "The app is free on iOS and Android. You pay for the portal plan, with cloud Bitrix24 from AED 180 a month on annual billing, and the features available in the app depend on that plan."
+   ],
+   [
+    "Can reps work with deals from the phone?",
+    "Yes. Reps create and edit deals, change stages, plan activities, view client history and issue invoices. The record is trimmed to the essentials so this stays quick."
+   ],
+   [
+    "Are calls from the mobile app recorded?",
+    "Call history from the record is saved automatically. The recording is attached to the deal when the call goes through company telephony connected to Bitrix24."
+   ],
+   [
+    "Does the app work without internet?",
+    "The app description on bitrix24.com does not mention an offline mode. If signal drops on site, the visit outcome goes in right after leaving, and that is written into the sales policy."
+   ],
+   [
+    "Can a manager see where a rep is?",
+    "The app has a start-of-day check-in with time, location and a photo. Route tracking is not in the description, so field work is managed through activities and stages."
+   ]
+  ],
+  "cta": [
+   "Let us look at how your team works in the field",
+   "Tell us how many field reps you have and how meeting outcomes get into the CRM today. We will suggest a record layout, stages and a mobile workflow"
+  ],
+  "related": [
+   [
+    "/journal/b2b-trading-crm",
+    "CRM for a B2B trading company in the UAE: long deals and accounting"
+   ],
+   [
+    "/journal/bitrix24-plan-10-25-50-users",
+    "Which Bitrix24 plan for 10, 25 or 50 users"
+   ],
+   [
+    "/journal/call-recording-consent-uae",
+    "Call recording in UAE sales teams: consent and rules"
+   ]
+  ]
+ }
+}

@@ -3293,24 +3293,16 @@ Title: MakeBiz Journal: Bitrix24 and CRM guides for the UAE
 MakeBiz Journal
 # Journal: guides to Bitrix24 and CRM in the UAE
 Short answers to the questions companies ask before a CRM project in Dubai and across the Emirates: choosing a partner, plans, WhatsApp, processes and data
-The MakeBiz Technologies journal has 29 guides for UAE companies: each opens with a short answer, then a table, a worked example and prices in AED with the date they were checked. New articles come out twice a week, market updates are in the news .
-Real estate Calls Documents Bitrix24 Analytics AI agents Automation Messaging Licences
-## Real estate
-### Sales pipeline stages for Dubai brokers: off-plan and secondary
-Sales pipeline stages for Dubai brokers, off-plan and secondary: fields, documents, DLD deadlines. Off-plan goes into Oqood within 90 days. Setup from AED 10,000.
-17 November 2026 · 7 min
-## Calls
-### Call recording in UAE sales teams: consent and rules
-Recording sales calls in the UAE: what Article 431 of Law 31/2021 and the PDPL say, how to tell clients and store recordings in CRM. Speech analytics from AED 1,000.
-17 November 2026 · 7 min
-## Documents
-### Comparing supplier quotes: criteria and a comparison table
-How to compare supplier quotes in the UAE: a 9-column template, criteria weights and one basis in AED. Our procurement agent builds the table, AED 5,000.
-11 November 2026 · 7 min
-### AI invoice and document recognition: what it does and where it stops
-AI recognition for invoices, quotes and price lists: OCR versus Document AI, PDFs and scans, where a person stays in the loop. One agent AED 5,000, free demo.
-11 November 2026 · 7 min
+The MakeBiz Technologies journal has 31 guides for UAE companies: each opens with a short answer, then a table, a worked example and prices in AED with the date they were checked. New articles come out twice a week, market updates are in the news .
+Training Bitrix24 Real estate Calls Documents Analytics AI agents Automation Messaging Licences
+## Training
+### Onboarding sales staff to CRM in two weeks
+How to get a new sales rep working in Bitrix24 in 10 working days: the plan, the CRM policy and checks in CRM data. Training at AED 200 an hour.
+24 November 2026 · 7 min
 ## Bitrix24
+### Bitrix24 mobile app for field sales in the UAE
+The Bitrix24 mobile app for field sales reps in the UAE: what it does, what to set up in the portal and what it costs. The app is free, plans from AED 180.
+24 November 2026 · 7 min
 ### CRM for a small business in the UAE: what you need and what it costs
 CRM for a 5 to 10 person UAE business: Bitrix24 from AED 180 a month, WhatsApp, setup from AED 10,000. Your first-year budget in AED, line by line.
 11 November 2026 · 7 min
@@ -3335,6 +3327,21 @@ CRM for a UAE car service centre: bay bookings, vehicle history, WhatsApp servic
 ### How to choose a Bitrix24 partner in the UAE
 Choosing a Bitrix24 partner in the UAE: vendor directory listing, contract and AED invoices, a fixed estimate, access ownership, support. 8 checks and a table.
 10 November 2026 · 7 min
+## Real estate
+### Sales pipeline stages for Dubai brokers: off-plan and secondary
+Sales pipeline stages for Dubai brokers, off-plan and secondary: fields, documents, DLD deadlines. Off-plan goes into Oqood within 90 days. Setup from AED 10,000.
+17 November 2026 · 7 min
+## Calls
+### Call recording in UAE sales teams: consent and rules
+Recording sales calls in the UAE: what Article 431 of Law 31/2021 and the PDPL say, how to tell clients and store recordings in CRM. Speech analytics from AED 1,000.
+17 November 2026 · 7 min
+## Documents
+### Comparing supplier quotes: criteria and a comparison table
+How to compare supplier quotes in the UAE: a 9-column template, criteria weights and one basis in AED. Our procurement agent builds the table, AED 5,000.
+11 November 2026 · 7 min
+### AI invoice and document recognition: what it does and where it stops
+AI recognition for invoices, quotes and price lists: OCR versus Document AI, PDFs and scans, where a person stays in the loop. One agent AED 5,000, free demo.
+11 November 2026 · 7 min
 ## Analytics
 ### Sales forecasting from CRM data
 Sales forecasting from CRM data: stage probabilities, sales cycle, rep forecast and plan on one dashboard. MakeBiz BI from AED 700 a month, 14 days free.
@@ -3391,6 +3398,117 @@ WhatsApp Business API or WhatsApp Web in a CRM for a UAE company: WhatsApp terms
 ### Which Bitrix24 plan for 10, 25 or 50 users
 Bitrix24 plan for a team of 10, 25 or 50 in the UAE: Standard at AED 364 a month for the whole portal, and when you need Professional. bitrix24.ae prices in AED.
 10 November 2026 · 6 min
+
+---
+
+Page: https://makebiztechnologies.com/en/journal/crm-onboarding-sales-staff-two-weeks
+Title: Onboarding sales staff to CRM in two weeks | MakeBiz
+
+Journal · Training
+# Onboarding sales staff to CRM in two weeks
+In the first weeks, a new sales rep works the way the people at the next desk show them. If the CRM feels optional during that time, clients end up in a personal WhatsApp and a notebook, and moving them back later is harder than training it right from day one.
+A new sales rep can be working in the CRM within 10 working days: two days of role-based sessions on your own portal, three days with a mentor on real clients, three days solo with a daily review, and two days for error review and sign-off. At MakeBiz Technologies, corporate Bitrix24 training costs AED 200 an hour, introductory training is part of a standard setup from AED 10,000, and new hires can be trained within a support plan from AED 1,250 a month.
+MakeBiz Technologies · 24 November 2026 · 7 min read
+## The onboarding plan fits into 10 working days
+Two weeks is enough when a new hire learns on your own portal, not a demo: your stages, your fields, your real clients. We split onboarding into four blocks, and each one ends with a check you can see in the CRM itself.
+| Days | What the new rep does | Who helps | What we check in the CRM
+| 1-2 | Role-based session: record, stages, activities, WhatsApp and calls from the CRM | Trainer or portal admin | Created a deal, set an activity, replied to a client from the CRM
+| 3-5 | Handles the first real clients | A mentor from the team | Every deal has a dated next activity
+| 6-8 | Works solo, 10-minute daily review | Team lead | No empty required fields, no chats outside the CRM
+| 9-10 | Error review and sign-off on own deals | Head of sales | The rep's pipeline makes sense without explanation
+MakeBiz Technologies onboarding plan for Bitrix24 sales teams. Timings are a guide: in a complex portal with several pipelines, each block runs longer.
+The first two days run on the company portal, and the session recording stays with you. The next hire starts from the recording, and live hours go to questions. That way you do not retrain from scratch with every new hire.
+## The CRM sales policy is written before the first session
+New reps learn faster when the rules are written down instead of passed on by whoever sits next to them. A sales team CRM policy fits on two or three pages and answers the questions a new hire asks in week one:
+- when a deal is created and which fields are required
+- what each stage means and which event moves a deal into it
+- how to reply on WhatsApp: only through the line connected to the CRM
+- how to call: through company telephony, not a personal number
+- which next activity follows every contact, and by when
+In Dubai we write the policy in English and Russian so the whole mixed team reads the same rules. If WhatsApp is not yet connected to Bitrix24, start there; details are on the Bitrix24 messengers page.
+### An onboarding programme built for your team
+CRM policy in English and Russian, role-based sessions and a recording for future hires. AED 200 an hour
+Get a programme
+## New hires are trained by role and language
+Reps, managers and admins need different things. A rep works with deals, activities, chats and invoices. A manager reads the pipeline, reports and targets, and learns to run a meeting from the CRM. An admin handles users, permissions, fields and automation rules. Put everyone in one session and half the time goes to someone else's role.
+Language works the same way: Dubai sales teams often work in two or three languages, and a mixed group means some people are listening to a translation. We split groups by role and language, online or at your Dubai office. The programme and format are on the Bitrix24 training page. Access rights are set before day one so the new rep sees their own clients and nothing else, as covered in our news on CRM access rights .
+## Progress is checked in CRM data, not in a quiz
+A quiz on the interface shows that someone remembers the buttons, not that they work in the system. In week two, the manager checks three things right in the portal:
+- whether every open deal of the new rep has a dated next activity
+- whether the fields needed for an invoice are filled: the client legal name and TRN
+- whether client chats run through the CRM, or the records are empty while clients message the rep directly
+These checks fit into one report or dashboard, so the manager sees them in a minute. Why empty fields and loosely defined stages later break your reports is covered in the guide on why CRM reports lie . Field reps also get the mobile app walkthrough from the guide to the Bitrix24 mobile app for field sales .
+## Three mistakes that send new hires back to a notebook
+First, training before the portal is set up. People learn one set of stages, a month later the stages change, and they stop trusting the system. Second, no mentor on days 3 to 5, so the first real deals are handled from memory and mistakes surface a month later. Third, a manager who works outside the CRM, asks for status in a chat and wants a spreadsheet report. The new rep quickly learns the CRM is just for show. If the team is also learning to work with AI agents, the role split and error reviews are similar; see the guide to training your team to work with AI agents .
+## What training and ongoing support cost
+Introductory training at launch is part of a standard Bitrix24 CRM setup from AED 10,000. Role-based corporate training is AED 200 an hour. If you hire regularly, onboarding fits better into a support plan: 5 hours for AED 1,250 a month for training and changes, 10 hours for AED 2,300, 20 hours for AED 4,200. See the Bitrix24 support page, and all prices on the pricing page.
+## Illustrative example: four new reps in a month
+Picture a Dubai company growing its sales team from 8 to 12 people: two new hires work in English, two in Russian. The policy already exists in both languages. On days one and two, each pair gets a role-based session in its own language, about 4 hours per group, 8 hours in total. From day three, each new rep has a mentor. In week two, the team lead checks a daily report on deals without a next activity and on empty fields. Sign-off on day ten happens on real deals. The next hire, two months later, starts from the session recording, and questions are handled within the support plan hours.
+## Questions and answers
+**How long does it take a new rep to start working in the CRM?**
+In a portal that is already set up, about 10 working days: two days of sessions, a week with a mentor and daily review, then error review and sign-off on real deals.
+**How much does Bitrix24 training for a sales team cost?**
+Corporate training is AED 200 an hour. Introductory training is part of a standard setup from AED 10,000, and new hires can be trained within a support plan from AED 1,250 a month.
+**What language is the training in?**
+English or Russian. We split groups by role and language, and the CRM policy comes in both languages.
+**How do you know a new rep is really working in the CRM?**
+From portal data: every open deal has a next activity, required fields are filled, and client chats run through the CRM. All three fit into one report.
+**Do sessions have to be repeated for every new hire?**
+No. The recording of the introductory session stays with the company, the next hire starts from it, and live hours go to questions and a review of their deals.
+
+---
+
+Page: https://makebiztechnologies.com/en/journal/bitrix24-mobile-app-field-sales
+Title: Bitrix24 mobile app for field sales in the UAE | MakeBiz
+
+Journal · Bitrix24
+# Bitrix24 mobile app for field sales in the UAE
+Sales reps, brokers and key account managers in the UAE spend the day in cars and client offices. If the CRM only lives on a laptop, meeting outcomes arrive late or never.
+The Bitrix24 mobile app is free on iOS and Android, and what it can do depends on your portal plan: cloud Bitrix24 in the UAE starts at AED 180 a month on annual billing. From the phone, a rep can see the client history, call from the record, move the deal stage, plan the next activity and send an invoice. The record and stages are set up for the phone as part of a setup from AED 10,000, or in a few hours at AED 200 an hour in a live portal.
+MakeBiz Technologies · 24 November 2026 · 7 min read
+## The Bitrix24 app is free, your plan sets what it can do
+The Bitrix24 mobile app runs on iOS and Android and installs from the App Store, Google Play and Huawei AppGallery. Bitrix24 says it is free for unlimited users, but the features inside depend on your portal plan: if a feature is not in your plan, it is not in the app either.
+For a field team, that means the decision starts with the licence. Cloud Basic at AED 180 a month on annual billing covers 5 users, Standard at AED 364 covers 50, and Professional at AED 731 covers 100 and adds sales automation. Sizing is covered in the guide to plans for 10, 25 and 50 users , vendor prices in dirhams on the Bitrix24 licences page.
+## A field rep needs six things on the phone
+What Bitrix24 lists for the app (checked 24 November 2026) and what we configure in the portal:
+| Field task | What the app offers | What to set up in the portal
+| Prepare for a visit | Client record with full history in the timeline | A short record: contact, address, last deal, outstanding balance
+| Book a meeting | Meeting from a deal or lead, synced with Google and Apple Calendar | A "Visit" activity type with a required outcome
+| Call the client | Call from the record, call history saved automatically | Company telephony, so the call is recorded and attached to the deal
+| Log the outcome | Change stage, add a comment, plan the next activity | Stages that read at a glance, no extra fields
+| Send an invoice | One-tap invoice from the deal, sent by email or SMS, payment link | Invoice template with TRN and 5% VAT, product catalogue
+| Check in for the day | Check-in with time, location and a photo | A rule for who checks in and when
+Features per bitrix24.com/tools/crm/mobile-crm.php and the Bitrix24 help article "Mobile app: interface and features", checked 24 November 2026. Available features depend on the plan.
+The app can also scan barcodes for stock operations; the full CRM for wholesale is in the guide to CRM for B2B trading .
+## The deal record is trimmed down for the phone
+Field reps skip the CRM because of the record, not the app. If a deal has 30 fields and half are required, nobody fills them in from a car park in Al Quoz. For field work the first screen holds only what matters before and after a visit; billing details and documents are handled by the office or the accounting integration.
+Every stage should read without a manual: "Visit done" and "Waiting for order" are clear between meetings, "Qualification 2" is not. And after a visit, the deal always gets a next activity with a date, which is how a manager sees that no client is forgotten.
+### Bitrix24 set up for your field team
+Short record, stages, visits, calls and WhatsApp in the mobile app. Setup from AED 10,000 or AED 200 an hour
+Discuss field sales
+## Calls and WhatsApp from the phone have to land in the CRM
+In the UAE, clients message more than they call. If a rep chats from a personal WhatsApp, the company has no idea what was promised, so WhatsApp is connected to Bitrix24 through an open channel and the conversation shows up in the client record. Connection is AED 500 plus the provider subscription, see the Bitrix24 messengers page.
+A call placed from the record is saved in the history, and the recording lands in the deal when the call goes through company telephony connected to the portal. Calls from a personal SIM are best ruled out by policy. How to notify clients about recording under UAE law is explained in the guide to call recording and consent , and line setup options are on the Bitrix24 telephony page.
+## Managers see field work through activities and stages
+The "where I went today" message in a group chat is replaced by CRM data: the day's visits, which are closed with an outcome, which deals have no next step. Reps see their own clients and team leads their whole team, as explained in our news on CRM access rights .
+In our Unilin case , travelling sales managers run regions and retail points from the phone on on-premise Bitrix24, and leadership follows the outlets in dashboards. The project is in Russia, but the field setup carries over to the UAE.
+## What the app does not replace
+We found no offline mode and no route tracking through the day in the app description on bitrix24.com. The start-of-day check-in is not tracking of every visit. Where signal drops, the outcome goes in right after leaving the site, under a "same-day outcome" rule. Complex quotes and documents are better built in the office; the app is fine for opening and approving them.
+## What it costs to get the field team running
+The app is free; you pay for the licence and setup. The short record, stages, the "Visit" activity, the invoice template and access rights are part of a standard Bitrix24 setup from AED 10,000. In a portal that is already live, it is usually a few hours at AED 200 an hour. WhatsApp connection is AED 500, and training the field team runs at AED 200 an hour, see the Bitrix24 training page. All prices are on the pricing page.
+## Illustrative example: a distributor with six sales reps
+Picture a Dubai company supplying shops across the emirates. Six reps log visits in a notebook and send orders to the office on WhatsApp. After the setup, each rep has the day's visits, a short outlet record and a call button on the phone. An outcome is a stage plus a next activity, and the order goes out as an invoice from the deal with 5% VAT. Eight users including the office fit into the Standard plan at AED 364 a month. In the morning, the manager checks the list of deals with no next activity instead of scrolling the chat.
+## Questions and answers
+**How much does the Bitrix24 mobile app cost?**
+The app is free on iOS and Android. You pay for the portal plan, with cloud Bitrix24 from AED 180 a month on annual billing, and the features available in the app depend on that plan.
+**Can reps work with deals from the phone?**
+Yes. Reps create and edit deals, change stages, plan activities, view client history and issue invoices. The record is trimmed to the essentials so this stays quick.
+**Are calls from the mobile app recorded?**
+Call history from the record is saved automatically. The recording is attached to the deal when the call goes through company telephony connected to Bitrix24.
+**Does the app work without internet?**
+The app description on bitrix24.com does not mention an offline mode. If signal drops on site, the visit outcome goes in right after leaving, and that is written into the sales policy.
+**Can a manager see where a rep is?**
+The app has a start-of-day check-in with time, location and a photo. Route tracking is not in the description, so field work is managed through activities and stages.
 
 ---
 
