@@ -565,3 +565,179 @@ la_page(dict(path='/bitrix-agency', slug='bitrix-agency', crumb='CRM for agencie
     svc=('CRM for marketing agencies', 'Bitrix24 implementation for marketing and digital agencies in the UAE', 10000)))
 
 UPDATED, UPDATED_ISO = _LA_UPD
+
+# ================================================================ Wave 3 (25.11.2026), EN
+# Prices only from /en/pricing on 25.11.2026. Plans: bitrix24.ae/en/prices checked 25.11.2026
+LA_DATE3 = 'November 25, 2026'
+_LA_UPD3 = (UPDATED, UPDATED_ISO)
+UPDATED, UPDATED_ISO = LA_DATE3, '2026-11-25'
+
+def la3_tbl(rows, extra_note=''):
+    return la_tbl(['Work', 'Price', 'Terms'], rows, 'Prices as of ' + LA_DATE3 + ', excluding VAT' + extra_note + '. All prices on the ' + LA('/ceny', 'pricing page'))
+LA3_PLANS = 'Per bitrix24.ae plans as of ' + LA_DATE3 + ': '
+
+# ---------------------------------------------------------------- 13. Insurance broker
+la_page(dict(path='/bitrix-insurance', slug='bitrix-insurance', crumb='CRM for insurance brokers',
+    title='CRM for insurance brokers in the UAE on Bitrix24 | MakeBiz',
+    desc='CRM for insurance brokers and agencies in the UAE on Bitrix24: enquiries, insurer quotes, policies, renewals, claims. Setup from AED 10,000.',
+    eyebrow='CRM · insurance', h1='CRM for an <span>insurance broker</span>',
+    lead='Quotes, policies, renewals and claims in one system, not in email and spreadsheets',
+    answer='MakeBiz Technologies sets up CRM for insurance brokers and agencies in the UAE on Bitrix24: enquiries from WhatsApp and calls, insurer quotes compared in one record, policies with expiry dates, early renewals and claims. Standard setup from AED 10,000, WhatsApp AED 500, policy and renewal processes AED 200 per hour. Prices as of ' + LA_DATE3 + '.',
+    cta='Discuss a broker CRM', vis=V_BOARD,
+    chips=[('from AED 10,000', 'setup'), ('AED 500', 'WhatsApp'), ('AED 200/hr', 'policies and renewals'), ('Partner', 'Bitrix24')],
+    alt='CRM for an insurance broker',
+    sections=[
+        section('What we set up for an insurance broker', '', cards([
+            ('Enquiries in one pipeline', 'WhatsApp, website, calls and partners with source and owner'),
+            ('Insurer quotes', 'Requests to several insurers and a comparison in the deal record'),
+            ('Policy base', 'Line of business, insurer, premium, term and client documents'),
+            ('Renewals', 'A renewal deal opens in advance, the agent calls before the policy ends'),
+            ('Claims', 'A separate process: notice, documents, status with the insurer, payout'),
+            ('Commission', 'Premium and broker commission per policy and per agent'),
+        ], 3)),
+        section('Where a broker loses money', '', cards([
+            ('Renewal on the last day', 'Another broker called first'),
+            ('Quotes in the inbox', 'Insurer replies sit in emails, compared by hand'),
+            ('A corporate client', 'Group medical was sold, motor and property were never offered'),
+            ('A claim without status', 'The client asks about the payout, nobody knows'),
+        ], 2)),
+        section('Plan, calls and data', '', la2_card(LA3_PLANS + 'a broker usually needs Standard with invoices and web forms, automated reminders by stage come with Professional. Policies and claims run in smart processes, explained in our ' + LA('/journal/bitrix24-smart-processes', 'journal guide') + '. The client record keeps only the data a policy needs, see our news on ' + LA('/news/pdpl-i-crm-kakie-dannye-ne-sobirat', 'PDPL and CRM') + '. Client calls can be checked with ' + LA('/ai-agents/zvonki', 'speech analytics')), tone='tint'),
+        section('Example: a broker with 10 people', '', la2_card('An illustration, not a case. 8 brokers and 2 back-office staff. Setup AED 10,000, WhatsApp AED 500, policies, renewals and claims at, say, 25 hours, or AED 5,000: AED 15,500 one-off. Licence: Standard AED 364 a month billed annually, Professional with reminders AED 731.')),
+    ],
+    table_title='What an insurance broker CRM costs', table_sub='Our work, the Bitrix24 licence is separate',
+    table=la3_tbl([LA2_SETUP, LA2_HOUR('Policies, renewals, claims'), LA2_WA, ('Call speech analytics', 'from AED 1,000', 'a month for 5,000 minutes'), LA2_SUP, LA2_LIC]),
+    mid=('We will show a broker pipeline in a demo', 'Tell us your lines of business, we show the CRM and the price', 'Book a demo'),
+    cases=['performia-crm', 'haval-vector', 'cdek-b2b'],
+    faq=[
+        ('Does Bitrix24 work for an insurance broker?', 'Yes. Enquiries and sales run in a pipeline, policies and claims in their own processes, renewals open before expiry.'),
+        ('How much does an insurance broker CRM cost in the UAE?', 'Standard setup from AED 10,000, WhatsApp AED 500, policy and renewal processes AED 200 per hour after a survey. The Bitrix24 licence is separate, from AED 180 a month.'),
+        ('Can we stop missing renewals?', 'Yes. A renewal deal appears in advance, the agent gets a task, and the manager sees which policies expire this month.'),
+        ('Will you connect insurer systems?', 'If the insurer has an API, we scope the exchange at AED 200 per hour. A cloud portal needs a plan with REST API access.'),
+    ],
+    form=('Let us discuss your broker CRM', 'Tell us your team size and lines of business. We reply within a business day'),
+    svc=('CRM for insurance brokers', 'Bitrix24 implementation for insurance brokers and agencies in the UAE', 10000)))
+
+# ---------------------------------------------------------------- 14. Property management
+la_page(dict(path='/bitrix-property-management', slug='bitrix-property-management', crumb='CRM for property management',
+    title='CRM for a property management company in Dubai | MakeBiz',
+    desc='CRM for property management companies in Dubai on Bitrix24: landlords, units, tenants, lease renewals, payments, maintenance requests. From AED 10,000.',
+    eyebrow='CRM · property management', h1='CRM for <span>property management</span>',
+    lead='Landlords, units, tenants, leases and maintenance in one system',
+    answer='MakeBiz Technologies sets up CRM for property management companies in Dubai on Bitrix24: landlords and units, tenants and lease dates, early renewal or move-out, payment schedules, maintenance with contractors and an owner report. Standard setup from AED 10,000, WhatsApp AED 500, processes for your portfolio AED 200 per hour. Prices as of ' + LA_DATE3 + '.',
+    cta='Discuss a property CRM', vis=V_BOARD,
+    chips=[('from AED 10,000', 'setup'), ('AED 500', 'WhatsApp'), ('from AED 300/mo', 'BI reports'), ('Partner', 'Bitrix24')],
+    alt='CRM for a property management company',
+    sections=[
+        section('What we set up for a property manager', '', cards([
+            ('Landlords and units', 'Owner, management agreement, fee, contacts'),
+            ('Tenants and leases', 'Lease term, rent, deposit and documents in the unit record'),
+            ('Renewal or move-out', 'Offer a renewal or prepare viewings in advance'),
+            ('Payments', 'A payment schedule, including several cheques, with due date reminders'),
+            ('Maintenance requests', 'AC, plumbing, electrics: request, contractor, deadline, photos'),
+            ('Owner report', 'Income, costs and unit status monthly'),
+        ], 3)),
+        section('Where a property manager loses time', '', cards([
+            ('Dates in a spreadsheet', 'The lease ended and nobody offered a renewal on time'),
+            ('Requests in chats', 'The tenant messaged three people about the AC, a fix took a week'),
+            ('The owner asks', 'The report is built by hand from statements'),
+            ('The unit sits empty', 'Viewings started only after the tenant left'),
+        ], 2)),
+        section('Plan and the sales side', '', la2_card(LA3_PLANS + 'e-signature for lease documents comes with Standard. If the company also sells or lets through brokers, broker pipelines follow our page on ' + LA('/bitrix-real-estate', 'Bitrix24 for real estate agencies') + '. Night requests from tenants can go to an ' + LA('/ai-agents/rop', 'AI agent') + ', and owner reports and portfolio occupancy come from ' + LA('/bi-analitika', 'BI analytics') + '. Similar unit tracking, in short-term rental, is in the ' + LA('/keysy/apartika-crm', 'Apartico case')), tone='tint'),
+        section('Example: 300 units and 6 staff', '', la2_card('An illustration, not a case. 300 units, 6 staff, requests mostly on WhatsApp. Setup AED 10,000, WhatsApp AED 500, units, leases and maintenance at, say, 30 hours, or AED 6,000: AED 16,500 one-off. Owner reports in BI from AED 300 a month. Licence: Standard AED 364 a month billed annually.')),
+    ],
+    table_title='What a property management CRM costs', table_sub='Our work, the Bitrix24 licence is separate',
+    table=la3_tbl([LA2_SETUP, LA2_HOUR('Units, leases, maintenance'), LA2_WA, LA2_BI, LA2_SUP, LA2_LIC]),
+    mid=('We will show portfolio tracking in a demo', 'Tell us your portfolio size, we show the CRM and the price', 'Book a demo'),
+    cases=['apartika-crm', 'performia-crm', 'cdek-b2b'],
+    faq=[
+        ('How is this different from a real estate agency CRM?', 'An agency sells and lets through portals and brokers. A property manager runs units after the deal: tenants, payments and maintenance.'),
+        ('How much does a property management CRM cost in Dubai?', 'Standard setup from AED 10,000, WhatsApp AED 500, processes for your portfolio AED 200 per hour after a survey. The Bitrix24 licence is separate, from AED 180 a month.'),
+        ('Can we run maintenance with contractors?', 'Yes. A request gets a contractor, a deadline and photos, the manager sees overdue ones.'),
+        ('Will you build an owner report?', 'Yes. Income and costs per unit in BI analytics from AED 300 a month or in CRM reports.'),
+    ],
+    form=('Let us discuss your property management CRM', 'Tell us your number of units and staff. We reply within a business day'),
+    svc=('CRM for property management', 'Bitrix24 implementation for property management companies in the UAE', 10000)))
+
+# ---------------------------------------------------------------- 15. Facility management
+la_page(dict(path='/bitrix-facility-management', slug='bitrix-facility-management', crumb='CRM for facility management',
+    title='CRM for a facility management company in the UAE | MakeBiz',
+    desc='CRM for facility management, cleaning and AC maintenance companies in the UAE on Bitrix24: requests, service contracts, technician visits. From AED 10,000.',
+    eyebrow='CRM · facility management', h1='CRM for <span>facility management</span>',
+    lead='Requests, service contracts, planned visits and technician jobs in one system',
+    answer='MakeBiz Technologies sets up CRM for facility management, cleaning and AC maintenance companies in the UAE on Bitrix24: requests from WhatsApp and calls, annual contracts with a visit schedule, technician jobs in the mobile app, extra work estimates and renewals. Standard setup from AED 10,000, WhatsApp AED 500, job and visit processes AED 200 per hour. Prices as of ' + LA_DATE3 + '.',
+    cta='Discuss a service CRM', vis=V_TICKETS,
+    chips=[('from AED 10,000', 'setup'), ('AED 500', 'WhatsApp'), ('AED 200/hr', 'jobs and contracts'), ('Partner', 'Bitrix24')],
+    alt='CRM for a facility management company',
+    sections=[
+        section('What we set up for a service company', '', cards([
+            ('Client requests', 'WhatsApp, calls and the website form in one queue with a response time'),
+            ('Service contracts', 'Site, scope, visit schedule, end date'),
+            ('Technician jobs', 'A job on the phone: address, task, before and after photos, sign-off'),
+            ('Extra work estimates', 'The client gets an estimate and approves it in chat'),
+            ('Invoices and payments', 'An invoice per contract or job, payment tracking'),
+            ('Contract renewals', 'A renewal deal in advance with the year\'s visit history'),
+        ], 3)),
+        section('Where a service company loses money', '', cards([
+            ('A request in a personal chat', 'The dispatcher was off sick, the request waited three days'),
+            ('A planned visit was missed', 'The contract was paid, the visit never happened'),
+            ('Extra work without an estimate', 'Work beyond the contract, nothing to invoice'),
+            ('No view of technicians', 'Jobs, repeat visits and delays are invisible'),
+        ], 2)),
+        section('Plan, mobile and calls', '', la2_card(LA3_PLANS + 'invoices and estimates come with Standard, automatic jobs from the visit schedule with Professional. Technicians use the Bitrix24 mobile app, set up for field work as in our ' + LA('/journal/bitrix24-mobile-app-field-sales', 'journal guide') + '. Client calls go through ' + LA('/bitrix-telephony', 'telephony in Bitrix24') + ', and response times and repeat visits come from ' + LA('/bi-analitika', 'BI analytics')), tone='tint'),
+        section('Example: 20 technicians and 4 in the office', '', la2_card('An illustration, not a case. 20 technicians, 4 dispatchers, 150 service contracts. Setup AED 10,000, WhatsApp AED 500, contracts, visits and jobs at, say, 30 hours, or AED 6,000: AED 16,500 one-off. Licence: Standard AED 364 a month billed annually, Professional AED 731.')),
+    ],
+    table_title='What a service company CRM costs', table_sub='Our work, the Bitrix24 licence is separate',
+    table=la3_tbl([LA2_SETUP, LA2_HOUR('Contracts, visits, technician jobs'), LA2_WA, LA2_BI, LA2_SUP, LA2_LIC]),
+    mid=('We will show requests and jobs in a demo', 'Tell us your team size, we show the CRM, the mobile app and the price', 'Book a demo'),
+    cases=['unilin-crm', 'cdek-b2b', 'haval-vector'],
+    faq=[
+        ('Does Bitrix24 work for a facility management company?', 'Yes. Requests go to a queue with a deadline, service contracts and visits run in their own processes, technicians work from the mobile app.'),
+        ('How much does a service company CRM cost in the UAE?', 'Standard setup from AED 10,000, WhatsApp AED 500, job and contract processes AED 200 per hour after a survey. The Bitrix24 licence is separate, from AED 180 a month.'),
+        ('Can technicians work from a phone?', 'Yes. The job, address, photos and sign-off are in the Bitrix24 mobile app, no separate app is needed.'),
+        ('Does it fit cleaning and AC maintenance?', 'Yes: request, contract, visit, extra work, invoice. Fields and schedules are set up for you.'),
+    ],
+    form=('Let us discuss your service company CRM', 'Tell us your number of technicians and contracts. We reply within a business day'),
+    svc=('CRM for facility management', 'Bitrix24 implementation for facility management, cleaning and maintenance companies in the UAE', 10000)))
+
+# ---------------------------------------------------------------- 16. IT company
+la_page(dict(path='/bitrix-it-services', slug='bitrix-it-services', crumb='CRM for IT companies',
+    title='CRM for an IT company in Dubai on Bitrix24 | MakeBiz',
+    desc='CRM for IT companies, integrators and software resellers in the UAE: deals and quotes, licence and subscription renewals, support contracts. From AED 10,000.',
+    eyebrow='CRM · IT services', h1='CRM for an <span>IT company</span>',
+    lead='Quotes, renewals, support contracts and requests in one system',
+    answer='MakeBiz Technologies sets up CRM for IT companies, integrators and software resellers in the UAE on Bitrix24: quotes, licence and subscription renewals, support contracts with hours, requests with a response time and projects. Standard setup from AED 10,000, custom work AED 200 per hour, accounting integration from AED 10,000. Prices as of ' + LA_DATE3 + '.',
+    cta='Discuss a CRM for IT', vis=V_SYNC,
+    chips=[('from AED 10,000', 'setup'), ('AED 200/hr', 'custom work'), ('from AED 10,000', 'accounting integration'), ('Partner', 'Bitrix24')],
+    alt='CRM for an IT company',
+    sections=[
+        section('What we set up for an IT company', '', cards([
+            ('Deals and quotes', 'Licences and services in one quote from the record'),
+            ('Renewals', 'A renewal deal opens before the subscription ends'),
+            ('Support contracts', 'Hour package and time logged per request'),
+            ('Client requests', 'Email, WhatsApp and forms in one queue'),
+            ('Implementation projects', 'A won deal becomes a project with tasks and deadlines'),
+            ('Vendors and purchasing', 'Licence orders from the distributor and margin per deal'),
+        ], 3)),
+        section('Where an IT company loses revenue', '', cards([
+            ('A renewal with a competitor', 'Another partner sent the renewal first'),
+            ('Support hours not counted', 'Work done, overage never billed'),
+            ('The project after the sale', 'Delivery heard about the deal a week later'),
+            ('Margin in a spreadsheet', 'Buy and sell prices in different files'),
+        ], 2)),
+        section('Plan, time tracking and integrations', '', la2_card(LA3_PLANS + 'recurring deals for subscriptions come with Basic, quotes and invoices with Standard, employee hours tracking with Professional. Support runs in smart processes, see our ' + LA('/journal/bitrix24-smart-processes', 'journal guide') + '. Billing system exchange is ' + LA('/bitrix-development', 'Bitrix24 development') + ', invoices and payments an ' + LA('/bitrix-integrations', 'accounting integration')), tone='tint'),
+        section('Example: an integrator with 12 people', '', la2_card('An illustration, not a case. 4 sales managers, 8 engineers, 200 clients on subscriptions and support. Setup AED 10,000, renewals, support and requests at, say, 20 hours, or AED 4,000: AED 14,000 one-off. Licence: Standard AED 364 a month billed annually, Professional with hours tracking AED 731.')),
+    ],
+    table_title='What an IT company CRM costs', table_sub='Our work, the Bitrix24 licence is separate',
+    table=la3_tbl([LA2_SETUP, LA2_HOUR('Renewals, support contracts, requests'), ('Accounting integration', 'from AED 10,000', 'Zoho Books, QuickBooks, Odoo, 1C'), LA2_BI, LA2_SUP, LA2_LIC]),
+    mid=('We will show renewals and support in a demo', 'Tell us what you sell, we show the CRM and the price', 'Book a demo'),
+    cases=['cdek-b2b', 'unilin-crm', 'performia-crm'],
+    faq=[
+        ('Does Bitrix24 work for an IT company?', 'Yes. Sales run in a pipeline, subscriptions in recurring deals, support and projects in their own processes.'),
+        ('How much does a CRM for an IT company cost in the UAE?', 'Standard setup from AED 10,000, custom work AED 200 per hour, accounting integration from AED 10,000. The Bitrix24 licence is separate, from AED 180 a month.'),
+        ('Can we track hours on support contracts?', 'Yes. Time per request comes off the client package, overage creates an invoice task.'),
+        ('Will you connect the CRM to our billing system?', 'If it has an API, we scope the exchange at AED 200 per hour. A cloud portal needs a plan with REST API access.'),
+    ],
+    form=('Let us discuss your IT company CRM', 'Tell us what you sell and how many clients are on support. We reply within a business day'),
+    svc=('CRM for IT companies', 'Bitrix24 implementation for IT companies, integrators and software resellers in the UAE', 10000)))
+
+UPDATED, UPDATED_ISO = _LA_UPD3

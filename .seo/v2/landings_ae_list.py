@@ -18,3 +18,10 @@ LANDINGS_AE += [
     ('/bitrix-events', 'CRM для ивент-агентства', 'Сметы, подрядчики, проекты', 'CRM for event companies', 'Budgets, vendors, projects'),
     ('/bitrix-agency', 'CRM для агентства', 'Ретейнеры, задачи, часы', 'CRM for agencies', 'Retainers, tasks, hours'),
 ]
+# Волна 3 (25.11.2026)
+LANDINGS_AE += [
+    ('/bitrix-insurance', 'CRM для страхового брокера', 'Полисы, продления, убытки', 'CRM for insurance brokers', 'Policies, renewals, claims'),
+    ('/bitrix-property-management', 'CRM для управляющей компании', 'Юниты, арендаторы, ремонт', 'CRM for property management', 'Units, tenants, maintenance'),
+    ('/bitrix-facility-management', 'CRM для обслуживания зданий', 'Договоры, визиты, техники', 'CRM for facility management', 'Contracts, visits, technicians'),
+    ('/bitrix-it-services', 'CRM для IT-компании', 'Подписки, поддержка, проекты', 'CRM for IT companies', 'Renewals, support, projects'),
+]

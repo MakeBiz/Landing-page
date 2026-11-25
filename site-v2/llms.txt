@@ -44,6 +44,10 @@ Key facts:
 - [CRM for travel agencies](https://makebiztechnologies.com/en/bitrix-travel): Enquiries, bookings, payments
 - [CRM for event companies](https://makebiztechnologies.com/en/bitrix-events): Budgets, vendors, projects
 - [CRM for agencies](https://makebiztechnologies.com/en/bitrix-agency): Retainers, tasks, hours
+- [CRM for insurance brokers](https://makebiztechnologies.com/en/bitrix-insurance): Policies, renewals, claims
+- [CRM for property management](https://makebiztechnologies.com/en/bitrix-property-management): Units, tenants, maintenance
+- [CRM for facility management](https://makebiztechnologies.com/en/bitrix-facility-management): Contracts, visits, technicians
+- [CRM for IT companies](https://makebiztechnologies.com/en/bitrix-it-services): Renewals, support, projects
 
 ## Bitrix24 solutions for the UAE
 
