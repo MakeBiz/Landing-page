@@ -1744,6 +1744,15 @@ We pick a server for the job: on-premise Bitrix24, a website, AI agents, databas
 MakeBiz Technologies helps UAE companies choose a VPS from vetted providers (12 on the list, with locations in the UAE, Europe, the US and Asia), deploys on-premise Bitrix24, websites and AI agents on it and supports the server. Plans per the servercalc.com catalogue, setup work AED 200 per hour.
 ## Providers
 The same list and order as in our catalogue servercalc.com . Price of the most affordable plan. Affiliate links, your price does not change
+Fornex
+price on the provider site
+Europe · worldwide
+A provider with Russian-speaking support and European locations. A range from a simple VPS to dedicated servers.
+- Russian-speaking support with international locations
+- A broad range of services
+- DDoS protection
+- backups
+Visit Fornex →
 is*hosting
 price on the provider site
 Europe · USA · worldwide · UAE · Asia
@@ -1762,15 +1771,6 @@ A managed cloud that deploys apps from your repository in a few clicks. A fit fo
 - DDoS protection
 - backups
 Visit Hostman →
-Fornex
-price on the provider site
-Europe · worldwide
-A provider with Russian-speaking support and European locations. A range from a simple VPS to dedicated servers.
-- Russian-speaking support with international locations
-- A broad range of services
-- DDoS protection
-- backups
-Visit Fornex →
 Cloudways
 price on the provider site
 Europe · USA · worldwide · Asia
